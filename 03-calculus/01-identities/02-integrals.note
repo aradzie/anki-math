@@ -1,7 +1,6 @@
 !type: Basic
 !deck: Math::Calculus::Identities::Integrals
 !tags: Math Calculus Identity Integral
-!template: Basic
 
 !id: c7cc99d3-8505-4ee0-ba69-ee3c729d389a
 !front: \[ \int u^n \, du \]

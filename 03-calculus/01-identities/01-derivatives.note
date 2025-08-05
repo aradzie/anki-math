@@ -1,7 +1,6 @@
 !type: Basic
 !deck: Math::Calculus::Identities::Derivatives
 !tags: Math Calculus Identity Derivative
-!template: Basic
 
 !id: e9e0d7ec-b982-4bfe-968a-62bece71e5b2
 !front: \[ \frac{d}{dx} \left( f(x) g(x) \right) \]

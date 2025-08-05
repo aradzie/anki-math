@@ -1,7 +1,6 @@
 !type: Basic
 !deck: Math::Calculus::Identities::Laplace Transforms
 !tags: Math Calculus Identity Laplace-Transform
-!template: Basic
 
 !id: 13ddf24b-1725-47d1-b44a-4098eee9875f
 !front: \[ \mathscr{L} \{ 1 \} \]
