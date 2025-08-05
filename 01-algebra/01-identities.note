@@ -1,0 +1,89 @@
+!type: Basic Math
+!deck: Math::Algebra
+!tags: Math Algebra Identity
+
+!id: 5bd92c71-c20e-42e0-bbc2-c6bb761fb7f7
+!front: Quadratic Formula
+!back:
+If
+
+\[ a x^2 + b x + c = 0 \]
+
+then
+
+\[ x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \]
+~~~
+
+!type: Basic Math (and reversed card)
+
+!id: 498fb37a-7ad6-49b1-a6f6-17c387a1ac15
+!front: \[ (a + b)^2 \]
+!back: \[ a^2 + 2ab + b^2 \]
+!related:
+\[
+\begin{align*}
+    (a + b)^2 &= a^2 + 2ab + b^2 \\
+    (a - b)^2 &= a^2 - 2ab + b^2
+\end{align*}
+\]
+~~~
+
+!id: 8a9d8cef-fcb3-4502-a8b2-129aefe17b3c
+!front: \[ (a - b)^2 \]
+!back: \[ a^2 - 2ab + b^2 \]
+!related:
+\[
+\begin{align*}
+    (a + b)^2 &= a^2 + 2ab + b^2 \\
+    (a - b)^2 &= a^2 - 2ab + b^2
+\end{align*}
+\]
+~~~
+
+!id: 51b5dd37-e875-407b-bb30-327cad3a4bf0
+!front: \[ a^2 + b^2 \]
+!back: \[ (a - ib)(a + ib) \]
+!related:
+\[
+\begin{align*}
+    a^2 + b^2 &= (a - ib)(a + ib) \\
+    a^2 - b^2 &= (a - b)(a + b)
+\end{align*}
+\]
+~~~
+
+!id: cbbf34f7-b922-438d-a3e5-246ad8ea01f1
+!front: \[ a^2 - b^2 \]
+!back: \[ (a - b)(a + b) \]
+!related:
+\[
+\begin{align*}
+    a^2 + b^2 &= (a - ib)(a + ib) \\
+    a^2 - b^2 &= (a - b)(a + b)
+\end{align*}
+\]
+~~~
+
+!id: 0fb486c4-854d-4921-a695-fc003c184d7d
+!front: \[ a^3 + b^3 \]
+!back: \[ (a + b)(a^2 - ab + b^2) \]
+!related:
+\[
+\begin{align*}
+    a^3 + b^3 &= (a + b)(a^2 - ab + b^2) \\
+    a^3 - b^3 &= (a - b)(a^2 + ab + b^2)
+\end{align*}
+\]
+~~~
+
+!id: 295b74c0-7882-4283-8ef0-8dfb757d80ad
+!front: \[ a^3 - b^3 \]
+!back: \[ (a - b)(a^2 + ab + b^2) \]
+!related:
+\[
+\begin{align*}
+    a^3 + b^3 &= (a + b)(a^2 - ab + b^2) \\
+    a^3 - b^3 &= (a - b)(a^2 + ab + b^2)
+\end{align*}
+\]
+~~~

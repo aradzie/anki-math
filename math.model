@@ -1,0 +1,135 @@
+model Basic Math
+
+id 7702450
+
+field Front
+field Back
+field Related?
+field Extra?
+
+card Card 1
+
+front
+<div class="front">{{Front}}</div>
+~~~
+
+back
+{{FrontSide}}
+<hr>
+<div class="back">
+  {{Back}}
+
+  {{#Related}}
+    <p class="sub">Related</p>
+    {{Related}}
+  {{/Related}}
+
+  {{#Extra}}
+    <p class="sub">Extra</p>
+    {{Extra}}
+  {{/Extra}}
+</div>
+~~~
+
+styling
+@media (min-width: 600px) {
+  .card {
+    max-width: 40rem;
+    margin: 1rem auto;
+    padding: 1rem;
+    border: 1px solid gray;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+  }
+}
+.front {
+  text-align: center;
+}
+.back {
+  text-align: start;
+}
+.sub {
+  font-weight: bold;
+  color: gray;
+  border-bottom: 1px solid gray;
+}
+~~~
+
+model Basic Math (and reversed card)
+
+id 7702451
+
+field Front
+field Back
+field Related?
+field Extra?
+
+card Card 1
+
+front
+<div class="front">{{Front}}</div>
+~~~
+
+back
+{{FrontSide}}
+<hr>
+<div class="back">
+  {{Back}}
+
+  {{#Related}}
+    <p class="sub">Related</p>
+    {{Related}}
+  {{/Related}}
+
+  {{#Extra}}
+    <p class="sub">Extra</p>
+    {{Extra}}
+  {{/Extra}}
+</div>
+~~~
+
+card Card 2
+
+front
+<div class="front">{{Back}}</div>
+~~~
+
+back
+{{FrontSide}}
+<hr>
+<div class="back">
+  {{Front}}
+
+  {{#Related}}
+    <p class="sub">Related</p>
+    {{Related}}
+  {{/Related}}
+
+  {{#Extra}}
+    <p class="sub">Extra</p>
+    {{Extra}}
+  {{/Extra}}
+</div>
+~~~
+
+styling
+@media (min-width: 600px) {
+  .card {
+    max-width: 40rem;
+    margin: 1rem auto;
+    padding: 1rem;
+    border: 1px solid gray;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+  }
+}
+.front {
+  text-align: center;
+}
+.back {
+  text-align: start;
+}
+.sub {
+  font-weight: bold;
+  color: gray;
+  border-bottom: 1px solid gray;
+}
+~~~
