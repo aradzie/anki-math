@@ -561,6 +561,8 @@ b4edd171-5748-42bd-8392-c5d010a1cfa0;Basic;Math::Calculus::Differentiation;Math 
 <p>Then there exists at least one point \( c \) in the open interval \( (a,b) \) such that the instantaneous rate of change (the derivative \( f'(c) \)) is equal to the average rate of change over the interval.</p>
 <p>Mathematically, this is expressed as:</p>
 \[ f'(c) = \frac{f(b) - f(a)}{b - a} \]
+<p>Or, alternatively:</p>
+\[ f(c) = \frac{1}{b - a} \int_a^b f(x) \, dx \]
 <p>The Rolle&#39;s theorem can be derived from the mean value theorem: if \( f(a) = f(b) \), then the right side of the mean value theorem equation becomes</p>
 \[ f'(c) = \frac{f(a) - f(a)}{b - a} = \frac{0}{b - a} \]
 <p>which means \( f'(c)=0 \).</p>"
@@ -616,6 +618,9 @@ If there exists a real number \( L \) such that</p>
 \[ \sum_{n=1}^{\infty} \frac{1}{n} \]
 <p>The harmonic series is a special case of the p-series with \( p = 1 \).</p>"
 87b92c0f-529b-48f1-a746-b2353f79c5e0;Basic;Math::Calculus::Sequences and Series;Math Calculus Sequences-and-Series Theory;<p>What does the harmonic series converge to?</p>;<p>The harmonic series \( \sum_{n=1}^{\infty} \frac{1}{n} \) diverges to infinity.</p>
+0c130570-7cfa-40f6-8f02-f75414c0a10f;Basic;Math::Calculus::Sequences and Series;Math Calculus Sequences-and-Series Theory;<p>What is the alternating harmonic series?</p>;"<p>The alternating harmonic series is an infinite series of the following form</p>
+\[ \sum_{n=1}^{\infty} (-1)^{n+1} \frac{1}{n}= 1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \ldots \]
+<p>It converges to \( \ln 2 \).</p>"
 a41bf7c5-f5bf-4b2b-93f5-33bf47d34534;Basic;Math::Calculus::Sequences and Series;Math Calculus Sequences-and-Series Theory;<p>What is the geometric series?</p>;"<p>The geometric series is an infinite series of the following form</p>
 \[ \sum_{n=0}^{\infty} a r^{n} = a + ar + ar^2 + ar^3 + \ldots \]"
 dcceaa97-335a-4e0f-a7e1-2bcb44fa9b31;Basic;Math::Calculus::Sequences and Series;Math Calculus Sequences-and-Series Theory;<p>What does the geometric series converge to?</p>;<p>The geometric series \( \sum_{n=0}^{\infty} a r^{n} \) converges to \( \frac{a}{1 - r} \) if \( |r| < 1 \), otherwise it diverges.</p>

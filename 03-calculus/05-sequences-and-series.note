@@ -124,6 +124,16 @@ The harmonic series is a special case of the p-series with \( p = 1 \).
 !back: The harmonic series \( \sum_{n=1}^{\infty} \frac{1}{n} \) diverges to infinity.
 ~~~
 
+!id: 0c130570-7cfa-40f6-8f02-f75414c0a10f
+!front: What is the alternating harmonic series?
+!back:
+The alternating harmonic series is an infinite series of the following form
+
+\[ \sum_{n=1}^{\infty} (-1)^{n+1} \frac{1}{n}= 1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \ldots \]
+
+It converges to \( \ln 2 \).
+~~~
+
 !id: a41bf7c5-f5bf-4b2b-93f5-33bf47d34534
 !front: What is the geometric series?
 !back:

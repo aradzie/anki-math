@@ -45,6 +45,10 @@ Mathematically, this is expressed as:
 
 \[ f'(c) = \frac{f(b) - f(a)}{b - a} \]
 
+Or, alternatively:
+
+\[ f(c) = \frac{1}{b - a} \int_a^b f(x) \, dx \]
+
 The Rolle's theorem can be derived from the mean value theorem: if \( f(a) = f(b) \), then the right side of the mean value theorem equation becomes
 
 \[ f'(c) = \frac{f(a) - f(a)}{b - a} = \frac{0}{b - a} \]

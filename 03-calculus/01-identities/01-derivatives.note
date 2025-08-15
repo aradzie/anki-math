@@ -41,6 +41,7 @@
 !front: \[ \frac{d}{dx} \left( \log_b x \right) \]
 !back: \[ \frac{1}{x \ln b} \]
 ~~~
+
 !tags: Math Calculus Derivative Trigonometric Identity
 
 !id: 8e66781a-c572-408c-b92c-7d8bd6316c56
@@ -246,6 +247,7 @@ Related:
 \end{align*}
 \]
 ~~~
+
 !tags: Math Calculus Derivative Hyperbolic Identity
 
 !id: d6c570ff-6074-4a17-85e4-d6839fc9bf16

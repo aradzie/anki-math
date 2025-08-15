@@ -21,6 +21,7 @@
 !front: \[ \int a^u \, du \]
 !back: \[ \frac{a^u}{\ln a} + C \]
 ~~~
+
 !tags: Math Calculus Integral Trigonometric Identity
 
 !id: eac90910-892b-48c2-b1db-d1bf8918a7e3
@@ -91,6 +92,7 @@
 !front: \[ \int \frac{1}{u \sqrt{u^2 - a^2}} \, du \]
 !back: \[ \frac{1}{a} \sec^{-1} \frac{u}{a} + C \]
 ~~~
+
 !tags: Math Calculus Integral Hyperbolic Identity
 
 !id: 78122891-fc05-4cee-bd20-547126878e34
@@ -122,6 +124,7 @@
 !front: \[ \int \text{csch} \, u \coth u \, du \]
 !back: \[ - \text{csch} \, u + C \]
 ~~~
+
 !tags: Math Calculus Integral Identity
 
 !id: 94c0c470-d18e-4e04-930c-16202b44aeda
