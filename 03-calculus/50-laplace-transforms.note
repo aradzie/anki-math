@@ -1,7 +1,6 @@
-!type: Basic
+!type: Basic Math
 !deck: Math::Calculus::Laplace Transform
 !tags: Math Calculus Laplace-Transform Theory
-!template: Definition
 
 !id: 8d7d62ea-207c-4014-ac47-501c77a67f4b
 !front: What is the definition of the Laplace transform?

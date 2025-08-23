@@ -1,7 +1,6 @@
-!type: Basic
+!type: Basic Math
 !deck: Math::Calculus::Sequences and Series
 !tags: Math Calculus Sequences-and-Series Theory
-!template: Definition
 
 !id: d2206553-b315-40f9-bb47-389c25dcaea9
 !front: What is an infinite sequence?
@@ -120,8 +119,13 @@ The harmonic series is a special case of the p-series with \( p = 1 \).
 ~~~
 
 !id: 87b92c0f-529b-48f1-a746-b2353f79c5e0
-!front: What does the harmonic series converge to?
-!back: The harmonic series \( \sum_{n=1}^{\infty} \frac{1}{n} \) diverges to infinity.
+!front: What are the convergence properties of the harmonic series?
+!back:
+The harmonic series \( \sum_{n=1}^{\infty} \frac{1}{n} \) diverges to infinity.
+
+Related:
+
+The alternate harmonic series \( \sum_{n=1}^{\infty} (-1)^{n+1} \frac{1}{n} \) converges to \( \ln 2 \).
 ~~~
 
 !id: 0c130570-7cfa-40f6-8f02-f75414c0a10f
@@ -130,8 +134,16 @@ The harmonic series is a special case of the p-series with \( p = 1 \).
 The alternating harmonic series is an infinite series of the following form
 
 \[ \sum_{n=1}^{\infty} (-1)^{n+1} \frac{1}{n}= 1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \ldots \]
+~~~
 
-It converges to \( \ln 2 \).
+!id: 86e19a9d-5334-4143-8230-129b8ef7a5b0
+!front: What are the convergence properties of the alternate harmonic series?
+!back:
+The alternate harmonic series \( \sum_{n=1}^{\infty} (-1)^{n+1} \frac{1}{n} \) converges to \( \ln 2 \).
+
+Related:
+
+The harmonic series \( \sum_{n=1}^{\infty} \frac{1}{n} \) diverges to infinity.
 ~~~
 
 !id: a41bf7c5-f5bf-4b2b-93f5-33bf47d34534
@@ -143,7 +155,7 @@ The geometric series is an infinite series of the following form
 ~~~
 
 !id: dcceaa97-335a-4e0f-a7e1-2bcb44fa9b31
-!front: What does the geometric series converge to?
+!front: What are the convergence properties of the geometric series?
 !back: The geometric series \( \sum_{n=0}^{\infty} a r^{n} \) converges to \( \frac{a}{1 - r} \) if \( |r| < 1 \), otherwise it diverges.
 ~~~
 
@@ -156,7 +168,7 @@ The p-series series is an infinite series of the following form
 ~~~
 
 !id: f96fd296-19af-4207-8f66-f89f8a78f834
-!front: What does the p-series converge to?
+!front: What are the convergence properties of the p-series?
 !back: The p-series \( \sum_{n=1}^{\infty} \frac{1}{n^p} \) converges if \( p > 1 \), otherwise it diverges.
 ~~~
 
@@ -302,6 +314,11 @@ The power series centered at \( x = a \) is an infinite series of the following 
 where \( x \) is a variable and the coefficients \( c_n \) are constants.
 ~~~
 
+!id: 9529012c-b84b-4c5f-9cba-8b32c9a3c287
+!front: What is the center of a power series?
+!back: The center of the power series \( \sum_{n=0}^{\infty} c_n (x - a)^n \) is the point \( x = a \), the value around which the series is expanded.
+~~~
+
 !id: 1a794726-d3d3-47ca-9a3a-850ea9f2b75b
 !front: What are the convergence properties of a power series?
 !back:
@@ -310,4 +327,9 @@ Consider the power series \( \sum_{n=0}^{\infty} c_n (x - a)^n \). The series sa
 - The series converges at \( x=a \) and diverges for all \( x \ne a \).
 - The series converges for all real numbers \( x \).
 - There exists a real number \( R>0 \) such that the series converges if \( |x − a| < R \) and diverges if \( |x − a| > R \). At the values \( x \) where \( |x − a| = R \), the series may converge or diverge.
+~~~
+
+!id: 90bacb27-74e6-4df5-8154-039038d9bdc1
+!front: What is the interval of convergence of a power series?
+!back: The interval of convergence \( I \) of the power series \( \sum_{n=0}^{\infty} c_n (x - a)^n \) is the set of all real numbers \( x \) such that the series converges. It's the "domain" of the power series.
 ~~~

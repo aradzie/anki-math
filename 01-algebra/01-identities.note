@@ -1,9 +1,9 @@
-!type: Basic
+!type: Basic Math
 !deck: Math::Algebra
 !tags: Math Algebra Identity
 
 !id: 5bd92c71-c20e-42e0-bbc2-c6bb761fb7f7
-!front: Quadratic formula
+!front: Quadratic Formula
 !back:
 If
 
@@ -12,4 +12,16 @@ If
 then
 
 \[ x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \]
+~~~
+
+!type: Basic Math (and reversed card)
+
+!id: 0fb486c4-854d-4921-a695-fc003c184d7d
+!front: \[ a^3 + b^3 \]
+!back: \[ (a + b)(a^2 - ab + b^2) \]
+~~~
+
+!id: 295b74c0-7882-4283-8ef0-8dfb757d80ad
+!front: \[ a^3 - b^3 \]
+!back: \[ (a - b)(a^2 + ab + b^2) \]
 ~~~

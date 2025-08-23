@@ -1,7 +1,6 @@
-!type: Basic
+!type: Basic Math
 !deck: Math::Calculus::ODE
 !tags: Math Calculus Differential-Equation ODE Theory
-!template: Definition
 
 !id: 8d73624b-56e4-47b7-b6cc-34f17d1a740a
 !front: What is an ordinary differential equation (ODE)?

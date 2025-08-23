@@ -1,7 +1,6 @@
-!type: Basic
+!type: Basic Math
 !deck: Math::Calculus::Limits
 !tags: Math Calculus Limits Theory
-!template: Definition
 
 !id: ebdd5628-7ae7-4805-bda4-51c16529b65e
 !front: What is a continuous function?

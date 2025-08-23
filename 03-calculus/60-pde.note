@@ -1,7 +1,6 @@
-!type: Basic
+!type: Basic Math
 !deck: Math::Calculus::PDE
 !tags: Math Calculus Differential-Equation PDE Theory
-!template: Definition
 
 !id: 205a5237-31f0-4e31-867b-a9f6b6f02dca
 !front: What is an partial differential equation (PDE)?

@@ -1,7 +1,6 @@
-!type: Basic
+!type: Basic Math
 !deck: Math::Calculus::Integration
 !tags: Math Calculus Integration Theory
-!template: Definition
 
 !id: 68c2408d-7e8a-45b4-9a2d-9288a59f1565
 !front: What is the fundamental theorem of calculus (FTC)?

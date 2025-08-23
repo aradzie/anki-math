@@ -1,4 +1,4 @@
-!type: Basic
+!type: Basic Math (and reversed card)
 !deck: Math::Calculus::Identities::Laplace Transforms
 !tags: Math Calculus Identity Laplace-Transform
 
@@ -14,11 +14,8 @@
 
 !id: a228d1d5-90a7-49e4-81bf-64cfe1942a1c
 !front: \[ \mathscr{L} \{ \sin(at) \} \]
-!back:
-\[ \frac{a}{s^2 + a^2} \]
-
-Related:
-
+!back: \[ \frac{a}{s^2 + a^2} \]
+!related:
 \[
 \begin{align*}
     \mathscr{L} \{ \sin(at) \} &= \frac{a}{s^2 + a^2} \\
@@ -31,11 +28,8 @@ Related:
 
 !id: 37d5a7b2-a6f6-47c0-962c-b3cdb4951e60
 !front: \[ \mathscr{L} \{ \cos(at) \} \]
-!back:
-\[ \frac{s}{s^2 + a^2} \]
-
-Related:
-
+!back: \[ \frac{s}{s^2 + a^2} \]
+!related:
 \[
 \begin{align*}
     \mathscr{L} \{ \sin(at) \} &= \frac{a}{s^2 + a^2} \\
@@ -68,11 +62,8 @@ Related:
 
 !id: a96668b7-9f08-427e-8da4-5623298bef26
 !front: \[ \mathscr{L} \{ \sinh(at) \} \]
-!back:
-\[ \frac{a}{s^2 - a^2} \]
-
-Related:
-
+!back: \[ \frac{a}{s^2 - a^2} \]
+!related:
 \[
 \begin{align*}
     \mathscr{L} \{ \sin(at) \} &= \frac{a}{s^2 + a^2} \\
@@ -85,11 +76,8 @@ Related:
 
 !id: 0c92ece3-6d4a-4ff2-8199-a3eb3946b4e0
 !front: \[ \mathscr{L} \{ \cosh(at) \} \]
-!back:
-\[ \frac{s}{s^2 - a^2} \]
-
-Related:
-
+!back: \[ \frac{s}{s^2 - a^2} \]
+!related:
 \[
 \begin{align*}
     \mathscr{L} \{ \sin(at) \} &= \frac{a}{s^2 + a^2} \\
@@ -112,11 +100,8 @@ Related:
 
 !id: c47fac91-bb25-4074-bace-1137eec2bb10
 !front: \[ \mathscr{L} \{ e^{ct} \sin(at) \} \]
-!back:
-\[ \frac{a}{(s - c)^2 + a^2} \]
-
-Related:
-
+!back: \[ \frac{a}{(s - c)^2 + a^2} \]
+!related:
 \[
 \begin{align*}
     \mathscr{L} \{ e^{ct} \sin(at) \} &= \frac{a}{(s - c)^2 + a^2} \\
@@ -129,11 +114,8 @@ Related:
 
 !id: afedda42-8e51-4e5e-8dbe-f118da9d1f72
 !front: \[ \mathscr{L} \{ e^{ct} \cos(at) \} \]
-!back:
-\[ \frac{s - c}{(s - c)^2 + a^2} \]
-
-Related:
-
+!back: \[ \frac{s - c}{(s - c)^2 + a^2} \]
+!related:
 \[
 \begin{align*}
     \mathscr{L} \{ e^{ct} \sin(at) \} &= \frac{a}{(s - c)^2 + a^2} \\
@@ -146,11 +128,8 @@ Related:
 
 !id: 5102e311-3c3b-441f-a1a7-9a46cde22d36
 !front: \[ \mathscr{L} \{ e^{ct} \sinh(at) \} \]
-!back:
-\[ \frac{a}{(s - c)^2 - a^2} \]
-
-Related:
-
+!back: \[ \frac{a}{(s - c)^2 - a^2} \]
+!related:
 \[
 \begin{align*}
     \mathscr{L} \{ e^{ct} \sin(at) \} &= \frac{a}{(s - c)^2 + a^2} \\
@@ -163,11 +142,8 @@ Related:
 
 !id: 069748b7-83bd-4b37-8cea-72d80996b9c1
 !front: \[ \mathscr{L} \{ e^{ct} \cosh(at) \} \]
-!back:
-\[ \frac{s - c}{(s - c)^2 - a^2} \]
-
-Related:
-
+!back: \[ \frac{s - c}{(s - c)^2 - a^2} \]
+!related:
 \[
 \begin{align*}
     \mathscr{L} \{ e^{ct} \sin(at) \} &= \frac{a}{(s - c)^2 + a^2} \\

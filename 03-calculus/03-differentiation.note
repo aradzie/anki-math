@@ -1,7 +1,6 @@
-!type: Basic
+!type: Basic Math
 !deck: Math::Calculus::Differentiation
 !tags: Math Calculus Differentiation Theory
-!template: Definition
 
 !id: ebddf2d2-f380-49bc-9d98-47d69966ce7f
 !front: The definition of the extreme value theorem (EVT).
