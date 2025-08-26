@@ -1,4 +1,4 @@
-!type: Basic Math (and reversed card)
+!type: Basic Math
 !deck: Math::Calculus::Identities::Taylor Series
 !tags: Math Calculus Identity Taylor-Series
 
@@ -42,13 +42,25 @@ Valid for \( |x| < 1 \)
 \]
 ~~~
 
+!id: 6acc7600-21bc-4fee-9509-dfeb6d7a15cb
+!front: Taylor series expansion of \( e^{-x} \)
+!back:
+\[
+\begin{align*}
+    e^{-x}
+    &= 1 - x + \frac{x^2}{2!} - \frac{x^3}{3!} + \cdots \\
+    &= \sum_{n=0}^{\infty} \frac{(-x)^{n}}{n!}
+\end{align*}
+\]
+~~~
+
 !id: 77d6362f-6b41-4bcf-90ab-80ec4224bd11
 !front: Taylor series expansion of \( \ln(x) \)
 !back:
 \[
 \begin{align*}
     \ln(x)
-    &= (x - 1) - \frac{(x - 1)^2}{2} + \frac{(x - 1)^3}{3} - \cdots \\
+    &= (x - 1) - \frac{(x - 1)^2}{2} + \frac{(x - 1)^3}{3} - \frac{(x - 1)^4}{4} + \cdots \\
     &= \sum_{n=1}^{\infty} (-1)^{n+1} \frac{(x - 1)^{n}}{n}
 \end{align*}
 \]
