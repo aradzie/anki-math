@@ -8,8 +8,30 @@
 \[ a x^2 + b x + c = 0 \]
 <p>then</p>
 \[ x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \]";;
-0fb486c4-854d-4921-a695-fc003c184d7d;Basic Math (and reversed card);Math::Algebra;Math Algebra Identity;\[ a^3 + b^3 \];\[ (a + b)(a^2 - ab + b^2) \];;
-295b74c0-7882-4283-8ef0-8dfb757d80ad;Basic Math (and reversed card);Math::Algebra;Math Algebra Identity;\[ a^3 - b^3 \];\[ (a - b)(a^2 + ab + b^2) \];;
+498fb37a-7ad6-49b1-a6f6-17c387a1ac15;Basic Math (and reversed card);Math::Algebra;Math Algebra Identity;\[ (a + b)^2 \];\[ a^2 + 2ab + b^2 \];"\[ \begin{align*}
+    (a + b)^2 &= a^2 + 2ab + b^2 \\
+    (a - b)^2 &= a^2 - 2ab + b^2
+\end{align*} \]";
+8a9d8cef-fcb3-4502-a8b2-129aefe17b3c;Basic Math (and reversed card);Math::Algebra;Math Algebra Identity;\[ (a - b)^2 \];\[ a^2 - 2ab + b^2 \];"\[ \begin{align*}
+    (a + b)^2 &= a^2 + 2ab + b^2 \\
+    (a - b)^2 &= a^2 - 2ab + b^2
+\end{align*} \]";
+51b5dd37-e875-407b-bb30-327cad3a4bf0;Basic Math (and reversed card);Math::Algebra;Math Algebra Identity;\[ a^2 + b^2 \];\[ (a - ib)(a + ib) \];"\[ \begin{align*}
+    a^2 + b^2 &= (a - ib)(a + ib) \\
+    a^2 - b^2 &= (a - b)(a + b)
+\end{align*} \]";
+cbbf34f7-b922-438d-a3e5-246ad8ea01f1;Basic Math (and reversed card);Math::Algebra;Math Algebra Identity;\[ a^2 - b^2 \];\[ (a - b)(a + b) \];"\[ \begin{align*}
+    a^2 + b^2 &= (a - ib)(a + ib) \\
+    a^2 - b^2 &= (a - b)(a + b)
+\end{align*} \]";
+0fb486c4-854d-4921-a695-fc003c184d7d;Basic Math (and reversed card);Math::Algebra;Math Algebra Identity;\[ a^3 + b^3 \];\[ (a + b)(a^2 - ab + b^2) \];"\[ \begin{align*}
+    a^3 + b^3 &= (a + b)(a^2 - ab + b^2) \\
+    a^3 - b^3 &= (a - b)(a^2 + ab + b^2)
+\end{align*} \]";
+295b74c0-7882-4283-8ef0-8dfb757d80ad;Basic Math (and reversed card);Math::Algebra;Math Algebra Identity;\[ a^3 - b^3 \];\[ (a - b)(a^2 + ab + b^2) \];"\[ \begin{align*}
+    a^3 + b^3 &= (a + b)(a^2 - ab + b^2) \\
+    a^3 - b^3 &= (a - b)(a^2 + ab + b^2)
+\end{align*} \]";
 ca23c619-7730-447c-9709-9e238e76a81f;Basic Math;Math::Algebra;Math Algebra Identity;<p>AM-GM Inequality</p>;\[ \frac{a+b}{2} \ge \sqrt{ab} \];;
 ae785c87-6dd7-4627-bd48-842f2e7955f4;Basic Math (and reversed card);Math::Trigonometry;Math Trigonometric Identity;\[ \sin (\alpha + \beta) \];\[ \sin \alpha \cos \beta + \cos \alpha \sin \beta \];"\[ \begin{align*}
     \sin (\alpha + \beta) &= \sin \alpha \cos \beta + \cos \alpha \sin \beta \\
@@ -324,51 +346,60 @@ c08b07c3-b75f-40de-a447-86f02eb43509;Basic Math;Math::Calculus::Identities::Inte
 7708860f-4764-47a0-a7b8-2c0c07dfc8d2;Basic Math;Math::Calculus::Identities::Integrals;Math Calculus Integral Hyperbolic Identity;\[ \int \text{csch} \, u \coth u \, du \];\[ - \text{csch} \, u + C \];;
 94c0c470-d18e-4e04-930c-16202b44aeda;Basic Math;Math::Calculus::Identities::Integrals;Math Calculus Integral Identity;\[ \int u e^u \, du \];\[ u e^u - e^u + C \];;
 a8f7b141-9950-4f5f-be3a-32040190b414;Basic Math;Math::Calculus::Identities::Integrals;Math Calculus Integral Identity;\[ \int \ln u \, du \];\[ u \ln u - u + C \];;
-3b556a07-7f54-47f6-b112-7eb38ec6f23c;Basic Math (and reversed card);Math::Calculus::Identities::Taylor Series;Math Calculus Identity Taylor-Series;"\[ e^x \]
-<p>Taylor series expansion</p>";"\[ \begin{align*}
+c1a00e01-cff5-41cb-9d46-324863c1f655;Basic Math (and reversed card);Math::Calculus::Identities::Taylor Series;Math Calculus Identity Taylor-Series;<p>Taylor series expansion of \( \frac{1}{1 - x} \)</p>;"\[ \begin{align*}
+    \frac{1}{1 - x}
+    &= 1 + x + x^2 + x^3 + \cdots \\
+    &= \sum_{n=0}^{\infty} x^n
+\end{align*} \]
+<p>Valid for \( |x| < 1 \)</p>";;
+60728133-f43c-4aaf-981f-335ac5ba3beb;Basic Math (and reversed card);Math::Calculus::Identities::Taylor Series;Math Calculus Identity Taylor-Series;<p>Taylor series expansion of \( \frac{1}{1 + x} \)</p>;"\[ \begin{align*}
+    \frac{1}{1 + x}
+    &= 1 - x + x^2 - x^3 + \cdots \\
+    &= \sum_{n=0}^{\infty} (-x)^n
+\end{align*} \]
+<p>Valid for \( |x| < 1 \)</p>";;
+3b556a07-7f54-47f6-b112-7eb38ec6f23c;Basic Math (and reversed card);Math::Calculus::Identities::Taylor Series;Math Calculus Identity Taylor-Series;<p>Taylor series expansion of \( e^x \)</p>;"\[ \begin{align*}
     e^x
     &= 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots \\
     &= \sum_{n=0}^{\infty} \frac{x^{n}}{n!}
 \end{align*} \]";;
-77d6362f-6b41-4bcf-90ab-80ec4224bd11;Basic Math (and reversed card);Math::Calculus::Identities::Taylor Series;Math Calculus Identity Taylor-Series;"\[ \ln(x) \]
-<p>Taylor series expansion</p>";"\[ \begin{align*}
+77d6362f-6b41-4bcf-90ab-80ec4224bd11;Basic Math (and reversed card);Math::Calculus::Identities::Taylor Series;Math Calculus Identity Taylor-Series;<p>Taylor series expansion of \( \ln(x) \)</p>;"\[ \begin{align*}
     \ln(x)
-    &= (x-1) - \frac{(x-1)^2}{2} + \frac{(x-1)^3}{3} - \cdots \\
-    &= \sum_{n=1}^{\infty} (-1)^{n+1} \frac{(x-1)^{n}}{n}
+    &= (x - 1) - \frac{(x - 1)^2}{2} + \frac{(x - 1)^3}{3} - \cdots \\
+    &= \sum_{n=1}^{\infty} (-1)^{n+1} \frac{(x - 1)^{n}}{n}
 \end{align*} \]";;
-4abf3654-ac19-4f0c-92c2-36eb55bf17b3;Basic Math (and reversed card);Math::Calculus::Identities::Taylor Series;Math Calculus Identity Taylor-Series;"\[ \ln(1-x) \]
-<p>Taylor series expansion</p>";"\[ \begin{align*}
+4abf3654-ac19-4f0c-92c2-36eb55bf17b3;Basic Math (and reversed card);Math::Calculus::Identities::Taylor Series;Math Calculus Identity Taylor-Series;<p>Taylor series expansion of \( \ln(1-x) \)</p>;"\[ \begin{align*}
     \ln(1-x)
     &= - x - \frac{x^2}{2} - \frac{x^3}{3} - \frac{x^4}{4} - \cdots \\
     &= -\sum_{n=1}^{\infty} \frac{x^{n}}{n}
 \end{align*} \]";;
-7816c6bb-f456-4adb-adec-00682e1df439;Basic Math (and reversed card);Math::Calculus::Identities::Taylor Series;Math Calculus Identity Taylor-Series;"\[ \ln(1+x) \]
-<p>Taylor series expansion</p>";"\[ \begin{align*}
+7816c6bb-f456-4adb-adec-00682e1df439;Basic Math (and reversed card);Math::Calculus::Identities::Taylor Series;Math Calculus Identity Taylor-Series;<p>Taylor series expansion of \( \ln(1+x) \)</p>;"\[ \begin{align*}
     \ln(1+x)
     &= x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4} + \cdots \\
     &= \sum_{n=1}^{\infty} (-1)^{n+1} \frac{x^{n}}{n}
 \end{align*} \]";;
-b8d48c1b-3a5a-4021-a28b-927494aa1058;Basic Math (and reversed card);Math::Calculus::Identities::Taylor Series;Math Calculus Taylor-Series Trigonometric Identity;"\[ \sin(x) \]
-<p>Taylor series expansion</p>";"\[ \begin{align*}
+b8d48c1b-3a5a-4021-a28b-927494aa1058;Basic Math (and reversed card);Math::Calculus::Identities::Taylor Series;Math Calculus Taylor-Series Trigonometric Identity;<p>Taylor series expansion of \( \sin(x) \)</p>;"\[ \begin{align*}
     \sin(x)
     &= x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \cdots \\
-    &= \sum_{n=0}^{\infty} (-1)^{n} \frac{x^{2n+1}}{(2n+1)!}
+    &= \sum_{n=0}^{\infty} (-1)^{n} \frac{x^{2n + 1}}{(2n + 1)!}
 \end{align*} \]";;
-229e4d40-048c-4fe9-869d-f219e780007d;Basic Math (and reversed card);Math::Calculus::Identities::Taylor Series;Math Calculus Taylor-Series Trigonometric Identity;"\[ \cos(x) \]
-<p>Taylor series expansion</p>";"\[ \begin{align*}
+229e4d40-048c-4fe9-869d-f219e780007d;Basic Math (and reversed card);Math::Calculus::Identities::Taylor Series;Math Calculus Taylor-Series Trigonometric Identity;<p>Taylor series expansion of \( \cos(x) \)</p>;"\[ \begin{align*}
     \cos(x)
     &= 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \cdots \\
     &= \sum_{n=0}^{\infty} (-1)^{n} \frac{x^{2n}}{(2n)!}
 \end{align*} \]";;
-33b476da-dd07-4615-8532-a58e05b453b9;Basic Math (and reversed card);Math::Calculus::Identities::Taylor Series;Math Calculus Taylor-Series Hyperbolic Identity;"\[ \sinh x \]
-<p>Taylor series expansion</p>";"\[ \begin{align*}
-    \sinh x
+22324b71-a14c-445f-8d31-546a1e39a4e2;Basic Math (and reversed card);Math::Calculus::Identities::Taylor Series;Math Calculus Taylor-Series Trigonometric Identity;<p>Taylor series expansion of \( \arctan(x) \)</p>;"\[ \begin{align*}
+    \arctan(x)
+    &= x - \frac{x^3}{3} + \frac{x^5}{5} - \frac{x^7}{7} + \cdots \\
+    &= \sum_{n=0}^{\infty} (-1)^{n} \frac{x^{2n + 1}}{2n + 1}
+\end{align*} \]";;
+33b476da-dd07-4615-8532-a58e05b453b9;Basic Math (and reversed card);Math::Calculus::Identities::Taylor Series;Math Calculus Taylor-Series Hyperbolic Identity;<p>Taylor series expansion of \( \sinh(x) \)</p>;"\[ \begin{align*}
+    \sinh(x)
     &= x + \frac{x^3}{3!} + \frac{x^5}{5!} + \frac{x^7}{7!} + \cdots \\
     &= \sum_{n=0}^{\infty} \frac{x^{2n + 1}}{(2n + 1)!}
 \end{align*} \]";;
-e9407069-de8f-46a4-8019-e507885ab220;Basic Math (and reversed card);Math::Calculus::Identities::Taylor Series;Math Calculus Taylor-Series Hyperbolic Identity;"\[ \cosh x \]
-<p>Taylor series expansion</p>";"\[ \begin{align*}
-    \cosh x
+e9407069-de8f-46a4-8019-e507885ab220;Basic Math (and reversed card);Math::Calculus::Identities::Taylor Series;Math Calculus Taylor-Series Hyperbolic Identity;<p>Taylor series expansion of \( \cosh(x) \)</p>;"\[ \begin{align*}
+    \cosh(x)
     &= 1 + \frac{x^2}{2!} + \frac{x^4}{4!} + \frac{x^6}{6!} + \cdots \\
     &= \sum_{n=0}^{\infty} \frac{x^{2n}}{(2n)!}
 \end{align*} \]";;
