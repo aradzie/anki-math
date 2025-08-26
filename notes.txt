@@ -167,6 +167,10 @@ f2eeba1c-39cf-4771-b4a7-5337a4225b7d;Basic Math;Math::Trigonometry;Math Trigonom
     \left( \cos(x) + i \sin(x) \right)^n &= \cos(nx) + i \sin(nx) \\
     \left( \cosh(x) + i \sinh(x) \right)^n &= \cosh(nx) + i \sinh(nx)
 \end{align*} \]";;
+80663e42-48f2-4e44-9f74-cde7302cf1ba;Basic Math;Math::Calculus::Identities::Limits;Math Calculus Identity Limits;<p>The definition of \( e \) as a limit when \( n \to \infty \)</p>;\[ e = \lim_{n \to \infty} \left( 1 + \frac{1}{n} \right)^n \];;
+bf64d640-ba20-4395-93e4-b1c2c079e25b;Basic Math;Math::Calculus::Identities::Limits;Math Calculus Identity Limits;<p>The definition of \( e^x \) as a limit when \( n \to \infty \)</p>;\[ e^x = \lim_{n \to \infty} \left( 1 + \frac{x}{n} \right)^n \];;
+bc5777b8-3846-4bf8-aaf8-fe6aa38c54b2;Basic Math;Math::Calculus::Identities::Limits;Math Calculus Identity Limits;<p>The definition of \( e \) as a limit when \( n \to 0 \)</p>;\[ e = \lim_{n \to 0} \left( 1 + n \right)^{1 / n} \];;
+3b3f0f88-9f30-4412-b811-5cb43beaef9e;Basic Math;Math::Calculus::Identities::Limits;Math Calculus Identity Limits;<p>The definition of \( e^x \) as a limit when \( n \to 0 \)</p>;\[ e^x = \lim_{n \to 0} \left( 1 + n \right)^{x / n} \];;
 e9e0d7ec-b982-4bfe-968a-62bece71e5b2;Basic Math;Math::Calculus::Identities::Derivatives;Math Calculus Identity Derivative;\[ \frac{d}{dx} \left( f(x) g(x) \right) \];\[ f'(x) g(x) + f(x) g'(x) \];;
 10ea3e4e-0837-4eb7-ac2c-d7939d41ec9e;Basic Math;Math::Calculus::Identities::Derivatives;Math Calculus Identity Derivative;\[ \frac{d}{dx} \left( \frac{f(x)}{g(x)} \right) \];\[ \frac{f'(x) g(x) - f(x) g'(x)}{(g(x)^2)} \];;
 8c36a710-5152-459e-aa8d-d17ee1f5780c;Basic Math;Math::Calculus::Identities::Derivatives;Math Calculus Identity Derivative;\[ \frac{d}{dx} \left( x^n \right) \];\[ nx^{n-1} \];;
