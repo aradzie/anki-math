@@ -435,7 +435,7 @@ Then:
     &= 2 \int u e^u \, du \\
     &= 2 u e^u - 2 e^u + C \\
     &= 2 e^u (u - 1) + C \\
-    &= 2 e^\sqrt{x} ( \sqrt{x} - 1 ) + C
+    &= 2 e^{\sqrt{x}} ( \sqrt{x} - 1 ) + C
 \end{align*}
 \]
 ~~~

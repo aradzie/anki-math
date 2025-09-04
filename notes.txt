@@ -960,7 +960,7 @@ fe8a68aa-f984-4c66-b65d-31add3a41293;Basic Math;Math::Calculus::Problems::Integr
     &= 2 \int u e^u \, du \\
     &= 2 u e^u - 2 e^u + C \\
     &= 2 e^u (u - 1) + C \\
-    &= 2 e^\sqrt{x} ( \sqrt{x} - 1 ) + C
+    &= 2 e^{\sqrt{x}} ( \sqrt{x} - 1 ) + C
 \end{align*} \]";;
 5147ac21-173d-4937-9d7d-3098459298ce;Basic Math;Math::Calculus::Problems::Integrals;Math Calculus Problem Integral U-Substitution;"\[ \int \frac{1}{1 + \sqrt{x}} \, dx \]
 <p>Solve the integral.</p>";"<p>Apply \( u \)-substitution:</p>
