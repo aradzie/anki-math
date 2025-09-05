@@ -92,28 +92,28 @@ de1d55e2-5ce2-4137-86b6-c38548c0cf78;Basic Math (and reversed card);Math::Trigon
 cb0c0bfc-be0f-45a7-871f-979b4d6b016e;Basic Math (and reversed card);Math::Trigonometry;Math Trigonometric Identity;\[ \tan 2 \theta \];"\[ \frac{2 \tan \theta}{1 - \tan^2 \theta} \]
 \[ \frac{2}{\cot \theta - \tan \theta} \]";;
 816b1427-7e2e-471a-9a9f-c5eb7362bd5e;Basic Math (and reversed card);Math::Trigonometry;Math Trigonometric Identity;\[ \sin \alpha \cdot \sin \beta \];\[ \frac{1}{2} [ \cos (\alpha - \beta) - \cos (\alpha + \beta) ] \];"\[ \begin{align*}
-    \sin \alpha \cdot \sin \beta &= \frac{1}{2} [ \cos (\alpha - \beta) - \cos (\alpha + \beta) \\
-    \cos \alpha \cdot \cos \beta &= \frac{1}{2} [ \cos (\alpha - \beta) + \cos (\alpha + \beta) \\
-    \sin \alpha \cdot \cos \beta &= \frac{1}{2} [ \sin (\alpha + \beta) + \sin (\alpha - \beta) \\
-    \cos \alpha \cdot \sin \beta &= \frac{1}{2} [ \sin (\alpha + \beta) - \sin (\alpha - \beta)
+    \sin \alpha \cdot \sin \beta &= \frac{1}{2} [ \cos (\alpha - \beta) - \cos (\alpha + \beta) ] \\
+    \cos \alpha \cdot \cos \beta &= \frac{1}{2} [ \cos (\alpha - \beta) + \cos (\alpha + \beta) ] \\
+    \sin \alpha \cdot \cos \beta &= \frac{1}{2} [ \sin (\alpha + \beta) + \sin (\alpha - \beta) ] \\
+    \cos \alpha \cdot \sin \beta &= \frac{1}{2} [ \sin (\alpha + \beta) - \sin (\alpha - \beta) ]
 \end{align*} \]";
 2e6a3423-1a04-4d16-8878-92d900e3b9d7;Basic Math (and reversed card);Math::Trigonometry;Math Trigonometric Identity;\[ \cos \alpha \cdot \cos \beta \];\[ \frac{1}{2} [ \cos (\alpha - \beta) + \cos (\alpha + \beta) ] \];"\[ \begin{align*}
-    \sin \alpha \cdot \sin \beta &= \frac{1}{2} [ \cos (\alpha - \beta) - \cos (\alpha + \beta) \\
-    \cos \alpha \cdot \cos \beta &= \frac{1}{2} [ \cos (\alpha - \beta) + \cos (\alpha + \beta) \\
-    \sin \alpha \cdot \cos \beta &= \frac{1}{2} [ \sin (\alpha + \beta) + \sin (\alpha - \beta) \\
-    \cos \alpha \cdot \sin \beta &= \frac{1}{2} [ \sin (\alpha + \beta) - \sin (\alpha - \beta)
+    \sin \alpha \cdot \sin \beta &= \frac{1}{2} [ \cos (\alpha - \beta) - \cos (\alpha + \beta) ] \\
+    \cos \alpha \cdot \cos \beta &= \frac{1}{2} [ \cos (\alpha - \beta) + \cos (\alpha + \beta) ] \\
+    \sin \alpha \cdot \cos \beta &= \frac{1}{2} [ \sin (\alpha + \beta) + \sin (\alpha - \beta) ] \\
+    \cos \alpha \cdot \sin \beta &= \frac{1}{2} [ \sin (\alpha + \beta) - \sin (\alpha - \beta) ]
 \end{align*} \]";
 05152939-aae0-4f9b-b3b7-f642c2b1445a;Basic Math (and reversed card);Math::Trigonometry;Math Trigonometric Identity;\[ \sin \alpha \cdot \cos \beta \];\[ \frac{1}{2} [ \sin (\alpha + \beta) + \sin (\alpha - \beta) ] \];"\[ \begin{align*}
-    \sin \alpha \cdot \sin \beta &= \frac{1}{2} [ \cos (\alpha - \beta) - \cos (\alpha + \beta) \\
-    \cos \alpha \cdot \cos \beta &= \frac{1}{2} [ \cos (\alpha - \beta) + \cos (\alpha + \beta) \\
-    \sin \alpha \cdot \cos \beta &= \frac{1}{2} [ \sin (\alpha + \beta) + \sin (\alpha - \beta) \\
-    \cos \alpha \cdot \sin \beta &= \frac{1}{2} [ \sin (\alpha + \beta) - \sin (\alpha - \beta)
+    \sin \alpha \cdot \sin \beta &= \frac{1}{2} [ \cos (\alpha - \beta) - \cos (\alpha + \beta) ] \\
+    \cos \alpha \cdot \cos \beta &= \frac{1}{2} [ \cos (\alpha - \beta) + \cos (\alpha + \beta) ] \\
+    \sin \alpha \cdot \cos \beta &= \frac{1}{2} [ \sin (\alpha + \beta) + \sin (\alpha - \beta) ] \\
+    \cos \alpha \cdot \sin \beta &= \frac{1}{2} [ \sin (\alpha + \beta) - \sin (\alpha - \beta) ]
 \end{align*} \]";
 35ca7698-0b12-4e39-8092-b1b4f9d11bb2;Basic Math (and reversed card);Math::Trigonometry;Math Trigonometric Identity;\[ \cos \alpha \cdot \sin \beta \];\[ \frac{1}{2} [ \sin (\alpha + \beta) - \sin (\alpha - \beta) ] \];"\[ \begin{align*}
-    \sin \alpha \cdot \sin \beta &= \frac{1}{2} [ \cos (\alpha - \beta) - \cos (\alpha + \beta) \\
-    \cos \alpha \cdot \cos \beta &= \frac{1}{2} [ \cos (\alpha - \beta) + \cos (\alpha + \beta) \\
-    \sin \alpha \cdot \cos \beta &= \frac{1}{2} [ \sin (\alpha + \beta) + \sin (\alpha - \beta) \\
-    \cos \alpha \cdot \sin \beta &= \frac{1}{2} [ \sin (\alpha + \beta) - \sin (\alpha - \beta)
+    \sin \alpha \cdot \sin \beta &= \frac{1}{2} [ \cos (\alpha - \beta) - \cos (\alpha + \beta) ] \\
+    \cos \alpha \cdot \cos \beta &= \frac{1}{2} [ \cos (\alpha - \beta) + \cos (\alpha + \beta) ] \\
+    \sin \alpha \cdot \cos \beta &= \frac{1}{2} [ \sin (\alpha + \beta) + \sin (\alpha - \beta) ] \\
+    \cos \alpha \cdot \sin \beta &= \frac{1}{2} [ \sin (\alpha + \beta) - \sin (\alpha - \beta) ]
 \end{align*} \]";
 a5edfd36-530b-4531-8aa9-e509f3d7f1e9;Basic Math (and reversed card);Math::Trigonometry;Math Trigonometric Identity;\[ \sin \alpha + \sin \beta \];\[ 2 \sin \left( \frac{\alpha + \beta}{2} \right) \cos \left( \frac{\alpha - \beta}{2} \right) \];"\[ \begin{align*}
     \sin \alpha + \sin \beta &= 2 \sin \left( \frac{\alpha + \beta}{2} \right) \cos \left( \frac{\alpha - \beta}{2} \right) \\

@@ -169,10 +169,10 @@
 !related:
 \[
 \begin{align*}
-    \sin \alpha \cdot \sin \beta &= \frac{1}{2} [ \cos (\alpha - \beta) - \cos (\alpha + \beta) \\
-    \cos \alpha \cdot \cos \beta &= \frac{1}{2} [ \cos (\alpha - \beta) + \cos (\alpha + \beta) \\
-    \sin \alpha \cdot \cos \beta &= \frac{1}{2} [ \sin (\alpha + \beta) + \sin (\alpha - \beta) \\
-    \cos \alpha \cdot \sin \beta &= \frac{1}{2} [ \sin (\alpha + \beta) - \sin (\alpha - \beta)
+    \sin \alpha \cdot \sin \beta &= \frac{1}{2} [ \cos (\alpha - \beta) - \cos (\alpha + \beta) ] \\
+    \cos \alpha \cdot \cos \beta &= \frac{1}{2} [ \cos (\alpha - \beta) + \cos (\alpha + \beta) ] \\
+    \sin \alpha \cdot \cos \beta &= \frac{1}{2} [ \sin (\alpha + \beta) + \sin (\alpha - \beta) ] \\
+    \cos \alpha \cdot \sin \beta &= \frac{1}{2} [ \sin (\alpha + \beta) - \sin (\alpha - \beta) ]
 \end{align*}
 \]
 ~~~
@@ -183,10 +183,10 @@
 !related:
 \[
 \begin{align*}
-    \sin \alpha \cdot \sin \beta &= \frac{1}{2} [ \cos (\alpha - \beta) - \cos (\alpha + \beta) \\
-    \cos \alpha \cdot \cos \beta &= \frac{1}{2} [ \cos (\alpha - \beta) + \cos (\alpha + \beta) \\
-    \sin \alpha \cdot \cos \beta &= \frac{1}{2} [ \sin (\alpha + \beta) + \sin (\alpha - \beta) \\
-    \cos \alpha \cdot \sin \beta &= \frac{1}{2} [ \sin (\alpha + \beta) - \sin (\alpha - \beta)
+    \sin \alpha \cdot \sin \beta &= \frac{1}{2} [ \cos (\alpha - \beta) - \cos (\alpha + \beta) ] \\
+    \cos \alpha \cdot \cos \beta &= \frac{1}{2} [ \cos (\alpha - \beta) + \cos (\alpha + \beta) ] \\
+    \sin \alpha \cdot \cos \beta &= \frac{1}{2} [ \sin (\alpha + \beta) + \sin (\alpha - \beta) ] \\
+    \cos \alpha \cdot \sin \beta &= \frac{1}{2} [ \sin (\alpha + \beta) - \sin (\alpha - \beta) ]
 \end{align*}
 \]
 ~~~
@@ -197,10 +197,10 @@
 !related:
 \[
 \begin{align*}
-    \sin \alpha \cdot \sin \beta &= \frac{1}{2} [ \cos (\alpha - \beta) - \cos (\alpha + \beta) \\
-    \cos \alpha \cdot \cos \beta &= \frac{1}{2} [ \cos (\alpha - \beta) + \cos (\alpha + \beta) \\
-    \sin \alpha \cdot \cos \beta &= \frac{1}{2} [ \sin (\alpha + \beta) + \sin (\alpha - \beta) \\
-    \cos \alpha \cdot \sin \beta &= \frac{1}{2} [ \sin (\alpha + \beta) - \sin (\alpha - \beta)
+    \sin \alpha \cdot \sin \beta &= \frac{1}{2} [ \cos (\alpha - \beta) - \cos (\alpha + \beta) ] \\
+    \cos \alpha \cdot \cos \beta &= \frac{1}{2} [ \cos (\alpha - \beta) + \cos (\alpha + \beta) ] \\
+    \sin \alpha \cdot \cos \beta &= \frac{1}{2} [ \sin (\alpha + \beta) + \sin (\alpha - \beta) ] \\
+    \cos \alpha \cdot \sin \beta &= \frac{1}{2} [ \sin (\alpha + \beta) - \sin (\alpha - \beta) ]
 \end{align*}
 \]
 ~~~
@@ -211,10 +211,10 @@
 !related:
 \[
 \begin{align*}
-    \sin \alpha \cdot \sin \beta &= \frac{1}{2} [ \cos (\alpha - \beta) - \cos (\alpha + \beta) \\
-    \cos \alpha \cdot \cos \beta &= \frac{1}{2} [ \cos (\alpha - \beta) + \cos (\alpha + \beta) \\
-    \sin \alpha \cdot \cos \beta &= \frac{1}{2} [ \sin (\alpha + \beta) + \sin (\alpha - \beta) \\
-    \cos \alpha \cdot \sin \beta &= \frac{1}{2} [ \sin (\alpha + \beta) - \sin (\alpha - \beta)
+    \sin \alpha \cdot \sin \beta &= \frac{1}{2} [ \cos (\alpha - \beta) - \cos (\alpha + \beta) ] \\
+    \cos \alpha \cdot \cos \beta &= \frac{1}{2} [ \cos (\alpha - \beta) + \cos (\alpha + \beta) ] \\
+    \sin \alpha \cdot \cos \beta &= \frac{1}{2} [ \sin (\alpha + \beta) + \sin (\alpha - \beta) ] \\
+    \cos \alpha \cdot \sin \beta &= \frac{1}{2} [ \sin (\alpha + \beta) - \sin (\alpha - \beta) ]
 \end{align*}
 \]
 ~~~
