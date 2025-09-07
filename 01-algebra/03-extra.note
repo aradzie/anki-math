@@ -1,8 +1,0 @@
-!type: Basic Math
-!deck: Math::Algebra
-!tags: Math Algebra Identity
-
-!id: ca23c619-7730-447c-9709-9e238e76a81f
-!front: AM-GM Inequality
-!back: $$ \frac{a+b}{2} \ge \sqrt{ab} $$
-~~~

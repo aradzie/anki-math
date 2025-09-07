@@ -32,7 +32,6 @@ cbbf34f7-b922-438d-a3e5-246ad8ea01f1;Basic Math (and reversed card);Math::Algebr
     a^3 + b^3 &= (a + b)(a^2 - ab + b^2) \\
     a^3 - b^3 &= (a - b)(a^2 + ab + b^2)
 \end{align*} \]";
-ca23c619-7730-447c-9709-9e238e76a81f;Basic Math;Math::Algebra;Math Algebra Identity;<p>AM-GM Inequality</p>;\[ \frac{a+b}{2} \ge \sqrt{ab} \];;
 ae785c87-6dd7-4627-bd48-842f2e7955f4;Basic Math (and reversed card);Math::Trigonometry;Math Trigonometric Identity;\[ \sin (\alpha + \beta) \];\[ \sin \alpha \cos \beta + \cos \alpha \sin \beta \];"\[ \begin{align*}
     \sin (\alpha + \beta) &= \sin \alpha \cos \beta + \cos \alpha \sin \beta \\
     \sin (\alpha - \beta) &= \sin \alpha \cos \beta - \cos \alpha \sin \beta \\
@@ -1236,3 +1235,30 @@ c30ed21c-1d57-4a98-b395-34af78fd9e84;Basic Math;Math::Calculus::Problems::Lamber
        e^x &= 1 e^1 \\
          x &= 1
 \end{align*} \]";;
+33b9efdd-f55a-4fb8-a52b-5ed606fe9491;Basic Math;Math::Extra;Math Algebra Mean;<p>The definition of the Arithmetic Mean (AM)</p>;"<p>The Arithmetic Mean (AM) of two numbers \( a \) and \( b \) is given by:</p>
+\[ AM = \frac{a + b}{2} \]
+<p>The general formula for \( n \) numbers \( x_1, x_2, \ldots, x_n \) is:</p>
+\[ AM = \frac{x_1 + x_2 + \ldots + x_n}{n} = \frac{1}{n} \sum_{i=1}^n x_i \]";;
+0cd67091-27bf-41b9-a77f-dc80c41f251f;Basic Math;Math::Extra;Math Algebra Mean;<p>The definition of the Geometric Mean (GM)</p>;"<p>The Geometric Mean (GM) of two numbers \( a \) and \( b \) is given by:</p>
+\[ GM = \sqrt{ab} \]
+<p>The general formula for \( n \) numbers \( x_1, x_2, \ldots, x_n \) is:</p>
+\[ GM = (x_1 \cdot x_2 \cdot \ldots \cdot x_n)^{1/n} = \left( \prod_{i=1}^n x_i \right)^{1/n} \]";;
+e9a56d8a-3fb7-4815-a58e-b99c661cf57c;Basic Math;Math::Extra;Math Algebra Mean;<p>The definition of the Quadratic Mean (QM)</p>;"<p>The Quadratic Mean (QM) of two numbers \( a \) and \( b \) is given by:</p>
+\[ QM = \sqrt{\frac{a^2 + b^2}{2}} \]
+<p>This is also known as the Root Mean Square (RMS).</p>
+<p>The general formula for \( n \) numbers \( x_1, x_2, \ldots, x_n \) is:</p>
+\[ QM = \sqrt{\frac{x_1^2 + x_2^2 + \ldots + x_n^2}{n}} = \sqrt{\frac{1}{n} \sum_{i=1}^n x_i^2} \]";;
+92d0b2a1-7e59-4e25-be67-ed2948a6ff4e;Basic Math;Math::Extra;Math Algebra Mean;<p>The definition of the Harmonic Mean (HM)</p>;"<p>The Harmonic Mean (HM) of two numbers \( a \) and \( b \) is given by:</p>
+\[ HM = \frac{2}{1/a + 1/b} = \frac{2ab}{a + b} \]
+<p>The general formula for \( n \) numbers \( x_1, x_2, \ldots, x_n \) is:</p>
+\[ HM = \frac{n}{\frac{1}{x_1} + \frac{1}{x_2} + \ldots + \frac{1}{x_n}} = \frac{n}{\sum_{i=1}^n \frac{1}{x_i}} \]";;
+ca23c619-7730-447c-9709-9e238e76a81f;Basic Math;Math::Extra;Math Algebra Mean;<p>AM-GM Inequality</p>;"\[ \frac{a+b}{2} \ge \sqrt{ab} \]
+<p>where AM is the Arithmetic Mean and GM is the Geometric Mean of two non-negative numbers \( a \) and \( b \).</p>";;"<p>More generally, it is known that the following inequality holds for any set of positive numbers:</p>
+\[ QM \ge AM \ge GM \ge HM \]
+<p>where</p>
+<ul>
+<li>QM is the Quadratic Mean</li>
+<li>AM is the Arithmetic Mean</li>
+<li>GM is the Geometric Mean</li>
+<li>HM is the Harmonic Mean</li>
+</ul>"

@@ -1,0 +1,72 @@
+!deck: Math::Extra
+!type: Basic Math
+!tags: Math Algebra Mean
+
+!id: 33b9efdd-f55a-4fb8-a52b-5ed606fe9491
+!front: The definition of the Arithmetic Mean (AM)
+!back:
+The Arithmetic Mean (AM) of two numbers \(a\) and \(b\) is given by:
+
+\[ AM = \frac{a + b}{2} \]
+
+The general formula for \(n\) numbers \(x_1, x_2, \ldots, x_n\) is:
+
+\[ AM = \frac{x_1 + x_2 + \ldots + x_n}{n} = \frac{1}{n} \sum_{i=1}^n x_i \]
+~~~
+
+!id: 0cd67091-27bf-41b9-a77f-dc80c41f251f
+!front: The definition of the Geometric Mean (GM)
+!back:
+The Geometric Mean (GM) of two numbers \(a\) and \(b\) is given by:
+
+\[ GM = \sqrt{ab} \]
+
+The general formula for \(n\) numbers \(x_1, x_2, \ldots, x_n\) is:
+
+\[ GM = (x_1 \cdot x_2 \cdot \ldots \cdot x_n)^{1/n} = \left( \prod_{i=1}^n x_i \right)^{1/n} \]
+~~~
+
+!id: e9a56d8a-3fb7-4815-a58e-b99c661cf57c
+!front: The definition of the Quadratic Mean (QM)
+!back:
+The Quadratic Mean (QM) of two numbers \(a\) and \(b\) is given by:
+
+\[ QM = \sqrt{\frac{a^2 + b^2}{2}} \]
+
+This is also known as the Root Mean Square (RMS).
+
+The general formula for \(n\) numbers \(x_1, x_2, \ldots, x_n\) is:
+
+\[ QM = \sqrt{\frac{x_1^2 + x_2^2 + \ldots + x_n^2}{n}} = \sqrt{\frac{1}{n} \sum_{i=1}^n x_i^2} \]
+~~~
+
+!id: 92d0b2a1-7e59-4e25-be67-ed2948a6ff4e
+!front: The definition of the Harmonic Mean (HM)
+!back:
+The Harmonic Mean (HM) of two numbers \(a\) and \(b\) is given by:
+
+\[ HM = \frac{2}{1/a + 1/b} = \frac{2ab}{a + b} \]
+
+The general formula for \(n\) numbers \(x_1, x_2, \ldots, x_n\) is:
+
+\[ HM = \frac{n}{\frac{1}{x_1} + \frac{1}{x_2} + \ldots + \frac{1}{x_n}} = \frac{n}{\sum_{i=1}^n \frac{1}{x_i}} \]
+~~~
+
+!id: ca23c619-7730-447c-9709-9e238e76a81f
+!front: AM-GM Inequality
+!back:
+\[ \frac{a+b}{2} \ge \sqrt{ab} \]
+
+where AM is the Arithmetic Mean and GM is the Geometric Mean of two non-negative numbers \(a\) and \(b\).
+!extra:
+More generally, it is known that the following inequality holds for any set of positive numbers:
+
+\[ QM \ge AM \ge GM \ge HM \]
+
+where
+
+- QM is the Quadratic Mean
+- AM is the Arithmetic Mean
+- GM is the Geometric Mean
+- HM is the Harmonic Mean
+~~~
