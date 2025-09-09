@@ -20,3 +20,18 @@ where
 
 The solution for a differential equation is a function which satisfies the above expression.
 ~~~
+
+!id: 3547a8c1-b730-41f5-a264-e4b41a513a14
+!front: What is the order of an ordinary differential equation?
+!back: The order of an ordinary differential equation is the order of the highest derivative in the equation.
+~~~
+
+!id: d6fe5529-5dee-460a-80cf-b7889b053b0e
+!front: What is an autonomous ordinary differential equation?
+!back:
+An autonomous ordinary differential equation is an equation where the independent variable does not explicitly appear in the equation.
+
+An autonomous ordinary differential equation can be expressed in the form:
+
+\[ \frac{dy}{dx} = f(y) \]
+~~~

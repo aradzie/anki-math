@@ -482,11 +482,16 @@ ebdd5628-7ae7-4805-bda4-51c16529b65e;Basic Math;Math::Calculus::Limits;Math Calc
 <li>\( \lim_{x \to c} f(x) = f(c) \): The limit of the function as \( x \) approaches \( c \) is equal to the actual value of the function at \( c \).</li>
 </ul>
 <p>If a function is continuous at every point in its domain, it is called a <strong>continuous</strong> function.</p>";;
-ebddf2d2-f380-49bc-9d98-47d69966ce7f;Basic Math;Math::Calculus::Differentiation;Math Calculus Differentiation Theory;<p>The definition of the extreme value theorem (EVT).</p>;"<p>The extreme value theorem states that if a real-valued function \( f \) is continuous on the closed and bounded interval \( [a,b] \), then \( f \) must attain a maximum and a minimum, each at least once.</p>
+166b6025-a38f-4c26-8910-f123bc655054;Basic Math;Math::Calculus::Differentiation;Math Calculus Differentiation Theory;<p>The definition of the a critical point.</p>;"<p>A critical point of a function \( f(x) \) is a point in the domain of \( f \) where either:</p>
+<ul>
+<li>The derivative \( f'(x) \) is zero, or</li>
+<li>The derivative \( f'(x) \) does not exist.</li>
+</ul>";;
+ebddf2d2-f380-49bc-9d98-47d69966ce7f;Basic Math;Math::Calculus::Differentiation;Math Calculus Differentiation Theory;<p>The definition of the <strong>Extreme Value Theorem</strong> (EVT).</p>;"<p>The <strong>Extreme Value Theorem</strong> states that if a real-valued function \( f \) is continuous on the closed and bounded interval \( [a,b] \), then \( f \) must attain a maximum and a minimum, each at least once.</p>
 <p>That is, there exist numbers \( c \) and \( d \) in \( [a,b] \) such that: \( f(c) \leq f(x) \leq f(d) \quad \forall x \in [a,b] \).</p>
 <p>In simpler terms, a continuous function on a closed interval will always have a highest point and a lowest point.</p>";;
-9df36d9d-546f-45e6-b2dc-3b5159b6bf72;Basic Math;Math::Calculus::Differentiation;Math Calculus Differentiation Theory;"<p>The definition of the Rolle&#39;s theorem.</p>";"<p>The Rolle&#39;s theorem is a special case of the mean value theorem.</p>
-<p>The Rolle&#39;s theorem states that if a function \( f(x) \) is:</p>
+9df36d9d-546f-45e6-b2dc-3b5159b6bf72;Basic Math;Math::Calculus::Differentiation;Math Calculus Differentiation Theory;"<p>The definition of the <strong>Rolle&#39;s Theorem</strong>.</p>";"<p>The <strong>Rolle&#39;s Theorem</strong> is a special case of the <strong>Mean Value Theorem</strong>.</p>
+<p>The <strong>Rolle&#39;s Theorem</strong> states that if a function \( f(x) \) is:</p>
 <ul>
 <li>Continuous on a closed interval \( [a,b] \)</li>
 <li>Differentiable on the open interval \( (a,b) \)</li>
@@ -494,8 +499,8 @@ ebddf2d2-f380-49bc-9d98-47d69966ce7f;Basic Math;Math::Calculus::Differentiation;
 </ul>
 <p>Then there exists at least one point \( c \) in the open interval \( (a,b) \) such that \( f'(c) = 0 \).</p>
 <p>Geometrically, this means if a continuous and differentiable curve starts and ends at the same height, there must be at least one point in between where the tangent line is horizontal (i.e., the slope is zero).</p>";;
-b4edd171-5748-42bd-8392-c5d010a1cfa0;Basic Math;Math::Calculus::Differentiation;Math Calculus Differentiation Theory;<p>The definition of the mean value theorem (MVT).</p>;"<p>The mean value theorem is a generalization of Rolle&#39;s theorem.</p>
-<p>The mean value theorem states that if a function \( f(x) \) is:</p>
+b4edd171-5748-42bd-8392-c5d010a1cfa0;Basic Math;Math::Calculus::Differentiation;Math Calculus Differentiation Theory;<p>The definition of the <strong>Mean Value Theorem</strong> (MVT).</p>;"<p>The <strong>Mean Value Theorem</strong> is a generalization of <strong>Rolle&#39;s Theorem</strong>.</p>
+<p>The <strong>Mean Value Theorem</strong> states that if a function \( f(x) \) is:</p>
 <ul>
 <li>Continuous on a closed interval \( [a,b] \)</li>
 <li>Differentiable on the open interval \( (a,b) \)</li>
@@ -505,10 +510,10 @@ b4edd171-5748-42bd-8392-c5d010a1cfa0;Basic Math;Math::Calculus::Differentiation;
 \[ f'(c) = \frac{f(b) - f(a)}{b - a} \]
 <p>Or, alternatively:</p>
 \[ f(c) = \frac{1}{b - a} \int_a^b f(x) \, dx \]
-<p>The Rolle&#39;s theorem can be derived from the mean value theorem: if \( f(a) = f(b) \), then the right side of the mean value theorem equation becomes</p>
+<p>The Rolle&#39;s Theorem can be derived from the Mean Value Theorem: if \( f(a) = f(b) \), then the right side of the Mean Value Theorem equation becomes</p>
 \[ f'(c) = \frac{f(a) - f(a)}{b - a} = \frac{0}{b - a} \]
 <p>which means \( f'(c)=0 \).</p>";;
-965f6c49-3485-45d0-8590-b369246d02b6;Basic Math;Math::Calculus::Differentiation;Math Calculus Differentiation Theory;<p>The definition of the intermediate value theorem (IVT).</p>;"<p>The intermediate value theorem states that if a function \( f(x) \) is continuous on a closed interval \( [a,b] \), and \( L \) is any value between \( f(a) \) and \( f(b) \), then there exists at least one number \( c \) in the interval \( [a,b] \) such that \( f(c)=L \).</p>
+965f6c49-3485-45d0-8590-b369246d02b6;Basic Math;Math::Calculus::Differentiation;Math Calculus Differentiation Theory;<p>The definition of the <strong>Intermediate Value Theorem</strong> (IVT).</p>;"<p>The <strong>Intermediate Value Theorem</strong> states that if a function \( f(x) \) is continuous on a closed interval \( [a,b] \), and \( L \) is any value between \( f(a) \) and \( f(b) \), then there exists at least one number \( c \) in the interval \( [a,b] \) such that \( f(c)=L \).</p>
 <p>Intuitively, if you can draw the graph of a function without lifting your pencil, and it goes from one y-value to another, it must pass through all the y-values in between.</p>";;
 d2ef18d6-cb42-4ca5-bd64-5e12abfe0bdf;Basic Math;Math::Calculus::Differentiation;Math Calculus Differentiation Theory;<p>Derive \( \frac{d}{dx} \arcsin(x) \)</p>;"\[ \begin{align*}
     y &= \arcsin(x) \\
@@ -710,6 +715,10 @@ b3089105-034a-4b61-9ab8-daa678343200;Basic Math;Math::Calculus::Vector Calculus;
 <li>\( F \) is a given function relating all these variables and derivatives.</li>
 </ul>
 <p>The solution for a differential equation is a function which satisfies the above expression.</p>";;
+3547a8c1-b730-41f5-a264-e4b41a513a14;Basic Math;Math::Calculus::ODE;Math Calculus Differential-Equation ODE Theory;<p>What is the order of an ordinary differential equation?</p>;<p>The order of an ordinary differential equation is the order of the highest derivative in the equation.</p>;;
+d6fe5529-5dee-460a-80cf-b7889b053b0e;Basic Math;Math::Calculus::ODE;Math Calculus Differential-Equation ODE Theory;<p>What is an autonomous ordinary differential equation?</p>;"<p>An autonomous ordinary differential equation is an equation where the independent variable does not explicitly appear in the equation.</p>
+<p>An autonomous ordinary differential equation can be expressed in the form:</p>
+\[ \frac{dy}{dx} = f(y) \]";;
 8d7d62ea-207c-4014-ac47-501c77a67f4b;Basic Math;Math::Calculus::Laplace Transform;Math Calculus Laplace-Transform Theory;<p>What is the definition of the Laplace transform?</p>;"<p>The Laplace transform of a function \( f(t) \) is a function \( F(s) \) defined as</p>
 \[ F(s) = \mathscr{L}\{f\} = \int_0^\infty e^{-st} f(t) \, dt \]
 <p>where \( f(t) \) is a function of exponential order defined for all \( t \ge 0 \).</p>";;
@@ -771,17 +780,6 @@ d9403f39-2452-4940-855d-86a86391fe40;Basic Math;Math::Calculus::Laplace Transfor
 <p>The unit impulse function is technically not a function but a <strong>generalized function</strong> or <strong>distribution</strong>.</p>";;
 fdaf1b7b-fe9b-4efc-af85-fa35f0c3dab2;Basic Math;Math::Calculus::Laplace Transform;Math Calculus Laplace-Transform Theory;<p>What is the derivative of the unit step function?</p>;"<p>The derivative of the unit step function (Heaviside function) is the unit impulse function (Dirac delta function);</p>
 \[ \frac{d}{dt} u(t) = \delta(t) \]";;
-205a5237-31f0-4e31-867b-a9f6b6f02dca;Basic Math;Math::Calculus::PDE;Math Calculus Differential-Equation PDE Theory;<p>What is an partial differential equation (PDE)?</p>;"<p>A partial differential equation is a mathematical equation that involves an unknown function of multiple independent variables and its partial derivatives with respect to those variables.</p>
-<p>A general \( k \)-th order partial differential equation involving an unknown function \( u \) of \( n \) independent variables \( x_1, x_2, \dots, x_n \) can be expressed as</p>
-\[ F\left( x_1, x_2, \dots, x_n, u, \frac{\partial u}{\partial x_1}, \dots, \frac{\partial u}{\partial x_n}, \frac{\partial^2 u}{\partial x_1^2}, \dots, \frac{\partial^k u}{\partial x_{i_1} \partial x_{i_2} \dots \partial x_{i_k}} \right) = 0 \]
-<p>where</p>
-<ul>
-<li>\( x_1, x_2, \dots, x_n \) are the independent variables.</li>
-<li>\( u = u(x_1, x_2, \dots, x_n) \) is the unknown function.</li>
-<li>\( \frac{\partial^k u}{\partial x_{i_1} \partial x_{i_2} \dots \partial x_{i_k}} \) denotes a \( k \)-th order partial derivative.</li>
-<li>\( F \) is a given function relating all these variables and derivatives.</li>
-</ul>
-<p>The solution for a differential equation is a function which satisfies the above expression.</p>";;
 e21aea94-93e7-43b1-ae28-2c2f3a6596c8;Basic Math;Math::Linear Algebra;Math Linear-Algebra;<p>What are the multiplication properties of matrices?</p>;"<p>Matrix multiplication follows the distributive law:</p>
 \[ \begin{align*}
     A(B \pm C) &= AB \pm AC \\
