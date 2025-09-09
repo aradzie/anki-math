@@ -510,6 +510,57 @@ b4edd171-5748-42bd-8392-c5d010a1cfa0;Basic Math;Math::Calculus::Differentiation;
 <p>which means \( f'(c)=0 \).</p>";;
 965f6c49-3485-45d0-8590-b369246d02b6;Basic Math;Math::Calculus::Differentiation;Math Calculus Differentiation Theory;<p>The definition of the intermediate value theorem (IVT).</p>;"<p>The intermediate value theorem states that if a function \( f(x) \) is continuous on a closed interval \( [a,b] \), and \( L \) is any value between \( f(a) \) and \( f(b) \), then there exists at least one number \( c \) in the interval \( [a,b] \) such that \( f(c)=L \).</p>
 <p>Intuitively, if you can draw the graph of a function without lifting your pencil, and it goes from one y-value to another, it must pass through all the y-values in between.</p>";;
+d2ef18d6-cb42-4ca5-bd64-5e12abfe0bdf;Basic Math;Math::Calculus::Differentiation;Math Calculus Differentiation Theory;<p>Derive \( \frac{d}{dx} \arcsin(x) \)</p>;"\[ \begin{align*}
+    y &= \arcsin(x) \\
+    x &= \sin(y)
+\end{align*} \]
+<p>Differentiate both sides implicitly with respect to \( x \):</p>
+\[ \begin{align*}
+    \frac{d}{dx}[x] &= \frac{d}{dx}[\sin(y)] \\
+    1 &= \cos(y) \cdot \frac{dy}{dx} \\
+    \frac{dy}{dx} &= \frac{1}{\cos(y)}
+\end{align*} \]
+<p>Express \( \cos(y) \) in terms of \( x \):</p>
+\[ \begin{align*}
+    \cos(y) &= \sqrt{1 - \sin^2(y)} \\
+    &= \sqrt{1 - x^2}
+\end{align*} \]
+<p>Substitute back:</p>
+\[ \frac{dy}{dx} = \frac{1}{\sqrt{1 - x^2}} \]";;
+5f69e265-6713-49d5-bedb-70c1ca9726d8;Basic Math;Math::Calculus::Differentiation;Math Calculus Differentiation Theory;<p>Derive \( \frac{d}{dx} \arccos(x) \)</p>;"\[ \begin{align*}
+    y &= \arccos(x) \\
+    x &= \cos(y)
+\end{align*} \]
+<p>Differentiate both sides implicitly with respect to \( x \):</p>
+\[ \begin{align*}
+    \frac{d}{dx}[x] &= \frac{d}{dx}[\cos(y)] \\
+    1 &= - \sin(y) \cdot \frac{dy}{dx} \\
+    \frac{dy}{dx} &= - \frac{1}{\sin(y)}
+\end{align*} \]
+<p>Express \( \sin(y) \) in terms of \( x \):</p>
+\[ \begin{align*}
+    \sin(y) &= \sqrt{1 - \cos^2(y)} \\
+    &= \sqrt{1 - x^2}
+\end{align*} \]
+<p>Substitute back:</p>
+\[ \frac{dy}{dx} = - \frac{1}{\sqrt{1 - x^2}} \]";;
+8ff74159-1d9a-40cc-ba38-9fb04de9a11f;Basic Math;Math::Calculus::Differentiation;Math Calculus Differentiation Theory;<p>Derive \( \frac{d}{dx} \arctan(x) \)</p>;"\[ \begin{align*}
+    y &= \arctan(x) \\
+    x &= \tan(y)
+\end{align*} \]
+<p>Differentiate both sides implicitly with respect to \( x \):</p>
+\[ \begin{align*}
+    \frac{d}{dx}[x] &= \frac{d}{dx}[\tan(y)] \\
+    1 &= \sec^2(y) \cdot \frac{dy}{dx} \\
+    \frac{dy}{dx} &= \frac{1}{\sec^2(y)}
+\end{align*} \]
+<p>Express \( \sec^2(y) \) in terms of \( x \):</p>
+\[ \begin{align*}
+    \sec^2(y) &= 1 + \tan^2(y) \\
+    &= 1 + x^2
+\end{align*} \]
+<p>Substitute back:</p>
+\[ \frac{dy}{dx} = \frac{1}{1 + x^2} \]";;
 68c2408d-7e8a-45b4-9a2d-9288a59f1565;Basic Math;Math::Calculus::Integration;Math Calculus Integration Theory;<p>What is the fundamental theorem of calculus (FTC)?</p>;"<p>Consider a function \( f \) which is continuous on \( [a,b] \).</p>
 <ul>
 <li>If \( F(x) = \int_a^x (t) \, dt \), then \( F'(x) = f(x) \) on \( (a,b) \).</li>
