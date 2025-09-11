@@ -1,0 +1,28 @@
+!deck: Math::Extra
+!type: Basic Math
+!tags: Math Calculus Center-of-Mass
+
+!id: ba5efbda-07d0-436e-9ca0-9afe2ce215d5
+!front: What is the formula for the moment of a system of particles about the origin?
+!back:
+The moment \( \mathbf{M}_O \) of a system of particles about the origin is given by the formula:
+
+\[ \mathbf{M}_O = \sum_{i=1}^{n} m_i \mathbf{r}_i \]
+
+- \( m_i \) is the mass of the \( i \)-th particle, and
+- \( \mathbf{r}_i \) is the position vector of the \( i \)-th particle.
+~~~
+
+!id: 03d7dc42-3270-4fc3-9488-f049ac676975
+!front: What is the formula for the center of mass of a system of particles?
+!back:
+The center of mass \( \mathbf{R} \) of a system of particles is given by the formula:
+
+\[ \mathbf{R} = \frac{1}{m} \sum_{i=1}^{n} m_i \mathbf{r}_i \]
+
+where
+
+- \( m = \sum_{i=1}^{n} m_i \) is the total mass of the system,
+- \( m_i \) is the mass of the \( i \)-th particle, and
+- \( \mathbf{r}_i \) is the position vector of the \( i \)-th particle.
+~~~

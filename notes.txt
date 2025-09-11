@@ -1429,6 +1429,20 @@ c30ed21c-1d57-4a98-b395-34af78fd9e84;Basic Math;Math::Calculus::Problems::Lamber
        e^x &= 1 e^1 \\
          x &= 1
 \end{align*} \]";;
+ba5efbda-07d0-436e-9ca0-9afe2ce215d5;Basic Math;Math::Extra;Math Calculus Center-of-Mass;<p>What is the formula for the moment of a system of particles about the origin?</p>;"<p>The moment \( \mathbf{M}_O \) of a system of particles about the origin is given by the formula:</p>
+\[ \mathbf{M}_O = \sum_{i=1}^{n} m_i \mathbf{r}_i \]
+<ul>
+<li>\( m_i \) is the mass of the \( i \)-th particle, and</li>
+<li>\( \mathbf{r}_i \) is the position vector of the \( i \)-th particle.</li>
+</ul>";;
+03d7dc42-3270-4fc3-9488-f049ac676975;Basic Math;Math::Extra;Math Calculus Center-of-Mass;<p>What is the formula for the center of mass of a system of particles?</p>;"<p>The center of mass \( \mathbf{R} \) of a system of particles is given by the formula:</p>
+\[ \mathbf{R} = \frac{1}{m} \sum_{i=1}^{n} m_i \mathbf{r}_i \]
+<p>where</p>
+<ul>
+<li>\( m = \sum_{i=1}^{n} m_i \) is the total mass of the system,</li>
+<li>\( m_i \) is the mass of the \( i \)-th particle, and</li>
+<li>\( \mathbf{r}_i \) is the position vector of the \( i \)-th particle.</li>
+</ul>";;
 33b9efdd-f55a-4fb8-a52b-5ed606fe9491;Basic Math;Math::Extra;Math Algebra Mean;<p>The definition of the Arithmetic Mean (AM)</p>;"<p>The Arithmetic Mean (AM) of two numbers \( a \) and \( b \) is given by:</p>
 \[ AM = \frac{a + b}{2} \]
 <p>The general formula for \( n \) numbers \( x_1, x_2, \ldots, x_n \) is:</p>
