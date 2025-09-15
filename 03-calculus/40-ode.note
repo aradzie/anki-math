@@ -34,4 +34,38 @@ An autonomous ordinary differential equation is an equation where the independen
 An autonomous ordinary differential equation can be expressed in the form:
 
 \[ \frac{dy}{dx} = f(y) \]
+
+where \( f(y) \) is a function that depends only on the dependent variable \( y \).
+
+The equation can be solved by separating the variables and integrating both sides:
+
+\[
+\begin{align*}
+    \frac{1}{f(y)} \cdot \frac{dy}{dx} &= 1 \\
+    \int \frac{1}{f(y)} \cdot \frac{dy}{dx} \, dx &= \int 1 \, dx \\
+    \int \frac{dy}{f(y)} &= x + C
+\end{align*}
+\]
+
+where \( C \) is the constant of integration.
+~~~
+
+!id: b78cba6e-475d-47e1-a52a-1865e2f556c7
+!front: What is a separable ordinary differential equation?
+!back:
+A first-order ordinary differential equation is separable if it can be written in the form
+
+\[ \frac{dy}{dx} = h(x)g(y) \]
+
+where \( h(x) \) is a function of \( x \) alone and \( g(y) \) is a function of \( y \) alone.
+
+Once the variables are separated, we can integrate both sides of the equation with respect to \( x \) as follows:
+
+\[
+\begin{align*}
+    \int \frac{1}{g(y)} \cdot \frac{dy}{dx} \, dx &= \int h(x) \, dx \\
+    \int \frac{dy}{g(y)} &= \int h(x) \, dx \\
+    G(y) &= H(x) + C
+\end{align*}
+\]
 ~~~

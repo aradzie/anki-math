@@ -718,7 +718,24 @@ b3089105-034a-4b61-9ab8-daa678343200;Basic Math;Math::Calculus::Vector Calculus;
 3547a8c1-b730-41f5-a264-e4b41a513a14;Basic Math;Math::Calculus::ODE;Math Calculus Differential-Equation ODE Theory;<p>What is the order of an ordinary differential equation?</p>;<p>The order of an ordinary differential equation is the order of the highest derivative in the equation.</p>;;
 d6fe5529-5dee-460a-80cf-b7889b053b0e;Basic Math;Math::Calculus::ODE;Math Calculus Differential-Equation ODE Theory;<p>What is an autonomous ordinary differential equation?</p>;"<p>An autonomous ordinary differential equation is an equation where the independent variable does not explicitly appear in the equation.</p>
 <p>An autonomous ordinary differential equation can be expressed in the form:</p>
-\[ \frac{dy}{dx} = f(y) \]";;
+\[ \frac{dy}{dx} = f(y) \]
+<p>where \( f(y) \) is a function that depends only on the dependent variable \( y \).</p>
+<p>The equation can be solved by separating the variables and integrating both sides:</p>
+\[ \begin{align*}
+    \frac{1}{f(y)} \cdot \frac{dy}{dx} &= 1 \\
+    \int \frac{1}{f(y)} \cdot \frac{dy}{dx} \, dx &= \int 1 \, dx \\
+    \int \frac{dy}{f(y)} &= x + C
+\end{align*} \]
+<p>where \( C \) is the constant of integration.</p>";;
+b78cba6e-475d-47e1-a52a-1865e2f556c7;Basic Math;Math::Calculus::ODE;Math Calculus Differential-Equation ODE Theory;<p>What is a separable ordinary differential equation?</p>;"<p>A first-order ordinary differential equation is separable if it can be written in the form</p>
+\[ \frac{dy}{dx} = h(x)g(y) \]
+<p>where \( h(x) \) is a function of \( x \) alone and \( g(y) \) is a function of \( y \) alone.</p>
+<p>Once the variables are separated, we can integrate both sides of the equation with respect to \( x \) as follows:</p>
+\[ \begin{align*}
+    \int \frac{1}{g(y)} \cdot \frac{dy}{dx} \, dx &= \int h(x) \, dx \\
+    \int \frac{dy}{g(y)} &= \int h(x) \, dx \\
+    G(y) &= H(x) + C
+\end{align*} \]";;
 8d7d62ea-207c-4014-ac47-501c77a67f4b;Basic Math;Math::Calculus::Laplace Transform;Math Calculus Laplace-Transform Theory;<p>What is the definition of the Laplace transform?</p>;"<p>The Laplace transform of a function \( f(t) \) is a function \( F(s) \) defined as</p>
 \[ F(s) = \mathscr{L}\{f\} = \int_0^\infty e^{-st} f(t) \, dt \]
 <p>where \( f(t) \) is a function of exponential order defined for all \( t \ge 0 \).</p>";;
@@ -780,6 +797,53 @@ d9403f39-2452-4940-855d-86a86391fe40;Basic Math;Math::Calculus::Laplace Transfor
 <p>The unit impulse function is technically not a function but a <strong>generalized function</strong> or <strong>distribution</strong>.</p>";;
 fdaf1b7b-fe9b-4efc-af85-fa35f0c3dab2;Basic Math;Math::Calculus::Laplace Transform;Math Calculus Laplace-Transform Theory;<p>What is the derivative of the unit step function?</p>;"<p>The derivative of the unit step function (Heaviside function) is the unit impulse function (Dirac delta function);</p>
 \[ \frac{d}{dt} u(t) = \delta(t) \]";;
+e588dedf-9fd7-4fd4-98f4-4ac94dc003a0;Basic Math;Math::Linear Algebra;Math Linear-Algebra Geometry;<p>Vector equation of the line.</p>;"\[ \mathbf{r} = \mathbf{p} + t\mathbf{d} \]
+<p>where:</p>
+<ul>
+<li>\( \mathbf{r} \) is the position vector of any point on the line,</li>
+<li>\( \mathbf{p} \) is the position vector of a specific point on the line,</li>
+<li>\( \mathbf{d} \) is the direction vector of the line, and</li>
+<li>\( t \) is a scalar parameter.</li>
+</ul>";;
+e4ce563b-80b2-452b-823c-543437869431;Basic Math;Math::Linear Algebra;Math Linear-Algebra Geometry;<p>Parametric equation of the line.</p>;"\[ \begin{align*}
+    x &= p_x + td_x \\
+    y &= p_y + td_y \\
+    z &= p_z + td_z
+\end{align*} \]
+<p>where:</p>
+<ul>
+<li>\( (p_x, p_y, p_z) \) are the coordinates of the specific point on the line,</li>
+<li>\( (d_x, d_y, d_z) \) are the components of the direction vector, and</li>
+<li>\( t \) is a scalar parameter.</li>
+</ul>";;
+5ba84a88-572c-43a9-877f-d3e110d5ac8b;Basic Math;Math::Linear Algebra;Math Linear-Algebra Geometry;<p>Symmetric equation of the line.</p>;"\[ \frac{x - p_x}{d_x} = \frac{y - p_y}{d_y} = \frac{z - p_z}{d_z} \]
+<p>where:</p>
+<ul>
+<li>\( (p_x, p_y, p_z) \) are the coordinates of the specific point on the line,</li>
+<li>\( (d_x, d_y, d_z) \) are the components of the direction vector.</li>
+</ul>";;
+82d83281-4717-4db1-8362-1005296a02f4;Basic Math;Math::Linear Algebra;Math Linear-Algebra Geometry;<p>Vector equation of the plane.</p>;"\[ (\mathbf{r} - \mathbf{p}) \cdot \mathbf{n} = 0 \]
+<p>or equivalently:</p>
+\[ \begin{align*}
+    (\mathbf{r} - \mathbf{p}) \cdot \mathbf{n} &= 0 \\
+    \mathbf{r} \cdot \mathbf{n} - \mathbf{p} \cdot \mathbf{n} &= 0 \\
+    \mathbf{r} \cdot \mathbf{n} &= \mathbf{p} \cdot \mathbf{n} \\
+    \mathbf{r} \cdot \mathbf{n} &= c
+\end{align*} \]
+<p>where:</p>
+<ul>
+<li>\( \mathbf{r} \) is the position vector of any point on the plane,</li>
+<li>\( \mathbf{p} \) is the position vector of a specific point on the plane,</li>
+<li>\( \mathbf{n} \) is a normal vector to the plane, and</li>
+<li>\( c = \mathbf{r} \cdot \mathbf{n} \) is a scalar constant.</li>
+</ul>";;
+94d0e09b-2f50-4ed9-9c43-6f1b218c9e21;Basic Math;Math::Linear Algebra;Math Linear-Algebra Geometry;<p>Sclar equation of the plane.</p>;"\[ ax + by + cz = d \]
+<p>where:</p>
+<ul>
+<li>\( (a, b, c) \) are the components of the normal vector \( \mathbf{n} \),</li>
+<li>\( (x, y, z) \) are the coordinates of any point on the plane, and</li>
+<li>\( d \) is a scalar constant.</li>
+</ul>";;
 80ab5bc9-54c5-48ea-8edd-878af86130d5;Basic Math;Math::Linear Algebra;Math Linear-Algebra Matrix;<p>What is a <strong>diagonal matrix</strong>?</p>;"<p>A <strong>diagonal matrix</strong> is a square matrix in which all entries outside the main diagonal are zero. The main diagonal runs from the top left to the bottom right of the matrix.</p>
 <p>For example, the following is a \( 3 \times 3 \) diagonal matrix:</p>
 \[ \begin{bmatrix}
@@ -845,16 +909,41 @@ e21aea94-93e7-43b1-ae28-2c2f3a6596c8;Basic Math;Math::Linear Algebra;Math Linear
 97497647-99db-4018-b980-3654c4bcdadd;Basic Math;Math::Linear Algebra;Math Linear-Algebra Matrix;<p>What is the inverse of a square matrix?</p>;"<p>The inverse of a square matrix \( A \) is a square matrix \( A^{-1} \) such that:</p>
 \[ A \cdot A^{-1} = A^{-1} \cdot A = I \]
 <p>where \( I \) is the identity matrix of the same size as \( A \).</p>";;
-6be199f5-db3d-4de8-8e93-2b1a5d3ddfb1;Basic Math;Math::Linear Algebra;Math Linear-Algebra Matrix;<p>What is a singular square matrix?</p>;"<p>A square matrix \( A \) is singular if its determinant is zero:</p>
+b4e1a0cc-7e35-4d1d-b9d6-e5048208934e;Basic Math;Math::Linear Algebra;Math Linear-Algebra Matrix;<p>What are the properties of symmetric matrices?</p>;"<p>Suppose that is \( A \) symmetric matrix. Then, we have the following properties:</p>
+<ul>
+<li>\( -A \) is symmetric.</li>
+<li>\( cA \) is symmetric for any \( c \ne 0 \).</li>
+<li>\( A^m \) is symmetric for any positive integer \( m \).</li>
+<li>\( A^{-1} \) is symmetric for nonsingular \( A \).</li>
+</ul>
+<p>If \( A \) and \( B \) symmetric matrices, we have the following properties:</p>
+<ul>
+<li>The sum \( A + B \) is symmetric.</li>
+<li>The product \( A \cdot B \) is <em>not</em> always symmetric.</li>
+</ul>
+<p>Finally:</p>
+<ul>
+<li>\( A + A^T \) is symmetric for any <em>square</em> matrix \( A \).</li>
+<li>\( A \cdot A^T \) and \( A^T \cdot A \) is symmetric for <em>any</em> \( m \times n \) matrix \( A \).</li>
+</ul>
+<p>Any diagonal matrix is symmetric.</p>";;
+6265ef72-9bad-4c48-b490-24446bcfc10b;Basic Math;Math::Linear Algebra;Math Linear-Algebra Matrix;<p>If \( A \) is a symmetric matrix, is \( A^{m} \) symmetric?:</p>;<p>Yes, \( A^{m} \) is symmetric for a symmetric matrix \( A \) and a positive integer \( m \).</p>;;
+d0475616-146a-47a8-bcc1-2fd19442dd19;Basic Math;Math::Linear Algebra;Math Linear-Algebra Matrix;<p>If \( A \) is a symmetric matrix, is \( A^{-1} \) symmetric?:</p>;<p>Yes, \( A^{-1} \) is symmetric for a nonsingular symmetric matrix \( A \).</p>;;
+768793db-4e6a-4695-9954-955a163d3e38;Basic Math;Math::Linear Algebra;Math Linear-Algebra Matrix;<p>If \( A \) and \( B \) are symmetric matrices, is their sum \( A + B \) symmetric?:</p>;<p>Yes, the sum \( A + B \) is symmetric for two symmetric matrices \( A \) and \( B \).</p>;;
+dceba5de-f019-4dc7-a946-190b07e8de5a;Basic Math;Math::Linear Algebra;Math Linear-Algebra Matrix;<p>If \( A \) and \( B \) are symmetric matrices, is their product \( A \cdot B \) symmetric?:</p>;<p>No, the product \( A \cdot B \) is <em>not</em> always symmetric.</p>;;
+495efd7f-36de-467e-92b2-d50d0d9034f6;Basic Math;Math::Linear Algebra;Math Linear-Algebra Matrix;<p>For which matrix \( A \) the sum \( A + A^T \) is symmetric?</p>;<p>The sum \( A + A^T \) is symmetric for <em>any square</em> \( n \times n \) matrix \( A \).</p>;;
+0894c97c-ab4a-4e1e-a499-775d480792bf;Basic Math;Math::Linear Algebra;Math Linear-Algebra Matrix;<p>For which matrix \( A \) the product \( A \cdot A^T \) is symmetric?</p>;<p>The product \( A \cdot A^T \) is symmetric for <em>any rectangular</em> \( m \times n \) matrix \( A \).</p>;;
+8e0ae878-8bed-44b5-8b7f-9586cda93890;Basic Math;Math::Linear Algebra;Math Linear-Algebra Matrix;<p>When a diagonal matrix is symmetric?</p>;<p><em>Any</em> diagonal matrix is symmetric.</p>;;
+6be199f5-db3d-4de8-8e93-2b1a5d3ddfb1;Basic Math;Math::Linear Algebra;Math Linear-Algebra Determinant;<p>What is a singular square matrix?</p>;"<p>A square matrix \( A \) is singular if its determinant is zero:</p>
 \[ \det(A) = 0 \]
 <p>A singular square matrix \( A \) cannot be inverted, meaning \( A^{-1} \) does not exist.</p>";;
-90ad53c2-36b2-49a5-a963-f9455d43a5d5;Basic Math;Math::Linear Algebra;Math Linear-Algebra Matrix;<p>When a matrix does not have an inverse?</p>;"<p>A matrix \( A \) does not have an inverse if:</p>
+90ad53c2-36b2-49a5-a963-f9455d43a5d5;Basic Math;Math::Linear Algebra;Math Linear-Algebra Determinant;<p>When a matrix does not have an inverse?</p>;"<p>A matrix \( A \) does not have an inverse if:</p>
 <ul>
 <li>It is not square.</li>
 <li>It is singular, meaning its determinant is zero \( \det(A) = 0 \).</li>
 </ul>";;
-c5a041d8-7fbe-425d-8e98-8ca49f0bbdec;Basic Math;Math::Linear Algebra;Math Linear-Algebra Matrix;<p>When the determinant of a matrix is zero?</p>;<p>A square matrix has zero determinant when its rows or columns are linearly dependent - meaning one row (or column) can be written as a linear combination of the others.</p>;;
-662a1e6c-360f-4469-af0c-4f849be6b786;Basic Math;Math::Linear Algebra;Math Linear-Algebra Matrix;<p>What is the geometric interpretation of the absolute determinant value of a matrix?</p>;"<p>For a square matrix \( A \), the absolute value of the determinant \( |\det(A)| \) is the factor by which the matrix scales
+c5a041d8-7fbe-425d-8e98-8ca49f0bbdec;Basic Math;Math::Linear Algebra;Math Linear-Algebra Determinant;<p>When the determinant of a matrix is zero?</p>;<p>A square matrix has zero determinant when its rows or columns are linearly dependent - meaning one row (or column) can be written as a linear combination of the others.</p>;;
+662a1e6c-360f-4469-af0c-4f849be6b786;Basic Math;Math::Linear Algebra;Math Linear-Algebra Determinant;<p>What is the geometric interpretation of the absolute determinant value of a matrix?</p>;"<p>For a square matrix \( A \), the absolute value of the determinant \( |\det(A)| \) is the factor by which the matrix scales
 \( n \)-dimensional volume:</p>
 <ul>
 <li>\( | \det(A) | = 0 \): the transformation flattens space into a lower dimension (e.g., collapsing area or volume to zero).</li>
@@ -862,8 +951,8 @@ c5a041d8-7fbe-425d-8e98-8ca49f0bbdec;Basic Math;Math::Linear Algebra;Math Linear
 <li>\( | \det(A) | > 1 \): volumes are expanded.</li>
 <li>\( | \det(A) | < 1 \): volumes are contracted.</li>
 </ul>";;
-67a590c4-0848-44bb-b2fe-55611a03a4e6;Basic Math;Math::Linear Algebra;Math Linear-Algebra Matrix;<p>What is the geometric interpretation of the zero determinant of a matrix?</p>;<p>A determinant is zero whenever the transformation collapses space into a lower dimension.</p>;;
-09cce54a-d651-4939-83f9-7b48830a42f4;Basic Math;Math::Linear Algebra;Math Linear-Algebra Matrix;<p>What is the determinant of a triangular matrix?</p>;"<p>The determinant of a triangular matrix is the product of its diagonal entries.</p>
+67a590c4-0848-44bb-b2fe-55611a03a4e6;Basic Math;Math::Linear Algebra;Math Linear-Algebra Determinant;<p>What is the geometric interpretation of the zero determinant of a matrix?</p>;<p>A determinant is zero whenever the transformation collapses space into a lower dimension.</p>;;
+09cce54a-d651-4939-83f9-7b48830a42f4;Basic Math;Math::Linear Algebra;Math Linear-Algebra Determinant;<p>What is the determinant of a triangular matrix?</p>;"<p>The determinant of a triangular matrix is the product of its diagonal entries.</p>
 <p>For a diagonal matrix:</p>
 \[ \begin{align*}
     \det(A) &=
@@ -900,8 +989,8 @@ c5a041d8-7fbe-425d-8e98-8ca49f0bbdec;Basic Math;Math::Linear Algebra;Math Linear
     &= \prod_{i=1}^n a_{ii} \\
     &= a_{11} \cdot a_{22} \cdot a_{33} \cdots a_{nn}
 \end{align*} \]";;
-a7899052-7d92-4cbb-81f5-61ce0bab17a5;Basic Math;Math::Linear Algebra;Math Linear-Algebra Matrix;<p>When the determinant of a triangular matrix is zero?</p>;<p>The determinant of a triangular matrix is zero whenever one of its diagonal entries is zero.</p>;;
-acc466b6-01ef-42f9-bcfb-a4a6283d1163;Basic Math;Math::Linear Algebra;Math Linear-Algebra Matrix;<p>What is the determinant of a \( 2 \times 2 \) matrix \( A \)?</p>;"<p>Given a \( 2 \times 2 \) matrix \( A = \begin{bmatrix}
+a7899052-7d92-4cbb-81f5-61ce0bab17a5;Basic Math;Math::Linear Algebra;Math Linear-Algebra Determinant;<p>When the determinant of a triangular matrix is zero?</p>;<p>The determinant of a triangular matrix is zero whenever one of its diagonal entries is zero.</p>;;
+acc466b6-01ef-42f9-bcfb-a4a6283d1163;Basic Math;Math::Linear Algebra;Math Linear-Algebra Determinant;<p>What is the determinant of a \( 2 \times 2 \) matrix \( A \)?</p>;"<p>Given a \( 2 \times 2 \) matrix \( A = \begin{bmatrix}
    a & b \\
    c & d
 \end{bmatrix} \) its determinant is computed as:</p>
@@ -913,7 +1002,7 @@ acc466b6-01ef-42f9-bcfb-a4a6283d1163;Basic Math;Math::Linear Algebra;Math Linear
     \end{vmatrix} \\
     &= ad - bc
 \end{align*} \]";;
-8a705ad6-8eba-4085-98f9-56b39aaa4c47;Basic Math;Math::Linear Algebra;Math Linear-Algebra Matrix;<p>What is the determinant of a \( 3 \times 3 \) matrix \( A \)?</p>;"<p>Given a \( 3 \times 3 \) matrix \( A = \begin{bmatrix}
+8a705ad6-8eba-4085-98f9-56b39aaa4c47;Basic Math;Math::Linear Algebra;Math Linear-Algebra Determinant;<p>What is the determinant of a \( 3 \times 3 \) matrix \( A \)?</p>;"<p>Given a \( 3 \times 3 \) matrix \( A = \begin{bmatrix}
     a & b & c \\
     d & e & f \\
     g & h & i
@@ -939,8 +1028,9 @@ acc466b6-01ef-42f9-bcfb-a4a6283d1163;Basic Math;Math::Linear Algebra;Math Linear
         g & h
     \end{vmatrix} \\
     &= a(ei - fh) - b(di - fg) + c(dh - eg)
-\end{align*} \]";;
-f97aa793-7bc9-43f1-b0c0-f54e5af6332e;Basic Math;Math::Linear Algebra;Math Linear-Algebra Matrix;<p>What is the minor \( M_{ij} \) of the entry \( a_{ij} \) in a matrix \( A \)?</p>;"<p>The minor \( M_{ij} \) of the entry \( a_{ij} \) in a matrix \( A \) is the determinant of the remaining entries when the row and column containing \( a_{ij} \) are removed.</p>
+\end{align*} \]
+<p>It is simply a cofactor expansion along the first row.</p>";;
+f97aa793-7bc9-43f1-b0c0-f54e5af6332e;Basic Math;Math::Linear Algebra;Math Linear-Algebra Determinant;<p>What is the minor \( M_{ij} \) of the entry \( a_{ij} \) in a matrix \( A \)?</p>;"<p>The minor \( M_{ij} \) of the entry \( a_{ij} \) in a matrix \( A \) is the determinant of the remaining entries when the row and column containing \( a_{ij} \) are removed.</p>
 <p>Example:</p>
 <p>For the matrix \( A = \begin{bmatrix}
     1 & 2 & 3 \\
@@ -954,7 +1044,7 @@ f97aa793-7bc9-43f1-b0c0-f54e5af6332e;Basic Math;Math::Linear Algebra;Math Linear
     1 & 3 \\
     7 & 9
 \end{vmatrix} \]";;
-af5d999c-45f1-45d5-9388-f3a9d9ccfed6;Basic Math;Math::Linear Algebra;Math Linear-Algebra Matrix;<p>What is the cofactor \( C_{ij} \) of the entry \( a_{ij} \) in a matrix \( A \)?</p>;"<p>The cofactor \( C_{ij} \) of the entry \( a_{ij} \) is in a matrix \( A \) is given by:</p>
+af5d999c-45f1-45d5-9388-f3a9d9ccfed6;Basic Math;Math::Linear Algebra;Math Linear-Algebra Determinant;<p>What is the cofactor \( C_{ij} \) of the entry \( a_{ij} \) in a matrix \( A \)?</p>;"<p>The cofactor \( C_{ij} \) of the entry \( a_{ij} \) is in a matrix \( A \) is given by:</p>
 \[ C_{ij} = (-1)^{i + j} \cdot M_{ij} \]
 <p>where \( M_{ij} \) is the minor of the entry \( a_{ij} \).</p>
 <p>Example:</p>
@@ -971,7 +1061,7 @@ C_{ij} &= (-1)^{2+1} \cdot M_{21} \\
 \end{vmatrix}
 \end{align*} \]
 <p>Cofactors are a useful tool in helping us to compute determinants of larger matrices.</p>";;
-b9fbcc42-e985-4c80-9103-b5dcde06a992;Basic Math;Math::Linear Algebra;Math Linear-Algebra Matrix;<p>How to use the cofactor expansion to compute the determinant of a square matrix \( A \)?</p>;"<p>The determinant of a square matrix \( A \) can be computed using cofactors by expanding along any row or column.</p>
+b9fbcc42-e985-4c80-9103-b5dcde06a992;Basic Math;Math::Linear Algebra;Math Linear-Algebra Determinant;<p>How to use the cofactor expansion to compute the determinant of a square matrix \( A \)?</p>;"<p>The determinant of a square matrix \( A \) can be computed using cofactors by expanding along any row or column.</p>
 <p>For example, the cofactor expansion across the first row \( i=1 \) is:</p>
 \[ \begin{align*}
     \det(A) &= \sum_{j=1}^{n} a_{1j} C_{1j} \\
@@ -982,8 +1072,8 @@ b9fbcc42-e985-4c80-9103-b5dcde06a992;Basic Math;Math::Linear Algebra;Math Linear
     \det(A) &= \sum_{i=1}^{m} a_{i2} C_{i2} \\
     &= a_{12} C_{12} + a_{22} C_{22} + \cdots + a_{m2} C_{m2}
 \end{align*} \]";;
-3705cf56-6fd7-4178-b000-293e07490b99;Basic Math;Math::Linear Algebra;Math Linear-Algebra Matrix;<p>What is the Laplace expansion to compute the determinant of a square matrix \( A \)?</p>;<p>The Laplace expansion to compute the determinant is the cofactor expansion along any row or column.</p>;;
-bf632e4d-d348-4722-a6c9-c9283e3294f8;Basic Math;Math::Linear Algebra;Math Linear-Algebra Matrix;<p>What is the inverse of a \( 2 \times 2 \) matrix \( A \)?</p>;"<p>Given a \( 2 \times 2 \) matrix \( A = \begin{bmatrix}
+3705cf56-6fd7-4178-b000-293e07490b99;Basic Math;Math::Linear Algebra;Math Linear-Algebra Determinant;<p>What is the Laplace expansion to compute the determinant of a square matrix \( A \)?</p>;<p>The Laplace expansion to compute the determinant is the cofactor expansion along any row or column.</p>;;
+bf632e4d-d348-4722-a6c9-c9283e3294f8;Basic Math;Math::Linear Algebra;Math Linear-Algebra Determinant;<p>What is the inverse of a \( 2 \times 2 \) matrix \( A \)?</p>;"<p>Given a \( 2 \times 2 \) matrix \( A = \begin{bmatrix}
     a & b \\
     c & d
 \end{bmatrix} \), its inverse \( A^{-1} \) is computed as:</p>
@@ -994,81 +1084,20 @@ bf632e4d-d348-4722-a6c9-c9283e3294f8;Basic Math;Math::Linear Algebra;Math Linear
     d & -b \\
     -c & a
 \end{bmatrix} \]";;
-b4e1a0cc-7e35-4d1d-b9d6-e5048208934e;Basic Math;Math::Linear Algebra;Math Linear-Algebra Matrix;<p>What are the properties of symmetric matrices?</p>;"<p>Suppose that is \( A \) symmetric matrix. Then, we have the following properties:</p>
-<ul>
-<li>\( -A \) is symmetric.</li>
-<li>\( cA \) is symmetric for any \( c \ne 0 \).</li>
-<li>\( A^m \) is symmetric for any positive integer \( m \).</li>
-<li>\( A^{-1} \) is symmetric for nonsingular \( A \).</li>
-</ul>
-<p>If \( A \) and \( B \) symmetric matrices, we have the following properties:</p>
-<ul>
-<li>The sum \( A + B \) is symmetric.</li>
-<li>The product \( A \cdot B \) is <em>not</em> always symmetric.</li>
-</ul>
-<p>Finally:</p>
-<ul>
-<li>\( A + A^T \) is symmetric for any <em>square</em> matrix \( A \).</li>
-<li>\( A \cdot A^T \) and \( A^T \cdot A \) is symmetric for <em>any</em> \( m \times n \) matrix \( A \).</li>
-</ul>
-<p>Any diagonal matrix is symmetric.</p>";;
-6265ef72-9bad-4c48-b490-24446bcfc10b;Basic Math;Math::Linear Algebra;Math Linear-Algebra Matrix;<p>If \( A \) is a symmetric matrix, is \( A^{m} \) symmetric?:</p>;<p>Yes, \( A^{m} \) is symmetric for a symmetric matrix \( A \) and a positive integer \( m \).</p>;;
-d0475616-146a-47a8-bcc1-2fd19442dd19;Basic Math;Math::Linear Algebra;Math Linear-Algebra Matrix;<p>If \( A \) is a symmetric matrix, is \( A^{-1} \) symmetric?:</p>;<p>Yes, \( A^{-1} \) is symmetric for a nonsingular symmetric matrix \( A \).</p>;;
-768793db-4e6a-4695-9954-955a163d3e38;Basic Math;Math::Linear Algebra;Math Linear-Algebra Matrix;<p>If \( A \) and \( B \) are symmetric matrices, is their sum \( A + B \) symmetric?:</p>;<p>Yes, the sum \( A + B \) is symmetric for two symmetric matrices \( A \) and \( B \).</p>;;
-dceba5de-f019-4dc7-a946-190b07e8de5a;Basic Math;Math::Linear Algebra;Math Linear-Algebra Matrix;<p>If \( A \) and \( B \) are symmetric matrices, is their product \( A \cdot B \) symmetric?:</p>;<p>No, the product \( A \cdot B \) is <em>not</em> always symmetric.</p>;;
-495efd7f-36de-467e-92b2-d50d0d9034f6;Basic Math;Math::Linear Algebra;Math Linear-Algebra Matrix;<p>For which matrix \( A \) the sum \( A + A^T \) is symmetric?</p>;<p>The sum \( A + A^T \) is symmetric for <em>any square</em> \( n \times n \) matrix \( A \).</p>;;
-0894c97c-ab4a-4e1e-a499-775d480792bf;Basic Math;Math::Linear Algebra;Math Linear-Algebra Matrix;<p>For which matrix \( A \) the product \( A \cdot A^T \) is symmetric?</p>;<p>The product \( A \cdot A^T \) is symmetric for <em>any rectangular</em> \( m \times n \) matrix \( A \).</p>;;
-8e0ae878-8bed-44b5-8b7f-9586cda93890;Basic Math;Math::Linear Algebra;Math Linear-Algebra Matrix;<p>When a diagonal matrix is symmetric?</p>;<p><em>Any</em> diagonal matrix is symmetric.</p>;;
+00524487-6fe9-4344-935d-5fe97bd60f0b;Basic Math;Math::Linear Algebra;Math Linear-Algebra Matrix;<p>What is the affine transformation?</p>;"<p>An affine transformation is a function between affine spaces that preserves points, straight lines, and planes, but not necessarily distances or angles. Examples include translation, scaling, rotation, and shearing.</p>
+<p>An affine transformation \( \mathbf T:\mathbb R^2\rightarrow \mathbb R^2 \) is defined as</p>
+\[ \mathbf x = A \mathbf u + \mathbf b \]
+<p>where \( \mathbf x \), \( \mathbf u \) and \( \mathbf b \) are \( 2 \times 1 \) column vectors and \( A \) is a \( 2 \times 2 \) matrix.</p>";;
+4f2ad31c-4faa-4895-a07e-765f398b4c52;Basic Math;Math::Linear Algebra;Math Linear-Algebra Matrix;<p>What does it mean for an affine transformation to preserve orientation?</p>;<p>Preserving orientation means that the transformation does not flip the space, maintaining the clockwise or counterclockwise arrangement of points.</p>;;
+26ce75e6-2650-4580-881b-7aba607f38f5;Basic Math;Math::Linear Algebra;Math Linear-Algebra Matrix;<p>When an affine transformation preserves orientation?</p>;"<p>An affine transformation \( \mathbf{T} \) preserves orientation if</p>
+\[ \det(A) > 0 \]
+<p>and does not preserve orientation if the determinant is negative:</p>
+\[ \det(A) < 0 \]
+<p>where the matrix \( A \) that represents the linear transformation associated with \( \mathbf{T} \).</p>";;
+a3551aef-ae32-49a9-8995-dd9dc40f68bc;Basic Math;Math::Linear Algebra;Math Linear-Algebra Matrix;<p>When an affine transformation is invertible?</p>;<p>An affine transformation \( \mathbf{T} \) is invertible if and only if the matrix \( A \) that represents the linear transformation associated with \( \mathbf{T} \) is invertible, that is \( \det(A) \ne 0 \).</p>;;
 536075ed-e030-4224-b00c-7ad83cf77987;Basic Math;Math::Linear Algebra;Math Linear-Algebra Matrix;<p>What is an <strong>eigenvector</strong> \( \mathbf{v} \) of a square matrix \( A \)?</p>;"<p>Given a matrix \( A \) an <strong>eigenvector</strong> of \( A \) is a <em>non-zero</em> vector \( \mathbf{v} \) such that</p>
 \[ A \mathbf{v} = \lambda \mathbf{v} \]
 <p>for some scalar \( \lambda \in \mathbb{R} \), \( \lambda \ne 0 \). The scalar \( \lambda \) is called the <strong>eigenvalue</strong> corresponding to the eigenvector \( \mathbf{v} \).</p>";;
-e588dedf-9fd7-4fd4-98f4-4ac94dc003a0;Basic Math;Math::Linear Algebra;Math Linear-Algebra Geometry;<p>Vector equation of the line.</p>;"\[ \mathbf{r} = \mathbf{p} + t\mathbf{d} \]
-<p>where:</p>
-<ul>
-<li>\( \mathbf{r} \) is the position vector of any point on the line,</li>
-<li>\( \mathbf{p} \) is the position vector of a specific point on the line,</li>
-<li>\( \mathbf{d} \) is the direction vector of the line, and</li>
-<li>\( t \) is a scalar parameter.</li>
-</ul>";;
-e4ce563b-80b2-452b-823c-543437869431;Basic Math;Math::Linear Algebra;Math Linear-Algebra Geometry;<p>Parametric equation of the line.</p>;"\[ \begin{align*}
-    x &= p_x + td_x \\
-    y &= p_y + td_y \\
-    z &= p_z + td_z
-\end{align*} \]
-<p>where:</p>
-<ul>
-<li>\( (p_x, p_y, p_z) \) are the coordinates of the specific point on the line,</li>
-<li>\( (d_x, d_y, d_z) \) are the components of the direction vector, and</li>
-<li>\( t \) is a scalar parameter.</li>
-</ul>";;
-5ba84a88-572c-43a9-877f-d3e110d5ac8b;Basic Math;Math::Linear Algebra;Math Linear-Algebra Geometry;<p>Symmetric equation of the line.</p>;"\[ \frac{x - p_x}{d_x} = \frac{y - p_y}{d_y} = \frac{z - p_z}{d_z} \]
-<p>where:</p>
-<ul>
-<li>\( (p_x, p_y, p_z) \) are the coordinates of the specific point on the line,</li>
-<li>\( (d_x, d_y, d_z) \) are the components of the direction vector.</li>
-</ul>";;
-82d83281-4717-4db1-8362-1005296a02f4;Basic Math;Math::Linear Algebra;Math Linear-Algebra Geometry;<p>Vector equation of the plane.</p>;"\[ (\mathbf{r} - \mathbf{p}) \cdot \mathbf{n} = 0 \]
-<p>or equivalently:</p>
-\[ \begin{align*}
-    (\mathbf{r} - \mathbf{p}) \cdot \mathbf{n} &= 0 \\
-    \mathbf{r} \cdot \mathbf{n} - \mathbf{p} \cdot \mathbf{n} &= 0 \\
-    \mathbf{r} \cdot \mathbf{n} &= \mathbf{p} \cdot \mathbf{n} \\
-    \mathbf{r} \cdot \mathbf{n} &= c
-\end{align*} \]
-<p>where:</p>
-<ul>
-<li>\( \mathbf{r} \) is the position vector of any point on the plane,</li>
-<li>\( \mathbf{p} \) is the position vector of a specific point on the plane,</li>
-<li>\( \mathbf{n} \) is a normal vector to the plane, and</li>
-<li>\( c = \mathbf{r} \cdot \mathbf{n} \) is a scalar constant.</li>
-</ul>";;
-94d0e09b-2f50-4ed9-9c43-6f1b218c9e21;Basic Math;Math::Linear Algebra;Math Linear-Algebra Geometry;<p>Sclar equation of the plane.</p>;"\[ ax + by + cz = d \]
-<p>where:</p>
-<ul>
-<li>\( (a, b, c) \) are the components of the normal vector \( \mathbf{n} \),</li>
-<li>\( (x, y, z) \) are the coordinates of any point on the plane, and</li>
-<li>\( d \) is a scalar constant.</li>
-</ul>";;
 ba5efbda-07d0-436e-9ca0-9afe2ce215d5;Basic Math;Math::Extra;Math Calculus Center-of-Mass;<p>What is the formula for the moment of a system of particles about the origin?</p>;"<p>The moment \( \mathbf{M}_O \) of a system of particles about the origin is given by the formula:</p>
 \[ \mathbf{M}_O = \sum_{i=1}^{n} m_i \mathbf{r}_i \]
 <ul>
