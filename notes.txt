@@ -797,6 +797,28 @@ d9403f39-2452-4940-855d-86a86391fe40;Basic Math;Math::Calculus::Laplace Transfor
 <p>The unit impulse function is technically not a function but a <strong>generalized function</strong> or <strong>distribution</strong>.</p>";;
 fdaf1b7b-fe9b-4efc-af85-fa35f0c3dab2;Basic Math;Math::Calculus::Laplace Transform;Math Calculus Laplace-Transform Theory;<p>What is the derivative of the unit step function?</p>;"<p>The derivative of the unit step function (Heaviside function) is the unit impulse function (Dirac delta function);</p>
 \[ \frac{d}{dt} u(t) = \delta(t) \]";;
+670dcdf5-ab29-4ed5-afb1-9845e113a80d;Basic Math;Math::Linear Algebra;Math Linear-Algebra;<p>What is a linear equation?</p>;"<p>A linear equation is an algebraic equation in which each term is either a constant or the product of a constant and a single variable. Linear equations can have one or more variables.</p>
+<p>The general form of a linear equation in two variables \( x \) and \( y \) is:</p>
+\[ ax + by = c \]
+<p>where \( a \), \( b \), and \( c \) are constants, and \( a \) and \( b \) are not both zero.</p>";;
+31f01eaf-4857-4ec8-a57c-65322c32a4f7;Basic Math;Math::Linear Algebra;Math Linear-Algebra;<p>What is a system of linear equations?</p>;"<p>A system of linear equations is a collection of one or more linear equations involving the same set of variables.</p>
+<p>For example, the following is a system of two linear equations with two variables \( x \) and \( y \):</p>
+\[ \begin{align*}
+    2x + 3y &= 6 \\
+    4x - y &= 5
+\end{align*} \]
+<p>The solution to a system of linear equations is the set of values for the variables that satisfy all the equations simultaneously.</p>";;
+b71d53f4-f4c7-4ae1-89e4-d7d672d56750;Basic Math;Math::Linear Algebra;Math Linear-Algebra;<p>What is a homogeneous system of linear equations?</p>;"<p>A homogeneous system of linear equations is a system in which all of the constant terms are zero.</p>
+<p>For example, the following is a homogeneous system of two linear equations with two variables \( x \) and \( y \):</p>
+\[ \begin{align*}
+    2x + 3y &= 0 \\
+    4x - y &= 0
+\end{align*} \]
+<p>A homogeneous system always has at least one solution, known as the trivial solution, where all variables are equal to zero (e.g., \( x = 0 \) and \( y = 0 \)).</p>";;
+df0bfdaf-f926-4f3f-bf05-ecc32f81bba4;Basic Math;Math::Linear Algebra;Math Linear-Algebra;<p>What is the difference between a inconsistent and an consistent system of linear equations?</p>;"<p>A system of linear equations is consistent if there is at least one set of values for the variables that satisfies all the equations simultaneously. In other words, a consistent system has at least one solution.</p>
+<p>A system of linear equations is inconsistent if there are no solutions. This occurs when the equations represent parallel lines (in two dimensions) or planes (in three dimensions) that do not intersect.</p>";;
+0c2e8e3a-12bb-441e-8d50-6ce5266a16a1;Basic Math;Math::Linear Algebra;Math Linear-Algebra;<p>What is the difference between a dependent and an independent system of linear equations?</p>;"<p>A system of linear equations is independent if the equations are not multiples of each other, meaning they provide unique information about the variables. An independent system has a unique solution.</p>
+<p>A system of linear equations is dependent if at least one equation can be derived from the others, meaning they do not provide unique information about the variables. A dependent system has either infinitely many solutions or no solution.</p>";;
 e588dedf-9fd7-4fd4-98f4-4ac94dc003a0;Basic Math;Math::Linear Algebra;Math Linear-Algebra Geometry;<p>Vector equation of the line.</p>;"\[ \mathbf{r} = \mathbf{p} + t\mathbf{d} \]
 <p>where:</p>
 <ul>
