@@ -1,0 +1,223 @@
+!type: Basic Math
+!deck: Math::Algebra
+!tags: Math Algebra Inequality
+
+!id: fbb57a31-1579-4d3e-947e-091a54d7e7af
+!front: Explain how $|x| \le c$, $c \ge 0$ is a stronger statement (gives more information) than $x \le c$, $c \ge 0$.
+!back: $|x| \le c$ means $-c \le x \le c$, that is lower and upper bounds, while $x \le c$ only means the upper bound.
+~~~
+
+!id: 696b8d66-8596-4784-937d-3c433e8b4228
+!front: Explain why if $|x| \le c$, $c \ge 0$ is true then $x \le c$ is true as well .
+!back:
+If $x$ is non-negative, then $|x| = x$, so $x \le c$.
+
+If $x$ is negative, then $|x| = -x$, so $-x \le c$ which implies $x \ge -c$. Since $c \ge 0$, we have $-c \le c$, so $x \le c$.
+~~~
+
+!id: 97436561-2cb9-4702-9efc-d2165b1a4926
+!front: Explain why if $x \le c$, $c \ge 0$ is true then $|x| \le c$ is not necessarily true as well .
+!back: Counterexample: Let $x = -2$, $|x| = 2$ and $c = 1$. Then $-2 \le 1$ is true, but $2 \not \le 1$.
+~~~
+
+!id: c8205eb3-3a52-4f86-9158-77ff5a578bf9
+!front: Explain why $-|x| \le x \le |x|$.
+!back:
+If $x$ is non-negative, then $|x| = x$, so $-|x| = -x \le x \le x = |x|$.
+
+If $x$ is negative, then $|x| = -x$, so $-|x| = x \le x \le -x = |x|$.
+~~~
+
+!id: 809a23ff-c00e-4bb8-ab16-d224fd194cb6
+!front: Solve $|x| \le c$, $c \ge 0$.
+!back:
+\[ -c \le x \le c \]
+\[ x \in [-c, c] \]
+~~~
+
+!id: 03281331-07b9-4ae0-a45e-412a11e3f2af
+!front: Solve $|x| \ge c$, $c \ge 0$.
+!back:
+\[ x \le -c \text{ or } x \ge c \]
+\[ x \in \left( -\infty, -c \right] \cup \left[ c, \infty \right) \]
+~~~
+
+!id: c96c4383-a9b6-497d-8043-90c99c86b561
+!front: Solve $x^2 \le c$, $c \ge 0$.
+!back:
+\[
+\begin{align*}
+    x^2 & \le c \\
+    \sqrt{x^2} & \le \sqrt{c} \\
+    |x| & \le \sqrt{c}
+\end{align*}
+\]
+
+The solution is
+
+\[ -\sqrt{c} \le x \le \sqrt{c} \]
+\[ x \in \left[ -\sqrt{c}, \sqrt{c} \right] \]
+~~~
+
+!id: 19f9b86f-0bd3-4816-b016-5b9cc89b8447
+!front: Solve $x^2 \ge c$, $c \ge 0$.
+!back:
+\[
+\begin{align*}
+    x^2 & \ge c \\
+    \sqrt{x^2} & \ge \sqrt{c} \\
+    |x| & \ge \sqrt{c}
+\end{align*}
+\]
+
+The solution is
+
+\[ x \le -\sqrt{c} \text{ or } x \ge \sqrt{c} \]
+\[ x \in \left( -\infty, -\sqrt{c} \right] \cup \left[ \sqrt{c}, \infty \right) \]
+~~~
+
+!id: 19cc2967-2481-4c3a-ae18-1b34058c6825
+!front: Solve $x^2 =c$, $c \ge 0$.
+!back:
+\[
+\begin{align*}
+    x^2 & = c \\
+    \sqrt{x^2} & = \sqrt{c} \\
+    |x| & = \sqrt{c}
+\end{align*}
+\]
+
+The solution is
+
+\[ x = -\sqrt{c} \text{ or } x = \sqrt{c} \]
+\[ x \in \left\{ -\sqrt{c}, \sqrt{c} \right\} \]
+~~~
+
+!id: 2eaa51c9-63d6-4d52-89ce-8947f2afc8b8
+!front: When solving an inequality $a \le b$, what happens with the inequality direction if we add a constant $c$ to both sides?
+!back: Inequality direction stays the same.
+~~~
+
+!id: 39b19aac-4d77-4cf9-bbe0-0310b53759c6
+!front: When solving an inequality $a \le b$, what happens with the inequality direction if we multiply both sides by a positive constant $c$?
+!back: Inequality direction stays the same.
+~~~
+
+!id: 1b938e34-fd9e-4622-9df5-7aabeafa0715
+!front: When solving an inequality $a \le b$, what happens with the inequality direction if we multiply both sides by a negative constant $c$?
+!back: Inequality direction flips.
+~~~
+
+!id: 7e89c3c4-e6c6-4460-a316-c6ff7c2645a2
+!front: If $a \le b$ and $f$ is an increasing function, what happens to the inequality after applying $f$?
+!back:
+It stays the same:
+
+\[ f(a) \le f(b) \]
+~~~
+
+!id: cb4c9e76-d9f0-46e2-a120-27e4fcba884f
+!front: If $a \le b$ and $f$ is a decreasing function, what happens to the inequality after applying $f$?
+!back:
+The direction flips:
+
+\[ f(a) \ge f(b) \]
+~~~
+
+!id: c4d0fd29-cd7a-4032-a8bb-a3d01e1b0bb1
+!front: If $0 < a \le b$, what inequality holds between $1/a$ and $1/b$?
+!back: $1/a \ge 1/b$ (reciprocal is decreasing for positive numbers).
+~~~
+
+!id: f3adbad3-e71a-4663-b894-81d377ade0b6
+!front: Is it true that if $a > b$ then $\ln(a) > \ln(b)$? Why?
+!back:
+Yes, if $a > 0$ and $b > 0$ then
+
+\[ a > b \implies \ln(a) > \ln(b) \]
+
+because $\ln(x)$ is monotonic and strictly increasing.
+~~~
+
+!id: d259786e-b15b-40bf-b710-bf90f0d7d8fe
+!front: Is it true that if $a > b$ then $e^a > e^b$? Why?
+!back:
+Yes, for any $a$ and $b$
+
+\[ a > b \implies e^a > e^b \]
+
+because $\ln(x)$ is monotonic and strictly increasing.
+~~~
+
+!id: b66303e0-9957-427d-aeee-cf1138ece03d
+!front: True or false: From $(a + b)^2 \ge 0$ can we conclude that $a + b \ge 0$.
+!back: False. The correct conclusion is $|x + y| \ge 0$.
+~~~
+
+!id: d9950e0d-3e95-4838-8082-ca1ddb9f8f3e
+!front: Solve: If $x^2 \le 9$, what range does $x$ lie in?
+!back: \[ -3 \le x \le 3 \]
+~~~
+
+!id: 23385221-b189-4824-9cc9-8d8afdbe055f
+!front: Solve: If $x^2 \ge 9$, what range does $x$ lie in?
+!back: \[ x \le -3 \text{ or } x \ge 3 \]
+~~~
+
+!id: 74419ffc-f53d-4c32-aeef-07ce7fb5d724
+!front: True or false: If $a \le b$, then $a^2 \le b^2$
+!back:
+False in general.
+
+Counterexample: Let $a = -3$, $b = 2$, then $-3 \le 2$ but $9 \not \le 4$.
+~~~
+
+!id: 2469ff54-ecc2-43d9-bbd0-85596e939db5
+!front: If $a^2 \le b^2$, what inequality does this imply about $|a|$ and $|b|$?
+!back: \[ |a| \le |b| \]
+~~~
+
+!id: d638d213-02dd-49b7-bf16-0a37a940ad6e
+!front: Prove the inequality $ab \le |a| |b|$.
+!back:
+- Case 1: $a,b \ge 0$. Then $|a|=a$, $|b|=b$, so $ab=|a||b|$.
+- Case 2: $a,b \le 0$. Then $|a|=-a$, $|b|=-b$, so $ab=(-a)(-b)=|a||b|$.
+- Case 3: $a$ and $b$ have opposite signs. Say $a \ge 0$, $b \le 0$. Then $ab \le 0$, but $|a||b| \ge 0$. So automatically $ab \le |a||b|$. Same if $a \le 0$, $b \ge 0$.
+~~~
+
+!id: 0b88d244-33bf-4585-8221-04710023fae4
+!front: What is the Triangle Inequality?
+!back:
+The Tirangle Inequality states that for any real numbers \( a \) and \( b \):
+
+\[ |a + b| \leq |a| + |b| \]
+~~~
+
+!id: 172dd077-3c48-464e-a16b-4d67b1232ecf
+!front: Prove the Triangle Inequality $|a + b| \leq |a| + |b|$.
+!back:
+Let's square both sides:
+
+\[ |a + b|^2 \leq (|a| + |b|)^2 \]
+
+We know that
+
+\[
+\begin{align*}
+    |a+b|^2 & = (a+b)^2 \\
+    |a|^2 & = a^2 \\
+    |b|^2 & = b^2
+\end{align*}
+\]
+
+so
+
+\[
+\begin{align*}
+    a^2 + 2ab + b^2 & \leq a^2 + 2|a||b| + b^2 \\
+    ab & \leq |a||b|
+\end{align*}
+\]
+
+The last inequality is true for any $a$ and $b$, so the Triangle Inequality is true as well.
+~~~
