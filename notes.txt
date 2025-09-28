@@ -590,6 +590,23 @@ b4edd171-5748-42bd-8392-c5d010a1cfa0;Basic Math;Math::Calculus::Differentiation;
 <p>which means \( f'(c)=0 \).</p>";;
 965f6c49-3485-45d0-8590-b369246d02b6;Basic Math;Math::Calculus::Differentiation;Math Calculus Differentiation Theory;<p>The definition of the <strong>Intermediate Value Theorem</strong> (IVT).</p>;"<p>The <strong>Intermediate Value Theorem</strong> states that if a function \( f(x) \) is continuous on a closed interval \( [a,b] \), and \( L \) is any value between \( f(a) \) and \( f(b) \), then there exists at least one number \( c \) in the interval \( [a,b] \) such that \( f(c)=L \).</p>
 <p>Intuitively, if you can draw the graph of a function without lifting your pencil, and it goes from one y-value to another, it must pass through all the y-values in between.</p>";;
+3dd240e9-95a5-4863-af47-f07562a7dcc0;Basic Math;Math::Calculus::Differentiation;Math Calculus Differentiation Theory;<p>Derive \( \frac{d}{dx} \ln(x) \)</p>;"\[ \begin{align*}
+    y &= \ln(x) \\
+    x &= e^y
+\end{align*} \]
+<p>Differentiate both sides implicitly with respect to \( x \):</p>
+\[ \begin{align*}
+    \frac{d}{dx}[x] &= \frac{d}{dx}[e^y] \\
+    1 &= e^y \cdot \frac{dy}{dx} \\
+    \frac{dy}{dx} &= \frac{1}{e^y}
+\end{align*} \]
+<p>Express \( e^y \) in terms of \( x \):</p>
+\[ \begin{align*}
+    e^y &= e^{\ln x} \\
+    &= x
+\end{align*} \]
+<p>Substitute back:</p>
+\[ \frac{dy}{dx} = \frac{1}{x} \]";;
 d2ef18d6-cb42-4ca5-bd64-5e12abfe0bdf;Basic Math;Math::Calculus::Differentiation;Math Calculus Differentiation Theory;<p>Derive \( \frac{d}{dx} \arcsin(x) \)</p>;"\[ \begin{align*}
     y &= \arcsin(x) \\
     x &= \sin(y)
@@ -941,6 +958,15 @@ e4ce563b-80b2-452b-823c-543437869431;Basic Math;Math::Linear Algebra;Math Linear
 <li>\( (x, y, z) \) are the coordinates of any point on the plane, and</li>
 <li>\( d \) is a scalar constant.</li>
 </ul>";;
+48e0859f-f529-4f4b-b0b0-1c0f6b5c3dba;Basic Math;Math::Linear Algebra;Math Linear-Algebra Geometry;<p>Parametric equation of the plane.</p>;"\[ \mathbf{r} = \mathbf{p} + s \mathbf{b} + t \mathbf{c} \]
+<p>where:</p>
+<ul>
+<li>\( \mathbf{r} \) is the position vector of any point on the plane,</li>
+<li>\( \mathbf{p} \) is the position vector of a specific point on the plane,</li>
+<li>\( \mathbf{b} \) is the first vector parallel to the plane,</li>
+<li>\( \mathbf{c} \) is the second vector parallel to the plane,</li>
+<li>\( s \) and \( t \) are scalar parameters.</li>
+</ul>";;
 80ab5bc9-54c5-48ea-8edd-878af86130d5;Basic Math;Math::Linear Algebra;Math Linear-Algebra Matrix;<p>What is a <strong>diagonal matrix</strong>?</p>;"<p>A <strong>diagonal matrix</strong> is a square matrix in which all entries outside the main diagonal are zero. The main diagonal runs from the top left to the bottom right of the matrix.</p>
 <p>For example, the following is a \( 3 \times 3 \) diagonal matrix:</p>
 \[ \begin{bmatrix}
@@ -1209,30 +1235,43 @@ ba5efbda-07d0-436e-9ca0-9afe2ce215d5;Basic Math;Math::Extra;Math Calculus Center
 <li>\( m_i \) is the mass of the \( i \)-th particle, and</li>
 <li>\( \mathbf{r}_i \) is the position vector of the \( i \)-th particle.</li>
 </ul>";;
-33b9efdd-f55a-4fb8-a52b-5ed606fe9491;Basic Math;Math::Extra;Math Algebra Mean;<p>The definition of the Arithmetic Mean (AM)</p>;"<p>The Arithmetic Mean (AM) of two numbers \( a \) and \( b \) is given by:</p>
+33b9efdd-f55a-4fb8-a52b-5ed606fe9491;Basic Math;Math::Extra;Math Algebra Mean;<p>The definition of the <strong>Arithmetic Mean (AM)</strong>.</p>;"<p>The <strong>Arithmetic Mean (AM)</strong> of two numbers \( a \) and \( b \) is given by:</p>
 \[ AM = \frac{a + b}{2} \]
 <p>The general formula for \( n \) numbers \( x_1, x_2, \ldots, x_n \) is:</p>
 \[ AM = \frac{x_1 + x_2 + \ldots + x_n}{n} = \frac{1}{n} \sum_{i=1}^n x_i \]";;
-0cd67091-27bf-41b9-a77f-dc80c41f251f;Basic Math;Math::Extra;Math Algebra Mean;<p>The definition of the Geometric Mean (GM)</p>;"<p>The Geometric Mean (GM) of two numbers \( a \) and \( b \) is given by:</p>
+0cd67091-27bf-41b9-a77f-dc80c41f251f;Basic Math;Math::Extra;Math Algebra Mean;<p>The definition of the <strong>Geometric Mean (GM)</strong>.</p>;"<p>The <strong>Geometric Mean</strong> (GM) of two numbers \( a \) and \( b \) is given by:</p>
 \[ GM = \sqrt{ab} \]
 <p>The general formula for \( n \) numbers \( x_1, x_2, \ldots, x_n \) is:</p>
 \[ GM = (x_1 \cdot x_2 \cdot \ldots \cdot x_n)^{1/n} = \left( \prod_{i=1}^n x_i \right)^{1/n} \]";;
-e9a56d8a-3fb7-4815-a58e-b99c661cf57c;Basic Math;Math::Extra;Math Algebra Mean;<p>The definition of the Quadratic Mean (QM)</p>;"<p>The Quadratic Mean (QM) of two numbers \( a \) and \( b \) is given by:</p>
+e9a56d8a-3fb7-4815-a58e-b99c661cf57c;Basic Math;Math::Extra;Math Algebra Mean;<p>The definition of the <strong>Quadratic Mean (QM)</strong>.</p>;"<p>The <strong>Quadratic Mean (QM)</strong> of two numbers \( a \) and \( b \) is given by:</p>
 \[ QM = \sqrt{\frac{a^2 + b^2}{2}} \]
-<p>This is also known as the Root Mean Square (RMS).</p>
+<p>This is also known as the <strong>Root Mean Square (RMS)</strong>.</p>
 <p>The general formula for \( n \) numbers \( x_1, x_2, \ldots, x_n \) is:</p>
 \[ QM = \sqrt{\frac{x_1^2 + x_2^2 + \ldots + x_n^2}{n}} = \sqrt{\frac{1}{n} \sum_{i=1}^n x_i^2} \]";;
-92d0b2a1-7e59-4e25-be67-ed2948a6ff4e;Basic Math;Math::Extra;Math Algebra Mean;<p>The definition of the Harmonic Mean (HM)</p>;"<p>The Harmonic Mean (HM) of two numbers \( a \) and \( b \) is given by:</p>
+92d0b2a1-7e59-4e25-be67-ed2948a6ff4e;Basic Math;Math::Extra;Math Algebra Mean;<p>The definition of the <strong>Harmonic Mean (HM)</strong>.</p>;"<p>The <strong>Harmonic Mean (HM)</strong> of two numbers \( a \) and \( b \) is given by:</p>
 \[ HM = \frac{2}{1/a + 1/b} = \frac{2ab}{a + b} \]
 <p>The general formula for \( n \) numbers \( x_1, x_2, \ldots, x_n \) is:</p>
 \[ HM = \frac{n}{\frac{1}{x_1} + \frac{1}{x_2} + \ldots + \frac{1}{x_n}} = \frac{n}{\sum_{i=1}^n \frac{1}{x_i}} \]";;
 ca23c619-7730-447c-9709-9e238e76a81f;Basic Math;Math::Extra;Math Algebra Mean;<p>AM-GM Inequality</p>;"\[ \frac{a+b}{2} \ge \sqrt{ab} \]
-<p>where AM is the Arithmetic Mean and GM is the Geometric Mean of two non-negative numbers \( a \) and \( b \).</p>";;"<p>More generally, it is known that the following inequality holds for any set of positive numbers:</p>
+<p>where AM is the <strong>Arithmetic Mean</strong> and GM is the <strong>Geometric Mean</strong> of two non-negative numbers \( a \) and \( b \).</p>";;"<p>More generally, it is known that the following inequality holds for any set of positive numbers:</p>
 \[ QM \ge AM \ge GM \ge HM \]
 <p>where</p>
 <ul>
-<li>QM is the Quadratic Mean</li>
-<li>AM is the Arithmetic Mean</li>
-<li>GM is the Geometric Mean</li>
-<li>HM is the Harmonic Mean</li>
+<li>QM is the <strong>Quadratic Mean</strong></li>
+<li>AM is the <strong>Arithmetic Mean</strong></li>
+<li>GM is the <strong>Geometric Mean</strong></li>
+<li>HM is the <strong>Harmonic Mean</strong></li>
 </ul>"
+def34112-15f3-41ed-9fbf-3687bd0355d9;Basic Math;Math::Extra;Math Algebra Mean;<p>What is the general formula for means?</p>;"<p>The general formula is the <strong>Kolmogorov–Nagumo (Quasi-Arithmetic) Mean</strong>:</p>
+\[ \begin{align*}
+    M_f(x_1, x_2, \ldots, x_n) &= f^{-1} \left( \frac{1}{n} \sum_{i=1}^n f(x_i) \right) \\
+    &= f^{-1} \left( \frac{f(x_1) + f(x_2) + \ldots + f(x_n) }{n} \right)
+\end{align*} \]
+<p>where \( f \) is any continuous strictly monotone function.</p>
+<ul>
+<li>If \( f(x)=x \), we get the <strong>Arithmetic Mean</strong>.</li>
+<li>If \( f(x)=\ln x \), we get the <strong>Geometric Mean</strong> (requires \( x_i > 0 \)).</li>
+<li>If \( f(x)=1/x \), we get the <strong>Harmonic Mean</strong> (requires \( x_i \neq 0 \)).</li>
+<li>If \( f(x)=x^p \) (with \( p \neq 0 \)), we get the <strong>Power Mean</strong>, with \( p = 2 \) being the <strong>Quadratic Mean</strong>.</li>
+</ul>
+<p>So the <strong>Quasi-Arithmetic Mean</strong> is the most general form that unites all the classical means.</p>";;

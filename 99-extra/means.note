@@ -3,9 +3,9 @@
 !tags: Math Algebra Mean
 
 !id: 33b9efdd-f55a-4fb8-a52b-5ed606fe9491
-!front: The definition of the Arithmetic Mean (AM)
+!front: The definition of the **Arithmetic Mean (AM)**.
 !back:
-The Arithmetic Mean (AM) of two numbers \(a\) and \(b\) is given by:
+The **Arithmetic Mean (AM)** of two numbers \(a\) and \(b\) is given by:
 
 \[ AM = \frac{a + b}{2} \]
 
@@ -15,9 +15,9 @@ The general formula for \(n\) numbers \(x_1, x_2, \ldots, x_n\) is:
 ~~~
 
 !id: 0cd67091-27bf-41b9-a77f-dc80c41f251f
-!front: The definition of the Geometric Mean (GM)
+!front: The definition of the **Geometric Mean (GM)**.
 !back:
-The Geometric Mean (GM) of two numbers \(a\) and \(b\) is given by:
+The **Geometric Mean** (GM) of two numbers \(a\) and \(b\) is given by:
 
 \[ GM = \sqrt{ab} \]
 
@@ -27,13 +27,13 @@ The general formula for \(n\) numbers \(x_1, x_2, \ldots, x_n\) is:
 ~~~
 
 !id: e9a56d8a-3fb7-4815-a58e-b99c661cf57c
-!front: The definition of the Quadratic Mean (QM)
+!front: The definition of the **Quadratic Mean (QM)**.
 !back:
-The Quadratic Mean (QM) of two numbers \(a\) and \(b\) is given by:
+The **Quadratic Mean (QM)** of two numbers \(a\) and \(b\) is given by:
 
 \[ QM = \sqrt{\frac{a^2 + b^2}{2}} \]
 
-This is also known as the Root Mean Square (RMS).
+This is also known as the **Root Mean Square (RMS)**.
 
 The general formula for \(n\) numbers \(x_1, x_2, \ldots, x_n\) is:
 
@@ -41,9 +41,9 @@ The general formula for \(n\) numbers \(x_1, x_2, \ldots, x_n\) is:
 ~~~
 
 !id: 92d0b2a1-7e59-4e25-be67-ed2948a6ff4e
-!front: The definition of the Harmonic Mean (HM)
+!front: The definition of the **Harmonic Mean (HM)**.
 !back:
-The Harmonic Mean (HM) of two numbers \(a\) and \(b\) is given by:
+The **Harmonic Mean (HM)** of two numbers \(a\) and \(b\) is given by:
 
 \[ HM = \frac{2}{1/a + 1/b} = \frac{2ab}{a + b} \]
 
@@ -57,7 +57,7 @@ The general formula for \(n\) numbers \(x_1, x_2, \ldots, x_n\) is:
 !back:
 \[ \frac{a+b}{2} \ge \sqrt{ab} \]
 
-where AM is the Arithmetic Mean and GM is the Geometric Mean of two non-negative numbers \(a\) and \(b\).
+where AM is the **Arithmetic Mean** and GM is the **Geometric Mean** of two non-negative numbers \(a\) and \(b\).
 !extra:
 More generally, it is known that the following inequality holds for any set of positive numbers:
 
@@ -65,8 +65,30 @@ More generally, it is known that the following inequality holds for any set of p
 
 where
 
-- QM is the Quadratic Mean
-- AM is the Arithmetic Mean
-- GM is the Geometric Mean
-- HM is the Harmonic Mean
+- QM is the **Quadratic Mean**
+- AM is the **Arithmetic Mean**
+- GM is the **Geometric Mean**
+- HM is the **Harmonic Mean**
+~~~
+
+!id: def34112-15f3-41ed-9fbf-3687bd0355d9
+!front: What is the general formula for means?
+!back:
+The general formula is the **Kolmogorov–Nagumo (Quasi-Arithmetic) Mean**:
+
+\[
+\begin{align*}
+    M_f(x_1, x_2, \ldots, x_n) &= f^{-1} \left( \frac{1}{n} \sum_{i=1}^n f(x_i) \right) \\
+    &= f^{-1} \left( \frac{f(x_1) + f(x_2) + \ldots + f(x_n) }{n} \right)
+\end{align*}
+\]
+
+where $f$ is any continuous strictly monotone function.
+
+- If $f(x)=x$, we get the **Arithmetic Mean**.
+- If $f(x)=\ln x$, we get the **Geometric Mean** (requires $x_i > 0$).
+- If $f(x)=1/x$, we get the **Harmonic Mean** (requires $x_i \neq 0$).
+- If $f(x)=x^p$ (with $p \neq 0$), we get the **Power Mean**, with $p = 2$ being the **Quadratic Mean**.
+
+So the **Quasi-Arithmetic Mean** is the most general form that unites all the classical means.
 ~~~

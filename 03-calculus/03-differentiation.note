@@ -72,6 +72,40 @@ The **Intermediate Value Theorem** states that if a function \( f(x) \) is conti
 Intuitively, if you can draw the graph of a function without lifting your pencil, and it goes from one y-value to another, it must pass through all the y-values in between.
 ~~~
 
+!id: 3dd240e9-95a5-4863-af47-f07562a7dcc0
+!front: Derive \( \frac{d}{dx} \ln(x) \)
+!back:
+\[
+\begin{align*}
+    y &= \ln(x) \\
+    x &= e^y
+\end{align*}
+\]
+
+Differentiate both sides implicitly with respect to \( x \):
+
+\[
+\begin{align*}
+    \frac{d}{dx}[x] &= \frac{d}{dx}[e^y] \\
+    1 &= e^y \cdot \frac{dy}{dx} \\
+    \frac{dy}{dx} &= \frac{1}{e^y}
+\end{align*}
+\]
+
+Express \( e^y \) in terms of \( x \):
+
+\[
+\begin{align*}
+    e^y &= e^{\ln x} \\
+    &= x
+\end{align*}
+\]
+
+Substitute back:
+
+\[ \frac{dy}{dx} = \frac{1}{x} \]
+~~~
+
 !id: d2ef18d6-cb42-4ca5-bd64-5e12abfe0bdf
 !front: Derive \( \frac{d}{dx} \arcsin(x) \)
 !back:

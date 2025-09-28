@@ -79,3 +79,17 @@ where:
 - \( (x, y, z) \) are the coordinates of any point on the plane, and
 - \( d \) is a scalar constant.
 ~~~
+
+!id: 48e0859f-f529-4f4b-b0b0-1c0f6b5c3dba
+!front: Parametric equation of the plane.
+!back:
+\[ \mathbf{r} = \mathbf{p} + s \mathbf{b} + t \mathbf{c} \]
+
+where:
+
+- \( \mathbf{r} \) is the position vector of any point on the plane,
+- \( \mathbf{p} \) is the position vector of a specific point on the plane,
+- \( \mathbf{b} \) is the first vector parallel to the plane,
+- \( \mathbf{c} \) is the second vector parallel to the plane,
+- \( s \) and \( t \) are scalar parameters.
+~~~
