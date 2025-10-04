@@ -72,6 +72,34 @@ The **Intermediate Value Theorem** states that if a function \( f(x) \) is conti
 Intuitively, if you can draw the graph of a function without lifting your pencil, and it goes from one y-value to another, it must pass through all the y-values in between.
 ~~~
 
+!id: ec1a41d1-640b-4bba-9230-d3bd5646dafe
+!front: Prove that $\frac{dx}{dy} \cdot \frac{dy}{dx} = 1$
+!back:
+\[
+\begin{align*}
+    y &= f(x) \\
+    x &= f^{-1}(y) \\
+    f^{-1}(f(x)) &= x
+\end{align*}
+\]
+
+Differentiate both sides with respect to \( x \) using the chain rule:
+
+\[ \underbrace{ (f^{-1})'(f(x)) } \cdot \underbrace{ f'(x) } = 1 \]
+
+which is the same as
+
+\[ \frac{dx}{dy} \cdot \frac{dy}{dx} = 1 \]
+
+because
+
+\[ (f^{-1})'(f(x)) = (f^{-1})'(y) = \frac{dx}{dy} \]
+
+and
+
+\[ f'(x) = \frac{dy}{dx} \]
+~~~
+
 !id: 3dd240e9-95a5-4863-af47-f07562a7dcc0
 !front: Derive \( \frac{d}{dx} \ln(x) \)
 !back:
@@ -82,7 +110,7 @@ Intuitively, if you can draw the graph of a function without lifting your pencil
 \end{align*}
 \]
 
-Differentiate both sides implicitly with respect to \( x \):
+Differentiate both sides implicitly with respect to \( x \) using the chain rule:
 
 \[
 \begin{align*}
@@ -116,7 +144,7 @@ Substitute back:
 \end{align*}
 \]
 
-Differentiate both sides implicitly with respect to \( x \):
+Differentiate both sides implicitly with respect to \( x \) using the chain rule:
 
 \[
 \begin{align*}
@@ -150,7 +178,7 @@ Substitute back:
 \end{align*}
 \]
 
-Differentiate both sides implicitly with respect to \( x \):
+Differentiate both sides implicitly with respect to \( x \) using the chain rule:
 
 \[
 \begin{align*}
@@ -184,7 +212,7 @@ Substitute back:
 \end{align*}
 \]
 
-Differentiate both sides implicitly with respect to \( x \):
+Differentiate both sides implicitly with respect to \( x \) using the chain rule:
 
 \[
 \begin{align*}

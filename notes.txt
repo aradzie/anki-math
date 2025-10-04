@@ -590,11 +590,24 @@ b4edd171-5748-42bd-8392-c5d010a1cfa0;Basic Math;Math::Calculus::Differentiation;
 <p>which means \( f'(c)=0 \).</p>";;
 965f6c49-3485-45d0-8590-b369246d02b6;Basic Math;Math::Calculus::Differentiation;Math Calculus Differentiation Theory;<p>The definition of the <strong>Intermediate Value Theorem</strong> (IVT).</p>;"<p>The <strong>Intermediate Value Theorem</strong> states that if a function \( f(x) \) is continuous on a closed interval \( [a,b] \), and \( L \) is any value between \( f(a) \) and \( f(b) \), then there exists at least one number \( c \) in the interval \( [a,b] \) such that \( f(c)=L \).</p>
 <p>Intuitively, if you can draw the graph of a function without lifting your pencil, and it goes from one y-value to another, it must pass through all the y-values in between.</p>";;
+ec1a41d1-640b-4bba-9230-d3bd5646dafe;Basic Math;Math::Calculus::Differentiation;Math Calculus Differentiation Theory;<p>Prove that \( \frac{dx}{dy} \cdot \frac{dy}{dx} = 1 \)</p>;"\[ \begin{align*}
+    y &= f(x) \\
+    x &= f^{-1}(y) \\
+    f^{-1}(f(x)) &= x
+\end{align*} \]
+<p>Differentiate both sides with respect to \( x \) using the chain rule:</p>
+\[ \underbrace{ (f^{-1})'(f(x)) } \cdot \underbrace{ f'(x) } = 1 \]
+<p>which is the same as</p>
+\[ \frac{dx}{dy} \cdot \frac{dy}{dx} = 1 \]
+<p>because</p>
+\[ (f^{-1})'(f(x)) = (f^{-1})'(y) = \frac{dx}{dy} \]
+<p>and</p>
+\[ f'(x) = \frac{dy}{dx} \]";;
 3dd240e9-95a5-4863-af47-f07562a7dcc0;Basic Math;Math::Calculus::Differentiation;Math Calculus Differentiation Theory;<p>Derive \( \frac{d}{dx} \ln(x) \)</p>;"\[ \begin{align*}
     y &= \ln(x) \\
     x &= e^y
 \end{align*} \]
-<p>Differentiate both sides implicitly with respect to \( x \):</p>
+<p>Differentiate both sides implicitly with respect to \( x \) using the chain rule:</p>
 \[ \begin{align*}
     \frac{d}{dx}[x] &= \frac{d}{dx}[e^y] \\
     1 &= e^y \cdot \frac{dy}{dx} \\
@@ -611,7 +624,7 @@ d2ef18d6-cb42-4ca5-bd64-5e12abfe0bdf;Basic Math;Math::Calculus::Differentiation;
     y &= \arcsin(x) \\
     x &= \sin(y)
 \end{align*} \]
-<p>Differentiate both sides implicitly with respect to \( x \):</p>
+<p>Differentiate both sides implicitly with respect to \( x \) using the chain rule:</p>
 \[ \begin{align*}
     \frac{d}{dx}[x] &= \frac{d}{dx}[\sin(y)] \\
     1 &= \cos(y) \cdot \frac{dy}{dx} \\
@@ -628,7 +641,7 @@ d2ef18d6-cb42-4ca5-bd64-5e12abfe0bdf;Basic Math;Math::Calculus::Differentiation;
     y &= \arccos(x) \\
     x &= \cos(y)
 \end{align*} \]
-<p>Differentiate both sides implicitly with respect to \( x \):</p>
+<p>Differentiate both sides implicitly with respect to \( x \) using the chain rule:</p>
 \[ \begin{align*}
     \frac{d}{dx}[x] &= \frac{d}{dx}[\cos(y)] \\
     1 &= - \sin(y) \cdot \frac{dy}{dx} \\
@@ -645,7 +658,7 @@ d2ef18d6-cb42-4ca5-bd64-5e12abfe0bdf;Basic Math;Math::Calculus::Differentiation;
     y &= \arctan(x) \\
     x &= \tan(y)
 \end{align*} \]
-<p>Differentiate both sides implicitly with respect to \( x \):</p>
+<p>Differentiate both sides implicitly with respect to \( x \) using the chain rule:</p>
 \[ \begin{align*}
     \frac{d}{dx}[x] &= \frac{d}{dx}[\tan(y)] \\
     1 &= \sec^2(y) \cdot \frac{dy}{dx} \\
