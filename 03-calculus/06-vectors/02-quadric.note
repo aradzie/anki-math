@@ -1,0 +1,53 @@
+!type: Basic Math
+!deck: Math::Calculus::Vector Calculus
+!tags: Math Calculus Vectors
+
+!id: e945a037-afc3-48ca-8c57-3e04caba8907
+!front: Whatis a **Quadric Surface**?
+!back:
+A **Quadric Surface** is a surface in three-dimensional space whose equation is a second-degree polynomial in the variables $x$, $y$ and $z$.
+
+The most general **Quadric Surface** has the form
+
+\[
+\begin{align*}
+    & A x^2 + B y^2 + C z^2 \\
+    & + D xy + E yz + F xz & \\
+    & + G x + H y + I z \\
+    & + J \\
+    & = 0
+\end{align*}
+\]
+
+where $A$, $B$, $C$,... are all constants.
+~~~
+
+!id: 7ae3b416-900e-44bd-afd3-9d68dbae4901
+!front: **Ellipsoid** centered at the origin.
+!back: \[ \frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2} = 1 \]
+~~~
+
+!id: 7c4ab0a7-31ac-49ab-a94b-d9adaad6bf5d
+!front: **Elliptic Paraboloid** centered at the origin.
+!back: \[ z = \frac{x^2}{a^2} + \frac{y^2}{b^2} \]
+~~~
+
+!id: ec245fc2-f0f5-416d-9629-37c17a83f93d
+!front: **Hyperbolic Paraboloid** centered at the origin.
+!back: \[ z = \frac{x^2}{a^2} - \frac{y^2}{b^2} \]
+~~~
+
+!id: 32ce5da1-0dd4-433d-87d4-b12e07a2c18d
+!front: **Hyperboloid of One Sheet** centered at the origin.
+!back: \[ \frac{x^2}{a^2} + \frac{y^2}{b^2} - \frac{z^2}{c^2} = 1 \]
+~~~
+
+!id: d787618a-8c21-4bf3-ae07-7dce4866374e
+!front: **Hyperboloid of Two Sheets** centered at the origin.
+!back: \[ \frac{x^2}{a^2} + \frac{y^2}{b^2} - \frac{z^2}{c^2} = -1 \]
+~~~
+
+!id: bff5166d-71cd-4123-a074-f9254f8a8938
+!front: **Elliptic Cone** centered at the origin.
+!back: \[ \frac{z^2}{c^2} = \frac{x^2}{a^2} + \frac{y^2}{b^2} \]
+~~~

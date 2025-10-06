@@ -1,0 +1,40 @@
+!type: Basic Math
+!deck: Math::Calculus::Vector Calculus
+!tags: Math Calculus Vectors
+
+!id: 54638891-fb83-4d86-b8d7-213da793690a
+!front: What is the algebraic definition the **Cross Product**?
+!back:
+Consider two vectors \( \mathbf{a} \) and \( \mathbf{b} \) in the 3-dimensional space \( \mathbf{a} = \langle a_1, a_2, a_3 \rangle \), \( \mathbf{b} = \langle b_1, b_2, b_3 \rangle \).
+
+The **Cross Product** of \( \mathbf{a} \times \mathbf{b} \) is the determinant
+
+\[ \mathbf{a} \times \mathbf{b} = \begin{vmatrix}
+    \mathbf{i} & \mathbf{j} & \mathbf{k} \\
+    a_1 & a_2 & a_3 \\
+    b_1 & b_2 & b_3
+\end{vmatrix} \]
+
+which expands to
+
+\[
+    \mathbf{a} \times \mathbf{b} =
+    (a_2 b_3 - a_3 b_2) \mathbf{i} -
+    (a_1 b_3 - a_3 b_1) \mathbf{j} +
+    (a_1 b_2 - a_2 b_1) \mathbf{k}
+\]
+~~~
+
+!id: c7bab8f0-3452-4818-b153-cce0a4912bcb
+!front: What is the geometric definition the **Cross Product**?
+!back:
+Consider two vectors \( \mathbf{a} \) and \( \mathbf{b} \) in the 3-dimensional space \( \mathbf{a} = \langle a_1, a_2, a_3 \rangle \), \( \mathbf{b} = \langle b_1, b_2, b_3 \rangle \).
+
+The **Cross Product** \( \mathbf{a} \times \mathbf{b} \) is a vector that:
+
+- is perpendicular to both $\mathbf{a}$ and $\mathbf{b}$ (so orthogonal to the plane containing them),
+- has magnitude equal to the area of the parallelogram spanned by $\mathbf{a}$ and $\mathbf{b}$:
+\[ \|\mathbf{a} \times \mathbf{b}\| = \| \mathbf{a} \| \| \mathbf{b} \| \sin \theta \]
+where $\theta$ is the angle between $\mathbf{a}$ and $\mathbf{b}$, and
+- has direction given by the right-hand rule.
+~~~
