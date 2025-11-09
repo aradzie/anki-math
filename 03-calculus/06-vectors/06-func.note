@@ -1,0 +1,86 @@
+!type: Basic Math
+!deck: Math::Calculus::Vector Calculus
+!tags: Math Calculus Vectors
+
+!id: 33e78c9a-9cf8-4c49-987d-9546bf3dd883
+!front: What is a **Vector Valued Function** (VVF)?
+!back:
+A **Vector Valued Function** (VVF)is a function where the input is a scalar and the output is a vector.
+
+\[ \mathbf{r} : D \sube \mathbb{R} \to \mathbb{R}^n \]
+
+\[ \mathbf{r}(t) = ( f_1(t), f_2(t), \ldots, f_n(t) ) \]
+
+Examples:
+
+\[ \mathbf{r}(t) = (\cos(t), \sin(t)) \]
+
+\[ \mathbf{r}(t) = (t, t^2, t^3) \]
+!related:
+Function of Several Variables: \( \mathbf{r} : D \sube \mathbb{R}^n \to \mathbb{R} \)
+
+Vector-Valued Function of Several Variables: \( \mathbf{F} : D \sube \mathbb{R}^m \to \mathbb{R}^n \)
+~~~
+
+!id: ef5c070b-60f2-4cf8-8b77-3d24f981d6ae
+!front: What is a **Function of Several Variables** (FSV)?
+!back:
+A **Function of Several Variables** (FSV) is a function where the input is a vector and the output is a scalar.
+
+\[ f : D \sube \mathbb{R}^n \to \mathbb{R} \]
+
+\[ f( x_1, x_2, \ldots, x_n ) \]
+
+Examples:
+
+\[ f(x, y) = x^2 + y^2 \]
+
+\[ f(\mathbf{x}) = \| \mathbf{x} \|^2 \]
+!related:
+Function of Several Variables: \( \mathbf{r} : D \sube \mathbb{R}^n \to \mathbb{R} \)
+
+Vector-Valued Function of Several Variables: \( \mathbf{F} : D \sube \mathbb{R}^m \to \mathbb{R}^n \)
+~~~
+
+!id: cb096eee-4d2b-4675-ac01-5fea5f37002f
+!front: What kind of a field does a **Function of Several Variables** define?
+!back: A **Function of Several Variables** \( \mathbf{r} : D \sube \mathbb{R}^n \to \mathbb{R} \) defines a **Scalar Field**.
+!related:
+Function of Several Variables: \( \mathbf{r} : D \sube \mathbb{R}^n \to \mathbb{R} \)
+
+Vector-Valued Function of Several Variables: \( \mathbf{F} : D \sube \mathbb{R}^m \to \mathbb{R}^n \)
+~~~
+
+!id: 30ccdc80-4392-4d43-bea1-ce77a03f11bb
+!front: What is a **Vector-Valued Function of Several Variables** (VVFSV)?
+!back:
+A **Vector-Valued Function of Several Variables** (VVFSV)is a function where the input is a vector $\mathbf{x} \in \mathbb{R}^m$ and the output is a vector $\mathbf{y} \in \mathbb{R}^n$.
+
+\[ \mathbf{F} : D \sube \mathbb{R}^m \to \mathbb{R}^n \]
+
+\[
+\mathbf{F}(\mathbf{x}) = (
+    f_1(\mathbf{x}),
+    f_2(\mathbf{x}),
+    \ldots,
+    f_n(\mathbf{x})
+)
+\]
+
+\[ \mathbf{x} = (x_1, x_2, \ldots, x_m) \]
+
+Examples:
+
+\[ \mathbf{F}(x, y) = (x^2-y, x+y^2) \]
+
+\[ \mathbf{F}(x, y, z) = (xy, yz, xz) \]
+~~~
+
+!id: cf33c452-5ee0-4486-b56b-1011e790814f
+!front: What kind of a field does a **Vector-Valued Function of Several Variables** define?
+!back: A **Vector-Valued Function of Several Variables** \( \mathbf{F} : D \sube \mathbb{R}^m \to \mathbb{R}^n \) defines a **Vector Field**.
+!related:
+Function of Several Variables: \( \mathbf{r} : D \sube \mathbb{R}^n \to \mathbb{R} \)
+
+Vector-Valued Function of Several Variables: \( \mathbf{F} : D \sube \mathbb{R}^m \to \mathbb{R}^n \)
+~~~

@@ -924,6 +924,36 @@ aa15437e-4aa0-4848-b0d1-c8d33c9bad91;Basic Math;Math::Calculus::Vector Calculus;
 <li>\( \mathbf{T}(t) \) is the <strong>Unit Tangeng Vector</strong>, and</li>
 <li>\( \mathbf{N}(t) \) is the <strong>Principal Normal Vector</strong>.</li>
 </ul>";;
+33e78c9a-9cf8-4c49-987d-9546bf3dd883;Basic Math;Math::Calculus::Vector Calculus;Math Calculus Vectors;<p>What is a <strong>Vector Valued Function</strong> (VVF)?</p>;"<p>A <strong>Vector Valued Function</strong> (VVF)is a function where the input is a scalar and the output is a vector.</p>
+\[ \mathbf{r} : D \sube \mathbb{R} \to \mathbb{R}^n \]
+\[ \mathbf{r}(t) = ( f_1(t), f_2(t), \ldots, f_n(t) ) \]
+<p>Examples:</p>
+\[ \mathbf{r}(t) = (\cos(t), \sin(t)) \]
+\[ \mathbf{r}(t) = (t, t^2, t^3) \]";"<p>Function of Several Variables: \( \mathbf{r} : D \sube \mathbb{R}^n \to \mathbb{R} \)</p>
+<p>Vector-Valued Function of Several Variables: \( \mathbf{F} : D \sube \mathbb{R}^m \to \mathbb{R}^n \)</p>";
+ef5c070b-60f2-4cf8-8b77-3d24f981d6ae;Basic Math;Math::Calculus::Vector Calculus;Math Calculus Vectors;<p>What is a <strong>Function of Several Variables</strong> (FSV)?</p>;"<p>A <strong>Function of Several Variables</strong> (FSV) is a function where the input is a vector and the output is a scalar.</p>
+\[ f : D \sube \mathbb{R}^n \to \mathbb{R} \]
+\[ f( x_1, x_2, \ldots, x_n ) \]
+<p>Examples:</p>
+\[ f(x, y) = x^2 + y^2 \]
+\[ f(\mathbf{x}) = \| \mathbf{x} \|^2 \]";"<p>Function of Several Variables: \( \mathbf{r} : D \sube \mathbb{R}^n \to \mathbb{R} \)</p>
+<p>Vector-Valued Function of Several Variables: \( \mathbf{F} : D \sube \mathbb{R}^m \to \mathbb{R}^n \)</p>";
+cb096eee-4d2b-4675-ac01-5fea5f37002f;Basic Math;Math::Calculus::Vector Calculus;Math Calculus Vectors;<p>What kind of a field does a <strong>Function of Several Variables</strong> define?</p>;<p>A <strong>Function of Several Variables</strong> \( \mathbf{r} : D \sube \mathbb{R}^n \to \mathbb{R} \) defines a <strong>Scalar Field</strong>.</p>;"<p>Function of Several Variables: \( \mathbf{r} : D \sube \mathbb{R}^n \to \mathbb{R} \)</p>
+<p>Vector-Valued Function of Several Variables: \( \mathbf{F} : D \sube \mathbb{R}^m \to \mathbb{R}^n \)</p>";
+30ccdc80-4392-4d43-bea1-ce77a03f11bb;Basic Math;Math::Calculus::Vector Calculus;Math Calculus Vectors;<p>What is a <strong>Vector-Valued Function of Several Variables</strong> (VVFSV)?</p>;"<p>A <strong>Vector-Valued Function of Several Variables</strong> (VVFSV)is a function where the input is a vector \( \mathbf{x} \in \mathbb{R}^m \) and the output is a vector \( \mathbf{y} \in \mathbb{R}^n \).</p>
+\[ \mathbf{F} : D \sube \mathbb{R}^m \to \mathbb{R}^n \]
+\[ \mathbf{F}(\mathbf{x}) = (
+    f_1(\mathbf{x}),
+    f_2(\mathbf{x}),
+    \ldots,
+    f_n(\mathbf{x})
+) \]
+\[ \mathbf{x} = (x_1, x_2, \ldots, x_m) \]
+<p>Examples:</p>
+\[ \mathbf{F}(x, y) = (x^2-y, x+y^2) \]
+\[ \mathbf{F}(x, y, z) = (xy, yz, xz) \]";;
+cf33c452-5ee0-4486-b56b-1011e790814f;Basic Math;Math::Calculus::Vector Calculus;Math Calculus Vectors;<p>What kind of a field does a <strong>Vector-Valued Function of Several Variables</strong> define?</p>;<p>A <strong>Vector-Valued Function of Several Variables</strong> \( \mathbf{F} : D \sube \mathbb{R}^m \to \mathbb{R}^n \) defines a <strong>Vector Field</strong>.</p>;"<p>Function of Several Variables: \( \mathbf{r} : D \sube \mathbb{R}^n \to \mathbb{R} \)</p>
+<p>Vector-Valued Function of Several Variables: \( \mathbf{F} : D \sube \mathbb{R}^m \to \mathbb{R}^n \)</p>";
 8d73624b-56e4-47b7-b6cc-34f17d1a740a;Basic Math;Math::Calculus::ODE;Math Calculus Differential-Equation ODE Theory;<p>What is an ordinary differential equation (ODE)?</p>;"<p>An ordinary differential equation is a mathematical equation that relates an unknown function of a single independent variable to its derivatives with respect to that variable.</p>
 <p>A general \( n \)-th order ordinary differential equation can be expressed as</p>
 \[ F(x, y, y', y'', \ldots, y^{(n)}) = 0 \]
