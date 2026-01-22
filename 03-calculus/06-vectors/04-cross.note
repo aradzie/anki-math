@@ -2,7 +2,7 @@
 !deck: Math::Calculus::Vector Calculus
 !tags: Math Calculus Vectors
 
-!id: 54638891-fb83-4d86-b8d7-213da793690a
+!id: zlAnpCeH3o
 !front: What is the algebraic definition the **Cross Product**?
 !back:
 Consider two vectors \( \mathbf{a} \) and \( \mathbf{b} \) in the 3-dimensional space \( \mathbf{a} = \langle a_1, a_2, a_3 \rangle \), \( \mathbf{b} = \langle b_1, b_2, b_3 \rangle \).
@@ -25,7 +25,7 @@ which expands to
 \]
 ~~~
 
-!id: c7bab8f0-3452-4818-b153-cce0a4912bcb
+!id: ab8XVzqdg3
 !front: What is the geometric definition the **Cross Product**?
 !back:
 Consider two vectors \( \mathbf{a} \) and \( \mathbf{b} \) in the 3-dimensional space \( \mathbf{a} = \langle a_1, a_2, a_3 \rangle \), \( \mathbf{b} = \langle b_1, b_2, b_3 \rangle \).

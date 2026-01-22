@@ -2,7 +2,7 @@
 !deck: Math::Trigonometry
 !tags: Math Trigonometric Identity
 
-!id: ae785c87-6dd7-4627-bd48-842f2e7955f4
+!id: ZzS2lXt2He
 !front: \[ \sin (\alpha + \beta) \]
 !back: \[ \sin \alpha \cos \beta + \cos \alpha \sin \beta \]
 !related:
@@ -16,7 +16,7 @@
 \]
 ~~~
 
-!id: 321001c9-c9bd-400f-967f-5d871c046979
+!id: ADsfPGWz3f
 !front: \[ \sin (\alpha - \beta) \]
 !back: \[ \sin \alpha \cos \beta - \cos \alpha \sin \beta \]
 !related:
@@ -30,7 +30,7 @@
 \]
 ~~~
 
-!id: 54605ec1-da86-4db9-92f1-b155d4110f10
+!id: TeJoeef0hz
 !front: \[ \cos (\alpha + \beta) \]
 !back: \[ \cos \alpha \cos \beta - \sin \alpha \sin \beta \]
 !related:
@@ -44,7 +44,7 @@
 \]
 ~~~
 
-!id: adb027c7-f30d-4024-b356-3a243d650788
+!id: PdaNlEVwCa
 !front: \[ \cos (\alpha - \beta) \]
 !back: \[ \cos \alpha \cos \beta + \sin \alpha \sin \beta \]
 !related:
@@ -58,7 +58,7 @@
 \]
 ~~~
 
-!id: 400c6172-fe3c-44f5-bc28-123ede29adf3
+!id: oOiCl13qR2
 !front: \[ \tan (\alpha + \beta) \]
 !back: \[ \frac{\tan \alpha + \tan \beta}{1 - \tan \alpha \tan \beta} \]
 !related:
@@ -70,7 +70,7 @@
 \]
 ~~~
 
-!id: 972c3d2b-7b38-4d55-a892-318955c86cbb
+!id: 91hZj24jjD
 !front: \[ \tan (\alpha - \beta) \]
 !back: \[ \frac{\tan \alpha - \tan \beta}{1 + \tan \alpha \tan \beta} \]
 !related:
@@ -82,7 +82,7 @@
 \]
 ~~~
 
-!id: 9aa6f8fc-e1f1-4bcb-829c-d04a713e1092
+!id: cZe0y3LxAE
 !front: \[ \sin \frac{\theta}{2} \]
 !back: \[ \pm \sqrt{ \frac{1 - \cos \theta}{2} } \]
 !related:
@@ -94,7 +94,7 @@
 \]
 ~~~
 
-!id: da5039c2-ca54-4f99-99a8-e0d9947b924e
+!id: iTWZ8IuTCO
 !front: \[ \cos \frac{\theta}{2} \]
 !back: \[ \pm \sqrt{ \frac{1 + \cos \theta}{2} } \]
 !related:
@@ -106,7 +106,7 @@
 \]
 ~~~
 
-!id: d1c98904-370b-4517-957b-6763e10553d7
+!id: tK0W4ATKJd
 !front: \[ \tan \frac{\theta}{2} \]
 !back:
 \[ \pm \sqrt{ \frac{1 - \cos \theta}{1 + \cos \theta} } \]
@@ -114,7 +114,7 @@
 \[ \frac{1 - \cos \theta}{\sin \theta} \]
 ~~~
 
-!id: cba164f0-0e0b-49d4-b07d-0d5cfd606b0b
+!id: wB2mTXY2QO
 !front: \[ \sin^2 \theta \]
 !back: \[ \frac{1 - \cos 2 \theta}{2} \]
 !related:
@@ -126,7 +126,7 @@
 \]
 ~~~
 
-!id: dfb0a6f0-52bb-4ec8-acd9-3ba9557ca1bb
+!id: dPXtwF6cC0
 !front: \[ \cos^2 \theta \]
 !back: \[ \frac{1 + \cos 2 \theta}{2} \]
 !related:
@@ -138,17 +138,17 @@
 \]
 ~~~
 
-!id: 65746dff-b0d4-43bc-9b85-0b41a6ea194b
+!id: zyDdsX7qFP
 !front: \[ \tan^2 \theta \]
 !back: \[ \frac{1 - \cos 2 \theta}{1 + \cos 2 \theta} \]
 ~~~
 
-!id: 12235490-96e6-4a74-9b2f-037ef05847aa
+!id: t9KssxdSSc
 !front: \[ \sin 2 \theta \]
 !back: \[ 2 \sin \theta \cos \theta \]
 ~~~
 
-!id: de1d55e2-5ce2-4137-86b6-c38548c0cf78
+!id: aeqXcKvao0
 !front: \[ \cos 2 \theta \]
 !back:
 \[ \cos^2 \theta - \sin^2 \theta \]
@@ -156,14 +156,14 @@
 \[ 2 \cos^2 \theta - 1 \]
 ~~~
 
-!id: cb0c0bfc-be0f-45a7-871f-979b4d6b016e
+!id: 7WYmjBDTz0
 !front: \[ \tan 2 \theta \]
 !back:
 \[ \frac{2 \tan \theta}{1 - \tan^2 \theta} \]
 \[ \frac{2}{\cot \theta - \tan \theta} \]
 ~~~
 
-!id: 816b1427-7e2e-471a-9a9f-c5eb7362bd5e
+!id: c1edWh3oRU
 !front: \[ \sin \alpha \cdot \sin \beta \]
 !back: \[ \frac{1}{2} [ \cos (\alpha - \beta) - \cos (\alpha + \beta) ] \]
 !related:
@@ -177,7 +177,7 @@
 \]
 ~~~
 
-!id: 2e6a3423-1a04-4d16-8878-92d900e3b9d7
+!id: ecTmmaoMRC
 !front: \[ \cos \alpha \cdot \cos \beta \]
 !back: \[ \frac{1}{2} [ \cos (\alpha - \beta) + \cos (\alpha + \beta) ] \]
 !related:
@@ -191,7 +191,7 @@
 \]
 ~~~
 
-!id: 05152939-aae0-4f9b-b3b7-f642c2b1445a
+!id: V5j1NnxAsV
 !front: \[ \sin \alpha \cdot \cos \beta \]
 !back: \[ \frac{1}{2} [ \sin (\alpha + \beta) + \sin (\alpha - \beta) ] \]
 !related:
@@ -205,7 +205,7 @@
 \]
 ~~~
 
-!id: 35ca7698-0b12-4e39-8092-b1b4f9d11bb2
+!id: gTtmkhsHN1
 !front: \[ \cos \alpha \cdot \sin \beta \]
 !back: \[ \frac{1}{2} [ \sin (\alpha + \beta) - \sin (\alpha - \beta) ] \]
 !related:
@@ -219,7 +219,7 @@
 \]
 ~~~
 
-!id: a5edfd36-530b-4531-8aa9-e509f3d7f1e9
+!id: dnfZWTPZaM
 !front: \[ \sin \alpha + \sin \beta \]
 !back: \[ 2 \sin \left( \frac{\alpha + \beta}{2} \right) \cos \left( \frac{\alpha - \beta}{2} \right) \]
 !related:
@@ -233,7 +233,7 @@
 \]
 ~~~
 
-!id: acbc1dc7-1ed0-43ca-889d-d353cde28c67
+!id: dHuoiYUXzF
 !front: \[ \sin \alpha - \sin \beta \]
 !back: \[ 2 \cos \left( \frac{\alpha + \beta}{2} \right) \sin \left( \frac{\alpha - \beta}{2} \right) \]
 !related:
@@ -247,7 +247,7 @@
 \]
 ~~~
 
-!id: 1f854f7f-eefe-490b-b6fe-c79cf729b4c6
+!id: pzKbfBNuyY
 !front: \[ \cos \alpha + \cos \beta \]
 !back: \[ 2 \cos \left( \frac{\alpha + \beta}{2} \right) \cos \left( \frac{\alpha - \beta}{2} \right) \]
 !related:
@@ -261,7 +261,7 @@
 \]
 ~~~
 
-!id: 3f74ae49-26be-44af-b320-43e97a5df59b
+!id: D1WyYge8W3
 !front: \[ \cos \alpha - \cos \beta \]
 !back: \[ 2 \sin \left( \frac{\alpha + \beta}{2} \right) \sin \left( \frac{\alpha - \beta}{2} \right) \]
 !related:

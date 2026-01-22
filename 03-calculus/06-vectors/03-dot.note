@@ -2,7 +2,7 @@
 !deck: Math::Calculus::Vector Calculus
 !tags: Math Calculus Vectors
 
-!id: e304cc52-6040-4bc0-98ea-edd399f56746
+!id: SV2UKT5x5r
 !front: What is the algebraic definition the **Dot Product**?
 !back:
 Consider two vectors \( \mathbf{a} \) and \( \mathbf{b} \) in an \( n \)-dimensional space \( \mathbf{a} = \langle a_1, a_2, \ldots, a_n \rangle \), \( \mathbf{b} = \langle b_1, b_2, \ldots, b_n \rangle \).
@@ -12,7 +12,7 @@ The **Dot Product** of \( \mathbf{a} \cdot \mathbf{b} \) is computed as the sum 
 \[ \mathbf{a} \cdot \mathbf{b} = a_1 b_1 + a_2 b_2 + \ldots + a_n b_n = \sum_{i = 1}^{n} a_i b_i \]
 ~~~
 
-!id: b3089105-034a-4b61-9ab8-daa678343200
+!id: pVGWgE8bOp
 !front: What is the geometric definition the **Dot Product**?
 !back:
 Consider two vectors \( \mathbf{a} \) and \( \mathbf{b} \) in an \( n \)-dimensional space \( \mathbf{a} = \langle a_1, a_2, \ldots, a_n \rangle \), \( \mathbf{b} = \langle b_1, b_2, \ldots, b_n \rangle \).

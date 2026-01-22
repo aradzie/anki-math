@@ -2,7 +2,7 @@
 !deck: Math::Linear Algebra
 !tags: Math Linear-Algebra
 
-!id: 670dcdf5-ab29-4ed5-afb1-9845e113a80d
+!id: qWz7qUsfT4
 !front: What is a linear equation?
 !back:
 A linear equation is an algebraic equation in which each term is either a constant or the product of a constant and a single variable. Linear equations can have one or more variables.
@@ -14,7 +14,7 @@ The general form of a linear equation in two variables \( x \) and \( y \) is:
 where \( a \), \( b \), and \( c \) are constants, and \( a \) and \( b \) are not both zero.
 ~~~
 
-!id: 31f01eaf-4857-4ec8-a57c-65322c32a4f7
+!id: 8aVJD0DmxX
 !front: What is a system of linear equations?
 !back:
 A system of linear equations is a collection of one or more linear equations involving the same set of variables.
@@ -31,7 +31,7 @@ For example, the following is a system of two linear equations with two variable
 The solution to a system of linear equations is the set of values for the variables that satisfy all the equations simultaneously.
 ~~~
 
-!id: b71d53f4-f4c7-4ae1-89e4-d7d672d56750
+!id: HlsMiutWc7
 !front: What is a homogeneous system of linear equations?
 !back:
 A homogeneous system of linear equations is a system in which all of the constant terms are zero.
@@ -48,7 +48,7 @@ For example, the following is a homogeneous system of two linear equations with 
 A homogeneous system always has at least one solution, known as the trivial solution, where all variables are equal to zero (e.g., \( x = 0 \) and \( y = 0 \)).
 ~~~
 
-!id: df0bfdaf-f926-4f3f-bf05-ecc32f81bba4
+!id: MRsLE9qgzE
 !front: What is the difference between a inconsistent and an consistent system of linear equations?
 !back:
 A system of linear equations is consistent if there is at least one set of values for the variables that satisfies all the equations simultaneously. In other words, a consistent system has at least one solution.
@@ -56,7 +56,7 @@ A system of linear equations is consistent if there is at least one set of value
 A system of linear equations is inconsistent if there are no solutions. This occurs when the equations represent parallel lines (in two dimensions) or planes (in three dimensions) that do not intersect.
 ~~~
 
-!id: 0c2e8e3a-12bb-441e-8d50-6ce5266a16a1
+!id: Q052SVQBhv
 !front: What is the difference between a dependent and an independent system of linear equations?
 !back:
 A system of linear equations is independent if the equations are not multiples of each other, meaning they provide unique information about the variables. An independent system has a unique solution.

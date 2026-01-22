@@ -2,7 +2,7 @@
 !deck: Math::Algebra
 !tags: Math Algebra Identity
 
-!id: 5bd92c71-c20e-42e0-bbc2-c6bb761fb7f7
+!id: dn9wauQWAT
 !front: Quadratic Formula
 !back:
 If
@@ -16,7 +16,7 @@ then
 
 !type: Basic Math (and reversed card)
 
-!id: 498fb37a-7ad6-49b1-a6f6-17c387a1ac15
+!id: EUIwIzWYzl
 !front: \[ (a + b)^2 \]
 !back: \[ a^2 + 2ab + b^2 \]
 !related:
@@ -28,7 +28,7 @@ then
 \]
 ~~~
 
-!id: 8a9d8cef-fcb3-4502-a8b2-129aefe17b3c
+!id: Eg98n9Xaft
 !front: \[ (a - b)^2 \]
 !back: \[ a^2 - 2ab + b^2 \]
 !related:
@@ -40,7 +40,7 @@ then
 \]
 ~~~
 
-!id: 51b5dd37-e875-407b-bb30-327cad3a4bf0
+!id: uLhx9rBYLz
 !front: \[ a^2 + b^2 \]
 !back: \[ (a - ib)(a + ib) \]
 !related:
@@ -52,7 +52,7 @@ then
 \]
 ~~~
 
-!id: cbbf34f7-b922-438d-a3e5-246ad8ea01f1
+!id: Y6OwqvHpaC
 !front: \[ a^2 - b^2 \]
 !back: \[ (a - b)(a + b) \]
 !related:
@@ -64,7 +64,7 @@ then
 \]
 ~~~
 
-!id: 0fb486c4-854d-4921-a695-fc003c184d7d
+!id: TEO80bzmpv
 !front: \[ a^3 + b^3 \]
 !back: \[ (a + b)(a^2 - ab + b^2) \]
 !related:
@@ -76,7 +76,7 @@ then
 \]
 ~~~
 
-!id: 295b74c0-7882-4283-8ef0-8dfb757d80ad
+!id: 3Hw9mf6fPQ
 !front: \[ a^3 - b^3 \]
 !back: \[ (a - b)(a^2 + ab + b^2) \]
 !related:

@@ -2,7 +2,7 @@
 !deck: Math::Calculus::Vector Calculus
 !tags: Math Calculus Vectors
 
-!id: e588dedf-9fd7-4fd4-98f4-4ac94dc003a0
+!id: rFVZZKicBE
 !front: Vector equation of the line.
 !back:
 \[ \mathbf{r} = \mathbf{p} + t\mathbf{d} \]
@@ -15,7 +15,7 @@ where:
 - \( t \) is a scalar parameter.
 ~~~
 
-!id: e4ce563b-80b2-452b-823c-543437869431
+!id: STqbUQSLfv
 !front: Parametric equation of the line.
 !back:
 \[
@@ -33,7 +33,7 @@ where:
 - \( t \) is a scalar parameter.
 ~~~
 
-!id: 5ba84a88-572c-43a9-877f-d3e110d5ac8b
+!id: wdeUegOXeA
 !front: Symmetric equation of the line.
 !back:
 \[ \frac{x - p_x}{d_x} = \frac{y - p_y}{d_y} = \frac{z - p_z}{d_z} \]
@@ -44,7 +44,7 @@ where:
 - \( (d_x, d_y, d_z) \) are the components of the direction vector.
 ~~~
 
-!id: 82d83281-4717-4db1-8362-1005296a02f4
+!id: kfdQHKQK3g
 !front: Vector equation of the plane.
 !back:
 \[ (\mathbf{r} - \mathbf{p}) \cdot \mathbf{n} = 0 \]
@@ -68,7 +68,7 @@ where:
 - \( c = \mathbf{r} \cdot \mathbf{n} \) is a scalar constant.
 ~~~
 
-!id: 94d0e09b-2f50-4ed9-9c43-6f1b218c9e21
+!id: u0gQ9pUiNB
 !front: Sclar equation of the plane.
 !back:
 \[ ax + by + cz = d \]
@@ -80,7 +80,7 @@ where:
 - \( d \) is a scalar constant.
 ~~~
 
-!id: 48e0859f-f529-4f4b-b0b0-1c0f6b5c3dba
+!id: URxmzbuMG0
 !front: Parametric equation of the plane.
 !back:
 \[ \mathbf{r} = \mathbf{p} + s \mathbf{b} + t \mathbf{c} \]

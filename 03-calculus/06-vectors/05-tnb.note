@@ -2,7 +2,7 @@
 !deck: Math::Calculus::Vector Calculus
 !tags: Math Calculus Vectors
 
-!id: 7dc39af3-d9f5-42a2-921d-c4d4214773ae
+!id: qG0LQsI4ZF
 !front: **Unit Tangent Vector** $T$ to a parameterized curve.
 !back:
 The **Unit Tangent Vector** is the normalized velocity vector.
@@ -15,7 +15,7 @@ where:
 - $ \mathbf{r}'(t) = \langle x'(t), y'(t), z'(t) \rangle $ is the velocity vector.
 ~~~
 
-!id: 3401c61b-c1f9-497c-be4c-b0153013d45f
+!id: 4pswS3yAU1
 !front: **Principal Normal Vector** $N$ to a parameterized curve.
 !back:
 The **Principal Normal Vector** to a curve $C$ is a unit vector that
@@ -30,7 +30,7 @@ where:
 - $\mathbf{T}(t)$ is the **Unit Tangeng Vector**.
 ~~~
 
-!id: aa15437e-4aa0-4848-b0d1-c8d33c9bad91
+!id: 9DmVM2X1dc
 !front: **Binormal Vector** $B$ to a parameterized curve.
 !back:
 \[ \mathbf{B}(t) = \mathbf{T}(t) \times \mathbf{N}(t) \]

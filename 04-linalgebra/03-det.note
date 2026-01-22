@@ -2,7 +2,7 @@
 !deck: Math::Linear Algebra
 !tags: Math Linear-Algebra Determinant
 
-!id: 6be199f5-db3d-4de8-8e93-2b1a5d3ddfb1
+!id: 4GdIP2UHqf
 !front: What is a singular square matrix?
 !back:
 A square matrix \( A \) is singular if its determinant is zero:
@@ -12,7 +12,7 @@ A square matrix \( A \) is singular if its determinant is zero:
 A singular square matrix \( A \) cannot be inverted, meaning \( A^{-1} \) does not exist.
 ~~~
 
-!id: 90ad53c2-36b2-49a5-a963-f9455d43a5d5
+!id: qBT7hpthAE
 !front: When a matrix does not have an inverse?
 !back:
 A matrix \( A \) does not have an inverse if:
@@ -21,12 +21,12 @@ A matrix \( A \) does not have an inverse if:
 - It is singular, meaning its determinant is zero \( \det(A) = 0 \).
 ~~~
 
-!id: c5a041d8-7fbe-425d-8e98-8ca49f0bbdec
+!id: fvgkeHa0Vb
 !front: When the determinant of a matrix is zero?
 !back: A square matrix has zero determinant when its rows or columns are linearly dependent - meaning one row (or column) can be written as a linear combination of the others.
 ~~~
 
-!id: 662a1e6c-360f-4469-af0c-4f849be6b786
+!id: sneoqH9fCw
 !front: What is the geometric interpretation of the absolute determinant value of a matrix?
 !back:
 For a square matrix \( A \), the absolute value of the determinant \( |\det(A)| \) is the factor by which the matrix scales
@@ -38,12 +38,12 @@ For a square matrix \( A \), the absolute value of the determinant \( |\det(A)| 
 - \( | \det(A) | < 1 \): volumes are contracted.
 ~~~
 
-!id: 67a590c4-0848-44bb-b2fe-55611a03a4e6
+!id: iMCfeR0bMl
 !front: What is the geometric interpretation of the zero determinant of a matrix?
 !back: A determinant is zero whenever the transformation collapses space into a lower dimension.
 ~~~
 
-!id: 09cce54a-d651-4939-83f9-7b48830a42f4
+!id: aOvMWsYT07
 !front: What is the determinant of a triangular matrix?
 !back:
 The determinant of a triangular matrix is the product of its diagonal entries.
@@ -97,12 +97,12 @@ For a lower-triangular matrix:
 \]
 ~~~
 
-!id: a7899052-7d92-4cbb-81f5-61ce0bab17a5
+!id: WNYTfXowUO
 !front: When the determinant of a triangular matrix is zero?
 !back: The determinant of a triangular matrix is zero whenever one of its diagonal entries is zero.
 ~~~
 
-!id: acc466b6-01ef-42f9-bcfb-a4a6283d1163
+!id: QyBe0e6JPh
 !front: What is the determinant of a \( 2 \times 2 \) matrix \( A \)?
 !back:
 Given a \( 2 \times 2 \) matrix \( A = \begin{bmatrix}
@@ -122,7 +122,7 @@ Given a \( 2 \times 2 \) matrix \( A = \begin{bmatrix}
 \]
 ~~~
 
-!id: 8a705ad6-8eba-4085-98f9-56b39aaa4c47
+!id: kwcWIakPgx
 !front: What is the determinant of a \( 3 \times 3 \) matrix \( A \)?
 !back:
 Given a \( 3 \times 3 \) matrix \( A = \begin{bmatrix}
@@ -159,7 +159,7 @@ Given a \( 3 \times 3 \) matrix \( A = \begin{bmatrix}
 It is simply a cofactor expansion along the first row.
 ~~~
 
-!id: f97aa793-7bc9-43f1-b0c0-f54e5af6332e
+!id: JC1t0n1bRk
 !front: What is the minor \( M_{ij} \) of the entry \( a_{ij} \) in a matrix \( A \)?
 !back:
 The minor \( M_{ij} \) of the entry \( a_{ij} \) in a matrix \( A \) is the determinant of the remaining entries when the row and column containing \( a_{ij} \) are removed.
@@ -183,7 +183,7 @@ M_{22} = \begin{vmatrix}
 \]
 ~~~
 
-!id: af5d999c-45f1-45d5-9388-f3a9d9ccfed6
+!id: gD8tZQL66U
 !front: What is the cofactor \( C_{ij} \) of the entry \( a_{ij} \) in a matrix \( A \)?
 !back:
 The cofactor \( C_{ij} \) of the entry \( a_{ij} \) is in a matrix \( A \) is given by:
@@ -213,7 +213,7 @@ C_{ij} &= (-1)^{2+1} \cdot M_{21} \\
 Cofactors are a useful tool in helping us to compute determinants of larger matrices.
 ~~~
 
-!id: b9fbcc42-e985-4c80-9103-b5dcde06a992
+!id: 1WEi157ktt
 !front: How to use the cofactor expansion to compute the determinant of a square matrix \( A \)?
 !back:
 The determinant of a square matrix \( A \) can be computed using cofactors by expanding along any row or column.
@@ -237,12 +237,12 @@ Or, the cofactor expansion across the second column \( j=2 \) is:
 \]
 ~~~
 
-!id: 3705cf56-6fd7-4178-b000-293e07490b99
+!id: RzUeqNDH8a
 !front: What is the Laplace expansion to compute the determinant of a square matrix \( A \)?
 !back: The Laplace expansion to compute the determinant is the cofactor expansion along any row or column.
 ~~~
 
-!id: bf632e4d-d348-4722-a6c9-c9283e3294f8
+!id: PnntyFN1ae
 !front: What is the inverse of a \( 2 \times 2 \) matrix \( A \)?
 !back:
 Given a \( 2 \times 2 \) matrix \( A = \begin{bmatrix}

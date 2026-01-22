@@ -2,7 +2,7 @@
 !deck: Math::Calculus::Differentiation
 !tags: Math Calculus Differentiation Theory
 
-!id: 166b6025-a38f-4c26-8910-f123bc655054
+!id: zzKitpg6bx
 !front: The definition of the a critical point.
 !back:
 A critical point of a function \( f(x) \) is a point in the domain of \( f \) where either:
@@ -11,7 +11,7 @@ A critical point of a function \( f(x) \) is a point in the domain of \( f \) wh
 - The derivative \( f'(x) \) does not exist.
 ~~~
 
-!id: ebddf2d2-f380-49bc-9d98-47d69966ce7f
+!id: ax8Frvkg1t
 !front: The definition of the **Extreme Value Theorem** (EVT).
 !back:
 The **Extreme Value Theorem** states that if a real-valued function \( f \) is continuous on the closed and bounded interval \( [a,b] \), then \( f \) must attain a maximum and a minimum, each at least once.
@@ -21,7 +21,7 @@ That is, there exist numbers \( c \) and \( d \) in \( [a,b] \) such that: \( f(
 In simpler terms, a continuous function on a closed interval will always have a highest point and a lowest point.
 ~~~
 
-!id: 9df36d9d-546f-45e6-b2dc-3b5159b6bf72
+!id: RKhaYcqpZ1
 !front: The definition of the **Rolle's Theorem**.
 !back:
 The **Rolle's Theorem** is a special case of the **Mean Value Theorem**.
@@ -37,7 +37,7 @@ Then there exists at least one point \( c \) in the open interval \( (a,b) \) su
 Geometrically, this means if a continuous and differentiable curve starts and ends at the same height, there must be at least one point in between where the tangent line is horizontal (i.e., the slope is zero).
 ~~~
 
-!id: b4edd171-5748-42bd-8392-c5d010a1cfa0
+!id: Nul59WMDrC
 !front: The definition of the **Mean Value Theorem** (MVT).
 !back:
 The **Mean Value Theorem** is a generalization of **Rolle's Theorem**.
@@ -64,7 +64,7 @@ The Rolle's Theorem can be derived from the Mean Value Theorem: if \( f(a) = f(b
 which means \( f'(c)=0 \).
 ~~~
 
-!id: 965f6c49-3485-45d0-8590-b369246d02b6
+!id: 7sz7MRtXZk
 !front: The definition of the **Intermediate Value Theorem** (IVT).
 !back:
 The **Intermediate Value Theorem** states that if a function \( f(x) \) is continuous on a closed interval \( [a,b] \), and \( L \) is any value between \( f(a) \) and \( f(b) \), then there exists at least one number \( c \) in the interval \( [a,b] \) such that \( f(c)=L \).
@@ -72,7 +72,7 @@ The **Intermediate Value Theorem** states that if a function \( f(x) \) is conti
 Intuitively, if you can draw the graph of a function without lifting your pencil, and it goes from one y-value to another, it must pass through all the y-values in between.
 ~~~
 
-!id: ec1a41d1-640b-4bba-9230-d3bd5646dafe
+!id: meJCCut234
 !front: Prove that $\frac{dx}{dy} \cdot \frac{dy}{dx} = 1$
 !back:
 \[
@@ -100,7 +100,7 @@ and
 \[ f'(x) = \frac{dy}{dx} \]
 ~~~
 
-!id: 3dd240e9-95a5-4863-af47-f07562a7dcc0
+!id: sJ5KgdRlOi
 !front: Derive \( \frac{d}{dx} \ln(x) \)
 !back:
 \[
@@ -134,7 +134,7 @@ Substitute back:
 \[ \frac{dy}{dx} = \frac{1}{x} \]
 ~~~
 
-!id: d2ef18d6-cb42-4ca5-bd64-5e12abfe0bdf
+!id: Kf3vEla8oO
 !front: Derive \( \frac{d}{dx} \arcsin(x) \)
 !back:
 \[
@@ -168,7 +168,7 @@ Substitute back:
 \[ \frac{dy}{dx} = \frac{1}{\sqrt{1 - x^2}} \]
 ~~~
 
-!id: 5f69e265-6713-49d5-bedb-70c1ca9726d8
+!id: ogApwlBBlO
 !front: Derive \( \frac{d}{dx} \arccos(x) \)
 !back:
 \[
@@ -202,7 +202,7 @@ Substitute back:
 \[ \frac{dy}{dx} = - \frac{1}{\sqrt{1 - x^2}} \]
 ~~~
 
-!id: 8ff74159-1d9a-40cc-ba38-9fb04de9a11f
+!id: WNb1c9mEwi
 !front: Derive \( \frac{d}{dx} \arctan(x) \)
 !back:
 \[

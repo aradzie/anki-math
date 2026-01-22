@@ -2,22 +2,22 @@
 !deck: Math::Calculus::Identities::Limits
 !tags: Math Calculus Identity Limits
 
-!id: 80663e42-48f2-4e44-9f74-cde7302cf1ba
+!id: vjtstp5RFK
 !front: The definition of \( e \) as a limit when \( n \to \infty \)
 !back: \[ e = \lim_{n \to \infty} \left( 1 + \frac{1}{n} \right)^n \]
 ~~~
 
-!id: bf64d640-ba20-4395-93e4-b1c2c079e25b
+!id: 5tnHPoehhw
 !front: The definition of $e^x$ as a limit when \( n \to \infty \)
 !back: \[ e^x = \lim_{n \to \infty} \left( 1 + \frac{x}{n} \right)^n \]
 ~~~
 
-!id: bc5777b8-3846-4bf8-aaf8-fe6aa38c54b2
+!id: co0b8kRcJm
 !front: The definition of \( e \) as a limit when \( n \to 0 \)
 !back: \[ e = \lim_{n \to 0} \left( 1 + n \right)^{1 / n} \]
 ~~~
 
-!id: 3b3f0f88-9f30-4412-b811-5cb43beaef9e
+!id: RsC1HP4Yhn
 !front: The definition of $e^x$ as a limit when \( n \to 0 \)
 !back: \[ e^x = \lim_{n \to 0} \left( 1 + n \right)^{x / n} \]
 ~~~

@@ -2,7 +2,7 @@
 !type: Basic Math
 !tags: Math Calculus Center-of-Mass
 
-!id: ba5efbda-07d0-436e-9ca0-9afe2ce215d5
+!id: MoLv0577jW
 !front: What is the formula for the moment of a system of particles about the origin?
 !back:
 The moment \( \mathbf{M}_O \) of a system of particles about the origin is given by the formula:
@@ -13,7 +13,7 @@ The moment \( \mathbf{M}_O \) of a system of particles about the origin is given
 - \( \mathbf{r}_i \) is the position vector of the \( i \)-th particle.
 ~~~
 
-!id: 03d7dc42-3270-4fc3-9488-f049ac676975
+!id: 0RcMegQfoW
 !front: What is the formula for the center of mass of a system of particles?
 !back:
 The center of mass \( \mathbf{R} \) of a system of particles is given by the formula:

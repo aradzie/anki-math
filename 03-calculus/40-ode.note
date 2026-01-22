@@ -2,7 +2,7 @@
 !deck: Math::Calculus::ODE
 !tags: Math Calculus Differential-Equation ODE Theory
 
-!id: 8d73624b-56e4-47b7-b6cc-34f17d1a740a
+!id: gLPWV0C2i3
 !front: What is an ordinary differential equation (ODE)?
 !back:
 An ordinary differential equation is a mathematical equation that relates an unknown function of a single independent variable to its derivatives with respect to that variable.
@@ -21,12 +21,12 @@ where
 The solution for a differential equation is a function which satisfies the above expression.
 ~~~
 
-!id: 3547a8c1-b730-41f5-a264-e4b41a513a14
+!id: DYi9N9jdeg
 !front: What is the order of an ordinary differential equation?
 !back: The order of an ordinary differential equation is the order of the highest derivative in the equation.
 ~~~
 
-!id: d6fe5529-5dee-460a-80cf-b7889b053b0e
+!id: Yuf1OV3VWU
 !front: What is an autonomous ordinary differential equation?
 !back:
 An autonomous ordinary differential equation is an equation where the independent variable does not explicitly appear in the equation.
@@ -50,7 +50,7 @@ The equation can be solved by separating the variables and integrating both side
 where \( C \) is the constant of integration.
 ~~~
 
-!id: b78cba6e-475d-47e1-a52a-1865e2f556c7
+!id: CbOGrchEvR
 !front: What is a separable ordinary differential equation?
 !back:
 A first-order ordinary differential equation is separable if it can be written in the form

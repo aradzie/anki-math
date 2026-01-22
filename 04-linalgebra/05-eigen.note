@@ -2,7 +2,7 @@
 !deck: Math::Linear Algebra
 !tags: Math Linear-Algebra Matrix
 
-!id: 536075ed-e030-4224-b00c-7ad83cf77987
+!id: 5Eph1RPRiQ
 !front: What is an **eigenvector** \( \mathbf{v} \) of a square matrix \( A \)?
 !back:
 Given a matrix \( A \) an **eigenvector** of \( A \) is a *non-zero* vector \( \mathbf{v} \) such that

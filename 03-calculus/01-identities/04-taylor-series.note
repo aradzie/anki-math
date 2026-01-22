@@ -2,7 +2,7 @@
 !deck: Math::Calculus::Identities::Taylor Series
 !tags: Math Calculus Identity Taylor-Series
 
-!id: c1a00e01-cff5-41cb-9d46-324863c1f655
+!id: mJgyinNkgZ
 !front: Taylor series expansion of \( \frac{1}{1 - x} \)
 !back:
 \[
@@ -16,7 +16,7 @@
 Valid for \( |x| < 1 \)
 ~~~
 
-!id: 60728133-f43c-4aaf-981f-335ac5ba3beb
+!id: cCVrxmJddO
 !front: Taylor series expansion of \( \frac{1}{1 + x} \)
 !back:
 \[
@@ -30,7 +30,7 @@ Valid for \( |x| < 1 \)
 Valid for \( |x| < 1 \)
 ~~~
 
-!id: 3b556a07-7f54-47f6-b112-7eb38ec6f23c
+!id: 2KXLVbrYaB
 !front: Taylor series expansion of \( e^x \)
 !back:
 \[
@@ -42,7 +42,7 @@ Valid for \( |x| < 1 \)
 \]
 ~~~
 
-!id: 6acc7600-21bc-4fee-9509-dfeb6d7a15cb
+!id: awnKbaQV1a
 !front: Taylor series expansion of \( e^{-x} \)
 !back:
 \[
@@ -54,7 +54,7 @@ Valid for \( |x| < 1 \)
 \]
 ~~~
 
-!id: 77d6362f-6b41-4bcf-90ab-80ec4224bd11
+!id: blE4AgjSXl
 !front: Taylor series expansion of \( \ln(x) \)
 !back:
 \[
@@ -66,7 +66,7 @@ Valid for \( |x| < 1 \)
 \]
 ~~~
 
-!id: 4abf3654-ac19-4f0c-92c2-36eb55bf17b3
+!id: MVN1zvlsKq
 !front: Taylor series expansion of \( \ln(1-x) \)
 !back:
 \[
@@ -78,7 +78,7 @@ Valid for \( |x| < 1 \)
 \]
 ~~~
 
-!id: 7816c6bb-f456-4adb-adec-00682e1df439
+!id: KIUCoyRRfv
 !front: Taylor series expansion of \( \ln(1+x) \)
 !back:
 \[
@@ -92,7 +92,7 @@ Valid for \( |x| < 1 \)
 
 !tags: Math Calculus Taylor-Series Trigonometric Identity
 
-!id: b8d48c1b-3a5a-4021-a28b-927494aa1058
+!id: LXLge6uY2V
 !front: Taylor series expansion of \( \sin(x) \)
 !back:
 \[
@@ -104,7 +104,7 @@ Valid for \( |x| < 1 \)
 \]
 ~~~
 
-!id: 229e4d40-048c-4fe9-869d-f219e780007d
+!id: dipfODxaSK
 !front: Taylor series expansion of \( \cos(x) \)
 !back:
 \[
@@ -116,7 +116,7 @@ Valid for \( |x| < 1 \)
 \]
 ~~~
 
-!id: 22324b71-a14c-445f-8d31-546a1e39a4e2
+!id: v9fRBdxCXu
 !front: Taylor series expansion of \( \arctan(x) \)
 !back:
 \[
@@ -130,7 +130,7 @@ Valid for \( |x| < 1 \)
 
 !tags: Math Calculus Taylor-Series Hyperbolic Identity
 
-!id: 33b476da-dd07-4615-8532-a58e05b453b9
+!id: UJNCKYXzfb
 !front: Taylor series expansion of \( \sinh(x) \)
 !back:
 \[
@@ -142,7 +142,7 @@ Valid for \( |x| < 1 \)
 \]
 ~~~
 
-!id: e9407069-de8f-46a4-8019-e507885ab220
+!id: nuGrQ1eg5w
 !front: Taylor series expansion of \( \cosh(x) \)
 !back:
 \[

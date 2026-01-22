@@ -2,7 +2,7 @@
 !deck: Math::Linear Algebra
 !tags: Math Linear-Algebra Matrix
 
-!id: 00524487-6fe9-4344-935d-5fe97bd60f0b
+!id: QPmDQSKkX2
 !front: What is the affine transformation?
 !back:
 An affine transformation is a function between affine spaces that preserves points, straight lines, and planes, but not necessarily distances or angles. Examples include translation, scaling, rotation, and shearing.
@@ -14,12 +14,12 @@ An affine transformation \( \mathbf T:\mathbb R^2\rightarrow \mathbb R^2 \) is d
 where \( \mathbf x \), \( \mathbf u \) and \( \mathbf b \) are \( 2 \times 1 \) column vectors and \( A \) is a \( 2 \times 2 \) matrix.
 ~~~
 
-!id: 4f2ad31c-4faa-4895-a07e-765f398b4c52
+!id: gFOJGWRbbo
 !front: What does it mean for an affine transformation to preserve orientation?
 !back: Preserving orientation means that the transformation does not flip the space, maintaining the clockwise or counterclockwise arrangement of points.
 ~~~
 
-!id: 26ce75e6-2650-4580-881b-7aba607f38f5
+!id: CCVxs0gaah
 !front: When an affine transformation preserves orientation?
 !back:
 An affine transformation \( \mathbf{T} \) preserves orientation if
@@ -33,7 +33,7 @@ and does not preserve orientation if the determinant is negative:
 where the matrix \( A \) that represents the linear transformation associated with \( \mathbf{T} \).
 ~~~
 
-!id: a3551aef-ae32-49a9-8995-dd9dc40f68bc
+!id: TiHbboZTsH
 !front: When an affine transformation is invertible?
 !back: An affine transformation \( \mathbf{T} \) is invertible if and only if the matrix \( A \) that represents the linear transformation associated with \( \mathbf{T} \) is invertible, that is \( \det(A) \ne 0 \).
 ~~~

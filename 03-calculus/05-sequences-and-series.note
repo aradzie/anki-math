@@ -2,7 +2,7 @@
 !deck: Math::Calculus::Sequences and Series
 !tags: Math Calculus Sequences-and-Series Theory
 
-!id: d2206553-b315-40f9-bb47-389c25dcaea9
+!id: zqsfDJERMh
 !front: What is an infinite sequence?
 !back:
 An infinite sequence is an ordered and indexed list of numbers of the form
@@ -22,7 +22,7 @@ Each number \( a_n \) is a term of the sequence.
 The subscript \( n \) is the index variable of the sequence.
 ~~~
 
-!id: 9d5e6a84-15b9-4171-8b90-99eb976db0e1
+!id: SNHL5SpK0l
 !front: What are the different ways to define a sequence?
 !back:
 An infinite sequence can be defined in various ways:
@@ -32,7 +32,7 @@ An infinite sequence can be defined in various ways:
 - By a recurrence relation, a rule that defines a term based on previous terms in the sequence, \( a_n = f(a_{n-1}, a_{n-2}, \ldots) \).
 ~~~
 
-!id: 9e4e5bb5-2daf-41bd-a9b4-dd6e59d971bd
+!id: 3zXOAOFJY3
 !front: What is the limit of a sequence?
 !back:
 A sequence \( \{ a_n \} \) converges to a real number \( L \) if for all \( \epsilon > 0 \), there exists an integer \( N \) such that \( |a_n − L| < \epsilon \) if \( n \ge N \). The number \( L \) is the limit of the sequence and we write
@@ -42,7 +42,7 @@ A sequence \( \{ a_n \} \) converges to a real number \( L \) if for all \( \eps
 In this case, we say the sequence \( \{a_n\} \) is a **convergent sequence**. If a sequence does not converge, it is a **divergent sequence**, and we say the limit does not exist.
 ~~~
 
-!id: 3a4cf6e0-462b-4936-a83e-d73a974361f7
+!id: WicjJDU95F
 !front: What is the squeeze theorem for sequences?
 !back:
 Consider sequences \( \{a_n\} \), \( \{b_n\} \), and \( \{c_n\} \).
@@ -56,7 +56,7 @@ then \( \{b_n\} \) converges and
 \[ \lim_{n \to \infty} b_n = L \]
 ~~~
 
-!id: 2d03f4a3-8fbd-47e3-802b-45e07dfbd591
+!id: GXpNFENZ6u
 !front: What is a bounded sequence?
 !back:
 A sequence \( \{a_n\} \) is **bounded above** if there exists a real number \( M \) such that
@@ -76,12 +76,12 @@ A sequence \( \{a_n\} \) is a *bounded sequence* if it is bounded above and boun
 If a sequence is not bounded, it is an **unbounded sequence**.
 ~~~
 
-!id: 0d35933e-044b-4372-a9d9-35feeac16d5d
+!id: ELeqH5jzit
 !front: What is the relationship between convergent and bounded sequences?
 !back: If a sequence \( \{a_n\} \) converges, then it is bounded.
 ~~~
 
-!id: 50e78fcd-dee3-42fd-8780-957495e269e0
+!id: JthlytFu3v
 !front: What is a monotone sequence?
 !back:
 A sequence \( \{a_n\} \) is **increasing** for all \( n \ge n_0 \) if
@@ -95,12 +95,12 @@ A sequence \( \{a_n\} \) is **decreasing** for all \( n \ge n_0 \) if
 A sequence \( \{a_n\} \) is a **monotone sequence** for all \( n \ge n_0 \) if it is increasing for all \( n \ge n_0 \) or decreasing for all \( n \ge n_0 \).
 ~~~
 
-!id: 0bf2e096-b7b1-4adc-8707-3d1e44270212
+!id: lCZ49YrM8Y
 !front: What is the monotone convergence theorem?
 !back: If \( \{a_n\} \) is a bounded sequence and there exists a positive integer \( n_0 \) such that \( \{a_n\} \) is monotone for all \( n \ge n_0 \), then \( \{a_n\} \) converges.
 ~~~
 
-!id: 58cab50f-a723-480d-bf0d-3106488662e3
+!id: lVOYHPRS4t
 !front: What is an infinite series?
 !back:
 An infinite series is a sum of the terms of an infinite sequnce \( a_n \):
@@ -108,7 +108,7 @@ An infinite series is a sum of the terms of an infinite sequnce \( a_n \):
 \[ \sum_{n=1}^{\infty} a_n = a_1 + a_2 + a_3 + \ldots \]
 ~~~
 
-!id: 93f248cd-b3a3-4dda-bc04-226c19150d29
+!id: V1U7jbIMwQ
 !front: What is the harmonic series?
 !back:
 The harmonic series is an infinite series of the following form
@@ -118,7 +118,7 @@ The harmonic series is an infinite series of the following form
 The harmonic series is a special case of the p-series with \( p = 1 \).
 ~~~
 
-!id: 87b92c0f-529b-48f1-a746-b2353f79c5e0
+!id: WqhRqJWLyi
 !front: What are the convergence properties of the harmonic series?
 !back:
 The harmonic series \( \sum_{n=1}^{\infty} \frac{1}{n} \) diverges to infinity.
@@ -128,7 +128,7 @@ Related:
 The alternate harmonic series \( \sum_{n=1}^{\infty} (-1)^{n+1} \frac{1}{n} \) converges to \( \ln 2 \).
 ~~~
 
-!id: 0c130570-7cfa-40f6-8f02-f75414c0a10f
+!id: ovCOjRQjlt
 !front: What is the alternating harmonic series?
 !back:
 The alternating harmonic series is an infinite series of the following form
@@ -136,7 +136,7 @@ The alternating harmonic series is an infinite series of the following form
 \[ \sum_{n=1}^{\infty} (-1)^{n+1} \frac{1}{n}= 1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \ldots \]
 ~~~
 
-!id: 86e19a9d-5334-4143-8230-129b8ef7a5b0
+!id: Oq7cvJCurt
 !front: What are the convergence properties of the alternate harmonic series?
 !back:
 The alternate harmonic series \( \sum_{n=1}^{\infty} (-1)^{n+1} \frac{1}{n} \) converges to \( \ln 2 \).
@@ -146,7 +146,7 @@ Related:
 The harmonic series \( \sum_{n=1}^{\infty} \frac{1}{n} \) diverges to infinity.
 ~~~
 
-!id: a41bf7c5-f5bf-4b2b-93f5-33bf47d34534
+!id: M5bnxG3xVp
 !front: What is the geometric series?
 !back:
 The geometric series is an infinite series of the following form
@@ -154,12 +154,12 @@ The geometric series is an infinite series of the following form
 \[ \sum_{n=0}^{\infty} a r^{n} = a + ar + ar^2 + ar^3 + \ldots \]
 ~~~
 
-!id: dcceaa97-335a-4e0f-a7e1-2bcb44fa9b31
+!id: swlFVfPnRV
 !front: What are the convergence properties of the geometric series?
 !back: The geometric series \( \sum_{n=0}^{\infty} a r^{n} \) converges to \( \frac{a}{1 - r} \) if \( |r| < 1 \), otherwise it diverges.
 ~~~
 
-!id: eea1c4ce-a96a-4596-8e5e-a67cb648ac49
+!id: EuaTm2Pypt
 !front: What is the p-series?
 !back:
 The p-series series is an infinite series of the following form
@@ -167,12 +167,12 @@ The p-series series is an infinite series of the following form
 \[ \sum_{n=1}^{\infty} \frac{1}{n^p} = \frac{1}{1^p} + \frac{1}{2^p} + \frac{1}{3^p} + \ldots \]
 ~~~
 
-!id: f96fd296-19af-4207-8f66-f89f8a78f834
+!id: RwSiBvxiNJ
 !front: What are the convergence properties of the p-series?
 !back: The p-series \( \sum_{n=1}^{\infty} \frac{1}{n^p} \) converges if \( p > 1 \), otherwise it diverges.
 ~~~
 
-!id: d6710fcd-97c7-40dc-9d00-4e7b53e085a5
+!id: YmgqUNiXRu
 !front: What is the telescoping series?
 !back:
 The telescoping series is an infinite series of the following form
@@ -182,7 +182,7 @@ The telescoping series is an infinite series of the following form
 In other words, the telescoping series is a series in which most of the terms cancel in each of the partial sums, leaving only some of the first terms and some of the last terms.
 ~~~
 
-!id: 3e5a7aed-308d-47dd-af71-b29df020ec1b
+!id: pgxS6fEGNd
 !front: What are the algebraic properties of convergent series?
 !back:
 Let \( \sum_{n=1}^{\infty} a_n \) and \( \sum_{n=1}^{\infty} b_n \) be convergent series. Then the following algebraic properties hold.
@@ -192,7 +192,7 @@ Let \( \sum_{n=1}^{\infty} a_n \) and \( \sum_{n=1}^{\infty} b_n \) be convergen
 - Constant Multiple Rule: For any real number \( c \), the series \( \sum_{n=1}^{\infty} c a_n \) converges and \( \sum_{n=1}^{\infty} c a_n = c \sum_{n=1}^{\infty} a_n \).
 ~~~
 
-!id: 8b230000-c558-4a4d-9e72-dde74e800a3c
+!id: hQX2AY9ug6
 !front: What is the divergence test for a series?
 !back:
 Consider the sequence \( a_n \). If \( \lim_{n \to \infty} a_n \neq 0 \) or \( \lim_{n \to \infty} a_n \) does not exist, then the series \( \sum_{n=1}^{\infty} a_n \) diverges.
@@ -200,7 +200,7 @@ Consider the sequence \( a_n \). If \( \lim_{n \to \infty} a_n \neq 0 \) or \( \
 The converse is not true. That is, if \( \lim_{n \to \infty} a_n = 0 \), we cannot make any conclusion about the convergence of \( \sum_{n=1}^{\infty} a_n \).
 ~~~
 
-!id: 6193cc59-333f-4fc3-93f1-a2fcf2ae66c2
+!id: YTrrpdMo63
 !front: What is the integral test?
 !back:
 Suppose \( \sum_{n = 0}^{\infty} a_n \) is a series with positive terms \( a_n \). Suppose there exists a function \( f \) and a positive integer \( N \) such that the following three conditions are satisfied:
@@ -214,17 +214,17 @@ Then \( \sum_{n=1}^{\infty} a_n \) and \( \int_{N}^{\infty} f(x) \, dx \) both c
 Although convergence of the integral implies convergence of the related series, it does not imply that the value of the integral and the series are the same.
 ~~~
 
-!id: 5efda830-4a1d-4034-9fe8-5ce6c01727a4
+!id: YmNyEz9dL0
 !front: How to estimate the value of a series?
 !back: TODO
 ~~~
 
-!id: ec76c348-38c2-496b-b913-8a6d8fa30c46
+!id: 4M24dB4Qow
 !front: How to estimate the remainder of a series?
 !back: TODO
 ~~~
 
-!id: 5d500a14-517b-4770-a0d4-99193cc658fe
+!id: rVhE7ELDdz
 !front: What is the direct comparison test?
 !back:
 Suppose there exists an integer \( N \) such that \( 0 \le a_n \le b_n \) for all \( n \ge N \). If \( \sum_{n=1}^{\infty} b_n \) converges, then \( \sum_{n=1}^{\infty} a_n \) converges.
@@ -232,7 +232,7 @@ Suppose there exists an integer \( N \) such that \( 0 \le a_n \le b_n \) for al
 Suppose there exists an integer \( N \) such that \( a_n \ge b_n \ge 0 \) for all \( n \ge N \). If \( \sum_{n=1}^{\infty} b_n \) diverges, then \( \sum_{n=1}^{\infty} a_n \) diverges.
 ~~~
 
-!id: 80c0f022-dce7-4522-8911-c264fc044cd9
+!id: h629HYWjfM
 !front: What is the limit comparison test?
 !back:
 Let \( a_n \), \( b_n \ge 0 \) for all \( n \ge 1 \).
@@ -244,7 +244,7 @@ If \( \lim_{n \to \infty} a_n/b_n = 0 \) and \( \sum_{n=1}^{\infty} b_n \) conve
 If \( \lim_{n \to \infty} a_n/b_n = \infty \) and \( \sum_{n=1}^{\infty} b_n \) diverges, then \( \sum_{n=1}^{\infty} a_n \) diverges.
 ~~~
 
-!id: 9b3422e3-6fd1-47e1-8c1a-0e07faca391d
+!id: RxMHXZT03o
 !front: What is the alternating series?
 !back:
 The alternating series is a sum of the terms of an infinite sequnce \( a_n \) whose terms alternate between positive and negative values:
@@ -256,17 +256,17 @@ or
 \[ \sum_{n=1}^{\infty} (-1)^{n} a_n = - a_1 + a_2 - a_3 + \ldots \]
 ~~~
 
-!id: 3316723a-346e-480d-aa82-7255f731909b
+!id: QlGMNjVfeP
 !front: What is the alternating series test?
 !back: An alternating series of the form \( \sum_{n=1}^{\infty} (-1)^{n+1} \, a_n \) or \( \sum_{n=1}^{\infty} (-1)^{n} \, a_n \) converges if \( 0 < a_{n+1} \le a_n \) for all \( n \ge 1 \) and \( \lim_{n \to \infty} a_n = 0 \).
 ~~~
 
-!id: e5825e9a-a1c8-4e17-9591-102ed7f6bb72
+!id: WITe5C997i
 !front: What is the remainder of an alternating series?
 !back: TODO
 ~~~
 
-!id: cc1cac4a-aeae-4629-9052-058ffe55fdfc
+!id: PItfKda0gB
 !front: What is the relationship between absolute and conditional convergence?
 !back:
 A series \( \sum_{n=1}^{\infty} a_n \) exhibits **absolute convergence** if \( \sum_{n=1}^{\infty} |a_n| \) converges.
@@ -276,7 +276,7 @@ A series \( \sum_{n=1}^{\infty} a_n \) exhibits **conditional convergence** if \
 If \( \sum_{n=1}^{\infty} |a_n| \) converges, then \( \sum_{n=1}^{\infty} a_n \) converges.
 ~~~
 
-!id: 90ae712b-a1a7-491c-b221-7fe0d9feb589
+!id: 0lTi8S7UG9
 !front: What is the ratio test?
 !back:
 Consider the series \( \sum_{n=1}^{\infty} a_n \) with nonzero terms. Let
@@ -288,7 +288,7 @@ Consider the series \( \sum_{n=1}^{\infty} a_n \) with nonzero terms. Let
 - If \( \rho = 1 \), the test does not provide any information.
 ~~~
 
-!id: b59ec2f4-4814-43e0-834f-5ce63e389835
+!id: 4k31lhpZH8
 !front: What is the root test?
 !back:
 Consider the series \( \sum_{n=1}^{\infty} a_n \). Let
@@ -300,7 +300,7 @@ Consider the series \( \sum_{n=1}^{\infty} a_n \). Let
 - If \( \rho = 1 \), the test does not provide any information.
 ~~~
 
-!id: 4a903ff1-242d-4f52-80af-1bfbaeb46c0a
+!id: iZKaAkl7j7
 !front: What is the power series?
 !back:
 The power series centered at \( x = 0 \) is an infinite series of the following form
@@ -314,12 +314,12 @@ The power series centered at \( x = a \) is an infinite series of the following 
 where \( x \) is a variable and the coefficients \( c_n \) are constants.
 ~~~
 
-!id: 9529012c-b84b-4c5f-9cba-8b32c9a3c287
+!id: WfQmQRcAco
 !front: What is the center of a power series?
 !back: The center of the power series \( \sum_{n=0}^{\infty} c_n (x - a)^n \) is the point \( x = a \), the value around which the series is expanded.
 ~~~
 
-!id: 1a794726-d3d3-47ca-9a3a-850ea9f2b75b
+!id: Cnb4a7bUzq
 !front: What are the convergence properties of a power series?
 !back:
 Consider the power series \( \sum_{n=0}^{\infty} c_n (x - a)^n \). The series satisfies exactly one of the following properties:
@@ -329,7 +329,7 @@ Consider the power series \( \sum_{n=0}^{\infty} c_n (x - a)^n \). The series sa
 - There exists a real number \( R>0 \) such that the series converges if \( |x − a| < R \) and diverges if \( |x − a| > R \). At the values \( x \) where \( |x − a| = R \), the series may converge or diverge.
 ~~~
 
-!id: 90bacb27-74e6-4df5-8154-039038d9bdc1
+!id: kEhHkFaxM6
 !front: What is the interval of convergence of a power series?
 !back: The interval of convergence \( I \) of the power series \( \sum_{n=0}^{\infty} c_n (x - a)^n \) is the set of all real numbers \( x \) such that the series converges. It's the "domain" of the power series.
 ~~~
