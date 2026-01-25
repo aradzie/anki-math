@@ -158,3 +158,47 @@ Sophie Germain Identity
 a^3 + b^3 + c^3 + 3(a + b)(b + c)(c + a)
 \]
 ~~~
+
+
+!type: Basic Math
+
+!id: 7JvQmP3Z0N
+!front: \[ \frac{1}{a} + \frac{1}{b} + \frac{1}{c} \]
+!back:
+\[
+\frac{ab + bc + ca}{abc}
+\]
+~~~
+
+
+!type: Basic Math
+
+!id: 2W9K3mN0LX
+!front: \[ (x - a)(x - b) \]
+!back:
+\[
+x^2 - (a + b)x + ab
+\]
+~~~
+
+
+!type: Basic Math
+
+!id: 8QK5T2YFZ9
+!front: \[ x^2 + (a + b)x + ab \]
+!back:
+\[
+(x + a)(x + b)
+\]
+~~~
+
+
+!type: Basic Math
+
+!id: H7J2D5M0XZ
+!front: Discriminant
+!back:
+\[
+\Delta = b^2 - 4ac
+\]
+~~~
