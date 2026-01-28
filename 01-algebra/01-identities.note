@@ -86,7 +86,9 @@ then
     a^3 - b^3 &= (a - b)(a^2 + ab + b^2)
 \end{align*}
 \]
-~~~!type: Basic Math (and reversed card)
+~~~
+
+!type: Basic Math (and reversed card)
 
 !id: P4w2nE8JXa
 !front: \[ (a + b)^3 \]
@@ -115,14 +117,12 @@ then
 !back: \[ (a + b + c)^2 \]
 ~~~
 
-
 !type: Basic Math
 
 !id: ZY8wQm2EkN
 !front: \[ a^2 + b^2 + c^2 - ab - bc - ca \]
 !back: \[ \frac{1}{2} \left[ (a-b)^2 + (b-c)^2 + (c-a)^2 \right] \]
 ~~~
-
 
 !type: Basic Math
 
@@ -138,16 +138,13 @@ then
 !back: \[ (a - b)(a + b)(a^2 + b^2) \]
 ~~~
 
-
 !type: Basic Math
 
 !id: RZQ2M5xVJ9
 !front: \[ a^4 + 4b^4 \]
 !back: \[ (a^2 - 2ab + 2b^2)(a^2 + 2ab + 2b^2) \]
-!related:
-Sophie Germain Identity
+!related: Sophie Germain Identity
 ~~~
-
 
 !type: Basic Math
 
@@ -159,7 +156,6 @@ a^3 + b^3 + c^3 + 3(a + b)(b + c)(c + a)
 \]
 ~~~
 
-
 !type: Basic Math
 
 !id: 7JvQmP3Z0N
@@ -169,7 +165,6 @@ a^3 + b^3 + c^3 + 3(a + b)(b + c)(c + a)
 \frac{ab + bc + ca}{abc}
 \]
 ~~~
-
 
 !type: Basic Math
 

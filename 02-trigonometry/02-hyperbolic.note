@@ -77,18 +77,15 @@ Express as a trigonometric function
 !tags: Math Trigonometric Hyperbolic Identity
 
 !id: J9Zx0A7FqR
-!front:
-\[ \cosh^2 x + \sinh^2 x = \ldots \]
+!front: \[ \cosh^2 x + \sinh^2 x = \ldots \]
 !back:
 \[
 \cosh(2x)
 \]
 ~~~
 
-
 !id: A6K2N9bF7x
-!front:
-\[ 1 + \sinh^2 x = \ldots \]
+!front: \[ 1 + \sinh^2 x = \ldots \]
 !back:
 \[
 \cosh^2 x
@@ -96,8 +93,7 @@ Express as a trigonometric function
 ~~~
 
 !id: T0XJZ5wqF3
-!front:
-\[ 1 - \tanh^2 x = \ldots \]
+!front: \[ 1 - \tanh^2 x = \ldots \]
 !back:
 \[
 \operatorname{sech}^2 x

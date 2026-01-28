@@ -258,7 +258,6 @@ x \in (-\infty, a-c] \cup [a+c, \infty)
 \]
 ~~~
 
-
 !id: Kt1X3Lw8aQ
 !front: Prove that $|x| \ge 0$ for all real $x$.
 !back:
@@ -279,13 +278,10 @@ In both cases the value is non-negative, hence
 \]
 ~~~
 
-
 !id: Jp5Q8nKcZ2
 !front: When does equality hold in the triangle inequality $|a+b| \le |a| + |b|$?
-!back:
-Equality holds when $a$ and $b$ have the same sign or one of them is zero.
+!back: Equality holds when $a$ and $b$ have the same sign or one of them is zero.
 ~~~
-
 
 !id: 2C7nY6M5Fp
 !front: Prove the reverse triangle inequality.
@@ -351,7 +347,6 @@ True, because
 \]
 ~~~
 
-
 !id: N9B8F6D2XW
 !front: If $0 \le a \le b$, what can we say about $a^n$ and $b^n$ for integer $n \ge 1$?
 !back:
@@ -362,11 +357,9 @@ True, because
 Powers preserve order for non-negative numbers.
 ~~~
 
-
 !id: Z7P2A8W9YJ
 !front: True or false: If $a \le b$ then $a^3 \le b^3$.
-!back:
-True, because $f(x) = x^3$ is strictly increasing on $\mathbb{R}$.
+!back: True, because $f(x) = x^3$ is strictly increasing on $\mathbb{R}$.
 ~~~
 
 !id: Q4L2A7C8PZ
@@ -376,7 +369,6 @@ False in general.
 
 Counterexample: $a = -2$, $b = -1$ gives $-2 \le -1$ but $16 \not\le 1$.
 ~~~
-
 
 !type: Basic Math
 !deck: Math::Algebra
@@ -433,7 +425,6 @@ Rearrange:
 a^2 + b^2 \ge 2ab
 \]
 ~~~
-
 
 !id: S9D2P7B8QX
 !front: Show that $|a-b| \ge ||a| - |b||$.
