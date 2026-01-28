@@ -221,3 +221,226 @@ so
 
 The last inequality is true for any $a$ and $b$, so the Triangle Inequality is true as well.
 ~~~
+
+!type: Basic Math
+!deck: Math::Algebra
+!tags: Math Algebra Inequality
+
+!id: B8fZ2E9XKm
+!front: Solve $|x - a| \le c$, $c \ge 0$.
+!back:
+\[
+-c \le x - a \le c
+\]
+
+\[
+a - c \le x \le a + c
+\]
+
+\[
+x \in [a - c, a + c]
+\]
+~~~
+
+!id: H7Z0dQ5N2m
+!front: Solve $|x - a| \ge c$, $c \ge 0$.
+!back:
+\[
+x - a \le -c \quad \text{or} \quad x - a \ge c
+\]
+
+\[
+x \le a - c \quad \text{or} \quad x \ge a + c
+\]
+
+\[
+x \in (-\infty, a-c] \cup [a+c, \infty)
+\]
+~~~
+
+
+!id: Kt1X3Lw8aQ
+!front: Prove that $|x| \ge 0$ for all real $x$.
+!back:
+By definition,
+
+\[
+|x| =
+\begin{cases}
+x, & x \ge 0 \\
+-x, & x < 0
+\end{cases}
+\]
+
+In both cases the value is non-negative, hence
+
+\[
+|x| \ge 0
+\]
+~~~
+
+
+!id: Jp5Q8nKcZ2
+!front: When does equality hold in the triangle inequality $|a+b| \le |a| + |b|$?
+!back:
+Equality holds when $a$ and $b$ have the same sign or one of them is zero.
+~~~
+
+
+!id: 2C7nY6M5Fp
+!front: Prove the reverse triangle inequality.
+!back:
+The reverse triangle inequality states:
+
+\[
+\big||a| - |b|\big| \le |a - b|
+\]
+
+Proof:
+
+Apply triangle inequality to $(a - b) + b = a$:
+
+\[
+|a| = |(a-b)+b| \le |a-b| + |b|
+\]
+
+Rearranging:
+
+\[
+|a| - |b| \le |a-b|
+\]
+
+Swap $a,b$ to get:
+
+\[
+|b| - |a| \le |a-b|
+\]
+
+Combining both gives:
+
+\[
+\big||a| - |b|\big| \le |a-b|
+\]
+~~~
+
+!id: M0Jk8CwZ7N
+!front: If $|x| < \varepsilon$, what bound does this give on $x$?
+!back:
+\[
+-\varepsilon < x < \varepsilon
+\]
+~~~
+
+!id: Wk7B5LJ2Fd
+!front: If $|x-a| < \varepsilon$, what does this mean geometrically?
+!back:
+$x$ lies within distance $\varepsilon$ of $a$:
+
+\[
+a - \varepsilon < x < a + \varepsilon
+\]
+~~~
+
+!id: T8cM3K6n5A
+!front: True or false: If $|a| \le |b|$ then $a^2 \le b^2$.
+!back:
+True, because
+
+\[
+|a| \le |b| \Rightarrow |a|^2 \le |b|^2 \Rightarrow a^2 \le b^2
+\]
+~~~
+
+
+!id: N9B8F6D2XW
+!front: If $0 \le a \le b$, what can we say about $a^n$ and $b^n$ for integer $n \ge 1$?
+!back:
+\[
+0 \le a^n \le b^n
+\]
+
+Powers preserve order for non-negative numbers.
+~~~
+
+
+!id: Z7P2A8W9YJ
+!front: True or false: If $a \le b$ then $a^3 \le b^3$.
+!back:
+True, because $f(x) = x^3$ is strictly increasing on $\mathbb{R}$.
+~~~
+
+!id: Q4L2A7C8PZ
+!front: True or false: If $a \le b$ then $a^4 \le b^4$.
+!back:
+False in general.
+
+Counterexample: $a = -2$, $b = -1$ gives $-2 \le -1$ but $16 \not\le 1$.
+~~~
+
+
+!type: Basic Math
+!deck: Math::Algebra
+!tags: Math Algebra Inequality
+
+!id: F7Z3B5R2XQ
+!front: State the AM–GM inequality for two non-negative numbers.
+!back:
+For $a,b \ge 0$:
+
+\[
+\frac{a+b}{2} \ge \sqrt{ab}
+\]
+
+Equality holds iff $a=b$.
+~~~
+
+!id: KZP4F2M9A8
+!front: Prove that $x^2 + 1 \ge 2x$ for all real $x$.
+!back:
+Rearrange:
+
+\[
+x^2 - 2x + 1 \ge 0
+\]
+
+\[
+(x-1)^2 \ge 0
+\]
+
+which is always true.
+~~~
+
+!id: H8M4Q9A5RZ
+!front: Prove that $a^2 + b^2 \ge 2ab$.
+!back:
+\[
+a^2 + b^2 - 2ab = (a-b)^2 \ge 0
+\]
+~~~
+
+!id: E6RZ0M2P5A
+!front: Prove that $(a-b)^2 \ge 0$ implies $a^2 + b^2 \ge 2ab$.
+!back:
+Expand:
+
+\[
+(a-b)^2 = a^2 - 2ab + b^2 \ge 0
+\]
+
+Rearrange:
+
+\[
+a^2 + b^2 \ge 2ab
+\]
+~~~
+
+
+!id: S9D2P7B8QX
+!front: Show that $|a-b| \ge ||a| - |b||$.
+!back:
+This is the reverse triangle inequality:
+
+\[
+||a| - |b|| \le |a - b|
+\]
+~~~

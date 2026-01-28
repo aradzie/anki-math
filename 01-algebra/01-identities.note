@@ -86,4 +86,117 @@ then
     a^3 - b^3 &= (a - b)(a^2 + ab + b^2)
 \end{align*}
 \]
+~~~!type: Basic Math (and reversed card)
+
+!id: P4w2nE8JXa
+!front: \[ (a + b)^3 \]
+!back: \[ a^3 + 3a^2b + 3ab^2 + b^3 \]
+!related:
+\[
+(a - b)^3 = a^3 - 3a^2b + 3ab^2 - b^3
+\]
+~~~
+
+!type: Basic Math (and reversed card)
+
+!id: 9RkP0F3mLQ
+!front: \[ (a - b)^3 \]
+!back: \[ a^3 - 3a^2b + 3ab^2 - b^3 \]
+!related:
+\[
+(a + b)^3 = a^3 + 3a^2b + 3ab^2 + b^3
+\]
+~~~
+
+!type: Basic Math
+
+!id: x7LmK2aT9W
+!front: \[ a^2 + b^2 + c^2 + 2(ab + bc + ca) \]
+!back: \[ (a + b + c)^2 \]
+~~~
+
+
+!type: Basic Math
+
+!id: ZY8wQm2EkN
+!front: \[ a^2 + b^2 + c^2 - ab - bc - ca \]
+!back: \[ \frac{1}{2} \left[ (a-b)^2 + (b-c)^2 + (c-a)^2 \right] \]
+~~~
+
+
+!type: Basic Math
+
+!id: L6D9M0s2Ta
+!front: \[ a^3 + b^3 + c^3 - 3abc \]
+!back: \[ (a + b + c)(a^2 + b^2 + c^2 - ab - bc - ca) \]
+~~~
+
+!type: Basic Math
+
+!id: 8Hn3RkJ5XQ
+!front: \[ a^4 - b^4 \]
+!back: \[ (a - b)(a + b)(a^2 + b^2) \]
+~~~
+
+
+!type: Basic Math
+
+!id: RZQ2M5xVJ9
+!front: \[ a^4 + 4b^4 \]
+!back: \[ (a^2 - 2ab + 2b^2)(a^2 + 2ab + 2b^2) \]
+!related:
+Sophie Germain Identity
+~~~
+
+
+!type: Basic Math
+
+!id: Qk7wF9KZP0
+!front: \[ (a + b + c)^3 \]
+!back:
+\[
+a^3 + b^3 + c^3 + 3(a + b)(b + c)(c + a)
+\]
+~~~
+
+
+!type: Basic Math
+
+!id: 7JvQmP3Z0N
+!front: \[ \frac{1}{a} + \frac{1}{b} + \frac{1}{c} \]
+!back:
+\[
+\frac{ab + bc + ca}{abc}
+\]
+~~~
+
+
+!type: Basic Math
+
+!id: 2W9K3mN0LX
+!front: \[ (x - a)(x - b) \]
+!back:
+\[
+x^2 - (a + b)x + ab
+\]
+~~~
+
+!type: Basic Math
+
+!id: 8QK5T2YFZ9
+!front: \[ x^2 + (a + b)x + ab \]
+!back:
+\[
+(x + a)(x + b)
+\]
+~~~
+
+!type: Basic Math
+
+!id: H7J2D5M0XZ
+!front: Discriminant
+!back:
+\[
+\Delta = b^2 - 4ac
+\]
 ~~~
