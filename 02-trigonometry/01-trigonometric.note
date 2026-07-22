@@ -286,3 +286,23 @@
 !front: \[ \arctan(x) + \text{arccot}(x) = \ldots \]
 !back: \[ \arctan(x) + \text{arccot}(x) = \frac{\pi}{2} \quad x \in \mathbb{R} \]
 ~~~
+
+!id: jeMs0AsHIP
+!front: \[ \cos(\arcsin x) = \ldots \]
+!back: \[ \cos(\arcsin x) = \sqrt{1-x^2} \]
+~~~
+
+!id: q3T9zrPsB8
+!front: \[ \sin(\arccos x) = \ldots \]
+!back: \[ \sin(\arccos x) = \sqrt{1-x^2} \]
+~~~
+
+!id: bi6W9Um33h
+!front: \[ \sin(\arctan x) = \ldots \]
+!back: \[ \sin(\arctan x) = \frac{x}{\sqrt{1+x^2}} \]
+~~~
+
+!id: tbhxUKkFyN
+!front: \[ \cos(\arctan x) = \ldots \]
+!back: \[ \cos(\arctan x) = \frac{1}{\sqrt{1+x^2}} \]
+~~~

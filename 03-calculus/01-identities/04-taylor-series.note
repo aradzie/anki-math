@@ -155,3 +155,15 @@ For any \( x \in \mathbb{R} \):
 \end{align*}
 \]
 ~~~
+
+!id: cZ4UdQiBm7
+!front: Taylor series expansion of \( \operatorname{arctanh}(x) \)
+!back:
+\[
+\begin{align*}
+    \operatorname{arctanh}(x)
+    &= x + \frac{x^{3}}{3} + \frac{x^{5}}{5} + \frac{x^{7}}{7} + \cdots \\
+    &= \sum_{n=0}^{\infty} \frac{x^{2n+1}}{2n+1}, \qquad |x| < 1
+\end{align*}
+\]
+~~~

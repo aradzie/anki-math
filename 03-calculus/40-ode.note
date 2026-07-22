@@ -2,28 +2,18 @@
 !deck: Math::Calculus::ODE
 !tags: Math Calculus Differential-Equation ODE Theory
 
-!id: gLPWV0C2i3
-!front: What is an ordinary differential equation (ODE)?
-!back:
-An ordinary differential equation is a mathematical equation that relates an unknown function of a single independent variable to its derivatives with respect to that variable.
-
-A general \( n \)-th order ordinary differential equation can be expressed as
-
-\[ F(x, y, y', y'', \ldots, y^{(n)}) = 0 \]
-
-where
-
-- \( x \) is the independent variable.
-- \( y \) is the unknown function of \( x \), i.e., \( y = y(x) \).
-- \( y', y'', \ldots, y^{(n)} \) are the first, second, ..., \( n \)-th derivatives of \( y \) with respect to \( x \).
-- \( F \) is a given function relating all these variables and derivatives.
-
-The solution for a differential equation is a function which satisfies the above expression.
-~~~
-
 !id: DYi9N9jdeg
 !front: What is the order of an ordinary differential equation?
-!back: The order of an ordinary differential equation is the order of the highest derivative in the equation.
+!back: The order of the highest derivative in the equation.
+~~~
+
+!id: 1ISdWhXGp5
+!front: What is the degree of an ordinary differential equation, and how does it differ from the order?
+!back:
+The order is which derivative is highest. The degree is the power to which that highest-order derivative is raised, once the equation is written as a polynomial in the derivatives (no fractional powers, roots, or transcendental functions of the derivatives).
+
+For example, \( (y'')^3 + xy' - y = 0 \) has order \( 2 \) and degree \( 3 \).
+!extra: Degree is undefined if the equation is not polynomial in its derivatives, e.g. \( \sin(y') + y = 0 \) or \( e^{y''} = x \).
 ~~~
 
 !id: Yuf1OV3VWU
@@ -36,36 +26,48 @@ An autonomous ordinary differential equation can be expressed in the form:
 \[ \frac{dy}{dx} = f(y) \]
 
 where \( f(y) \) is a function that depends only on the dependent variable \( y \).
-
-The equation can be solved by separating the variables and integrating both sides:
-
-\[
-\begin{align*}
-    \frac{1}{f(y)} \cdot \frac{dy}{dx} &= 1 \\
-    \int \frac{1}{f(y)} \cdot \frac{dy}{dx} \, dx &= \int 1 \, dx \\
-    \int \frac{dy}{f(y)} &= x + C
-\end{align*}
-\]
-
-where \( C \) is the constant of integration.
 ~~~
 
 !id: CbOGrchEvR
 !front: What is a separable ordinary differential equation?
 !back:
-A first-order ordinary differential equation is separable if it can be written in the form
+A first-order ODE is separable if it can be written as
 
 \[ \frac{dy}{dx} = h(x)g(y) \]
 
 where \( h(x) \) is a function of \( x \) alone and \( g(y) \) is a function of \( y \) alone.
+~~~
 
-Once the variables are separated, we can integrate both sides of the equation with respect to \( x \) as follows:
+!id: sta74RKsZz
+!front: What is a linear ordinary differential equation?
+!back:
+An \( n \)-th order ODE is linear if it can be written as
 
-\[
-\begin{align*}
-    \int \frac{1}{g(y)} \cdot \frac{dy}{dx} \, dx &= \int h(x) \, dx \\
-    \int \frac{dy}{g(y)} &= \int h(x) \, dx \\
-    G(y) &= H(x) + C
-\end{align*}
-\]
+\[ a_n(x) y^{(n)} + a_{n-1}(x) y^{(n-1)} + \cdots + a_1(x) y' + a_0(x) y = g(x) \]
+
+where the coefficients \( a_0(x), \ldots, a_n(x) \) and \( g(x) \) depend only on \( x \), not on \( y \) or its derivatives. The dependent variable \( y \) and every derivative of it appear to the first power and are not multiplied together or passed through a nonlinear function (e.g. no \( y^2 \), \( yy' \), or \( \sin(y) \)).
+!extra: If \( g(x) = 0 \) the equation is called homogeneous (linear); otherwise it is nonhomogeneous. This is a different use of "homogeneous" than the homogeneous (degree-zero) first-order ODE \( \frac{dy}{dx} = f(y/x) \) — the two notions share a name but are unrelated classifications.
+~~~
+
+!id: i07H0rn911
+!front: What is an exact differential equation?
+!back:
+A first-order ODE written in differential form
+
+\[ M(x, y)\,dx + N(x, y)\,dy = 0 \]
+
+is exact if there exists a function \( \psi(x, y) \) with \( \psi_x = M \) and \( \psi_y = N \), i.e. the left side is the total differential \( d\psi \). Equivalently, if \( M \) and \( N \) have continuous partial derivatives on a simply connected region, the equation is exact iff
+
+\[ \frac{\partial M}{\partial y} = \frac{\partial N}{\partial x}. \]
+~~~
+
+!id: qGnO0mOTWZ
+!front: What is a homogeneous first-order ordinary differential equation?
+!back:
+A first-order ODE \( \frac{dy}{dx} = f(x, y) \) is homogeneous if \( f \) is homogeneous of degree \( 0 \), i.e. \( f(tx, ty) = f(x, y) \) for all \( t \neq 0 \) in the domain. Equivalently, it can be written as
+
+\[ \frac{dy}{dx} = F\!\left(\frac{y}{x}\right) \]
+
+for some function \( F \). It is solved via the substitution \( v = y/x \) (so \( y = vx \), \( \frac{dy}{dx} = v + x\frac{dv}{dx} \)), which turns it into a separable ODE in \( v \) and \( x \).
+!extra: Not the same "homogeneous" as a homogeneous linear ODE (\( g(x) = 0 \) in \( a_n(x)y^{(n)} + \cdots + a_0(x) y = g(x) \)) — same word, unrelated classification.
 ~~~

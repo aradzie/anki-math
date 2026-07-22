@@ -4,168 +4,189 @@
 
 !id: zzKitpg6bx
 !front: What is a critical point?
-!back:
-A critical point of a function \( f(x) \) is a point in the domain of \( f \) where either:
-
-- The derivative \( f'(x) \) is zero, or
-- The derivative \( f'(x) \) does not exist.
+!back: A critical point of \( f \) is an interior point \( c \) of the domain of \( f \) at which either \( f'(c) = 0 \) or \( f'(c) \) fails to exist.
 ~~~
 
 !id: GNUskJIVPy
 !front: What is the main idea of the first derivative test?
-!back: The first derivative test classifies a critical point by checking whether \( f' \) changes sign on the left and right of that point.
+!back: The first derivative test classifies a critical point \( c \) as a local maximum, a local minimum, or inconclusive by comparing the sign of \( f' \) on the two halves of a punctured neighborhood of \( c \).
+~~~
+
+!id: cLa5APUShK
+!front: Give a physical interpretation of the first derivative test when \( f \) is position.
+!back: Then \( f' \) is signed velocity. If \( f' \) changes from positive to negative at \( c \), the motion changes from moving upward to moving downward, so \( f(c) \) is a local maximum. If \( f' \) changes from negative to positive, the motion changes from moving downward to moving upward, so \( f(c) \) is a local minimum.
 ~~~
 
 !id: ZBp09xCVc5
 !front: What hypotheses are needed to use the first derivative test at a critical point \( c \)?
-!back: The function \( f \) should be continuous near \( c \) and differentiable on each side of \( c \), though \( f'(c) \) may be zero or undefined.
+!back: \( f \) must be continuous at \( c \) and differentiable on a punctured neighborhood of \( c \); \( f'(c) \) itself may be zero or fail to exist.
 ~~~
 
 !id: 6AllLxbkmN
-!front: In the first derivative test, what does \( f' \) changing from positive to negative at \( c \) imply?
-!back: It implies that \( f \) has a local maximum at \( c \).
+!front: In the first derivative test, what does \( f' \) changing sign from positive to negative across \( c \) imply?
+!back: \( f \) has a strict local maximum at \( c \).
 ~~~
 
 !id: eOBg5g4d3w
-!front: In the first derivative test, what does \( f' \) changing from negative to positive at \( c \) imply?
-!back: It implies that \( f \) has a local minimum at \( c \).
+!front: In the first derivative test, what does \( f' \) changing sign from negative to positive across \( c \) imply?
+!back: \( f \) has a strict local minimum at \( c \).
 ~~~
 
 !id: hivA9FTtp5
-!front: In the first derivative test, what does it mean if \( f' \) is positive on both sides of \( c \)?
-!back: The function is increasing through \( c \), so \( f \) has no local extremum at \( c \).
+!front: In the first derivative test, what does it mean if \( f' \) is positive throughout a punctured neighborhood of \( c \)?
+!back: \( f \) is strictly increasing through \( c \), so \( c \) is not a local extremum.
 ~~~
 
 !id: TqaJZVuBH3
-!front: In the first derivative test, what does it mean if \( f' \) is negative on both sides of \( c \)?
-!back: The function is decreasing through \( c \), so \( f \) has no local extremum at \( c \).
+!front: In the first derivative test, what does it mean if \( f' \) is negative throughout a punctured neighborhood of \( c \)?
+!back: \( f \) is strictly decreasing through \( c \), so \( c \) is not a local extremum.
 ~~~
 
 !id: Kl0wfuwlv0
-!front: Why does \( f' \) changing from positive to negative indicate a local maximum?
-!back: Positive \( f' \) means \( f \) is increasing before \( c \), and negative \( f' \) means \( f \) is decreasing after \( c \). So nearby values rise up to \( f(c) \) and then fall away from it.
+!front: Why does \( f' \) changing sign from positive to negative indicate a local maximum?
+!back: \( f' > 0 \) immediately to the left of \( c \) means \( f \) is increasing up to \( c \); \( f' < 0 \) immediately to the right means \( f \) is decreasing away from \( c \). Hence \( f(x) < f(c) \) for every \( x \) in a punctured neighborhood of \( c \).
 ~~~
 
 !id: 0oiaZNkT0Y
-!front: Why does \( f' \) changing from negative to positive indicate a local minimum?
-!back: Negative \( f' \) means \( f \) is decreasing before \( c \), and positive \( f' \) means \( f \) is increasing after \( c \). So nearby values fall down to \( f(c) \) and then rise away from it.
+!front: Why does \( f' \) changing sign from negative to positive indicate a local minimum?
+!back: \( f' < 0 \) immediately to the left of \( c \) means \( f \) is decreasing down to \( c \); \( f' > 0 \) immediately to the right means \( f \) is increasing away from \( c \). Hence \( f(x) > f(c) \) for every \( x \) in a punctured neighborhood of \( c \).
 ~~~
 
 !id: 5PCIVmIycT
 !front: Give an example of a stationary critical point that is not a local extremum.
-!back: \( f(x)=x^3 \) has \( f'(0)=0 \), but \( f'(x)=3x^2>0 \) for \( x \ne 0 \). The function is increasing through \( 0 \), so \( 0 \) is not a local extremum.
+!back: For \( f(x) = x^3 \), \( f'(0) = 0 \), but \( f'(x) = 3x^2 > 0 \) for every \( x \ne 0 \). So \( f \) is strictly increasing through \( 0 \), and \( 0 \) is not a local extremum.
 ~~~
 
 !id: iZBE6xycSb
 !front: What is the main idea of the second derivative test?
-!back: The second derivative test classifies a stationary critical point \( c \) as a local maximum, a local minimum, or neither using the sign of \( f''(c) \).
+!back: The second derivative test classifies a stationary critical point \( c \) (where \( f'(c) = 0 \)) as a local maximum, a local minimum, or inconclusive, using the sign of \( f''(c) \).
+~~~
+
+!id: WoprBtQYRq
+!front: Give a physical interpretation of the second derivative test when \( f \) is position.
+!back: Then \( f'' \) is acceleration. At a stationary point \( c \), where \( f'(c) = 0 \), positive acceleration means the graph bends upward near the flat tangent, giving a local minimum; negative acceleration means it bends downward, giving a local maximum.
 ~~~
 
 !id: hQVhdbKFL8
 !front: What hypotheses are needed to use the second derivative test at \( c \)?
-!back: One needs \( f'(c)=0 \) and \( f''(c) \) to exist.
+!back: \( f'(c) = 0 \), and \( f''(c) \) exists as a finite second-order derivative at the single point \( c \).
 ~~~
 
 !id: KuycefiBQ8
-!front: In the second derivative test, what does \( f''(c)>0 \) imply when \( f'(c)=0 \)?
-!back: It implies that \( f \) has a local minimum at \( c \).
+!front: In the second derivative test, what does \( f''(c) > 0 \) imply when \( f'(c) = 0 \)?
+!back: \( f \) has a strict local minimum at \( c \).
 ~~~
 
 !id: lK3nBoG7DS
-!front: In the second derivative test, what does \( f''(c)<0 \) imply when \( f'(c)=0 \)?
-!back: It implies that \( f \) has a local maximum at \( c \).
+!front: In the second derivative test, what does \( f''(c) < 0 \) imply when \( f'(c) = 0 \)?
+!back: \( f \) has a strict local maximum at \( c \).
 ~~~
 
 !id: gndbllwJqo
-!front: In the second derivative test, what does \( f''(c)=0 \) imply?
-!back: The test is inconclusive; \( c \) may be a local minimum, a local maximum, or neither.
+!front: In the second derivative test, what does \( f''(c) = 0 \) imply?
+!back: The test is inconclusive: \( c \) may be a local minimum, a local maximum, or neither.
+~~~
+
+!id: v6Xvb6755z
+!front: If \( f'' \) is continuous and \( f''(c) > 0 \), what does this imply about \( f' \) near \( c \)?
+!back: Continuity of \( f'' \) means \( f'' > 0 \) not just at \( c \) but throughout some neighborhood of \( c \). Since \( f'' \) is the derivative of \( f' \), this makes \( f' \) strictly increasing on that neighborhood.
+~~~
+
+!id: KKNFd5iBoW
+!front: If \( f'' \) is continuous and \( f''(c) < 0 \), what does this imply about \( f' \) near \( c \)?
+!back: Continuity of \( f'' \) means \( f'' < 0 \) not just at \( c \) but throughout some neighborhood of \( c \). Since \( f'' \) is the derivative of \( f' \), this makes \( f' \) strictly decreasing on that neighborhood.
 ~~~
 
 !id: pCV9LoXhmk
-!front: Why does \( f''(c)>0 \), together with \( f'(c)=0 \), indicate a local minimum?
-!back: Near \( c \), \( f' \) changes from negative to positive. By the first derivative test, that gives a local minimum at \( c \).
+!front: Why does \( f''(c) > 0 \), together with \( f'(c) = 0 \), indicate a local minimum?
+!back: \( f''(c) > 0 \) makes \( f' \) strictly increasing through \( c \). Combined with \( f'(c) = 0 \), \( f' \) is negative just before \( c \) and positive just after, so the first derivative test gives a strict local minimum.
 ~~~
 
 !id: bQYfeBqPRF
-!front: Why does \( f''(c)<0 \), together with \( f'(c)=0 \), indicate a local maximum?
-!back: Near \( c \), \( f' \) changes from positive to negative. By the first derivative test, that gives a local maximum at \( c \).
+!front: Why does \( f''(c) < 0 \), together with \( f'(c) = 0 \), indicate a local maximum?
+!back: \( f''(c) < 0 \) makes \( f' \) strictly decreasing through \( c \). Combined with \( f'(c) = 0 \), \( f' \) is positive just before \( c \) and negative just after, so the first derivative test gives a strict local maximum.
 ~~~
 
 !id: PE69rMlBNy
-!front: Give an example where \( f''(c)=0 \) but \( c \) is a local minimum.
-!back: \( f(x)=x^4 \) at \( c=0 \). Here \( f'(0)=0 \), \( f''(0)=0 \), and \( f(x)\ge f(0) \) near \( 0 \).
+!front: Give an example where \( f''(c) = 0 \) but \( c \) is a local minimum.
+!back: \( f(x) = x^4 \) at \( c = 0 \): \( f'(0) = 0 \), \( f''(0) = 0 \), and \( f(x) \ge f(0) \) on a neighborhood of \( 0 \).
 ~~~
 
 !id: 5KjIeNMbeS
-!front: Give an example where \( f''(c)=0 \) but \( c \) is a local maximum.
-!back: \( f(x)=-x^4 \) at \( c=0 \). Here \( f'(0)=0 \), \( f''(0)=0 \), and \( f(x)\le f(0) \) near \( 0 \).
+!front: Give an example where \( f''(c) = 0 \) but \( c \) is a local maximum.
+!back: \( f(x) = -x^4 \) at \( c = 0 \): \( f'(0) = 0 \), \( f''(0) = 0 \), and \( f(x) \le f(0) \) on a neighborhood of \( 0 \).
 ~~~
 
 !id: Iw4CpH3lwc
-!front: Give an example where \( f''(c)=0 \) and \( c \) is not a local extremum.
-!back: \( f(x)=x^3 \) at \( c=0 \). Here \( f'(0)=0 \), \( f''(0)=0 \), but the function is increasing through \( 0 \).
+!front: Give an example where \( f''(c) = 0 \) and \( c \) is not a local extremum.
+!back: \( f(x) = x^3 \) at \( c = 0 \): \( f'(0) = 0 \), \( f''(0) = 0 \), but \( f \) is strictly increasing through \( 0 \).
 ~~~
 
 !id: kYHL8gErG0
 !front: Why can the first derivative test classify some points where the second derivative test cannot?
-!back: The first derivative test uses sign changes of \( f' \) around \( c \), while the second derivative test uses only \( f''(c) \). If \( f''(c)=0 \) or does not exist, the first derivative test may still work.
+!back: The first derivative test uses the sign of \( f' \) on a punctured neighborhood of \( c \), while the second derivative test uses only the single value \( f''(c) \). When \( f''(c) = 0 \) or fails to exist, the second derivative test is inconclusive, but the first derivative test may still resolve the sign behavior of \( f' \).
 ~~~
 
 !id: hpI2gfu2jd
 !front: Why do derivative tests classify local extrema rather than absolute extrema by themselves?
-!back: They only describe behavior near a critical point. Absolute extrema require comparing values across the whole domain or interval, including endpoints when relevant.
+!back: They describe behavior only on a neighborhood of a critical point. Absolute extrema require comparing values across the entire domain or interval, including endpoints when relevant.
 ~~~
 
 !id: 0dc9nxVRUY
 !front: Give a geometric interpretation of a function being concave up on an interval.
-!back: On that interval, the graph lies above each of its tangent lines (equivalently, each tangent line lies below the graph).
-!extra: Concave down is the mirror image: the graph lies below each of its tangent lines.
+!back: On that interval, the graph of \( f \) lies above (or on) every one of its tangent lines.
+~~~
+
+!id: TwPfydUnYy
+!front: Give a geometric interpretation of a function being concave down on an interval.
+!back: On that interval, the graph of \( f \) lies below (or on) every one of its tangent lines.
 ~~~
 
 !id: BdQFccaRgN
-!front: How is concavity related to the monotonicity of \( f' \)?
-!back: \( f \) is concave up on an interval \( I \) exactly when \( f' \) is increasing on \( I \), and concave down exactly when \( f' \) is decreasing on \( I \).
-!extra: This is usually taken as the working definition of concavity; the tangent-line picture is the geometric interpretation of the same fact.
+!front: How is concavity of \( f \) on an interval \( I \) related to the monotonicity of \( f' \)?
+!back: \( f \) is concave up on an interval \( I \) exactly when \( f' \) is strictly increasing on \( I \), and concave down exactly when \( f' \) is strictly decreasing on \( I \).
 ~~~
 
 !id: 1PWJif61Og
-!front: For a twice-differentiable \( f \), what does \( f''(x) > 0 \) on an interval \( I \) imply about concavity?
-!back: \( f \) is concave up on \( I \), since \( f''>0 \) means \( f' \) is strictly increasing on \( I \).
+!front: For \( f \) twice differentiable on an interval \( I \), what does \( f''(x) > 0 \) on \( I \) imply about concavity?
+!back: \( f \) is concave up on \( I \), since \( f'' > 0 \) on \( I \) means \( f' \) is strictly increasing on \( I \) (by the Mean Value Theorem applied to \( f' \)).
 ~~~
 
 !id: Z31QV1NBIZ
-!front: For a twice-differentiable \( f \), what does \( f''(x) < 0 \) on an interval \( I \) imply about concavity?
-!back: \( f \) is concave down on \( I \), since \( f''<0 \) means \( f' \) is strictly decreasing on \( I \).
+!front: For \( f \) twice differentiable on an interval \( I \), what does \( f''(x) < 0 \) on \( I \) imply about concavity?
+!back: \( f \) is concave down on \( I \), since \( f'' < 0 \) on \( I \) means \( f' \) is strictly decreasing on \( I \) (by the Mean Value Theorem applied to \( f' \)).
 ~~~
 
 !id: Ef6m6NkEhu
 !front: What is an inflection point of \( f \)?
-!back: A point \( c \) where \( f \) is continuous and the concavity of \( f \) changes — from concave up to concave down, or vice versa — as \( x \) passes through \( c \).
+!back: A point \( c \) at which \( f \) is continuous and the concavity of \( f \) reverses as \( x \) crosses \( c \): on a punctured neighborhood of \( c \), \( f \) is concave up on one side and concave down on the other.
 ~~~
 
 !id: 76QRIe0yYc
 !front: If \( f''(c) \) exists and \( c \) is an inflection point, what must be true of \( f''(c) \), and why?
-!back: \( f''(c) = 0 \). Since concavity switches at \( c \), \( f' \) has a local extremum at \( c \); if \( (f')'(c)=f''(c) \) exists, Fermat's theorem applied to \( f' \) forces \( f''(c)=0 \).
-!extra: Necessary, not sufficient — \( f''(c)=0 \) alone does not guarantee \( c \) is an inflection point.
+!back: \( f''(c) = 0 \). Since concavity reverses at \( c \), \( f' \) has a local extremum at \( c \).
+!extra: Necessary, not sufficient — \( f''(c) = 0 \) alone does not guarantee \( c \) is an inflection point.
 ~~~
 
 !id: 3v9WbaSYKt
 !front: Give a counterexample showing \( f''(c) = 0 \) does not imply \( c \) is an inflection point.
 !back:
 \[ f(x) = x^4, \qquad f''(x) = 12x^2. \]
-Then \( f''(0)=0 \), but \( f''(x)\ge 0 \) everywhere, so \( f \) is concave up on all of \( \mathbb{R} \) and the concavity never changes at \( 0 \).
-!related: The same function already shows \( f''(c)=0 \) does not determine whether \( c \) is a local extremum.
+Then \( f''(0) = 0 \), but \( f''(x) \ge 0 \) everywhere, so \( f \) is concave up on all of \( \mathbb{R} \) and the concavity never reverses at \( 0 \).
+!related: The same function already shows \( f''(c) = 0 \) does not determine whether \( c \) is a local extremum.
 ~~~
 
 !id: 93PmhfKWxk
-!front: Verify that \( f(x) = x^3 \) has an inflection point at \( x=0 \).
+!front: Verify that \( f(x) = x^3 \) has an inflection point at \( x = 0 \).
 !back:
 \[ f''(x) = 6x, \]
-negative for \( x<0 \) and positive for \( x>0 \). So \( f \) is concave down on \( (-\infty,0) \) and concave up on \( (0,\infty) \); concavity changes at \( 0 \), so \( 0 \) is an inflection point.
-!related: The same function already appears as a stationary critical point that is not a local extremum.
+negative for \( x < 0 \) and positive for \( x > 0 \). So \( f \) is concave down on \( (-\infty, 0) \) and concave up on \( (0, \infty) \); concavity reverses at \( 0 \), so \( 0 \) is an inflection point.
 ~~~
 
 !id: XCKBd5w3hb
 !front: How does concavity at a critical point relate to the second derivative test?
-!back: If \( f'(c)=0 \) and \( f \) is concave up near \( c \) (\( f''(c)>0 \)), then \( c \) is a local minimum; if \( f \) is concave down near \( c \) (\( f''(c)<0 \)), \( c \) is a local maximum. The second derivative test is exactly this concavity criterion applied at a stationary point.
+!back:
+If \( f'(c) = 0 \) and \( f''(c) > 0 \) (\( f \) is concave up on a neighborhood of \( c \)), then \( c \) is a local minimum.
+
+If \( f'(c) = 0 \) and \( f''(c) < 0 \) (\( f \) is concave down on a neighborhood of \( c \)), then \( c \) is a local maximum.
 ~~~

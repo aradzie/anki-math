@@ -1,27 +1,174 @@
-!type: Basic Math
+!type: Basic Math (and reversed card)
 !deck: Math::Calculus::Integration
 !tags: Math Calculus Integration Theory
 
-!id: Ys4r0wcBkN
-!front: What is the fundamental theorem of calculus (FTC)?
+!id: c9CoJ5Zjkt
+!front: What is a partition \( P \) of \( [a,b] \)?
 !back:
-Consider a function \( f \) which is continuous on \( [a,b] \).
-
-- If \( F(x) = \int_a^x (t) \, dt \), then \( F'(x) = f(x) \) on \( (a,b) \).
-- If \( F \) is any antiderivative of \( f \) on \( [a,b] \) (i.e., \( F'(x)=f(x) \)), then \( \int_a^b f(x) \, dx = F(b) - F(a) \).
+A finite set of points \( P = \{x_0, x_1, \dots, x_n\} \) with
+\[ a = x_0 < x_1 < \cdots < x_n = b, \]
+dividing \( [a,b] \) into subintervals \( [x_{i-1}, x_i] \) of length \( \Delta x_i = x_i - x_{i-1} \).
 ~~~
 
-!id: HojARIccEv
-!front: \[ \frac{d}{dx} \left( \int_a^b f(t) \, dt \right) \]
-!back: \[ \frac{d}{dx} \left( \underbrace{F(b) - F(a)}_{\text{constant}} \right) = 0 \]
+!id: raG97Qyts0
+!front: What is the mesh (norm) \( \|P\| \) of a partition \( P \)?
+!back:
+\[ \|P\| = \max_{1 \le i \le n} \Delta x_i, \]
+the length of the largest subinterval in \( P \).
 ~~~
 
-!id: 7VFEiyRMIp
-!front: \[ \frac{d}{dx} \left( \int_a^x f(t) \, dt \right) \]
-!back: \[ \frac{d}{dx} \left( F(x) - \underbrace{F(a)}_{\text{constant}} \right) = f(x) \]
+!id: hO2Qgb8rQp
+!front: Given a partition \( P = \{x_0,\dots,x_n\} \) of \( [a,b] \) and sample points \( t_i \in [x_{i-1}, x_i] \), what is the Riemann sum \( S(f,P) \)?
+!back: \[ S(f,P) = \sum_{i=1}^n f(t_i)\, \Delta x_i \]
 ~~~
 
-!id: 6ARhxDPyAU
-!front: \[ \frac{d}{dx} \left( \int_{g(a)}^{g(x)} f(t) \, dt \right) \]
-!back: \[ \frac{d}{dx} \left( F(g(x)) - \underbrace{F(g(a))}_{\text{constant}} \right) = f(g(x)) \frac{dg(x)}{dx} \]
+!id: z7Kxhid4qd
+!front: What is the precise (limit) definition of the Riemann integral \( \int_a^b f(x)\, dx \)?
+!back:
+\( \int_a^b f(x)\, dx = L \) means: for every \( \varepsilon > 0 \) there exists \( \delta > 0 \) such that for every tagged partition \( P \) of \( [a,b] \) with \( \|P\| < \delta \),
+\[ |S(f,P) - L| < \varepsilon, \]
+regardless of the choice of sample points \( t_i \).
+~~~
+
+!id: Nd8Y2U8tkO
+!front: For a bounded function \( f \) and a partition \( P \) of \( [a,b] \), what is the upper Darboux sum \( U(f,P) \)?
+!back: \[ U(f,P) = \sum_{i=1}^n M_i\, \Delta x_i, \quad M_i = \sup_{[x_{i-1},x_i]} f \]
+!extra: Assumes \( f \) is bounded on \( [a,b] \); otherwise the suprema \( M_i \) need not be finite.
+~~~
+
+!id: QBUs20utov
+!front: For a bounded function \( f \) and a partition \( P \) of \( [a,b] \), what is the lower Darboux sum \( L(f,P) \)?
+!back: \[ L(f,P) = \sum_{i=1}^n m_i\, \Delta x_i, \quad m_i = \inf_{[x_{i-1},x_i]} f \]
+~~~
+
+!id: ezIX6VjSzq
+!front: What is the upper Darboux integral \( \overline{\int_a^b} f \)?
+!back:
+\[ \overline{\int_a^b} f = \inf_P U(f,P), \]
+the infimum taken over all partitions \( P \) of \( [a,b] \).
+~~~
+
+!id: I1dSIhVp6v
+!front: What is the lower Darboux integral \( \underline{\int_a^b} f \)?
+!back:
+\[ \underline{\int_a^b} f = \sup_P L(f,P), \]
+the supremum taken over all partitions \( P \) of \( [a,b] \).
+~~~
+
+!type: Basic Math
+
+!id: S6VIUiUUVI
+!front: When is a bounded function \( f \) Darboux integrable on \( [a,b] \), and what is the value of the integral?
+!back:
+When the upper and lower Darboux integrals agree:
+\[ \overline{\int_a^b} f = \underline{\int_a^b} f. \]
+Their common value is defined to be \( \int_a^b f(x)\, dx \).
+~~~
+
+!id: AuBlyIvNji
+!front: Why does refining a partition \( P \) (adding points to get \( P' \supseteq P \)) never increase the upper sum \( U(f,P) \)?
+!back: Splitting a subinterval into pieces replaces one supremum \( M_i \) by suprema over smaller sets, each of which is \( \le M_i \). So every term of \( U(f,P') \) is bounded above by the corresponding contribution to \( U(f,P) \), giving \( U(f,P') \le U(f,P) \).
+~~~
+
+!id: fz8hOflTJY
+!front: Why does refining a partition \( P \) never decrease the lower sum \( L(f,P) \)?
+!back: Splitting a subinterval into pieces replaces one infimum \( m_i \) by infima over smaller sets, each of which is \( \ge m_i \). So every term of \( L(f,P') \) is bounded below by the corresponding contribution to \( L(f,P) \), giving \( L(f,P') \ge L(f,P) \).
+~~~
+
+!id: Bx4Pd1hvNG
+!front: How do the Riemann integral and the Darboux integral of a bounded function \( f \) on \( [a,b] \) relate to each other?
+!back: They are equivalent: \( f \) is Riemann integrable (the tagged-partition limit exists) if and only if \( f \) is Darboux integrable (\( \overline{\int_a^b} f = \underline{\int_a^b} f \)), and in that case the two definitions give the same value.
+~~~
+
+!id: MEdyAxBbRD
+!front: State the Cauchy (Riemann) criterion for integrability of a bounded function \( f \) on \( [a,b] \).
+!back:
+\( f \) is integrable on \( [a,b] \) if and only if for every \( \varepsilon > 0 \) there exists a partition \( P \) such that
+\[ U(f,P) - L(f,P) < \varepsilon. \]
+~~~
+
+!id: yAIalXLPmo
+!front: Why must a Riemann/Darboux integrable function on \( [a,b] \) be bounded?
+!back: If \( f \) is unbounded on some subinterval of a partition, sample points there make \( f(t_i) \) — and hence \( S(f,P) \) — arbitrarily large, so no finite limit can satisfy the Riemann-sum definition. Equivalently, \( \sup f \) or \( \inf f \) on that subinterval would be infinite, so \( U(f,P) \) or \( L(f,P) \) is not even defined.
+~~~
+
+!id: weNoUsavhq
+!front: Why is every function continuous on \( [a,b] \) Riemann integrable?
+!back: \( f \) is uniformly continuous on the compact interval \( [a,b] \), so given \( \varepsilon > 0 \) there is \( \delta > 0 \) making the oscillation \( M_i - m_i < \varepsilon/(b-a) \) on every subinterval of any partition with \( \|P\| < \delta \). Then \( U(f,P) - L(f,P) < \varepsilon \), so the Cauchy criterion holds.
+~~~
+
+!id: CLVB6WUHBr
+!front: Why is every monotonic function on \( [a,b] \) Riemann integrable?
+!back:
+A monotonic function on \( [a,b] \) is automatically bounded (by \( f(a) \) and \( f(b) \)), and on each subinterval of the uniform partition into \( n \) pieces, \( M_i - m_i \) is exactly the jump of \( f \) across that subinterval. These jumps telescope, giving
+\[ U(f,P) - L(f,P) \le \frac{(b-a)\,|f(b)-f(a)|}{n} \to 0, \]
+so the Cauchy criterion holds.
+~~~
+
+!id: aUhcz09nMO
+!front: Why is a bounded function on \( [a,b] \) with only finitely many discontinuities Riemann integrable?
+!back: Surround each discontinuity with a small subinterval of total length \( < \varepsilon \); since \( f \) is bounded, these contribute only a small, controllable amount to \( U(f,P)-L(f,P) \). On the remaining finitely many closed subintervals \( f \) is continuous, hence uniformly continuous, so their contribution can also be made \( < \varepsilon \). Together, \( U(f,P) - L(f,P) \) can be made arbitrarily small.
+~~~
+
+!id: nCPOFOjfSR
+!front: Construct a bounded function on \( [0,1] \) that is not Riemann integrable.
+!back:
+The Dirichlet function
+\[ f(x) = \begin{cases} 1 & x \in \mathbb{Q} \\ 0 & x \notin \mathbb{Q} \end{cases} \]
+is bounded, but every subinterval of every partition contains both rationals and irrationals, so \( M_i = 1 \) and \( m_i = 0 \) always. Hence \( U(f,P) = 1 \) and \( L(f,P) = 0 \) for every partition \( P \), so the upper and lower integrals never agree.
+~~~
+
+!id: 8AFqwTtDVH
+!front: State the linearity property of the integral for integrable \( f, g \) on \( [a,b] \) and constants \( \alpha, \beta \).
+!back: \[ \int_a^b \big(\alpha f(x) + \beta g(x)\big)\, dx = \alpha \int_a^b f(x)\, dx + \beta \int_a^b g(x)\, dx \]
+~~~
+
+!id: XwQlO8eeAh
+!front: For \( a < c < b \) and \( f \) integrable on \( [a,b] \), state the additivity property of the integral over subintervals.
+!back: \[ \int_a^c f(x)\, dx + \int_c^b f(x)\, dx = \int_a^b f(x)\, dx \]
+~~~
+
+!id: Ra3up4fJgh
+!front: If \( f, g \) are integrable on \( [a,b] \) with \( f(x) \le g(x) \) for all \( x \), why does \( \int_a^b f \le \int_a^b g \)?
+!back: Every Riemann sum for \( f \) is termwise \( \le \) the corresponding Riemann sum for \( g \) on the same tagged partition, so \( S(f,P) \le S(g,P) \) is preserved in the limit \( \|P\| \to 0 \), giving \( \int_a^b f \le \int_a^b g \).
+~~~
+
+!id: IkSbsrhOug
+!front: If \( f \) is integrable on \( [a,b] \), why is \( |f| \) also integrable?
+!back: On any subinterval, the oscillation of \( |f| \) never exceeds that of \( f \), since \( \big||f(x)|-|f(y)|\big| \le |f(x)-f(y)| \). So if \( U(f,P)-L(f,P) < \varepsilon \) for some partition, the same partition gives \( U(|f|,P) - L(|f|,P) < \varepsilon \), and the Cauchy criterion carries over.
+~~~
+
+!id: eeg7rpJHzI
+!front: State the triangle inequality for the integral of an integrable function \( f \) on \( [a,b] \).
+!back: \[ \left| \int_a^b f(x)\, dx \right| \le \int_a^b |f(x)|\, dx \]
+!extra: Follows from \( -|f| \le f \le |f| \) and monotonicity of the integral, applied to both inequalities. Uses that \( |f| \) is integrable whenever \( f \) is.
+~~~
+
+!id: QSgMdhVt7G
+!front: If \( f, g \) are integrable on \( [a,b] \), why is the product \( fg \) also integrable?
+!back:
+Integrable functions are bounded, say by \( K \). Since
+\[ f(x)g(x) - f(y)g(y) = f(x)\big(g(x)-g(y)\big) + g(y)\big(f(x)-f(y)\big), \]
+the oscillation of \( fg \) on a subinterval is controlled by \( K \) times the oscillations of \( f \) and of \( g \) there. Making both of those small via the Cauchy criterion for \( f \) and for \( g \) makes the oscillation of \( fg \) small, so \( fg \) satisfies the Cauchy criterion too.
+~~~
+
+!id: jBpsQfqdqz
+!front: State the Mean Value Theorem for Integrals.
+!back:
+If \( f \) is continuous on \( [a,b] \), there exists \( c \in (a,b) \) such that
+\[ \int_a^b f(x)\, dx = f(c)(b-a). \]
+~~~
+
+!id: rLdbzPXWhT
+!front: State the Fundamental Theorem of Calculus, Part 1.
+!back:
+If \( f \) is continuous on \( [a,b] \) and \( F(x) = \int_a^x f(t)\, dt \) for \( x \in [a,b] \), then \( F \) is differentiable on \( (a,b) \) with
+\[ F'(x) = f(x). \]
+~~~
+
+!id: 33XsHNIEWI
+!front: State the Fundamental Theorem of Calculus, Part 2.
+!back:
+If \( f \) is continuous on \( [a,b] \) and \( F \) is any antiderivative of \( f \) on \( [a,b] \) (i.e. \( F' = f \)), then
+\[ \int_a^b f(x)\, dx = F(b) - F(a). \]
 ~~~
