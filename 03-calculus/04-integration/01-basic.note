@@ -1,4 +1,4 @@
-!type: Basic Math (and reversed card)
+!type: Basic Math
 !deck: Math::Calculus::Integration
 !tags: Math Calculus Integration Theory
 
@@ -54,8 +54,6 @@ the infimum taken over all partitions \( P \) of \( [a,b] \).
 \[ \underline{\int_a^b} f = \sup_P L(f,P), \]
 the supremum taken over all partitions \( P \) of \( [a,b] \).
 ~~~
-
-!type: Basic Math
 
 !id: S6VIUiUUVI
 !front: When is a bounded function \( f \) Darboux integrable on \( [a,b] \), and what is the value of the integral?

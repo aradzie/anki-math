@@ -1,61 +1,6 @@
 !type: Basic Math
 !deck: Math::Calculus::Differentiation
-!tags: Math Calculus Differentiation Theory
-
-!id: ax8Frvkg1t
-!front: The definition of the Extreme Value Theorem (EVT).
-!back:
-The Extreme Value Theorem states that if a real-valued function \( f \) is continuous on the closed and bounded interval \( [a,b] \), then \( f \) must attain a maximum and a minimum, each at least once.
-
-That is, there exist numbers \( c \) and \( d \) in \( [a,b] \) such that: \( f(c) \leq f(x) \leq f(d) \quad \forall x \in [a,b] \).
-
-In simpler terms, a continuous function on a closed interval will always have a highest point and a lowest point.
-~~~
-
-!id: RKhaYcqpZ1
-!front: The definition of the Rolle's Theorem.
-!back:
-The Rolle's Theorem states that if a function \( f(x) \) is:
-
-- continuous on a closed interval \( [a,b] \)
-- differentiable on the open interval \( (a,b) \)
-- \( f(a)=f(b) \)
-
-then there exists at least one point \( c \) in the open interval \( (a,b) \) such that \( f'(c) = 0 \).
-
-Geometrically, this means if a continuous and differentiable curve starts and ends at the same height, there must be at least one point in between where the tangent line is horizontal (i.e., the slope is zero).
-~~~
-
-!id: Nul59WMDrC
-!front: The definition of the Mean Value Theorem (MVT).
-!back:
-The Mean Value Theorem states that if a function \( f(x) \) is:
-
-- continuous on a closed interval \( [a,b] \)
-- differentiable on the open interval \( (a,b) \)
-
-then there exists at least one point \( c \) in the open interval \( (a,b) \) such that the instantaneous rate of change (the derivative \( f'(c) \)) is equal to the average rate of change over the interval:
-
-\[ f'(c) = \frac{f(b) - f(a)}{b - a} \]
-~~~
-
-!id: n7ee7EmSmb
-!front: What is the connection between the Rolle's Theorem and Mean Value Theorem?
-!back:
-The Rolle's Theorem is a special case of the Mean Value Theorem.
-
-The Rolle's Theorem can be derived from the Mean Value Theorem: if \( f(a) = f(b) \), then the right side of the Mean Value Theorem equation becomes
-
-\[ f'(c) = \frac{f(a) - f(a)}{b - a} = \frac{0}{b - a} = 0 \]
-~~~
-
-!id: 7sz7MRtXZk
-!front: The definition of the Intermediate Value Theorem (IVT).
-!back:
-The Intermediate Value Theorem states that if a function \( f(x) \) is continuous on a closed interval \( [a,b] \), and \( L \) is any value between \( f(a) \) and \( f(b) \), then there exists at least one number \( c \) in the interval \( [a,b] \) such that \( f(c)=L \).
-
-Intuitively, if you can draw the graph of a function without lifting your pencil, and it goes from one y-value to another, it must pass through all the y-values in between.
-~~~
+!tags: Math Calculus Differentiation
 
 !id: meJCCut234
 !front: Prove that \( \frac{dx}{dy} \cdot \frac{dy}{dx} = 1 \)
