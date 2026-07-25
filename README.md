@@ -1,16 +1,28 @@
-# Math notes for Anki
+# Math Notes
 
-This is my personal collection of math notes for the [Anki](https://apps.ankiweb.net/) flashcard app.
+This is my personal repository for self-studying mathematics. It contains three kinds of artifacts:
+
+- **Flashcards** — for spaced repetition in [Anki](https://apps.ankiweb.net/).
+- **Self-check questions** — a single compiled PDF (`self-check.pdf`) of self-check questions, organized by topic.
+- **Essays** — write-ups of deeper explorations of individual topics.
+
+## Flashcards
+
+The `*.note` files are the source files of the flashcards, in a simple human-readable format.
+
+To import these notes into Anki, install the [Notatki Anki addon](https://ankiweb.net/shared/info/541850746). Then from the `File` menu select `Import Models and Notes...` and point to this directory.
+
+We recommend the [Notatki Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=aradzie.notatki) for editing these note files. See the [notatki](https://github.com/aradzie/notatki) repository for more details.
 
 You can preview these notes [online](https://aradzie.github.io/math-notes/notes.html).
 
-In this repository the `*.note` files are the source files of the notes in a simple human-readable format.
+## Self-Check Questions
 
-To import these notes to Anki install the [Notatki Anki addon](https://ankiweb.net/shared/info/541850746). Then from the `File` menu select `Import Models and Notes...` and point to this directory.
+The [self-check.pdf](self-check.pdf) file is a single compiled document of self-check questions covering various mathematical topics, meant to be worked through as active recall rather than read passively.
 
-We recommend the [Notatki Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=aradzie.notatki) for editing these note files
+## Essays
 
-See the [notatki](https://github.com/aradzie/notatki) repository for more details.
+The [essays/](essays/) directory collects write-ups from conversations where I dug into a math topic in depth, kept around because rereading them later helps the ideas stick. Each essay compiles to its own standalone PDF.
 
 # Tips on writing flashcards
 

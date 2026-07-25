@@ -8,9 +8,9 @@ AUXDIR := aux
 all: pdf
 
 pdf:
-	node generate-stats.js
+	node self-check-stats.js
 	mkdir -p $(AUXDIR)
-	$(TEXLIVE_RUN) latexmk -pdf -auxdir=$(AUXDIR) -outdir=. active-recall.tex
+	$(TEXLIVE_RUN) latexmk -pdf -auxdir=$(AUXDIR) -outdir=. self-check.tex
 
 clean:
 	$(TEXLIVE_RUN) latexmk -c -auxdir=$(AUXDIR) -outdir=.

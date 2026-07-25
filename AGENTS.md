@@ -1,19 +1,18 @@
 ## Purpose
 
-This repository contains LaTeX source files for mathematical self-check question sets.
+This repository is a personal collection of self-study mathematics material, made up of three artifact types:
 
-The documents are for active recall and conceptual reinforcement, not passive exposition.
-
-Primary output:
-
-- standalone `.tex` files, compilable with `pdflatex`
-- readable, conceptually clear question sets
+- **Flashcards** — `.note` source files imported into Anki for spaced repetition.
+- **Self-check questions** — LaTeX source compiled into a single PDF of self-check questions, for testing understanding rather than passive review.
+- **Essays** — LaTeX write-ups of deeper explorations of individual topics, kept for rereading.
 
 This is not a conventional software project — do not assume the usual tooling (test suites, CI, linters) applies. The compilation and rendering steps that do exist (LaTeX, Asymptote, PyVista) are documented explicitly below.
 
 ## Content Standards
 
-Prefer questions that test understanding rather than recall. Good prompts usually ask the learner to explain, derive, compare, interpret, check assumptions, or analyze failure cases.
+These standards apply whenever generating or reviewing content on a mathematical topic, across all three artifact types — flashcards, self-check questions, and essays alike.
+
+Prefer content that tests or builds understanding rather than recall. Good prompts usually ask the learner to explain, derive, compare, interpret, check assumptions, or analyze failure cases.
 
 Useful patterns include:
 
@@ -37,33 +36,34 @@ Avoid by default:
 
 Keep the material technically precise and direct. Do not add filler or motivational language. Simplify when useful, but do not sacrifice correctness.
 
-## Mathematical Rigor
+## Flashcards
 
-All mathematical statements must be:
+Flashcards are plain-text `.note` files organized by topic directory, imported into Anki via an external addon — there is no compile step. They follow the Content Standards above. Full format rules, metadata directives, note-writing standards, and mathematical rigor requirements for flashcards are documented in `.agents/skills/generate-flashcards/SKILL.md`, which specializes the Content Standards above for card granularity and phrasing; follow that skill when creating, editing, or reviewing flashcards.
 
-- internally consistent
-- notation-consistent
-- logically correct
-- explicit about assumptions
+## Self-Check Questions
 
-Do not conflate intuition with proof or use false equivalences for pedagogical convenience.
+`self-check.tex` is the entrypoint for the self-check questions PDF: a single top-level LaTeX document that recursively `\input`s each topic's `.tex` files into one compiled PDF of readable, conceptually clear questions for active recall and conceptual reinforcement, not passive exposition. Topic files are content fragments, not standalone documents; only `self-check.tex` is compiled directly. They follow the Content Standards above.
 
-When compressing rigor for pedagogical reasons, preserve correctness and explicitly state what is being omitted, approximated, or treated informally.
+### Build Self-Check Questions
 
-## LaTeX Style
+The root `Makefile` builds the compiled self-check PDF. It first runs `node self-check-stats.js`, which walks the topic files included from the top-level document and regenerates `self-check-stats.tex` — this step needs a host `node` install, unlike the LaTeX steps below, since it runs directly rather than inside the TeX Live container. It then compiles the top-level document with `latexmk` inside the TeX Live container (see "TeX Live via Podman" below), producing the PDF. Commit the regenerated `self-check-stats.tex` alongside content changes that add or remove questions.
 
-Use:
+## Essays
 
-- `align*` for multi-line derivations
-- semantic sectioning such as `\section` and `\subsection`
-- consistent inline math formatting
-- standard mathematical notation
+Essays are standalone `.tex` files in the `essays` directory, one per topic, each compiling to its own PDF. They are write-ups of deeper explorations of a topic — typically produced from a conversation — kept around so rereading them later reinforces the ideas.
+
+### Build Essays
+
+A `Makefile` in the `essays` directory builds every essay to its own PDF. It compiles each `.tex` file with `latexmk` inside the TeX Live container (see "TeX Live via Podman" below).
 
 ## TeX Live via Podman
 
-No local TeX/Asymptote/Ghostscript install is assumed or required. All compilation and rendering runs inside the `texlive` docker image via `podman`, so the only host dependency is `podman` itself (able to pull `registry.gitlab.com/islandoftex/images/texlive:latest`). An example invocation of the texlive image is given below:
+No local TeX/Asymptote/Ghostscript install is assumed or required. All compilation and rendering runs inside the `texlive` docker image via `podman`, so the only host dependency for these steps is `podman` itself (able to pull `registry.gitlab.com/islandoftex/images/texlive:latest`). An example invocation of the texlive image is given below:
 
 ```sh
+IMAGE = registry.gitlab.com/islandoftex/images/texlive:latest
+DIR = ...
+export SOURCE_DATE_EPOCH := 0
 podman run --rm --userns keep-id -e SOURCE_DATE_EPOCH -v "$DIR:/work:Z" -w /work "$IMAGE" \
   latexmk -pdf ...
 ```
@@ -71,7 +71,6 @@ podman run --rm --userns keep-id -e SOURCE_DATE_EPOCH -v "$DIR:/work:Z" -w /work
 - `--userns keep-id` maps the container user to the host user so files written into the bind mount (`-v "$DIR:/work:Z"`) are owned by the invoking user, not root.
 - `-w /work` runs the command from the mounted directory.
 - `SOURCE_DATE_EPOCH=0` is exported before the run and passed through with `-e` so pdfTeX embeds a fixed `/CreationDate`, `/ModDate`, and `/ID` instead of the wall-clock time. Built PDFs are committed alongside their sources, so a git- or clock-derived timestamp would make unrelated commits churn the embedded dates; pdfTeX reads this variable itself, no extra flags are needed. Rebuilding unchanged sources therefore produces byte-identical PDFs.
-- `$DIR`/`$IMAGE` above are illustrative; the actual values are defined in make files and build scripts.
 
 ## Asymptote Illustrations (2D only)
 

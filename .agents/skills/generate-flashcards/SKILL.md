@@ -1,5 +1,5 @@
 ---
-name: generate-math-flashcards
+name: generate-flashcards
 description: Create, edit, or review Anki math flashcards in this repository's custom `.note` source format, including precise note syntax, metadata handling, LaTeX math, active-recall prompt design, and mathematical correctness checks.
 ---
 
@@ -11,6 +11,7 @@ Create math flashcards in this repository's custom `.note` format. Cards should 
 
 ## Repository Context
 
+- This is one of three artifact types in this repository (flashcards, self-check questions, essays); see `AGENTS.md` for the repository-wide overview and the other two.
 - Source files are `.note` files organized by topic directories.
 - Import is handled by an Anki addon. Do not invent new syntax, build steps, generated artifacts.
 - Follow nearby `.note` files for deck names, tags, notation, and topic granularity.
