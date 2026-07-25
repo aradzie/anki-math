@@ -1,18 +1,22 @@
 PODMAN ?= podman
 TEXLIVE_IMAGE ?= registry.gitlab.com/islandoftex/images/texlive:latest
-TEXLIVE_RUN = $(PODMAN) run --rm -it --userns keep-id -v "$(CURDIR):/work:Z" -w /work $(TEXLIVE_IMAGE)
+export SOURCE_DATE_EPOCH := 0
+TEXLIVE_RUN = $(PODMAN) run --rm -it --userns keep-id -e SOURCE_DATE_EPOCH -v "$(CURDIR):/work:Z" -w /work $(TEXLIVE_IMAGE)
+
+AUXDIR := aux
 
 all: pdf
 
 pdf:
 	node generate-stats.js
-	$(TEXLIVE_RUN) latexmk -pdf active-recall.tex
+	mkdir -p $(AUXDIR)
+	$(TEXLIVE_RUN) latexmk -pdf -auxdir=$(AUXDIR) -outdir=. active-recall.tex
 
 clean:
-	$(TEXLIVE_RUN) latexmk -c
+	$(TEXLIVE_RUN) latexmk -c -auxdir=$(AUXDIR) -outdir=.
 
 cleanall:
-	$(TEXLIVE_RUN) latexmk -C
+	$(TEXLIVE_RUN) latexmk -C -auxdir=$(AUXDIR) -outdir=.
 
 format:
 	~/.cargo/bin/tex-fmt --nowrap **/*.tex
