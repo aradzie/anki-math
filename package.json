@@ -1,5 +1,8 @@
 {
   "name": "math-notes",
   "version": "0.0.0",
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "@notatki/cli": "^0.0.6"
+  }
 }

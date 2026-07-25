@@ -2,6 +2,7 @@
 .vscode/
 aux/
 build/
+node_modules/
 tmp/
 __pycache__/
 *.pyc
@@ -9,8 +10,10 @@ __pycache__/
 .env
 .env.*
 
+*.apkg
 *.aux
 *.bak*
+*.colpkg
 *.dvi
 *.fdb*
 *.fls
