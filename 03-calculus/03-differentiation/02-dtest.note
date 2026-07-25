@@ -12,11 +12,6 @@
 !back: The first derivative test classifies a critical point \( c \) as a local maximum, a local minimum, or inconclusive by comparing the sign of \( f' \) on the two halves of a punctured neighborhood of \( c \).
 ~~~
 
-!id: cLa5APUShK
-!front: Give a physical interpretation of the first derivative test when \( f \) is position.
-!back: Then \( f' \) is signed velocity. If \( f' \) changes from positive to negative at \( c \), the motion changes from moving upward to moving downward, so \( f(c) \) is a local maximum. If \( f' \) changes from negative to positive, the motion changes from moving downward to moving upward, so \( f(c) \) is a local minimum.
-~~~
-
 !id: ZBp09xCVc5
 !front: What hypotheses are needed to use the first derivative test at a critical point \( c \)?
 !back: \( f \) must be continuous at \( c \) and differentiable on a punctured neighborhood of \( c \); \( f'(c) \) itself may be zero or fail to exist.
@@ -57,14 +52,20 @@
 !back: For \( f(x) = x^3 \), \( f'(0) = 0 \), but \( f'(x) = 3x^2 > 0 \) for every \( x \ne 0 \). So \( f \) is strictly increasing through \( 0 \), and \( 0 \) is not a local extremum.
 ~~~
 
+!id: 1SZHDBSD9i
+!front: Is a sign change of \( f' \) from positive to negative across \( c \) sufficient for \( c \) to be a local maximum?
+!back: Yes — that is exactly the conclusion of the first derivative test (and symmetrically, negative-to-positive is sufficient for a local minimum).
+~~~
+
+!id: KG1TfTWiGg
+!front: Is a sign change of \( f' \) across \( c \) necessary for \( c \) to be a local extremum, given that \( c \) is a critical point?
+!back: No. A critical point can be a local extremum even though \( f' \) fails to hold a single sign (oscillates) on each side of \( c \); in that case the first derivative test is simply inconclusive, not contradicted.
+!related: For \( f(x) = x^2(2 + \sin(1/x)) \), \( f(0) = 0 \) is a local (indeed global) minimum, yet \( f' \) oscillates in sign arbitrarily close to \( 0 \).
+~~~
+
 !id: iZBE6xycSb
 !front: What is the main idea of the second derivative test?
 !back: The second derivative test classifies a stationary critical point \( c \) (where \( f'(c) = 0 \)) as a local maximum, a local minimum, or inconclusive, using the sign of \( f''(c) \).
-~~~
-
-!id: WoprBtQYRq
-!front: Give a physical interpretation of the second derivative test when \( f \) is position.
-!back: Then \( f'' \) is acceleration. At a stationary point \( c \), where \( f'(c) = 0 \), positive acceleration means the graph bends upward near the flat tangent, giving a local minimum; negative acceleration means it bends downward, giving a local maximum.
 ~~~
 
 !id: hQVhdbKFL8
@@ -165,7 +166,17 @@
 !id: 76QRIe0yYc
 !front: If \( f''(c) \) exists and \( c \) is an inflection point, what must be true of \( f''(c) \), and why?
 !back: \( f''(c) = 0 \). Since concavity reverses at \( c \), \( f' \) has a local extremum at \( c \).
-!extra: Necessary, not sufficient — \( f''(c) = 0 \) alone does not guarantee \( c \) is an inflection point.
+~~~
+
+!id: bNYWru4qZW
+!front: Is \( f''(c) = 0 \) a necessary condition for \( c \) to be an inflection point, given that \( f''(c) \) exists?
+!back: Yes. If \( c \) is an inflection point, concavity reverses there, so \( f' \) has a local extremum at \( c \); since a differentiable function has a zero derivative at a local extremum, \( f''(c) = 0 \).
+~~~
+
+!id: Vi6Lt67A78
+!front: Is \( f''(c) = 0 \) a sufficient condition for \( c \) to be an inflection point?
+!back: No. \( f''(c) = 0 \) does not guarantee that concavity reverses at \( c \), so \( c \) need not be an inflection point.
+!related: For \( f(x) = x^4 \) at \( c = 0 \), \( f''(0) = 0 \) but \( f \) is concave up on all of \( \mathbb{R} \), so \( 0 \) is not an inflection point.
 ~~~
 
 !id: 3v9WbaSYKt

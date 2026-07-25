@@ -10,7 +10,7 @@ For \( |x| < 1 \):
 \begin{align*}
     \frac{1}{1 - x}
     &= 1 + x + x^2 + x^3 + \cdots \\
-    &= \sum_{n=0}^{\infty} x^n
+    &= \sum_{n=0}^{\infty} x^{n}
 \end{align*}
 \]
 ~~~
@@ -57,6 +57,7 @@ For any \( x \in \mathbb{R} \):
 !id: blE4AgjSXl
 !front: Taylor series expansion of \( \ln(x) \)
 !back:
+For \( |x - 1| < 1 \):
 \[
 \begin{align*}
     \ln(x)
@@ -69,10 +70,11 @@ For any \( x \in \mathbb{R} \):
 !id: MVN1zvlsKq
 !front: Taylor series expansion of \( \ln(1-x) \)
 !back:
+For \( |x| < 1 \):
 \[
 \begin{align*}
     \ln(1-x)
-    &= - x - \frac{x^2}{2} - \frac{x^3}{3} - \frac{x^4}{4} - \cdots \\
+    &= -x - \frac{x^2}{2} - \frac{x^3}{3} - \frac{x^4}{4} - \cdots \\
     &= -\sum_{n=1}^{\infty} \frac{x^{n}}{n}
 \end{align*}
 \]
@@ -81,6 +83,7 @@ For any \( x \in \mathbb{R} \):
 !id: KIUCoyRRfv
 !front: Taylor series expansion of \( \ln(1+x) \)
 !back:
+For \( |x| < 1 \):
 \[
 \begin{align*}
     \ln(1+x)
@@ -121,6 +124,7 @@ For any \( x \in \mathbb{R} \):
 !id: v9fRBdxCXu
 !front: Taylor series expansion of \( \arctan(x) \)
 !back:
+For \( |x| < 1 \):
 \[
 \begin{align*}
     \arctan(x)
@@ -135,6 +139,7 @@ For any \( x \in \mathbb{R} \):
 !id: UJNCKYXzfb
 !front: Taylor series expansion of \( \sinh(x) \)
 !back:
+For any \( x \in \mathbb{R} \):
 \[
 \begin{align*}
     \sinh(x)
@@ -147,6 +152,7 @@ For any \( x \in \mathbb{R} \):
 !id: nuGrQ1eg5w
 !front: Taylor series expansion of \( \cosh(x) \)
 !back:
+For any \( x \in \mathbb{R} \):
 \[
 \begin{align*}
     \cosh(x)
@@ -159,11 +165,12 @@ For any \( x \in \mathbb{R} \):
 !id: cZ4UdQiBm7
 !front: Taylor series expansion of \( \operatorname{arctanh}(x) \)
 !back:
+For \( |x| < 1 \):
 \[
 \begin{align*}
     \operatorname{arctanh}(x)
-    &= x + \frac{x^{3}}{3} + \frac{x^{5}}{5} + \frac{x^{7}}{7} + \cdots \\
-    &= \sum_{n=0}^{\infty} \frac{x^{2n+1}}{2n+1}, \qquad |x| < 1
+    &= x + \frac{x^3}{3} + \frac{x^5}{5} + \frac{x^7}{7} + \cdots \\
+    &= \sum_{n=0}^{\infty} \frac{x^{2n + 1}}{2n + 1}
 \end{align*}
 \]
 ~~~
