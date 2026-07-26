@@ -5,12 +5,22 @@ TEXLIVE_RUN = $(PODMAN) run --rm -it --userns keep-id -e SOURCE_DATE_EPOCH -v "$
 
 AUXDIR := aux
 
-all: pdf
+ASY_PRUNE := -path ./node_modules -o -path ./.git -o -path ./aux -o -path ./tmp
+ASY_SOURCES := $(shell find . \( $(ASY_PRUNE) \) -prune -o -name '*.asy' -not -name 'common.asy' -print)
+SVG_TARGETS := $(ASY_SOURCES:.asy=.svg)
+COMMON_ASY := $(wildcard common.asy)
+
+all: pdf illustrations
 
 pdf:
 	node self-check-stats.js
 	mkdir -p $(AUXDIR)
 	$(TEXLIVE_RUN) latexmk -pdf -auxdir=$(AUXDIR) -outdir=. self-check.tex
+
+illustrations: $(SVG_TARGETS)
+
+%.svg: %.asy $(COMMON_ASY)
+	$(TEXLIVE_RUN) asy -f svg -render=0 -o $(basename $@) $<
 
 clean:
 	$(TEXLIVE_RUN) latexmk -c -auxdir=$(AUXDIR) -outdir=.
@@ -18,5 +28,4 @@ clean:
 cleanall:
 	$(TEXLIVE_RUN) latexmk -C -auxdir=$(AUXDIR) -outdir=.
 
-format:
-	~/.cargo/bin/tex-fmt --nowrap **/*.tex
+.PHONY: all pdf illustrations clean cleanall

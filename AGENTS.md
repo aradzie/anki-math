@@ -6,7 +6,7 @@ This repository is a personal collection of self-study mathematics material, mad
 - **Self-check questions** — LaTeX source compiled into a single PDF of self-check questions, for testing understanding rather than passive review.
 - **Essays** — LaTeX write-ups of deeper explorations of individual topics, kept for rereading.
 
-This is not a conventional software project — do not assume the usual tooling (test suites, CI, linters) applies. The compilation and rendering steps that do exist (LaTeX, Asymptote, PyVista) are documented explicitly below.
+This is not a conventional software project — do not assume the usual tooling (test suites, CI, linters) applies. The compilation and rendering steps that do exist (LaTeX, Asymptote) are documented explicitly below.
 
 ## Content Standards
 
@@ -72,37 +72,24 @@ podman run --rm --userns keep-id -e SOURCE_DATE_EPOCH -v "$DIR:/work:Z" -w /work
 - `-w /work` runs the command from the mounted directory.
 - `SOURCE_DATE_EPOCH=0` is exported before the run and passed through with `-e` so pdfTeX embeds a fixed `/CreationDate`, `/ModDate`, and `/ID` instead of the wall-clock time. Built PDFs are committed alongside their sources, so a git- or clock-derived timestamp would make unrelated commits churn the embedded dates; pdfTeX reads this variable itself, no extra flags are needed. Rebuilding unchanged sources therefore produces byte-identical PDFs.
 
-## Asymptote Illustrations (2D only)
+## Asymptote Illustrations
 
 Vector illustrations are authored as Asymptote (`.asy`) source files.
 
-Run `make` in `illustrations/` to (re)generate the `.pdf` and `.svg` files for every `.asy` file (see `illustrations/Makefile`); it runs, per file:
+The root `Makefile` finds every `.asy` file in the repo (excluding `common.asy` and build/vendor directories) and compiles each to its own `.svg`:
+
+```sh
+make illustrations
+```
+
+which runs, per file:
 
 ```sh
 podman run --rm --userns keep-id -e SOURCE_DATE_EPOCH -v "$DIR:/work:Z" -w /work "$IMAGE" \
-  asy -f pdf -render=0 "$name.asy"
-podman run --rm --userns keep-id -e SOURCE_DATE_EPOCH -v "$DIR:/work:Z" -w /work "$IMAGE" \
-  asy -f svg -render=0 "$name.asy"
+  asy -f svg -render=0 -o "$name" "$name.asy"
 ```
 
-- `asy -f pdf -render=0` compiles the `.asy` source to a vector PDF, which is what gets embedded via `\includegraphics` in the LaTeX documents.
-- `asy -f svg -render=0` compiles the same source to a vector SVG preview, using `dvisvgm` (bundled in the texlive image) to typeset LaTeX labels as real vector glyphs rather than rasterizing them.
-- `common.asy` is only tracked as a prerequisite in the Makefile (so editing it rebuilds every illustration) — it holds shared helpers imported by the other files, not a standalone illustration.
-- Make's incremental rebuilds mean an unchanged `.asy` file is left alone; only sources newer than their `.pdf`/`.svg` (or a changed `common.asy`) are re-rendered.
-
-Commit the generated `.pdf` and `.svg` files alongside the `.asy` source; rebuilding unchanged sources produces byte-identical output.
-
-## PyVista Illustrations (3D only)
-
-3D illustrations are Python scripts using PyVista/VTK, run through the repo's `uv` project (`pyproject.toml`/`uv.lock` at the repo root). Unlike Asymptote's vector backend, PyVista does real z-buffered rendering, so scenes with multiple occluding or transparent objects don't need manual draw-order bookkeeping. The tradeoff is raster-only output (PNG, no vector PDF) and axis labels that are plain text rather than LaTeX-typeset math.
-
-Run `make` in `illustrations/` to (re)generate the `.png` files for every `.py` file (same `illustrations/Makefile`); it runs, per file:
-
-```sh
-uv run --project "$ROOT" "$name.py"
-```
-
-- `--project "$ROOT"` points `uv run` at the repo-root `pyproject.toml`/`uv.lock` explicitly, so the PyVista/VTK environment resolves correctly regardless of the caller's current directory.
-- `common.py` is tracked as a prerequisite in the Makefile, so editing the shared helpers rebuilds every illustration.
-
-Commit the generated `.png` alongside the `.py` source.
+- `asy -f svg -render=0` compiles the `.asy` source to a vector SVG, using `dvisvgm` (bundled in the texlive image) to typeset LaTeX labels as real vector glyphs rather than rasterizing them.
+- `-o "$name"` sets the output path explicitly (Asymptote otherwise writes to the process's working directory rather than next to the input file); the podman invocation always runs from the repo root, so `$name` is the source's path relative to the repo root with the `.asy` extension stripped.
+- `common.asy` at the repo root holds shared helpers imported by other `.asy` files (`import common;`), not a standalone illustration. It resolves from any subdirectory because Asymptote's import search checks the process's working directory, which is always the repo root here. It is tracked as a Makefile prerequisite of every illustration, so editing it rebuilds everything.
+- Make's incremental rebuilds mean an unchanged `.asy` file is left alone; only sources newer than their `.svg` (or a changed `common.asy`) are re-rendered.
