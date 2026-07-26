@@ -162,11 +162,25 @@
 !id: gqdLJbeebN
 !front: \[ \mathscr{L} \{ \delta (t - c) \} \]
 !back: \[ e^{-cs} \]
+!related:
+\[
+\begin{align*}
+    \mathscr{L} \{ \delta (t - c) \} &= e^{-cs} \\
+    \mathscr{L} \{ u(t - c) \} &= e^{-cs} \frac{1}{s}
+\end{align*}
+\]
 ~~~
 
 !id: y3ZWYAOBIR
 !front: \[ \mathscr{L} \{ u(t - c) \} \]
 !back: \[ e^{-cs} \frac{1}{s} \]
+!related:
+\[
+\begin{align*}
+    \mathscr{L} \{ \delta (t - c) \} &= e^{-cs} \\
+    \mathscr{L} \{ u(t - c) \} &= e^{-cs} \frac{1}{s}
+\end{align*}
+\]
 ~~~
 
 !id: jFPp0XWKuj

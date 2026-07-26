@@ -69,7 +69,7 @@ Their common value is defined to be \( \int_a^b f(x)\, dx \).
 ~~~
 
 !id: fz8hOflTJY
-!front: Why does refining a partition \( P \) never decrease the lower sum \( L(f,P) \)?
+!front: Why does refining a partition \( P \) (adding points to get \( P' \supseteq P \)) never decrease the lower sum \( L(f,P) \)?
 !back: Splitting a subinterval into pieces replaces one infimum \( m_i \) by infima over smaller sets, each of which is \( \ge m_i \). So every term of \( L(f,P') \) is bounded below by the corresponding contribution to \( L(f,P) \), giving \( L(f,P') \ge L(f,P) \).
 ~~~
 
