@@ -65,13 +65,13 @@ A sequence \( \{a_n\} \) is **bounded above** if there exists a real number \( M
 
 for all positive integers \( n \).
 
-A sequence \( \{a_n\} \) is *bounded below* if there exists a real number \( M \) such that
+A sequence \( \{a_n\} \) is **bounded below** if there exists a real number \( M \) such that
 
 \[ M \le a_n \]
 
 for all positive integers \( n \).
 
-A sequence \( \{a_n\} \) is a *bounded sequence* if it is bounded above and bounded below.
+A sequence \( \{a_n\} \) is a **bounded sequence** if it is bounded above and bounded below.
 
 If a sequence is not bounded, it is an **unbounded sequence**.
 ~~~
@@ -79,6 +79,35 @@ If a sequence is not bounded, it is an **unbounded sequence**.
 !id: ELeqH5jzit
 !front: What is the relationship between convergent and bounded sequences?
 !back: If a sequence \( \{a_n\} \) converges, then it is bounded.
+~~~
+
+!id: LHb3sG7zVK
+!front: What is a Cauchy sequence?
+!back: A sequence \( \{a_n\} \) is a **Cauchy sequence** if for all \( \epsilon > 0 \), there exists an integer \( N \) such that \( |a_n - a_m| < \epsilon \) for all \( n, m \ge N \).
+~~~
+
+!id: kaQVrrcwh0
+!front: How does the Cauchy condition differ from the definition of convergence of a sequence, and why is this useful?
+!back:
+Convergence to \( L \) says that eventually every term is close to the specific number \( L \):
+\[ |a_n - L| < \varepsilon. \]
+
+The Cauchy condition says that eventually all terms are close to each other:
+\[ |a_n - a_m| < \varepsilon. \]
+
+So convergence compares terms to a known candidate limit, while the Cauchy condition compares terms only to each other. This makes the Cauchy condition useful for establishing convergence without first knowing or guessing the limit \( L \).
+~~~
+
+!id: M7CUMgDWC2
+!front: What is the relationship between Cauchy sequences and convergent sequences of real numbers?
+!back: A sequence \( \{a_n\} \) of real numbers converges if and only if it is a Cauchy sequence.
+!extra: The forward direction (convergent implies Cauchy) holds for sequences in any metric space. The converse (Cauchy implies convergent) relies on the **completeness** of \( \mathbb{R} \): every Cauchy sequence of real numbers converges to a real number.
+~~~
+
+!id: w0eJlHZHGF
+!front: Construct a Cauchy sequence in \( \mathbb{Q} \) that does not converge in \( \mathbb{Q} \).
+!back: Let \( a_n \) be \( \sqrt{2} \) truncated to \( n \) decimal digits, e.g. \( a_1 = 1.4 \), \( a_2 = 1.41 \), \( a_3 = 1.414, \ldots \). Each \( a_n \in \mathbb{Q} \), and for \( m > n \), \( |a_n - a_m| < 10^{-n} \), so \( \{a_n\} \) is Cauchy. But \( a_n \to \sqrt{2} \notin \mathbb{Q} \), so the sequence has no limit in \( \mathbb{Q} \).
+!extra: This shows completeness is a genuine property of \( \mathbb{R} \), not automatic for every ordered field: \( \mathbb{Q} \) is not complete.
 ~~~
 
 !id: JthlytFu3v
@@ -103,7 +132,7 @@ A sequence \( \{a_n\} \) is a **monotone sequence** for all \( n \ge n_0 \) if i
 !id: lVOYHPRS4t
 !front: What is an infinite series?
 !back:
-An infinite series is a sum of the terms of an infinite sequnce \( a_n \):
+An infinite series is a sum of the terms of an infinite sequence \( a_n \):
 
 \[ \sum_{n=1}^{\infty} a_n = a_1 + a_2 + a_3 + \ldots \]
 ~~~
@@ -120,12 +149,8 @@ The harmonic series is a special case of the p-series with \( p = 1 \).
 
 !id: WqhRqJWLyi
 !front: What are the convergence properties of the harmonic series?
-!back:
-The harmonic series \( \sum_{n=1}^{\infty} \frac{1}{n} \) diverges to infinity.
-
-Related:
-
-The alternate harmonic series \( \sum_{n=1}^{\infty} (-1)^{n+1} \frac{1}{n} \) converges to \( \ln 2 \).
+!back: The harmonic series \( \sum_{n=1}^{\infty} \frac{1}{n} \) diverges to infinity.
+!related: The alternating harmonic series \( \sum_{n=1}^{\infty} (-1)^{n+1} \frac{1}{n} \) converges to \( \ln 2 \).
 ~~~
 
 !id: ovCOjRQjlt
@@ -137,13 +162,9 @@ The alternating harmonic series is an infinite series of the following form
 ~~~
 
 !id: Oq7cvJCurt
-!front: What are the convergence properties of the alternate harmonic series?
-!back:
-The alternate harmonic series \( \sum_{n=1}^{\infty} (-1)^{n+1} \frac{1}{n} \) converges to \( \ln 2 \).
-
-Related:
-
-The harmonic series \( \sum_{n=1}^{\infty} \frac{1}{n} \) diverges to infinity.
+!front: What are the convergence properties of the alternating harmonic series?
+!back: The alternating harmonic series \( \sum_{n=1}^{\infty} (-1)^{n+1} \frac{1}{n} \) converges to \( \ln 2 \).
+!related: The harmonic series \( \sum_{n=1}^{\infty} \frac{1}{n} \) diverges to infinity.
 ~~~
 
 !id: M5bnxG3xVp
@@ -162,7 +183,7 @@ The geometric series is an infinite series of the following form
 !id: EuaTm2Pypt
 !front: What is the p-series?
 !back:
-The p-series series is an infinite series of the following form
+The p-series is an infinite series of the following form
 
 \[ \sum_{n=1}^{\infty} \frac{1}{n^p} = \frac{1}{1^p} + \frac{1}{2^p} + \frac{1}{3^p} + \ldots \]
 ~~~
@@ -177,7 +198,7 @@ The p-series series is an infinite series of the following form
 !back:
 The telescoping series is an infinite series of the following form
 
-\[ \sum_{n=1}^{\infty} a_n - a_{n+1}. \]
+\[ \sum_{n=1}^{\infty} (a_n - a_{n+1}). \]
 
 In other words, the telescoping series is a series in which most of the terms cancel in each of the partial sums, leaving only some of the first terms and some of the last terms.
 ~~~
@@ -203,7 +224,7 @@ The converse is not true. That is, if \( \lim_{n \to \infty} a_n = 0 \), we cann
 !id: YTrrpdMo63
 !front: What is the integral test?
 !back:
-Suppose \( \sum_{n = 0}^{\infty} a_n \) is a series with positive terms \( a_n \). Suppose there exists a function \( f \) and a positive integer \( N \) such that the following three conditions are satisfied:
+Suppose \( \sum_{n=1}^{\infty} a_n \) is a series with positive terms \( a_n \). Suppose there exists a function \( f \) and a positive integer \( N \) such that the following three conditions are satisfied:
 
 - \( f \) is continuous,
 - \( f \) is decreasing, and
@@ -215,13 +236,22 @@ Although convergence of the integral implies convergence of the related series, 
 ~~~
 
 !id: YmNyEz9dL0
-!front: How to estimate the value of a series?
-!back: TODO
+!front: What is the remainder of a convergent series after its \( N \)th partial sum?
+!back:
+For a convergent series \( \sum_{n=1}^{\infty} a_n \) with sum \( S \) and \( N \)th partial sum \( S_N = \sum_{n=1}^{N} a_n \), the remainder is
+
+\[ R_N = S - S_N = \sum_{n=N+1}^{\infty} a_n. \]
+
+\( R_N \) is the error in approximating \( S \) by \( S_N \), and \( R_N \to 0 \) as \( N \to \infty \).
 ~~~
 
 !id: 4M24dB4Qow
-!front: How to estimate the remainder of a series?
-!back: TODO
+!front: How does the integral test bound the remainder of a series?
+!back:
+Suppose \( \sum_{n=1}^{\infty} a_n \) satisfies the integral test hypotheses with respect to \( f \) for \( n \ge N \). Then the remainder \( R_N = \sum_{n=N+1}^{\infty} a_n \) satisfies
+
+\[ \int_{N+1}^{\infty} f(x) \, dx \le R_N \le \int_{N}^{\infty} f(x) \, dx. \]
+!extra: This bounds the error of approximating the series' sum by its \( N \)th partial sum without needing the exact value of the series.
 ~~~
 
 !id: rVhE7ELDdz
@@ -235,7 +265,7 @@ Suppose there exists an integer \( N \) such that \( a_n \ge b_n \ge 0 \) for al
 !id: h629HYWjfM
 !front: What is the limit comparison test?
 !back:
-Let \( a_n \), \( b_n \ge 0 \) for all \( n \ge 1 \).
+Let \( a_n \ge 0 \) and \( b_n > 0 \) for all \( n \ge 1 \).
 
 If \( \lim_{n \to \infty} a_n/b_n = L \ne 0 \), then \( \sum_{n=1}^{\infty} a_n \) and \( \sum_{n=1}^{\infty} b_n \) both converge or both diverge.
 
@@ -247,7 +277,7 @@ If \( \lim_{n \to \infty} a_n/b_n = \infty \) and \( \sum_{n=1}^{\infty} b_n \) 
 !id: RxMHXZT03o
 !front: What is the alternating series?
 !back:
-The alternating series is a sum of the terms of an infinite sequnce \( a_n \) whose terms alternate between positive and negative values:
+The alternating series is a sum of the terms of an infinite sequence \( a_n \) whose terms alternate between positive and negative values:
 
 \[ \sum_{n=1}^{\infty} (-1)^{n+1} a_n = a_1 - a_2 + a_3 - \ldots \]
 
@@ -263,7 +293,13 @@ or
 
 !id: WITe5C997i
 !front: What is the remainder of an alternating series?
-!back: TODO
+!back:
+If an alternating series \( \sum_{n=1}^{\infty} (-1)^{n+1} a_n \) satisfies the alternating series test hypotheses, then the remainder after \( N \) terms satisfies
+
+\[ |R_N| = |S - S_N| \le a_{N+1}, \]
+
+where \( S \) is the sum of the series and \( S_N = \sum_{n=1}^{N} (-1)^{n+1} a_n \) is the \( N \)th partial sum.
+!extra: The sign of \( R_N \) matches the sign of the first omitted term, so \( S \) lies between \( S_N \) and \( S_{N+1} \).
 ~~~
 
 !id: PItfKda0gB
@@ -274,6 +310,15 @@ A series \( \sum_{n=1}^{\infty} a_n \) exhibits **absolute convergence** if \( \
 A series \( \sum_{n=1}^{\infty} a_n \) exhibits **conditional convergence** if \( \sum_{n=1}^{\infty} a_n \) converges but \( \sum_{n=1}^{\infty} |a_n| \) diverges.
 
 If \( \sum_{n=1}^{\infty} |a_n| \) converges, then \( \sum_{n=1}^{\infty} a_n \) converges.
+~~~
+
+!id: U3L3nAt9dg
+!front: What does the Riemann rearrangement theorem say about conditionally convergent series?
+!back:
+If \( \sum_{n=1}^{\infty} a_n \) converges conditionally, then for any real number \( S \) (or \( \pm \infty \)) there exists a rearrangement of the terms whose series sums to \( S \).
+
+By contrast, an absolutely convergent series converges to the same sum under every rearrangement.
+!extra: This shows conditional convergence, unlike absolute convergence, depends on the order in which terms are summed.
 ~~~
 
 !id: 0lTi8S7UG9
@@ -301,7 +346,7 @@ Consider the series \( \sum_{n=1}^{\infty} a_n \). Let
 ~~~
 
 !id: iZKaAkl7j7
-!front: What is the power series?
+!front: What is a power series?
 !back:
 The power series centered at \( x = 0 \) is an infinite series of the following form
 
@@ -329,7 +374,23 @@ Consider the power series \( \sum_{n=0}^{\infty} c_n (x - a)^n \). The series sa
 - There exists a real number \( R>0 \) such that the series converges if \( |x − a| < R \) and diverges if \( |x − a| > R \). At the values \( x \) where \( |x − a| = R \), the series may converge or diverge.
 ~~~
 
+!id: GKZQhx4Oa6
+!front: What is the radius of convergence of a power series?
+!back: The radius of convergence \( R \) of \( \sum_{n=0}^{\infty} c_n (x - a)^n \) is the extended real number \( 0 \le R \le \infty \) such that the series converges if \( |x - a| < R \) and diverges if \( |x - a| > R \), matching the convergence trichotomy: \( R = 0 \) if the series converges only at \( x = a \), and \( R = \infty \) if it converges for all \( x \).
+!extra: Behavior at the endpoints \( |x - a| = R \) is not determined by \( R \) alone and must be checked case by case.
+~~~
+
+!id: SO2d1N1a3N
+!front: How can the ratio test be used to find the radius of convergence of a power series?
+!back:
+Apply the ratio test to \( \sum_{n=0}^{\infty} c_n (x - a)^n \), treating \( x \) as fixed:
+
+\[ \lim_{n \to \infty} \left| \frac{c_{n+1} (x-a)^{n+1}}{c_n (x-a)^n} \right| = |x - a| \lim_{n \to \infty} \left| \frac{c_{n+1}}{c_n} \right|. \]
+
+If \( \ell = \lim_{n \to \infty} |c_{n+1}/c_n| \) exists, the series converges absolutely where \( |x-a|\, \ell < 1 \), giving \( R = 1/\ell \) (with \( R = \infty \) if \( \ell = 0 \), and \( R = 0 \) if \( \ell = \infty \)).
+~~~
+
 !id: kEhHkFaxM6
 !front: What is the interval of convergence of a power series?
-!back: The interval of convergence \( I \) of the power series \( \sum_{n=0}^{\infty} c_n (x - a)^n \) is the set of all real numbers \( x \) such that the series converges. It's the "domain" of the power series.
+!back: The interval of convergence \( I \) of the power series \( \sum_{n=0}^{\infty} c_n (x - a)^n \) is the set of all real numbers \( x \) such that the series converges. This is precisely the domain of the power series.
 ~~~

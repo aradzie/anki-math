@@ -116,9 +116,13 @@ If \( f \) is positive, decreasing, and continuous on \( [N,\infty) \) with \( f
 !back:
 \[ \text{p.v.} \int_{-\infty}^\infty f(x)\, dx = \lim_{R \to \infty} \int_{-R}^{R} f(x)\, dx, \]
 a single symmetric limit, as opposed to requiring \( \int_{-\infty}^c f \) and \( \int_c^\infty f \) to converge independently.
-!extra:
-An analogous principal value exists for an interior singularity at \( c \):
-\[ \text{p.v.} \int_a^b f(x)\, dx = \lim_{\varepsilon \to 0^+} \left( \int_a^{c-\varepsilon} f(x)\, dx + \int_{c+\varepsilon}^b f(x)\, dx \right). \]
+~~~
+
+!id: yOKolhbLXX
+!front: What is the Cauchy principal value of \( \int_a^b f(x)\, dx \) when \( f \) has an interior singularity at \( c \in (a,b) \)?
+!back:
+\[ \text{p.v.} \int_a^b f(x)\, dx = \lim_{\varepsilon \to 0^+} \left( \int_a^{c-\varepsilon} f(x)\, dx + \int_{c+\varepsilon}^b f(x)\, dx \right), \]
+a single symmetric limit, analogous to the p.v. definition for \( \int_{-\infty}^\infty f(x)\, dx \), as opposed to requiring the two one-sided improper integrals to converge independently.
 ~~~
 
 !id: ul3k9h3rUd

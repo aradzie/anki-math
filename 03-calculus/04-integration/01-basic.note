@@ -65,12 +65,12 @@ Their common value is defined to be \( \int_a^b f(x)\, dx \).
 
 !id: AuBlyIvNji
 !front: Why does refining a partition \( P \) (adding points to get \( P' \supseteq P \)) never increase the upper sum \( U(f,P) \)?
-!back: Splitting a subinterval into pieces replaces one supremum \( M_i \) by suprema over smaller sets, each of which is \( \le M_i \). So every term of \( U(f,P') \) is bounded above by the corresponding contribution to \( U(f,P) \), giving \( U(f,P') \le U(f,P) \).
+!back: Splitting a subinterval into pieces replaces one supremum \( M_i \) by suprema over smaller sets, each of which is \( \le M_i \). So every term of \( U(f,P') \) is bounded above by the corresponding term of \( U(f,P) \), giving \( U(f,P') \le U(f,P) \).
 ~~~
 
 !id: fz8hOflTJY
 !front: Why does refining a partition \( P \) (adding points to get \( P' \supseteq P \)) never decrease the lower sum \( L(f,P) \)?
-!back: Splitting a subinterval into pieces replaces one infimum \( m_i \) by infima over smaller sets, each of which is \( \ge m_i \). So every term of \( L(f,P') \) is bounded below by the corresponding contribution to \( L(f,P) \), giving \( L(f,P') \ge L(f,P) \).
+!back: Splitting a subinterval into pieces replaces one infimum \( m_i \) by infima over smaller sets, each of which is \( \ge m_i \). So every term of \( L(f,P') \) is bounded below by the corresponding term of \( L(f,P) \), giving \( L(f,P') \ge L(f,P) \).
 ~~~
 
 !id: Bx4Pd1hvNG
@@ -169,4 +169,31 @@ If \( f \) is continuous on \( [a,b] \) and \( F(x) = \int_a^x f(t)\, dt \) for 
 !back:
 If \( f \) is continuous on \( [a,b] \) and \( F \) is any antiderivative of \( f \) on \( [a,b] \) (i.e. \( F' = f \)), then
 \[ \int_a^b f(x)\, dx = F(b) - F(a). \]
+~~~
+
+!id: TD5D0QhdCM
+!front: State the net change theorem for a quantity \( Q(t) \) with continuous rate of change \( Q'(t) \) on \( [a,b] \).
+!back:
+\[ \int_a^b Q'(t)\, dt = Q(b) - Q(a). \]
+The integral of the rate of change of \( Q \) over \( [a,b] \) equals the net change in \( Q \) over that interval.
+~~~
+
+!id: o07ksA9LI9
+!front: How does the net change theorem relate to the Fundamental Theorem of Calculus, Part 2?
+!back: It is FTC2 under a different name and reading. Setting \( F = Q \) and \( f = Q' \), the identity \( \int_a^b Q'(t)\, dt = Q(b) - Q(a) \) is literally \( \int_a^b f(x)\, dx = F(b) - F(a) \). No new mathematics is added; the only shift is interpretive — \( Q' \) is read as an instantaneous rate and \( Q(b) - Q(a) \) as the accumulated net change it produces.
+~~~
+
+!id: HjtQ2Mc8O2
+!front: If \( v(t) \) is velocity and changes sign on \( [a,b] \), why does \( \int_a^b v(t)\, dt \) give net displacement rather than total distance traveled?
+!back: The integral sums \( v(t)\, dt \) with sign: intervals where \( v > 0 \) contribute positive area, intervals where \( v < 0 \) contribute negative area, and these cancel. The result is \( s(b) - s(a) \), the net change in position, not the total path length. Total distance traveled must instead sum magnitudes, \( \int_a^b |v(t)|\, dt \), which discards no cancellation.
+~~~
+
+!id: 44NT1AVdyb
+!front: Under what condition does \( \int_a^b v(t)\, dt = \int_a^b |v(t)|\, dt \)?
+!back: When \( v \) does not change sign on \( [a,b] \), i.e. \( v \ge 0 \) throughout or \( v \le 0 \) throughout. Then no cancellation occurs between positive and negative contributions, so net displacement and total distance traveled coincide (up to sign).
+~~~
+
+!id: tIIjYOiAqy
+!front: What hypothesis does the net change theorem need on \( Q' \), and what can fail if it is dropped?
+!back: \( Q' \) must be integrable on \( [a,b] \) (continuity suffices, as in FTC2). If \( Q \) is differentiable but \( Q' \) is not integrable, \( \int_a^b Q'(t)\, dt \) need not exist as a Riemann integral, so the identity has no left-hand side to evaluate — even though \( Q(b) - Q(a) \) is still perfectly well defined.
 ~~~
