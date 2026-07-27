@@ -9,6 +9,42 @@ description: Create, edit, or review Anki math flashcards in this repository's c
 
 Create math flashcards in this repository's custom `.note` format. Cards should be short enough that the learner can usually answer in a few sentences while still testing explanation, derivation, comparison, interpretation, assumptions, or failure cases.
 
+## Calibration
+
+Target audience: a passionate, technically sophisticated self-learner — e.g. an experienced software engineer — working independently through single- and multi-variable calculus, linear algebra, and differential equations at the level of Apostol, Spivak, and Stewart. They are comfortable with formal notation, proofs, and abstraction, want depth well beyond mechanical computation, and do not need simplification unless a concept is genuinely subtle — but they are not taking a dedicated real analysis, topology, or measure theory course.
+
+### Level of Rigor
+
+- Use precise mathematical language and standard terminology consistently.
+- State hypotheses explicitly; never omit an assumption required for a theorem or definition.
+- Distinguish sufficient conditions, necessary conditions, and equivalent conditions.
+- Prefer exact statements over intuitive approximations. Anything "rough" or "roughly speaking" must be labeled as intuition, not blended into the precise statement.
+- Elementary real analysis is expected background and fair game (see scope below); treat it with the same precision as everything else, not softened.
+
+### Scope
+
+In scope:
+
+- Rigorous calculus foundations: \( \varepsilon\text{-}\delta \) limits and continuity, differentiability, the Mean Value Theorem and its consequences, Taylor's theorem with remainder, the Riemann integral (definition, basic properties, FTC), sequences and series convergence (including standard tests), power series and radius of convergence, uniform vs. pointwise convergence at an introductory level.
+- Multivariable calculus: partial derivatives, gradient/directional derivatives, chain rule, Jacobians, the implicit and inverse function theorems (statement and geometric intuition, not the analytic proof machinery), multiple integrals, change of variables, line and surface integrals, Green's/Stokes'/divergence theorems.
+- Linear algebra as used alongside multivariable calculus and ODEs: matrices, eigenvalues/eigenvectors, diagonalization, linear independence, and their role in solving linear systems of ODEs.
+- Ordinary differential equations: standard solution methods, qualitative and stability analysis, existence/uniqueness (e.g. Picard–Lindelöf) at the level of statement and intuition rather than full contraction-mapping proof detail.
+- Proof habits used throughout Apostol/Spivak: working rigorously from definitions, direct proofs of calculus theorems, constructing counterexamples.
+
+Out of scope — do not write cards on:
+
+- General topology.
+- Measure theory and Lebesgue integration.
+- Functional analysis.
+- Metric space theory beyond what is needed to state basic real-analysis facts on \( \mathbb{R}^n \).
+- Graduate-level real analysis.
+
+When a topic is ambiguous, use this test: would it appear in a calculus or introductory-analysis text at the Apostol/Spivak/Stewart level, or does it require a dedicated analysis/topology/measure-theory course to state properly? If the latter, exclude it.
+
+### Proof Awareness
+
+The audience wants to be able to reconstruct proofs, not memorize them verbatim. Where useful, favor cards about the key idea behind a proof, the critical lemma, why a proof technique works, where a hypothesis is used, and counterexamples when a hypothesis is dropped — a natural extension of the "construct a counterexample" and "what breaks if" prompt patterns in Note-Writing Standards below.
+
 ## Repository Context
 
 - This is one of three artifact types in this repository (flashcards, self-check questions, essays); see `AGENTS.md` for the repository-wide overview and the other two.
@@ -178,6 +214,18 @@ Avoid by default:
 - Prefer a short derivation or reason over an unsupported formula when the card is conceptual.
 - Check that notation used in the front is defined or standard in the surrounding file.
 
+## Tooling
+
+The [`notatki`](https://github.com/aradzie/notatki) CLI parses, validates, and pretty-prints `.note` files; it is installed as the `@notatki/cli` local npm dependency (see `package.json`).
+
+After creating or editing any `.note` file, check its correctness by running:
+
+```sh
+npx notatki insert-id
+```
+
+This walks the repository's `.note` files, parses and validates them, inserts an `!id:` into any note record that is missing one, pretty-prints every note, and writes the files back to disk. Run it from the repository root (it defaults to scanning the whole repo via `--dir`, default `.`). Treat a non-zero exit or parse error as a syntax problem to fix before moving on.
+
 ## Workflow
 
 1. Inspect nearby `.note` files for deck, tags, notation, note type, and local style.
@@ -186,6 +234,7 @@ Avoid by default:
 4. Verify mathematical correctness, assumptions, and notation consistency.
 5. Check card granularity: each `!back:` should usually fit in a few sentences; split oversized answers into multiple notes.
 6. Verify syntax: metadata outside records, required `!front:` and `!back:` fields, preserved existing `!id:` values, and one `~~~` terminator per note.
+7. Run `npx notatki insert-id` (see Tooling above) to validate the file, assign missing ids, and pretty-print it.
 
 ## Examples
 
