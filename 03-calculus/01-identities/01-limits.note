@@ -3,21 +3,37 @@
 !tags: Math Calculus Identity Limits
 
 !id: vjtstp5RFK
-!front: The definition of \( e \) as a limit when \( n \to \infty \)
+!front: \[ e = \lim_{n \to \infty} \ldots \]
 !back: \[ e = \lim_{n \to \infty} \left( 1 + \frac{1}{n} \right)^n \]
 ~~~
 
 !id: 5tnHPoehhw
-!front: The definition of \( e^x \) as a limit when \( n \to \infty \)
+!front: \[ e^x = \lim_{n \to \infty} \ldots \]
 !back: \[ e^x = \lim_{n \to \infty} \left( 1 + \frac{x}{n} \right)^n \]
 ~~~
 
 !id: co0b8kRcJm
-!front: The definition of \( e \) as a limit when \( n \to 0 \)
-!back: \[ e = \lim_{n \to 0} \left( 1 + n \right)^{1 / n} \]
+!front: \[ e = \lim_{h \to 0} \ldots \]
+!back: \[ e = \lim_{h \to 0} \left( 1 + h \right)^{1 / h} \]
 ~~~
 
 !id: RsC1HP4Yhn
-!front: The definition of \( e^x \) as a limit when \( n \to 0 \)
-!back: \[ e^x = \lim_{n \to 0} \left( 1 + n \right)^{x / n} \]
+!front: \[ e^x = \lim_{h \to 0} \ldots \]
+!back: \[ e^x = \lim_{h \to 0} \left( 1 + h \right)^{x / h} \]
+~~~
+
+!id: zVX3ZAqxkr
+!front: \[ \ln a = \lim_{x \to \ldots} \ldots \]
+!back: \[ \ln a = \lim_{x \to 0} \frac{a^x - 1}{x} \]
+!extra: Requires \( a > 0 \), so that \( a^x \) is defined for real \( x \) near \( 0 \). The special case \( a = e \) gives \( \lim_{x \to 0} \frac{e^x - 1}{x} = 1 \).
+~~~
+
+!id: eD2Z0zWOJ6
+!front: \[ \lim_{n \to \infty} n^{1/n} = \ldots \]
+!back: \[ \lim_{n \to \infty} n^{1/n} = 1 \]
+!extra:
+Write \( n^{1/n} = e^{\ln n / n} \). By L'Hôpital's rule applied to \( \ln x / x \) as \( x \to \infty \),
+\[ \lim_{x \to \infty} \frac{\ln x}{x} = \lim_{x \to \infty} \frac{1/x}{1} = 0, \]
+and since \( \exp \) is continuous,
+\[ n^{1/n} = e^{\ln n / n} \to e^0 = 1. \]
 ~~~

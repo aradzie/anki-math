@@ -127,7 +127,7 @@ a single symmetric limit, analogous to the p.v. definition for \( \int_{-\infty}
 
 !id: ul3k9h3rUd
 !front: Why can the Cauchy principal value of \( \int_{-\infty}^\infty f(x)\, dx \) exist even when the improper integral itself diverges?
-!back: The principal value only requires the symmetric limit \( \lim_{R\to\infty}\int_{-R}^R f \) to exist, whereas the improper integral requires \( \int_{-\infty}^c f \) and \( \int_c^\infty f \) to converge independently. If \( f \) has divergent positive and negative tails that cancel symmetrically, the symmetric limit can exist while the two pieces individually diverge — so p.v. convergence is strictly weaker than convergence of the improper integral.
+!back: Splitting at arbitrary \( c \) requires evaluating \( \int_{-\infty}^c f + \int_c^\infty f \) separately, which is an indeterminate \( \infty - \infty \) when the tails diverge with opposite sign. The principal value avoids this by taking one joint limit \( R \to \infty \) on both bounds at once, letting the two infinities cancel algebraically before the limit is taken — so p.v. convergence is strictly weaker than convergence of the improper integral.
 ~~~
 
 !id: XG8RFgkj4i

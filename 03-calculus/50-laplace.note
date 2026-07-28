@@ -14,10 +14,7 @@ where \( f(t) \) is a function of exponential order defined for all \( t \ge 0 \
 
 !id: RilngsWXIH
 !front: What does it mean for \( f(t) \) to be piecewise continuous on \( [0, \infty) \)?
-!back:
-On every finite interval \( [0, N] \), \( f(t) \) has at most finitely many discontinuities, and at each one the left- and right-hand limits exist and are finite.
-
-Only jump discontinuities are allowed — no infinite discontinuities (vertical asymptotes).
+!back: On every finite interval \( [0, N] \), \( f(t) \) has at most finitely many jump discontinuities, and no infinite discontinuities or oscillatory discontinuities.
 ~~~
 
 !id: IegvP6XVGa

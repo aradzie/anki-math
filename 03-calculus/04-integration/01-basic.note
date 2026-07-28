@@ -126,6 +126,55 @@ is bounded, but every subinterval of every partition contains both rationals and
 !back: \[ \int_a^c f(x)\, dx + \int_c^b f(x)\, dx = \int_a^b f(x)\, dx \]
 ~~~
 
+!id: FAfVeFuiA6
+!front: For \( f \) integrable on \( [a,b] \) and any constant \( c \), state the invariance-under-translation property of the integral.
+!back: \[ \int_a^b f(x)\, dx = \int_{a+c}^{b+c} f(x-c)\, dx \]
+!extra: Geometrically, shifting the graph of \( f \) horizontally by \( c \) and shifting the interval of integration by the same amount leaves the enclosed signed area unchanged.
+~~~
+
+!id: ITDBZlV5Jl
+!front: For \( f \) integrable on \( [a,b] \), state the reflection property of the integral relating \( \int_a^b f(x)\, dx \) to an integral of \( f(-x) \).
+!back: \[ \int_a^b f(x)\, dx = \int_{-b}^{-a} f(-x)\, dx \]
+!extra: Substituting \( x = -u \) reflects the graph through the \( y \)-axis and reverses the direction of integration; these two sign flips cancel, so no overall sign change appears.
+~~~
+
+!id: pJZqflY9E3
+!front: Why are the translation and reflection properties of the integral both instances of the same substitution argument?
+!back:
+Both come from the substitution rule \( \int_a^b f(x)\, dx = \int_{g^{-1}(a)}^{g^{-1}(b)} f(g(u))\, g'(u)\, du \) for a linear change of variable \( x = g(u) \):
+
+- translation uses \( g(u) = u - c \), giving \( g'(u) = 1 \);
+- reflection uses \( g(u) = -u \), giving \( g'(u) = -1 \).
+
+In the reflection case the factor \( g'(u) = -1 \) is exactly cancelled by the swap of the bounds \( g^{-1}(a) = -a \) and \( g^{-1}(b) = -b \), so no explicit minus sign survives in the final identity.
+~~~
+
+!id: hki5lVOeUy
+!front: For \( f \) integrable on \( [-a,a] \) with \( f \) even (\( f(-x) = f(x) \) for all \( x \)), what does symmetry give for \( \int_{-a}^a f(x)\, dx \)?
+!back: \[ \int_{-a}^a f(x)\, dx = 2\int_0^a f(x)\, dx \]
+~~~
+
+!id: KwfgmMbcWv
+!front: For \( f \) integrable on \( [-a,a] \) with \( f \) odd (\( f(-x) = -f(x) \) for all \( x \)), what does symmetry give for \( \int_{-a}^a f(x)\, dx \)?
+!back: \[ \int_{-a}^a f(x)\, dx = 0 \]
+~~~
+
+!id: cxXgxHJcu4
+!front: Derive the even/odd symmetric-interval integral properties from the reflection property of the integral.
+!back:
+Split via additivity: \( \int_{-a}^a f = \int_{-a}^0 f + \int_0^a f \). Apply the reflection property to the first piece:
+\[ \int_{-a}^0 f(x)\, dx = \int_0^a f(-x)\, dx. \]
+
+If \( f \) is even, \( f(-x) = f(x) \), so both pieces equal \( \int_0^a f(x)\, dx \), giving \( \int_{-a}^a f = 2\int_0^a f \).
+
+If \( f \) is odd, \( f(-x) = -f(x) \), so the pieces are negatives of each other and cancel, giving \( \int_{-a}^a f = 0 \).
+~~~
+
+!id: 6M4hFbnjNB
+!front: Why does the odd-function property \( \int_{-a}^a f = 0 \) require the interval to be symmetric about \( 0 \)? Construct a counterexample when it is not.
+!back: The cancellation pairs each \( x \in (0,a] \) with \( -x \in [-a,0) \); this pairing only stays within the domain of integration when the interval is symmetric about \( 0 \). E.g. \( f(x) = x \) is odd, but \( \int_0^1 x\, dx = 1/2 \ne 0 \), since \( [0,1] \) is not symmetric about \( 0 \).
+~~~
+
 !id: Ra3up4fJgh
 !front: If \( f, g \) are integrable on \( [a,b] \) with \( f(x) \le g(x) \) for all \( x \), why does \( \int_a^b f \le \int_a^b g \)?
 !back: Every Riemann sum for \( f \) is termwise \( \le \) the corresponding Riemann sum for \( g \) on the same tagged partition, so \( S(f,P) \le S(g,P) \) is preserved in the limit \( \|P\| \to 0 \), giving \( \int_a^b f \le \int_a^b g \).
@@ -181,16 +230,6 @@ The integral of the rate of change of \( Q \) over \( [a,b] \) equals the net ch
 !id: o07ksA9LI9
 !front: How does the net change theorem relate to the Fundamental Theorem of Calculus, Part 2?
 !back: It is FTC2 under a different name and reading. Setting \( F = Q \) and \( f = Q' \), the identity \( \int_a^b Q'(t)\, dt = Q(b) - Q(a) \) is literally \( \int_a^b f(x)\, dx = F(b) - F(a) \). No new mathematics is added; the only shift is interpretive — \( Q' \) is read as an instantaneous rate and \( Q(b) - Q(a) \) as the accumulated net change it produces.
-~~~
-
-!id: HjtQ2Mc8O2
-!front: If \( v(t) \) is velocity and changes sign on \( [a,b] \), why does \( \int_a^b v(t)\, dt \) give net displacement rather than total distance traveled?
-!back: The integral sums \( v(t)\, dt \) with sign: intervals where \( v > 0 \) contribute positive area, intervals where \( v < 0 \) contribute negative area, and these cancel. The result is \( s(b) - s(a) \), the net change in position, not the total path length. Total distance traveled must instead sum magnitudes, \( \int_a^b |v(t)|\, dt \), which discards no cancellation.
-~~~
-
-!id: 44NT1AVdyb
-!front: Under what condition does \( \int_a^b v(t)\, dt = \int_a^b |v(t)|\, dt \)?
-!back: When \( v \) does not change sign on \( [a,b] \), i.e. \( v \ge 0 \) throughout or \( v \le 0 \) throughout. Then no cancellation occurs between positive and negative contributions, so net displacement and total distance traveled coincide (up to sign).
 ~~~
 
 !id: tIIjYOiAqy

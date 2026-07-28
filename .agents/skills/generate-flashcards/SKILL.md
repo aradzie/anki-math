@@ -204,6 +204,15 @@ Avoid by default:
 - vague fronts with no clear mathematical target,
 - reverse cards where the reverse direction is ambiguous or unhelpful.
 
+## Note Independence
+
+Each note must stand alone. Anki shows notes individually and in arbitrary order, never as a sequence, and never guaranteed alongside any other specific note.
+
+- Never assume the learner has seen, remembers, or has open any other note. Do not write text that depends on file order or adjacent notes (e.g. "as in the previous identity", "unlike the case above", "the other definition of e").
+- Do not assume other notes exist at all. A note's correctness and clarity cannot depend on a companion note being present in the deck.
+- When a topic naturally produces several structurally similar notes — e.g. the same constant or identity under different limiting forms — give each one the same depth of justification independently. Do not justify or explain one variant and leave structurally identical siblings as bare formulas on the assumption that the explanation carries over; either explain each one to the same standard or none of them.
+- `!related:` may point to other identities for context, but the note must remain correct and self-sufficient without the learner ever reading that other note.
+
 ## Mathematical Rigor
 
 - Check every formula, theorem statement, and implication before writing it.
