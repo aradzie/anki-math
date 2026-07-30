@@ -160,7 +160,7 @@
 ~~~
 
 !id: gqdLJbeebN
-!front: \[ \mathscr{L} \{ \delta (t - c) \} \]
+!front: \[ \mathscr{L} \{ \delta (t - c) \}, \quad c \ge 0 \]
 !back: \[ e^{-cs} \]
 !related:
 \[
@@ -172,7 +172,7 @@
 ~~~
 
 !id: y3ZWYAOBIR
-!front: \[ \mathscr{L} \{ u(t - c) \} \]
+!front: \[ \mathscr{L} \{ u(t - c) \}, \quad c \ge 0 \]
 !back: \[ e^{-cs} \frac{1}{s} \]
 !related:
 \[
@@ -184,7 +184,7 @@
 ~~~
 
 !id: jFPp0XWKuj
-!front: \[ \mathscr{L} \{ u(t - c) f(t - c) \} \]
+!front: \[ \mathscr{L} \{ u(t - c) f(t - c) \}, \quad c \ge 0 \]
 !back: \[ e^{-cs} F(s) \]
 ~~~
 

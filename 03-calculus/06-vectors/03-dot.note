@@ -3,7 +3,7 @@
 !tags: Math Calculus Vectors
 
 !id: SV2UKT5x5r
-!front: What is the algebraic definition the **Dot Product**?
+!front: What is the algebraic definition of the **Dot Product**?
 !back:
 Consider two vectors \( \mathbf{a} \) and \( \mathbf{b} \) in an \( n \)-dimensional space \( \mathbf{a} = \langle a_1, a_2, \ldots, a_n \rangle \), \( \mathbf{b} = \langle b_1, b_2, \ldots, b_n \rangle \).
 
@@ -13,7 +13,7 @@ The **Dot Product** of \( \mathbf{a} \cdot \mathbf{b} \) is computed as the sum 
 ~~~
 
 !id: pVGWgE8bOp
-!front: What is the geometric definition the **Dot Product**?
+!front: What is the geometric definition of the **Dot Product**?
 !back:
 Consider two vectors \( \mathbf{a} \) and \( \mathbf{b} \) in an \( n \)-dimensional space \( \mathbf{a} = \langle a_1, a_2, \ldots, a_n \rangle \), \( \mathbf{b} = \langle b_1, b_2, \ldots, b_n \rangle \).
 
@@ -24,6 +24,6 @@ The **Dot Product** of \( \mathbf{a} \cdot \mathbf{b} \) is defined in terms of 
 where
 
 - \( \| \mathbf{a} \| \) is the magnitude (length) of vector \( \mathbf{a} \),
-- \( \| \mathbf{a} \| \) is the magnitude (length) of vector \( \mathbf{b} \), and
+- \( \| \mathbf{b} \| \) is the magnitude (length) of vector \( \mathbf{b} \), and
 - \( \theta \) is the angle between the two vectors.
 ~~~

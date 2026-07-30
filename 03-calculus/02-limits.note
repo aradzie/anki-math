@@ -5,30 +5,80 @@
 !id: IHFp7aCyLb
 !front: What is a continuous function?
 !back:
-A function \( f(x) \) is **continuous at a point** \( x = c \) if:
+\( f \) is **continuous at** \( c \) if
+\[ \lim_{x \to c} f(x) = f(c), \]
+which requires:
 
-- \( f(c) \) exists: The function is defined at the point \( c \).
-- \( \lim_{x \to c} f(x) \) exists: The limit of the function as \( x \) approaches \( c \) from both the left and right sides is the same.
-- \( \lim_{x \to c} f(x) = f(c) \): The limit of the function as \( x \) approaches \( c \) is equal to the actual value of the function at \( c \).
+- \( f(c) \) is defined
+- \( \lim_{x \to c} f(x) \) exists and equals \( f(c) \)
 
-If a function is continuous at every point in its domain, it is called a **continuous** function.
+\( f \) is a **continuous function** if this holds at every point of its domain.
+~~~
+
+!id: GGfqqaxYMg
+!front: What is a continuous from the left/right function \( f \)  at \( c \)?
+!back:
+\( f \) is continuous from the left at \( c \) if:
+
+- \( f(c) \) exists
+- \( \lim_{x \to c^-} f(x) = f(c) \)
+
+\( f \) is continuous from the right at \( c \) if:
+
+- \( f(c) \) exists
+- \( \lim_{x \to c^+} f(x) = f(c) \)
+!extra: Two-sided continuity at \( c \) is equivalent to being continuous from both the left and the right at \( c \).
 ~~~
 
 !id: m0iyqsxvib
-!front: What do the one-sided limits \( \lim_{x \to c^-} f(x) \) and \( \lim_{x \to c^+} f(x) \) mean, and how do they relate to the two-sided limit \( \lim_{x \to c} f(x) \)?
+!front: What do the one-sided limits \( \lim_{x \to c^-} f(x) \) and \( \lim_{x \to c^+} f(x) \) mean?
 !back:
-\( \lim_{x \to c^-} f(x) \) is the value \( f(x) \) approaches as \( x \) approaches \( c \) only through values less than \( c \); \( \lim_{x \to c^+} f(x) \) is the analogous limit through values greater than \( c \).
+\( \lim_{x \to c^-} f(x) \) is the value \( f(x) \) tends to as \( x \to c \) with \( x < c \).
 
-The two-sided limit \( \lim_{x \to c} f(x) \) exists (as a finite number) if and only if both one-sided limits exist, are finite, and are equal to each other; its value is then their common value.
+\( \lim_{x \to c^+} f(x) \) is the value \( f(x) \) tends to as \( x \to c \) with \( x > c \).
+~~~
+
+!id: QMkoDLY08a
+!front: How does the two-sided limit \( \lim_{x \to c} f(x) \) relate to the one-sided limits \( \lim_{x \to c^-} f(x) \) and \( \lim_{x \to c^+} f(x) \)?
+!back:
+The two-sided limit exists (as a finite number) if and only if both one-sided limits:
+
+- exist
+- are finite
+- are equal to each other
+
+Its value is then their common value.
 !extra: This equivalence is why one-sided limits are the natural tool for classifying discontinuities: whether they exist, are finite, and agree determines which kind of discontinuity occurs at \( c \).
+~~~
+
+!id: fzHFwExGKp
+!front: Why is continuity of \( f \) on a closed interval \( [a,b] \) stated using one-sided continuity at the endpoints \( a \) and \( b \)?
+!back: Outside \( [a,b] \), \( f \) is not defined, so a genuine two-sided limit at \( a \) or \( b \) cannot be formed. All that can be asked is that \( f \) behave well from the side that lies in the domain: continuous from the right at \( a \), and continuous from the left at \( b \).
+!extra: This is precisely the hypothesis theorems like the IVT and EVT need at the endpoints of \( [a,b] \).
+~~~
+
+!id: ow7Ke5CWpV
+!front: What characterizes a discontinuity of the **first kind**?
+!back:
+Both one-sided limits, \( \lim_{x \to c^-} f(x) \) and \( \lim_{x \to c^+} f(x) \):
+
+- exist
+- are finite
+
+regardless of whether they agree with each other or with \( f(c) \).
+!related: Contrast with the second kind, where at least one one-sided limit fails to exist as a finite number.
 ~~~
 
 !id: cxHfPbW878
 !front: What makes a discontinuity at \( x = c \) **removable**?
 !back:
-Both one-sided limits exist, are finite, and agree:
-\[ \lim_{x \to c^-} f(x) = \lim_{x \to c^+} f(x) = L, \]
-but either \( f(c) \) is undefined or \( f(c) \neq L \).
+Both one-sided limits:
+
+- exist
+- are finite
+- agree: \( \lim_{x \to c^-} f(x) = \lim_{x \to c^+} f(x) = L \)
+
+But either \( f(c) \) is undefined or \( f(c) \neq L \).
 
 It is called removable because defining (or redefining) \( f(c) = L \) makes \( f \) continuous at \( c \), without changing \( f \) anywhere else.
 !extra: Example: \( f(x) = \frac{x^2-1}{x-1} \) at \( x=1 \); the limit is \( 2 \), but \( f(1) \) is undefined.
@@ -37,30 +87,31 @@ It is called removable because defining (or redefining) \( f(c) = L \) makes \( 
 !id: FRG4k16Qle
 !front: What makes a discontinuity at \( x = c \) a **jump discontinuity**?
 !back:
-Both one-sided limits exist and are finite, but they disagree:
-\[ \lim_{x \to c^-} f(x) \neq \lim_{x \to c^+} f(x). \]
+Both one-sided limits:
+
+- exist
+- are finite
+- disagree: \( \lim_{x \to c^-} f(x) \neq \lim_{x \to c^+} f(x) \)
 !extra: Unlike a removable discontinuity, no single choice of \( f(c) \) can make \( f \) continuous at \( c \) — the left and right values genuinely disagree.
-~~~
-
-!id: rDWoaDRK0w
-!front: Why are removable and jump discontinuities both classified as **discontinuities of the first kind**?
-!back:
-Both share the requirement that \( \lim_{x \to c^-} f(x) \) and \( \lim_{x \to c^+} f(x) \) each exist and are finite. They differ only in whether the two one-sided limits agree:
-
-- equal one-sided limits, but \( f(c) \) undefined or wrong \(\to\) removable
-- unequal one-sided limits \(\to\) jump
-!related: Contrast with discontinuities of the second kind, where at least one one-sided limit fails to exist as a finite number.
 ~~~
 
 !id: sYzobmQo2P
 !front: What characterizes a discontinuity of the **second kind** (an **essential discontinuity**)?
-!back: At least one of \( \lim_{x \to c^-} f(x) \) or \( \lim_{x \to c^+} f(x) \) fails to exist as a finite number — either it does not exist at all, or it is infinite.
+!back:
+At least one of \( \lim_{x \to c^-} f(x) \) or \( \lim_{x \to c^+} f(x) \) fails to exist as a finite number:
+
+- it does not exist at all, or
+- it is infinite
 !extra: This is the complement of the first-kind case: first kind requires both one-sided limits to exist and be finite, so any failure of that condition puts the discontinuity in the second kind.
 ~~~
 
 !id: KdFIcEaHYN
 !front: Why is the discontinuity of \( f(x) = 1/x \) at \( x = 0 \) essential rather than removable?
-!back: Because \( \lim_{x \to 0^-} f(x) = -\infty \) and \( \lim_{x \to 0^+} f(x) = +\infty \): neither one-sided limit is a finite number, so no value assigned to \( f(0) \) could make \( f \) continuous there.
+!back:
+- \( \lim_{x \to 0^-} f(x) = -\infty \)
+- \( \lim_{x \to 0^+} f(x) = +\infty \)
+
+Neither one-sided limit is a finite number, so no value assigned to \( f(0) \) could make \( f \) continuous there.
 !extra: This case is sometimes singled out as an **infinite discontinuity**, a special case of an essential discontinuity where the one-sided limit(s) are infinite rather than simply nonexistent.
 ~~~
 
@@ -68,33 +119,6 @@ Both share the requirement that \( \lim_{x \to c^-} f(x) \) and \( \lim_{x \to c
 !front: Give an example of an essential discontinuity caused by oscillation rather than by an infinite limit, and explain why.
 !back: \( f(x) = \sin(1/x) \) at \( x = 0 \): as \( x \to 0 \), \( 1/x \) grows without bound, so \( \sin(1/x) \) oscillates through every value in \( [-1,1] \) infinitely often. Neither one-sided limit exists, since \( f(x) \) never settles near a single value.
 !extra: This is called an **oscillating discontinuity**, a subtype of essential discontinuity.
-~~~
-
-!type: Basic Math (and reversed card)
-
-!id: 68xkv0xO3S
-!front: Notation for the **left-hand limit** of \( f \) at \( c \).
-!back: \[ \lim_{x \to c^-} f(x) \]
-~~~
-
-!id: HzGPiTqpf7
-!front: Notation for the **right-hand limit** of \( f \) at \( c \).
-!back: \[ \lim_{x \to c^+} f(x) \]
-~~~
-
-!type: Basic Math
-
-!id: 5AD8AdtaEL
-!front: What do the shorthand notations \( f(c^-) \) and \( f(c^+) \) mean, as used when discussing discontinuities?
-!back:
-They abbreviate the one-sided limits:
-\[
-\begin{align*}
-    f(c^-) &:= \lim_{x \to c^-} f(x) \\
-    f(c^+) &:= \lim_{x \to c^+} f(x)
-\end{align*}
-\]
-!extra: This is common shorthand in analysis. It is not evaluating \( f \) at some point called "\( c^- \)" — \( c^- \) is not itself an argument of \( f \).
 ~~~
 
 !id: xqggw15jOh
@@ -113,27 +137,6 @@ so \( \lim_{x \to c} f(x) = f(c) \), which is exactly continuity at \( c \).
 \( f(x) = |x| \) at \( c = 0 \): it is continuous since \( \lim_{x \to 0} |x| = 0 = f(0) \). But
 \[ \lim_{h \to 0^-} \frac{|h|-0}{h} = -1, \qquad \lim_{h \to 0^+} \frac{|h|-0}{h} = 1, \]
 so the one-sided derivatives disagree and \( f'(0) \) does not exist.
-!related: The disagreement here is exactly analogous to a jump discontinuity in the one-sided *limits* of \( f \) itself — here it is the one-sided limits of the difference quotient that disagree instead.
-~~~
-
-!id: GGfqqaxYMg
-!front: What does it mean for \( f \) to be **continuous from the right** (resp. **from the left**) at \( c \)?
-!back: \( f \) is continuous from the right at \( c \) if \( f(c) \) exists and \( \lim_{x \to c^+} f(x) = f(c) \). Continuous from the left is the same statement with \( \lim_{x \to c^-} f(x) = f(c) \).
-!extra: Two-sided continuity at \( c \) is equivalent to being continuous from both the left and the right at \( c \).
-~~~
-
-!id: fzHFwExGKp
-!front: Why is continuity of \( f \) on a closed interval \( [a,b] \) stated using one-sided continuity at the endpoints \( a \) and \( b \)?
-!back: Outside \( [a,b] \), \( f \) is not defined, so a genuine two-sided limit at \( a \) or \( b \) cannot be formed. All that can be asked is that \( f \) behave well from the side that lies in the domain: continuous from the right at \( a \), and continuous from the left at \( b \).
-!extra: This is precisely the hypothesis theorems like the IVT and EVT need at the endpoints of \( [a,b] \).
-~~~
-
-!id: gSjP18zHWY
-!front: What condition must hold at a boundary point \( c \) for a piecewise-defined function to be continuous there?
-!back:
-The left-hand limit (computed from the piece defined for \( x<c \)), the right-hand limit (from the piece for \( x>c \)), and \( f(c) \) itself must all agree:
-\[ \lim_{x \to c^-} f(x) = \lim_{x \to c^+} f(x) = f(c). \]
-!extra: It is not enough for the two pieces' formulas to agree in value at \( c \) if one of them is not itself continuous up to the boundary — the limiting behavior, not just the plugged-in value, is what must match.
 ~~~
 
 !id: HafZTETOS6
@@ -145,36 +148,44 @@ The left-hand limit (computed from the piece defined for \( x<c \)), the right-h
 
 !id: 2311aqAnmI
 !front: How does the \( \varepsilon \)-\( \delta \) definition of continuity relate to the limit-based definition (\( f(c) \) exists, \( \lim_{x\to c} f(x) \) exists, and equals \( f(c) \))?
-!back: They are the same statement at different levels of precision. The limit-based definition names the ingredients: \( f(c) \) must exist, the limit must exist, and the two must agree. The \( \varepsilon \)-\( \delta \) definition is what "\( \lim_{x\to c} f(x) = f(c) \)" precisely means: however small a tolerance \( \varepsilon \) is demanded on the output, some tolerance \( \delta \) on the input suffices to guarantee it.
+!back:
+The two definitions express the same condition, at different levels of formality:
+
+- The \( \varepsilon \)-\( \delta \) definition is the rigorous, formal way to express what it means for the limit to equal \( f(c) \).
+- The limit-based definition is the more intuitive statement of the same idea: the function value at \( c \) must equal the limit of the function as \( x \to c \).
 ~~~
 
 !id: UAn7ziYq3m
 !front: Construct a counterexample showing the IVT's conclusion can fail if \( f \) is not continuous on \( [a,b] \).
-!back: Let \( f(x) = -1 \) for \( x \in [a,m) \) and \( f(x) = 1 \) for \( x \in [m,b] \), for some \( m \in (a,b) \). Then \( f(a)=-1 \) and \( f(b)=1 \), so \( 0 \) lies between them, but \( f \) never takes the value \( 0 \) anywhere on \( [a,b] \). The jump discontinuity at \( m \) lets \( f \) skip over \( 0 \) entirely.
-!related: Compare with the Intermediate Value Theorem card in `03-differentiation.note`, which requires continuity on \( [a,b] \) as a hypothesis.
+!back:
+Let \( f(x) = -1 \) for \( x \in [a,m) \) and \( f(x) = 1 \) for \( x \in [m,b] \), for some \( m \in (a,b) \).
+
+- \( f(a) = -1 \) and \( f(b) = 1 \), so \( 0 \) lies between them.
+- \( f \) never takes the value \( 0 \) anywhere on \( [a,b] \).
+
+The jump discontinuity at \( m \) lets \( f \) skip over \( 0 \) entirely.
+!extra: Compare with the Intermediate Value Theorem, which requires continuity on \( [a,b] \) as a hypothesis.
 ~~~
 
 !id: jBHWk5ISDd
 !front: Construct a counterexample showing the EVT's conclusion can fail if \( f \) is not continuous on \( [a,b] \).
-!back: Let \( f(x) = x \) for \( x \in [0,1) \) and \( f(1) = 0 \), on the closed bounded interval \( [0,1] \). Values of \( f(x) \) get arbitrarily close to \( 1 \) as \( x \to 1^- \), but \( f \) never equals \( 1 \) since \( f(1)=0 \); so \( f \) has no maximum on \( [0,1] \), even though the interval is closed and bounded.
-!related: Compare with the Extreme Value Theorem, which requires continuity on \( [a,b] \) as a hypothesis.
-~~~
-
-!id: 829UsGT0NU
-!front: Define the Dirichlet function and explain why it is discontinuous at every real number.
 !back:
-\[
-    D(x) =
-    \begin{cases}
-        1 & x \in \mathbb{Q} \\
-        0 & x \notin \mathbb{Q}
-    \end{cases}
-\]
-Both the rationals and the irrationals are dense in \( \mathbb{R} \), so every neighborhood of any point \( c \) contains points where \( D=1 \) and points where \( D=0 \). Hence \( \lim_{x \to c} D(x) \) does not exist at any \( c \), and \( D \) is discontinuous everywhere.
+Let \( f(x) = x \) for \( x \in [0,1) \) and \( f(1) = 0 \), on the closed bounded interval \( [0,1] \).
+
+- As \( x \to 1^- \), \( f(x) \) gets arbitrarily close to \( 1 \).
+- \( f \) never equals \( 1 \), since \( f(1) = 0 \).
+
+So \( f \) has no maximum on \( [0,1] \), even though the interval is closed and bounded.
+!extra: Compare with the Extreme Value Theorem, which requires continuity on \( [a,b] \) as a hypothesis.
 ~~~
 
-!id: kYGWrBQkqs
-!front: What is significant about the Weierstrass function, and why is it beyond the reach of elementary calculus to fully justify?
-!back: The Weierstrass function is continuous at every real number but differentiable at none of them — a classical theorem, stated here without proof. It shows that continuity, even everywhere, does not imply any local smoothness: unlike \( |x| \), which fails to be differentiable at just one point, this function has no well-defined tangent direction anywhere.
-!extra: Its standard proof relies on tools beyond elementary calculus, such as uniform convergence of an infinite series of cosine terms.
+!id: ClxV6ZNLSX
+!front: What does it mean for a function \( f \) to be piecewise continuous on a closed interval \( [a,b] \)?
+!back:
+\( f \) is piecewise continuous on \( [a,b] \) if:
+
+- it has at most finitely many discontinuities on \( [a,b] \)
+- each discontinuity is of the first kind (removable or jump)
+
+Equivalently, no essential discontinuity (infinite or oscillating) is permitted.
 ~~~

@@ -8,7 +8,10 @@
 \[
   \int_a^b f'(x)\,dx = f(b) - f(a).
 \]
-The left side integrates a derivative over the 1-dimensional interval \( [a,b] \); the right side evaluates the original function on the 0-dimensional boundary \( \{a,b\} \), with signs. The general pattern: integrating a derivative of a field over a region equals evaluating the plain field on the region's boundary, whose dimension is exactly one less.
+- The left side integrates a derivative over the 1-dimensional interval \( [a,b] \).
+- The right side evaluates the original function on the 0-dimensional boundary \( \{a,b\} \), with signs.
+
+The general pattern: integrating a derivative of a field over a region equals evaluating the plain field on the region's boundary, whose dimension is exactly one less.
 ~~~
 
 !id: nlgdhzFbbX
@@ -17,8 +20,13 @@ The left side integrates a derivative over the 1-dimensional interval \( [a,b] \
 \[
   \int_C \nabla f \cdot d\mathbf{r} = f(\mathbf{b}) - f(\mathbf{a}), \qquad C : \mathbf{a} \to \mathbf{b}.
 \]
-The left side is a scalar line integral (1-dimensional) of the vector field \( \nabla f \) dotted with \( d\mathbf{r} \). The right side is the scalar field \( f \) evaluated on the 0-dimensional boundary \( \{\mathbf{a},\mathbf{b}\} \), with signs — the derivative \( \nabla \) disappears in favor of the bare field \( f \) on the boundary.
-!extra: Assumes \( f \) is continuously differentiable on an open region containing \( C \), and \( C \) is piecewise smooth.
+- The left side is a scalar line integral (1-dimensional) of the vector field \( \nabla f \) dotted with \( d\mathbf{r} \).
+- The right side is the scalar field \( f \) evaluated on the 0-dimensional boundary \( \{\mathbf{a},\mathbf{b}\} \), with signs.
+
+The derivative \( \nabla \) disappears in favor of the bare field \( f \) on the boundary.
+!extra:
+- \( f \) is continuously differentiable on an open region containing \( C \).
+- \( C \) is piecewise smooth.
 ~~~
 
 !id: KM9F4tejpN
@@ -27,8 +35,11 @@ The left side is a scalar line integral (1-dimensional) of the vector field \( \
 \[
   \oint_{\partial D} (P\,dx + Q\,dy) = \iint_D \left(\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}\right) dA.
 \]
-The right side integrates the scalar curl \( Q_x - P_y \) (a scalar field) over the 2-dimensional plane region \( D \). The left side integrates the vector field \( (P,Q) \) as a work integral along the 1-dimensional boundary curve \( \partial D \), traversed counterclockwise.
-!extra: Assumes \( P, Q \) are continuously differentiable on an open region containing \( D \), and \( D \) is a bounded region with piecewise-smooth, positively oriented boundary.
+- The right side integrates the scalar curl \( Q_x - P_y \) (a scalar field) over the 2-dimensional plane region \( D \).
+- The left side integrates the vector field \( (P,Q) \) as a work integral along the 1-dimensional boundary curve \( \partial D \), traversed counterclockwise.
+!extra:
+- \( P, Q \) are continuously differentiable on an open region containing \( D \).
+- \( D \) is a bounded region with piecewise-smooth, positively oriented boundary.
 ~~~
 
 !id: VPxVmNIQzF
@@ -37,8 +48,13 @@ The right side integrates the scalar curl \( Q_x - P_y \) (a scalar field) over 
 \[
   \iint_S (\nabla \times \mathbf{F}) \cdot d\mathbf{S} = \oint_{\partial S} \mathbf{F} \cdot d\mathbf{r}.
 \]
-The left side turns the curl (a vector field) into a scalar flux integrand via \( \cdot\,d\mathbf{S} \), integrated over the 2-dimensional surface \( S \). The right side is \( \mathbf{F} \) integrated as work along the 1-dimensional boundary curve \( \partial S \). Green's theorem is the special case where \( S \) is a flat region in the \( xy \)-plane and \( \mathbf{F} = (P,Q,0) \) has no \( z \)-component: then \( (\nabla\times\mathbf{F})\cdot d\mathbf{S} \) reduces to \( (Q_x-P_y)\,dA \).
-!extra: Assumes \( \mathbf{F} \) is continuously differentiable on an open region containing \( S \), and \( S \) is an orientable, piecewise-smooth surface whose boundary orientation is compatible with the chosen surface normal.
+- The left side turns the curl (a vector field) into a scalar flux integrand via \( \cdot\,d\mathbf{S} \), integrated over the 2-dimensional surface \( S \).
+- The right side is \( \mathbf{F} \) integrated as work along the 1-dimensional boundary curve \( \partial S \).
+
+Green's theorem is the special case where \( S \) is a flat region in the \( xy \)-plane and \( \mathbf{F} = (P,Q,0) \) has no \( z \)-component: then \( (\nabla\times\mathbf{F})\cdot d\mathbf{S} \) reduces to \( (Q_x-P_y)\,dA \).
+!extra:
+- \( \mathbf{F} \) is continuously differentiable on an open region containing \( S \).
+- \( S \) is an orientable, piecewise-smooth surface whose boundary orientation is compatible with the chosen surface normal.
 ~~~
 
 !id: I9gs1P5SYb
@@ -47,21 +63,9 @@ The left side turns the curl (a vector field) into a scalar flux integrand via \
 \[
   \iiint_V (\nabla \cdot \mathbf{F})\,dV = \iint_{\partial V} \mathbf{F} \cdot d\mathbf{S}.
 \]
-The left side integrates the divergence (a scalar field) over the 3-dimensional solid \( V \). The right side is \( \mathbf{F} \) integrated as flux through the 2-dimensional boundary surface \( \partial V \), oriented outward.
-!extra: Assumes \( \mathbf{F} \) is continuously differentiable on an open region containing \( V \), and \( V \) is a bounded solid with piecewise-smooth boundary.
-~~~
-
-!id: xveAkgGCUy
-!front: Across the Fundamental Theorem of Calculus, the gradient theorem, Green's/Stokes' theorem, and the divergence theorem, what stays the same as the dimension of the region increases from 1 to 3?
-!back: In every case, a derivative of a field integrated over an \( n \)-dimensional region equals the plain, undifferentiated field integrated over its \( (n-1) \)-dimensional boundary. Reading across each equation, the derivative side is always "inside" and the plain field is always "on the boundary," and the dimension always drops by exactly one.
-~~~
-
-!id: i4Khm6eYY5
-!front: In the language of differential forms, how do the Fundamental Theorem of Calculus, the gradient theorem, Green's/Stokes' theorem, and the divergence theorem collapse into a single statement?
-!back:
-All four are instances of one identity,
-\[
-  \int_\Omega d\omega = \int_{\partial\Omega} \omega,
-\]
-where \( d \) is the exterior derivative — a single operator that specializes to the ordinary derivative, gradient, curl, or divergence depending on the type (degree) of the differential form \( \omega \). The dimension of \( \Omega \) determines which specialization appears.
+- The left side integrates the divergence (a scalar field) over the 3-dimensional solid \( V \).
+- The right side is \( \mathbf{F} \) integrated as flux through the 2-dimensional boundary surface \( \partial V \), oriented outward.
+!extra:
+- \( \mathbf{F} \) is continuously differentiable on an open region containing \( V \).
+- \( V \) is a bounded solid with piecewise-smooth boundary.
 ~~~

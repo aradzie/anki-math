@@ -16,159 +16,22 @@ It does not apply directly to \( 0\cdot\infty \), \( \infty-\infty \), \( 1^\inf
 
 !id: dMctlA06T4
 !front: What differentiability assumptions are needed before applying L'Hopital's Rule near \( x=a \)?
-!back:
-The functions \( f \) and \( g \) must be differentiable on a punctured neighborhood of \( a \). The value at \( a \) itself need not be defined.
-
-A punctured neighborhood means values sufficiently close to \( a \), excluding \( a \) itself.
-~~~
-
-!id: bFIDUzpGZa
-!front: Why does L'Hopital's Rule require \( g'(x) \neq 0 \) near the limiting point?
-!back: The quotient \( \frac{f'(x)}{g'(x)} \) must be defined near the limiting point. The proof also uses a mean-value-theorem comparison between increments of \( f \) and \( g \), which requires the denominator derivative not to vanish on the interval being compared.
-!extra: The condition is about \( g' \), not about \( g \) at the limiting point. In a \( \frac{0}{0} \) case, \( g(x) \to 0 \) is expected.
-~~~
-
-!id: 0MjjdF7VSy
-!front: What must be true of \( \lim_{x \to a} \frac{f'(x)}{g'(x)} \) before L'Hopital's Rule gives a conclusion?
-!back: The derivative quotient limit must exist as a finite number or diverge to \( +\infty \) or \( -\infty \). If this limit does not exist, L'Hopital's Rule gives no conclusion about \( \lim_{x \to a} \frac{f(x)}{g(x)} \).
+!back: The functions \( f \) and \( g \) must be differentiable on a punctured neighborhood of \( a \). The value at \( a \) itself need not be defined.
 ~~~
 
 !id: dlexZHj88S
 !front: Does L'Hopital's Rule require \( f(a) \) and \( g(a) \) to be defined?
 !back: No. The rule concerns values of \( f \) and \( g \) near \( a \), not necessarily at \( a \). It is enough that the relevant limits and differentiability hypotheses hold on a punctured neighborhood of \( a \).
-!extra: Changing \( f(a) \) or \( g(a) \), when those values are defined, does not change \( \lim_{x \to a} \frac{f(x)}{g(x)} \).
-~~~
-
-!id: SkSz3nJRkB
-!front: Why is the form \( \frac{0}{0} \) or \( \frac{\infty}{\infty} \) essential in L'Hopital's Rule?
-!back: Because the rule compares the relative rates at which the numerator and denominator approach their limiting behavior. If the quotient is not indeterminate, ordinary limit laws may already determine the limit, and differentiating numerator and denominator can change the answer.
-~~~
-
-!id: mjavhL1jdA
-!front: Construct a simple counterexample showing that L'Hopital's Rule cannot be used on a non-indeterminate quotient.
-!back:
-As \( x \to 0 \),
-\[
-    \lim_{x \to 0} \frac{x}{1+x}=0,
-    \qquad
-    \lim_{x \to 0} \frac{(x)'}{(1+x)'}=1.
-\]
-The original quotient is not \( \frac{0}{0} \) or \( \frac{\infty}{\infty} \), so L'Hopital's Rule is not applicable.
-~~~
-
-!id: T9h7pjgcc7
-!front: What checks are still required in an \( \frac{\infty}{\infty} \) problem before applying L'Hopital's Rule?
-!back: One must check that \( f \) and \( g \) are differentiable near the limiting point, \( g'(x) \neq 0 \) there, the quotient really has form \( \frac{\pm\infty}{\pm\infty} \), and the derivative quotient limit exists as a finite number or \( \pm\infty \).
 ~~~
 
 !id: Bev3dVqtYW
-!front: Give an example where the original quotient limit exists but the derivative quotient limit does not.
+!front: Construct \( f \) and \( g \) with \( \lim_{x\to\infty} f(x)/g(x) \) existing but \( \lim_{x\to\infty} f'(x)/g'(x) \) not existing, showing the hypothesis of L'Hopital's Rule is not necessary for the original limit to exist.
 !back:
-For \( x \to \infty \),
+Take \( f(x) = x + \sin x \) and \( g(x) = x \). As \( x \to \infty \),
 \[
-    \frac{x+\sin x}{x} \to 1,
+    \frac{f(x)}{g(x)} = \frac{x+\sin x}{x} \to 1,
     \qquad
-    \frac{(x+\sin x)'}{x'} = 1+\cos x
+    \frac{f'(x)}{g'(x)} = 1+\cos x
 \]
-has no limit. So existence of the derivative quotient limit is sufficient for L'Hopital's Rule, not necessary for the original limit to exist.
-~~~
-
-!id: IIuSJmKihw
-!front: How can a product limit of the form \( 0 \cdot \infty \) be rewritten for possible use of L'Hopital's Rule?
-!back:
-Rewrite the product as a quotient. If \( f(x) \to 0 \) and \( h(x) \to \infty \), then one possible rewrite is
-\[
-    f(x)h(x)
-    =
-    \frac{f(x)}{1/h(x)}.
-\]
-This may produce a \( \frac{0}{0} \) form.
-!extra: Another possible rewrite is \( h(x)/(1/f(x)) \), which may produce an \( \frac{\infty}{\infty} \) form.
-~~~
-
-!id: 2eC2yC8k5r
-!front: How can a difference limit of the form \( \infty-\infty \) be prepared for possible use of L'Hopital's Rule?
-!back: Rewrite the difference into a quotient, often by combining terms over a common denominator, rationalizing, or factoring. L'Hopital's Rule can be considered only after the rewritten expression has form \( \frac{0}{0} \) or \( \frac{\infty}{\infty} \).
-~~~
-
-!id: 6gr812GO1U
-!front: How can a limit of \( f(x)^{g(x)} \) be transformed before using L'Hopital's Rule?
-!back:
-Set
-\[
-    y = f(x)^{g(x)}
-\]
-and take logarithms:
-\[
-    \ln y = g(x)\ln(f(x)).
-\]
-Then analyze the limit of \( g(x)\ln(f(x)) \), usually after rewriting it as a quotient.
-!extra: This requires \( f(x)>0 \) near the limiting point if real logarithms are being used.
-~~~
-
-!id: TjuqNflzvD
-!front: After finding \( \lim \ln y = A \) for \( y=f(x)^{g(x)} \), what limit can be concluded?
-!back:
-If the logarithm setup is valid and \( \ln y \to A \), then
-\[
-    y \to e^A.
-\]
-Thus
-\[
-    \lim f(x)^{g(x)} = e^A.
-\]
-!extra: This conclusion uses continuity of the exponential function.
-~~~
-
-!id: fRpCYWAE2M
-!front: What happens when L'Hopital's Rule is applied one-sidedly to \( \lim_{x \to 0} \frac{\sin x}{x^2} \)?
-!back:
-The derivative quotient is
-\[
-    \frac{(\sin x)'}{(x^2)'} = \frac{\cos x}{2x}.
-\]
-As \( x \to 0^+ \), this tends to \( +\infty \). As \( x \to 0^- \), this tends to \( -\infty \).
-~~~
-
-!id: SiFNwv4r2g
-!front: Why does \( \lim_{x \to 0} \frac{\sin x}{x^2} \) fail to exist as a two-sided limit?
-!back: The right-hand limit is \( +\infty \), while the left-hand limit is \( -\infty \). Since the one-sided limits do not agree, the two-sided limit does not exist.
-!extra: L'Hopital's Rule can support the one-sided conclusions here because each side satisfies the appropriate hypotheses.
-~~~
-
-!id: q46Md5yVK0
-!front: What must be true before applying L'Hopital's Rule a second time?
-!back: The new quotient after the first differentiation must again have form \( \frac{0}{0} \) or \( \frac{\pm\infty}{\pm\infty} \), satisfy the differentiability and nonzero-denominator-derivative hypotheses, and have a derivative quotient limit to evaluate.
-~~~
-
-!id: NOciCbGHD8
-!front: Why is repeated L'Hopital use not just "differentiate until the expression looks simple"?
-!back: Each use of the rule has its own hypotheses. If a later quotient is no longer indeterminate, or if the new derivative quotient is undefined or has no limit, the next application is not justified.
-~~~
-
-!id: 67mX3WFJhs
-!front: What theorem underlies the proof of L'Hopital's Rule in the \( \frac{0}{0} \) case?
-!back:
-Cauchy's Mean Value Theorem. It relates the quotient of increments
-\[
-    \frac{f(x)-f(a)}{g(x)-g(a)}
-\]
-to a derivative quotient
-\[
-    \frac{f'(c)}{g'(c)}
-\]
-for some \( c \) between \( a \) and \( x \).
-~~~
-
-!id: fC4MaaVZh6
-!front: Give the proof idea for L'Hopital's Rule in the \( \frac{0}{0} \) case after applying Cauchy's Mean Value Theorem.
-!back:
-After redefining \( f(a)=g(a)=0 \), Cauchy's Mean Value Theorem gives
-\[
-    \frac{f(x)}{g(x)}
-    =
-    \frac{f'(c)}{g'(c)}
-\]
-for some \( c \) between \( a \) and \( x \). As \( x \to a \), also \( c \to a \), so if \( \frac{f'}{g'} \to L \), then \( \frac{f}{g} \to L \).
-!extra: This is a proof sketch; endpoint and one-sided details are being compressed.
+has no limit, since \( \cos x \) oscillates forever. So the derivative quotient's limit existing is sufficient for L'Hopital's Rule to determine the original limit, but not necessary for the original limit to exist on its own.
 ~~~

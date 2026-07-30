@@ -3,7 +3,7 @@
 !tags: Math Calculus Vectors
 
 !id: RwJhAfzXOP
-!front: Whatis a **Quadric Surface**?
+!front: What is a **Quadric Surface**?
 !back:
 A **Quadric Surface** is a surface in three-dimensional space whose equation is a second-degree polynomial in the variables \( x \), \( y \) and \( z \).
 
@@ -12,42 +12,51 @@ The most general **Quadric Surface** has the form
 \[
 \begin{align*}
     & A x^2 + B y^2 + C z^2 \\
-    & + D xy + E yz + F xz & \\
+    & + D xy + E yz + F xz \\
     & + G x + H y + I z \\
     & + J \\
     & = 0
 \end{align*}
 \]
 
-where \( A \), \( B \), \( C \),... are all constants.
+where \( A \), \( B \), \( C \), \( D \), \( E \), \( F \), \( G \), \( H \), \( I \), \( J \) are real constants.
+!extra: \( A \), \( B \), \( C \), \( D \), \( E \), \( F \) cannot all be zero, otherwise the equation is only first-degree and describes a plane (or a degenerate case) rather than a genuine quadric surface.
 ~~~
+
+!type: Basic Math (and reversed card)
 
 !id: RufVfJtOHL
 !front: **Ellipsoid** centered at the origin.
 !back: \[ \frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2} = 1 \]
+!extra: \( a \), \( b \), \( c \) are nonzero real constants, conventionally taken positive (the semi-axis lengths along the \( x \), \( y \), \( z \) axes).
 ~~~
 
 !id: LqzYwZQIqS
-!front: **Elliptic Paraboloid** centered at the origin.
+!front: **Elliptic Paraboloid** with vertex at the origin.
 !back: \[ z = \frac{x^2}{a^2} + \frac{y^2}{b^2} \]
+!extra: \( a \), \( b \) are nonzero real constants, conventionally taken positive. The surface is not symmetric under \( (x,y,z) \mapsto (-x,-y,-z) \), so the origin is a vertex, not a center of symmetry.
 ~~~
 
 !id: feBbesi90N
-!front: **Hyperbolic Paraboloid** centered at the origin.
+!front: **Hyperbolic Paraboloid** with vertex at the origin.
 !back: \[ z = \frac{x^2}{a^2} - \frac{y^2}{b^2} \]
+!extra: \( a \), \( b \) are nonzero real constants, conventionally taken positive. The surface is not symmetric under \( (x,y,z) \mapsto (-x,-y,-z) \), so the origin is a saddle point (vertex), not a center of symmetry.
 ~~~
 
 !id: NEKErmAPk5
 !front: **Hyperboloid of One Sheet** centered at the origin.
 !back: \[ \frac{x^2}{a^2} + \frac{y^2}{b^2} - \frac{z^2}{c^2} = 1 \]
+!extra: \( a \), \( b \), \( c \) are nonzero real constants, conventionally taken positive.
 ~~~
 
 !id: nfByyXn5r6
 !front: **Hyperboloid of Two Sheets** centered at the origin.
 !back: \[ \frac{x^2}{a^2} + \frac{y^2}{b^2} - \frac{z^2}{c^2} = -1 \]
+!extra: \( a \), \( b \), \( c \) are nonzero real constants, conventionally taken positive.
 ~~~
 
 !id: jcy5MNA9hf
-!front: **Elliptic Cone** centered at the origin.
+!front: **Elliptic Cone** with vertex at the origin.
 !back: \[ \frac{z^2}{c^2} = \frac{x^2}{a^2} + \frac{y^2}{b^2} \]
+!extra: \( a \), \( b \), \( c \) are nonzero real constants, conventionally taken positive.
 ~~~

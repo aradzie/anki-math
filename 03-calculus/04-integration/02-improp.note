@@ -33,12 +33,20 @@ provided **both** improper integrals on the right (each with a singularity at an
 
 !id: LG7raW1j99
 !front: What does it mean for an improper integral to converge or diverge?
-!back: It converges if the defining limit (or, for doubly-improper cases, every piece of the split) exists and is finite; otherwise it diverges. Convergence to \( \pm\infty \) or non-existence of the limit both count as divergence.
+!back:
+It converges if the defining limit — or, for doubly-improper cases, every piece of the split — satisfies both:
+
+- exists
+- is finite
+
+Otherwise it diverges.
 ~~~
 
 !id: epXECIT6Xr
 !front: Why must each piece of a doubly-improper integral converge independently, rather than just requiring their sum or a symmetric limit to exist?
-!back: Requiring only a symmetric limit (like \( \lim_{R\to\infty}\int_{-R}^R f \)) can mask divergence through cancellation — e.g. that symmetric limit for \( \int_{-\infty}^\infty x\, dx \) equals \( 0 \) for every \( R \), even though neither \( \int_0^\infty x\, dx \) nor \( \int_{-\infty}^0 x\, dx \) converges. Demanding independent convergence of each piece rules out such artifacts and makes the value of the integral independent of how it's split.
+!back:
+- Requiring only a symmetric limit (like \( \lim_{R\to\infty}\int_{-R}^R f \)) can mask divergence through cancellation — e.g. that symmetric limit for \( \int_{-\infty}^\infty x\, dx \) equals \( 0 \) for every \( R \), even though neither \( \int_0^\infty x\, dx \) nor \( \int_{-\infty}^0 x\, dx \) converges.
+- Demanding independent convergence of each piece rules out such artifacts and makes the value of the integral independent of how it's split.
 !extra: This is exactly the gap the Cauchy principal value exploits: it only requires the weaker symmetric limit to exist.
 ~~~
 
@@ -78,14 +86,21 @@ confirming divergence at the boundary case.
 
 !id: w8OOBLhRgv
 !front: State the direct comparison test for improper integrals.
-!back: Suppose \( 0 \le f(x) \le g(x) \) for all \( x \) near the point of impropriety. Then: if \( \int g \) converges, so does \( \int f \); if \( \int f \) diverges, so does \( \int g \).
+!back:
+Suppose \( 0 \le f(x) \le g(x) \) for all \( x \) near the point of impropriety. Then:
+
+- if \( \int g \) converges, so does \( \int f \)
+- if \( \int f \) diverges, so does \( \int g \)
 ~~~
 
 !id: lt6BtYjoAX
 !front: State the limit comparison test for improper integrals.
 !back:
-Suppose \( f(x), g(x) > 0 \) near the point of impropriety and
-\[ \lim \frac{f(x)}{g(x)} = L, \quad 0 < L < \infty. \]
+Suppose:
+
+- \( f(x), g(x) > 0 \) near the point of impropriety \( c \) (a finite endpoint or \( \pm\infty \))
+- \( \lim_{x \to c} \frac{f(x)}{g(x)} = L, \quad 0 < L < \infty \)
+
 Then \( \int f \) and \( \int g \) either both converge or both diverge.
 ~~~
 
@@ -107,7 +122,13 @@ diverges, since \( |\sin x| \) stays bounded away from \( 0 \) on intervals of l
 !id: hG7duzcmmD
 !front: State the integral test for convergence of a series \( \sum_{n=N}^\infty a_n \).
 !back:
-If \( f \) is positive, decreasing, and continuous on \( [N,\infty) \) with \( f(n) = a_n \) for all integers \( n \ge N \), then
+If \( f \) is:
+
+- positive
+- decreasing
+- continuous on \( [N,\infty) \)
+
+with \( f(n) = a_n \) for all integers \( n \ge N \), then
 \[ \sum_{n=N}^\infty a_n \text{ converges} \iff \int_N^\infty f(x)\, dx \text{ converges}. \]
 ~~~
 
@@ -127,12 +148,21 @@ a single symmetric limit, analogous to the p.v. definition for \( \int_{-\infty}
 
 !id: ul3k9h3rUd
 !front: Why can the Cauchy principal value of \( \int_{-\infty}^\infty f(x)\, dx \) exist even when the improper integral itself diverges?
-!back: Splitting at arbitrary \( c \) requires evaluating \( \int_{-\infty}^c f + \int_c^\infty f \) separately, which is an indeterminate \( \infty - \infty \) when the tails diverge with opposite sign. The principal value avoids this by taking one joint limit \( R \to \infty \) on both bounds at once, letting the two infinities cancel algebraically before the limit is taken — so p.v. convergence is strictly weaker than convergence of the improper integral.
+!back:
+- Splitting at arbitrary \( c \) requires evaluating \( \int_{-\infty}^c f + \int_c^\infty f \) separately, which is an indeterminate \( \infty - \infty \) when the tails diverge with opposite sign.
+- The principal value avoids this by taking one joint limit \( R \to \infty \) on both bounds at once, letting the two infinities cancel algebraically before the limit is taken.
+
+So p.v. convergence is strictly weaker than convergence of the improper integral.
 ~~~
 
 !id: XG8RFgkj4i
 !front: Show that \( \text{p.v.} \int_{-\infty}^\infty x\, dx = 0 \), even though \( \int_{-\infty}^\infty x\, dx \) diverges.
 !back:
 \[ \lim_{R\to\infty} \int_{-R}^R x\, dx = \lim_{R\to\infty} \left[ \frac{x^2}{2} \right]_{-R}^R = \lim_{R\to\infty} 0 = 0, \]
-so the principal value exists and equals \( 0 \). But \( \int_0^\infty x\, dx = \lim_{R\to\infty} \frac{R^2}{2} = \infty \) diverges (similarly for \( \int_{-\infty}^0 x\, dx \)), so the improper integral itself diverges.
+so the principal value exists and equals \( 0 \).
+
+- \( \int_0^\infty x\, dx = \lim_{R\to\infty} \frac{R^2}{2} = \infty \)
+- similarly, \( \int_{-\infty}^0 x\, dx \) diverges
+
+So the improper integral itself diverges, even though its principal value exists.
 ~~~

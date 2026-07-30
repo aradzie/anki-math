@@ -7,11 +7,13 @@ description: Create, edit, or review Anki math flashcards in this repository's c
 
 ## Purpose
 
-Create math flashcards in this repository's custom `.note` format. Cards should be short enough that the learner can usually answer in a few sentences while still testing explanation, derivation, comparison, interpretation, assumptions, or failure cases.
+Create math flashcards in this repository's custom `.note` format. Notes should be short enough that the learner can usually answer in a few sentences while still testing explanation, derivation, comparison, interpretation, assumptions, or failure cases.
 
 ## Calibration
 
-Target audience: a passionate, technically sophisticated self-learner — e.g. an experienced software engineer — working independently through single- and multi-variable calculus, linear algebra, and differential equations at the level of Apostol, Spivak, and Stewart. They are comfortable with formal notation, proofs, and abstraction, want depth well beyond mechanical computation, and do not need simplification unless a concept is genuinely subtle — but they are not taking a dedicated real analysis, topology, or measure theory course.
+Before drafting notes, confirm that scope, audience level, and rigor expectations are established for this session or topic. If they have not already been established earlier in the conversation, invoke the `calibrate` skill via the Skill tool first, and use its answers in place of the defaults below for the rest of the session.
+
+Default target audience, offered by `calibrate` as a starting point: a passionate, technically sophisticated self-learner — e.g. an experienced software engineer — working independently through single- and multi-variable calculus, linear algebra, and differential equations at the level of Apostol, Spivak, and Stewart. They are comfortable with formal notation, proofs, and abstraction, want depth well beyond mechanical computation, and do not need simplification unless a concept is genuinely subtle — but they are not taking a dedicated real analysis, topology, or measure theory course.
 
 ### Level of Rigor
 
@@ -31,7 +33,7 @@ In scope:
 - Ordinary differential equations: standard solution methods, qualitative and stability analysis, existence/uniqueness (e.g. Picard–Lindelöf) at the level of statement and intuition rather than full contraction-mapping proof detail.
 - Proof habits used throughout Apostol/Spivak: working rigorously from definitions, direct proofs of calculus theorems, constructing counterexamples.
 
-Out of scope — do not write cards on:
+Out of scope — do not write notes on:
 
 - General topology.
 - Measure theory and Lebesgue integration.
@@ -43,7 +45,7 @@ When a topic is ambiguous, use this test: would it appear in a calculus or intro
 
 ### Proof Awareness
 
-The audience wants to be able to reconstruct proofs, not memorize them verbatim. Where useful, favor cards about the key idea behind a proof, the critical lemma, why a proof technique works, where a hypothesis is used, and counterexamples when a hypothesis is dropped — a natural extension of the "construct a counterexample" and "what breaks if" prompt patterns in Note-Writing Standards below.
+The audience wants to be able to reconstruct proofs, not memorize them verbatim. Where useful, favor notes about the key idea behind a proof, the critical lemma, why a proof technique works, where a hypothesis is used, and counterexamples when a hypothesis is dropped — a natural extension of the "construct a counterexample" and "what breaks if" prompt patterns in Note-Writing Standards below.
 
 ## Repository Context
 
@@ -57,6 +59,17 @@ The audience wants to be able to reconstruct proofs, not memorize them verbatim.
 A `.note` file is plain text containing metadata directives and note records.
 
 Metadata directives set defaults for subsequent note records. Note records contain field directives whose values become Anki model fields.
+
+### Notes vs. Cards
+
+This document distinguishes two things that are easy to conflate:
+
+- A **note** is one record in a `.note` file — a `!front:`/`!back:` group (with optional `!related:`/`!extra:`), terminated by `~~~`. It is the unit of authoring: all guidance in this document about drafting, granularity, and splitting content operates on notes.
+- A **card** is a single study item Anki actually shows during review, generated *from* a note by its note type. A note is the source; a card is the rendered output — a note can produce more than one card:
+  - `Basic Math` generates one card per note (front → back).
+  - `Basic Math (and reversed card)` generates two cards per note (front → back, and back → front) from the same fields.
+
+"Flashcard" is used informally elsewhere in this repository (including this skill's own name and title) as the umbrella term for the artifact type as a whole — not as a synonym for either term above.
 
 ### Directives
 
@@ -143,7 +156,7 @@ The `!id:` field, if exists, contains an automatically generated stable note ide
 - Use `!front:` for the prompt the learner must answer from memory.
 - Use `!back:` for the required answer, derivation, proof sketch, or explanation.
 - Use `!related:` for nearby facts, identities, or comparisons that are useful after answering but are not required for correctness.
-- Use `!extra:` for assumptions, edge cases, examples, warnings, or context that would clutter the main answer.
+- Use `!extra:` for assumptions, warnings, or brief context that would clutter the main answer. A worked example or a recognition case (e.g. a boundary where the concept is undefined or fails) is itself testable and belongs on its own note instead — see "Extracting Worked Examples" below.
 - Keep `!back:` sufficient on its own; do not require `!related:` or `!extra:` to make the answer correct.
 
 ### Editing Rules
@@ -173,7 +186,7 @@ The `!id:` field, if exists, contains an automatically generated stable note ide
 
 - Keep notation consistent within the file and with nearby topic files.
 - State assumptions explicitly: domains, nonzero denominators, differentiability, invertibility, convergence conditions, matrix dimensions, branch choices, and quantifiers.
-- Use Markdown bullets only when they improve readability.
+- Use Markdown bullets to break a long statement into cohesive chunks — hypotheses, preconditions, cases, or multi-part conclusions — instead of folding them into one long sentence; see "Chunking Complex Statements" below. Do not bullet prose that has no separable parts.
 - Keep answers direct and short. Avoid filler, motivational language, long exposition, and large lists.
 
 ## Note-Writing Standards
@@ -190,9 +203,30 @@ Prefer prompts that test understanding rather than recall. Good fronts often sta
 - `Construct a counterexample to ...`
 - `Explain why ...`
 
-Design each card at the right granularity. A good card has a focused target and a `!back:` that can usually be answered in a few sentences. If the natural answer is a whole theorem statement, a long definition, a full taxonomy, or a list of many cases, split it into several cards: hypotheses, conclusion, intuition, proof idea, failure case, example, or comparison.
+Design each note at the right granularity. A good note has a focused target and a `!back:` that can usually be answered in a few sentences. If the natural answer is a whole theorem statement, a long definition, a full taxonomy, or a list of many cases, split it into several notes: hypotheses, conclusion, intuition, proof idea, failure case, example, or comparison.
 
-Use a small number of substantial notes per concept instead of many shallow variants, but do not make one card carry an entire section of material. Increase depth within a topic by moving from definitions to consequences, assumptions, derivations, and failure cases.
+Use a small number of substantial notes per concept instead of many shallow variants, but do not make one note carry an entire section of material. Increase depth within a topic by moving from definitions to consequences, assumptions, derivations, and failure cases.
+
+### Chunking Complex Statements
+
+A theorem or definition with several moving parts recalls poorly as one dense sentence. Reformulate it as bulleted chunks — one bullet per cohesive part — rather than chaining clauses with "and" or commas:
+
+- Give hypotheses their own bulleted list, one bullet per condition, even when there is only one — e.g. a single "closed and bounded" precondition still gets its own bullet, separate from continuity, if it is conceptually distinct.
+- State the conclusion as a short sentence after the hypothesis list (introduced by "then"), or as its own bullets if the conclusion itself has independent parts.
+- Move informal restatements, geometric intuition, or "in simpler terms" framing out of `!back:` and into `!extra:`, so the bulleted statement stays precise and uncluttered.
+- Do not bullet a single free-standing sentence with no separable parts — bullets exist to separate cohesive chunks, not to decorate prose.
+
+This is a different tool from splitting a topic across multiple notes (see the granularity guidance above): chunk hypotheses/cases into bullets within one note's `!back:` first, and only split into separate notes when a well-chunked statement is still too large to test as a single note — e.g. hypotheses on one note, proof idea or failure case on another.
+
+### Extracting Worked Examples
+
+A definition's `!extra:` field often accumulates a "for example, ..." or "undefined when ..., e.g. ..." aside. That aside is itself a testable fact — applying the definition to a concrete case, or recognizing when it doesn't apply — and it stays passive, easy-to-reread exposition as long as it lives inside another note's `!extra:` rather than being recalled on its own.
+
+- If an `!extra:` example applies a definition to a concrete object (an equation, expression, sequence, etc.), promote it to its own note whose front asks the learner to work out the relevant quantity or property for that object, instead of stating the result as a parenthetical aside.
+- If an `!extra:` aside is a boundary or non-example — a case where the concept is undefined, inapplicable, or a hypothesis fails — promote it to its own recognition note that presents the case and asks the learner to evaluate it. It is fine for the correct answer to be "undefined" or "does not apply"; the point is testing recognition of the boundary, not softening it into a caveat.
+- Give each distinct example or non-example its own note. Do not bundle unrelated examples into one note.
+- When one concrete object naturally yields several related quantities together (e.g. both the order and the degree of the same ODE), ask for them jointly in a single front rather than splitting into near-duplicate notes over the same object.
+- After extracting an example onto its own note, trim the source note's `!extra:` down to the general rule and drop the now-duplicated example prose.
 
 Avoid by default:
 
@@ -220,7 +254,7 @@ Each note must stand alone. Anki shows notes individually and in arbitrary order
 - Do not state converses unless they are true under the stated assumptions.
 - Include hypotheses in the front when they are part of what the learner must recognize; otherwise include them clearly in the back or `!extra:`.
 - If compressing a proof, state what is being omitted without making the shortened argument false.
-- Prefer a short derivation or reason over an unsupported formula when the card is conceptual.
+- Prefer a short derivation or reason over an unsupported formula when the note is conceptual.
 - Check that notation used in the front is defined or standard in the surrounding file.
 
 ## Tooling
@@ -241,7 +275,7 @@ This walks the repository's `.note` files, parses and validates them, inserts an
 2. Decide whether the topic needs `Basic Math` or `Basic Math (and reversed card)`.
 3. Draft notes around focused conceptual targets, not just topic headings or whole theorems.
 4. Verify mathematical correctness, assumptions, and notation consistency.
-5. Check card granularity: each `!back:` should usually fit in a few sentences; split oversized answers into multiple notes.
+5. Check note granularity: each `!back:` should usually fit in a few sentences; split oversized answers into multiple notes.
 6. Verify syntax: metadata outside records, required `!front:` and `!back:` fields, preserved existing `!id:` values, and one `~~~` terminator per note.
 7. Run `npx notatki insert-id` (see Tooling above) to validate the file, assign missing ids, and pretty-print it.
 
@@ -264,6 +298,27 @@ The assumption \( c \ge 0 \) is necessary because \( |x| \) is always nonnegativ
 ~~~
 ```
 
+Theorem note with chunked hypotheses:
+
+```text
+!type: Basic Math
+!deck: Math::Calculus::Differentiation
+!tags: Math Calculus Differentiation Theory
+
+!front: The definition of the Rolle's Theorem.
+!back:
+The Rolle's Theorem states that if a function \( f \) is:
+
+- continuous on \( [a,b] \)
+- differentiable on \( (a,b) \)
+- \( f(a) = f(b) \)
+
+then there exists at least one \( c \in (a,b) \) such that \( f'(c) = 0 \).
+!extra:
+Geometrically: if a continuous, differentiable curve starts and ends at the same height, some point in between has a horizontal tangent.
+~~~
+```
+
 Formula note with a justified reverse:
 
 ```text
@@ -280,5 +335,20 @@ Formula note with a justified reverse:
     a^2 + b^2 &= (a - ib)(a + ib)
 \end{align*}
 \]
+~~~
+```
+
+Recognition note testing whether the learner recognizes that a property fails to apply, not just its ordinary computation:
+
+```text
+!type: Basic Math
+!deck: Math::Calculus::ODE
+!tags: Math Calculus Differential-Equation Theory
+
+!front: What are the order and degree of the ordinary differential equation \( \sin(y') + y = 0 \)?
+!back:
+Order \( 1 \), since the highest derivative present is \( y' \).
+
+Degree undefined, since the equation is not polynomial in the derivatives — \( y' \) appears inside \( \sin(\cdot) \), a transcendental function.
 ~~~
 ```

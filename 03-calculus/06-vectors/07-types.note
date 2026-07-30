@@ -1,0 +1,36 @@
+!type: Basic Math
+!deck: Math::Calculus::Vector Calculus
+!tags: Math Calculus Vectors
+
+!id: T6Gtqe5F3R
+!front: Why are a point \( \mathbf{p} = (x, y, z) \in \mathbb{R}^3 \) and a vector \( \mathbf{v} \in \mathbb{R}^3 \) easy to conflate, despite being conceptually different types?
+!back:
+They are written identically, as ordered triples of real numbers in the same set \( \mathbb{R}^3 \), so the notation itself carries no distinction. Conceptually they differ:
+
+- a point is *where* you are — a location in space;
+- a vector is a *displacement* — a magnitude-and-direction arrow, with no fixed location.
+!extra: This distinction matters because a field takes a point as input; whether the field returns a scalar (scalar field) or a vector (vector field) is a separate question from the type of the input itself.
+~~~
+
+!type: Basic Math (and reversed card)
+
+!id: kuynRe1QUe
+!front: \[ \mathbf{r} : [a, b] \to \mathbb{R}^3 \]
+!back: A parametrized curve: a \(1\)-parameter path through space, assigning a point \( \mathbf{r}(t) \in \mathbb{R}^3 \) to each \( t \in [a, b] \).
+~~~
+
+!id: EQu6pM9Gov
+!front: \[ \mathbf{r} : D \subset \mathbb{R}^2 \to \mathbb{R}^3 \]
+!back: A parametrized surface: a \(2\)-parameter sheet, assigning a point \( \mathbf{r}(u, v) \in \mathbb{R}^3 \) to each \( (u, v) \in D \).
+~~~
+
+!type: Basic Math
+
+!id: h0DWz4SfUq
+!front: How do the type signatures of a parametrized curve and a parametrized surface relate to more general vector-valued functions?
+!back:
+- A parametrized curve \( \mathbf{r} : [a, b] \to \mathbb{R}^3 \) is a vector-valued function of a single real variable, \( D \subseteq \mathbb{R} \to \mathbb{R}^n \), specialized to \( n = 3 \).
+- A parametrized surface \( \mathbf{r} : D \subset \mathbb{R}^2 \to \mathbb{R}^3 \) is a vector-valued function of several variables, \( D \subseteq \mathbb{R}^m \to \mathbb{R}^n \), specialized to \( m = 2 \), \( n = 3 \).
+
+The general signatures say nothing about geometry. What makes them a curve or a surface is reading the domain as a parameter space (an interval or a planar region) and the codomain as a point in space, so the image traces a path or sweeps out a sheet.
+~~~

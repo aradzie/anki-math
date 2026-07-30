@@ -64,6 +64,7 @@ so \( \mathbf{T}'(t) \) is orthogonal to \( \mathbf{T}(t) \). Since \( \mathbf{N
 The plane through \( \mathbf{r}(t_0) \) spanned by \( \mathbf{T}(t_0) \) and \( \mathbf{N}(t_0) \), with normal vector \( \mathbf{B}(t_0) \):
 
 \[ \mathbf{B}(t_0) \cdot \bigl(\mathbf{r} - \mathbf{r}(t_0)\bigr) = 0. \]
+!extra: Requires \( \mathbf{T}'(t_0) \ne \mathbf{0} \) (nonzero curvature at \( t_0 \)), so \( \mathbf{N}(t_0) \) and \( \mathbf{B}(t_0) \) are defined.
 ~~~
 
 !id: 5ofhgZbked
@@ -81,6 +82,7 @@ lies entirely in this plane, since \( \mathbf{r}' \) is parallel to \( \mathbf{T
 The plane through \( \mathbf{r}(t_0) \) spanned by \( \mathbf{N}(t_0) \) and \( \mathbf{B}(t_0) \), with normal vector \( \mathbf{T}(t_0) \):
 
 \[ \mathbf{T}(t_0) \cdot \bigl(\mathbf{r} - \mathbf{r}(t_0)\bigr) = 0. \]
+!extra: Requires \( \mathbf{T}'(t_0) \ne \mathbf{0} \) (nonzero curvature at \( t_0 \)), so \( \mathbf{N}(t_0) \) and \( \mathbf{B}(t_0) \) are defined.
 ~~~
 
 !id: aOb2lWWXDJ
@@ -94,6 +96,7 @@ The plane through \( \mathbf{r}(t_0) \) spanned by \( \mathbf{N}(t_0) \) and \( 
 The plane through \( \mathbf{r}(t_0) \) spanned by \( \mathbf{T}(t_0) \) and \( \mathbf{B}(t_0) \), with normal vector \( \mathbf{N}(t_0) \):
 
 \[ \mathbf{N}(t_0) \cdot \bigl(\mathbf{r} - \mathbf{r}(t_0)\bigr) = 0. \]
+!extra: Requires \( \mathbf{T}'(t_0) \ne \mathbf{0} \) (nonzero curvature at \( t_0 \)), so \( \mathbf{N}(t_0) \) and \( \mathbf{B}(t_0) \) are defined.
 ~~~
 
 !id: nnJ8u8Q6do

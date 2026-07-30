@@ -5,38 +5,39 @@
 !id: ax8Frvkg1t
 !front: The definition of the Extreme Value Theorem (EVT).
 !back:
-The Extreme Value Theorem states that if a real-valued function \( f \) is continuous on the closed and bounded interval \( [a,b] \), then \( f \) must attain a maximum and a minimum, each at least once.
+The Extreme Value Theorem states that if a real-valued function \( f \) is:
 
-That is, there exist numbers \( c \) and \( d \) in \( [a,b] \) such that: \( f(c) \leq f(x) \leq f(d) \quad \forall x \in [a,b] \).
+- continuous on \( [a,b] \)
+- \( [a,b] \) is closed and bounded
 
-In simpler terms, a continuous function on a closed interval will always have a highest point and a lowest point.
+then \( f \) attains a maximum and a minimum on \( [a,b] \), each at least once: there exist \( c, d \in [a,b] \) such that
+\[ f(c) \leq f(x) \leq f(d) \quad \forall x \in [a,b]. \]
+!extra: Informally: a continuous function on a closed interval always has a highest point and a lowest point.
 ~~~
 
 !id: RKhaYcqpZ1
 !front: The definition of the Rolle's Theorem.
 !back:
-The Rolle's Theorem states that if a function \( f(x) \) is:
+The Rolle's Theorem states that if a function \( f \) is:
 
-- continuous on a closed interval \( [a,b] \)
-- differentiable on the open interval \( (a,b) \)
-- \( f(a)=f(b) \)
+- continuous on \( [a,b] \)
+- differentiable on \( (a,b) \)
+- \( f(a) = f(b) \)
 
-then there exists at least one point \( c \) in the open interval \( (a,b) \) such that \( f'(c) = 0 \).
-
-Geometrically, this means if a continuous and differentiable curve starts and ends at the same height, there must be at least one point in between where the tangent line is horizontal (i.e., the slope is zero).
+then there exists at least one \( c \in (a,b) \) such that \( f'(c) = 0 \).
+!extra: Geometrically: if a continuous, differentiable curve starts and ends at the same height, some point in between has a horizontal tangent.
 ~~~
 
 !id: Nul59WMDrC
 !front: The definition of the Mean Value Theorem (MVT).
 !back:
-The Mean Value Theorem states that if a function \( f(x) \) is:
+The Mean Value Theorem states that if a function \( f \) is:
 
-- continuous on a closed interval \( [a,b] \)
-- differentiable on the open interval \( (a,b) \)
+- continuous on \( [a,b] \)
+- differentiable on \( (a,b) \)
 
-then there exists at least one point \( c \) in the open interval \( (a,b) \) such that the instantaneous rate of change (the derivative \( f'(c) \)) is equal to the average rate of change over the interval:
-
-\[ f'(c) = \frac{f(b) - f(a)}{b - a} \]
+then there exists at least one \( c \in (a,b) \) such that the instantaneous rate of change at \( c \) equals the average rate of change over \( [a,b] \):
+\[ f'(c) = \frac{f(b) - f(a)}{b - a}. \]
 ~~~
 
 !id: n7ee7EmSmb
@@ -52,7 +53,11 @@ The Rolle's Theorem can be derived from the Mean Value Theorem: if \( f(a) = f(b
 !id: 7sz7MRtXZk
 !front: The definition of the Intermediate Value Theorem (IVT).
 !back:
-The Intermediate Value Theorem states that if a function \( f(x) \) is continuous on a closed interval \( [a,b] \), and \( L \) is any value between \( f(a) \) and \( f(b) \), then there exists at least one number \( c \) in the interval \( [a,b] \) such that \( f(c)=L \).
+The Intermediate Value Theorem states that if:
 
-Intuitively, if you can draw the graph of a function without lifting your pencil, and it goes from one y-value to another, it must pass through all the y-values in between.
+- \( f \) is continuous on \( [a,b] \)
+- \( L \) is any value between \( f(a) \) and \( f(b) \)
+
+then there exists at least one \( c \in [a,b] \) such that \( f(c) = L \).
+!extra: Intuitively: if you can draw the graph without lifting your pencil, and it goes from one \( y \)-value to another, it must pass through every \( y \)-value in between.
 ~~~

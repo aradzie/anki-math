@@ -12,11 +12,6 @@ The Laplace transform of a function \( f(t) \) is a function \( F(s) \) defined 
 where \( f(t) \) is a function of exponential order defined for all \( t \ge 0 \).
 ~~~
 
-!id: RilngsWXIH
-!front: What does it mean for \( f(t) \) to be piecewise continuous on \( [0, \infty) \)?
-!back: On every finite interval \( [0, N] \), \( f(t) \) has at most finitely many jump discontinuities, and no infinite discontinuities or oscillatory discontinuities.
-~~~
-
 !id: IegvP6XVGa
 !front: What does it mean for \( f(t) \) to be of exponential order \( \alpha \)?
 !back:
@@ -154,8 +149,11 @@ Obtained by differentiating \( F(s) = \int_0^\infty e^{-st} f(t) \, dt \) under 
 ~~~
 
 !id: bqqphxjfU9
-!front: What is the convolution \( f * g \) of two functions?
-!back: \[ (f * g)(t) = \int_0^t f(\tau) \, g(t - \tau) \, d\tau \]
+!front: What is the convolution \( f * g \) of two functions, in the context of the Laplace transform?
+!back:
+\[ (f * g)(t) = \int_0^t f(\tau) \, g(t - \tau) \, d\tau \]
+
+The bounds are finite rather than \( \pm\infty \) because \( f \) and \( g \) are taken to vanish for negative argument (the Laplace-transform convention): the general two-sided convolution \( \int_{-\infty}^{\infty} f(\tau) \, g(t - \tau) \, d\tau \) has a nonzero integrand only for \( \tau \in [0, t] \), so it collapses to \( \int_0^t \).
 ~~~
 
 !id: 0kurqM5PTb
@@ -238,7 +236,7 @@ For \( c \ge 0 \), the unit impulse function has unit area:
 !back:
 Integrating a function \( f(t) \) against \( \delta(t - c) \) recovers the value of \( f \) at \( c \):
 
-\[ \int_{-\infty}^{\infty} f(t) \delta (t - c) \, dt = f(c) \]
+\[ \int_0^{\infty} f(t) \delta (t - c) \, dt = f(c) \quad (c \ge 0) \]
 ~~~
 
 !id: rbjlut2qvy
@@ -247,4 +245,141 @@ Integrating a function \( f(t) \) against \( \delta(t - c) \) recovers the value
 The derivative of the unit step function (Heaviside function) is the unit impulse function (Dirac delta function):
 
 \[ \frac{d}{dt} u(t) = \delta(t) \]
+~~~
+
+!id: YMR5Mc1KE4
+!front: Derive \( \mathscr{L}\{1\} \)
+!back:
+\[
+\begin{align*}
+    \mathscr{L}\{1\}
+        &= \int_0^\infty e^{-st} \, dt \\
+        &= \left[ -\frac{1}{s} e^{-st} \right]_0^\infty \\
+        &= \frac{1}{s}, \quad s > 0
+\end{align*}
+\]
+~~~
+
+!id: neWU37YoMb
+!front: Derive \( \mathscr{L}\{t\} \)
+!back:
+Integrate by parts with \( u = t \), \( dv = e^{-st} \, dt \):
+
+\[
+\begin{align*}
+    \mathscr{L}\{t\}
+        &= \int_0^\infty t e^{-st} \, dt \\
+        &= \underbrace{\left[ -\frac{t}{s} e^{-st} \right]_0^\infty}_{0}
+            + \frac{1}{s} \underbrace{\int_0^\infty e^{-st} \, dt}_{\mathscr{L}\{1\}} \\
+        &= \frac{1}{s} \cdot \frac{1}{s} \\
+        &= \frac{1}{s^2}
+\end{align*}
+\]
+~~~
+
+!id: h1rk7EJImz
+!front: Derive \( \mathscr{L}\{t^n\} \), \( n = 1, 2, 3, \ldots \)
+!back:
+Integrate by parts with \( u = t^n \), \( dv = e^{-st} \, dt \):
+
+\[
+\begin{align*}
+    \mathscr{L}\{t^n\}
+        &= \int_0^\infty t^n e^{-st} \, dt \\
+        &= \underbrace{\left[ -\frac{t^n}{s} e^{-st} \right]_0^\infty}_{0}
+            + \frac{n}{s} \underbrace{\int_0^\infty t^{n-1} e^{-st} \, dt}_{\mathscr{L}\{t^{n-1}\}} \\
+        &= \frac{n}{s} \mathscr{L}\{t^{n-1}\}
+\end{align*}
+\]
+
+Applying this reduction \( n \) times starting from \( \mathscr{L}\{1\} = 1/s \) gives
+
+\[ \mathscr{L}\{t^n\} = \frac{n!}{s^{n+1}} \]
+~~~
+
+!id: SMinFhKwbA
+!front: Derive \( \mathscr{L}\{e^{ct}\} \)
+!back:
+\[
+\begin{align*}
+    \mathscr{L}\{e^{ct}\}
+        &= \int_0^\infty e^{-st} e^{ct} \, dt \\
+        &= \int_0^\infty e^{-(s - c)t} \, dt \\
+        &= \frac{1}{s - c}, \quad s > c
+\end{align*}
+\]
+~~~
+
+!id: GCbtaplcqN
+!front: Derive \( \mathscr{L}\{f'(t)\} \)
+!back:
+Integrate by parts with \( u = e^{-st} \), \( dv = f'(t) \, dt \):
+
+\[
+\begin{align*}
+    \mathscr{L}\{f'(t)\}
+        &= \int_0^\infty e^{-st} f'(t) \, dt \\
+        &= \underbrace{\left[ e^{-st} f(t) \right]_0^\infty}_{-f(0)}
+            + s \underbrace{\int_0^\infty e^{-st} f(t) \, dt}_{\mathscr{L}\{f(t)\}} \\
+        &= s F(s) - f(0)
+\end{align*}
+\]
+
+The boundary term vanishes at \( t \to \infty \) because \( f(t) \) is of exponential order and \( s \) is large enough for the transform to converge.
+~~~
+
+!id: pIHX5rr9Kv
+!front: Solve \( y' + 2y = 0, \ y(0) = 3 \) using the Laplace transform.
+!back:
+Apply \( \mathscr{L} \) to both sides, writing \( Y(s) = \mathscr{L}\{y(t)\} \):
+
+\[
+\begin{align*}
+    \mathscr{L}\{y'\} + 2 \mathscr{L}\{y\} &= 0 \\
+    \big( sY(s) - y(0) \big) + 2Y(s) &= 0 \\
+    (s + 2) Y(s) &= 3 \\
+    Y(s) &= \frac{3}{s + 2}
+\end{align*}
+\]
+
+Since \( \mathscr{L}\{e^{ct}\} = \frac{1}{s - c} \), taking the inverse transform gives
+
+\[ y(t) = 3 e^{-2t} \]
+~~~
+
+!id: dO0gadjUte
+!front: Solve \( y'' + y = 0, \ y(0) = 0, \ y'(0) = 1 \) using the Laplace transform.
+!back:
+Apply \( \mathscr{L} \) to both sides, writing \( Y(s) = \mathscr{L}\{y(t)\} \):
+
+\[
+\begin{align*}
+    \mathscr{L}\{y''\} + \mathscr{L}\{y\} &= 0 \\
+    \big( s^2 Y(s) - s y(0) - y'(0) \big) + Y(s) &= 0 \\
+    (s^2 + 1) Y(s) - 1 &= 0 \\
+    Y(s) &= \frac{1}{s^2 + 1}
+\end{align*}
+\]
+
+Since \( \mathscr{L}\{\sin t\} = \frac{1}{s^2 + 1} \), taking the inverse transform gives
+
+\[ y(t) = \sin t \]
+~~~
+
+!id: d4oUXbgB3f
+!front: Solve \( y'' + y = 1, \ y(0) = 0, \ y'(0) = 0 \) using the Laplace transform.
+!back:
+Apply \( \mathscr{L} \) to both sides, writing \( Y(s) = \mathscr{L}\{y(t)\} \):
+
+\[
+\begin{align*}
+    \mathscr{L}\{y''\} + \mathscr{L}\{y\} &= \mathscr{L}\{1\} \\
+    s^2 Y(s) + Y(s) &= \frac{1}{s} \\
+    Y(s) &= \frac{1}{s(s^2 + 1)}
+\end{align*}
+\]
+
+Partial fractions give \( \dfrac{1}{s(s^2+1)} = \dfrac{1}{s} - \dfrac{s}{s^2+1} = \mathscr{L}\{1\} - \mathscr{L}\{\cos t\} \), so taking the inverse transform gives
+
+\[ y(t) = 1 - \cos t \]
 ~~~
