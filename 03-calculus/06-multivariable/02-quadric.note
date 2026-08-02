@@ -26,37 +26,55 @@ where \( A \), \( B \), \( C \), \( D \), \( E \), \( F \), \( G \), \( H \), \(
 !type: Basic Math (and reversed card)
 
 !id: RufVfJtOHL
-!front: **Ellipsoid** centered at the origin.
+!front:
+**Ellipsoid** centered at the origin.
+
+![Ellipsoid](quad_ellipsoid.png)
 !back: \[ \frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2} = 1 \]
 !extra: \( a \), \( b \), \( c \) are nonzero real constants, conventionally taken positive (the semi-axis lengths along the \( x \), \( y \), \( z \) axes).
 ~~~
 
 !id: LqzYwZQIqS
-!front: **Elliptic Paraboloid** with vertex at the origin.
+!front:
+**Elliptic Paraboloid** with vertex at the origin.
+
+![Elliptic Paraboloid](quad_elliptic_paraboloid.png)
 !back: \[ z = \frac{x^2}{a^2} + \frac{y^2}{b^2} \]
 !extra: \( a \), \( b \) are nonzero real constants, conventionally taken positive. The surface is not symmetric under \( (x,y,z) \mapsto (-x,-y,-z) \), so the origin is a vertex, not a center of symmetry.
 ~~~
 
 !id: feBbesi90N
-!front: **Hyperbolic Paraboloid** with vertex at the origin.
+!front:
+**Hyperbolic Paraboloid** with vertex at the origin.
+
+![Hyperbolic Paraboloid](quad_hyperbolic_paraboloid.png)
 !back: \[ z = \frac{x^2}{a^2} - \frac{y^2}{b^2} \]
 !extra: \( a \), \( b \) are nonzero real constants, conventionally taken positive. The surface is not symmetric under \( (x,y,z) \mapsto (-x,-y,-z) \), so the origin is a saddle point (vertex), not a center of symmetry.
 ~~~
 
 !id: NEKErmAPk5
-!front: **Hyperboloid of One Sheet** centered at the origin.
+!front:
+**Hyperboloid of One Sheet** centered at the origin.
+
+![Hyperboloid of One Sheet](quad_hyperboloid_one_sheet.png)
 !back: \[ \frac{x^2}{a^2} + \frac{y^2}{b^2} - \frac{z^2}{c^2} = 1 \]
 !extra: \( a \), \( b \), \( c \) are nonzero real constants, conventionally taken positive.
 ~~~
 
 !id: nfByyXn5r6
-!front: **Hyperboloid of Two Sheets** centered at the origin.
+!front:
+**Hyperboloid of Two Sheets** centered at the origin.
+
+![Hyperboloid of Two Sheets](quad_hyperboloid_two_sheets.png)
 !back: \[ \frac{x^2}{a^2} + \frac{y^2}{b^2} - \frac{z^2}{c^2} = -1 \]
 !extra: \( a \), \( b \), \( c \) are nonzero real constants, conventionally taken positive.
 ~~~
 
 !id: jcy5MNA9hf
-!front: **Elliptic Cone** with vertex at the origin.
+!front:
+**Elliptic Cone** with vertex at the origin.
+
+![Elliptic Cone](quad_elliptic_cone.png)
 !back: \[ \frac{z^2}{c^2} = \frac{x^2}{a^2} + \frac{y^2}{b^2} \]
 !extra: \( a \), \( b \), \( c \) are nonzero real constants, conventionally taken positive.
 ~~~

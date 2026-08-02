@@ -3,21 +3,21 @@
 
 import graph;
 
-size(11cm);
+size(20cm, 10cm, false);
 defaultpen(fontsize(10pt));
 
-real f(real x) { return 0.15*(x-1)*(x-5)*(x-7) + 2; }
+real f(real x) { return -0.5*(x-3)*(x-3) + 3; }
 
 real a = 1;
 real b = 5;
-real xc = 1 + (20 - sqrt(112)) / 6;
+real xc = (a + b) / 2;
 real yc = f(xc);
 
 // axes
-draw((-0.5, 0)--(7.5, 0), Arrow(TeXHead));
-draw((0, -0.5)--(0, 5.5), Arrow(TeXHead));
-label("$x$", (7.5, 0), E);
-label("$y$", (0, 5.5), N);
+draw((-0.5, 0)--(6, 0), Arrow(TeXHead));
+draw((0, -0.5)--(0, 4), Arrow(TeXHead));
+label("$x$", (6, 0), E);
+label("$y$", (0, 4), N);
 
 // curve
 draw(graph(f, a, b), blue + linewidth(1.2));

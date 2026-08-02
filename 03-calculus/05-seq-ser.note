@@ -84,6 +84,7 @@ If a sequence is not bounded, it is an **unbounded sequence**.
 !id: LHb3sG7zVK
 !front: What is a Cauchy sequence?
 !back: A sequence \( \{a_n\} \) is a **Cauchy sequence** if for all \( \epsilon > 0 \), there exists an integer \( N \) such that \( |a_n - a_m| < \epsilon \) for all \( n, m \ge N \).
+!extra: ![Cauchy sequence](cauchy_sequence.svg)
 ~~~
 
 !id: kaQVrrcwh0

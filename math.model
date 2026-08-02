@@ -50,6 +50,12 @@ styles
   color: gray;
   border-bottom: 1px solid gray;
 }
+.card p > img:only-child {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 400px;
+}
 ~~~
 
 model Basic Math (and reversed card)
@@ -127,5 +133,11 @@ styles
   font-weight: bold;
   color: gray;
   border-bottom: 1px solid gray;
+}
+.card p > img:only-child {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 400px;
 }
 ~~~

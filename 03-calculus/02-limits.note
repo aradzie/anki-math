@@ -158,24 +158,31 @@ The two definitions express the same condition, at different levels of formality
 !id: UAn7ziYq3m
 !front: Construct a counterexample showing the IVT's conclusion can fail if \( f \) is not continuous on \( [a,b] \).
 !back:
-Let \( f(x) = -1 \) for \( x \in [a,m) \) and \( f(x) = 1 \) for \( x \in [m,b] \), for some \( m \in (a,b) \).
+Let, for some \( m \in (a,b) \),
+\[ f(x) = \begin{cases} -1 & a \le x < m \\ 1 & m \le x \le b \end{cases} \]
 
 - \( f(a) = -1 \) and \( f(b) = 1 \), so \( 0 \) lies between them.
 - \( f \) never takes the value \( 0 \) anywhere on \( [a,b] \).
 
 The jump discontinuity at \( m \) lets \( f \) skip over \( 0 \) entirely.
+
+![IVT counterexample](ivt_counterexample.svg)
 !extra: Compare with the Intermediate Value Theorem, which requires continuity on \( [a,b] \) as a hypothesis.
 ~~~
 
 !id: jBHWk5ISDd
 !front: Construct a counterexample showing the EVT's conclusion can fail if \( f \) is not continuous on \( [a,b] \).
 !back:
-Let \( f(x) = x \) for \( x \in [0,1) \) and \( f(1) = 0 \), on the closed bounded interval \( [0,1] \).
+Let
+\[ f(x) = \begin{cases} x & a \le x < b \\ a & x = b \end{cases} \]
+on the closed bounded interval \( [a,b] \).
 
-- As \( x \to 1^- \), \( f(x) \) gets arbitrarily close to \( 1 \).
-- \( f \) never equals \( 1 \), since \( f(1) = 0 \).
+- As \( x \to b^- \), \( f(x) \) gets arbitrarily close to \( b \).
+- \( f \) never equals \( b \), since \( f(b) = a \neq b \).
 
-So \( f \) has no maximum on \( [0,1] \), even though the interval is closed and bounded.
+So \( f \) has no maximum on \( [a,b] \), even though the interval is closed and bounded.
+
+![EVT counterexample](evt_counterexample.svg)
 !extra: Compare with the Extreme Value Theorem, which requires continuity on \( [a,b] \) as a hypothesis.
 ~~~
 

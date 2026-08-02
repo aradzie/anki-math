@@ -1,0 +1,41 @@
+// Counterexample showing the EVT's conclusion can fail without continuity:
+// f(x) approaches b as x -> b^-, but never attains it since f(b) = a, so
+// f has no maximum on the closed bounded interval [a,b].
+
+import graph;
+
+size(10cm, 10cm);
+defaultpen(fontsize(10pt));
+
+real a = 1;
+real b = 3;
+
+// axes
+draw((-0.5, 0)--(4, 0), Arrow(TeXHead));
+draw((0, -0.5)--(0, 4), Arrow(TeXHead));
+label("$x$", (4, 0), E);
+label("$y$", (0, 4), N);
+
+// f(x) = x for a <= x < b
+draw((a, a)--(b, b), blue + linewidth(1.2));
+filldraw(circle((a, a), 0.06), blue);
+filldraw(circle((b, b), 0.06), white, blue);
+
+// f(b) = a
+filldraw(circle((b, a), 0.06), blue);
+
+// supremum guide: f approaches b but never reaches it
+draw((a, b)--(b + 0.8, b), red + dashed);
+label("$y = b$", (b + 0.8, b), E, red);
+
+// vertical guides: to the x-axis at a and b, and across the drop at b
+draw((a, 0)--(a, a), dotted);
+draw((b, a)--(b, b), dotted);
+
+// axis labels
+label("$a$", (a, 0), S);
+label("$b$", (b, 0), S);
+
+// marked values
+label("$f(b) = a$", (b, a), SE);
+label("no maximum on $[a,b]$", ((a + b) / 2, b + 0.5), N, red);
