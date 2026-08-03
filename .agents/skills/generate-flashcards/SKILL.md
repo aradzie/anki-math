@@ -65,7 +65,7 @@ Metadata directives set defaults for subsequent note records. Note records conta
 This document distinguishes two things that are easy to conflate:
 
 - A **note** is one record in a `.note` file — a `!front:`/`!back:` group (with optional `!related:`/`!extra:`), terminated by `~~~`. It is the unit of authoring: all guidance in this document about drafting, granularity, and splitting content operates on notes.
-- A **card** is a single study item Anki actually shows during review, generated *from* a note by its note type. A note is the source; a card is the rendered output — a note can produce more than one card:
+- A **card** is a single study item Anki actually shows during review, generated _from_ a note by its note type. A note is the source; a card is the rendered output — a note can produce more than one card:
   - `Basic Math` generates one card per note (front → back).
   - `Basic Math (and reversed card)` generates two cards per note (front → back, and back → front) from the same fields.
 
@@ -228,6 +228,16 @@ A definition's `!extra:` field often accumulates a "for example, ..." or "undefi
 - When one concrete object naturally yields several related quantities together (e.g. both the order and the degree of the same ODE), ask for them jointly in a single front rather than splitting into near-duplicate notes over the same object.
 - After extracting an example onto its own note, trim the source note's `!extra:` down to the general rule and drop the now-duplicated example prose.
 
+### Comparison Notes
+
+When a topic introduces several related-but-distinct concepts — generalizations, special cases, or terms that are easily conflated — a note that compares them side by side is often more valuable than testing each one in isolation. A learner who can define each concept separately may still fail to keep the boundary between them straight, and that boundary is exactly what a comparison note targets.
+
+- Use a front such as "Compare X, Y, and Z" or "How do X and Y differ?".
+- In `!back:`, give each concept its own bullet: one sentence naming what distinguishes it from the others, not a full restatement of its definition. Order bullets from most general to most specific, or in the order the concepts were introduced, whichever reads more naturally.
+- Reach for this style when the concepts form a natural hierarchy or are easily conflated (e.g. mapping vs. linear mapping vs. affine mapping; necessary vs. sufficient vs. equivalent conditions) — not for unrelated concepts that merely share a topic file.
+- A comparison note supplements, but does not replace, the individual notes on each concept; keep those too, since the comparison note targets the boundary between concepts, not the concepts themselves.
+- The note must stay self-contained per Note Independence below: include enough of each concept's definition inline that the comparison is meaningful without the learner having any other note open.
+
 Avoid by default:
 
 - trivial definition regurgitation,
@@ -335,6 +345,21 @@ Formula note with a justified reverse:
     a^2 + b^2 &= (a - ib)(a + ib)
 \end{align*}
 \]
+~~~
+```
+
+Comparison note contrasting a hierarchy of related concepts:
+
+```text
+!type: Basic Math
+!deck: Math
+!tags: Math Linear-Algebra
+
+!front: Compare a mapping, a linear mapping, and an affine mapping.
+!back:
+- A mapping is usually another word for a function, often used when emphasizing movement between sets or spaces.
+- A linear mapping is a special kind of function between vector spaces that preserves vector addition and scalar multiplication.
+- An affine mapping is a linear mapping followed by a translation: \( T(v)=L(v)+b \) for fixed \( b \); it reduces to a linear mapping exactly when \( b=0 \).
 ~~~
 ```
 

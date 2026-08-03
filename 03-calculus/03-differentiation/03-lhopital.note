@@ -15,13 +15,19 @@ It does not apply directly to \( 0\cdot\infty \), \( \infty-\infty \), \( 1^\inf
 ~~~
 
 !id: dMctlA06T4
-!front: What differentiability assumptions are needed before applying L'Hopital's Rule near \( x=a \)?
-!back: The functions \( f \) and \( g \) must be differentiable on a punctured neighborhood of \( a \). The value at \( a \) itself need not be defined.
-~~~
+!front: What hypotheses on \( f \) and \( g \) are needed before applying L'Hopital's Rule near \( x=a \)?
+!back:
+On a punctured neighborhood of \( a \):
 
-!id: dlexZHj88S
-!front: Does L'Hopital's Rule require \( f(a) \) and \( g(a) \) to be defined?
-!back: No. The rule concerns values of \( f \) and \( g \) near \( a \), not necessarily at \( a \). It is enough that the relevant limits and differentiability hypotheses hold on a punctured neighborhood of \( a \).
+- \( f \) and \( g \) are differentiable,
+- \( g'(x) \neq 0 \).
+
+At \( a \) itself neither \( f \) nor \( g \) needs to be
+
+- defined,
+- continuous, or
+- differentiable.
+!extra: The condition \( g'(x) \neq 0 \) is easy to overlook but essential: without it, the quotient \( f'(x)/g'(x) \) need not even be defined near \( a \).
 ~~~
 
 !id: Bev3dVqtYW

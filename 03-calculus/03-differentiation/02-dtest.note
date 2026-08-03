@@ -145,7 +145,9 @@
 
 !id: BdQFccaRgN
 !front: How is concavity of \( f \) on an interval \( I \) related to the monotonicity of \( f' \)?
-!back: \( f \) is concave up on an interval \( I \) exactly when \( f' \) is strictly increasing on \( I \), and concave down exactly when \( f' \) is strictly decreasing on \( I \).
+!back:
+- \( f \) is concave up on an interval \( I \) exactly when \( f' \) is strictly increasing on \( I \).
+- \( f \) is concave down on an interval \( I \) exactly when \( f' \) is strictly decreasing on \( I \).
 ~~~
 
 !id: 1PWJif61Og
@@ -197,7 +199,6 @@ negative for \( x < 0 \) and positive for \( x > 0 \). So \( f \) is concave dow
 !id: XCKBd5w3hb
 !front: How does concavity at a critical point relate to the second derivative test?
 !back:
-If \( f'(c) = 0 \) and \( f''(c) > 0 \) (\( f \) is concave up on a neighborhood of \( c \)), then \( c \) is a local minimum.
-
-If \( f'(c) = 0 \) and \( f''(c) < 0 \) (\( f \) is concave down on a neighborhood of \( c \)), then \( c \) is a local maximum.
+- If \( f'(c) = 0 \) and \( f''(c) > 0 \) (\( f \) is concave up on a neighborhood of \( c \)), then \( c \) is a local minimum.
+- If \( f'(c) = 0 \) and \( f''(c) < 0 \) (\( f \) is concave down on a neighborhood of \( c \)), then \( c \) is a local maximum.
 ~~~
