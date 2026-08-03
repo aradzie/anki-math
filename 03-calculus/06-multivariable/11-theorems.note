@@ -1,6 +1,6 @@
 !type: Basic Math
-!deck: Math::Calculus::Vector Calculus
-!tags: Math Calculus Vectors
+!deck: Math
+!tags: Math Calculus Multivariable
 
 !id: rl1oPsuMcJ
 !front: State the one-dimensional Fundamental Theorem of Calculus, and describe the general pattern it exemplifies for the vector-calculus integral theorems.

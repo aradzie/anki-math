@@ -92,8 +92,8 @@ Use these metadata directives outside note records:
 
 ```text
 !type: Basic Math
-!deck: Math::Calculus::Limits
-!tags: Math Calculus Limits Theory
+!deck: Math
+!tags: Math Calculus Limit
 ```
 
 Metadata scope:
@@ -285,7 +285,7 @@ Conceptual note:
 
 ```text
 !type: Basic Math
-!deck: Math::Algebra
+!deck: Math
 !tags: Math Algebra Inequality
 
 !front: Why does \( |x| \le c \), with \( c \ge 0 \), imply both an upper and a lower bound for \( x \)?
@@ -302,8 +302,8 @@ Theorem note with chunked hypotheses:
 
 ```text
 !type: Basic Math
-!deck: Math::Calculus::Differentiation
-!tags: Math Calculus Differentiation Theory
+!deck: Math
+!tags: Math Calculus Differentiation
 
 !front: The definition of the Rolle's Theorem.
 !back:
@@ -323,7 +323,7 @@ Formula note with a justified reverse:
 
 ```text
 !type: Basic Math (and reversed card)
-!deck: Math::Algebra
+!deck: Math
 !tags: Math Algebra Identity
 
 !front: \[ a^2 - b^2 \]
@@ -342,8 +342,8 @@ Recognition note testing whether the learner recognizes that a property fails to
 
 ```text
 !type: Basic Math
-!deck: Math::Calculus::ODE
-!tags: Math Calculus Differential-Equation Theory
+!deck: Math
+!tags: Math Calculus Differential-Equation
 
 !front: What are the order and degree of the ordinary differential equation \( \sin(y') + y = 0 \)?
 !back:

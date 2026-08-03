@@ -1,5 +1,5 @@
 !type: Basic Math
-!deck: Math::Trigonometry
+!deck: Math
 !tags: Math Trigonometric Hyperbolic Identity
 
 !id: 8voSey2Uah
@@ -60,8 +60,6 @@ Express as a trigonometric function
 !back: \[ \cosh x = \cos(ix) = \frac{e^{x} + e^{-x}}{2} \]
 ~~~
 
-!type: Basic Math
-!deck: Math::Trigonometry
 !tags: Math Trigonometric Hyperbolic Identity
 
 !id: J9Zx0A7FqR

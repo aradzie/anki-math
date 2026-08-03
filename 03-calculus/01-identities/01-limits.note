@@ -1,6 +1,6 @@
 !type: Basic Math
-!deck: Math::Calculus::Identities::Limits
-!tags: Math Calculus Identity Limits
+!deck: Math
+!tags: Math Calculus Identity Limit
 
 !id: vjtstp5RFK
 !front: \[ e = \lim_{n \to \infty} \ldots \]

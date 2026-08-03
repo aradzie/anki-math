@@ -1,6 +1,6 @@
 !type: Basic Math
-!deck: Math::Calculus::Integration
-!tags: Math Calculus Integration Theory
+!deck: Math
+!tags: Math Calculus Integration
 
 !id: zGlwKahZ6l
 !front: When substituting \( y=f(x) \) in \( \int_{f(a)}^{f(b)} f^{-1}(y)\,dy \), how do the bounds change?

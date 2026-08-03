@@ -1,6 +1,6 @@
 !type: Basic Math
-!deck: Math::Calculus::Limits
-!tags: Math Calculus Limits Theory LHopitals-Rule
+!deck: Math
+!tags: Math Calculus Limit LHopitals-Rule
 
 !id: CPwNxholNs
 !front: Which indeterminate quotient forms can L'Hopital's Rule handle directly?
