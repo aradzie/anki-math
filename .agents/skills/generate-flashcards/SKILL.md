@@ -218,6 +218,16 @@ A theorem or definition with several moving parts recalls poorly as one dense se
 
 This is a different tool from splitting a topic across multiple notes (see the granularity guidance above): chunk hypotheses/cases into bullets within one note's `!back:` first, and only split into separate notes when a well-chunked statement is still too large to test as a single note — e.g. hypotheses on one note, proof idea or failure case on another.
 
+### Derivation and Proof Notes
+
+A note whose front asks to derive or prove a result (`Derive ...`, `Prove ...`) recalls poorly as a narrative paragraph chaining "so", "then", "hence" across sentences. Structure `!back:` as two bulleted sections instead:
+
+- A `Let:` section: one bullet per local definition, fixed quantity, assumption, or constraint introduced for the derivation (e.g. "\( F(x) = \int_a^x f(t)\, dt \), with \( x \in (a,b) \) fixed"). This is the derivation's own local setup, distinct from the note's global hypotheses (stated in the front or inherited from the theorem being derived).
+- A `To prove:` line naming the target identity or property in one line, so the goal is explicit before the argument starts.
+- A bulleted list of concrete steps below it, one bullet per logical step, each stating what is used and what follows from it.
+
+Use this structure whenever the derivation has more than one logical step; a one-line derivation (a single substitution or direct computation) does not need it — see "Chunking Complex Statements" above for the general test of when bulleting earns its place.
+
 ### Extracting Worked Examples
 
 A definition's `!extra:` field often accumulates a "for example, ..." or "undefined when ..., e.g. ..." aside. That aside is itself a testable fact — applying the definition to a concrete case, or recognizing when it doesn't apply — and it stays passive, easy-to-reread exposition as long as it lives inside another note's `!extra:` rather than being recalled on its own.
@@ -360,6 +370,30 @@ Comparison note contrasting a hierarchy of related concepts:
 - A mapping is usually another word for a function, often used when emphasizing movement between sets or spaces.
 - A linear mapping is a special kind of function between vector spaces that preserves vector addition and scalar multiplication.
 - An affine mapping is a linear mapping followed by a translation: \( T(v)=L(v)+b \) for fixed \( b \); it reduces to a linear mapping exactly when \( b=0 \).
+~~~
+```
+
+Derivation note with a `Let:`/`To prove:` setup followed by concrete steps:
+
+```text
+!type: Basic Math
+!deck: Math
+!tags: Math Calculus Integration
+
+!front: Derive the Fundamental Theorem of Calculus, Part 1, from the Mean Value Theorem for Integrals.
+!back:
+Let:
+
+- \( F(x) = \int_a^x f(t)\, dt \), with \( x \in (a,b) \) fixed
+- \( h \ne 0 \) small enough that \( x+h \in (a,b) \)
+
+To prove: \( F'(x) = f(x) \).
+
+- By additivity of the integral, \( F(x+h) - F(x) = \int_x^{x+h} f(t)\, dt \).
+- \( f \) is continuous on the interval between \( x \) and \( x+h \), so the Mean Value Theorem for Integrals gives some \( c_h \) between \( x \) and \( x+h \) with \( \int_x^{x+h} f(t)\, dt = f(c_h)\, h \).
+- Combining these, \( \dfrac{F(x+h) - F(x)}{h} = f(c_h) \).
+- As \( h \to 0 \), \( c_h \to x \) by the squeeze theorem, so continuity of \( f \) gives \( f(c_h) \to f(x) \).
+- Hence \( F'(x) = \lim_{h \to 0} \dfrac{F(x+h)-F(x)}{h} = f(x) \).
 ~~~
 ```
 

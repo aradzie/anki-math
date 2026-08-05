@@ -216,13 +216,18 @@ If \( f \) is continuous on \( [a,b] \) and \( F(x) = \int_a^x f(t)\, dt \) for 
 !id: xyQeQcoPe5
 !front: Derive the Fundamental Theorem of Calculus, Part 1, from the Mean Value Theorem for Integrals.
 !back:
-Let \( F(x) = \int_a^x f(t)\, dt \) and fix \( x \in (a,b) \). For \( h \ne 0 \) small enough that \( x+h \in (a,b) \),
-\[ F(x+h) - F(x) = \int_x^{x+h} f(t)\, dt. \]
-Since \( f \) is continuous on the interval between \( x \) and \( x+h \), the Mean Value Theorem for Integrals gives some \( c_h \) between \( x \) and \( x+h \) with
-\[ \int_x^{x+h} f(t)\, dt = f(c_h)\, h, \]
-so
-\[ \frac{F(x+h) - F(x)}{h} = f(c_h). \]
-As \( h \to 0 \), \( c_h \to x \) by the squeeze theorem, and continuity of \( f \) gives \( f(c_h) \to f(x) \). Hence \( F'(x) = \lim_{h \to 0} \frac{F(x+h)-F(x)}{h} = f(x) \).
+Let:
+
+- \( F(x) = \int_a^x f(t)\, dt \), with \( x \in (a,b) \) fixed
+- \( h \ne 0 \) small enough that \( x+h \in (a,b) \)
+
+To prove: \( F'(x) = f(x) \).
+
+- By additivity of the integral, \( F(x+h) - F(x) = \int_x^{x+h} f(t)\, dt \).
+- \( f \) is continuous on the interval between \( x \) and \( x+h \), so the Mean Value Theorem for Integrals gives some \( c_h \) between \( x \) and \( x+h \) with \( \int_x^{x+h} f(t)\, dt = f(c_h)\, h \).
+- Combining these, \( \dfrac{F(x+h) - F(x)}{h} = f(c_h) \).
+- As \( h \to 0 \), \( c_h \to x \) by the squeeze theorem, so continuity of \( f \) gives \( f(c_h) \to f(x) \).
+- Hence \( F'(x) = \lim_{h \to 0} \dfrac{F(x+h)-F(x)}{h} = f(x) \).
 ~~~
 
 !id: 33XsHNIEWI
@@ -235,16 +240,26 @@ If \( f \) is continuous on \( [a,b] \) and \( F \) is any antiderivative of \( 
 !id: fw0ZcECXO4
 !front: Derive the Fundamental Theorem of Calculus, Part 2, from Part 1.
 !back:
-Let \( G(x) = \int_a^x f(t)\, dt \); by FTC1, \( G' = f \) on \( (a,b) \), and \( G \) is continuous on \( [a,b] \). If \( F \) is any antiderivative of \( f \) on \( [a,b] \), then \( (F - G)' = f - f = 0 \) on \( (a,b) \), so by the zero-derivative consequence of the Mean Value Theorem, \( F - G \) is constant: \( F(x) = G(x) + C \) for some constant \( C \). Then
-\[
-\begin{align*}
-    F(b) - F(a) &= \big(G(b) + C\big) - \big(G(a) + C\big) \\
-                &= G(b) - G(a) \\
-                &= \int_a^b f(t)\, dt - \int_a^a f(t)\, dt \\
-                &= \int_a^b f(t)\, dt,
-\end{align*}
-\]
-since \( \int_a^a f(t)\, dt = 0 \).
+Let:
+
+- \( G(x) = \int_a^x f(t)\, dt \)
+- \( F \) be any antiderivative of \( f \) on \( [a,b] \), i.e. \( F' = f \)
+
+To prove: \( \int_a^b f(x)\, dx = F(b) - F(a) \).
+
+- By FTC1, \( G' = f \) on \( (a,b) \), and \( G \) is continuous on \( [a,b] \).
+- So \( (F - G)' = f - f = 0 \) on \( (a,b) \).
+- By the zero-derivative consequence of the Mean Value Theorem, \( F - G \) is constant: \( F(x) = G(x) + C \) for some constant \( C \).
+- Hence
+  \[
+    \begin{align*}
+        F(b) - F(a) &= \big(G(b) + C\big) - \big(G(a) + C\big) \\
+                    &= G(b) - G(a) \\
+                    &= \int_a^b f(t)\, dt - \int_a^a f(t)\, dt \\
+                    &= \int_a^b f(t)\, dt,
+    \end{align*}
+  \]
+  since \( \int_a^a f(t)\, dt = 0 \).
 !extra: Uses that a function with derivative identically \( 0 \) on an interval is constant there — itself a consequence of the Mean Value Theorem.
 ~~~
 
