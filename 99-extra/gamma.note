@@ -1,0 +1,107 @@
+!type: Basic Math
+!deck: Math (Gamma)
+!tags: Math Calculus Gamma-Function
+
+!id: kQszitB6ux
+!front: Derive the identity \( \displaystyle\int_0^\infty x^n e^{-x}\,dx = n! \) for every integer \( n \ge 0 \), starting from \( \displaystyle\int_0^\infty e^{-\alpha x}\,dx = \frac{1}{\alpha} \).
+!back:
+Let:
+
+- \( \alpha > 0 \)
+- \( f(\alpha) = \displaystyle\int_0^\infty e^{-\alpha x}\,dx = \dfrac{1}{\alpha} \), by direct evaluation
+
+To prove: \( \displaystyle\int_0^\infty x^n e^{-x}\,dx = n! \).
+
+- Differentiate \( f \) with respect to \( \alpha \) under the integral sign \( n \) times. Each differentiation brings down a factor of \( -x \), so
+\[ \frac{d^n f}{d\alpha^n} = \int_0^\infty (-x)^n e^{-\alpha x}\,dx = (-1)^n \int_0^\infty x^n e^{-\alpha x}\,dx. \]
+- Differentiating \( \alpha^{-1} \) directly \( n \) times gives \( \dfrac{d^n f}{d\alpha^n} = (-1)^n \dfrac{n!}{\alpha^{n+1}} \).
+- Equating the two expressions and cancelling \( (-1)^n \):
+\[ \int_0^\infty x^n e^{-\alpha x}\,dx = \frac{n!}{\alpha^{n+1}}. \]
+- Setting \( \alpha = 1 \) gives \( \displaystyle\int_0^\infty x^n e^{-x}\,dx = n! \).
+!extra: Differentiating under the integral sign here requires justifying the interchange of \( d/d\alpha \) and \( \int \) (e.g. uniform convergence of the differentiated integrals on compact subintervals of \( (0,\infty) \)); this is elided in the informal argument above. A fully rigorous derivation of the same fact, avoiding this issue, uses integration by parts and induction instead — see the derivation of \( \Gamma(n+1) = n! \) from the functional equation.
+~~~
+
+!id: y0P7jqbVfb
+!front: What happens when \( n = 0 \) is substituted into \( \displaystyle\int_0^\infty x^n e^{-x}\,dx = n! \), and what does this suggest about defining \( 0! \)?
+!back:
+\[ \int_0^\infty x^0 e^{-x}\,dx = \int_0^\infty e^{-x}\,dx = 1. \]
+Since the right-hand side would be \( 0! \), this suggests defining \( 0! = 1 \) so the identity continues to hold at \( n=0 \) — consistent with, though not a proof of, the usual combinatorial convention that an empty product equals \( 1 \).
+~~~
+
+!id: xJ6krTQLAB
+!front: Give the integral definition of the Gamma function \( \Gamma(z) \), and state precisely for which real \( z \) it converges.
+!back:
+\[ \Gamma(z) = \int_0^\infty x^{z-1} e^{-x}\,dx. \]
+This converges precisely for \( z > 0 \):
+
+- Near \( x=0 \): the integrand behaves like \( x^{z-1} \), which is integrable on \( (0,1] \) iff \( z-1 > -1 \), i.e. \( z > 0 \).
+- Near \( x=\infty \): \( e^{-x} \) decays faster than any power of \( x \) grows, so \( x^{z-1}e^{-x} \to 0 \) rapidly and the tail always converges, regardless of \( z \).
+!extra: Replacing the integer exponent \( n \) in \( \int_0^\infty x^n e^{-x}\,dx = n! \) by the real exponent \( z-1 \) is exactly what generalizes the factorial-integral to non-integer arguments.
+~~~
+
+!id: D7jRu1TAgT
+!front: Derive the functional equation \( \Gamma(z+1) = z\,\Gamma(z) \) for \( z > 0 \).
+!back:
+Let:
+
+- \( \Gamma(z+1) = \displaystyle\int_0^\infty x^{z} e^{-x}\,dx \), with \( z > 0 \)
+
+To prove: \( \Gamma(z+1) = z\,\Gamma(z) \).
+
+- Integrate by parts with \( u = x^z \), \( dv = e^{-x}\,dx \), so \( du = z x^{z-1}\,dx \), \( v = -e^{-x} \):
+  \[ \Gamma(z+1) = \Big[-x^z e^{-x}\Big]_0^\infty + z\int_0^\infty x^{z-1}e^{-x}\,dx. \]
+- The boundary term vanishes at both ends: at \( x=\infty \) since \( e^{-x} \) decays faster than \( x^z \) grows; at \( x=0 \) since \( z>0 \) makes \( x^z \to 0 \).
+- The remaining integral is exactly \( \Gamma(z) \), so \( \Gamma(z+1) = z\,\Gamma(z) \).
+~~~
+
+!id: F0cv5weEpE
+!front: Compute \( \Gamma(1) \) directly from the integral definition.
+!back: \[ \Gamma(1) = \displaystyle\int_0^\infty x^0 e^{-x}\,dx = \int_0^\infty e^{-x}\,dx = 1 \]
+~~~
+
+!id: IHRiGp5nTM
+!front: Using the functional equation \( \Gamma(z+1) = z\,\Gamma(z) \) and \( \Gamma(1) = 1 \), derive \( \Gamma(n+1) = n! \) for every nonnegative integer \( n \).
+!back:
+Proof by induction on \( n \).
+
+- Base case \( n=0 \): \( \Gamma(1) = 1 = 0! \).
+- Inductive step: suppose \( \Gamma(n+1) = n! \) for some \( n \ge 0 \). Then
+  \[ \Gamma(n+2) = (n+1)\,\Gamma(n+1) = (n+1)\cdot n! = (n+1)!. \]
+- By induction, \( \Gamma(n+1) = n! \) for all nonnegative integers \( n \).
+!extra: This is a fully rigorous alternative to deriving the same fact by differentiating \( \int_0^\infty e^{-\alpha x}\,dx \) under the integral sign, which requires separately justifying the interchange of differentiation and integration.
+~~~
+
+!id: 9INNd1OJKk
+!front: Derive \( \Gamma\!\left(\tfrac12\right) = \sqrt{\pi} \).
+!back:
+Let:
+
+- \( \Gamma\!\left(\tfrac12\right) = \displaystyle\int_0^\infty x^{-1/2} e^{-x}\,dx \)
+- Substitution \( x = u^2 \), \( u > 0 \), so \( dx = 2u\,du \)
+
+To prove: \( \Gamma\!\left(\tfrac12\right) = \sqrt{\pi} \).
+
+- Substituting, \( x^{-1/2} = u^{-1} \), so
+  \[ \Gamma\!\left(\tfrac12\right) = \int_0^\infty u^{-1} e^{-u^2}\cdot 2u\,du = 2\int_0^\infty e^{-u^2}\,du. \]
+- The Gaussian integral gives \( \displaystyle\int_{-\infty}^\infty e^{-u^2}\,du = \sqrt{\pi} \); since \( e^{-u^2} \) is even, \( \displaystyle\int_0^\infty e^{-u^2}\,du = \dfrac{\sqrt{\pi}}{2} \).
+- Hence \( \Gamma\!\left(\tfrac12\right) = 2\cdot\dfrac{\sqrt{\pi}}{2} = \sqrt{\pi} \).
+!extra: The value of the Gaussian integral itself is treated as known here; it is usually proved by squaring it and switching to polar coordinates in the resulting double integral.
+~~~
+
+!id: c2Vs78mcVw
+!front: How does the functional equation \( \Gamma(z+1) = z\,\Gamma(z) \) extend the domain of \( \Gamma \) to negative non-integer real numbers, where the defining integral \( \int_0^\infty x^{z-1}e^{-x}\,dx \) no longer converges?
+!back:
+Rearranging the functional equation gives
+\[ \Gamma(z) = \frac{\Gamma(z+1)}{z}. \]
+The right side is defined whenever \( \Gamma(z+1) \) is defined and \( z \ne 0 \), so this formula defines \( \Gamma(z) \) for \( -1 < z < 0 \) using the already-known value \( \Gamma(z+1) \) with \( z+1 \in (0,1) \). Iterating,
+\[ \Gamma(z) = \frac{\Gamma(z+n+1)}{z(z+1)\cdots(z+n)}, \]
+extends \( \Gamma \) one unit further left at each step, ultimately defining it on all of \( \mathbb{R} \) except the non-positive integers.
+~~~
+
+!id: ljdN49r6qk
+!front: Why does \( \Gamma \) fail to be defined at \( z = 0, -1, -2, \dots \)?
+!back:
+From \( \Gamma(z) = \Gamma(z+1)/z \), each factor \( z, z+1, \dots, z+n \) in the extended formula
+\[ \Gamma(z) = \frac{\Gamma(z+n+1)}{z(z+1)\cdots(z+n)} \]
+sits in the denominator. At \( z = -n \) (for \( n = 0, 1, 2, \dots \)), the factor \( (z+n) \) vanishes while \( \Gamma(z+n+1) = \Gamma(1) = 1 \ne 0 \) stays finite and nonzero, so the ratio blows up: \( \Gamma \) has a pole at every non-positive integer, and is undefined there.
+~~~
