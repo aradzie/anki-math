@@ -1,0 +1,252 @@
+!type: Basic Math
+!deck: Math (Staging)::Bounds
+!tags: Math Real-Numbers Bound
+
+!id: dM9QikMN0C
+!front: What does it mean for a set \( A \subseteq \mathbb{R} \) to have an upper bound, a lower bound, and to be bounded?
+!back:
+- \( M \in \mathbb{R} \) is an **upper bound** of \( A \) if \( a \le M \) for all \( a \in A \); \( A \) is then **bounded above**.
+- \( m \in \mathbb{R} \) is a **lower bound** of \( A \) if \( a \ge m \) for all \( a \in A \); \( A \) is then **bounded below**.
+- \( A \) is **bounded** if it is both bounded above and bounded below.
+- If \( A \) is not bounded, it is **unbounded**.
+!extra: ![Anatomy of sup and inf](sup_inf_anatomy.svg)
+~~~
+
+!id: 0ern8qyuMZ
+!front: Give the precise definition of the supremum (least upper bound) of a set \( A \subseteq \mathbb{R} \).
+!back:
+\( s = \sup A \) if:
+
+- \( s \) is an upper bound of \( A \), and
+- \( s \le u \) for every upper bound \( u \) of \( A \) (no smaller upper bound exists).
+!extra:
+Equivalently, \( \sup A \) is the smallest element of the set of upper bounds of \( A \).
+
+![Anatomy of sup and inf](sup_inf_anatomy.svg)
+~~~
+
+!id: VtVqJTuax4
+!front: Give the precise definition of the infimum (greatest lower bound) of a set \( A \subseteq \mathbb{R} \).
+!back:
+\( t = \inf A \) if:
+
+- \( t \) is a lower bound of \( A \), and
+- \( t \ge \ell \) for every lower bound \( \ell \) of \( A \) (no larger lower bound exists).
+!extra:
+Equivalently, \( \inf A \) is the largest element of the set of lower bounds of \( A \).
+
+![Anatomy of sup and inf](sup_inf_anatomy.svg)
+~~~
+
+!type: Basic Math (and reversed card)
+
+!id: u1o5ueUEJk
+!front: \[ \sup A \]
+!back: The least upper bound of \( A \) — the smallest real number that is an upper bound of \( A \).
+~~~
+
+!id: 2yHISsCzPY
+!front: \[ \inf A \]
+!back: The greatest lower bound of \( A \) — the largest real number that is a lower bound of \( A \).
+~~~
+
+!type: Basic Math
+
+!id: yThN4F1NtW
+!front: State the \( \varepsilon \)-characterization of \( s = \sup A \), equivalent to the definition of least upper bound.
+!back:
+\( s = \sup A \) if and only if:
+
+- \( s \) is an upper bound of \( A \), and
+- for every \( \varepsilon > 0 \), there exists \( x \in A \) such that \( x > s - \varepsilon \).
+!extra: The second condition says no upper bound smaller than \( s \) works: points of \( A \) get arbitrarily close to \( s \) from below.
+~~~
+
+!id: Z3YjYIB0hd
+!front: State the \( \varepsilon \)-characterization of \( t = \inf A \), equivalent to the definition of greatest lower bound.
+!back:
+\( t = \inf A \) if and only if:
+
+- \( t \) is a lower bound of \( A \), and
+- for every \( \varepsilon > 0 \), there exists \( x \in A \) such that \( x < t + \varepsilon \).
+~~~
+
+!id: UtffdAGybs
+!front: Why is the \( \varepsilon \)-characterization of \( \sup A \) equivalent to "no upper bound smaller than \( s \) exists"?
+!back:
+Let:
+
+- \( s \) be an upper bound of \( A \).
+
+To prove: \( s \) is the least upper bound iff for every \( \varepsilon > 0 \) there exists \( x \in A \) with \( x > s - \varepsilon \).
+
+- Fix \( \varepsilon > 0 \) and consider the candidate upper bound \( u = s - \varepsilon < s \).
+- "No upper bound smaller than \( s \) exists" means \( u \) fails to be an upper bound of \( A \), i.e. some \( x \in A \) has \( x > u = s - \varepsilon \).
+- This holds for every \( \varepsilon > 0 \) exactly when it holds for every candidate \( u < s \), since every \( u < s \) equals \( s - \varepsilon \) for some \( \varepsilon > 0 \).
+- So the \( \varepsilon \) condition is just a restatement, ranging over \( \varepsilon > 0 \), of "every real number less than \( s \) fails to be an upper bound."
+~~~
+
+!id: MFZGG2uCEf
+!front: State the completeness (least upper bound) axiom of \( \mathbb{R} \).
+!back:
+If \( A \subseteq \mathbb{R} \) is:
+
+- nonempty, and
+- bounded above,
+
+then \( A \) has a least upper bound \( \sup A \in \mathbb{R} \).
+!extra: This is taken as an axiom of \( \mathbb{R} \), not derived from the field and order axioms — it is exactly the property that distinguishes \( \mathbb{R} \) from \( \mathbb{Q} \).
+~~~
+
+!id: 828qKjoRsk
+!front: Let \( A = \{x \in \mathbb{Q} : x^2 < 2\} \). Is \( A \) bounded above in \( \mathbb{Q} \)? Does it have a least upper bound in \( \mathbb{Q} \)?
+!back:
+\( A \) is bounded above in \( \mathbb{Q} \) — e.g. \( 2 \) is a rational upper bound.
+
+\( A \) has no least upper bound in \( \mathbb{Q} \): the natural candidate is \( \sqrt{2} \), which is irrational, and for any rational upper bound \( q > \sqrt{2} \), a rational \( q' \) with \( \sqrt{2} < q' < q \) can always be found, so \( q \) is never the smallest rational upper bound.
+!extra:
+This is why completeness must be added as an axiom: \( \mathbb{Q} \) satisfies the field and order axioms of \( \mathbb{R} \) but fails completeness.
+
+![The rationals below sqrt(2) have no least upper bound in Q](rational_gap.svg)
+~~~
+
+!id: Va1Dtp0DfY
+!front: Why is the supremum of a set, when it exists, unique? (State the argument for \( \sup \); the same argument applies to \( \inf \).)
+!back:
+Let:
+
+- \( s_1 \) and \( s_2 \) both satisfy the definition of \( \sup A \).
+
+To prove: \( s_1 = s_2 \).
+
+- Since \( s_1 = \sup A \) and \( s_2 \) is an upper bound of \( A \), \( s_1 \le s_2 \).
+- Since \( s_2 = \sup A \) and \( s_1 \) is an upper bound of \( A \), \( s_2 \le s_1 \).
+- Hence \( s_1 = s_2 \).
+!extra: The identical antisymmetry argument, with inequalities reversed, shows \( \inf A \) is unique.
+~~~
+
+!id: RYcc6rJ3XC
+!front: Derive \( \sup(-A) = -\inf(A) \) for a nonempty set \( A \subseteq \mathbb{R} \) bounded below, where \( -A = \{-a : a \in A\} \).
+!back:
+Let:
+
+- \( A \) be nonempty and bounded below, so \( -A \) is nonempty and bounded above.
+- \( t = \inf A \).
+
+To prove: \( \sup(-A) = -t \).
+
+- \( u \) is an upper bound of \( -A \) iff \( -a \le u \) for all \( a \in A \), iff \( a \ge -u \) for all \( a \in A \), iff \( -u \) is a lower bound of \( A \).
+- So upper bounds of \( -A \) correspond exactly to \( u = -\ell \) for lower bounds \( \ell \) of \( A \).
+- The least such \( u \) corresponds to the greatest such \( \ell \), i.e. \( \sup(-A) = -\inf(A) \).
+!extra: Applying the completeness axiom (which only guarantees suprema) to \( -A \) via this identity is how the existence of \( \inf A \) for nonempty, bounded-below \( A \) is derived, without needing a separate greatest-lower-bound axiom.
+~~~
+
+!id: WXd103Ro6P
+!front: Why does \( A \subseteq B \) (both nonempty, \( B \) bounded above) imply \( \sup A \le \sup B \)? State the dual for \( \inf \).
+!back:
+\( \sup A \le \sup B \), and dually \( \inf A \ge \inf B \) when \( B \) is bounded below.
+
+Reason: every upper bound of \( B \) is also an upper bound of \( A \), since \( A \subseteq B \). In particular \( \sup B \) is an upper bound of \( A \), so \( \sup A \), being the *least* upper bound of \( A \), satisfies \( \sup A \le \sup B \).
+~~~
+
+!id: pYfrB8LVem
+!front: Derive \( \sup(A+B) = \sup A + \sup B \) for nonempty \( A, B \subseteq \mathbb{R} \) bounded above, where \( A + B = \{a + b : a \in A, b \in B\} \).
+!back:
+Let:
+
+- \( s = \sup A \), \( t = \sup B \).
+
+To prove: \( \sup(A+B) = s + t \).
+
+- (\( \le \)) For any \( a \in A, b \in B \), \( a \le s \) and \( b \le t \), so \( a + b \le s + t \); thus \( s+t \) is an upper bound of \( A+B \), giving \( \sup(A+B) \le s+t \).
+- (\( \ge \)) Fix \( \varepsilon > 0 \). By the \( \varepsilon \)-characterization of sup, there exist \( a \in A \) with \( a > s - \varepsilon/2 \) and \( b \in B \) with \( b > t - \varepsilon/2 \), so \( a+b \in A+B \) satisfies \( a+b > s+t-\varepsilon \).
+- Since this holds for every \( \varepsilon > 0 \), no upper bound of \( A+B \) can be smaller than \( s+t \), so \( \sup(A+B) \ge s+t \).
+- Combining both inequalities, \( \sup(A+B) = s+t \).
+~~~
+
+!id: N4coqnUV2D
+!front: How do \( \max A \) and \( \sup A \) relate?
+!back:
+\( \max A \) exists exactly when \( \sup A \in A \), in which case \( \max A = \sup A \).
+
+\( \sup A \) is the more general notion: it exists whenever \( A \) is nonempty and bounded above, whether or not that bound is attained by an element of \( A \), while \( \max A \) additionally requires the bound to be attained.
+!related: The dual statement holds for \( \min A \) and \( \inf A \).
+~~~
+
+!id: i46iIkjGJK
+!front: Does \( \max A \) existing imply that \( \sup A \) exists? If so, how are they related?
+!back:
+Let:
+
+- \( \max A \) exist, i.e. \( \max A \in A \) and \( \max A \ge a \) for all \( a \in A \).
+
+To prove: \( \sup A \) exists and \( \sup A = \max A \).
+
+- \( \max A \) is itself an upper bound of \( A \), by definition.
+- Any upper bound \( u \) of \( A \) satisfies \( u \ge \max A \), since \( \max A \in A \).
+- So \( \max A \) is the least upper bound: \( \sup A = \max A \).
+!extra: The same argument, with inequalities reversed, shows \( \min A \) existing implies \( \inf A = \min A \). This holds unconditionally, without invoking the completeness axiom — the existence of \( \max A \) is itself the witness that \( \sup A \) exists.
+~~~
+
+!id: 280YevvCjE
+!front: Does \( \sup A \) existing imply \( \max A \) exists? Construct a counterexample.
+!back:
+No. Let \( A = \{-\tfrac{1}{n} : n \in \mathbb{N}\} = \{-1, -\tfrac12, -\tfrac13, \dots\} \).
+
+- \( A \) is bounded above by \( 0 \), and \( \sup A = 0 \): by the \( \varepsilon \)-characterization, for any \( \varepsilon > 0 \), some \( n \) has \( -1/n > -\varepsilon \).
+- But \( 0 \notin A \), so no element of \( A \) attains the bound: \( \max A \) does not exist.
+!extra:
+This shows \( \sup \) is strictly weaker than \( \max \): it only requires an upper bound approached arbitrarily closely, not attained. Dually, \( B = \{\tfrac1n : n \in \mathbb{N}\} \) has \( \inf B = 0 \) with no \( \min B \).
+
+![-1/n approaches 0, which is sup A but not in A](sup_without_max.svg)
+~~~
+
+!id: ll8npMoMHp
+!front: Does every nonempty finite subset of \( \mathbb{R} \) have a maximum and minimum?
+!back: Yes. Every nonempty finite subset of \( \mathbb{R} \) has both a maximum and a minimum, so \( \sup A = \max A \) and \( \inf A = \min A \) always hold for finite \( A \).
+!extra: This contrasts with infinite sets, where attainment can fail even when the set is bounded — e.g. \( \sup(0,1) = 1 \) is never attained, since \( (0,1) \) is infinite.
+~~~
+
+!id: Aau27Ct7mq
+!front: Find \( \sup(0,1) \) and \( \inf(0,1) \), and state whether each is attained. Contrast with \( [0,1] \).
+!back:
+\( \sup(0,1) = 1 \) and \( \inf(0,1) = 0 \), neither attained — so \( (0,1) \) has no maximum and no minimum.
+
+For the closed interval, \( \sup[0,1] = \max[0,1] = 1 \) and \( \inf[0,1] = \min[0,1] = 0 \): both bounds are attained since the endpoints belong to the set.
+!extra: ![Open interval, not attained, vs. closed interval, attained](interval_attainment.svg)
+~~~
+
+!id: YXPzEiGy44
+!front: State and derive the Archimedean property of \( \mathbb{R} \) from the completeness axiom.
+!back:
+Statement: for every \( x \in \mathbb{R} \), there exists \( n \in \mathbb{N} \) with \( n > x \).
+
+Let:
+
+- Suppose, for contradiction, that \( \mathbb{N} \) is bounded above.
+
+To prove: this leads to a contradiction, establishing the statement.
+
+- By completeness, \( s = \sup \mathbb{N} \) exists.
+- Since \( s - 1 < s \), \( s-1 \) is not an upper bound of \( \mathbb{N} \), so there exists \( n \in \mathbb{N} \) with \( n > s - 1 \).
+- Then \( n + 1 \in \mathbb{N} \) satisfies \( n+1 > s \), contradicting that \( s \) is an upper bound of \( \mathbb{N} \).
+- So \( \mathbb{N} \) is unbounded above, i.e. for every \( x \in \mathbb{R} \) some \( n \in \mathbb{N} \) exceeds it.
+~~~
+
+!id: aHsqZ0sBcH
+!front: Why does a bounded increasing sequence \( \{a_n\} \) converge to \( s = \sup\{a_n : n \in \mathbb{N}\} \)?
+!back:
+Let:
+
+- \( s = \sup\{a_n : n \in \mathbb{N}\} \), which exists by completeness since the sequence is bounded above.
+- \( \varepsilon > 0 \) be arbitrary.
+
+To prove: \( a_n \to s \).
+
+- By the \( \varepsilon \)-characterization of sup, there exists \( N \) with \( a_N > s - \varepsilon \).
+- Since \( \{a_n\} \) is increasing, \( a_n \ge a_N > s - \varepsilon \) for all \( n \ge N \).
+- Also \( a_n \le s \) for all \( n \), since \( s \) is an upper bound.
+- So \( s - \varepsilon < a_n \le s \) for all \( n \ge N \), i.e. \( |a_n - s| < \varepsilon \).
+- Since \( \varepsilon > 0 \) was arbitrary, \( a_n \to s \).
+!extra: This is the proof idea behind the monotone convergence theorem; it is completeness, via the existence and \( \varepsilon \)-characterization of sup, that makes boundedness alone (without knowing the limit beforehand) enough to guarantee convergence.
+~~~

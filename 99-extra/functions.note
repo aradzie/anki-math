@@ -52,7 +52,7 @@ So the range is always a subset of the codomain.
 ~~~
 
 !type: Basic Math
-!deck: Math (Functions)
+!deck: Math (Staging)::Functions
 !tags: Math Function
 
 !id: 5IdgxuQIzt
@@ -365,12 +365,16 @@ The same one of the two behaviors must hold throughout \( I \), without switchin
 !id: 3HvAcxaw5c
 !front: Define a vertical asymptote of \( f \) at \( x=a \).
 !back: The line \( x=a \) is a vertical asymptote of \( f \) if at least one of the one-sided limits \( \lim_{x\to a^-} f(x) \) or \( \lim_{x\to a^+} f(x) \) is \( +\infty \) or \( -\infty \).
+!extra: ![Vertical asymptote x = 2 for f(x) = 1/(x-2)](vertical_asymptote.svg)
 ~~~
 
 !id: zzYdjtgp1r
 !front: Define a horizontal asymptote of \( f \).
 !back: The line \( y=L \) is a horizontal asymptote of \( f \) if \( \lim_{x\to\infty} f(x) = L \) or \( \lim_{x\to-\infty} f(x) = L \).
-!extra: A function can have different horizontal asymptotes (or none at all) in the two directions.
+!extra:
+A function can have different horizontal asymptotes (or none at all) in the two directions.
+
+![Horizontal asymptotes y = ±π/2 for f(x) = arctan(x)](horizontal_asymptote.svg)
 ~~~
 
 !id: qB9L6UhrH4
@@ -379,6 +383,7 @@ The same one of the two behaviors must hold throughout \( I \), without switchin
 The line \( y=mx+b \), with \( m \ne 0 \), is an oblique asymptote of \( f \) as \( x\to\infty \) if
 \[ \lim_{x\to\infty} \big(f(x) - (mx+b)\big) = 0, \]
 and similarly as \( x \to -\infty \).
+!extra: ![Oblique asymptote y = x for f(x) = (x^2+1)/x](oblique_asymptote.svg)
 ~~~
 
 !id: Sv1uQRdxot
