@@ -151,8 +151,16 @@ a single symmetric limit, analogous to the p.v. definition for \( \int_{-\infty}
 !back:
 - Splitting at arbitrary \( c \) requires evaluating \( \int_{-\infty}^c f + \int_c^\infty f \) separately, which is an indeterminate \( \infty - \infty \) when the tails diverge with opposite sign.
 - The principal value avoids this by taking one joint limit \( R \to \infty \) on both bounds at once, letting the two infinities cancel algebraically before the limit is taken.
+~~~
 
-So p.v. convergence is strictly weaker than convergence of the improper integral.
+!id: r8qpVfP7i8
+!front: How does convergence of \( \int_{-\infty}^\infty f(x)\, dx \) as an improper integral relate to convergence of its Cauchy principal value?
+!back:
+- Improper integral convergence \( \implies \) p.v. convergence: if \( \int_{-\infty}^\infty f \) converges, both one-sided pieces \( \int_{-\infty}^c f \) and \( \int_c^\infty f \) converge independently, so the symmetric limit \( \lim_{R\to\infty}\int_{-R}^R f \) exists along that same pair of limits and agrees with the improper integral's value.
+- p.v. convergence \( \nRightarrow \) improper integral convergence: the symmetric limit can exist through cancellation even when the two pieces individually diverge, so the p.v. can converge while the improper integral does not.
+
+So p.v. convergence is strictly weaker: it is implied by, but does not imply, convergence of the improper integral.
+!extra: For a concrete instance of this gap, see \( \text{p.v.} \int_{-\infty}^\infty x\, dx = 0 \) despite \( \int_{-\infty}^\infty x\, dx \) diverging.
 ~~~
 
 !id: XG8RFgkj4i
