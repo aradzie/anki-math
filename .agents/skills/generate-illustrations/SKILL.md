@@ -25,6 +25,18 @@ Illustrations are one of the compiled-artifact steps in this repository (alongsi
 2. Use plain `size(...)`, `draw`, `label`, `dot` calls. Use shared helpers from `common.asy` (`import common;`).
 3. Name the file after the concept it illustrates, matching existing naming (snake_case, e.g. `unit_circle.asy`), and place it next to the `.note` file it accompanies.
 
+## Preview
+
+The Read tool cannot display `.svg` files as images, so the compiled deliverable itself can't be visually inspected. Before compiling the final `.svg` or referencing an illustration from a `.note` file, render a raster preview and look at it:
+
+```sh
+make path/to/file.preview.png
+```
+
+This runs `asy -f png -render=4` on the `.asy` source directly, inside the same texlive container used for the `%.svg` rule below — no extra host dependency. The output lands next to the source as `<name>.preview.png`; it's gitignored, so it never needs manual cleanup, but treat it as scratch, not a deliverable.
+
+View the PNG with the Read tool and check for: labels or elements overlapping, anything clipped by the canvas bounds, and shapes reading incorrectly (e.g. a rectangle that should visibly overshoot or undershoot a curve but doesn't). Iterate — edit the `.asy`, rerun `make path/to/file.preview.png`, re-view — until it's correct.
+
 ## Compile
 
 The root `Makefile` finds every `.asy` file in the repo (excluding `common.asy` and build/vendor directories) and builds it to a same-named `.svg`:
@@ -33,6 +45,6 @@ The root `Makefile` finds every `.asy` file in the repo (excluding `common.asy` 
 make illustrations
 ```
 
-To compile and check a single file, build its `.svg` target directly, e.g. `make illustrations/unit_circle.svg`, then verify the output exists and is a valid SVG before referencing it.
+To compile and check a single file, build its `.svg` target directly, e.g. `make unit_circle.svg` (path relative to the repo root — `illustrations` above is a phony aggregate target, not a directory), then verify the output exists before referencing it.
 
 Incremental: only sources newer than their output (or newer than `common.asy`, tracked as a dependency of everything) are rebuilt.

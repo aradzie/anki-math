@@ -22,6 +22,9 @@ illustrations: $(SVG_TARGETS)
 %.svg: %.asy $(COMMON_ASY)
 	$(TEXLIVE_RUN) asy -f svg -render=0 -o $(basename $@) $<
 
+%.preview.png: %.asy $(COMMON_ASY)
+	$(TEXLIVE_RUN) asy -f png -render=4 -o $(basename $@) $<
+
 clean:
 	$(TEXLIVE_RUN) latexmk -c -auxdir=$(AUXDIR) -outdir=.
 

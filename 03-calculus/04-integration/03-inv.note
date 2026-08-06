@@ -26,7 +26,10 @@ Assume \( f \) is one-to-one and continuously differentiable on \( [a,b] \). Sub
         &= b f(b) - a f(a) - \int_a^b f(x)\,dx.
 \end{align*}
 \]
-!extra: The bounds are oriented: if \( f \) is decreasing, then \( f(a) > f(b) \), and the identity still uses the directed integral from \( f(a) \) to \( f(b) \).
+!extra:
+The bounds are oriented: if \( f \) is decreasing, then \( f(a) > f(b) \), and the identity still uses the directed integral from \( f(a) \) to \( f(b) \).
+
+![Integral of an inverse function](inverse_function_integral.svg)
 ~~~
 
 !id: InpkHt4xmD

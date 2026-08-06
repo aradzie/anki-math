@@ -35,7 +35,7 @@ An infinite sequence can be defined in various ways:
 !id: 3zXOAOFJY3
 !front: What is the limit of a sequence?
 !back:
-A sequence \( \{ a_n \} \) converges to a real number \( L \) if for all \( \epsilon > 0 \), there exists an integer \( N \) such that \( |a_n − L| < \epsilon \) if \( n \ge N \). The number \( L \) is the limit of the sequence and we write
+A sequence \( \{ a_n \} \) converges to a real number \( L \) if for all \( \epsilon > 0 \), there exists an integer \( N \) such that \( |a_n - L| < \epsilon \) if \( n \ge N \). The number \( L \) is the limit of the sequence and we write
 
 \[ \lim_{n \to \infty} a_n = L \text{ or } a_n \to L. \]
 
@@ -123,7 +123,7 @@ A sequence \( \{a_n\} \) is a **monotone sequence** for all \( n \ge n_0 \) if i
 ~~~
 
 !id: lCZ49YrM8Y
-!front: What is the monotone convergence theorem?
+!front: What is the monotone convergence theorem for sequences?
 !back:
 The monotone convergence theorem states that if a sequence \( \{a_n\} \) satisfies:
 
@@ -238,15 +238,28 @@ Let \( \sum_{n=1}^{\infty} a_n \) be a convergent series and \( c \) a real numb
 ~~~
 
 !id: hQX2AY9ug6
-!front: What is the divergence test for a series?
+!front: What is the divergence test for infinite series?
 !back:
-Consider the sequence \( a_n \). If \( \lim_{n \to \infty} a_n \neq 0 \) or \( \lim_{n \to \infty} a_n \) does not exist, then the series \( \sum_{n=1}^{\infty} a_n \) diverges.
+Consider the sequence \( a_n \). If either of the following holds:
 
-The converse is not true. That is, if \( \lim_{n \to \infty} a_n = 0 \), we cannot make any conclusion about the convergence of \( \sum_{n=1}^{\infty} a_n \).
+- \( \lim_{n \to \infty} a_n \neq 0 \)
+- \( \lim_{n \to \infty} a_n \) does not exist
+
+then the series \( \sum_{n=1}^{\infty} a_n \) diverges.
+~~~
+
+!id: 0TbBAJn3JL
+!front: Is \( \lim_{n \to \infty} a_n = 0 \) a necessary or a sufficient condition for \( \sum_{n=1}^{\infty} a_n \) to converge?
+!back:
+It is **necessary but not sufficient**.
+
+- Necessary: this is the contrapositive of the divergence test — if \( \sum_{n=1}^{\infty} a_n \) converges, then \( \lim_{n \to \infty} a_n = 0 \).
+- Not sufficient: \( \lim_{n \to \infty} a_n = 0 \) alone does not guarantee convergence of \( \sum_{n=1}^{\infty} a_n \).
+!extra: The harmonic series \( \sum_{n=1}^{\infty} \frac{1}{n} \) is the standard counterexample: \( a_n = 1/n \to 0 \), yet the series diverges.
 ~~~
 
 !id: YTrrpdMo63
-!front: What is the integral test?
+!front: What is the integral test for infinite series?
 !back:
 Suppose \( \sum_{n=1}^{\infty} a_n \) is a series with positive terms \( a_n \). Suppose there exists a function \( f \) and a positive integer \( N \) such that the following three conditions are satisfied:
 
@@ -256,7 +269,8 @@ Suppose \( \sum_{n=1}^{\infty} a_n \) is a series with positive terms \( a_n \).
 
 Then \( \sum_{n=1}^{\infty} a_n \) and \( \int_{N}^{\infty} f(x) \, dx \) both converge or both diverge.
 
-Although convergence of the integral implies convergence of the related series, it does not imply that the value of the integral and the series are the same.
+Although convergence of the integral implies convergence of the related series, it does not imply that the integral and the series have the same value.
+!extra: ![Integral test](integral_test.svg)
 ~~~
 
 !id: YmNyEz9dL0
@@ -275,19 +289,23 @@ For a convergent series \( \sum_{n=1}^{\infty} a_n \) with sum \( S \) and \( N 
 Suppose \( \sum_{n=1}^{\infty} a_n \) satisfies the integral test hypotheses with respect to \( f \) for \( n \ge N \). Then the remainder \( R_N = \sum_{n=N+1}^{\infty} a_n \) satisfies
 
 \[ \int_{N+1}^{\infty} f(x) \, dx \le R_N \le \int_{N}^{\infty} f(x) \, dx. \]
-!extra: This bounds the error of approximating the series' sum by its \( N \)th partial sum without needing the exact value of the series.
+!extra:
+This bounds the error of approximating the series' sum by its \( N \)th partial sum without needing the exact value of the series.
+
+![Integral test remainder](integral_test_remainder.svg)
 ~~~
 
 !id: rVhE7ELDdz
-!front: What is the direct comparison test?
+!front: What is the direct comparison test for infinite series?
 !back:
-Suppose there exists an integer \( N \) such that \( 0 \le a_n \le b_n \) for all \( n \ge N \). If \( \sum_{n=1}^{\infty} b_n \) converges, then \( \sum_{n=1}^{\infty} a_n \) converges.
+Let \( A = \sum_{n=1}^{\infty} a_n \) and \( B = \sum_{n=1}^{\infty} b_n \). Then:
 
-Suppose there exists an integer \( N \) such that \( a_n \ge b_n \ge 0 \) for all \( n \ge N \). If \( \sum_{n=1}^{\infty} b_n \) diverges, then \( \sum_{n=1}^{\infty} a_n \) diverges.
+- If there exists an integer \( N \) such that \( 0 \le a_n \le b_n \) for all \( n \ge N \), and \( B \) converges, then \( A \) converges.
+- If there exists an integer \( N \) such that \( a_n \ge b_n \ge 0 \) for all \( n \ge N \), and \( B \) diverges, then \( A \) diverges.
 ~~~
 
 !id: h629HYWjfM
-!front: What is the limit comparison test?
+!front: What is the limit comparison test for infinite series?
 !back:
 Let:
 
@@ -315,27 +333,34 @@ or
 
 !id: QlGMNjVfeP
 !front: What is the alternating series test?
-!back: An alternating series of the form \( \sum_{n=1}^{\infty} (-1)^{n+1} \, a_n \) converges if there exists a positive integer \( N \) such that \( 0 < a_{n+1} \le a_n \) for all \( n \ge N \) and \( \lim_{n \to \infty} a_n = 0 \).
+!back:
+An alternating series of the form \( \sum_{n=1}^{\infty} (-1)^{n+1} \, a_n \) converges if there exists a positive integer \( N \) such that:
+
+- \( 0 < a_{n+1} \le a_n \) for all \( n \ge N \)
+- \( \lim_{n \to \infty} a_n = 0 \)
 ~~~
 
 !id: WITe5C997i
 !front: What is the remainder of an alternating series?
 !back:
-If an alternating series \( \sum_{n=1}^{\infty} (-1)^{n+1} a_n \) satisfies the alternating series test hypotheses, then the remainder after \( N \) terms satisfies
+Let \( \sum_{n=1}^{\infty} (-1)^{n+1} a_n \) be an alternating series satisfying the **alternating series test** hypotheses, with:
 
-\[ |R_N| = |S - S_N| \le a_{N+1}, \]
+- \( S \) the sum of the series
+- \( S_N = \sum_{n=1}^{N} (-1)^{n+1} a_n \) the \( N \)th partial sum
 
-where \( S \) is the sum of the series and \( S_N = \sum_{n=1}^{N} (-1)^{n+1} a_n \) is the \( N \)th partial sum.
+Then the remainder after \( N \) terms satisfies
+
+\[ |R_N| = |S - S_N| \le a_{N+1}. \]
 !extra: The sign of \( R_N \) matches the sign of the first omitted term, so \( S \) lies between \( S_N \) and \( S_{N+1} \).
 ~~~
 
 !id: PItfKda0gB
-!front: What is absolute convergence of a series?
+!front: What is absolute convergence of an infinite series?
 !back: A series \( \sum_{n=1}^{\infty} a_n \) is **absolutely convergent** if \( \sum_{n=1}^{\infty} |a_n| \) converges.
 ~~~
 
 !id: TEEIGWkJNA
-!front: Does absolute convergence imply conditional convergence?
+!front: Does absolute convergence of infinite series imply conditional convergence?
 !back:
 No. A series \( \sum_{n=1}^{\infty} a_n \) is **conditionally convergent** if
 
@@ -357,7 +382,7 @@ These two cases are mutually exclusive and exhaustive: every convergent series f
 ~~~
 
 !id: 0DPVQwCxmv
-!front: Does absolute convergence imply convergence?
+!front: Does absolute convergence of infinite series imply convergence?
 !back: Yes. If \( \sum_{n=1}^{\infty} |a_n| \) converges, then \( \sum_{n=1}^{\infty} a_n \) converges.
 ~~~
 
@@ -371,7 +396,7 @@ By contrast, an absolutely convergent series converges to the same sum under eve
 ~~~
 
 !id: 0lTi8S7UG9
-!front: What is the ratio test?
+!front: What is the ratio test for infinite series?
 !back:
 Consider the series \( \sum_{n=1}^{\infty} a_n \) with nonzero terms. Let
 
@@ -383,7 +408,7 @@ Consider the series \( \sum_{n=1}^{\infty} a_n \) with nonzero terms. Let
 ~~~
 
 !id: 4k31lhpZH8
-!front: What is the root test?
+!front: What is the root test for infinite series?
 !back:
 Consider the series \( \sum_{n=1}^{\infty} a_n \). Let
 
@@ -394,18 +419,57 @@ Consider the series \( \sum_{n=1}^{\infty} a_n \). Let
 - If \( \rho = 1 \), the test does not provide any information.
 ~~~
 
+!id: DZ69QXbMRh
+!front: Can the ratio test ever be used to conclude that a series is conditionally convergent (converges, but not absolutely)?
+!back:
+No. Since \( \rho = \lim_{n \to \infty} |a_{n+1}/a_n| \) depends only on \( |a_n| \), the conclusion "\( \rho < 1 \Rightarrow \) converges" is exactly the statement that \( \sum_{n=1}^{\infty} |a_n| \) converges, i.e. absolute convergence of \( \sum_{n=1}^{\infty} a_n \). This already rules out conditional convergence, which requires \( \sum_{n=1}^{\infty} |a_n| \) to diverge.
+
+---
+
+If the limit \( \rho \) exists, a conditionally convergent series always forces \( \rho = 1 \):
+
+- \( \rho < 1 \) would prove absolute convergence — a contradiction.
+- \( \rho > 1 \) would force \( a_n \not\to 0 \), so \( \sum_{n=1}^{\infty} a_n \) would diverge by the divergence test — also a contradiction.
+
+So the ratio test is inconclusive on every conditionally convergent series where the limit exists.
+!extra: The alternating harmonic series \( \sum_{n=1}^{\infty} (-1)^{n+1}/n \) illustrates this: \( |a_{n+1}/a_n| = n/(n+1) \to 1 \), so \( \rho = 1 \) and the ratio test gives no information, even though the series converges conditionally.
+~~~
+
+!id: 5ptnpogTbr
+!front: Can the root test ever be used to conclude that a series is conditionally convergent (converges, but not absolutely)?
+!back:
+No. Since \( \rho = \lim_{n \to \infty} \sqrt[n]{|a_n|} \) depends only on \( |a_n| \), the conclusion "\( \rho < 1 \Rightarrow \) converges" is exactly the statement that \( \sum_{n=1}^{\infty} |a_n| \) converges, i.e. absolute convergence of \( \sum_{n=1}^{\infty} a_n \). This already rules out conditional convergence, which requires \( \sum_{n=1}^{\infty} |a_n| \) to diverge.
+
+---
+
+If the limit \( \rho \) exists, a conditionally convergent series always forces \( \rho = 1 \):
+
+- \( \rho < 1 \) would prove absolute convergence — a contradiction.
+- \( \rho > 1 \) would force \( |a_n| \not\to 0 \) (since \( \sqrt[n]{|a_n|} \to \rho > 1 \) forces \( |a_n| \to \infty \)), so \( \sum_{n=1}^{\infty} a_n \) would diverge by the divergence test — also a contradiction.
+
+So the root test is inconclusive on every conditionally convergent series where the limit exists.
+!extra: The alternating harmonic series \( \sum_{n=1}^{\infty} (-1)^{n+1}/n \) illustrates this: \( \sqrt[n]{|a_n|} = \sqrt[n]{1/n} \to 1 \), so \( \rho = 1 \) and the root test gives no information, even though the series converges conditionally.
+~~~
+
 !id: iZKaAkl7j7
-!front: What is a power series?
+!front: What is a power series centered at the origin?
 !back:
 The power series centered at \( x = 0 \) is an infinite series of the following form
 
 \[ \sum_{n=0}^{\infty} c_n x^n = c_0 + c_1 x + c_2 x^2 + \ldots \]
 
+where \( x \) is a variable and the coefficients \( c_n \) are constants.
+~~~
+
+!id: xodtE9tMWN
+!front: What is a power series centered at \( x = a \)?
+!back:
 The power series centered at \( x = a \) is an infinite series of the following form
 
 \[ \sum_{n=0}^{\infty} c_n (x - a)^n = c_0 + c_1 (x - a) + c_2 (x - a)^2 + \ldots \]
 
-where \( x \) is a variable and the coefficients \( c_n \) are constants.
+where \( x \) is a variable, \( a \) is the center, and the coefficients \( c_n \) are constants.
+!extra: Setting \( a = 0 \) recovers the power series centered at the origin, \( \sum_{n=0}^{\infty} c_n x^n \).
 ~~~
 
 !id: WfQmQRcAco
@@ -420,7 +484,7 @@ Consider the power series \( \sum_{n=0}^{\infty} c_n (x - a)^n \). The series sa
 
 - The series converges at \( x=a \) and diverges for all \( x \ne a \).
 - The series converges for all real numbers \( x \).
-- There exists a real number \( R>0 \) such that the series converges if \( |x − a| < R \) and diverges if \( |x − a| > R \). At the values \( x \) where \( |x − a| = R \), the series may converge or diverge.
+- There exists a real number \( R>0 \) such that the series converges if \( |x - a| < R \) and diverges if \( |x - a| > R \). At the values \( x \) where \( |x - a| = R \), the series may converge or diverge.
 ~~~
 
 !id: GKZQhx4Oa6

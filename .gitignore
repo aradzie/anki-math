@@ -30,5 +30,6 @@ __pycache__/
 *.fls
 *.log
 *.out
+*.preview.png
 *.toc
 *~

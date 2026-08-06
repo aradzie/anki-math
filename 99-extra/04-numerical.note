@@ -1,0 +1,101 @@
+!type: Basic Math
+!deck: Math (Staging)::Numerical-Integration
+!tags: Math Calculus Numerical-Integration
+
+!id: ae4rK0jt8Z
+!front: What is the single-interval Midpoint Rule approximation to \( \int_a^b f(x)\, dx \), and what geometric shape does it correspond to?
+!back:
+\[ M = (b-a)\, f\!\left(\frac{a+b}{2}\right), \]
+the area of a single rectangle spanning \( [a,b] \) whose height is \( f \) evaluated at the interval's midpoint.
+~~~
+
+!id: E1DnLKMVEA
+!front: Given a partition of \( [a,b] \) into \( n \) equal subintervals of width \( h = (b-a)/n \) with midpoints \( m_i \), what is the composite Midpoint Rule approximation \( M_n \)?
+!back:
+\[ M_n = h \sum_{i=1}^n f(m_i), \]
+the sum of the \( n \) single-interval midpoint rectangle areas over each subinterval.
+~~~
+
+!id: uptHZbO0ce
+!front: How does the error bound for the Midpoint Rule scale from a single interval \( [a,b] \) to a composite partition of \( n \) equal subintervals?
+!back:
+Assuming \( f'' \) is continuous on \( [a,b] \):
+
+- Single interval:
+\[ \left| \int_a^b f\, dx - M \right| \le \frac{(b-a)^3}{24} \max_{[a,b]} |f''|. \]
+- Composite, with \( h = (b-a)/n \):
+\[ \left| \int_a^b f\, dx - M_n \right| \le \frac{(b-a)^3}{24\, n^2} \max_{[a,b]} |f''|. \]
+!extra: The composite bound is the single-interval bound divided by \( n^2 \) — halving \( h \) cuts the error roughly fourfold.
+~~~
+
+!id: fQl9tRfDpx
+!front: What is the single-interval Trapezoidal Rule approximation to \( \int_a^b f(x)\, dx \), and what geometric shape does it correspond to?
+!back:
+\[ T = \frac{b-a}{2} \bigl( f(a) + f(b) \bigr), \]
+the area of the trapezoid with parallel sides of length \( f(a) \) and \( f(b) \), formed by connecting \( (a,f(a)) \) and \( (b,f(b)) \) with a line.
+~~~
+
+!id: GKcm3U7GLs
+!front: Given a partition of \( [a,b] \) into \( n \) equal subintervals of width \( h = (b-a)/n \) with nodes \( x_0, \dots, x_n \), what is the composite Trapezoidal Rule approximation \( T_n \)?
+!back: \[ T_n = \frac{h}{2} \left( f(x_0) + 2 \sum_{i=1}^{n-1} f(x_i) + f(x_n) \right). \]
+!extra: Interior nodes carry weight \( 2 \) because each is shared by two adjacent trapezoids.
+~~~
+
+!id: SsFIGvugq6
+!front: How does the error bound for the Trapezoidal Rule scale from a single interval \( [a,b] \) to a composite partition of \( n \) equal subintervals?
+!back:
+Assuming \( f'' \) is continuous on \( [a,b] \):
+
+- Single interval:
+\[ \left| \int_a^b f\, dx - T \right| \le \frac{(b-a)^3}{12} \max_{[a,b]} |f''|. \]
+- Composite, with \( h = (b-a)/n \):
+\[ \left| \int_a^b f\, dx - T_n \right| \le \frac{(b-a)^3}{12\, n^2} \max_{[a,b]} |f''|. \]
+!extra: Same \( O(n^{-2}) \) order as the Midpoint Rule, but with twice the constant.
+~~~
+
+!id: ehCenTtUbg
+!front: What is the single-interval Simpson's Rule approximation to \( \int_a^b f(x)\, dx \), and what geometric shape does it correspond to?
+!back:
+Let \( m = \dfrac{a+b}{2} \). Then
+\[ S = \frac{b-a}{6} \bigl( f(a) + 4f(m) + f(b) \bigr), \]
+the area under the unique parabola passing through \( (a,f(a)) \), \( (m,f(m)) \), and \( (b,f(b)) \).
+~~~
+
+!id: 5GPrZQBH8I
+!front: Given a partition of \( [a,b] \) into \( n \) (even) equal subintervals of width \( h = (b-a)/n \) with nodes \( x_0, \dots, x_n \), what is the composite Simpson's Rule approximation \( S_n \)?
+!back: \[ S_n = \frac{h}{3} \left( f(x_0) + 4 \!\!\sum_{i \text{ odd}} f(x_i) + 2 \!\!\sum_{\substack{i \text{ even} \\ 0 < i < n}} f(x_i) + f(x_n) \right). \]
+!extra: Requires \( n \) even, since Simpson's Rule pairs consecutive subintervals to fit a parabola across each pair.
+~~~
+
+!id: Wyeydc1U4c
+!front: How does the error bound for Simpson's Rule scale from a single interval \( [a,b] \) to a composite partition of \( n \) equal subintervals?
+!back:
+Assuming \( f^{(4)} \) is continuous on \( [a,b] \):
+
+- Single interval:
+\[ \left| \int_a^b f\, dx - S \right| \le \frac{(b-a)^5}{2880} \max_{[a,b]} |f^{(4)}|. \]
+- Composite (\( n \) even), with \( h = (b-a)/n \):
+\[ \left| \int_a^b f\, dx - S_n \right| \le \frac{(b-a)^5}{180\, n^4} \max_{[a,b]} |f^{(4)}|. \]
+!extra: The \( O(n^{-4}) \) order converges strictly faster than the Midpoint or Trapezoidal Rules' \( O(n^{-2}) \).
+~~~
+
+!id: xNOzio6vLj
+!front: Compare the Midpoint, Trapezoidal, and Simpson's Rules for numerically approximating \( \int_a^b f(x)\, dx \).
+!back:
+- Midpoint Rule: a rectangle at the interval's midpoint height; single-interval error \( \frac{(b-a)^3}{24}\max|f''| \), requires \( f'' \) continuous.
+- Trapezoidal Rule: a trapezoid connecting the endpoint values; single-interval error \( \frac{(b-a)^3}{12}\max|f''| \) — same order as the Midpoint Rule but twice the constant, and opposite in sign.
+- Simpson's Rule: the parabola through both endpoints and the midpoint; single-interval error \( \frac{(b-a)^5}{2880}\max|f^{(4)}| \), a strictly higher order of accuracy, requiring \( f^{(4)} \) continuous.
+~~~
+
+!id: oEb90QmGhc
+!front: For a twice-differentiable convex function \( f \) (\( f'' \ge 0 \)) on \( [a,b] \), how do the Midpoint and Trapezoidal Rule approximations compare to the true value of \( \int_a^b f(x)\, dx \)?
+!back:
+- Trapezoidal Rule overestimates: the chord connecting \( (a,f(a)) \) and \( (b,f(b)) \) lies on or above the graph of a convex function, so the trapezoid's area is \( \ge \int_a^b f \).
+- Midpoint Rule underestimates: by symmetry of the midpoint, the midpoint rectangle's area equals the area under the tangent line to \( f \) at the midpoint, and a convex function lies on or above its tangent lines, so \( \int_a^b f \ge M \).
+!extra: For concave \( f \) (\( f'' \le 0 \)), both inequalities reverse.
+~~~
+
+!id: fHbbJZwSJl
+!front: Why is Simpson's Rule exact for every polynomial of degree \( \le 3 \), even though it is constructed by fitting only a degree-\( 2 \) parabola through three points?
+!back: The Simpson's Rule error is \( -\frac{(b-a)^5}{2880} f^{(4)}(\xi) \) for some \( \xi \in (a,b) \), valid whenever \( f^{(4)} \) is continuous on \( [a,b] \). For any polynomial of degree \( \le 3 \), \( f^{(4)} \equiv 0 \), so this error term vanishes identically regardless of \( \xi \) — the rule integrates such polynomials exactly despite only interpolating with a quadratic.
+~~~
