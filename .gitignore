@@ -7,6 +7,17 @@ tmp/
 __pycache__/
 *.pyc
 
+.agents/*
+!.agents/settings.json
+!.agents/agents/
+!.agents/commands/
+!.agents/skills/
+!.agents/rules/
+!.agents/hooks/
+
+.agents/**/*.local.json
+.agents/**/.cache/
+
 .env
 .env.*
 
