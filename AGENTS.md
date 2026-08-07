@@ -38,15 +38,15 @@ Keep the material technically precise and direct. Do not add filler or motivatio
 
 ## Flashcards
 
-Flashcards are plain-text `.note` files organized by topic directory, imported into Anki via an external addon — there is no compile step. They follow the Content Standards above. Full format rules, metadata directives, note-writing standards, and mathematical rigor requirements for flashcards are documented in `.agents/skills/generate-flashcards/SKILL.md`, which specializes the Content Standards above for card granularity and phrasing; follow that skill when creating, editing, or reviewing flashcards.
+Flashcards are plain-text `.note` files under `flashcards/`, organized by topic directory, imported into Anki via an external addon — there is no compile step. They follow the Content Standards above. Full format rules, metadata directives, note-writing standards, and mathematical rigor requirements for flashcards are documented in `.agents/skills/generate-flashcards/SKILL.md`, which specializes the Content Standards above for card granularity and phrasing; follow that skill when creating, editing, or reviewing flashcards.
 
 ## Self-Check Questions
 
-`self-check.tex` is the entrypoint for the self-check questions PDF: a single top-level LaTeX document that recursively `\input`s each topic's `.tex` files into one compiled PDF of readable, conceptually clear questions for active recall and conceptual reinforcement, not passive exposition. Topic files are content fragments, not standalone documents; only `self-check.tex` is compiled directly. They follow the Content Standards above.
+`self-check/self-check.tex` is the entrypoint for the self-check questions PDF: a single top-level LaTeX document that recursively `\input`s each topic's `.tex` files into one compiled PDF of readable, conceptually clear questions for active recall and conceptual reinforcement, not passive exposition. Topic files are content fragments, not standalone documents; only `self-check.tex` is compiled directly. They follow the Content Standards above.
 
 ### Build Self-Check Questions
 
-The root `Makefile` builds the compiled self-check PDF. It first runs `node self-check-stats.js`, which walks the topic files included from the top-level document and regenerates `self-check-stats.tex` — this step needs a host `node` install, unlike the LaTeX steps below, since it runs directly rather than inside the TeX Live container. It then compiles the top-level document with `latexmk` inside the TeX Live container (see "TeX Live via Podman" below), producing the PDF. Commit the regenerated `self-check-stats.tex` alongside content changes that add or remove questions.
+The `self-check/Makefile` builds the compiled self-check PDF. It first runs `node self-check-stats.js`, which walks the topic files included from the top-level document and regenerates `self-check-stats.tex` — this step needs a host `node` install, unlike the LaTeX steps below, since it runs directly rather than inside the TeX Live container. It then compiles the top-level document with `latexmk` inside the TeX Live container (see "TeX Live via Podman" below), producing the PDF. Commit the regenerated `self-check-stats.tex` alongside content changes that add or remove questions.
 
 ## Essays
 
@@ -74,22 +74,4 @@ podman run --rm --userns keep-id -e SOURCE_DATE_EPOCH -v "$DIR:/work:Z" -w /work
 
 ## Asymptote Illustrations
 
-Vector illustrations are authored as Asymptote (`.asy`) source files.
-
-The root `Makefile` finds every `.asy` file in the repo (excluding `common.asy` and build/vendor directories) and compiles each to its own `.svg`:
-
-```sh
-make illustrations
-```
-
-which runs, per file:
-
-```sh
-podman run --rm --userns keep-id -e SOURCE_DATE_EPOCH -v "$DIR:/work:Z" -w /work "$IMAGE" \
-  asy -f svg -render=0 -o "$name" "$name.asy"
-```
-
-- `asy -f svg -render=0` compiles the `.asy` source to a vector SVG, using `dvisvgm` (bundled in the texlive image) to typeset LaTeX labels as real vector glyphs rather than rasterizing them.
-- `-o "$name"` sets the output path explicitly (Asymptote otherwise writes to the process's working directory rather than next to the input file); the podman invocation always runs from the repo root, so `$name` is the source's path relative to the repo root with the `.asy` extension stripped.
-- `common.asy` at the repo root holds shared helpers imported by other `.asy` files (`import common;`), not a standalone illustration. It resolves from any subdirectory because Asymptote's import search checks the process's working directory, which is always the repo root here. It is tracked as a Makefile prerequisite of every illustration, so editing it rebuilds everything.
-- Make's incremental rebuilds mean an unchanged `.asy` file is left alone; only sources newer than their `.svg` (or a changed `common.asy`) are re-rendered.
+Vector illustrations are authored as Asymptote (`.asy`) source files under `flashcards/`, next to the `.note` file(s) they accompany, and compiled to `.svg` via `flashcards/Makefile` inside the TeX Live container (see "TeX Live via Podman" above). Full authoring, preview, and build workflow — including the shared `common.asy` helpers — is documented in `.agents/skills/generate-illustrations/SKILL.md`; follow that skill when creating, editing, or compiling illustrations.

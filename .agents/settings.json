@@ -2,6 +2,7 @@
   "permissions": {
     "allow": [
       "WebSearch",
+      "Bash(echo *)",
       "Bash(awk *)",
       "Bash(grep *)",
       "Bash(sed *)",

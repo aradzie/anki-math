@@ -50,7 +50,7 @@ The audience wants to be able to reconstruct proofs, not memorize them verbatim.
 ## Repository Context
 
 - This is one of three artifact types in this repository (flashcards, self-check questions, essays); see `AGENTS.md` for the repository-wide overview and the other two.
-- Source files are `.note` files organized by topic directories.
+- Source files are `.note` files under `flashcards/`, organized by topic directories.
 - Import is handled by an Anki addon. Do not invent new syntax, build steps, generated artifacts.
 - Follow nearby `.note` files for deck names, tags, notation, and topic granularity.
 

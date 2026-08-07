@@ -8,9 +8,9 @@ This is my personal repository for self-studying mathematics. It contains three 
 
 ## Flashcards
 
-The `*.note` files are the source files of the flashcards, in a simple human-readable format.
+The `*.note` files under [flashcards/](flashcards/) are the source files of the flashcards, in a simple human-readable format.
 
-To import these notes into Anki, install the [Notatki Anki addon](https://ankiweb.net/shared/info/541850746). Then from the `File` menu select `Import Models and Notes...` and point to this directory.
+To import these notes into Anki, install the [Notatki Anki addon](https://ankiweb.net/shared/info/541850746). Then from the `File` menu select `Import Models and Notes...` and point to the `flashcards/` directory.
 
 We recommend the [Notatki Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=aradzie.notatki) for editing these note files. See the [notatki](https://github.com/aradzie/notatki) repository for more details.
 
@@ -18,7 +18,7 @@ You can preview these notes [online](https://aradzie.github.io/math-notes/notes.
 
 ## Self-Check Questions
 
-The [self-check.pdf](self-check.pdf) file is a single compiled document of self-check questions covering various mathematical topics, meant to be worked through as active recall rather than read passively.
+The [self-check.pdf](self-check/self-check.pdf) file is a single compiled document of self-check questions covering various mathematical topics, meant to be worked through as active recall rather than read passively.
 
 ## Essays
 
@@ -39,12 +39,5 @@ The [essays/](essays/) directory collects write-ups from conversations where I d
 - [OpenStax Calculus Volume 3](https://openstax.org/books/calculus-volume-3/pages/preface)
 - [Active Calculus](https://activecalculus.org)
 - [APEX Calculus](https://opentext.uleth.ca/apex-calculus/apex-calculus.html)
-- [The Geometry Of Linear Algebra](https://books.physics.oregonstate.edu/LinAlg/book-1.html)
-- [The Geometry Of Vector Calculus](https://books.physics.oregonstate.edu/GVC/GVC.html)
-- [The Geometry Of Static Fields](https://books.physics.oregonstate.edu/GSF/GSF.html)
-- [Elementary Differential Equations](https://digitalcommons.trinity.edu/mono/8/) by William F. Trench
-- [Notes on Diffy Qs: Differential Equations for Engineers](https://www.jirka.org/diffyqs/) by Jiří Lebl
-- [Introduction to Differential Equations](https://web.uvic.ca/~tbazett/diffyqs/diffyqs.html) by Jiří Lebl and Trefor Bazett
-- [Partial Differential Equations](https://www.math.toronto.edu/ivrii/PDE-textbook/) by Victor Ivrii
 - [Helping Engineers Learn Mathematics Workbooks (HELM)](https://www.lboro.ac.uk/departments/mlsc/student-resources/helm-workbooks/)
 - [Paul's Online Notes](https://tutorial.math.lamar.edu/)
