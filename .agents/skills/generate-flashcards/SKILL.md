@@ -284,10 +284,10 @@ The [`notatki`](https://github.com/aradzie/notatki) CLI parses, validates, and p
 After creating or editing any `.note` file, check its correctness by running:
 
 ```sh
-npx notatki insert-id
+npx notatki insert-id <path/to/file.note>
 ```
 
-This walks the repository's `.note` files, parses and validates them, inserts an `!id:` into any note record that is missing one, pretty-prints every note, and writes the files back to disk. Run it from the repository root (it defaults to scanning the whole repo via `--dir`, default `.`). Treat a non-zero exit or parse error as a syntax problem to fix before moving on.
+Pass the specific file(s) or directories you just touched — the CLI accepts a list of paths and operates granularly, so a single edited file can be checked without rewriting the rest of the repo. Passing no paths scans the whole repository instead. Either way it parses and validates the target files, inserts an `!id:` into any note record that is missing one, pretty-prints every note, and writes the files back to disk. Treat a non-zero exit or parse error as a syntax problem to fix before moving on.
 
 ## Workflow
 
@@ -297,7 +297,7 @@ This walks the repository's `.note` files, parses and validates them, inserts an
 4. Verify mathematical correctness, assumptions, and notation consistency.
 5. Check note granularity: each `!back:` should usually fit in a few sentences; split oversized answers into multiple notes.
 6. Verify syntax: metadata outside records, required `!front:` and `!back:` fields, preserved existing `!id:` values, and one `~~~` terminator per note.
-7. Run `npx notatki insert-id` (see Tooling above) to validate the file, assign missing ids, and pretty-print it.
+7. Run `npx notatki insert-id <path/to/file.note>` (see Tooling above) to validate the file, assign missing ids, and pretty-print it.
 
 ## Examples
 

@@ -7,6 +7,9 @@ tmp/
 __pycache__/
 *.pyc
 
+notes.html
+notes.assets/
+
 .agents/*
 !.agents/settings.json
 !.agents/agents/
