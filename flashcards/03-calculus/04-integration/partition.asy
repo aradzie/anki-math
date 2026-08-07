@@ -3,14 +3,16 @@
 // Delta x_i = x_i - x_{i-1}. Same partition points reused across the other
 // illustrations in this file (riemann_sum, upper/lower Darboux sums).
 
+import common;
+
 size(15cm, 4cm, false);
-defaultpen(fontsize(10pt));
+mathdefaults();
 
 real[] x = {0, 1, 1.8, 2.6, 4};
 int n = x.length - 1;
 
 // number line
-draw((-0.4, 0)--(x[n] + 0.4, 0), Arrows(TeXHead));
+numberLine(-0.4, x[n] + 0.4, true);
 
 // partition points
 for (int i = 0; i <= n; ++i) {

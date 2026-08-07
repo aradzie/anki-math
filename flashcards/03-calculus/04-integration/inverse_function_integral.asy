@@ -5,9 +5,10 @@
 //   b f(b) - a f(a) = int_a^b f(x) dx + int_{f(a)}^{f(b)} f^{-1}(y) dy.
 
 import graph;
+import common;
 
 size(11cm, 15cm, false);
-defaultpen(fontsize(10pt));
+mathdefaults();
 
 real f(real x) { return x^2 / 2; }
 
@@ -17,10 +18,7 @@ real fa = f(a);
 real fb = f(b);
 
 // axes
-draw((-0.2, 0)--(b + 0.6, 0), Arrow(TeXHead));
-draw((0, -0.2)--(0, fb + 0.6), Arrow(TeXHead));
-label("$x$", (b + 0.6, 0), E);
-label("$y$", (0, fb + 0.6), N);
+drawAxes(-0.2, b + 0.6, -0.2, fb + 0.6);
 
 // region under the curve from a to b: int_a^b f(x) dx
 path underCurve = (a, 0)--graph(f, a, b)--(b, 0)--cycle;
@@ -40,10 +38,10 @@ draw(graph(f, a, b), blue + linewidth(1.6));
 label("$y=f(x)$", (b + 0.2, f(b + 0.2)), NE, blue);
 
 // guides down to the axes
-draw((a, 0)--(a, fa), dotted);
-draw((b, 0)--(b, fb), dotted);
-draw((0, fa)--(a, fa), dotted);
-draw((0, fb)--(b, fb), dotted);
+dropToXAxis((a, fa));
+dropToXAxis((b, fb));
+dropToYAxis((a, fa));
+dropToYAxis((b, fb));
 
 // axis labels
 label("$a$", (a, 0), S);

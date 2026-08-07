@@ -3,22 +3,23 @@
 // tied to concrete numbers.
 
 import graph;
+import common;
 
 size(20cm, 6cm);
-defaultpen(fontsize(10pt));
+mathdefaults();
 
 real xmin = -1;
 real xmax = 11;
 
 // number line
-draw((xmin, 0)--(xmax, 0), Arrows(TeXHead));
+numberLine(xmin, xmax, true);
 
 // set A: a handful of irregularly spaced points (not an interval)
-filldraw(circle((4, 0), 0.08), blue);
-filldraw(circle((4.6, 0), 0.08), blue);
-filldraw(circle((5.1, 0), 0.08), blue);
-filldraw(circle((5.7, 0), 0.08), blue);
-filldraw(circle((6.2, 0), 0.08), blue);
+closedPoint((4, 0));
+closedPoint((4.6, 0));
+closedPoint((5.1, 0));
+closedPoint((5.7, 0));
+closedPoint((6.2, 0));
 label("$A$", (5.1, 0.6), N, blue);
 
 // tightest upper bound: sup A, just past the rightmost point of A

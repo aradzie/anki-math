@@ -2,9 +2,10 @@
 // eventually all terms fall within an epsilon-band of each other.
 
 import graph;
+import common;
 
 size(20cm, 10cm);
-defaultpen(fontsize(10pt));
+mathdefaults();
 
 real L = 3;      // candidate limit
 real eps = 0.4;  // epsilon
@@ -25,9 +26,7 @@ real ytop = 5;
 real ybot = 0;
 
 // axes
-draw((0, 0)--(xmax + 0.8, 0), Arrow(TeXHead));
-draw((0, ybot)--(0, ytop), Arrow(TeXHead));
-label("$n$", (xmax + 0.8, 0), E);
+drawAxes(0, xmax + 0.8, ybot, ytop, "$n$", "");
 
 // sequence path, to show the oscillation decaying
 for (int n = 1; n < nmax; ++n) {
@@ -62,8 +61,8 @@ for (int n = ntail; n <= nmax; ++n) {
 }
 
 // guides down to the axis for the highlighted pair a_m, a_n
-draw((midx, 0)--(midx, a(midx)), dotted);
-draw((nidx, 0)--(nidx, a(nidx)), dotted);
+dropToXAxis((midx, a(midx)));
+dropToXAxis((nidx, a(nidx)));
 label("$m$", (midx, 0), S);
 label("$n$", (nidx, 0), S);
 

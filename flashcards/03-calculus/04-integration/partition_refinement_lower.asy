@@ -8,9 +8,10 @@
 // height.
 
 import graph;
+import common;
 
 size(12cm, 7cm, false);
-defaultpen(fontsize(10pt));
+mathdefaults();
 
 real f(real x) { return 1 + 2 * sin(0.8 * x); }
 
@@ -21,7 +22,7 @@ real mp = f(xp);    // inf on [x0, xp], attained at xp
 real xmin = 2.4, xmax = 4.2, ymax = 3.0;
 
 // axes
-draw((xmin, 0)--(xmax, 0), Arrow(TeXHead));
+numberLine(xmin, xmax);
 draw((xmin, 0)--(xmin, ymax), invisible);
 label("$x$", (xmax, 0), E);
 
@@ -36,7 +37,7 @@ filldraw((xp, 0)--(xp, mi)--(x1, mi)--(x1, 0)--cycle, heavygreen + opacity(0.18)
 draw(graph(f, xmin, xmax), blue + linewidth(1.6));
 
 // guides and labels
-draw((xp, 0)--(xp, mp), dotted);
+dropToXAxis((xp, mp));
 label("$x'$", (xp, 0), S);
 label("$x_3$", (x0, 0), S);
 label("$x_4$", (x1, 0), S);

@@ -4,9 +4,10 @@
 // most the sum of the other two sides.
 
 import geometry;
+import common;
 
 size(12cm);
-defaultpen(fontsize(10pt));
+mathdefaults();
 
 pair O = (0, 0);
 pair A = (2, 1);       // vector a

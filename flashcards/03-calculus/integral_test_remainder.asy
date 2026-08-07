@@ -7,9 +7,10 @@
 // from the same heights a_{N+1}, a_{N+2}, ..., just offset by one unit.
 
 import graph;
+import common;
 
 size(11cm, 6.5cm);
-defaultpen(fontsize(10pt));
+mathdefaults();
 
 real f(real x) { return 4 / x; }
 
@@ -20,10 +21,7 @@ real xmax = R + 1;
 real ymax = f(nStart) + 0.5;
 
 // axes
-draw((0, 0)--(xmax, 0), Arrow(TeXHead));
-draw((0, 0)--(0, ymax + 0.3), Arrow(TeXHead));
-label("$x$", (xmax, 0), E);
-label("$y$", (0, ymax + 0.3), N);
+drawAxes(0, xmax, 0, ymax + 0.3);
 
 // right-endpoint rectangles on [n-1,n] for n = N+1,...,nmax: below the
 // curve, total area R_N <= int_N^infty f(x) dx

@@ -3,9 +3,10 @@
 // asymptotes, one in each direction.
 
 import graph;
+import common;
 
 size(12cm, 6cm);
-defaultpen(fontsize(10pt));
+mathdefaults();
 
 real xmin = -6, xmax = 6;
 real ymax = 2.2;
@@ -13,10 +14,7 @@ real ymax = 2.2;
 real f(real x) { return atan(x); }
 
 // axes
-draw((xmin - 0.3, 0)--(xmax + 0.3, 0), Arrow(TeXHead));
-draw((0, -ymax - 0.3)--(0, ymax + 0.3), Arrow(TeXHead));
-label("$x$", (xmax + 0.3, 0), E);
-label("$y$", (0, ymax + 0.3), N);
+drawAxes(xmin - 0.3, xmax + 0.3, -ymax - 0.3, ymax + 0.3);
 
 // horizontal asymptotes y = ±pi/2
 draw((xmin - 0.3, pi/2)--(xmax + 0.3, pi/2), dashed + gray(0.5));

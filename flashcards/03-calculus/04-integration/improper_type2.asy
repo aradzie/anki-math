@@ -5,9 +5,10 @@
 // continuing (dashed) toward the vertical asymptote at x = a as eps -> 0+.
 
 import graph;
+import common;
 
 size(9cm, 7cm);
-defaultpen(fontsize(10pt));
+mathdefaults();
 
 real a = 0.5;
 real b = 4;
@@ -18,10 +19,7 @@ real xdraw = a + 1 / (ymax * ymax); // how close the dashed curve approaches the
 real f(real x) { return 1 / sqrt(x - a); }
 
 // axes
-draw((0, 0)--(b + 0.6, 0), Arrow(TeXHead));
-draw((0, 0)--(0, ymax + 0.3), Arrow(TeXHead));
-label("$x$", (b + 0.6, 0), E);
-label("$y$", (0, ymax + 0.3), N);
+drawAxes(0, b + 0.6, 0, ymax + 0.3);
 
 // shaded region: int_{a+eps}^b f(x) dx
 path underCurve = (eps, 0)--graph(f, eps, b)--(b, 0)--cycle;
@@ -34,8 +32,8 @@ label("$y = 1/\sqrt{x}$", (eps, f(eps)), NE, blue);
 
 // guides down to the axes
 draw((a, 0)--(a, ymax), dotted);
-draw((eps, 0)--(eps, f(eps)), dotted);
-draw((b, 0)--(b, f(b)), dotted);
+dropToXAxis((eps, f(eps)));
+dropToXAxis((b, f(b)));
 label("$a$", (a, -0.15));
 label("$a+\varepsilon$", (eps, -0.15));
 label("$b$", (b, -0.15));

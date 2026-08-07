@@ -5,9 +5,10 @@
 // in contrast to the interior supremum shown in upper_darboux_sum.asy.
 
 import graph;
+import common;
 
 size(14cm, 8cm, false);
-defaultpen(fontsize(10pt));
+mathdefaults();
 
 real f(real x) { return 1 + 2 * sin(0.8 * x); }
 
@@ -23,14 +24,11 @@ real ymax = 4.0;
 real[] m = {f(xpt[0]), f(xpt[1]), f(xpt[3]), f(xpt[4])};
 
 // axes
-draw((-0.3, 0)--(b + 0.6, 0), Arrow(TeXHead));
-draw((0, -0.3)--(0, ymax), Arrow(TeXHead));
-label("$x$", (b + 0.6, 0), E);
-label("$y$", (0, ymax), N);
+drawAxes(-0.3, b + 0.6, -0.3, ymax);
 
 // partition guides
 for (int i = 0; i <= n; ++i) {
-  draw((xpt[i], 0)--(xpt[i], f(xpt[i])), dotted);
+  dropToXAxis((xpt[i], f(xpt[i])));
   label("$x_" + string(i) + "$", (xpt[i], 0), S);
 }
 

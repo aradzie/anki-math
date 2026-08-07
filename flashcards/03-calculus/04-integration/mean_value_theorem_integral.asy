@@ -5,9 +5,10 @@
 // average value is (b^3-a^3)/(3(b-a)) = 13/3 and c = sqrt(13/3).
 
 import graph;
+import common;
 
 size(14cm, 10cm, false);
-defaultpen(fontsize(10pt));
+mathdefaults();
 
 real f(real x) { return x^2; }
 
@@ -20,10 +21,7 @@ real c = sqrt(avg);                        // f(c) = avg, c in (a,b)
 
 // axes
 draw((-0.3, -0.8)--(b + 0.8, -0.8), invisible);
-draw((-0.3, 0)--(b + 0.8, 0), Arrow(TeXHead));
-draw((0, -0.8)--(0, fb + 0.8), Arrow(TeXHead));
-label("$x$", (b + 0.8, 0), E);
-label("$y$", (0, fb + 0.8), N);
+drawAxes(-0.3, b + 0.8, -0.8, fb + 0.8);
 
 // area under the curve: int_a^b f(x) dx
 path underCurve = (a, 0)--graph(f, a, b)--(b, 0)--cycle;
@@ -38,13 +36,13 @@ draw(graph(f, a, b), blue + linewidth(1.6));
 label("$y=f(x)$", (b + 0.3, f(b + 0.3)), NE, blue);
 
 // horizontal guide at height f(c)
-draw((0, avg)--(a, avg), dotted);
+dropToYAxis((a, avg));
 label("$f(c)$", (0, avg), W);
 
 // vertical guides
-draw((a, 0)--(a, fa), dotted);
-draw((b, 0)--(b, fb), dotted);
-draw((c, 0)--(c, avg), dotted);
+dropToXAxis((a, fa));
+dropToXAxis((b, fb));
+dropToXAxis((c, avg));
 
 // axis labels
 label("$a$", (a, 0), S);

@@ -2,9 +2,10 @@
 // and f(a) = f(b), there exists c in (a,b) with f'(c) = 0.
 
 import graph;
+import common;
 
 size(20cm, 10cm, false);
-defaultpen(fontsize(10pt));
+mathdefaults();
 
 real f(real x) { return -0.5*(x-3)*(x-3) + 3; }
 
@@ -14,10 +15,7 @@ real xc = (a + b) / 2;
 real yc = f(xc);
 
 // axes
-draw((-0.5, 0)--(6, 0), Arrow(TeXHead));
-draw((0, -0.5)--(0, 4), Arrow(TeXHead));
-label("$x$", (6, 0), E);
-label("$y$", (0, 4), N);
+drawAxes(-0.5, 6, -0.5, 4);
 
 // curve
 draw(graph(f, a, b), blue + linewidth(1.2));
@@ -27,9 +25,9 @@ draw((a, f(a))--(b, f(b)), dashed);
 label("$f(a) = f(b)$", ((a + b) / 2, f(a)), S);
 
 // vertical guides down to the x-axis
-draw((a, 0)--(a, f(a)), dotted);
-draw((xc, 0)--(xc, yc), dotted);
-draw((b, 0)--(b, f(b)), dotted);
+dropToXAxis((a, f(a)));
+dropToXAxis((xc, yc));
+dropToXAxis((b, f(b)));
 
 // axis labels
 label("$a$", (a, 0), S);

@@ -2,9 +2,10 @@
 // Solution is the closed interval [a-c, a+c], centered at a with radius c.
 
 import graph;
+import common;
 
 size(18cm, 6cm);
-defaultpen(fontsize(10pt));
+mathdefaults();
 
 real a = 3;
 real c = 2;
@@ -12,14 +13,14 @@ real lo = a - c;
 real hi = a + c;
 
 // number line
-draw((lo - 1, 0)--(hi + 1, 0), Arrow(TeXHead));
+numberLine(lo - 1, hi + 1);
 
 // solution interval, shaded
 draw((lo, 0)--(hi, 0), blue + linewidth(2));
 
 // closed (included) endpoints
-filldraw(circle((lo, 0), 0.08), blue);
-filldraw(circle((hi, 0), 0.08), blue);
+closedPoint((lo, 0));
+closedPoint((hi, 0));
 label("$a-c$", (lo, 0), S);
 label("$a+c$", (hi, 0), S);
 

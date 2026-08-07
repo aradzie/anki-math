@@ -5,9 +5,10 @@
 // convergence/divergence behavior.
 
 import graph;
+import common;
 
 size(11cm, 6.5cm);
-defaultpen(fontsize(10pt));
+mathdefaults();
 
 real f(real x) { return 4 / x; }
 
@@ -18,10 +19,7 @@ real xmax = R + 1;
 real ymax = f(nStart) + 0.5;
 
 // axes
-draw((0, 0)--(xmax, 0), Arrow(TeXHead));
-draw((0, 0)--(0, ymax + 0.3), Arrow(TeXHead));
-label("$x$", (xmax, 0), E);
-label("$y$", (0, ymax + 0.3), N);
+drawAxes(0, xmax, 0, ymax + 0.3);
 
 // shaded region under the curve: int_N^R f(x) dx
 path underCurve = (nStart, 0)--graph(f, nStart, R)--(R, 0)--cycle;

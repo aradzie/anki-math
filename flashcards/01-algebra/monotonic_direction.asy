@@ -3,9 +3,10 @@
 // (f(a) >= f(b)).
 
 import graph;
+import common;
 
 size(24cm, 9cm);
-defaultpen(fontsize(10pt));
+mathdefaults();
 
 real a = 1;
 real b = 4;
@@ -14,10 +15,7 @@ real b = 4;
 real fInc(real x) { return 0.1 * x^2 + 0.5; }
 
 real x0 = 0;
-draw((x0 - 0.5, 0)--(x0 + 5.5, 0), Arrow(TeXHead));
-draw((x0, -0.5)--(x0, 3.5), Arrow(TeXHead));
-label("$x$", (x0 + 5.5, 0), E);
-label("$y$", (x0, 3.5), N);
+drawAxes(x0 - 0.5, x0 + 5.5, -0.5, 3.5, originx=x0);
 
 draw(graph(fInc, x0, x0 + 5), blue + linewidth(1.2));
 
@@ -35,10 +33,7 @@ label("increasing: $a \le b \Rightarrow f(a) \le f(b)$", (x0 + 2.5, -0.5), S, bl
 real dx = 9;
 real fDec(real x) { return -0.1 * (x - dx)^2 + 3; }
 
-draw((dx - 0.5, 0)--(dx + 5.5, 0), Arrow(TeXHead));
-draw((dx, -0.5)--(dx, 3.5), Arrow(TeXHead));
-label("$x$", (dx + 5.5, 0), E);
-label("$y$", (dx, 3.5), N);
+drawAxes(dx - 0.5, dx + 5.5, -0.5, 3.5, originx=dx);
 
 draw(graph(fDec, dx, dx + 5), red + linewidth(1.2));
 

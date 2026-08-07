@@ -2,9 +2,10 @@
 // Solution is everything outside the closed interval [a-c, a+c].
 
 import graph;
+import common;
 
 size(18cm, 6cm);
-defaultpen(fontsize(10pt));
+mathdefaults();
 
 real a = 3;
 real c = 2;
@@ -14,15 +15,15 @@ real xmin = lo - 1.5;
 real xmax = hi + 1.5;
 
 // number line
-draw((xmin, 0)--(xmax, 0), Arrow(TeXHead));
+numberLine(xmin, xmax);
 
 // solution rays, shaded outward
 draw((xmin, 0)--(lo, 0), blue + linewidth(2));
 draw((hi, 0)--(xmax, 0), blue + linewidth(2));
 
 // closed (included) endpoints
-filldraw(circle((lo, 0), 0.08), blue);
-filldraw(circle((hi, 0), 0.08), blue);
+closedPoint((lo, 0));
+closedPoint((hi, 0));
 label("$a-c$", (lo, 0), S);
 label("$a+c$", (hi, 0), S);
 

@@ -3,9 +3,10 @@
 // secant line through (a, f(a)) and (b, f(b)).
 
 import graph;
+import common;
 
 size(20cm, 10cm, false);
-defaultpen(fontsize(10pt));
+mathdefaults();
 
 real f(real x) { return -0.7*(x - 2.5)*(x - 2.5) + 5; }
 
@@ -16,10 +17,7 @@ real m = (f(b) - f(a)) / (b - a);
 pair tanEnd = (c + 1.2, f(c) + m * 1.2);
 
 // axes
-draw((-0.5, 0)--(6, 0), Arrow(TeXHead));
-draw((0, -0.5)--(0, 7), Arrow(TeXHead));
-label("$x$", (6, 0), E);
-label("$y$", (0, 7), N);
+drawAxes(-0.5, 6, -0.5, 7);
 
 // curve
 draw(graph(f, a, b), blue + linewidth(1.2));
@@ -33,9 +31,9 @@ draw((c - 1.2, f(c) - m * 1.2)--tanEnd, red + dashed);
 label("slope $=f'(c)$", tanEnd, E, red);
 
 // vertical guides down to the x-axis
-draw((a, 0)--(a, f(a)), dotted);
-draw((c, 0)--(c, f(c)), dotted);
-draw((b, 0)--(b, f(b)), dotted);
+dropToXAxis((a, f(a)));
+dropToXAxis((c, f(c)));
+dropToXAxis((b, f(b)));
 
 // axis labels
 label("$a$", (a, 0), S);

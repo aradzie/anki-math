@@ -5,9 +5,10 @@
 // least-upper-bound, not just "the larger endpoint value".
 
 import graph;
+import common;
 
 size(14cm, 8cm, false);
-defaultpen(fontsize(10pt));
+mathdefaults();
 
 real f(real x) { return 1 + 2 * sin(0.8 * x); }
 
@@ -23,14 +24,11 @@ real xstar = pi / 1.6;
 real[] M = {f(xpt[1]), f(xpt[2]), 3, f(xpt[3])};
 
 // axes
-draw((-0.3, 0)--(b + 0.6, 0), Arrow(TeXHead));
-draw((0, -0.3)--(0, ymax), Arrow(TeXHead));
-label("$x$", (b + 0.6, 0), E);
-label("$y$", (0, ymax), N);
+drawAxes(-0.3, b + 0.6, -0.3, ymax);
 
 // partition guides
 for (int i = 0; i <= n; ++i) {
-  draw((xpt[i], 0)--(xpt[i], f(xpt[i])), dotted);
+  dropToXAxis((xpt[i], f(xpt[i])));
   label("$x_" + string(i) + "$", (xpt[i], 0), S);
 }
 
@@ -43,7 +41,7 @@ for (int i = 0; i < n; ++i) {
 // mark the interior point where M_3 is attained
 dot((xstar, 3), red);
 label("$M_3 = f(x^*)$", (xstar, 3.35), red);
-draw((xstar, 0)--(xstar, 3), dashed + red);
+dropToXAxis((xstar, 3), dashed + red);
 
 // curve
 draw(graph(f, a, b), blue + linewidth(1.6));
