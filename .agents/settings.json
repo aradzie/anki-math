@@ -25,5 +25,18 @@
       "Bash(git branch)",
       "Bash(git branch *)"
     ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR/.agents/hooks/skill-reminder.sh\" 2>/dev/null || true"
+          }
+        ]
+      }
+    ]
   }
 }
