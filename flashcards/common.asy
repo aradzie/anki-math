@@ -1,4 +1,5 @@
-// Shared Asymptote helpers for illustrations under flashcards/.
+// Shared Asymptote helpers.
+//
 // Import with `import common;` -- this resolves from any subdirectory
 // because compilation always runs with flashcards/ as the working directory.
 
