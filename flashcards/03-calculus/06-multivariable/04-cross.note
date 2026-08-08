@@ -37,6 +37,8 @@ The **Cross Product** \( \mathbf{a} \times \mathbf{b} \) is a vector that:
 \[ \|\mathbf{a} \times \mathbf{b}\| = \| \mathbf{a} \| \| \mathbf{b} \| \sin \theta \]
 where \( \theta \) is the angle between \( \mathbf{a} \) and \( \mathbf{b} \), and
 - has direction given by the right-hand rule.
+
+![The Cross Product a x b, perpendicular to the plane spanned by a and b, whose magnitude equals the area of the parallelogram they span](cross_product.svg)
 ~~~
 
 !id: 4wCxwXidGy

@@ -40,7 +40,7 @@ where \( A \), \( B \), \( C \), \( D \), \( E \), \( F \), \( G \), \( H \), \(
 
 ![Elliptic Paraboloid](quad_elliptic_paraboloid.png)
 !back: \[ z = \frac{x^2}{a^2} + \frac{y^2}{b^2} \]
-!extra: \( a \), \( b \) are nonzero real constants, conventionally taken positive. The surface is not symmetric under \( (x,y,z) \mapsto (-x,-y,-z) \), so the origin is a vertex, not a center of symmetry.
+!extra: \( a \), \( b \) are nonzero real constants, conventionally taken positive.
 ~~~
 
 !id: feBbesi90N
@@ -49,7 +49,7 @@ where \( A \), \( B \), \( C \), \( D \), \( E \), \( F \), \( G \), \( H \), \(
 
 ![Hyperbolic Paraboloid](quad_hyperbolic_paraboloid.png)
 !back: \[ z = \frac{x^2}{a^2} - \frac{y^2}{b^2} \]
-!extra: \( a \), \( b \) are nonzero real constants, conventionally taken positive. The surface is not symmetric under \( (x,y,z) \mapsto (-x,-y,-z) \), so the origin is a saddle point (vertex), not a center of symmetry.
+!extra: \( a \), \( b \) are nonzero real constants, conventionally taken positive.
 ~~~
 
 !type: Basic Math

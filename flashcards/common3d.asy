@@ -76,12 +76,9 @@ TNB helixTNB(real t, real a=1, real b=0.5) {
     return f;
 }
 
-// A bit more than one full turn of the helix, centered on t0, plus a
-// filled dot marking the point of evaluation r(t0). A touch over one full
-// turn (rather than exactly one) makes the coil visibly overlap itself in
-// projection -- a single exact turn never self-crosses from any viewing
-// angle, so it reads as a flat arc rather than a 3D coil.
-void drawHelix(real t0, real a=1, real b=0.5, real turns=1.15) {
+// A short arc of the helix, centered on t0, plus a filled dot marking the
+// point of evaluation r(t0).
+void drawHelix(real t0, real a=1, real b=0.5, real turns=0.6) {
     real halfspan = turns*pi;
     int n = 120;
     guide g;
@@ -112,6 +109,23 @@ void drawTNB(triple p, TNB f, align Talign=NoAlign, align Nalign=NoAlign,
     drawFrameVector(p, f.T, Tcolor, "T", Talign);
     drawFrameVector(p, f.N, Ncolor, "N", Nalign);
     drawFrameVector(p, f.B, Bcolor, "B", Balign);
+}
+
+// Opacity applied to the two non-highlighted vectors in drawTNBHighlight, so
+// they read as dimmed context rather than the illustration's subject.
+real dimOpacity = 0.25;
+
+// All three TNB vectors at p, with only `which` ("T", "N", or "B") drawn at
+// full strength -- the other two dimmed via opacity, same color otherwise.
+// Used by the single-vector illustrations, one per interpretation card.
+void drawTNBHighlight(triple p, TNB f, string which, align Talign=NoAlign,
+                       align Nalign=NoAlign, align Balign=NoAlign) {
+    pen Tp = (which == "T") ? Tcolor : Tcolor + opacity(dimOpacity);
+    pen Np = (which == "N") ? Ncolor : Ncolor + opacity(dimOpacity);
+    pen Bp = (which == "B") ? Bcolor : Bcolor + opacity(dimOpacity);
+    drawFrameVector(p, f.T, Tp, "T", Talign);
+    drawFrameVector(p, f.N, Np, "N", Nalign);
+    drawFrameVector(p, f.B, Bp, "B", Balign);
 }
 
 // The plane through p spanned by directions u, v (need not be unit or

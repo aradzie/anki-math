@@ -15,7 +15,10 @@ where \( \mathbf{r}(t) = \langle x(t), y(t), z(t) \rangle \) is the position vec
 
 !id: ZUxLygwqZm
 !front: Give a geometric interpretation of the **Unit Tangent Vector** \( \mathbf{T} \).
-!back: \( \mathbf{T}(t) \) points in the instantaneous direction of travel along the curve — it is tangent to the curve at \( \mathbf{r}(t) \). Normalizing \( \mathbf{r}'(t) \) strips out the speed \( \|\mathbf{r}'(t)\| \), so \( \mathbf{T} \) records direction of motion only.
+!back:
+\( \mathbf{T}(t) \) points in the instantaneous direction of travel along the curve — it is tangent to the curve at \( \mathbf{r}(t) \). Normalizing \( \mathbf{r}'(t) \) strips out the speed \( \|\mathbf{r}'(t)\| \), so \( \mathbf{T} \) records direction of motion only.
+
+![The Tangent vector T at a point on a helix, with N and B dimmed](tangent_vector.svg)
 ~~~
 
 !id: 4pswS3yAU1
@@ -38,7 +41,10 @@ The normalized derivative of the **Unit Tangent Vector**,
 
 !id: kMbB1sYOwK
 !front: Give a geometric interpretation of the **Principal Normal Vector** \( \mathbf{N} \).
-!back: \( \mathbf{N}(t) \) points in the direction the curve is turning toward — the direction \( \mathbf{T} \) is instantaneously rotating, which is toward the concave (inside) side of the curve.
+!back:
+\( \mathbf{N}(t) \) points in the direction the curve is turning toward — the direction \( \mathbf{T} \) is instantaneously rotating, which is toward the concave (inside) side of the curve.
+
+![The Principal Normal vector N at a point on a helix, with T and B dimmed](principal_normal_vector.svg)
 !extra: \( \mathbf{T} \) and \( \mathbf{N} \) together span the **osculating plane**, the plane that best approximates the curve near \( \mathbf{r}(t) \).
 ~~~
 
@@ -50,7 +56,10 @@ The normalized derivative of the **Unit Tangent Vector**,
 
 !id: gbv1GVxe0i
 !front: Give a geometric interpretation of the **Binormal Vector** \( \mathbf{B} \).
-!back: \( \mathbf{B}(t) \) is perpendicular to the osculating plane spanned by \( \mathbf{T} \) and \( \mathbf{N} \) — it is the normal vector to the plane that locally best fits the curve. How \( \mathbf{B} \) changes as \( t \) varies describes how that plane twists along the curve.
+!back:
+\( \mathbf{B}(t) \) is perpendicular to the osculating plane spanned by \( \mathbf{T} \) and \( \mathbf{N} \) — it is the normal vector to the plane that locally best fits the curve. How \( \mathbf{B} \) changes as \( t \) varies describes how that plane twists along the curve.
+
+![The Binormal vector B at a point on a helix, with T and N dimmed](binormal_vector.svg)
 ~~~
 
 !id: c7VlxsGzmF
@@ -59,6 +68,8 @@ The normalized derivative of the **Unit Tangent Vector**,
 - \( \mathbf{T} \) and \( \mathbf{N} \) are unit vectors and orthogonal to each other by construction.
 - \( \mathbf{B} = \mathbf{T} \times \mathbf{N} \) is then automatically a unit vector orthogonal to both: its magnitude is \( \|\mathbf{T}\|\|\mathbf{N}\|\sin(\pi/2) = 1 \), and a cross product is always orthogonal to both of its factors.
 - The ordering \( \mathbf{T} \times \mathbf{N} = \mathbf{B} \) makes the triple right-handed, by the definition of the cross product.
+
+![The T, N, B frame at a point on a helix](tnb_frame.svg)
 ~~~
 
 !id: CG9OwyiCZ8
@@ -67,6 +78,8 @@ The normalized derivative of the **Unit Tangent Vector**,
 The plane through \( \mathbf{r}(t_0) \) spanned by \( \mathbf{T}(t_0) \) and \( \mathbf{N}(t_0) \), with normal vector \( \mathbf{B}(t_0) \):
 
 \[ \mathbf{B}(t_0) \cdot \bigl(\mathbf{r} - \mathbf{r}(t_0)\bigr) = 0. \]
+
+![Osculating plane, shaded, at a point on a helix, together with the T, N, B frame](osculating_plane.svg)
 !extra: Requires \( \mathbf{T}'(t_0) \ne \mathbf{0} \) (nonzero curvature at \( t_0 \)), so \( \mathbf{N}(t_0) \) and \( \mathbf{B}(t_0) \) are defined.
 ~~~
 
@@ -85,6 +98,8 @@ lies entirely in this plane, since \( \mathbf{r}' \) is parallel to \( \mathbf{T
 The plane through \( \mathbf{r}(t_0) \) spanned by \( \mathbf{N}(t_0) \) and \( \mathbf{B}(t_0) \), with normal vector \( \mathbf{T}(t_0) \):
 
 \[ \mathbf{T}(t_0) \cdot \bigl(\mathbf{r} - \mathbf{r}(t_0)\bigr) = 0. \]
+
+![Normal plane, shaded, at a point on a helix, together with the T, N, B frame](normal_plane.svg)
 !extra: Requires \( \mathbf{T}'(t_0) \ne \mathbf{0} \) (nonzero curvature at \( t_0 \)), so \( \mathbf{N}(t_0) \) and \( \mathbf{B}(t_0) \) are defined.
 ~~~
 
@@ -99,6 +114,8 @@ The plane through \( \mathbf{r}(t_0) \) spanned by \( \mathbf{N}(t_0) \) and \( 
 The plane through \( \mathbf{r}(t_0) \) spanned by \( \mathbf{T}(t_0) \) and \( \mathbf{B}(t_0) \), with normal vector \( \mathbf{N}(t_0) \):
 
 \[ \mathbf{N}(t_0) \cdot \bigl(\mathbf{r} - \mathbf{r}(t_0)\bigr) = 0. \]
+
+![Rectifying plane, shaded, at a point on a helix, together with the T, N, B frame](rectifying_plane.svg)
 !extra: Requires \( \mathbf{T}'(t_0) \ne \mathbf{0} \) (nonzero curvature at \( t_0 \)), so \( \mathbf{N}(t_0) \) and \( \mathbf{B}(t_0) \) are defined.
 ~~~
 
@@ -107,12 +124,23 @@ The plane through \( \mathbf{r}(t_0) \) spanned by \( \mathbf{T}(t_0) \) and \( 
 !back: For a unit-speed curve, the curvature vector \( \mathbf{r}''(s) = \kappa(s)\,\mathbf{N}(s) \) points purely along \( \mathbf{N} \), which is normal to this plane. So, to second order, all of the curve's bending happens out of the rectifying plane, not within it: the curve's orthogonal projection onto the rectifying plane is locally straight ("rectified"), unlike its projections onto the osculating or normal planes.
 ~~~
 
+!id: o80WVPeolk
+!front: For the straight line \( \mathbf{r}(t) = \langle t, 2t, 3t \rangle \), at which points are \( \mathbf{N} \), \( \mathbf{B} \), and the TNB planes defined?
+!back:
+Nowhere — they are undefined at every point.
+
+\( \mathbf{r}'(t) = \langle 1, 2, 3 \rangle \) is constant, so \( \mathbf{T}(t) = \mathbf{r}'(t)/\|\mathbf{r}'(t)\| \) is also constant, giving \( \mathbf{T}'(t) = \mathbf{0} \) for all \( t \). Since \( \mathbf{N} \) requires \( \mathbf{T}'(t) \ne \mathbf{0} \), it is undefined along the entire line — and with it \( \mathbf{B} \) and all three TNB planes, since each is built from \( \mathbf{N} \) and/or \( \mathbf{B} \).
+!extra: Geometrically, a straight line does not turn, so there is no distinguished direction of turning to serve as \( \mathbf{N} \), and no distinguished osculating plane — any plane containing the line fits equally well.
+~~~
+
 !id: QOMFBP2yJj
 !front: Compare the three TNB planes by which pair of \( \mathbf{T}, \mathbf{N}, \mathbf{B} \) spans each and which vector is normal to each.
 !back:
 - **Osculating plane**: spanned by \( \mathbf{T}, \mathbf{N} \); normal \( \mathbf{B} \).
 - **Normal plane**: spanned by \( \mathbf{N}, \mathbf{B} \); normal \( \mathbf{T} \).
 - **Rectifying plane**: spanned by \( \mathbf{T}, \mathbf{B} \); normal \( \mathbf{N} \).
+
+![The osculating, normal, and rectifying planes shown together at a point on a helix, each shaded in the color of its normal vector](tnb_planes_compare.svg)
 ~~~
 
 !id: EMf7doP9dx
@@ -122,4 +150,28 @@ For any right-handed orthonormal basis \( \{e_1,e_2,e_3\} \) with \( e_3 = e_1 \
 \[ e_1 \times e_2 = e_3, \quad e_2 \times e_3 = e_1, \quad e_3 \times e_1 = e_2. \]
 Applying this with \( (e_1,e_2,e_3) = (\mathbf{T},\mathbf{N},\mathbf{B}) \) gives the two further identities.
 !extra: Only cyclic orderings work; reversing any pair flips the sign, e.g. \( \mathbf{N}\times\mathbf{T} = -\mathbf{B} \), since the cross product is anticommutative.
+~~~
+
+!id: yANodqxut1
+!front:
+Which TNB plane is shaded in this illustration?
+
+![TNB frame at a point on a curve, with one plane shaded](osculating_plane.svg)
+!back: The **osculating plane** — the shaded quadrilateral's edges run along \( \mathbf{T} \) and \( \mathbf{N} \), so it is spanned by \( \mathbf{T}, \mathbf{N} \), with \( \mathbf{B} \) normal to it.
+~~~
+
+!id: asCBTUFim4
+!front:
+Which TNB plane is shaded in this illustration?
+
+![TNB frame at a point on a curve, with one plane shaded](normal_plane.svg)
+!back: The **normal plane** — the shaded quadrilateral's edges run along \( \mathbf{N} \) and \( \mathbf{B} \), so it is spanned by \( \mathbf{N}, \mathbf{B} \), with \( \mathbf{T} \) normal to it.
+~~~
+
+!id: 7WjvjV9nkQ
+!front:
+Which TNB plane is shaded in this illustration?
+
+![TNB frame at a point on a curve, with one plane shaded](rectifying_plane.svg)
+!back: The **rectifying plane** — the shaded quadrilateral's edges run along \( \mathbf{T} \) and \( \mathbf{B} \), so it is spanned by \( \mathbf{T}, \mathbf{B} \), with \( \mathbf{N} \) normal to it.
 ~~~
