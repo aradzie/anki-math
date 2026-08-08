@@ -30,6 +30,13 @@ void dropToYAxis(pair p, pen guidepen=dotted) {
     draw((0, p.y)--p, guidepen);
 }
 
+// A vertical guide line through a point, spanning the full plot height --
+// e.g. to mark interval boundaries against the surrounding axes, rather
+// than stopping at the x-axis like dropToXAxis.
+void verticalGuide(pair p, real ymin, real ymax, pen guidepen=gray+dashed) {
+    draw((p.x, ymin)--(p.x, ymax), guidepen);
+}
+
 // Standard Cartesian axes with arrowheads: the x-axis runs from xmin to
 // xmax at y=0, the y-axis from ymin to ymax at x=originx (0 unless the
 // picture holds multiple axis systems, e.g. side-by-side panels). Pass

@@ -202,6 +202,9 @@ Prefer prompts that test understanding rather than recall. Good fronts often sta
 - `Compare ...`
 - `Construct a counterexample to ...`
 - `Explain why ...`
+- `Does ... have/satisfy ...? If so, where/what?`
+
+Prefer the last pattern over "Verify that X has property P at c" when the point is testing recognition of whether the property holds at all, not confirming a fact already given away by the front.
 
 Design each note at the right granularity. A good note has a focused target and a `!back:` that can usually be answered in a few sentences. If the natural answer is a whole theorem statement, a long definition, a full taxonomy, or a list of many cases, split it into several notes: hypotheses, conclusion, intuition, proof idea, failure case, example, or comparison.
 
@@ -237,6 +240,14 @@ A definition's `!extra:` field often accumulates a "for example, ..." or "undefi
 - Give each distinct example or non-example its own note. Do not bundle unrelated examples into one note.
 - When one concrete object naturally yields several related quantities together (e.g. both the order and the degree of the same ODE), ask for them jointly in a single front rather than splitting into near-duplicate notes over the same object.
 - After extracting an example onto its own note, trim the source note's `!extra:` down to the general rule and drop the now-duplicated example prose.
+
+### Recognition Note Families
+
+When a concept has a small number of natural example objects that differ in how much of a property they exhibit (e.g. none, one, several, infinitely many), write one recognition note per object using a single consistent front template across the family, instead of a lone "verify" note for just one canonical case.
+
+- Before drafting, search the target file for a note that already tests one family member under different phrasing (e.g. a "Verify that..." note covering the same object and property). Reframe that note into the family's consistent phrasing in place — preserve its `!id:` — and count it as a family member, rather than adding a duplicate.
+- Order the family's notes adjacently in the file, sequenced by increasing degree of the property, per the granularity guidance above. This is purely a source-file convenience for editors — it makes related notes easy to find and revise together — and implies nothing about the order Anki shows them in, since Anki reviews notes individually and in arbitrary order (see Note Independence below).
+- Each note must still stand alone per Note Independence below — do not phrase one note relative to another member of the family (e.g. "unlike the previous case").
 
 ### Comparison Notes
 
@@ -293,11 +304,12 @@ Pass the specific file(s) or directories you just touched — the CLI accepts a 
 
 1. Inspect nearby `.note` files for deck, tags, notation, note type, and local style.
 2. Decide whether the topic needs `Basic Math` or `Basic Math (and reversed card)`.
-3. Draft notes around focused conceptual targets, not just topic headings or whole theorems.
-4. Verify mathematical correctness, assumptions, and notation consistency.
-5. Check note granularity: each `!back:` should usually fit in a few sentences; split oversized answers into multiple notes.
-6. Verify syntax: metadata outside records, required `!front:` and `!back:` fields, preserved existing `!id:` values, and one `~~~` terminator per note.
-7. Run `npx notatki insert-id <path/to/file.note>` (see Tooling above) to validate the file, assign missing ids, and pretty-print it.
+3. Before drafting a new note, check whether an existing note in the target file already tests the same fact under different phrasing (e.g. "Verify that..." vs. "Does... have...?"); reframe it in place (preserving its `!id:`) instead of adding a duplicate — see "Recognition Note Families" above.
+4. Draft notes around focused conceptual targets, not just topic headings or whole theorems.
+5. Verify mathematical correctness, assumptions, and notation consistency.
+6. Check note granularity: each `!back:` should usually fit in a few sentences; split oversized answers into multiple notes.
+7. Verify syntax: metadata outside records, required `!front:` and `!back:` fields, preserved existing `!id:` values, and one `~~~` terminator per note.
+8. Run `npx notatki insert-id <path/to/file.note>` (see Tooling above) to validate the file, assign missing ids, and pretty-print it.
 
 ## Examples
 
