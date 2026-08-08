@@ -9,7 +9,7 @@ The normalized velocity vector,
 
 \[ \mathbf{T}(t) = \frac{\mathbf{r}'(t)}{\| \mathbf{r}'(t) \|}, \]
 
-where \( \mathbf{r}(t) = \langle x(t), y(t), z(t) \rangle \) and \( \mathbf{r}'(t) = \langle x'(t), y'(t), z'(t) \rangle \) is the velocity vector.
+where \( \mathbf{r}(t) = \langle x(t), y(t), z(t) \rangle \) is the position vector and \( \mathbf{r}'(t) = \langle x'(t), y'(t), z'(t) \rangle \) is the velocity vector.
 !extra: Requires \( \mathbf{r}'(t) \ne \mathbf{0} \) (a regular curve), so the direction of motion is defined.
 ~~~
 
@@ -30,9 +30,9 @@ The normalized derivative of the **Unit Tangent Vector**,
 !id: lRst6HkC6s
 !front: Why is the **Principal Normal Vector** \( \mathbf{N} \) always perpendicular to \( \mathbf{T} \)?
 !back:
-Because \( \|\mathbf{T}(t)\| = 1 \) for all \( t \), so \( \mathbf{T}(t) \cdot \mathbf{T}(t) = 1 \). Differentiating both sides with the product rule gives
-\[ 2\, \mathbf{T}(t) \cdot \mathbf{T}'(t) = 0, \]
-so \( \mathbf{T}'(t) \) is orthogonal to \( \mathbf{T}(t) \). Since \( \mathbf{N} \) is a positive scalar multiple of \( \mathbf{T}' \), \( \mathbf{N} \perp \mathbf{T} \) as well.
+- \( \|\mathbf{T}(t)\| = 1 \) for all \( t \), so \( \mathbf{T}(t) \cdot \mathbf{T}(t) = 1 \).
+- Differentiating both sides with the product rule gives \( 2\, \mathbf{T}(t) \cdot \mathbf{T}'(t) = 0 \), so \( \mathbf{T}'(t) \) is orthogonal to \( \mathbf{T}(t) \).
+- \( \mathbf{N} \) is a positive scalar multiple of \( \mathbf{T}' \), so \( \mathbf{N} \perp \mathbf{T} \) as well.
 !extra: This is a general fact: the derivative of any vector-valued function of constant magnitude is orthogonal to the function itself.
 ~~~
 
@@ -55,7 +55,10 @@ so \( \mathbf{T}'(t) \) is orthogonal to \( \mathbf{T}(t) \). Since \( \mathbf{N
 
 !id: c7VlxsGzmF
 !front: Why do \( \mathbf{T}, \mathbf{N}, \mathbf{B} \) together form a right-handed orthonormal basis of \( \mathbb{R}^3 \) at each point of the curve?
-!back: \( \mathbf{T} \) and \( \mathbf{N} \) are unit vectors and orthogonal to each other by construction. \( \mathbf{B} = \mathbf{T} \times \mathbf{N} \) is then automatically a unit vector orthogonal to both: its magnitude is \( \|\mathbf{T}\|\|\mathbf{N}\|\sin(\pi/2) = 1 \), and a cross product is always orthogonal to both of its factors. The ordering \( \mathbf{T} \times \mathbf{N} = \mathbf{B} \) makes the triple right-handed by the definition of the cross product.
+!back:
+- \( \mathbf{T} \) and \( \mathbf{N} \) are unit vectors and orthogonal to each other by construction.
+- \( \mathbf{B} = \mathbf{T} \times \mathbf{N} \) is then automatically a unit vector orthogonal to both: its magnitude is \( \|\mathbf{T}\|\|\mathbf{N}\|\sin(\pi/2) = 1 \), and a cross product is always orthogonal to both of its factors.
+- The ordering \( \mathbf{T} \times \mathbf{N} = \mathbf{B} \) makes the triple right-handed, by the definition of the cross product.
 ~~~
 
 !id: CG9OwyiCZ8

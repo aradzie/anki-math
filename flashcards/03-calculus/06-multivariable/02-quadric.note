@@ -52,6 +52,17 @@ where \( A \), \( B \), \( C \), \( D \), \( E \), \( F \), \( G \), \( H \), \(
 !extra: \( a \), \( b \) are nonzero real constants, conventionally taken positive. The surface is not symmetric under \( (x,y,z) \mapsto (-x,-y,-z) \), so the origin is a saddle point (vertex), not a center of symmetry.
 ~~~
 
+!type: Basic Math
+
+!id: BfhZnb4HWO
+!front: Compare the elliptic paraboloid \( z = \frac{x^2}{a^2}+\frac{y^2}{b^2} \) and the hyperbolic paraboloid \( z = \frac{x^2}{a^2}-\frac{y^2}{b^2} \).
+!back:
+- The elliptic paraboloid has both quadratic terms with the same sign, so every horizontal cross-section \( z = z_0 > 0 \) is an ellipse, and the surface curves upward in every direction from the vertex — a bowl shape.
+- The hyperbolic paraboloid has quadratic terms with opposite signs, so every horizontal cross-section \( z = z_0 \ne 0 \) is a hyperbola; the surface curves upward along the \( x \)-direction and downward along the \( y \)-direction from the vertex, producing a saddle point at the origin.
+~~~
+
+!type: Basic Math (and reversed card)
+
 !id: NEKErmAPk5
 !front:
 **Hyperboloid of One Sheet** centered at the origin.

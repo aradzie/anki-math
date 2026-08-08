@@ -3,7 +3,7 @@
 !tags: Math Calculus Multivariable
 
 !id: rFVZZKicBE
-!front: Vector equation of the line.
+!front: Vector equation of a line.
 !back:
 \[ \mathbf{r} = \mathbf{p} + t\mathbf{d} \]
 
@@ -15,8 +15,13 @@ where:
 - \( t \) is a scalar parameter.
 ~~~
 
+!id: VPzGd3VPHw
+!front: Why must the direction vector \( \mathbf{d} \) in a line's vector equation \( \mathbf{r} = \mathbf{p} + t\mathbf{d} \) be nonzero?
+!back: If \( \mathbf{d} = \mathbf{0} \), then \( \mathbf{r} = \mathbf{p} \) for every \( t \), so the equation degenerates to the single point \( \mathbf{p} \) rather than tracing out a line. A nonzero \( \mathbf{d} \) is what gives the line an actual direction to travel along as \( t \) varies.
+~~~
+
 !id: STqbUQSLfv
-!front: Parametric equation of the line.
+!front: Parametric equation of a line.
 !back:
 \[
 \begin{align*}
@@ -34,7 +39,7 @@ where:
 ~~~
 
 !id: wdeUegOXeA
-!front: Symmetric equation of the line.
+!front: Symmetric equation of a line.
 !back:
 \[ \frac{x - p_x}{d_x} = \frac{y - p_y}{d_y} = \frac{z - p_z}{d_z} \]
 
@@ -48,7 +53,7 @@ If a component of \( \mathbf{d} \) is zero, e.g. \( d_z = 0 \), the symmetric fo
 ~~~
 
 !id: kfdQHKQK3g
-!front: Vector equation of the plane.
+!front: Vector equation of a plane.
 !back:
 \[ (\mathbf{r} - \mathbf{p}) \cdot \mathbf{n} = 0 \]
 
@@ -71,8 +76,13 @@ where:
 - \( d = \mathbf{p} \cdot \mathbf{n} \) is a scalar constant.
 ~~~
 
+!id: gnXL7xLK0n
+!front: Give a geometric interpretation of the normal vector \( \mathbf{n} \) in the plane equation \( (\mathbf{r} - \mathbf{p}) \cdot \mathbf{n} = 0 \).
+!back: \( \mathbf{n} \) is perpendicular to the plane, meaning it is orthogonal to every vector lying within the plane. Since \( \mathbf{r} - \mathbf{p} \) is a vector connecting the known point \( \mathbf{p} \) to any other point \( \mathbf{r} \) on the plane, it necessarily lies in the plane — so the equation states exactly that this vector must be orthogonal to \( \mathbf{n} \).
+~~~
+
 !id: u0gQ9pUiNB
-!front: Scalar equation of the plane.
+!front: Scalar equation of a plane.
 !back:
 \[ ax + by + cz = d \]
 
@@ -84,7 +94,7 @@ where:
 ~~~
 
 !id: URxmzbuMG0
-!front: Parametric equation of the plane.
+!front: Parametric equation of a plane.
 !back:
 \[ \mathbf{r} = \mathbf{p} + s \mathbf{b} + t \mathbf{c} \]
 
@@ -94,4 +104,9 @@ where:
 - \( \mathbf{p} \) is the position vector of a specific point on the plane,
 - \( \mathbf{b} \) and \( \mathbf{c} \) are two non-parallel (linearly independent) vectors parallel to the plane, and
 - \( s \) and \( t \) are scalar parameters.
+~~~
+
+!id: VFmho3Fg3u
+!front: Why does the parametric equation of a plane \( \mathbf{r} = \mathbf{p} + s\mathbf{b} + t\mathbf{c} \) require \( \mathbf{b} \) and \( \mathbf{c} \) to be non-parallel?
+!back: If \( \mathbf{b} \) and \( \mathbf{c} \) were parallel, they would be linearly dependent, so \( s\mathbf{b} + t\mathbf{c} \) would only ever span a one-dimensional set of displacements from \( \mathbf{p} \) — i.e. a line, not a plane. Two non-parallel (linearly independent) vectors are needed to span the two degrees of freedom of a plane.
 ~~~
