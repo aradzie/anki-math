@@ -2,6 +2,33 @@
 !deck: Math (Staging)::Numerical-Integration
 !tags: Math Calculus Numerical-Integration
 
+!id: RDTNbCzwGv
+!front: Given a partition of \( [a,b] \) into \( n \) equal subintervals of width \( h=(b-a)/n \) with nodes \( x_0,\dots,x_n \), what is the composite Left Riemann Sum \( L_n \) approximating \( \int_a^b f(x)\,dx \)?
+!back:
+\[ L_n = h\sum_{i=0}^{n-1} f(x_i), \]
+the sum of rectangle areas where each rectangle's height is sampled at its subinterval's left endpoint.
+!related: For monotonic \( f \), \( L_n \) and \( R_n \) bracket \( \int_a^b f(x)\,dx \) from opposite sides — see the note comparing them for the precise inequality and an illustration of the under/overshoot.
+~~~
+
+!id: vKNPxoq5Kn
+!front: Given a partition of \( [a,b] \) into \( n \) equal subintervals of width \( h=(b-a)/n \) with nodes \( x_0,\dots,x_n \), what is the composite Right Riemann Sum \( R_n \) approximating \( \int_a^b f(x)\,dx \)?
+!back:
+\[ R_n = h\sum_{i=1}^{n} f(x_i), \]
+the sum of rectangle areas where each rectangle's height is sampled at its subinterval's right endpoint.
+!related: For monotonic \( f \), \( R_n \) and \( L_n \) bracket \( \int_a^b f(x)\,dx \) from opposite sides — see the note comparing them for the precise inequality and an illustration of the under/overshoot.
+~~~
+
+!id: sLmB7xxOE9
+!front: For a monotonic function \( f \) on \( [a,b] \), how do the Left and Right Riemann Sums compare to \( \int_a^b f(x)\,dx \)?
+!back:
+- If \( f \) is increasing, the left endpoint is the minimum and the right endpoint is the maximum on each subinterval, so
+\[ L_n \le \int_a^b f(x)\,dx \le R_n. \]
+- If \( f \) is decreasing, both inequalities reverse:
+\[ R_n \le \int_a^b f(x)\,dx \le L_n. \]
+!related: \( T_n = \dfrac{L_n + R_n}{2} \) — averaging the Left and Right Riemann Sums exactly recovers the Trapezoidal Rule, since every interior node's two contributions (once from each sum) combine into the weight-\( 2 \) term of \( T_n \)'s formula.
+!extra: ![Left Riemann sum undershooting and right Riemann sum overshooting the same increasing curve](img/left_right_riemann_sum.svg)
+~~~
+
 !id: ae4rK0jt8Z
 !front: What is the single-interval Midpoint Rule approximation to \( \int_a^b f(x)\, dx \), and what geometric shape does it correspond to?
 !back:
