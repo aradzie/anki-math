@@ -4,12 +4,7 @@
 
 !id: qG0LQsI4ZF
 !front: What is the definition of the **Unit Tangent Vector** \( \mathbf{T} \) to a curve \( \mathbf{r}(t) \)?
-!back:
-The normalized velocity vector,
-
-\[ \mathbf{T}(t) = \frac{\mathbf{r}'(t)}{\| \mathbf{r}'(t) \|}, \]
-
-where \( \mathbf{r}(t) = \langle x(t), y(t), z(t) \rangle \) is the position vector and \( \mathbf{r}'(t) = \langle x'(t), y'(t), z'(t) \rangle \) is the velocity vector.
+!back: \[ \mathbf{T}(t) = \frac{\mathbf{r}'(t)}{\| \mathbf{r}'(t) \|}, \]
 !extra: Requires \( \mathbf{r}'(t) \ne \mathbf{0} \) (a regular curve), so the direction of motion is defined.
 ~~~
 
@@ -23,10 +18,7 @@ where \( \mathbf{r}(t) = \langle x(t), y(t), z(t) \rangle \) is the position vec
 
 !id: 4pswS3yAU1
 !front: What is the definition of the **Principal Normal Vector** \( \mathbf{N} \) to a curve \( \mathbf{r}(t) \)?
-!back:
-The normalized derivative of the **Unit Tangent Vector**,
-
-\[ \mathbf{N}(t) = \frac{\mathbf{T}'(t)}{\| \mathbf{T}'(t) \|}. \]
+!back: \[ \mathbf{N}(t) = \frac{\mathbf{T}'(t)}{\| \mathbf{T}'(t) \|}. \]
 !extra: Requires \( \mathbf{T}'(t) \ne \mathbf{0} \), i.e. the curve is not momentarily moving in a straight line.
 ~~~
 
@@ -129,7 +121,11 @@ The plane through \( \mathbf{r}(t_0) \) spanned by \( \mathbf{T}(t_0) \) and \( 
 !back:
 Nowhere — they are undefined at every point.
 
-\( \mathbf{r}'(t) = \langle 1, 2, 3 \rangle \) is constant, so \( \mathbf{T}(t) = \mathbf{r}'(t)/\|\mathbf{r}'(t)\| \) is also constant, giving \( \mathbf{T}'(t) = \mathbf{0} \) for all \( t \). Since \( \mathbf{N} \) requires \( \mathbf{T}'(t) \ne \mathbf{0} \), it is undefined along the entire line — and with it \( \mathbf{B} \) and all three TNB planes, since each is built from \( \mathbf{N} \) and/or \( \mathbf{B} \).
+- \( \mathbf{r}'(t) = \langle 1, 2, 3 \rangle \) is constant,
+- so \( \mathbf{T}(t) = \mathbf{r}'(t)/\|\mathbf{r}'(t)\| \) is also constant,
+- giving \( \mathbf{T}'(t) = \mathbf{0} \) for all \( t \).
+
+Since \( \mathbf{N} \) requires \( \mathbf{T}'(t) \ne \mathbf{0} \), it is undefined along the entire line — and with it \( \mathbf{B} \) and all three TNB planes, since each is built from \( \mathbf{N} \) and/or \( \mathbf{B} \).
 !extra: Geometrically, a straight line does not turn, so there is no distinguished direction of turning to serve as \( \mathbf{N} \), and no distinguished osculating plane — any plane containing the line fits equally well.
 ~~~
 

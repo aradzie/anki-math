@@ -104,11 +104,11 @@ Using linearity of \( L \) and \( c_1+c_2=1 \) to split \( b \):
 !tags: Math Linear-Algebra Matrix
 
 !id: QPmDQSKkX2
-!front: What is the affine transformation?
+!front: What is an affine transformation?
 !back:
 An affine transformation is a function between affine spaces that preserves points, straight lines, and planes, but not necessarily distances or angles. Examples include translation, scaling, rotation, and shearing.
 
-An affine transformation \( \mathbf T:\mathbb R^2\rightarrow \mathbb R^2 \) is defined as
+An affine transformation \( T:\mathbb R^2\rightarrow \mathbb R^2 \) is defined as
 
 \[ \mathbf x = A \mathbf u + \mathbf b \]
 
@@ -121,20 +121,22 @@ where \( \mathbf x \), \( \mathbf u \) and \( \mathbf b \) are \( 2 \times 1 \) 
 ~~~
 
 !id: CCVxs0gaah
-!front: When an affine transformation preserves orientation?
+!front: When does an affine transformation preserve orientation?
 !back:
-An affine transformation \( \mathbf{T} \) preserves orientation if
+An affine transformation \( T \) preserves orientation if
 
 \[ \det(A) > 0 \]
 
-and does not preserve orientation if the determinant is negative:
+and does not preserve orientation if the determinant is negative
 
 \[ \det(A) < 0 \]
 
-where the matrix \( A \) that represents the linear transformation associated with \( \mathbf{T} \).
+where \( A \) is the matrix that represents the linear transformation associated with \( T \).
+!extra:
+If \( \det(A) = 0 \), \( T \) is not invertible — it collapses \( \mathbb{R}^2 \) onto a lower-dimensional set — so orientation-preservation does not apply.
 ~~~
 
 !id: TiHbboZTsH
-!front: When an affine transformation is invertible?
-!back: An affine transformation \( \mathbf{T} \) is invertible if and only if the matrix \( A \) that represents the linear transformation associated with \( \mathbf{T} \) is invertible, that is \( \det(A) \ne 0 \).
+!front: When is an affine transformation invertible?
+!back: An affine transformation \( T \) is invertible if and only if the matrix \( A \) that represents the linear transformation associated with \( T \) is invertible, that is \( \det(A) \ne 0 \).
 ~~~

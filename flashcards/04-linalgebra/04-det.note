@@ -13,7 +13,7 @@ A singular square matrix \( A \) cannot be inverted, meaning \( A^{-1} \) does n
 ~~~
 
 !id: qBT7hpthAE
-!front: When a matrix does not have an inverse?
+!front: When does a matrix not have an inverse?
 !back:
 A matrix \( A \) does not have an inverse if:
 
@@ -22,15 +22,14 @@ A matrix \( A \) does not have an inverse if:
 ~~~
 
 !id: fvgkeHa0Vb
-!front: When the determinant of a matrix is zero?
+!front: When is the determinant of a matrix zero?
 !back: A square matrix has zero determinant when its rows or columns are linearly dependent - meaning one row (or column) can be written as a linear combination of the others.
 ~~~
 
 !id: sneoqH9fCw
-!front: What is the geometric interpretation of the absolute determinant value of a matrix?
+!front: What is the geometric interpretation of the absolute determinant value of a square matrix \( A \)?
 !back:
-For a square matrix \( A \), the absolute value of the determinant \( |\det(A)| \) is the factor by which the matrix scales
-\( n \)-dimensional volume:
+The absolute value of the determinant \( |\det(A)| \) is the factor by which the matrix scales \( n \)-dimensional volume:
 
 - \( | \det(A) | = 0 \): the transformation flattens space into a lower dimension (e.g., collapsing area or volume to zero).
 - \( | \det(A) | = 1 \): the transformation preserves area/volume (it may rotate, reflect, or shear, but doesn't scale).
@@ -39,16 +38,29 @@ For a square matrix \( A \), the absolute value of the determinant \( |\det(A)| 
 ~~~
 
 !id: iMCfeR0bMl
-!front: What is the geometric interpretation of the zero determinant of a matrix?
-!back: A determinant is zero whenever the transformation collapses space into a lower dimension.
+!front: Give a geometric interpretation of a linear transformation \( A \) with \( |\det(A)| = 0 \).
+!back: The transformation flattens \( n \)-dimensional space into a lower dimension, collapsing area or volume to zero — e.g. mapping a plane onto a line, or three-dimensional space onto a plane.
+~~~
+
+!id: bcsQ3u9ywX
+!front: Give a geometric interpretation of a linear transformation \( A \) with \( 0 < |\det(A)| < 1 \).
+!back: The transformation contracts \( n \)-dimensional volume: every region's volume shrinks by the factor \( |\det(A)| \), without collapsing to a lower dimension.
+~~~
+
+!id: e1HNJiSNBm
+!front: Give a geometric interpretation of a linear transformation \( A \) with \( |\det(A)| = 1 \).
+!back: The transformation preserves \( n \)-dimensional volume exactly. It may rotate, reflect, or shear the space, but does not scale it.
+~~~
+
+!id: ceiK1orpKK
+!front: Give a geometric interpretation of a linear transformation \( A \) with \( |\det(A)| > 1 \).
+!back: The transformation expands \( n \)-dimensional volume: every region's volume grows by the factor \( |\det(A)| \).
 ~~~
 
 !id: aOvMWsYT07
-!front: What is the determinant of a triangular matrix?
+!front: What is the determinant of a diagonal matrix?
 !back:
-The determinant of a triangular matrix is the product of its diagonal entries.
-
-For a diagonal matrix:
+The determinant of a diagonal matrix is the product of its diagonal entries.
 
 \[
 \begin{align*}
@@ -63,6 +75,12 @@ For a diagonal matrix:
     &= a_{11} \cdot a_{22} \cdot a_{33} \cdots a_{nn}
 \end{align*}
 \]
+~~~
+
+!id: LC12bxIhGi
+!front: What is the determinant of a triangular matrix?
+!back:
+The determinant of a triangular matrix is the product of its diagonal entries.
 
 For an upper-triangular matrix:
 
@@ -70,7 +88,7 @@ For an upper-triangular matrix:
 \begin{align*}
     \det(A) &=
     \begin{vmatrix}
-        a_{11} & a_{12} & \cdots & a_{nn} \\
+        a_{11} & a_{12} & \cdots & a_{1n} \\
         0 & a_{22} & \cdots & a_{2n} \\
         \vdots & \vdots & \ddots & \vdots \\
         0 & 0 & \cdots & a_{nn}
@@ -97,8 +115,13 @@ For a lower-triangular matrix:
 \]
 ~~~
 
+!id: MRUzlWaLSW
+!front: When is the determinant of a diagonal matrix zero?
+!back: The determinant of a diagonal matrix is zero whenever one of its diagonal entries is zero.
+~~~
+
 !id: WNYTfXowUO
-!front: When the determinant of a triangular matrix is zero?
+!front: When is the determinant of a triangular matrix zero?
 !back: The determinant of a triangular matrix is zero whenever one of its diagonal entries is zero.
 ~~~
 
@@ -108,7 +131,7 @@ For a lower-triangular matrix:
 Given a \( 2 \times 2 \) matrix \( A = \begin{bmatrix}
    a & b \\
    c & d
-\end{bmatrix} \) its determinant is computed as:
+\end{bmatrix} \), its determinant is computed as:
 
 \[
 \begin{align*}
@@ -129,7 +152,7 @@ Given a \( 3 \times 3 \) matrix \( A = \begin{bmatrix}
     a & b & c \\
     d & e & f \\
     g & h & i
-\end{bmatrix} \) its determinant is computed as:
+\end{bmatrix} \), its determinant is computed as:
 
 \[
 \begin{align*}
@@ -160,9 +183,9 @@ It is simply a cofactor expansion along the first row.
 ~~~
 
 !id: JC1t0n1bRk
-!front: What is the minor \( M_{ij} \) of the entry \( a_{ij} \) in a matrix \( A \)?
+!front: What is the minor \( M_{ij} \) of the entry \( a_{ij} \) in a square matrix \( A \)?
 !back:
-The minor \( M_{ij} \) of the entry \( a_{ij} \) in a matrix \( A \) is the determinant of the remaining entries when the row and column containing \( a_{ij} \) are removed.
+The minor \( M_{ij} \) of the entry \( a_{ij} \) in a square matrix \( A \) is the determinant of the remaining entries when the row and column containing \( a_{ij} \) are removed.
 
 Example:
 
@@ -184,9 +207,9 @@ M_{22} = \begin{vmatrix}
 ~~~
 
 !id: gD8tZQL66U
-!front: What is the cofactor \( C_{ij} \) of the entry \( a_{ij} \) in a matrix \( A \)?
+!front: What is the cofactor \( C_{ij} \) of the entry \( a_{ij} \) in a square matrix \( A \)?
 !back:
-The cofactor \( C_{ij} \) of the entry \( a_{ij} \) is in a matrix \( A \) is given by:
+The cofactor \( C_{ij} \) of the entry \( a_{ij} \) in a square matrix \( A \) is given by:
 
 \[ C_{ij} = (-1)^{i + j} \cdot M_{ij} \]
 
@@ -202,7 +225,7 @@ For the matrix \( A = \begin{bmatrix}
 
 \[
 \begin{align*}
-C_{ij} &= (-1)^{2+1} \cdot M_{21} \\
+C_{21} &= (-1)^{2+1} \cdot M_{21} \\
 &= - \begin{vmatrix}
     2 & 3 \\
     8 & 9
@@ -231,8 +254,8 @@ Or, the cofactor expansion across the second column \( j=2 \) is:
 
 \[
 \begin{align*}
-    \det(A) &= \sum_{i=1}^{m} a_{i2} C_{i2} \\
-    &= a_{12} C_{12} + a_{22} C_{22} + \cdots + a_{m2} C_{m2}
+    \det(A) &= \sum_{i=1}^{n} a_{i2} C_{i2} \\
+    &= a_{12} C_{12} + a_{22} C_{22} + \cdots + a_{n2} C_{n2}
 \end{align*}
 \]
 ~~~
@@ -259,4 +282,5 @@ A^{-1} = \frac{1}{\det(A)} \begin{bmatrix}
     -c & a
 \end{bmatrix}
 \]
+!extra: Requires \( \det(A) \neq 0 \); if \( \det(A) = 0 \), \( A \) is singular and \( A^{-1} \) does not exist.
 ~~~

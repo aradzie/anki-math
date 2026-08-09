@@ -268,9 +268,31 @@ Suppose \( \sum_{n=1}^{\infty} a_n \) is a series with positive terms \( a_n \).
 - \( f(n) = a_n \) for all integers \( n \ge N \).
 
 Then \( \sum_{n=1}^{\infty} a_n \) and \( \int_{N}^{\infty} f(x) \, dx \) both converge or both diverge.
-
-Although convergence of the integral implies convergence of the related series, it does not imply that the integral and the series have the same value.
 !extra: ![Integral test](integral_test.svg)
+~~~
+
+!id: 4QNZwdR4ev
+!front: If the integral test applies to \( \sum_{n=1}^{\infty} a_n \) and both it and \( \int_{N}^{\infty} f(x)\,dx \) converge, must they converge to the same value?
+!back: No. The integral test only guarantees that the series and the integral share the same convergence behavior — both converge or both diverge — not that their limiting values agree.
+~~~
+
+!id: RBBZTjh1Rm
+!front: For a continuous, decreasing function \( f \), how does \( f(n) \) compare to \( \int_{n-1}^{n} f(x)\,dx \) and \( \int_{n}^{n+1} f(x)\,dx \)?
+!back: \[ \int_{n}^{n+1} f(x)\,dx \;\le\; f(n) \;\le\; \int_{n-1}^{n} f(x)\,dx. \]
+!extra: ![Decreasing function integral sandwich](decreasing_function_sandwich.svg)
+~~~
+
+!id: nBzR1fN1OP
+!front: Why does a continuous, decreasing function's value at \( n \) satisfy \( \int_{n}^{n+1} f(x)\,dx \le f(n) \le \int_{n-1}^{n} f(x)\,dx \)?
+!back:
+On \( [n, n+1] \), \( f \) is decreasing so \( f(x) \le f(n) \) for \( x \ge n \). The rectangle of height \( f(n) \) over this interval therefore sits above the curve and overestimates the area:
+
+\[ \int_n^{n+1} f(x)\,dx \le f(n). \]
+
+On \( [n-1, n] \), \( f(x) \ge f(n) \) for \( x \le n \). The same-height rectangle over this interval sits below the curve and underestimates the area:
+
+\[ f(n) \le \int_{n-1}^{n} f(x)\,dx. \]
+!related: This per-term sandwich is the mechanism behind both the integral test and its remainder bound: summing it over the relevant range of \( n \) produces each.
 ~~~
 
 !id: YmNyEz9dL0

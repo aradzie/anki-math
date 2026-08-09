@@ -1,0 +1,233 @@
+!type: Basic Math
+!deck: Math
+!tags: Math Linear-Algebra
+
+!id: 8aVJD0DmxX
+!front: What is a system of linear equations?
+!back: A system of linear equations is a collection of one or more linear equations involving the same set of variables.
+!extra:
+For example, the following is a system of two linear equations with two variables \( x \) and \( y \):
+
+\[
+\begin{align*}
+    2x + 3y &= 6 \\
+    4x - y &= 5
+\end{align*}
+\]
+~~~
+
+!id: f7Ob4da6P2
+!front: What is the solution to a system of linear equations?
+!back: The solution to a system of linear equations is the set of values for the variables that satisfy all the equations simultaneously.
+~~~
+
+!id: HlsMiutWc7
+!front: What is a homogeneous system of linear equations?
+!back: A homogeneous system of linear equations is a system in which all constant terms are zero.
+!extra:
+For example, the following is a homogeneous system of two linear equations with two variables \( x \) and \( y \):
+
+\[
+\begin{align*}
+    2x + 3y &= 0 \\
+    4x - y &= 0
+\end{align*}
+\]
+~~~
+
+!id: uGqUW5aV5B
+!front: What is the trivial solution of a homogeneous system of linear equations?
+!back: The trivial solution is the solution in which every variable equals zero (e.g., \( x = 0 \) and \( y = 0 \)).
+~~~
+
+!id: gETwSBAL83
+!front: Why is a homogeneous system of linear equations always consistent?
+!back: Because all constant terms are zero, substituting zero for every variable satisfies every equation simultaneously — this is the trivial solution. Hence a homogeneous system always has at least one solution.
+~~~
+
+!id: r04lQQgotD
+!front: Why is the solution set of a homogeneous system of linear equations closed under addition and scalar multiplication?
+!back:
+Each equation has the form \( c \cdot x = 0 \) for some fixed coefficient vector \( c \). If \( x_1 \) and \( x_2 \) both satisfy it, then
+\[
+c \cdot (x_1 + x_2) = c \cdot x_1 + c \cdot x_2 = 0 + 0 = 0,
+\]
+so \( x_1 + x_2 \) satisfies it too, and for any scalar \( k \),
+\[
+c \cdot (k x_1) = k (c \cdot x_1) = k \cdot 0 = 0,
+\]
+so \( k x_1 \) satisfies it as well. Since this holds for every equation in the system simultaneously, the solution set is closed under addition and scalar multiplication.
+
+![Solution set of x - 2y = 0: a line through the origin. Two solutions v1 and v2, their sum v1+v2, and a scalar multiple kv1 all remain on the line](img/homogeneous_closure.svg)
+~~~
+
+!id: o8SwCZfv9W
+!front:
+Is the following system of linear equations homogeneous?
+
+\[
+\begin{align*}
+    x - 4y &= 0 \\
+    3x + y &= 0
+\end{align*}
+\]
+!back: Yes — every constant term is zero.
+~~~
+
+!id: uRnDhskvAq
+!front:
+Is the following system of linear equations homogeneous?
+
+\[
+\begin{align*}
+    x - 4y &= 0 \\
+    3x + y &= 2
+\end{align*}
+\]
+!back: No — the second equation has a nonzero constant term (\( 2 \)), so not every constant term is zero.
+~~~
+
+!id: MRsLE9qgzE
+!front: What is a consistent system of linear equations?
+!back: A system of linear equations is consistent if there exists at least one solution.
+~~~
+
+!id: m7e034GMbU
+!front: Give a geometric interpretation of an independent system of linear equations.
+!back:
+Geometrically, an independent system (with as many equations as unknowns) corresponds to lines (in two dimensions) or planes (in three dimensions) that intersect in exactly one common point — such a system is automatically consistent.
+
+![Two independent lines, x + y = 4 and x - y = 0, crossing at the single point (2, 2)](img/lines_intersecting.svg)
+~~~
+
+!id: p9EYt7iCmJ
+!front: Give a geometric interpretation of a dependent system of linear equations.
+!back:
+Geometrically, a dependent system (with as many equations as unknowns) corresponds to lines (in two dimensions) or planes (in three dimensions) that fail to intersect in a single common point:
+
+- coincident, sharing infinitely many common points, if the system is consistent, or
+- parallel but distinct, sharing no common point, if the system is inconsistent.
+
+![Two lines coinciding, with infinitely many common points, versus two distinct parallel lines, with none](img/lines_dependent_compare.svg)
+~~~
+
+!id: WaPCaKLTFQ
+!front: What is an inconsistent system of linear equations?
+!back: A system of linear equations is inconsistent if no set of values for the variables satisfies every equation simultaneously — that is, it has no solution.
+~~~
+
+!id: rGcRLzm5ri
+!front: Give a geometric interpretation of an inconsistent system of linear equations.
+!back:
+Geometrically, an inconsistent system corresponds to lines (in two dimensions) or planes (in three dimensions) with no common point at all, such as distinct parallel lines.
+
+![Two distinct parallel lines, sharing no common point](img/lines_parallel.svg)
+~~~
+
+!id: Q052SVQBhv
+!front: What is an independent system of linear equations?
+!back: For a system with as many equations as unknowns, the system is independent if no equation can be written as a linear combination of the others.
+~~~
+
+!id: 5R2CEBkg3e
+!front: What is a dependent system of linear equations?
+!back: For a system with as many equations as unknowns, the system is dependent if at least one equation can be written as a linear combination of the others, making it redundant.
+~~~
+
+!id: QA6s9ed0tA
+!front: Why does a dependent system of linear equations never have a unique solution?
+!back:
+Because a dependent system has at least one equation that is a linear combination of the others, it has fewer than the assumed number of independent constraints on the variables. As a result, it has either
+
+- infinitely many solutions, if consistent, or
+- none, if inconsistent
+
+but never exactly one.
+~~~
+
+!id: pcNXRDAxZw
+!front: What is an underdetermined system of linear equations?
+!back: A system of linear equations is underdetermined if it has fewer equations than unknowns.
+~~~
+
+!id: T8IMIP6zYM
+!front: What is a square system of linear equations?
+!back: A system of linear equations is square if it has exactly as many equations as unknowns.
+~~~
+
+!id: TLOgDNvrfZ
+!front: What is an overdetermined system of linear equations?
+!back: A system of linear equations is overdetermined if it has more equations than unknowns.
+~~~
+
+!id: ccVAFy6CIg
+!front: If an underdetermined system of linear equations is consistent, how many solutions does it have, and why?
+!back: Always infinitely many. An underdetermined system has fewer equations than unknowns, so even if every equation is independent, there are not enough constraints to pin down every unknown.
+!extra: Being underdetermined does not by itself guarantee consistency; the system can still be inconsistent.
+~~~
+
+!id: 93wq8hhZA0
+!front:
+Is the following system of linear equations consistent?
+
+\[
+\begin{align*}
+    x + y + z &= 1 \\
+    x + y + z &= 2
+\end{align*}
+\]
+!back: No — it is underdetermined (two equations, three unknowns), but the two equations require \( x + y + z \) to equal both \( 1 \) and \( 2 \) simultaneously, which is impossible. So having fewer equations than unknowns does not by itself guarantee consistency.
+~~~
+
+!id: iFezGf8DIX
+!front:
+Is the following overdetermined system of linear equations consistent?
+
+\[
+\begin{align*}
+    x + y &= 3 \\
+    2x + 2y &= 6 \\
+    x - y &= 1
+\end{align*}
+\]
+!back: Yes — the second equation is exactly twice the first, so it is redundant and contributes no new constraint. The remaining two independent equations, \( x + y = 3 \) and \( x - y = 1 \), determine the unique solution \( x = 2,\ y = 1 \), which also satisfies the redundant equation. So despite having more equations than unknowns, the system is consistent with exactly one solution.
+~~~
+
+!id: b539ImAHUV
+!front:
+Is the following system of linear equations independent or dependent?
+
+\[
+\begin{align*}
+    x + y &= 5 \\
+    x - y &= 1
+\end{align*}
+\]
+!back: Independent — neither equation's coefficients are a scalar multiple of the other's (\( (1,1) \) is not a multiple of \( (1,-1) \)), so the system has the unique solution \( x = 3,\ y = 2 \).
+~~~
+
+!id: FuVFgsoxvO
+!front:
+Is the following system of linear equations independent or dependent?
+
+\[
+\begin{align*}
+    x + 2y &= 4 \\
+    2x + 4y &= 8
+\end{align*}
+\]
+!back: Dependent — the second equation is exactly twice the first, so it contributes no new information. It is also consistent, since the constants scale the same way, so the two equations describe the same line, giving infinitely many solutions.
+~~~
+
+!id: b8ePSQlK6A
+!front:
+Is the following system of linear equations independent or dependent?
+
+\[
+\begin{align*}
+    x + 2y &= 4 \\
+    2x + 4y &= 10
+\end{align*}
+\]
+!back: Dependent — the left-hand sides are proportional (the second is twice the first), so the coefficients carry no new information. But the constants are not proportional the same way (\( 10 \ne 2 \cdot 4 \)), so the system is inconsistent and has no solution.
+~~~

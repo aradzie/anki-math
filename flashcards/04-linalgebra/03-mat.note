@@ -7,6 +7,8 @@
 !back:
 A **diagonal matrix** is a square matrix in which all entries outside the main diagonal are zero. The main diagonal runs from the top left to the bottom right of the matrix.
 
+![Venn diagram: matrices that are both upper- and lower-triangular are exactly the diagonal matrices, and the identity matrix is a further-specialized diagonal matrix](img/matrix_class_hierarchy.svg)
+!extra:
 For example, the following is a \( 3 \times 3 \) diagonal matrix:
 
 \[
@@ -21,10 +23,12 @@ where \( a_{11} \), \( a_{22} \), and \( a_{33} \) are the diagonal elements.
 ~~~
 
 !id: uSxJt1gfjY
-!front: What is a **upper-trianguar matrix**?
+!front: What is an **upper-triangular matrix**?
 !back:
 An **upper-triangular matrix** is a square matrix in which all entries below the main diagonal are zero. The main diagonal runs from the top left to the bottom right of the matrix.
 
+![Venn diagram: matrices that are both upper- and lower-triangular are exactly the diagonal matrices, and the identity matrix is a further-specialized diagonal matrix](img/matrix_class_hierarchy.svg)
+!extra:
 For example, the following is a \( 3 \times 3 \) upper-triangular matrix:
 
 \[
@@ -37,10 +41,12 @@ For example, the following is a \( 3 \times 3 \) upper-triangular matrix:
 ~~~
 
 !id: CRhVhQoxam
-!front: What is a **lower-trianguar matrix**?
+!front: What is a **lower-triangular matrix**?
 !back:
-An **lower-triangular matrix** is a square matrix in which all entries above the main diagonal are zero. The main diagonal runs from the top left to the bottom right of the matrix.
+A **lower-triangular matrix** is a square matrix in which all entries above the main diagonal are zero. The main diagonal runs from the top left to the bottom right of the matrix.
 
+![Venn diagram: matrices that are both upper- and lower-triangular are exactly the diagonal matrices, and the identity matrix is a further-specialized diagonal matrix](img/matrix_class_hierarchy.svg)
+!extra:
 For example, the following is a \( 3 \times 3 \) lower-triangular matrix:
 
 \[
@@ -57,6 +63,8 @@ For example, the following is a \( 3 \times 3 \) lower-triangular matrix:
 !back:
 The **identity matrix** \( I \) is a square matrix in which all the elements of the main diagonal are ones, and all other elements are zeros. The main diagonal runs from the top left to the bottom right of the matrix.
 
+![Venn diagram: matrices that are both upper- and lower-triangular are exactly the diagonal matrices, and the identity matrix is a further-specialized diagonal matrix](img/matrix_class_hierarchy.svg)
+!extra:
 For example, the following is a \( 3 \times 3 \) identity matrix:
 
 \[
@@ -81,6 +89,8 @@ A **symmetric matrix** is a square matrix that is equal to its transpose. In oth
 
 This means that the elements across the main diagonal are mirror images of each other, i.e., \( a_{ij} = a_{ji} \) for all \( i \) and \( j \).
 
+![A 4x4 grid with the main diagonal shaded as a mirror line; the off-diagonal pairs a12/a21 and a14/a41 are connected to show they are reflections of each other across it](img/symmetric_mirror.svg)
+!extra:
 For example, the following is a \( 3 \times 3 \) symmetric matrix:
 
 \[
@@ -112,9 +122,11 @@ In general, matrix multiplication is not commutative:
 
 \[ AB \ne BA \]
 
-Except when multiplying by the identity matrix \( I \):
+though some pairs of matrices do commute — e.g. any matrix with the identity matrix \( I \):
 
 \[ AI = IA \]
+
+![The unit square transformed by AB versus BA, where A is a 90-degree rotation and B is a horizontal shear: applying the same two matrices in opposite orders produces different parallelograms](img/noncommutative_transform.svg)
 ~~~
 
 !id: vUQzCrBy9C
@@ -141,79 +153,81 @@ Yes, matrix multiplication is associative. For matrices \( A \), \( B \), and \(
 !id: Xbd1af72im
 !front: Is matrix multiplication commutative?
 !back:
-No, matrix multiplication is *not* commutative. For any matrices \( A \) and \( B \):
+No, matrix multiplication is *not* commutative in general. For matrices \( A \) and \( B \):
 
 \[ AB \ne BA \]
 
-Except when multiplying by the identity matrix \( I \):
+though some pairs do commute — e.g. any matrix with the identity matrix \( I \):
 
 \[ AI = IA \]
+
+![The unit square transformed by AB versus BA, where A is a 90-degree rotation and B is a horizontal shear: applying the same two matrices in opposite orders produces different parallelograms](img/noncommutative_transform.svg)
 ~~~
 
 !id: LlaQFPFPfm
 !front: What is the inverse of a square matrix?
 !back:
-The inverse of a square matrix \( A \) is a square matrix \( A^{-1} \) such that:
+If a square matrix \( A \) is invertible (nonsingular), its inverse is the unique square matrix \( A^{-1} \) such that:
 
 \[ A \cdot A^{-1} = A^{-1} \cdot A = I \]
 
 where \( I \) is the identity matrix of the same size as \( A \).
+!extra: Not every square matrix has an inverse; \( A \) is invertible iff \( \det A \ne 0 \).
 ~~~
 
 !id: Z8IcN5cqgA
 !front: What are the properties of symmetric matrices?
 !back:
-Suppose that is \( A \) symmetric matrix. Then, we have the following properties:
+If \( A \) is a symmetric matrix, then:
 
 - \( -A \) is symmetric.
-- \( cA \) is symmetric for any \( c \ne 0 \).
+- \( cA \) is symmetric for any scalar \( c \).
 - \( A^m \) is symmetric for any positive integer \( m \).
 - \( A^{-1} \) is symmetric for nonsingular \( A \).
 
-If \( A \) and \( B \) symmetric matrices, we have the following properties:
+If \( A \) and \( B \) are symmetric matrices, then:
 
-- The sum \( A + B \) is symmetric.
-- The product \( A \cdot B \) is *not* always symmetric.
+- \( A + B \) is symmetric.
+- \( A \cdot B \) is *not* always symmetric.
 
 Finally:
 
-- \( A + A^T \) is symmetric for any *square* matrix \( A \).
-- \( A \cdot A^T \) and \( A^T \cdot A \) is symmetric for *any* \( m \times n \) matrix \( A \).
-
-Any diagonal matrix is symmetric.
+- \( A + A^T \) is symmetric for *any square* \( n \times n \) matrix \( A \).
+- \( A \cdot A^T \) and \( A^T \cdot A \) are symmetric for *any rectangular* \( m \times n \) matrix \( A \).
+- *Any diagonal* matrix is symmetric.
 ~~~
 
 !id: bmb8147bhJ
-!front: If \( A \) is a symmetric matrix, is \( A^{m} \) symmetric?:
+!front: If \( A \) is a symmetric matrix, is \( A^{m} \) symmetric?
 !back: Yes, \( A^{m} \) is symmetric for a symmetric matrix \( A \) and a positive integer \( m \).
 ~~~
 
 !id: G1HHX4hsSg
-!front: If \( A \) is a symmetric matrix, is \( A^{-1} \) symmetric?:
+!front: If \( A \) is a symmetric matrix, is \( A^{-1} \) symmetric?
 !back: Yes, \( A^{-1} \) is symmetric for a nonsingular symmetric matrix \( A \).
 ~~~
 
 !id: rGWqWkFPzP
-!front: If \( A \) and \( B \) are symmetric matrices, is their sum \( A + B \) symmetric?:
+!front: If \( A \) and \( B \) are symmetric matrices, is their sum \( A + B \) symmetric?
 !back: Yes, the sum \( A + B \) is symmetric for two symmetric matrices \( A \) and \( B \).
 ~~~
 
 !id: HaSw7g6Bf1
-!front: If \( A \) and \( B \) are symmetric matrices, is their product \( A \cdot B \) symmetric?:
+!front: If \( A \) and \( B \) are symmetric matrices, is their product \( A \cdot B \) symmetric?
 !back: No, the product \( A \cdot B \) is *not* always symmetric.
 ~~~
 
 !id: LzxQveaGdf
-!front: For which matrix \( A \) the sum \( A + A^T \) is symmetric?
+!front: For which matrix \( A \) is the sum \( A + A^T \) symmetric?
 !back: The sum \( A + A^T \) is symmetric for *any square* \( n \times n \) matrix \( A \).
 ~~~
 
 !id: b5P4venkeI
-!front: For which matrix \( A \) the product \( A \cdot A^T \) is symmetric?
+!front: For which matrix \( A \) is the product \( A \cdot A^T \) symmetric?
 !back: The product \( A \cdot A^T \) is symmetric for *any rectangular* \( m \times n \) matrix \( A \).
 ~~~
 
 !id: jZuV4OuwH8
-!front: When a diagonal matrix is symmetric?
-!back: *Any* diagonal matrix is symmetric.
+!front: Is every diagonal matrix symmetric?
+!back: Yes, *any* diagonal matrix is symmetric.
 ~~~

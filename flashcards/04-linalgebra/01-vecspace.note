@@ -1,0 +1,107 @@
+!type: Basic Math
+!deck: Math (Staging)::Vector-Spaces
+!tags: Math Linear-Algebra
+
+!id: eRnsPOMYVV
+!front: What is a vector space?
+!back:
+A vector space over a field \( F \) (e.g. \( \mathbb{R} \)) is a set \( V \) with a vector addition and a scalar multiplication satisfying:
+
+- Closure: \( u+v \in V \) and \( cu \in V \) for all \( u,v \in V \) and \( c \in F \).
+- Additive structure: addition is commutative and associative, \( V \) contains a zero vector \( \mathbf{0} \) with \( v+\mathbf{0}=v \), and every \( v \) has an additive inverse \( -v \) with \( v+(-v)=\mathbf{0} \).
+- Scalar multiplication structure: \( 1v=v \), \( (ab)v=a(bv) \), and scalar multiplication distributes over both vector addition, \( a(u+v)=au+av \), and scalar addition, \( (a+b)v=av+bv \).
+!extra: Examples: \( \mathbb{R}^n \), the space of \( m \times n \) matrices, and the space of polynomials of degree \( \le n \), all under the usual addition and scalar multiplication.
+~~~
+
+!id: zWqpEofXh6
+!front: What is a subspace of a vector space, and what conditions characterize it?
+!back:
+A subspace of a vector space \( V \) is a subset \( W \subseteq V \) that is itself a vector space under the same operations. \( W \) is a subspace exactly when:
+
+- \( \mathbf{0} \in W \)
+- \( W \) is closed under addition: \( u,v \in W \implies u+v \in W \)
+- \( W \) is closed under scalar multiplication: \( v \in W,\ c \in F \implies cv \in W \)
+!extra: These three conditions guarantee that all the other vector space axioms (associativity, distributivity, etc.) automatically hold on \( W \), since they already hold on all of \( V \).
+~~~
+
+!id: wP0e3p2nZ4
+!front: Why does closure under scalar multiplication alone already force a nonempty subspace candidate to contain the zero vector?
+!back: If \( W \) is nonempty and closed under scalar multiplication, pick any \( w \in W \). Then \( 0 \cdot w \in W \) by closure, and \( 0 \cdot w = \mathbf{0} \) in any vector space, so \( \mathbf{0} \in W \).
+!extra: This makes "does the set contain \( \mathbf{0} \)?" a fast necessary test for ruling out non-subspaces: if \( \mathbf{0} \notin W \), then \( W \) is either empty or fails closure under scalar multiplication, so it cannot be a subspace, without needing to check closure under addition at all.
+~~~
+
+!id: AUDqt3hqJj
+!front: What is a linear combination of vectors \( v_1,\dots,v_k \)?
+!back:
+A linear combination of \( v_1,\dots,v_k \in V \) is any vector of the form
+\[ c_1v_1+c_2v_2+\cdots+c_kv_k \]
+for scalars \( c_1,\dots,c_k \in F \).
+~~~
+
+!id: bAHth0V0XB
+!front: What is the span of a set of vectors \( \{v_1,\dots,v_k\} \)?
+!back:
+The span of \( \{v_1,\dots,v_k\} \subseteq V \) is the set of all linear combinations of these vectors:
+\[ \operatorname{span}\{v_1,\dots,v_k\} = \{c_1v_1+\cdots+c_kv_k : c_1,\dots,c_k \in F\}. \]
+!extra: The span is always a subspace of \( V \) — the smallest one containing \( v_1,\dots,v_k \).
+~~~
+
+!id: TM4vnvoWPf
+!front: What does it mean for a set of vectors \( \{v_1,\dots,v_k\} \) to be linearly independent?
+!back:
+\( \{v_1,\dots,v_k\} \) is linearly independent if the only scalars \( c_1,\dots,c_k \) satisfying
+\[ c_1v_1+c_2v_2+\cdots+c_kv_k = \mathbf{0} \]
+are \( c_1=c_2=\cdots=c_k=0 \). Otherwise — if some nontrivial combination equals \( \mathbf{0} \) — the set is linearly dependent, meaning at least one vector can be written as a linear combination of the others.
+~~~
+
+!id: YYx0hfVhF4
+!front: Compare an independent/dependent system of linear equations with linearly independent/dependent vectors.
+!back:
+- A system of linear equations (with as many equations as unknowns) is independent if no equation can be written as a linear combination of the others, and dependent otherwise; this describes a relationship among the *equations* of a system, and governs whether the system has a unique solution.
+- A set of vectors \( \{v_1,\dots,v_k\} \) is linearly independent if the only scalars with \( c_1v_1+\cdots+c_kv_k=\mathbf{0} \) are all zero, and linearly dependent otherwise; this describes a relationship among the *vectors themselves*, with no reference to any system's right-hand side.
+!extra: The two notions are connected: for a square system, the rows of the coefficient matrix are linearly independent as vectors exactly when the system is independent in the equations sense.
+~~~
+
+!id: OFihXa1LTp
+!front: What is a basis of a vector space \( V \)?
+!back:
+A basis of \( V \) is a set of vectors \( \{v_1,\dots,v_n\} \subseteq V \) that is:
+
+- linearly independent, and
+- spanning: \( \operatorname{span}\{v_1,\dots,v_n\} = V \).
+
+Equivalently, every vector in \( V \) can be written as a linear combination of \( v_1,\dots,v_n \) in exactly one way.
+!extra: E.g. the standard basis vectors \( e_1,\dots,e_n \) form a basis of \( \mathbb{R}^n \), but so does any other set of \( n \) linearly independent vectors in \( \mathbb{R}^n \).
+~~~
+
+!id: 0pvdRMdPUa
+!front: What is the dimension of a vector space \( V \)?
+!back: The dimension of \( V \), denoted \( \dim V \), is the number of vectors in any basis of \( V \). This is well-defined because every basis of a given vector space has the same number of elements.
+!extra: E.g. \( \dim \mathbb{R}^n = n \); the space of \( m \times n \) matrices has dimension \( mn \).
+~~~
+
+!tags: Math Linear-Algebra Matrix
+
+!id: cevJBlQdfY
+!front: What is the null space \( \operatorname{Null}(A) \) of a matrix \( A \)?
+!back:
+\[ \operatorname{Null}(A) = \{\mathbf{x} : A\mathbf{x}=\mathbf{0}\}, \]
+the set of all vectors mapped to the zero vector by \( A \) — equivalently, the solution set of the homogeneous system \( A\mathbf{x}=\mathbf{0} \). Also called the kernel of \( A \).
+~~~
+
+!id: I6RiJWG7SX
+!front: Why is the null space of a matrix \( A \) always a subspace of \( \mathbb{R}^n \)?
+!back:
+Let:
+
+- \( A \) be \( m \times n \), so \( \operatorname{Null}(A) \subseteq \mathbb{R}^n \).
+
+To prove: \( \operatorname{Null}(A) \) is a subspace of \( \mathbb{R}^n \).
+
+- \( A\mathbf{0}=\mathbf{0} \), so \( \mathbf{0} \in \operatorname{Null}(A) \).
+- If \( A\mathbf{x}_1=\mathbf{0} \) and \( A\mathbf{x}_2=\mathbf{0} \), then \( A(\mathbf{x}_1+\mathbf{x}_2)=A\mathbf{x}_1+A\mathbf{x}_2=\mathbf{0} \), so \( \operatorname{Null}(A) \) is closed under addition.
+- If \( A\mathbf{x}=\mathbf{0} \) and \( c \) is a scalar, then \( A(c\mathbf{x})=c(A\mathbf{x})=\mathbf{0} \), so \( \operatorname{Null}(A) \) is closed under scalar multiplication.
+
+Both closure steps use only the linearity of \( \mathbf{x}\mapsto A\mathbf{x} \).
+!related: For a square system, \( \operatorname{Null}(A) \) is exactly the solution set of the homogeneous system \( A\mathbf{x}=\mathbf{0} \) — the same closure argument, worked out componentwise for a specific example, appears in the linear-equations notes.
+~~~
