@@ -15,7 +15,7 @@ Illustrations are one of the compiled-artifact steps in this repository (alongsi
 
 ## Where Sources Live
 
-`.asy` sources are not confined to one directory, but all live under `flashcards/`. Each lives next to the content it illustrates — typically beside the `.note` file that will reference it — and compiles to a same-named `.svg` in that same directory.
+`.asy` sources are not confined to one directory, but all live under `flashcards/`. Each lives in an `img/` subdirectory beside the `.note` file it illustrates — e.g. an illustration for `01-algebra/some-topic.note` lives at `01-algebra/img/illustration.asy` — and compiles to a same-named `.svg` in that same `img/` directory. When a topic directory has no `img/` subdirectory yet, create one rather than placing the new source flat.
 
 `common.asy` at the top of `flashcards/` holds shared helpers used across illustrations regardless of where they live — `import common;` resolves from any directory because compilation always runs with `flashcards/` as the working directory. Existing illustrations predate these helpers and have not been migrated to import them yet; new illustrations should reach for them where they fit (see Authoring below).
 
@@ -25,7 +25,7 @@ Illustrations are one of the compiled-artifact steps in this repository (alongsi
 
 1. Look at 2-3 existing `.asy` files (anywhere in the repo) for the closest analog (a similar curve family or construction) and match their structure and style.
 2. Use plain `size(...)`, `draw`, `label`, `dot` calls. Use shared helpers from `common.asy` (`import common;`) where they fit.
-3. Name the file after the concept it illustrates, matching existing naming (snake_case, e.g. `unit_circle.asy`), and place it next to the `.note` file it accompanies.
+3. Name the file after the concept it illustrates, matching existing naming (snake_case, e.g. `unit_circle.asy`), and place it in the `img/` subdirectory beside the `.note` file it accompanies.
 
 ### SVG vs. PNG output
 

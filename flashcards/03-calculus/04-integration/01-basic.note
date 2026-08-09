@@ -8,7 +8,7 @@
 A finite set of points \( P = \{x_0, x_1, \dots, x_n\} \) with
 \[ a = x_0 < x_1 < \cdots < x_n = b, \]
 dividing \( [a,b] \) into subintervals \( [x_{i-1}, x_i] \) of length \( \Delta x_i = x_i - x_{i-1} \).
-!extra: ![A partition of [a,b] into unevenly spaced subintervals, each labeled by its length Δx_i](partition.svg)
+!extra: ![A partition of [a,b] into unevenly spaced subintervals, each labeled by its length Δx_i](img/partition.svg)
 ~~~
 
 !id: raG97Qyts0
@@ -21,7 +21,7 @@ the length of the largest subinterval in \( P \).
 !id: hO2Qgb8rQp
 !front: Given a partition \( P = \{x_0,\dots,x_n\} \) of \( [a,b] \) and sample points \( t_i \in [x_{i-1}, x_i] \), what is the Riemann sum \( S(f,P) \)?
 !back: \[ S(f,P) = \sum_{i=1}^n f(t_i)\, \Delta x_i \]
-!extra: ![Riemann sum: rectangles of height f(t_i), with each sample point t_i placed off-center in its subinterval](riemann_sum.svg)
+!extra: ![Riemann sum: rectangles of height f(t_i), with each sample point t_i placed off-center in its subinterval](img/riemann_sum.svg)
 ~~~
 
 !id: z7Kxhid4qd
@@ -38,13 +38,13 @@ regardless of the choice of sample points \( t_i \).
 !extra:
 Assumes \( f \) is bounded on \( [a,b] \); otherwise the suprema \( M_i \) need not be finite.
 
-![Upper Darboux sum: rectangles of height M_i overshooting the curve; on one subinterval the supremum is attained at an interior point, not an endpoint](upper_darboux_sum.svg)
+![Upper Darboux sum: rectangles of height M_i overshooting the curve; on one subinterval the supremum is attained at an interior point, not an endpoint](img/upper_darboux_sum.svg)
 ~~~
 
 !id: QBUs20utov
 !front: For a bounded function \( f \) and a partition \( P \) of \( [a,b] \), what is the lower Darboux sum \( L(f,P) \)?
 !back: \[ L(f,P) = \sum_{i=1}^n m_i\, \Delta x_i, \quad m_i = \inf_{[x_{i-1},x_i]} f \]
-!extra: ![Lower Darboux sum: rectangles of height m_i undershooting the curve](lower_darboux_sum.svg)
+!extra: ![Lower Darboux sum: rectangles of height m_i undershooting the curve](img/lower_darboux_sum.svg)
 ~~~
 
 !id: ezIX6VjSzq
@@ -72,13 +72,13 @@ Their common value is defined to be \( \int_a^b f(x)\, dx \).
 !id: AuBlyIvNji
 !front: Why does refining a partition \( P \) (adding points to get \( P' \supseteq P \)) never increase the upper sum \( U(f,P) \)?
 !back: Splitting a subinterval into pieces replaces one supremum \( M_i \) by suprema over smaller sets, each of which is \( \le M_i \). So every term of \( U(f,P') \) is bounded above by the corresponding term of \( U(f,P) \), giving \( U(f,P') \le U(f,P) \).
-!extra: ![A subinterval refined by adding one point: the piece containing the old supremum keeps the same height, the other piece's supremum strictly drops](partition_refinement_upper.svg)
+!extra: ![A subinterval refined by adding one point: the piece containing the old supremum keeps the same height, the other piece's supremum strictly drops](img/partition_refinement_upper.svg)
 ~~~
 
 !id: fz8hOflTJY
 !front: Why does refining a partition \( P \) (adding points to get \( P' \supseteq P \)) never decrease the lower sum \( L(f,P) \)?
 !back: Splitting a subinterval into pieces replaces one infimum \( m_i \) by infima over smaller sets, each of which is \( \ge m_i \). So every term of \( L(f,P') \) is bounded below by the corresponding term of \( L(f,P) \), giving \( L(f,P') \ge L(f,P) \).
-!extra: ![A subinterval refined by adding one point: the piece touching the old infimum keeps the same height, the other piece's infimum strictly rises](partition_refinement_lower.svg)
+!extra: ![A subinterval refined by adding one point: the piece touching the old infimum keeps the same height, the other piece's infimum strictly rises](img/partition_refinement_lower.svg)
 ~~~
 
 !id: Bx4Pd1hvNG
@@ -215,7 +215,7 @@ If \( f \) is continuous on \( [a,b] \), there exists \( c \in (a,b) \) such tha
 !extra:
 Geometrically: the area under the curve equals the area of a rectangle of height \( f(c) \) and width \( b-a \).
 
-![Mean Value Theorem for Integrals](mean_value_theorem_integral.svg)
+![Mean Value Theorem for Integrals](img/mean_value_theorem_integral.svg)
 ~~~
 
 !id: rLdbzPXWhT

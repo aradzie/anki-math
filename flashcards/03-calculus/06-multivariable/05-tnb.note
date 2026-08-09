@@ -18,7 +18,7 @@ where \( \mathbf{r}(t) = \langle x(t), y(t), z(t) \rangle \) is the position vec
 !back:
 \( \mathbf{T}(t) \) points in the instantaneous direction of travel along the curve — it is tangent to the curve at \( \mathbf{r}(t) \). Normalizing \( \mathbf{r}'(t) \) strips out the speed \( \|\mathbf{r}'(t)\| \), so \( \mathbf{T} \) records direction of motion only.
 
-![The Tangent vector T at a point on a helix, with N and B dimmed](tangent_vector.svg)
+![The Tangent vector T at a point on a helix, with N and B dimmed](img/tangent_vector.svg)
 ~~~
 
 !id: 4pswS3yAU1
@@ -44,7 +44,7 @@ The normalized derivative of the **Unit Tangent Vector**,
 !back:
 \( \mathbf{N}(t) \) points in the direction the curve is turning toward — the direction \( \mathbf{T} \) is instantaneously rotating, which is toward the concave (inside) side of the curve.
 
-![The Principal Normal vector N at a point on a helix, with T and B dimmed](principal_normal_vector.svg)
+![The Principal Normal vector N at a point on a helix, with T and B dimmed](img/principal_normal_vector.svg)
 !extra: \( \mathbf{T} \) and \( \mathbf{N} \) together span the **osculating plane**, the plane that best approximates the curve near \( \mathbf{r}(t) \).
 ~~~
 
@@ -59,7 +59,7 @@ The normalized derivative of the **Unit Tangent Vector**,
 !back:
 \( \mathbf{B}(t) \) is perpendicular to the osculating plane spanned by \( \mathbf{T} \) and \( \mathbf{N} \) — it is the normal vector to the plane that locally best fits the curve. How \( \mathbf{B} \) changes as \( t \) varies describes how that plane twists along the curve.
 
-![The Binormal vector B at a point on a helix, with T and N dimmed](binormal_vector.svg)
+![The Binormal vector B at a point on a helix, with T and N dimmed](img/binormal_vector.svg)
 ~~~
 
 !id: c7VlxsGzmF
@@ -69,7 +69,7 @@ The normalized derivative of the **Unit Tangent Vector**,
 - \( \mathbf{B} = \mathbf{T} \times \mathbf{N} \) is then automatically a unit vector orthogonal to both: its magnitude is \( \|\mathbf{T}\|\|\mathbf{N}\|\sin(\pi/2) = 1 \), and a cross product is always orthogonal to both of its factors.
 - The ordering \( \mathbf{T} \times \mathbf{N} = \mathbf{B} \) makes the triple right-handed, by the definition of the cross product.
 
-![The T, N, B frame at a point on a helix](tnb_frame.svg)
+![The T, N, B frame at a point on a helix](img/tnb_frame.svg)
 ~~~
 
 !id: CG9OwyiCZ8
@@ -79,7 +79,7 @@ The plane through \( \mathbf{r}(t_0) \) spanned by \( \mathbf{T}(t_0) \) and \( 
 
 \[ \mathbf{B}(t_0) \cdot \bigl(\mathbf{r} - \mathbf{r}(t_0)\bigr) = 0. \]
 
-![Osculating plane, shaded, at a point on a helix, together with the T, N, B frame](osculating_plane.svg)
+![Osculating plane, shaded, at a point on a helix, together with the T, N, B frame](img/osculating_plane.svg)
 !extra: Requires \( \mathbf{T}'(t_0) \ne \mathbf{0} \) (nonzero curvature at \( t_0 \)), so \( \mathbf{N}(t_0) \) and \( \mathbf{B}(t_0) \) are defined.
 ~~~
 
@@ -99,7 +99,7 @@ The plane through \( \mathbf{r}(t_0) \) spanned by \( \mathbf{N}(t_0) \) and \( 
 
 \[ \mathbf{T}(t_0) \cdot \bigl(\mathbf{r} - \mathbf{r}(t_0)\bigr) = 0. \]
 
-![Normal plane, shaded, at a point on a helix, together with the T, N, B frame](normal_plane.svg)
+![Normal plane, shaded, at a point on a helix, together with the T, N, B frame](img/normal_plane.svg)
 !extra: Requires \( \mathbf{T}'(t_0) \ne \mathbf{0} \) (nonzero curvature at \( t_0 \)), so \( \mathbf{N}(t_0) \) and \( \mathbf{B}(t_0) \) are defined.
 ~~~
 
@@ -115,7 +115,7 @@ The plane through \( \mathbf{r}(t_0) \) spanned by \( \mathbf{T}(t_0) \) and \( 
 
 \[ \mathbf{N}(t_0) \cdot \bigl(\mathbf{r} - \mathbf{r}(t_0)\bigr) = 0. \]
 
-![Rectifying plane, shaded, at a point on a helix, together with the T, N, B frame](rectifying_plane.svg)
+![Rectifying plane, shaded, at a point on a helix, together with the T, N, B frame](img/rectifying_plane.svg)
 !extra: Requires \( \mathbf{T}'(t_0) \ne \mathbf{0} \) (nonzero curvature at \( t_0 \)), so \( \mathbf{N}(t_0) \) and \( \mathbf{B}(t_0) \) are defined.
 ~~~
 
@@ -140,7 +140,7 @@ Nowhere — they are undefined at every point.
 - **Normal plane**: spanned by \( \mathbf{N}, \mathbf{B} \); normal \( \mathbf{T} \).
 - **Rectifying plane**: spanned by \( \mathbf{T}, \mathbf{B} \); normal \( \mathbf{N} \).
 
-![The osculating, normal, and rectifying planes shown together at a point on a helix, each shaded in the color of its normal vector](tnb_planes_compare.svg)
+![The osculating, normal, and rectifying planes shown together at a point on a helix, each shaded in the color of its normal vector](img/tnb_planes_compare.svg)
 ~~~
 
 !id: EMf7doP9dx
@@ -156,7 +156,7 @@ Applying this with \( (e_1,e_2,e_3) = (\mathbf{T},\mathbf{N},\mathbf{B}) \) give
 !front:
 Which TNB plane is shaded in this illustration?
 
-![TNB frame at a point on a curve, with one plane shaded](osculating_plane.svg)
+![TNB frame at a point on a curve, with one plane shaded](img/osculating_plane.svg)
 !back: The **osculating plane** — the shaded quadrilateral's edges run along \( \mathbf{T} \) and \( \mathbf{N} \), so it is spanned by \( \mathbf{T}, \mathbf{N} \), with \( \mathbf{B} \) normal to it.
 ~~~
 
@@ -164,7 +164,7 @@ Which TNB plane is shaded in this illustration?
 !front:
 Which TNB plane is shaded in this illustration?
 
-![TNB frame at a point on a curve, with one plane shaded](normal_plane.svg)
+![TNB frame at a point on a curve, with one plane shaded](img/normal_plane.svg)
 !back: The **normal plane** — the shaded quadrilateral's edges run along \( \mathbf{N} \) and \( \mathbf{B} \), so it is spanned by \( \mathbf{N}, \mathbf{B} \), with \( \mathbf{T} \) normal to it.
 ~~~
 
@@ -172,6 +172,6 @@ Which TNB plane is shaded in this illustration?
 !front:
 Which TNB plane is shaded in this illustration?
 
-![TNB frame at a point on a curve, with one plane shaded](rectifying_plane.svg)
+![TNB frame at a point on a curve, with one plane shaded](img/rectifying_plane.svg)
 !back: The **rectifying plane** — the shaded quadrilateral's edges run along \( \mathbf{T} \) and \( \mathbf{B} \), so it is spanned by \( \mathbf{T}, \mathbf{B} \), with \( \mathbf{N} \) normal to it.
 ~~~

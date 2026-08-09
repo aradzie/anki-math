@@ -29,7 +29,7 @@ Assume \( f \) is one-to-one and continuously differentiable on \( [a,b] \). Sub
 !extra:
 The bounds are oriented: if \( f \) is decreasing, then \( f(a) > f(b) \), and the identity still uses the directed integral from \( f(a) \) to \( f(b) \).
 
-![Integral of an inverse function](inverse_function_integral.svg)
+![Integral of an inverse function](img/inverse_function_integral.svg)
 ~~~
 
 !id: InpkHt4xmD

@@ -44,7 +44,7 @@ If \( x \) is negative, then \( |x| = -x \), so \( -|x| = x \le x \le -x = |x| \
 \[ a - c \le x \le a + c \]
 \[ x \in [a - c, a + c] \]
 
-![|x - a| <= c](abs_inequality_le.svg)
+![|x - a| <= c](img/abs_inequality_le.svg)
 ~~~
 
 !id: H7Z0dQ5N2m
@@ -54,7 +54,7 @@ If \( x \) is negative, then \( |x| = -x \), so \( -|x| = x \le x \le -x = |x| \
 \[ x \le a - c \quad \text{or} \quad x \ge a + c \]
 \[ x \in (-\infty, a-c] \cup [a+c, \infty) \]
 
-![|x - a| >= c](abs_inequality_ge.svg)
+![|x - a| >= c](img/abs_inequality_ge.svg)
 ~~~
 
 !id: HyckbDIJks
@@ -139,7 +139,7 @@ It stays the same:
 
 \[ f(a) \le f(b) \]
 
-![Increasing vs. decreasing function: inequality direction](monotonic_direction.svg)
+![Increasing vs. decreasing function: inequality direction](img/monotonic_direction.svg)
 ~~~
 
 !id: 38YVrjoIzc
@@ -149,7 +149,7 @@ The direction flips:
 
 \[ f(a) \ge f(b) \]
 
-![Increasing vs. decreasing function: inequality direction](monotonic_direction.svg)
+![Increasing vs. decreasing function: inequality direction](img/monotonic_direction.svg)
 ~~~
 
 !id: HDnjnyqxHz
@@ -215,7 +215,7 @@ The triangle inequality states that for any real numbers \( a \) and \( b \):
 
 \[ |a + b| \leq |a| + |b| \]
 
-![Triangle inequality](triangle_inequality.svg)
+![Triangle inequality](img/triangle_inequality.svg)
 ~~~
 
 !id: kQcxFhsQHh
@@ -284,7 +284,7 @@ The AM–GM inequality states that for for any real number \( a,b \ge 0 \):
 
 Equality holds iff \( a=b \).
 
-![AM-GM via semicircle](am_gm_semicircle.svg)
+![AM-GM via semicircle](img/am_gm_semicircle.svg)
 ~~~
 
 !id: HoDhG80bGb

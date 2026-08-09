@@ -159,6 +159,18 @@ The `!id:` field, if exists, contains an automatically generated stable note ide
 - Use `!extra:` for assumptions, warnings, or brief context that would clutter the main answer. A worked example or a recognition case (e.g. a boundary where the concept is undefined or fails) is itself testable and belongs on its own note instead — see "Extracting Worked Examples" below.
 - Keep `!back:` sufficient on its own; do not require `!related:` or `!extra:` to make the answer correct.
 
+### Embedding Illustrations
+
+When a note is inherently visual (a geometric interpretation, a curve, a spatial construction), embed a compiled Asymptote illustration using standard Markdown image syntax, with descriptive alt text — not just the concept name — describing what the diagram shows:
+
+```text
+![The Cross Product a x b, perpendicular to the plane spanned by a and b, whose magnitude equals the area of the parallelogram they span](img/cross_product.svg)
+```
+
+- The path is `img/<name>.svg` (or `.png` for raster-only 3D scenes), relative to the `.note` file, matching the `.asy` source's compiled output — see the `generate-illustrations` skill for authoring and compiling the source itself.
+- Place the image inline within `!back:`, normally as its own paragraph after the prose it illustrates (after any bullet list, if the answer is chunked).
+- The same compiled image may be referenced from more than one note when multiple notes describe the same underlying picture (e.g. a general concept note and a later recognition note over the same construction) — this is standard practice in this repository, not duplication to avoid.
+
 ### Editing Rules
 
 - Preserve existing `!id:` values exactly.

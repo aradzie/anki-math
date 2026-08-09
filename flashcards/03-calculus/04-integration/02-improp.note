@@ -7,7 +7,7 @@
 !back:
 \[ \int_a^\infty f(x)\, dx = \lim_{R \to \infty} \int_a^R f(x)\, dx, \]
 provided the limit exists (as a finite number). The case \( \int_{-\infty}^b f(x)\, dx = \lim_{R\to -\infty} \int_R^b f(x)\, dx \) is defined symmetrically.
-!extra: ![Type I: area under y = 1/x^2 from a to R, as R → ∞](improper_type1.svg)
+!extra: ![Type I: area under y = 1/x^2 from a to R, as R → ∞](img/improper_type1.svg)
 ~~~
 
 !id: biZ5aT6csg
@@ -23,7 +23,7 @@ provided **both** improper integrals on the right converge independently. The va
 !back:
 \[ \int_a^b f(x)\, dx = \lim_{\varepsilon \to 0^+} \int_{a+\varepsilon}^b f(x)\, dx, \]
 provided the limit exists. The symmetric definition applies when the singularity is at \( b \).
-!extra: ![Type II: area under y = 1/√x from a+ε to b, as ε → 0⁺](improper_type2.svg)
+!extra: ![Type II: area under y = 1/√x from a+ε to b, as ε → 0⁺](img/improper_type2.svg)
 ~~~
 
 !id: nQvpIQsu42

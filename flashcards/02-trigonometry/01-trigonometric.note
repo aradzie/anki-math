@@ -295,7 +295,7 @@ Let \( \theta = \arcsin x \), so \( \theta \in \left[ -\frac{\pi}{2}, \frac{\pi}
 
 Mnemonic for \( x \in (0,1) \): in a right triangle with hypotenuse \( 1 \) and the angle \( \theta \) opposite the leg \( x \), the remaining leg is \( \sqrt{1-x^2} \) by the Pythagorean theorem, and \( \cos \theta \) is that leg over the hypotenuse.
 
-![Right triangle with hypotenuse 1, showing arcsin x and arccos x as complementary angles](inverse_trig_triangle_hyp1.svg)
+![Right triangle with hypotenuse 1, showing arcsin x and arccos x as complementary angles](img/inverse_trig_triangle_hyp1.svg)
 ~~~
 
 !id: q3T9zrPsB8
@@ -306,7 +306,7 @@ Let \( \theta = \arccos x \), so \( \theta \in [0, \pi] \) and \( \cos \theta = 
 
 Mnemonic for \( x \in (0,1) \): in a right triangle with hypotenuse \( 1 \) and the angle \( \theta \) adjacent to the leg \( x \), the remaining leg is \( \sqrt{1-x^2} \) by the Pythagorean theorem, and \( \sin \theta \) is that leg over the hypotenuse.
 
-![Right triangle with hypotenuse 1, showing arcsin x and arccos x as complementary angles](inverse_trig_triangle_hyp1.svg)
+![Right triangle with hypotenuse 1, showing arcsin x and arccos x as complementary angles](img/inverse_trig_triangle_hyp1.svg)
 ~~~
 
 !id: bi6W9Um33h
@@ -317,7 +317,7 @@ Let \( \theta = \arctan x \), so \( \theta \in \left( -\frac{\pi}{2}, \frac{\pi}
 
 Mnemonic: in a right triangle with adjacent leg \( 1 \) and opposite leg \( x \) (so \( \tan \theta = x \)), the hypotenuse is \( \sqrt{1+x^2} \) by the Pythagorean theorem, and \( \sin \theta \) is the opposite leg over the hypotenuse.
 
-![Right triangle with adjacent leg 1 and opposite leg x, showing arctan x](inverse_trig_triangle_adj1.svg)
+![Right triangle with adjacent leg 1 and opposite leg x, showing arctan x](img/inverse_trig_triangle_adj1.svg)
 ~~~
 
 !id: tbhxUKkFyN
@@ -328,5 +328,5 @@ Let \( \theta = \arctan x \), so \( \theta \in \left( -\frac{\pi}{2}, \frac{\pi}
 
 Mnemonic: in a right triangle with adjacent leg \( 1 \) and opposite leg \( x \) (so \( \tan \theta = x \)), the hypotenuse is \( \sqrt{1+x^2} \) by the Pythagorean theorem, and \( \cos \theta \) is the adjacent leg over the hypotenuse.
 
-![Right triangle with adjacent leg 1 and opposite leg x, showing arctan x](inverse_trig_triangle_adj1.svg)
+![Right triangle with adjacent leg 1 and opposite leg x, showing arctan x](img/inverse_trig_triangle_adj1.svg)
 ~~~
