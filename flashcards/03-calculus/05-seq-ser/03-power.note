@@ -1,0 +1,79 @@
+!type: Basic Math
+!deck: Math
+!tags: Math Calculus Sequence Series
+
+!id: iZKaAkl7j7
+!front: What is a power series centered at the origin?
+!back:
+The power series centered at \( x = 0 \) is an infinite series of the following form
+
+\[ \sum_{n=0}^{\infty} c_n x^n = c_0 + c_1 x + c_2 x^2 + \ldots \]
+
+where \( x \) is a variable and the coefficients \( c_n \) are constants.
+~~~
+
+!id: xodtE9tMWN
+!front: What is a power series centered at \( x = a \)?
+!back:
+The power series centered at \( x = a \) is an infinite series of the following form
+
+\[ \sum_{n=0}^{\infty} c_n (x - a)^n = c_0 + c_1 (x - a) + c_2 (x - a)^2 + \ldots \]
+
+where \( x \) is a variable, \( a \) is the center, and the coefficients \( c_n \) are constants.
+!extra: Setting \( a = 0 \) recovers the power series centered at the origin, \( \sum_{n=0}^{\infty} c_n x^n \).
+~~~
+
+!id: WfQmQRcAco
+!front: What is the center of a power series?
+!back: The center of the power series \( \sum_{n=0}^{\infty} c_n (x - a)^n \) is the point \( x = a \), the value around which the series is expanded.
+~~~
+
+!id: Cnb4a7bUzq
+!front: What are the convergence properties of a power series?
+!back:
+Consider the power series \( \sum_{n=0}^{\infty} c_n (x - a)^n \). The series satisfies exactly one of the following properties:
+
+- The series converges at \( x=a \) and diverges for all \( x \ne a \).
+- The series converges for all real numbers \( x \).
+- There exists a real number \( R>0 \) such that the series converges if \( |x - a| < R \) and diverges if \( |x - a| > R \). At the values \( x \) where \( |x - a| = R \), the series may converge or diverge.
+
+![Trichotomy of power series convergence](img/convergence_trichotomy.svg)
+~~~
+
+!id: GKZQhx4Oa6
+!front: What is the radius of convergence of a power series?
+!back:
+The radius of convergence \( R \) of \( \sum_{n=0}^{\infty} c_n (x - a)^n \) is the extended real number \( 0 \le R \le \infty \) such that the series converges if \( |x - a| < R \) and diverges if \( |x - a| > R \), matching the convergence trichotomy: \( R = 0 \) if the series converges only at \( x = a \), and \( R = \infty \) if it converges for all \( x \).
+
+![Radius of convergence R: the series converges on |x-a|<R and diverges on |x-a|>R, with the endpoints x=a-R and x=a+R left unmarked since R alone does not determine convergence there](img/radius_of_convergence.svg)
+!extra: Behavior at the endpoints \( |x - a| = R \) is not determined by \( R \) alone and must be checked case by case.
+~~~
+
+!id: SO2d1N1a3N
+!front: How can the ratio test be used to find the radius of convergence of a power series?
+!back:
+Apply the ratio test to \( \sum_{n=0}^{\infty} c_n (x - a)^n \), treating \( x \) as fixed:
+
+\[ \lim_{n \to \infty} \left| \frac{c_{n+1} (x-a)^{n+1}}{c_n (x-a)^n} \right| = |x - a| \lim_{n \to \infty} \left| \frac{c_{n+1}}{c_n} \right|. \]
+
+If \( \ell = \lim_{n \to \infty} |c_{n+1}/c_n| \) exists, the series converges absolutely where \( |x-a|\, \ell < 1 \), giving \( R = 1/\ell \) (with \( R = \infty \) if \( \ell = 0 \), and \( R = 0 \) if \( \ell = \infty \)).
+~~~
+
+!id: kEhHkFaxM6
+!front: What is the interval of convergence of a power series?
+!back:
+The interval of convergence \( I \) of the power series \( \sum_{n=0}^{\infty} c_n (x - a)^n \) is the set of all real numbers \( x \) such that the series converges. This is precisely the domain of the power series.
+
+![Interval of convergence I: it always contains the open interval (a-R, a+R), while the endpoints x=a-R and x=a+R belong to I only if the series converges there](img/interval_of_convergence.svg)
+~~~
+
+!id: AS7ZBJJVWS
+!front: What is the difference between the radius and the interval of convergence of a power series?
+!back:
+For the power series \( \sum_{n=0}^{\infty} c_n (x - a)^n \) with radius of convergence \( R \):
+
+- The **radius of convergence** \( R \) is a single extended real number \( 0 \le R \le \infty \): the series converges for \( |x-a| < R \) and diverges for \( |x-a| > R \).
+- The **interval of convergence** \( I \) is the actual set of \( x \) where the series converges. It always contains the open interval \( (a-R, a+R) \), and may additionally include one or both endpoints \( x = a - R \) and \( x = a + R \), depending on whether the series converges there.
+
+So \( R \) alone does not determine \( I \) exactly — the endpoints must be checked separately.
+~~~

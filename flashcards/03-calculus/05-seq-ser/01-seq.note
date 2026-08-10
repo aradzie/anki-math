@@ -1,0 +1,140 @@
+!type: Basic Math
+!deck: Math
+!tags: Math Calculus Sequence Series
+
+!id: zqsfDJERMh
+!front: What is an infinite sequence?
+!back:
+An infinite sequence is an ordered and indexed list of numbers of the form
+
+\[ a_1, a_2, a_3, \ldots, a_n, \ldots \]
+
+denoted as
+
+\[ \{ a_n \}_{n=1}^{\infty} \]
+
+or simply
+
+\[ \{ a_n \}. \]
+
+Each number \( a_n \) is a term of the sequence.
+
+The subscript \( n \) is the index variable of the sequence.
+~~~
+
+!id: SNHL5SpK0l
+!front: How can an explicit formula define a sequence?
+!back: An **explicit formula** defines the \( n \)-th term directly in terms of \( n \), \( a_n = f(n) \), so any term can be computed directly without reference to any other term.
+~~~
+
+!id: cCgeLmxnnd
+!front: How can a recurrence relation define a sequence?
+!back:
+A **recurrence relation** is a rule that defines each term from previous terms in the sequence, \( a_n = f(a_{n-1}, a_{n-2}, \ldots) \).
+
+The rule alone does not pin down a unique sequence: it must be paired with enough initial terms (e.g. \( a_1 \), or \( a_1, a_2 \) for a rule depending on two prior terms) to determine every subsequent term.
+~~~
+
+!id: 3zXOAOFJY3
+!front: What is the limit of a sequence?
+!back:
+A sequence \( \{ a_n \} \) converges to a real number \( L \) if for all \( \epsilon > 0 \), there exists an integer \( N \) such that \( |a_n - L| < \epsilon \) for all \( n \ge N \). The number \( L \) is the limit of the sequence and we write
+
+\[ \lim_{n \to \infty} a_n = L \text{ or } a_n \to L. \]
+
+In this case, we say the sequence \( \{a_n\} \) is a **convergent sequence**. If a sequence does not converge, it is a **divergent sequence**, and we say the limit does not exist.
+~~~
+
+!id: WicjJDU95F
+!front: What is the squeeze theorem for sequences?
+!back:
+Consider sequences \( \{a_n\} \), \( \{b_n\} \), and \( \{c_n\} \), and suppose:
+
+- there exists an integer \( N \) such that \( a_n \le b_n \le c_n \) for all \( n \ge N \)
+- there exists a real number \( L \) such that \( \lim_{n \to \infty} a_n = L = \lim_{n \to \infty} c_n \)
+
+then \( \{b_n\} \) converges and \( \lim_{n \to \infty} b_n = L \).
+~~~
+
+!id: GXpNFENZ6u
+!front: What does it mean for a sequence to be bounded above?
+!back: A sequence \( \{a_n\} \) is **bounded above** if there exists a real number \( M \) such that \( a_n \le M \) for all positive integers \( n \).
+~~~
+
+!id: 8ubSf80Uen
+!front: What does it mean for a sequence to be bounded below?
+!back: A sequence \( \{a_n\} \) is **bounded below** if there exists a real number \( M \) such that \( M \le a_n \) for all positive integers \( n \).
+~~~
+
+!id: HicMqehyKO
+!front: What does it mean for a sequence to be bounded?
+!back: A sequence \( \{a_n\} \) is **bounded** if it is bounded above and bounded below: there exist real numbers \( m, M \) such that \( m \le a_n \le M \) for all positive integers \( n \). If no such bound exists, the sequence is **unbounded**.
+~~~
+
+!id: ELeqH5jzit
+!front: What is the relationship between convergent and bounded sequences?
+!back: If a sequence \( \{a_n\} \) converges, then it is bounded.
+~~~
+
+!id: LHb3sG7zVK
+!front: What is a Cauchy sequence?
+!back: A sequence \( \{a_n\} \) is a **Cauchy sequence** if for all \( \epsilon > 0 \), there exists an integer \( N \) such that \( |a_n - a_m| < \epsilon \) for all \( n, m \ge N \).
+!extra: ![Cauchy sequence](img/cauchy_sequence.svg)
+~~~
+
+!id: kaQVrrcwh0
+!front: How does the Cauchy condition differ from the definition of convergence of a sequence, and why is this useful?
+!back:
+Convergence to \( L \) says that eventually every term is close to the specific number \( L \):
+\[ |a_n - L| < \epsilon. \]
+
+The Cauchy condition says that eventually all terms are close to each other:
+\[ |a_n - a_m| < \epsilon. \]
+
+So convergence compares terms to a known candidate limit, while the Cauchy condition compares terms only to each other. This makes the Cauchy condition useful for establishing convergence without first knowing or guessing the limit \( L \).
+~~~
+
+!id: M7CUMgDWC2
+!front: What is the relationship between Cauchy sequences and convergent sequences of real numbers?
+!back: A sequence \( \{a_n\} \) of real numbers converges if and only if it is a Cauchy sequence.
+!extra: The forward direction (convergent implies Cauchy) holds for sequences in any metric space. The converse (Cauchy implies convergent) relies on the **completeness** of \( \mathbb{R} \): every Cauchy sequence of real numbers converges to a real number.
+~~~
+
+!id: w0eJlHZHGF
+!front: Construct a Cauchy sequence in \( \mathbb{Q} \) that does not converge in \( \mathbb{Q} \).
+!back: Let \( a_n \) be \( \sqrt{2} \) truncated to \( n \) decimal digits, e.g. \( a_1 = 1.4 \), \( a_2 = 1.41 \), \( a_3 = 1.414, \ldots \). Each \( a_n \in \mathbb{Q} \), and for \( m > n \), \( |a_n - a_m| < 10^{-n} \), so \( \{a_n\} \) is Cauchy. But \( a_n \to \sqrt{2} \notin \mathbb{Q} \), so the sequence has no limit in \( \mathbb{Q} \).
+!extra: This shows completeness is a genuine property of \( \mathbb{R} \), not automatic for every ordered field: \( \mathbb{Q} \) is not complete.
+~~~
+
+!id: JthlytFu3v
+!front: What does it mean for a sequence to be increasing?
+!back: A sequence \( \{a_n\} \) is **increasing** if \( a_n \le a_{n+1} \) for all \( n \).
+~~~
+
+!id: oBaAHMRbLC
+!front: What does it mean for a sequence to be decreasing?
+!back: A sequence \( \{a_n\} \) is **decreasing** if \( a_n \ge a_{n+1} \) for all \( n \).
+~~~
+
+!id: DAvsabnA9B
+!front: What does it mean for a sequence to be monotone?
+!back: A sequence \( \{a_n\} \) is **monotone** if it is increasing (\( a_n \le a_{n+1} \) for all \( n \)) or decreasing (\( a_n \ge a_{n+1} \) for all \( n \)).
+~~~
+
+!id: etSBkWIP7q
+!front: What does it mean for a sequence to be eventually monotone?
+!back: A sequence \( \{a_n\} \) is **eventually monotone** if there exists a positive integer \( n_0 \) such that \( \{a_n\} \) is monotone for all \( n \ge n_0 \) — i.e. increasing for all \( n \ge n_0 \) or decreasing for all \( n \ge n_0 \), even if this fails for \( n < n_0 \).
+~~~
+
+!id: lCZ49YrM8Y
+!front: What is the monotone convergence theorem for sequences?
+!back:
+If a sequence \( \{a_n\} \) satisfies:
+
+- \( \{a_n\} \) is bounded
+- there exists a positive integer \( n_0 \) such that \( \{a_n\} \) is monotone for all \( n \ge n_0 \)
+
+then \( \{a_n\} \) converges.
+
+![An increasing sequence bounded above by M climbing toward its limit L <= M, the least upper bound it can never exceed](img/monotone_convergence.svg)
+~~~

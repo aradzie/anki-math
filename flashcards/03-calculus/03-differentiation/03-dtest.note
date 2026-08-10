@@ -76,19 +76,19 @@
 !id: KuycefiBQ8
 !front: In the second derivative test, what does \( f''(c) > 0 \) imply when \( f'(c) = 0 \)?
 !back: \( f \) has a strict local minimum at \( c \).
-!extra: ![Second derivative test: f''(c) > 0 gives a local minimum, f''(c) < 0 gives a local maximum](second_derivative_test.svg)
+!extra: ![Second derivative test: f''(c) > 0 gives a local minimum, f''(c) < 0 gives a local maximum](img/second_derivative_test.svg)
 ~~~
 
 !id: lK3nBoG7DS
 !front: In the second derivative test, what does \( f''(c) < 0 \) imply when \( f'(c) = 0 \)?
 !back: \( f \) has a strict local maximum at \( c \).
-!extra: ![Second derivative test: f''(c) > 0 gives a local minimum, f''(c) < 0 gives a local maximum](second_derivative_test.svg)
+!extra: ![Second derivative test: f''(c) > 0 gives a local minimum, f''(c) < 0 gives a local maximum](img/second_derivative_test.svg)
 ~~~
 
 !id: gndbllwJqo
 !front: In the second derivative test, what does \( f''(c) = 0 \) imply?
 !back: The test is inconclusive: \( c \) may be a local minimum, a local maximum, or neither.
-!extra: ![f''(c) = 0 is inconclusive: x^4 (min), -x^4 (max), and x^3 (not an extremum) at c = 0](dtest_inconclusive.svg)
+!extra: ![f''(c) = 0 is inconclusive: x^4 (min), -x^4 (max), and x^3 (not an extremum) at c = 0](img/dtest_inconclusive.svg)
 ~~~
 
 !id: v6Xvb6755z
@@ -104,31 +104,31 @@
 !id: pCV9LoXhmk
 !front: Why does \( f''(c) > 0 \), together with \( f'(c) = 0 \), indicate a local minimum?
 !back: \( f''(c) > 0 \) makes \( f' \) strictly increasing through \( c \). Combined with \( f'(c) = 0 \), \( f' \) is negative just before \( c \) and positive just after, so the first derivative test gives a strict local minimum.
-!extra: ![Second derivative test: f''(c) > 0 gives a local minimum, f''(c) < 0 gives a local maximum](second_derivative_test.svg)
+!extra: ![Second derivative test: f''(c) > 0 gives a local minimum, f''(c) < 0 gives a local maximum](img/second_derivative_test.svg)
 ~~~
 
 !id: bQYfeBqPRF
 !front: Why does \( f''(c) < 0 \), together with \( f'(c) = 0 \), indicate a local maximum?
 !back: \( f''(c) < 0 \) makes \( f' \) strictly decreasing through \( c \). Combined with \( f'(c) = 0 \), \( f' \) is positive just before \( c \) and negative just after, so the first derivative test gives a strict local maximum.
-!extra: ![Second derivative test: f''(c) > 0 gives a local minimum, f''(c) < 0 gives a local maximum](second_derivative_test.svg)
+!extra: ![Second derivative test: f''(c) > 0 gives a local minimum, f''(c) < 0 gives a local maximum](img/second_derivative_test.svg)
 ~~~
 
 !id: PE69rMlBNy
 !front: Give an example where \( f''(c) = 0 \) but \( c \) is a local minimum.
 !back: \( f(x) = x^4 \) at \( c = 0 \): \( f'(0) = 0 \), \( f''(0) = 0 \), and \( f(x) \ge f(0) \) on a neighborhood of \( 0 \).
-!extra: ![f''(c) = 0 is inconclusive: x^4 (min), -x^4 (max), and x^3 (not an extremum) at c = 0](dtest_inconclusive.svg)
+!extra: ![f''(c) = 0 is inconclusive: x^4 (min), -x^4 (max), and x^3 (not an extremum) at c = 0](img/dtest_inconclusive.svg)
 ~~~
 
 !id: 5KjIeNMbeS
 !front: Give an example where \( f''(c) = 0 \) but \( c \) is a local maximum.
 !back: \( f(x) = -x^4 \) at \( c = 0 \): \( f'(0) = 0 \), \( f''(0) = 0 \), and \( f(x) \le f(0) \) on a neighborhood of \( 0 \).
-!extra: ![f''(c) = 0 is inconclusive: x^4 (min), -x^4 (max), and x^3 (not an extremum) at c = 0](dtest_inconclusive.svg)
+!extra: ![f''(c) = 0 is inconclusive: x^4 (min), -x^4 (max), and x^3 (not an extremum) at c = 0](img/dtest_inconclusive.svg)
 ~~~
 
 !id: Iw4CpH3lwc
 !front: Give an example where \( f''(c) = 0 \) and \( c \) is not a local extremum.
 !back: \( f(x) = x^3 \) at \( c = 0 \): \( f'(0) = 0 \), \( f''(0) = 0 \), but \( f \) is strictly increasing through \( 0 \).
-!extra: ![f''(c) = 0 is inconclusive: x^4 (min), -x^4 (max), and x^3 (not an extremum) at c = 0](dtest_inconclusive.svg)
+!extra: ![f''(c) = 0 is inconclusive: x^4 (min), -x^4 (max), and x^3 (not an extremum) at c = 0](img/dtest_inconclusive.svg)
 ~~~
 
 !id: kYHL8gErG0
@@ -144,13 +144,13 @@
 !id: 0dc9nxVRUY
 !front: Give a geometric interpretation of a function being concave up on an interval.
 !back: On that interval, the graph of \( f \) lies above (or on) every one of its tangent lines.
-!extra: ![Concave down vs. concave up: the graph relative to its tangent lines](concavity.svg)
+!extra: ![Concave down vs. concave up: the graph relative to its tangent lines](img/concavity.svg)
 ~~~
 
 !id: TwPfydUnYy
 !front: Give a geometric interpretation of a function being concave down on an interval.
 !back: On that interval, the graph of \( f \) lies below (or on) every one of its tangent lines.
-!extra: ![Concave down vs. concave up: the graph relative to its tangent lines](concavity.svg)
+!extra: ![Concave down vs. concave up: the graph relative to its tangent lines](img/concavity.svg)
 ~~~
 
 !id: BdQFccaRgN
@@ -158,44 +158,44 @@
 !back:
 - \( f \) is concave up on an interval \( I \) exactly when \( f' \) is strictly increasing on \( I \).
 - \( f \) is concave down on an interval \( I \) exactly when \( f' \) is strictly decreasing on \( I \).
-!extra: ![Concave down vs. concave up: the graph relative to its tangent lines](concavity.svg)
+!extra: ![Concave down vs. concave up: the graph relative to its tangent lines](img/concavity.svg)
 ~~~
 
 !id: 1PWJif61Og
 !front: For \( f \) twice differentiable on an interval \( I \), what does \( f''(x) > 0 \) on \( I \) imply about concavity?
 !back: \( f \) is concave up on \( I \), since \( f'' > 0 \) on \( I \) means \( f' \) is strictly increasing on \( I \) (by the Mean Value Theorem applied to \( f' \)).
-!extra: ![Concave down vs. concave up: the graph relative to its tangent lines](concavity.svg)
+!extra: ![Concave down vs. concave up: the graph relative to its tangent lines](img/concavity.svg)
 ~~~
 
 !id: Z31QV1NBIZ
 !front: For \( f \) twice differentiable on an interval \( I \), what does \( f''(x) < 0 \) on \( I \) imply about concavity?
 !back: \( f \) is concave down on \( I \), since \( f'' < 0 \) on \( I \) means \( f' \) is strictly decreasing on \( I \) (by the Mean Value Theorem applied to \( f' \)).
-!extra: ![Concave down vs. concave up: the graph relative to its tangent lines](concavity.svg)
+!extra: ![Concave down vs. concave up: the graph relative to its tangent lines](img/concavity.svg)
 ~~~
 
 !id: Ef6m6NkEhu
 !front: What is an inflection point of \( f \)?
 !back: A point \( c \) at which \( f \) is continuous and the concavity of \( f \) reverses as \( x \) crosses \( c \): on a punctured neighborhood of \( c \), \( f \) is concave up on one side and concave down on the other.
-!extra: ![Inflection points of f(x) = sin(x) at x = k*pi: concavity alternates across each, with a diagonal (non-horizontal) tangent line at every crossing](inflection_point.svg)
+!extra: ![Inflection points of f(x) = sin(x) at x = k*pi: concavity alternates across each, with a diagonal (non-horizontal) tangent line at every crossing](img/inflection_point.svg)
 ~~~
 
 !id: 76QRIe0yYc
 !front: If \( f''(c) \) exists and \( c \) is an inflection point, what must be true of \( f''(c) \), and why?
 !back: \( f''(c) = 0 \). Since concavity reverses at \( c \), \( f' \) has a local extremum at \( c \).
-!extra: ![Inflection points of f(x) = sin(x) at x = k*pi, with f'(x) = cos(x) overlaid: f' has a local extremum exactly at each c_i, confirming f''(c) = 0](inflection_point.svg)
+!extra: ![Inflection points of f(x) = sin(x) at x = k*pi, with f'(x) = cos(x) overlaid: f' has a local extremum exactly at each c_i, confirming f''(c) = 0](img/inflection_point.svg)
 ~~~
 
 !id: bNYWru4qZW
 !front: Is \( f''(c) = 0 \) a necessary condition for \( c \) to be an inflection point, given that \( f''(c) \) exists?
 !back: Yes. If \( c \) is an inflection point, concavity reverses there, so \( f' \) has a local extremum at \( c \); since a differentiable function has a zero derivative at a local extremum, \( f''(c) = 0 \).
-!extra: ![Inflection points of f(x) = sin(x) at x = k*pi, with f'(x) = cos(x) overlaid: f' has a local extremum exactly at each c_i, confirming f''(c) = 0](inflection_point.svg)
+!extra: ![Inflection points of f(x) = sin(x) at x = k*pi, with f'(x) = cos(x) overlaid: f' has a local extremum exactly at each c_i, confirming f''(c) = 0](img/inflection_point.svg)
 ~~~
 
 !id: Vi6Lt67A78
 !front: Is \( f''(c) = 0 \) a sufficient condition for \( c \) to be an inflection point?
 !back: No. \( f''(c) = 0 \) does not guarantee that concavity reverses at \( c \), so \( c \) need not be an inflection point.
 !related: For \( f(x) = x^4 \) at \( c = 0 \), \( f''(0) = 0 \) but \( f \) is concave up on all of \( \mathbb{R} \), so \( 0 \) is not an inflection point.
-!extra: ![f''(c) = 0 is inconclusive: x^4 (min), -x^4 (max), and x^3 (not an extremum) at c = 0](dtest_inconclusive.svg)
+!extra: ![f''(c) = 0 is inconclusive: x^4 (min), -x^4 (max), and x^3 (not an extremum) at c = 0](img/dtest_inconclusive.svg)
 ~~~
 
 !id: 3v9WbaSYKt
@@ -204,7 +204,7 @@
 \[ f(x) = x^4, \qquad f''(x) = 12x^2. \]
 Then \( f''(0) = 0 \), but \( f''(x) \ge 0 \) everywhere, so \( f \) is concave up on all of \( \mathbb{R} \) and the concavity never reverses at \( 0 \).
 !related: The same function already shows \( f''(c) = 0 \) does not determine whether \( c \) is a local extremum.
-!extra: ![f''(c) = 0 is inconclusive: x^4 (min), -x^4 (max), and x^3 (not an extremum) at c = 0](dtest_inconclusive.svg)
+!extra: ![f''(c) = 0 is inconclusive: x^4 (min), -x^4 (max), and x^3 (not an extremum) at c = 0](img/dtest_inconclusive.svg)
 ~~~
 
 !id: 7t0LUb3vlw
@@ -236,7 +236,7 @@ concavity reverses at \( 0 \), so \( 0 \) is an inflection point.
 Yes, infinitely many: at every \( x = k\pi \) for integer \( k \).
 \[ f''(x) = -\sin(x), \]
 which changes sign at each \( x = k\pi \) — negative on one side, positive on the other — so concavity reverses at every such point.
-!extra: ![Inflection points of f(x) = sin(x) at x = k*pi: concavity alternates across each, with a diagonal (non-horizontal) tangent line at every crossing](inflection_point.svg)
+!extra: ![Inflection points of f(x) = sin(x) at x = k*pi: concavity alternates across each, with a diagonal (non-horizontal) tangent line at every crossing](img/inflection_point.svg)
 ~~~
 
 !id: XCKBd5w3hb
@@ -244,5 +244,5 @@ which changes sign at each \( x = k\pi \) — negative on one side, positive on 
 !back:
 - If \( f'(c) = 0 \) and \( f''(c) > 0 \) (\( f \) is concave up on a neighborhood of \( c \)), then \( c \) is a local minimum.
 - If \( f'(c) = 0 \) and \( f''(c) < 0 \) (\( f \) is concave down on a neighborhood of \( c \)), then \( c \) is a local maximum.
-!extra: ![Second derivative test: f''(c) > 0 gives a local minimum, f''(c) < 0 gives a local maximum](second_derivative_test.svg)
+!extra: ![Second derivative test: f''(c) > 0 gives a local minimum, f''(c) < 0 gives a local maximum](img/second_derivative_test.svg)
 ~~~

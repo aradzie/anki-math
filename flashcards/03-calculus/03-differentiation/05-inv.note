@@ -2,6 +2,52 @@
 !deck: Math
 !tags: Math Calculus Differentiation
 
+!id: cbBs6Wmseb
+!front: Under what conditions does the inverse derivative formula apply at a point?
+!back:
+Let \( f \) be one-to-one and continuous on an interval \( I \).
+
+Let \( a \) be an interior point of \( I \).
+
+If:
+
+- \( f \) is differentiable at \( a \)
+- \( f'(a) \ne 0 \)
+
+then \( f^{-1} \) is differentiable at \( b=f(a) \), and
+\[
+    (f^{-1})'(b) = \frac{1}{f'(a)}.
+\]
+~~~
+
+!id: ZqkNQTeQm0
+!front: State the derivative formula for an inverse function using \( y=f(x) \).
+!back:
+If \( y=f(x) \), \( f \) is invertible, and \( f'(x) \ne 0 \), then
+\[
+    (f^{-1})'(y) = \frac{1}{f'(x)}.
+\]
+
+Equivalently,
+\[
+    \frac{dx}{dy} = \frac{1}{dy/dx}.
+\]
+!extra: The derivative of the inverse is evaluated at \( y=f(x) \), not at \( x \).
+~~~
+
+!id: 5n9CZz2uRC
+!front: How are the slopes of a differentiable function and its inverse related geometrically?
+!back:
+The graph of \( f^{-1} \) is the reflection of the graph of \( f \) across the line \( y=x \). Under this reflection, a tangent line of slope \( m \ne 0 \) becomes a tangent line of slope \( 1/m \).
+
+So if \( f'(a) \ne 0 \), then
+\[
+    (f^{-1})'(f(a)) = \frac{1}{f'(a)}.
+\]
+
+![Graph of f reflected across y=x to give the graph of f inverse, with tangent lines of reciprocal slope at the corresponding points (a,f(a)) and (f(a),a)](img/reflection_tangent_slopes.svg)
+~~~
+
 !id: meJCCut234
 !front: Prove that \( \frac{dx}{dy} \cdot \frac{dy}{dx} = 1 \)
 !back:

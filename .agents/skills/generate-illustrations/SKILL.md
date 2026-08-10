@@ -27,6 +27,12 @@ Illustrations are one of the compiled-artifact steps in this repository (alongsi
 2. Use plain `size(...)`, `draw`, `label`, `dot` calls. Use shared helpers from `common.asy` (`import common;`) where they fit.
 3. Name the file after the concept it illustrates, matching existing naming (snake_case, e.g. `unit_circle.asy`), and place it in the `img/` subdirectory beside the `.note` file it accompanies.
 
+### LaTeX labels
+
+`mathdefaults()` (in `common.asy`) loads `amsmath` via `texpreamble(...)`, so amsmath macros (`\text`, `\dfrac`, `\substack`, etc.) work in `label()` strings as long as the file calls `mathdefaults()` — which every current illustration does, directly or, for 3D scenes, via `import common3d;` (which itself imports `common`).
+
+If a file skips `mathdefaults()` entirely, amsmath macros fail there in a misleading way: Asymptote runs a separate pdflatex pass per label first to compute its metrics, and when an undefined macro makes that pass error, it leaves a stale intermediate `.pdf` behind without regenerating the `.tex` the next compile stage expects. The visible failure is one step removed from the real cause and looks like a filesystem/mount problem rather than a LaTeX syntax error — e.g. `! I can't find file '<name>_.tex'` followed by `shipout failed`, with no mention of the macro anywhere. If you ever hit this, the fix is to call `mathdefaults()` (or add `texpreamble("\usepackage{amsmath}");` directly) before any `label()` calls.
+
 ### SVG vs. PNG output
 
 By default an illustration compiles to a vector `.svg` (`asy -f svg -render=0`), which typesets labels as real vector glyphs and scales losslessly — this covers all 2D diagrams and simple 3D scenes (wireframes built from `draw`, `dot`, `label`, e.g. `import three;` with a plain `unitbox`).

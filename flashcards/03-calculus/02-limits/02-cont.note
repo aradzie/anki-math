@@ -81,7 +81,7 @@ Both one-sided limits:
 But either \( f(c) \) is undefined or \( f(c) \neq L \).
 
 It is called removable because defining (or redefining) \( f(c) = L \) makes \( f \) continuous at \( c \), without changing \( f \) anywhere else.
-!extra: Example: \( f(x) = \frac{x^2-1}{x-1} \) at \( x=1 \); the limit is \( 2 \), but \( f(1) \) is undefined.
+!extra: Example: \( f(x) = \frac{x^2-1}{x-1} \) at \( x=1 \); the limit is \( 2 \), but \( f(1) \) is undefined. ![The line f(x) = (x^2-1)/(x-1), which simplifies to x+1, with an open circle marking the hole at (1, 2): the two-sided limit exists and equals 2, but f(1) is undefined](img/removable_discontinuity.svg)
 ~~~
 
 !id: FRG4k16Qle
@@ -92,7 +92,7 @@ Both one-sided limits:
 - exist
 - are finite
 - disagree: \( \lim_{x \to c^-} f(x) \neq \lim_{x \to c^+} f(x) \)
-!extra: Unlike a removable discontinuity, no single choice of \( f(c) \) can make \( f \) continuous at \( c \) — the left and right values genuinely disagree.
+!extra: Unlike a removable discontinuity, no single choice of \( f(c) \) can make \( f \) continuous at \( c \) — the left and right values genuinely disagree. ![Two curve arms meeting at x = c, with an open circle at each one-sided limit value: the left arm ends at L-minus and the right arm begins at L-plus, a strictly higher value, showing the two one-sided limits disagree](img/jump_discontinuity.svg)
 ~~~
 
 !id: sYzobmQo2P
@@ -112,31 +112,13 @@ At least one of \( \lim_{x \to c^-} f(x) \) or \( \lim_{x \to c^+} f(x) \) fails
 - \( \lim_{x \to 0^+} f(x) = +\infty \)
 
 Neither one-sided limit is a finite number, so no value assigned to \( f(0) \) could make \( f \) continuous there.
-!extra: This case is sometimes singled out as an **infinite discontinuity**, a special case of an essential discontinuity where the one-sided limit(s) are infinite rather than simply nonexistent.
+!extra: This case is sometimes singled out as an **infinite discontinuity**, a special case of an essential discontinuity where the one-sided limit(s) are infinite rather than simply nonexistent. ![The graph of f(x) = 1/x with a vertical asymptote at x = 0: the right branch climbs to +infinity and the left branch dives to -infinity as x approaches 0](img/infinite_discontinuity.svg)
 ~~~
 
 !id: SUWcHWUEHj
 !front: Give an example of an essential discontinuity caused by oscillation rather than by an infinite limit, and explain why.
 !back: \( f(x) = \sin(1/x) \) at \( x = 0 \): as \( x \to 0 \), \( 1/x \) grows without bound, so \( \sin(1/x) \) oscillates through every value in \( [-1,1] \) infinitely often. Neither one-sided limit exists, since \( f(x) \) never settles near a single value.
-!extra: This is called an **oscillating discontinuity**, a subtype of essential discontinuity.
-~~~
-
-!id: xqggw15jOh
-!front: Why does differentiability at \( c \) imply continuity at \( c \)?
-!back:
-For \( x \neq c \) near \( c \),
-\[ f(x) - f(c) = \frac{f(x)-f(c)}{x-c} \cdot (x-c). \]
-If \( f'(c) \) exists, taking \( x \to c \) gives
-\[ \lim_{x \to c} \big(f(x)-f(c)\big) = f'(c) \cdot 0 = 0, \]
-so \( \lim_{x \to c} f(x) = f(c) \), which is exactly continuity at \( c \).
-~~~
-
-!id: fsU0X5W0dG
-!front: Construct a counterexample showing continuity at a point does not imply differentiability there.
-!back:
-\( f(x) = |x| \) at \( c = 0 \): it is continuous since \( \lim_{x \to 0} |x| = 0 = f(0) \). But
-\[ \lim_{h \to 0^-} \frac{|h|-0}{h} = -1, \qquad \lim_{h \to 0^+} \frac{|h|-0}{h} = 1, \]
-so the one-sided derivatives disagree and \( f'(0) \) does not exist.
+!extra: This is called an **oscillating discontinuity**, a subtype of essential discontinuity. ![The graph of f(x) = sin(1/x) oscillating with ever-increasing frequency as x approaches 0 from the right, bounded within the band between y = 1 and y = -1](img/oscillating_discontinuity.svg)
 ~~~
 
 !id: HafZTETOS6
@@ -144,6 +126,7 @@ so the one-sided derivatives disagree and \( f'(0) \) does not exist.
 !back:
 \( f \) is continuous at \( c \) if for every \( \varepsilon>0 \) there exists \( \delta>0 \) such that for all \( x \) in the domain of \( f \),
 \[ |x-c|<\delta \implies |f(x)-f(c)|<\varepsilon. \]
+!extra: ![The band of half-width epsilon around f(c) and the neighborhood of half-width delta around c, showing the curve stays inside the band whenever x lies within delta of c](img/epsilon_delta_continuity.svg)
 ~~~
 
 !id: 2311aqAnmI
@@ -153,37 +136,6 @@ The two definitions express the same condition, at different levels of formality
 
 - The \( \varepsilon \)-\( \delta \) definition is the rigorous, formal way to express what it means for the limit to equal \( f(c) \).
 - The limit-based definition is the more intuitive statement of the same idea: the function value at \( c \) must equal the limit of the function as \( x \to c \).
-~~~
-
-!id: UAn7ziYq3m
-!front: Construct a counterexample showing the IVT's conclusion can fail if \( f \) is not continuous on \( [a,b] \).
-!back:
-Let, for some \( m \in (a,b) \),
-\[ f(x) = \begin{cases} -1 & a \le x < m \\ 1 & m \le x \le b \end{cases} \]
-
-- \( f(a) = -1 \) and \( f(b) = 1 \), so \( 0 \) lies between them.
-- \( f \) never takes the value \( 0 \) anywhere on \( [a,b] \).
-
-The jump discontinuity at \( m \) lets \( f \) skip over \( 0 \) entirely.
-
-![IVT counterexample](ivt_counterexample.svg)
-!extra: Compare with the Intermediate Value Theorem, which requires continuity on \( [a,b] \) as a hypothesis.
-~~~
-
-!id: jBHWk5ISDd
-!front: Construct a counterexample showing the EVT's conclusion can fail if \( f \) is not continuous on \( [a,b] \).
-!back:
-Let
-\[ f(x) = \begin{cases} x & a \le x < b \\ a & x = b \end{cases} \]
-on the closed bounded interval \( [a,b] \).
-
-- As \( x \to b^- \), \( f(x) \) gets arbitrarily close to \( b \).
-- \( f \) never equals \( b \), since \( f(b) = a \neq b \).
-
-So \( f \) has no maximum on \( [a,b] \), even though the interval is closed and bounded.
-
-![EVT counterexample](evt_counterexample.svg)
-!extra: Compare with the Extreme Value Theorem, which requires continuity on \( [a,b] \) as a hypothesis.
 ~~~
 
 !id: ClxV6ZNLSX

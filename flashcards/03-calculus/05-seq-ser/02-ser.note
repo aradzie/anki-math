@@ -2,137 +2,6 @@
 !deck: Math
 !tags: Math Calculus Sequence Series
 
-!id: zqsfDJERMh
-!front: What is an infinite sequence?
-!back:
-An infinite sequence is an ordered and indexed list of numbers of the form
-
-\[ a_1, a_2, a_3, \ldots, a_n, \ldots \]
-
-denoted as
-
-\[ \{ a_n \}_{n=1}^{\infty} \]
-
-or simply
-
-\[ \{ a_n \}. \]
-
-Each number \( a_n \) is a term of the sequence.
-
-The subscript \( n \) is the index variable of the sequence.
-~~~
-
-!id: SNHL5SpK0l
-!front: What are the different ways to define a sequence?
-!back:
-An infinite sequence can be defined in various ways:
-
-- By listing terms \( \{ 2, 4, 6, 8, \ldots \} \).
-- By an explicit formula that defines the \( n \)-th term directly in terms of \( n \), \( a_n = f(n) \).
-- By a recurrence relation, a rule that defines a term based on previous terms in the sequence, \( a_n = f(a_{n-1}, a_{n-2}, \ldots) \).
-~~~
-
-!id: 3zXOAOFJY3
-!front: What is the limit of a sequence?
-!back:
-A sequence \( \{ a_n \} \) converges to a real number \( L \) if for all \( \epsilon > 0 \), there exists an integer \( N \) such that \( |a_n - L| < \epsilon \) if \( n \ge N \). The number \( L \) is the limit of the sequence and we write
-
-\[ \lim_{n \to \infty} a_n = L \text{ or } a_n \to L. \]
-
-In this case, we say the sequence \( \{a_n\} \) is a **convergent sequence**. If a sequence does not converge, it is a **divergent sequence**, and we say the limit does not exist.
-~~~
-
-!id: WicjJDU95F
-!front: What is the squeeze theorem for sequences?
-!back:
-Consider sequences \( \{a_n\} \), \( \{b_n\} \), and \( \{c_n\} \), and suppose:
-
-- there exists an integer \( N \) such that \( a_n \le b_n \le c_n \) for all \( n \ge N \)
-- there exists a real number \( L \) such that \( \lim_{n \to \infty} a_n = L = \lim_{n \to \infty} c_n \)
-
-then \( \{b_n\} \) converges and \( \lim_{n \to \infty} b_n = L \).
-~~~
-
-!id: GXpNFENZ6u
-!front: What is a bounded sequence?
-!back:
-A sequence \( \{a_n\} \) is **bounded above** if there exists a real number \( M \) such that
-
-\[ a_n \le M \]
-
-for all positive integers \( n \).
-
-A sequence \( \{a_n\} \) is **bounded below** if there exists a real number \( M \) such that
-
-\[ M \le a_n \]
-
-for all positive integers \( n \).
-
-A sequence \( \{a_n\} \) is a **bounded sequence** if it is bounded above and bounded below.
-
-If a sequence is not bounded, it is an **unbounded sequence**.
-~~~
-
-!id: ELeqH5jzit
-!front: What is the relationship between convergent and bounded sequences?
-!back: If a sequence \( \{a_n\} \) converges, then it is bounded.
-~~~
-
-!id: LHb3sG7zVK
-!front: What is a Cauchy sequence?
-!back: A sequence \( \{a_n\} \) is a **Cauchy sequence** if for all \( \epsilon > 0 \), there exists an integer \( N \) such that \( |a_n - a_m| < \epsilon \) for all \( n, m \ge N \).
-!extra: ![Cauchy sequence](cauchy_sequence.svg)
-~~~
-
-!id: kaQVrrcwh0
-!front: How does the Cauchy condition differ from the definition of convergence of a sequence, and why is this useful?
-!back:
-Convergence to \( L \) says that eventually every term is close to the specific number \( L \):
-\[ |a_n - L| < \varepsilon. \]
-
-The Cauchy condition says that eventually all terms are close to each other:
-\[ |a_n - a_m| < \varepsilon. \]
-
-So convergence compares terms to a known candidate limit, while the Cauchy condition compares terms only to each other. This makes the Cauchy condition useful for establishing convergence without first knowing or guessing the limit \( L \).
-~~~
-
-!id: M7CUMgDWC2
-!front: What is the relationship between Cauchy sequences and convergent sequences of real numbers?
-!back: A sequence \( \{a_n\} \) of real numbers converges if and only if it is a Cauchy sequence.
-!extra: The forward direction (convergent implies Cauchy) holds for sequences in any metric space. The converse (Cauchy implies convergent) relies on the **completeness** of \( \mathbb{R} \): every Cauchy sequence of real numbers converges to a real number.
-~~~
-
-!id: w0eJlHZHGF
-!front: Construct a Cauchy sequence in \( \mathbb{Q} \) that does not converge in \( \mathbb{Q} \).
-!back: Let \( a_n \) be \( \sqrt{2} \) truncated to \( n \) decimal digits, e.g. \( a_1 = 1.4 \), \( a_2 = 1.41 \), \( a_3 = 1.414, \ldots \). Each \( a_n \in \mathbb{Q} \), and for \( m > n \), \( |a_n - a_m| < 10^{-n} \), so \( \{a_n\} \) is Cauchy. But \( a_n \to \sqrt{2} \notin \mathbb{Q} \), so the sequence has no limit in \( \mathbb{Q} \).
-!extra: This shows completeness is a genuine property of \( \mathbb{R} \), not automatic for every ordered field: \( \mathbb{Q} \) is not complete.
-~~~
-
-!id: JthlytFu3v
-!front: What is a monotone sequence?
-!back:
-A sequence \( \{a_n\} \) is **increasing** for all \( n \ge n_0 \) if
-
-\[ a_n \le a_{n+1} \text{ for all } n \ge n_0. \]
-
-A sequence \( \{a_n\} \) is **decreasing** for all \( n \ge n_0 \) if
-
-\[ a_n \ge a_{n+1} \text{ for all } n \ge n_0. \]
-
-A sequence \( \{a_n\} \) is a **monotone sequence** for all \( n \ge n_0 \) if it is increasing for all \( n \ge n_0 \) or decreasing for all \( n \ge n_0 \).
-~~~
-
-!id: lCZ49YrM8Y
-!front: What is the monotone convergence theorem for sequences?
-!back:
-The monotone convergence theorem states that if a sequence \( \{a_n\} \) satisfies:
-
-- \( \{a_n\} \) is bounded
-- there exists a positive integer \( n_0 \) such that \( \{a_n\} \) is monotone for all \( n \ge n_0 \)
-
-then \( \{a_n\} \) converges.
-~~~
-
 !id: lVOYHPRS4t
 !front: What is an infinite series?
 !back:
@@ -268,7 +137,7 @@ Suppose \( \sum_{n=1}^{\infty} a_n \) is a series with positive terms \( a_n \).
 - \( f(n) = a_n \) for all integers \( n \ge N \).
 
 Then \( \sum_{n=1}^{\infty} a_n \) and \( \int_{N}^{\infty} f(x) \, dx \) both converge or both diverge.
-!extra: ![Integral test](integral_test.svg)
+!extra: ![Integral test](img/integral_test.svg)
 ~~~
 
 !id: 4QNZwdR4ev
@@ -279,7 +148,7 @@ Then \( \sum_{n=1}^{\infty} a_n \) and \( \int_{N}^{\infty} f(x) \, dx \) both c
 !id: RBBZTjh1Rm
 !front: For a continuous, decreasing function \( f \), how does \( f(n) \) compare to \( \int_{n-1}^{n} f(x)\,dx \) and \( \int_{n}^{n+1} f(x)\,dx \)?
 !back: \[ \int_{n}^{n+1} f(x)\,dx \;\le\; f(n) \;\le\; \int_{n-1}^{n} f(x)\,dx. \]
-!extra: ![Decreasing function integral sandwich](decreasing_function_sandwich.svg)
+!extra: ![Decreasing function integral sandwich](img/decreasing_function_sandwich.svg)
 ~~~
 
 !id: nBzR1fN1OP
@@ -314,7 +183,7 @@ Suppose \( \sum_{n=1}^{\infty} a_n \) satisfies the integral test hypotheses wit
 !extra:
 This bounds the error of approximating the series' sum by its \( N \)th partial sum without needing the exact value of the series.
 
-![Integral test remainder](integral_test_remainder.svg)
+![Integral test remainder](img/integral_test_remainder.svg)
 ~~~
 
 !id: rVhE7ELDdz
@@ -471,72 +340,4 @@ If the limit \( \rho \) exists, a conditionally convergent series always forces 
 
 So the root test is inconclusive on every conditionally convergent series where the limit exists.
 !extra: The alternating harmonic series \( \sum_{n=1}^{\infty} (-1)^{n+1}/n \) illustrates this: \( \sqrt[n]{|a_n|} = \sqrt[n]{1/n} \to 1 \), so \( \rho = 1 \) and the root test gives no information, even though the series converges conditionally.
-~~~
-
-!id: iZKaAkl7j7
-!front: What is a power series centered at the origin?
-!back:
-The power series centered at \( x = 0 \) is an infinite series of the following form
-
-\[ \sum_{n=0}^{\infty} c_n x^n = c_0 + c_1 x + c_2 x^2 + \ldots \]
-
-where \( x \) is a variable and the coefficients \( c_n \) are constants.
-~~~
-
-!id: xodtE9tMWN
-!front: What is a power series centered at \( x = a \)?
-!back:
-The power series centered at \( x = a \) is an infinite series of the following form
-
-\[ \sum_{n=0}^{\infty} c_n (x - a)^n = c_0 + c_1 (x - a) + c_2 (x - a)^2 + \ldots \]
-
-where \( x \) is a variable, \( a \) is the center, and the coefficients \( c_n \) are constants.
-!extra: Setting \( a = 0 \) recovers the power series centered at the origin, \( \sum_{n=0}^{\infty} c_n x^n \).
-~~~
-
-!id: WfQmQRcAco
-!front: What is the center of a power series?
-!back: The center of the power series \( \sum_{n=0}^{\infty} c_n (x - a)^n \) is the point \( x = a \), the value around which the series is expanded.
-~~~
-
-!id: Cnb4a7bUzq
-!front: What are the convergence properties of a power series?
-!back:
-Consider the power series \( \sum_{n=0}^{\infty} c_n (x - a)^n \). The series satisfies exactly one of the following properties:
-
-- The series converges at \( x=a \) and diverges for all \( x \ne a \).
-- The series converges for all real numbers \( x \).
-- There exists a real number \( R>0 \) such that the series converges if \( |x - a| < R \) and diverges if \( |x - a| > R \). At the values \( x \) where \( |x - a| = R \), the series may converge or diverge.
-~~~
-
-!id: GKZQhx4Oa6
-!front: What is the radius of convergence of a power series?
-!back: The radius of convergence \( R \) of \( \sum_{n=0}^{\infty} c_n (x - a)^n \) is the extended real number \( 0 \le R \le \infty \) such that the series converges if \( |x - a| < R \) and diverges if \( |x - a| > R \), matching the convergence trichotomy: \( R = 0 \) if the series converges only at \( x = a \), and \( R = \infty \) if it converges for all \( x \).
-!extra: Behavior at the endpoints \( |x - a| = R \) is not determined by \( R \) alone and must be checked case by case.
-~~~
-
-!id: SO2d1N1a3N
-!front: How can the ratio test be used to find the radius of convergence of a power series?
-!back:
-Apply the ratio test to \( \sum_{n=0}^{\infty} c_n (x - a)^n \), treating \( x \) as fixed:
-
-\[ \lim_{n \to \infty} \left| \frac{c_{n+1} (x-a)^{n+1}}{c_n (x-a)^n} \right| = |x - a| \lim_{n \to \infty} \left| \frac{c_{n+1}}{c_n} \right|. \]
-
-If \( \ell = \lim_{n \to \infty} |c_{n+1}/c_n| \) exists, the series converges absolutely where \( |x-a|\, \ell < 1 \), giving \( R = 1/\ell \) (with \( R = \infty \) if \( \ell = 0 \), and \( R = 0 \) if \( \ell = \infty \)).
-~~~
-
-!id: kEhHkFaxM6
-!front: What is the interval of convergence of a power series?
-!back: The interval of convergence \( I \) of the power series \( \sum_{n=0}^{\infty} c_n (x - a)^n \) is the set of all real numbers \( x \) such that the series converges. This is precisely the domain of the power series.
-~~~
-
-!id: AS7ZBJJVWS
-!front: What is the difference between the radius and the interval of convergence of a power series?
-!back:
-For the power series \( \sum_{n=0}^{\infty} c_n (x - a)^n \) with radius of convergence \( R \):
-
-- The **radius of convergence** \( R \) is a single extended real number \( 0 \le R \le \infty \): the series converges for \( |x-a| < R \) and diverges for \( |x-a| > R \).
-- The **interval of convergence** \( I \) is the actual set of \( x \) where the series converges. It always contains the open interval \( (a-R, a+R) \), and may additionally include one or both endpoints \( x = a - R \) and \( x = a + R \), depending on whether the series converges there.
-
-So \( R \) alone does not determine \( I \) exactly — the endpoints must be checked separately.
 ~~~

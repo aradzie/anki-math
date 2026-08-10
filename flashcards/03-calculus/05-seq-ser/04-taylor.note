@@ -1,0 +1,168 @@
+!type: Basic Math
+!deck: Math
+!tags: Math Calculus Taylor-Series
+
+!id: G2NmfdP4Ic
+!front: What is the \( n \)-th Taylor polynomial of \( f \) centered at \( a \)?
+!back:
+If \( f \) is \( n \)-times differentiable at \( a \), its \( n \)-th Taylor polynomial centered at \( a \) is
+\[
+    T_n(x) = \sum_{k=0}^{n} \frac{f^{(k)}(a)}{k!}(x-a)^k.
+\]
+It is the polynomial of degree at most \( n \) whose derivatives at \( a \) match those of \( f \) through order \( n \).
+~~~
+
+!id: 9KI553nDBA
+!front: What is the \( n \)-th Maclaurin polynomial of \( f \)?
+!back:
+The \( n \)-th Maclaurin polynomial is the Taylor polynomial centered at \( 0 \):
+\[
+    T_n(x) = \sum_{k=0}^{n} \frac{f^{(k)}(0)}{k!}x^k.
+\]
+So "Maclaurin" means the expansion point is \( a = 0 \).
+~~~
+
+!id: gHqQZYNvh5
+!front: Why does the Taylor polynomial \( T_n \) match the derivatives of \( f \) at its center \( a \)?
+!back:
+For \( 0 \le j \le n \), differentiating
+\[
+    T_n(x) = \sum_{k=0}^{n} \frac{f^{(k)}(a)}{k!}(x-a)^k
+\]
+\( j \) times and then setting \( x=a \) kills every term except the \( k=j \) term. That remaining term equals \( f^{(j)}(a) \), so
+\[
+    T_n^{(j)}(a)=f^{(j)}(a).
+\]
+~~~
+
+!id: g7jRPX2ABI
+!front: Compare a Taylor polynomial and a Taylor series.
+!back:
+- A Taylor polynomial is a finite polynomial \( \sum_{k=0}^{n} \frac{f^{(k)}(a)}{k!}(x-a)^k \), so it is always defined once the needed derivatives at \( a \) exist.
+- A Taylor series is the infinite series \( \sum_{k=0}^{\infty} \frac{f^{(k)}(a)}{k!}(x-a)^k \), so it raises separate questions of convergence and whether its sum equals \( f(x) \).
+~~~
+
+!id: FJyoiC4XFk
+!front: State Taylor's theorem with Lagrange remainder.
+!back:
+If \( f \) has \( n+1 \) continuous derivatives on an interval containing \( a \) and \( x \), then
+\[
+    f(x) = T_n(x) + R_n(x),
+\]
+where
+\[
+    T_n(x) = \sum_{k=0}^{n} \frac{f^{(k)}(a)}{k!}(x-a)^k
+\]
+and for some \( c \) between \( a \) and \( x \),
+\[
+    R_n(x) = \frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}.
+\]
+~~~
+
+!id: QVlID6zg9n
+!front: How does a bound on \( f^{(n+1)} \) control the Taylor remainder?
+!back:
+If \( f \) has \( n+1 \) continuous derivatives on an interval containing \( a \) and \( x \), and \( |f^{(n+1)}(t)| \le M \) for every \( t \) between \( a \) and \( x \), then Taylor's theorem with Lagrange remainder gives
+\[
+    |R_n(x)| \le \frac{M}{(n+1)!}|x-a|^{n+1}.
+\]
+This turns derivative control on the interval into an explicit error bound for the Taylor approximation.
+~~~
+
+!id: 1I8Lis26B6
+!front: When does the Taylor series of \( f \) centered at \( a \) actually represent \( f(x) \)?
+!back:
+Let \( R_n(x)=f(x)-T_n(x) \). The Taylor series represents \( f(x) \) exactly when the Taylor remainders tend to zero:
+\[
+    f(x)=\sum_{k=0}^{\infty}\frac{f^{(k)}(a)}{k!}(x-a)^k
+    \quad \Longleftrightarrow \quad
+    \lim_{n\to\infty} R_n(x)=0.
+\]
+Convergence of the formal Taylor series by itself is not enough; its sum must converge to \( f(x) \), which is precisely what the vanishing remainder checks.
+~~~
+
+!id: Vk2ANvNfyh
+!front: What does it mean for a real function \( f \) to be analytic at \( a \)?
+!back:
+A real function \( f \) is analytic at \( a \) if there is some \( r>0 \) and coefficients \( c_k \) such that
+\[
+    f(x)=\sum_{k=0}^{\infty} c_k(x-a)^k
+\]
+for every \( x \) with \( |x-a|<r \).
+
+If \( f \) is represented this way, then \( c_k=\dfrac{f^{(k)}(a)}{k!} \), so the power series is its Taylor series.
+~~~
+
+!deck: Math (Staging)::Analytic
+
+!id: eSiNNxX9ys
+!front: Compare polynomial, analytic, and smooth functions.
+!back:
+- A polynomial is a finite sum of powers, so it is analytic everywhere on \( \mathbb{R} \).
+- An analytic function is locally equal to a convergent power series, so it is automatically differentiable infinitely many times.
+- A smooth function is \( C^\infty \), meaning it has derivatives of every order, but it need not equal its Taylor series near a point.
+
+Thus
+\[
+    \text{polynomial} \subsetneq \text{analytic} \subsetneq C^\infty
+\]
+as classes of real functions.
+~~~
+
+!id: QFmNwDTcrC
+!front: What does it mean for a real function to be analytic on an open interval \( I \)?
+!back:
+A real function \( f \) is analytic on an open interval \( I \) if it is analytic at every point \( a\in I \). Equivalently, for each \( a\in I \), there is some radius \( r>0 \) such that
+\[
+    f(x)=\sum_{k=0}^{\infty}\frac{f^{(k)}(a)}{k!}(x-a)^k
+\]
+for all \( x\in I \) with \( |x-a|<r \).
+
+The radius may depend on the center \( a \).
+~~~
+
+!id: JjHl22UnHT
+!front: Why does smoothness not imply analyticity?
+!back:
+Smoothness only says that all derivatives \( f^{(k)}(a) \) exist. Analyticity requires a stronger local representation:
+\[
+    f(x)=\sum_{k=0}^{\infty}\frac{f^{(k)}(a)}{k!}(x-a)^k
+\]
+near \( a \).
+
+A smooth function can have a Taylor series that converges to the wrong function, even if all derivatives exist.
+~~~
+
+!id: wLgmRVA1Jd
+!front: Does the function \( f(x)=e^{-1/x^2} \) for \( x\ne 0 \), with \( f(0)=0 \), have an analytic Taylor representation at \( 0 \)?
+!back:
+No. This function is \( C^\infty \), and every derivative at \( 0 \) is \( 0 \). Therefore its Taylor series at \( 0 \) is the zero series:
+\[
+    \sum_{k=0}^{\infty}\frac{f^{(k)}(0)}{k!}x^k = 0.
+\]
+But \( f(x)=e^{-1/x^2}>0 \) for every \( x\ne 0 \), so the Taylor series does not equal \( f \) on any interval around \( 0 \).
+~~~
+
+!id: WuluTyB9Ny
+!front: What closure properties do real analytic functions satisfy?
+!back:
+If \( f \) and \( g \) are analytic at \( a \), then \( f+g \), \( fg \), and \( f' \) are analytic at \( a \). Also:
+
+- if \( g(a)\ne 0 \), then \( f/g \) is analytic at \( a \)
+- if \( h \) is analytic at \( f(a) \), then \( h\circ f \) is analytic at \( a \)
+- any local antiderivative of \( f \) is analytic near \( a \)
+
+These follow from the corresponding algebraic operations on convergent power series.
+~~~
+
+!id: OVMJqPmd4J
+!front: What is the identity principle for real analytic functions on an interval?
+!back:
+If \( f \) and \( g \) are real analytic on a connected open interval \( I \), and the set
+\[
+    \{x\in I : f(x)=g(x)\}
+\]
+has an accumulation point in \( I \), then \( f=g \) on all of \( I \).
+
+In particular, if two real analytic functions agree on any nonempty open subinterval of \( I \), they agree everywhere on \( I \).
+~~~

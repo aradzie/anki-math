@@ -6,6 +6,7 @@
 // Default pen setup used by nearly every illustration in this repository.
 void mathdefaults() {
     defaultpen(fontsize(10pt));
+    texpreamble("\usepackage{amsmath}");
 }
 
 // Default radius for point markers on number lines and graphs.
