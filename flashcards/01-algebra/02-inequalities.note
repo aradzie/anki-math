@@ -3,7 +3,7 @@
 !tags: Math Algebra Inequality
 
 !id: mkbLig7hww
-!front: Explain why if \( |x| \le c \), \( c \ge 0 \) is true then \( x \le c \) is true as well .
+!front: Explain why if \( |x| \le c \), \( c \ge 0 \) is true then \( x \le c \) is true as well.
 !back:
 If \( x \) is non-negative, then \( |x| = x \), so \( x \le c \).
 
@@ -11,7 +11,7 @@ If \( x \) is negative, then \( |x| = -x \), so \( -x \le c \) which implies \( 
 ~~~
 
 !id: OFMTtrXppe
-!front: Explain why if \( x \le c \), \( c \ge 0 \) is true then \( |x| \le c \) is not necessarily true as well .
+!front: Explain why if \( x \le c \), \( c \ge 0 \) is true then \( |x| \le c \) is not necessarily true as well.
 !back: Counterexample: Let \( x = -2 \), \( |x| = 2 \) and \( c = 1 \). Then \( -2 \le 1 \) is true, but \( 2 \not \le 1 \).
 ~~~
 

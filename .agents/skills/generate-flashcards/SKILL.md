@@ -349,9 +349,9 @@ Theorem note with chunked hypotheses:
 !deck: Math
 !tags: Math Calculus Differentiation
 
-!front: The definition of the Rolle's Theorem.
+!front: State Rolle's Theorem.
 !back:
-The Rolle's Theorem states that if a function \( f \) is:
+If a function \( f \) is:
 
 - continuous on \( [a,b] \)
 - differentiable on \( (a,b) \)

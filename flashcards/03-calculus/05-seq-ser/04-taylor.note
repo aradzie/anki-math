@@ -93,6 +93,20 @@ for every \( x \) with \( |x-a|<r \).
 If \( f \) is represented this way, then \( c_k=\dfrac{f^{(k)}(a)}{k!} \), so the power series is its Taylor series.
 ~~~
 
+!id: PHWnjJyBmD
+!front: Why is a power series analytic inside its radius of convergence?
+!back:
+If
+\[
+    f(x)=\sum_{k=0}^{\infty}c_k(x-a)^k
+\]
+has radius of convergence \( R>0 \), then it represents \( f \) on \( |x-a|<R \). For any \( b \) with \( |b-a|<R \), choose \( r>0 \) such that \( |b-a|+r<R \). On \( |x-b|<r \), one can re-expand the same function as a convergent power series in powers of \( x-b \).
+
+Thus \( f \) is analytic at every point \( b \) inside the interval of convergence.
+!extra:
+At the original center \( a \), repeated termwise differentiation gives \( f^{(k)}(a)=k!c_k \), so the representing power series is exactly the Taylor series of \( f \) at \( a \).
+~~~
+
 !deck: Math (Staging)::Analytic
 
 !id: eSiNNxX9ys

@@ -3,238 +3,167 @@
 !tags: Math Calculus Integration
 
 !id: lhcbdtYhhb
-!front: What is the definition of the improper integral \( \int_a^\infty f(x)\, dx \) (Type I, one infinite bound)?
+!front: State the definition of the improper integral \( \int_a^\infty f(x)\, dx \) (Type I, one infinite bound).
 !back:
-\[ \int_a^\infty f(x)\, dx = \lim_{R \to \infty} \int_a^R f(x)\, dx, \]
-provided the limit exists (as a finite number). The case \( \int_{-\infty}^b f(x)\, dx = \lim_{R\to -\infty} \int_R^b f(x)\, dx \) is defined symmetrically.
+For each \( R>a \), first form the proper integral over the finite interval \( [a,R] \). Then define
+\[ \int_a^\infty f(x)\, dx = \lim_{R\to\infty}\int_a^R f(x)\, dx, \]
+provided this limit exists as a finite real number.
+
+Similarly,
+\[ \int_{-\infty}^b f(x)\, dx = \lim_{R\to-\infty}\int_R^b f(x)\, dx \]
+when that finite limit exists.
 !extra: ![Type I: area under y = 1/x^2 from a to R, as R → ∞](img/improper_type1.svg)
 ~~~
 
 !id: biZ5aT6csg
-!front: What is the definition of the improper integral \( \int_{-\infty}^\infty f(x)\, dx \) (Type I, both bounds infinite)?
+!front: State the definition of the improper integral \( \int_{-\infty}^\infty f(x)\, dx \) (Type I, both bounds infinite).
 !back:
-Pick any \( c \in \mathbb{R} \) and define
-\[ \int_{-\infty}^\infty f(x)\, dx = \int_{-\infty}^c f(x)\, dx + \int_c^\infty f(x)\, dx, \]
-provided **both** improper integrals on the right converge independently. The value does not depend on the choice of \( c \).
+Choose any \( c\in\mathbb{R} \). The improper integral over the whole line is defined by
+\[ \int_{-\infty}^{\infty} f(x)\,dx
+    = \int_{-\infty}^{c} f(x)\,dx + \int_{c}^{\infty} f(x)\,dx, \]
+provided both one-sided improper integrals converge as finite numbers.
+
+When this condition holds, the value is independent of the particular splitting point \( c \).
 ~~~
 
 !id: JwE70aKeGb
-!front: What is the definition of \( \int_a^b f(x)\, dx \) when \( f \) is unbounded near \( a \) (Type II, endpoint singularity)?
+!front: State the definition of \( \int_a^b f(x)\, dx \) when \( f \) is unbounded near \( a \) (Type II, endpoint singularity).
 !back:
-\[ \int_a^b f(x)\, dx = \lim_{\varepsilon \to 0^+} \int_{a+\varepsilon}^b f(x)\, dx, \]
-provided the limit exists. The symmetric definition applies when the singularity is at \( b \).
+Ignore a small interval next to the singular endpoint, integrate over \( [a+\varepsilon,b] \), and then let \( \varepsilon \downarrow 0 \):
+\[ \int_a^b f(x)\,dx
+    = \lim_{\varepsilon\to 0^+}\int_{a+\varepsilon}^{b} f(x)\,dx. \]
+The improper integral converges exactly when this limit exists as a finite real number. A singularity at \( b \) is handled by the analogous limit \( \int_a^{b-\varepsilon} f \).
 !extra: ![Type II: area under y = 1/√x from a+ε to b, as ε → 0⁺](img/improper_type2.svg)
 ~~~
 
 !id: nQvpIQsu42
-!front: What is the definition of \( \int_a^b f(x)\, dx \) when \( f \) is unbounded at an interior point \( c \in (a,b) \)?
+!front: State the definition of \( \int_a^b f(x)\, dx \) when \( f \) is unbounded at an interior point \( c \in (a,b) \).
 !back:
-\[ \int_a^b f(x)\, dx = \int_a^c f(x)\, dx + \int_c^b f(x)\, dx, \]
-provided **both** improper integrals on the right (each with a singularity at an endpoint) converge independently.
+Split the integral at the singular point:
+\[ \int_a^b f(x)\,dx
+    = \int_a^c f(x)\,dx + \int_c^b f(x)\,dx. \]
+This is defined only if both endpoint-singular improper integrals on the right converge separately as finite numbers.
 ~~~
 
 !id: LG7raW1j99
 !front: What does it mean for an improper integral to converge or diverge?
 !back:
-It converges if the defining limit — or, for doubly-improper cases, every piece of the split — satisfies both:
+An improper integral converges when every limit used in its definition exists and is finite.
 
-- exists
-- is finite
+It diverges if at least one required limiting piece:
 
-Otherwise it diverges.
+- fails to exist, or
+- exists only as an infinite limit.
 ~~~
 
 !id: epXECIT6Xr
 !front: Why must each piece of a doubly-improper integral converge independently, rather than just requiring their sum or a symmetric limit to exist?
 !back:
-- Requiring only a symmetric limit (like \( \lim_{R\to\infty}\int_{-R}^R f \)) can mask divergence through cancellation — e.g. that symmetric limit for \( \int_{-\infty}^\infty x\, dx \) equals \( 0 \) for every \( R \), even though neither \( \int_0^\infty x\, dx \) nor \( \int_{-\infty}^0 x\, dx \) converges.
-- Demanding independent convergence of each piece rules out such artifacts and makes the value of the integral independent of how it's split.
+A joint limit can hide divergent behavior by pairing positive and negative infinities before either side has a value. For example,
+\[ \int_{-R}^{R} x\,dx = 0 \]
+for every \( R>0 \), but the one-sided integrals \( \int_{-\infty}^{0}x\,dx \) and \( \int_0^\infty x\,dx \) diverge to \( -\infty \) and \( +\infty \).
+
+Requiring separate convergence prevents this cancellation artifact and makes the value independent of the chosen split point.
 !extra: This is exactly the gap the Cauchy principal value exploits: it only requires the weaker symmetric limit to exist.
 ~~~
 
 !id: 8RizrHWWpb
 !front: For \( p \in \mathbb{R} \), when does \( \int_1^\infty \frac{1}{x^p}\, dx \) converge, and what is its value?
 !back:
-It converges if and only if \( p > 1 \), with value
-\[ \int_1^\infty \frac{1}{x^p}\, dx = \frac{1}{p-1}. \]
+The integral converges exactly for \( p>1 \). In that case,
+\[ \int_1^\infty \frac{1}{x^p}\,dx = \frac{1}{p-1}. \]
+
+For \( p\le 1 \), the improper integral diverges.
 ~~~
 
 !id: bGDBAGMJsl
 !front: Derive the convergence condition for \( \int_1^\infty \frac{1}{x^p}\, dx \).
 !back:
-For \( p \neq 1 \),
-\[ \int_1^R \frac{dx}{x^p} = \frac{R^{1-p}-1}{1-p}. \]
-As \( R \to \infty \), \( R^{1-p} \to 0 \) iff \( 1-p < 0 \), i.e. \( p > 1 \), giving the finite limit \( \frac{1}{p-1} \); otherwise it diverges. For \( p = 1 \),
-\[ \int_1^R \frac{dx}{x} = \ln R \to \infty, \]
-confirming divergence at the boundary case.
+Let:
+
+- \( R>1 \)
+- \( p\in\mathbb{R} \)
+
+To prove: \( \int_1^\infty x^{-p}\,dx \) converges exactly when \( p>1 \).
+
+- If \( p\ne 1 \), then
+\[
+\int_1^R x^{-p}\,dx = \frac{R^{1-p}-1}{1-p}.
+\]
+- As \( R\to\infty \), the term \( R^{1-p} \) tends to \( 0 \) exactly when \( 1-p<0 \), i.e. \( p>1 \). The resulting limit is \( 1/(p-1) \).
+- If \( p<1 \), then \( R^{1-p}\to\infty \), so the integral diverges.
+- If \( p=1 \), then \( \int_1^R dx/x = \ln R\to\infty \), so the boundary case also diverges.
 ~~~
 
 !id: bx0FjEId2F
 !front: For \( p \in \mathbb{R} \), when does \( \int_0^1 \frac{1}{x^p}\, dx \) converge, and what is its value?
 !back:
-It converges if and only if \( p < 1 \), with value
-\[ \int_0^1 \frac{1}{x^p}\, dx = \frac{1}{1-p}. \]
+The integral converges exactly for \( p<1 \). In that case,
+\[ \int_0^1 \frac{1}{x^p}\,dx = \frac{1}{1-p}. \]
+
+For \( p\ge 1 \), the improper integral diverges.
 ~~~
 
 !id: lFZWS6FmDA
 !front: Derive the convergence condition for \( \int_0^1 \frac{1}{x^p}\, dx \).
 !back:
-This is a Type II improper integral (singular at \( 0 \) when \( p > 0 \)). For \( p \neq 1 \),
-\[ \int_\varepsilon^1 \frac{dx}{x^p} = \frac{1 - \varepsilon^{1-p}}{1-p}. \]
-As \( \varepsilon \to 0^+ \), \( \varepsilon^{1-p} \to 0 \) iff \( 1-p > 0 \), i.e. \( p < 1 \), giving the finite limit \( \frac{1}{1-p} \); otherwise it diverges. For \( p = 1 \),
-\[ \int_\varepsilon^1 \frac{dx}{x} = -\ln \varepsilon \to \infty, \]
-confirming divergence at the boundary case.
+Let:
+
+- \( 0<\varepsilon<1 \)
+- \( p\in\mathbb{R} \)
+
+To prove: \( \int_0^1 x^{-p}\,dx \) converges exactly when \( p<1 \).
+
+- If \( p\ne 1 \), then
+\[
+\int_\varepsilon^1 x^{-p}\,dx = \frac{1-\varepsilon^{1-p}}{1-p}.
+\]
+- As \( \varepsilon\to0^+ \), the term \( \varepsilon^{1-p} \) tends to \( 0 \) exactly when \( 1-p>0 \), i.e. \( p<1 \). The resulting limit is \( 1/(1-p) \).
+- If \( p>1 \), then \( \varepsilon^{1-p}\to\infty \), so the integral diverges.
+- If \( p=1 \), then \( \int_\varepsilon^1 dx/x = -\ln\varepsilon\to\infty \), so the boundary case also diverges.
 ~~~
 
 !id: w8OOBLhRgv
 !front: State the direct comparison test for improper integrals.
 !back:
-Suppose \( 0 \le f(x) \le g(x) \) for all \( x \) near the point of impropriety. Then:
+Suppose \( f \) and \( g \) are nonnegative near the point of impropriety and
+\[ 0\le f(x)\le g(x) \]
+there. Then:
 
-- if \( \int g \) converges, so does \( \int f \)
-- if \( \int f \) diverges, so does \( \int g \)
+- if the improper integral of \( g \) converges, the improper integral of \( f \) also converges;
+- if the improper integral of \( f \) diverges, the improper integral of \( g \) also diverges.
 ~~~
 
 !id: lt6BtYjoAX
 !front: State the limit comparison test for improper integrals.
 !back:
-Suppose:
+Assume that near the point of impropriety \( c \), where \( c \) may be finite or \( \pm\infty \),
 
-- \( f(x), g(x) > 0 \) near the point of impropriety \( c \) (a finite endpoint or \( \pm\infty \))
-- \( \lim_{x \to c} \frac{f(x)}{g(x)} = L, \quad 0 < L < \infty \)
+- \( f(x)>0 \) and \( g(x)>0 \), and
+- \( \displaystyle \lim_{x\to c}\frac{f(x)}{g(x)} = L \) for some finite \( L>0 \).
 
-Then \( \int f \) and \( \int g \) either both converge or both diverge.
+Then the two improper integrals \( \int f \) and \( \int g \) have the same convergence behavior: either both converge or both diverge.
 ~~~
 
 !id: n32y7464VV
 !front: Why does absolute convergence of an improper integral imply convergence?
-!back: Since \( 0 \le f + |f| \le 2|f| \), if \( \int |f| \) converges then the comparison test gives convergence of \( \int (f+|f|) \). Then \( f = (f+|f|) - |f| \) is a difference of two convergent integrals, so \( \int f \) converges.
+!back:
+If \( \int |f| \) converges, then comparison gives convergence of \( \int (f+|f|) \), since
+\[ 0\le f+|f|\le 2|f|. \]
+But
+\[ f = (f+|f|)-|f|, \]
+so \( \int f \) is the difference of two convergent improper integrals. Hence \( \int f \) converges.
 !extra: The converse fails: an improper integral can converge without converging absolutely.
 ~~~
 
 !id: B75EclJVSb
 !front: Construct an example of an improper integral that converges but not absolutely.
 !back:
-\[ \int_1^\infty \frac{\sin x}{x}\, dx \]
-converges (its partial integrals oscillate with decreasing amplitude, analogous to an alternating series), but
-\[ \int_1^\infty \left| \frac{\sin x}{x} \right| dx \]
-diverges, since \( |\sin x| \) stays bounded away from \( 0 \) on intervals of length \( \pi/2 \) occurring infinitely often, making the tail behave like a divergent harmonic sum.
-~~~
+A standard example is
+\[ \int_1^\infty \frac{\sin x}{x}\,dx. \]
+It converges by Dirichlet's test: the primitive of \( \sin x \) is bounded, and \( 1/x \) decreases to \( 0 \).
 
-!id: hG7duzcmmD
-!front: State the integral test for convergence of a series \( \sum_{n=N}^\infty a_n \).
-!back:
-If \( f \) is:
-
-- positive
-- decreasing
-- continuous on \( [N,\infty) \)
-
-with \( f(n) = a_n \) for all integers \( n \ge N \), then
-\[ \sum_{n=N}^\infty a_n \text{ converges} \iff \int_N^\infty f(x)\, dx \text{ converges}. \]
-~~~
-
-!id: w2dflZHa13
-!front: What is the Cauchy principal value of \( \int_{-\infty}^\infty f(x)\, dx \)?
-!back:
-\[ \text{p.v.} \int_{-\infty}^\infty f(x)\, dx = \lim_{R \to \infty} \int_{-R}^{R} f(x)\, dx, \]
-a single symmetric limit, as opposed to requiring \( \int_{-\infty}^c f \) and \( \int_c^\infty f \) to converge independently.
-!extra: ![Cauchy principal value: a symmetric window [-R,R] growing outward on both ends at once, as R → ∞](img/pv_symmetric_limit.svg)
-~~~
-
-!id: yOKolhbLXX
-!front: What is the Cauchy principal value of \( \int_a^b f(x)\, dx \) when \( f \) has an interior singularity at \( c \in (a,b) \)?
-!back:
-\[ \text{p.v.} \int_a^b f(x)\, dx = \lim_{\varepsilon \to 0^+} \left( \int_a^{c-\varepsilon} f(x)\, dx + \int_{c+\varepsilon}^b f(x)\, dx \right), \]
-a single symmetric limit, analogous to the p.v. definition for \( \int_{-\infty}^\infty f(x)\, dx \), as opposed to requiring the two one-sided improper integrals to converge independently.
-!extra: ![Cauchy principal value with an interior singularity at c: a symmetric ε-neighborhood of c removed from both sides at once, as ε → 0⁺](img/pv_interior_singularity.svg)
-~~~
-
-!id: ul3k9h3rUd
-!front: Why can the Cauchy principal value of \( \int_{-\infty}^\infty f(x)\, dx \) exist even when the improper integral itself diverges?
-!back:
-Splitting at arbitrary \( c \) requires evaluating \( \int_{-\infty}^c f + \int_c^\infty f \) separately, which is an indeterminate \( \infty - \infty \) when the tails diverge with opposite sign.
-
-The principal value avoids this by taking one joint limit \( R \to \infty \) on both bounds at once, letting the two infinities cancel algebraically before the limit is taken.
-~~~
-
-!id: r8qpVfP7i8
-!front: True or false: If \( \int_{-\infty}^\infty f(x)\, dx \) converges as an improper integral, then its Cauchy principal value converges to the same value.
-!back: True. If \( \int_{-\infty}^\infty f \) converges, both one-sided pieces \( \int_{-\infty}^c f(x)\, dx \) and \( \int_c^\infty f(x)\, dx \) converge independently, so the symmetric limit \( \lim_{R\to\infty}\int_{-R}^R f(x)\, dx \) exists along that same pair of limits and agrees with the improper integral's value.
-~~~
-
-!id: WRcHLTpwL7
-!front: True or false: If the Cauchy principal value of \( \int_{-\infty}^\infty f(x)\, dx \) exists, then \( \int_{-\infty}^\infty f(x)\, dx \) converges as an improper integral.
-!back: False. The symmetric limit \( \lim_{R\to\infty}\int_{-R}^R f(x)\, dx \) can exist through cancellation even when the one-sided pieces \( \int_{-\infty}^c f \) and \( \int_c^\infty f \) individually diverge, so the p.v. can converge while the improper integral does not.
-!extra: For a concrete instance, see \( \text{p.v.} \int_{-\infty}^\infty x\, dx = 0 \) despite \( \int_{-\infty}^\infty x\, dx \) diverging.
-~~~
-
-!id: XG8RFgkj4i
-!front: Show that \( \text{p.v.} \int_{-\infty}^\infty x\, dx = 0 \), even though \( \int_{-\infty}^\infty x\, dx \) diverges.
-!back:
-\[ \lim_{R\to\infty} \int_{-R}^R x\, dx = \lim_{R\to\infty} \left[ \frac{x^2}{2} \right]_{-R}^R = \lim_{R\to\infty} 0 = 0, \]
-The principal value exists and equals \( 0 \).
-
-\[
-\begin{align*}
-    \int_{-\infty}^0 x\,dx &{}={} -\lim_{R\to-\infty}\frac{R^2}{2} &{}={}& -\infty \\
-    \int_0^\infty x\,dx &{}={} \lim_{R\to\infty}\frac{R^2}{2} &{}={}& \infty
-\end{align*}
-\]
-
-The improper integral diverges, even though its principal value exists.
-!extra: ![p.v. int x dx = 0: the positive lobe on [0,R] and negative lobe on [-R,0] have equal and opposite area R^2/2 for every R, canceling exactly as R → ∞](img/pv_x_cancellation.svg)
-~~~
-
-!id: EqMOLLHEGt
-!front: Does \( \text{p.v.}\int_{-\infty}^\infty x^2\, dx \) converge?
-!back: No, it diverges. Since \( x^2 \) is even, \( \int_{-R}^R x^2\, dx = 2\int_0^R x^2\, dx = \frac{2R^3}{3} \), and this grows without bound as \( R \to \infty \). Unlike an odd integrand, an even integrand gives no cancellation between the two sides of the symmetric window, so the p.v. fails exactly when the ordinary improper integral does.
-!extra: ![Even function f(x) = x^2/6: both lobes on [-R,R] lie above the axis with no cancellation, so the area grows without bound as R → ∞](img/pv_even_no_cancellation.svg)
-~~~
-
-!id: I3WysbYaIK
-!front: What is \( \text{p.v.}\int_{-\infty}^\infty f(x)\, dx \) when \( f \) is odd?
-!back:
-\[ \text{p.v.}\int_{-\infty}^\infty f(x)\, dx = 0. \]
-This holds unconditionally for any \( f \) that is odd and Riemann integrable on every finite interval \( [-R,R] \): since \( f(-x) = -f(x) \),
-\[ \int_{-R}^R f(x)\, dx = 0 \]
-identically for every \( R \) — not just in the limit \( R \to \infty \). No decay or boundedness condition on \( f \) at infinity is required.
-!extra:
-Contrast with the ordinary improper integral \( \int_{-\infty}^\infty f(x)\, dx \), which can still diverge for odd \( f \) (e.g. \( f(x) = x \)) — oddness guarantees the p.v. but says nothing about ordinary convergence.
-
-![Odd function f(x) = x/(1+x^2): the positive and negative lobes on [-R,R] are point-symmetric about the origin, canceling exactly for every R](img/pv_odd_function.svg)
-~~~
-
-!id: xuxbU8xted
-!front: Does \( \text{p.v.}\int_{-\infty}^\infty f(x)\, dx \) existing require \( f \) to be odd?
-!back:
-No. Write \( f = f_e + f_o \), the even and odd parts of \( f \) about \( 0 \):
-\[ f_e(x) = \frac{f(x)+f(-x)}{2}, \qquad f_o(x) = \frac{f(x)-f(-x)}{2}. \]
-For every \( R \), \( \int_{-R}^R f_o(x)\, dx = 0 \) identically, since \( f_o \) is odd. So
-\[ \int_{-R}^R f(x)\, dx = \int_{-R}^R f_e(x)\, dx = 2\int_0^R f_e(x)\, dx, \]
-and the symmetric limit exists iff \( \int_0^\infty f_e(x)\, dx \) converges as an ordinary improper integral — a condition on the even part of \( f \) alone.
-~~~
-
-!id: 330b6M2zjp
-!front: Compare how oddness and evenness of \( f \) affect whether \( \text{p.v.}\int_{-\infty}^\infty f(x)\, dx \) converges.
-!back:
-- If \( f \) is odd (and Riemann integrable on every \( [-R,R] \)): \( \int_{-R}^R f = 0 \) identically for every \( R \), so the p.v. always exists and equals \( 0 \), regardless of the growth or decay of \( f \).
-- If \( f \) is even: \( \int_{-R}^R f = 2\int_0^R f \), so there is no cancellation — the symmetric limit exists if and only if the ordinary one-sided improper integral \( \int_0^\infty f \) converges. Evenness gives the p.v. no advantage over ordinary convergence.
-~~~
-
-!id: z4Jta3U6k4
-!front: What is \( \text{p.v.}\int_{-1}^1 \frac{dx}{x} \)?
-!back:
-\[ \text{p.v.}\int_{-1}^1 \frac{dx}{x} = 0. \]
-For every \( \varepsilon > 0 \),
-\[ \int_{-1}^{-\varepsilon} \frac{dx}{x} + \int_{\varepsilon}^1 \frac{dx}{x} = \ln\varepsilon + (-\ln\varepsilon) = 0 \]
-identically, since \( 1/x \) is odd. So the limit \( \varepsilon \to 0^+ \) is trivially \( 0 \), even though \( \int_0^1 dx/x \) diverges on its own.
-~~~
-
-!id: PZphtp9MvJ
-!front: Does \( \text{p.v.}\int_{-1}^1 \frac{dx}{x^2} \) converge?
-!back:
-No. Since \( 1/x^2 \) is even,
-\[ \int_{-1}^{-\varepsilon} \frac{dx}{x^2} + \int_{\varepsilon}^1 \frac{dx}{x^2} = 2\int_\varepsilon^1 \frac{dx}{x^2} = 2\left(\frac{1}{\varepsilon} - 1\right) \to \infty \]
-as \( \varepsilon \to 0^+ \). No cancellation is possible for an even integrand, so the principal value diverges along with the ordinary improper integral.
+It is not absolutely convergent, because \( |\sin x| \) has a positive amount of area on infinitely many intervals while \( 1/x \) decays only harmonically, so
+\[ \int_1^\infty \left|\frac{\sin x}{x}\right|\,dx \]
+diverges.
 ~~~

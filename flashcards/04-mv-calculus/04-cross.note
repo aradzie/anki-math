@@ -1,0 +1,195 @@
+!type: Basic Math
+!deck: Math
+!tags: Math Calculus Multivariable
+
+!id: zlAnpCeH3o
+!front: State the algebraic definition of the **Cross Product**.
+!back:
+Consider two vectors \( \mathbf{a} \) and \( \mathbf{b} \) in the 3-dimensional space, \( \mathbf{a} = \langle a_1, a_2, a_3 \rangle \), \( \mathbf{b} = \langle b_1, b_2, b_3 \rangle \).
+
+The **Cross Product** \( \mathbf{a} \times \mathbf{b} \) is the determinant
+
+\[ \mathbf{a} \times \mathbf{b} = \begin{vmatrix}
+    \mathbf{i} & \mathbf{j} & \mathbf{k} \\
+    a_1 & a_2 & a_3 \\
+    b_1 & b_2 & b_3
+\end{vmatrix} \]
+
+which expands to
+
+\[
+\mathbf{a} \times \mathbf{b} =
+(a_2 b_3 - a_3 b_2) \mathbf{i} -
+(a_1 b_3 - a_3 b_1) \mathbf{j} +
+(a_1 b_2 - a_2 b_1) \mathbf{k}
+\]
+~~~
+
+!id: ab8XVzqdg3
+!front: State the geometric definition of the **Cross Product**.
+!back:
+Consider two vectors \( \mathbf{a} \) and \( \mathbf{b} \) in the 3-dimensional space, \( \mathbf{a} = \langle a_1, a_2, a_3 \rangle \), \( \mathbf{b} = \langle b_1, b_2, b_3 \rangle \).
+
+The **Cross Product** \( \mathbf{a} \times \mathbf{b} \) is a vector that:
+
+- is perpendicular to both \( \mathbf{a} \) and \( \mathbf{b} \) (so orthogonal to the plane containing them),
+- has magnitude equal to the area of the parallelogram spanned by \( \mathbf{a} \) and \( \mathbf{b} \):
+  \[ \|\mathbf{a} \times \mathbf{b}\| = \| \mathbf{a} \| \| \mathbf{b} \| \sin \theta \]
+  where \( \theta \) is the angle between \( \mathbf{a} \) and \( \mathbf{b} \), and
+- has direction given by the right-hand rule.
+
+![The Cross Product a x b, perpendicular to the plane spanned by a and b, whose magnitude equals the area of the parallelogram they span](img/cross_product.svg)
+~~~
+
+!id: 4wCxwXidGy
+!front: Why is \( \mathbf{a} \times \mathbf{b} = \mathbf{0} \), for nonzero \( \mathbf{a} \) and \( \mathbf{b} \), equivalent to \( \mathbf{a} \) and \( \mathbf{b} \) being parallel?
+!back: From the geometric definition, \( \|\mathbf{a}\times\mathbf{b}\| = \|\mathbf{a}\|\|\mathbf{b}\|\sin\theta \). For nonzero \( \mathbf{a}, \mathbf{b} \), this vanishes exactly when \( \sin\theta = 0 \), i.e. \( \theta = 0 \) or \( \theta = \pi \) — the vectors point in the same or exactly opposite direction, which is precisely the condition for \( \mathbf{a} \) and \( \mathbf{b} \) to be parallel (one a scalar multiple of the other).
+~~~
+
+!id: V2TTEVlBd6
+!front: Does the cross product satisfy the associative law \( (\mathbf{a}\times\mathbf{b})\times\mathbf{c} = \mathbf{a}\times(\mathbf{b}\times\mathbf{c}) \)? If not, construct a counterexample.
+!back: No. Counterexample using standard basis vectors: \( (\mathbf{i}\times\mathbf{i})\times\mathbf{j} = \mathbf{0}\times\mathbf{j} = \mathbf{0} \), but \( \mathbf{i}\times(\mathbf{i}\times\mathbf{j}) = \mathbf{i}\times\mathbf{k} = -\mathbf{j} \). Since \( \mathbf{0} \ne -\mathbf{j} \), the cross product is not associative.
+~~~
+
+!id: gz0pCSyHkn
+!front: Is the cross product commutative? If not, what law replaces commutativity?
+!back:
+No. The cross product is anti-commutative:
+
+\[ \mathbf{a}\times\mathbf{b} = -(\mathbf{b}\times\mathbf{a}). \]
+
+Swapping the order keeps the same magnitude but reverses the direction, because the right-hand rule chooses the opposite normal vector.
+~~~
+
+!id: ZzQIcgdrs6
+!front: How does the cross product distribute over vector addition and scalar multiplication?
+!back:
+For \( \mathbf{a},\mathbf{b},\mathbf{c}\in\mathbb{R}^3 \) and scalar \( \lambda \),
+
+\[
+(\mathbf{a}+\mathbf{b})\times\mathbf{c}
+=
+\mathbf{a}\times\mathbf{c}
++
+\mathbf{b}\times\mathbf{c},
+\]
+
+\[
+\mathbf{a}\times(\mathbf{b}+\mathbf{c})
+=
+\mathbf{a}\times\mathbf{b}
++
+\mathbf{a}\times\mathbf{c},
+\]
+
+and
+
+\[
+(\lambda\mathbf{a})\times\mathbf{b}
+=
+\lambda(\mathbf{a}\times\mathbf{b})
+=
+\mathbf{a}\times(\lambda\mathbf{b}).
+\]
+
+Together, these say the cross product is bilinear.
+~~~
+
+!id: CLI18uzGxy
+!front: What are the cross products of the standard basis vectors \( \mathbf{i},\mathbf{j},\mathbf{k} \)?
+!back:
+In cyclic order,
+
+\[
+\mathbf{i}\times\mathbf{j}=\mathbf{k},
+\qquad
+\mathbf{j}\times\mathbf{k}=\mathbf{i},
+\qquad
+\mathbf{k}\times\mathbf{i}=\mathbf{j}.
+\]
+
+Reversing the order changes the sign:
+
+\[
+\mathbf{j}\times\mathbf{i}=-\mathbf{k},
+\qquad
+\mathbf{k}\times\mathbf{j}=-\mathbf{i},
+\qquad
+\mathbf{i}\times\mathbf{k}=-\mathbf{j}.
+\]
+
+Also, each basis vector crossed with itself is \( \mathbf{0} \).
+~~~
+
+!id: lzL3HuLWdp
+!front: How does \( \|\mathbf{a}\times\mathbf{b}\| \) measure parallelogram and triangle area?
+!back:
+For \( \mathbf{a},\mathbf{b}\in\mathbb{R}^3 \),
+
+\[
+\|\mathbf{a}\times\mathbf{b}\|
+=
+\|\mathbf{a}\|\,\|\mathbf{b}\|\sin\theta,
+\]
+
+where \( \theta \) is the angle between them. This is base times height, so it is the area of the parallelogram spanned by \( \mathbf{a} \) and \( \mathbf{b} \).
+
+The area of the triangle with sides \( \mathbf{a} \) and \( \mathbf{b} \) from a common tail is therefore
+
+\[
+\frac{1}{2}\|\mathbf{a}\times\mathbf{b}\|.
+\]
+~~~
+
+!id: c0SN7CZfc2
+!front: How does the cross product give a normal vector to a plane?
+!back:
+If \( \mathbf{u},\mathbf{v}\in\mathbb{R}^3 \) are nonparallel direction vectors lying in a plane, then
+
+\[ \mathbf{n}=\mathbf{u}\times\mathbf{v} \]
+
+is nonzero and perpendicular to both \( \mathbf{u} \) and \( \mathbf{v} \). Therefore \( \mathbf{n} \) is normal to the plane they span.
+
+If the plane passes through a point \( \mathbf{p} \), its equation can be written as
+
+\[ (\mathbf{r}-\mathbf{p})\cdot(\mathbf{u}\times\mathbf{v})=0. \]
+!extra: The nonparallel hypothesis is necessary. If \( \mathbf{u} \) and \( \mathbf{v} \) are parallel, then \( \mathbf{u}\times\mathbf{v}=\mathbf{0} \), which is not a normal vector.
+~~~
+
+!id: Q5oD411Oua
+!front: What is the product rule for the cross product of differentiable vector-valued functions?
+!back:
+If \( \mathbf{r},\mathbf{s}:I\to\mathbb{R}^3 \) are differentiable at \( t \), then
+
+\[
+\frac{d}{dt}\bigl(\mathbf{r}(t)\times\mathbf{s}(t)\bigr)
+=
+\mathbf{r}'(t)\times\mathbf{s}(t)
++
+\mathbf{r}(t)\times\mathbf{s}'(t).
+\]
+
+The order of the factors must be preserved, because the cross product is anti-commutative, not commutative.
+~~~
+
+!id: Aijs0Nbgsd
+!front: What is the scalar triple product and what does it measure geometrically?
+!back:
+The scalar triple product is
+
+\[
+\mathbf{a}\cdot(\mathbf{b}\times\mathbf{c}).
+\]
+
+Geometrically, its absolute value is the volume of the parallelepiped spanned by \( \mathbf{a},\mathbf{b},\mathbf{c} \):
+
+\[
+\operatorname{Vol}
+=
+\left|\mathbf{a}\cdot(\mathbf{b}\times\mathbf{c})\right|.
+\]
+
+The sign records orientation: it is positive or negative depending on whether the ordered triple \( (\mathbf{a},\mathbf{b},\mathbf{c}) \) agrees with the chosen orientation of \( \mathbb{R}^3 \).
+
+![The parallelepiped spanned by a, b, c: its base is the parallelogram spanned by b and c, and b x c is normal to that base, so the volume is the base area times the height of a along the b x c direction](img/scalar_triple_product.svg)
+~~~

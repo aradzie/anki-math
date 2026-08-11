@@ -3,7 +3,7 @@
 !tags: Math Calculus Differentiation
 
 !id: ax8Frvkg1t
-!front: The definition of the Extreme Value Theorem (EVT).
+!front: State the Extreme Value Theorem (EVT).
 !back:
 The Extreme Value Theorem states that if a real-valued function \( f \) is:
 
@@ -16,7 +16,7 @@ then \( f \) attains a maximum and a minimum on \( [a,b] \), each at least once:
 ~~~
 
 !id: RKhaYcqpZ1
-!front: The definition of the Rolle's Theorem.
+!front: State Rolle's Theorem.
 !back:
 The Rolle's Theorem states that if a function \( f \) is:
 
@@ -32,7 +32,7 @@ Geometrically: if a continuous, differentiable curve starts and ends at the same
 ~~~
 
 !id: Nul59WMDrC
-!front: The definition of the Mean Value Theorem (MVT).
+!front: State the Mean Value Theorem (MVT).
 !back:
 The Mean Value Theorem states that if a function \( f \) is:
 
@@ -58,7 +58,7 @@ The Rolle's Theorem can be derived from the Mean Value Theorem: if \( f(a) = f(b
 ~~~
 
 !id: 7sz7MRtXZk
-!front: The definition of the Intermediate Value Theorem (IVT).
+!front: State the Intermediate Value Theorem (IVT).
 !back:
 The Intermediate Value Theorem states that if:
 

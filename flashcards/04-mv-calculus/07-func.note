@@ -1,0 +1,65 @@
+!type: Basic Math
+!deck: Math
+!tags: Math Calculus Multivariable
+
+!id: EgIGLBTj2e
+!front: What is a **Vector Valued Function**?
+!back:
+A **Vector Valued Function** is a function where the input is a scalar and the output is a vector:
+
+\[ \mathbf{r} : D \subseteq \mathbb{R} \to \mathbb{R}^n, \quad \mathbf{r}(t) = \langle f_1(t), f_2(t), \ldots, f_n(t) \rangle \]
+
+where:
+
+- \( D \) is the domain, a subset of \( \mathbb{R} \), and
+- \( f_1, \ldots, f_n : D \to \mathbb{R} \) are the scalar **component functions**.
+!extra:
+Examples:
+
+- \( \mathbf{r}(t) = \langle \cos t, \sin t \rangle \), with \( D=\mathbb{R} \), traces the unit circle in \( \mathbb{R}^2 \).
+- \( \mathbf{r}(t) = \langle t, t^2, t^3 \rangle \), with \( D=\mathbb{R} \), defines a curve in \( \mathbb{R}^3 \).
+~~~
+
+!id: CMGW2nMAJx
+!front: What is a **Function of Several Variables**?
+!back:
+A **Function of Several Variables** is a function where the input is a vector and the output is a scalar:
+
+\[ f : D \subseteq \mathbb{R}^n \to \mathbb{R}, \quad f( x_1, x_2, \ldots, x_n ) \]
+
+where \( D \) is the domain, a subset of \( \mathbb{R}^n \).
+!extra:
+Examples:
+
+- \( f(x, y) = x^2 + y^2 \).
+- \( f(\mathbf{x}) = \| \mathbf{x} \|^2 \).
+~~~
+
+!id: lc4d1eHcMV
+!front: What kind of a field does a **Function of Several Variables** define?
+!back: A **Function of Several Variables** \( f : D \subseteq \mathbb{R}^n \to \mathbb{R} \) defines a **Scalar Field**.
+~~~
+
+!id: NIW1agrY60
+!front: What is a **Vector-Valued Function of Several Variables**?
+!back:
+A **Vector-Valued Function of Several Variables** is a function where the input is a vector \( \mathbf{x} \in \mathbb{R}^m \) and the output is a vector \( \mathbf{y} \in \mathbb{R}^n \):
+
+\[ \mathbf{F} : D \subseteq \mathbb{R}^m \to \mathbb{R}^n, \quad \mathbf{F}(\mathbf{x}) = \bigl\langle f_1(\mathbf{x}), f_2(\mathbf{x}), \ldots, f_n(\mathbf{x}) \bigr\rangle \]
+
+where:
+
+- \( D \) is the domain, a subset of \( \mathbb{R}^m \),
+- \( \mathbf{x} = (x_1, x_2, \ldots, x_m) \), and
+- \( f_1, \ldots, f_n : D \to \mathbb{R} \) are the scalar **component functions**.
+!extra:
+Examples:
+
+- \( \mathbf{F}(x, y) = \langle x^2-y, x+y^2 \rangle \).
+- \( \mathbf{F}(x, y, z) = \langle xy, yz, xz \rangle \).
+~~~
+
+!id: rPcHFiq1iK
+!front: What kind of a field does a **Vector-Valued Function of Several Variables** define?
+!back: A **Vector-Valued Function of Several Variables** \( \mathbf{F} : D \subseteq \mathbb{R}^m \to \mathbb{R}^n \) defines a **Vector Field**.
+~~~

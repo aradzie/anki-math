@@ -3,7 +3,7 @@
 !tags: Math Calculus Sequence Series
 
 !id: iZKaAkl7j7
-!front: What is a power series centered at the origin?
+!front: Define a power series centered at the origin.
 !back:
 The power series centered at \( x = 0 \) is an infinite series of the following form
 
@@ -13,7 +13,7 @@ where \( x \) is a variable and the coefficients \( c_n \) are constants.
 ~~~
 
 !id: xodtE9tMWN
-!front: What is a power series centered at \( x = a \)?
+!front: Define a power series centered at \( x = a \).
 !back:
 The power series centered at \( x = a \) is an infinite series of the following form
 
@@ -24,7 +24,7 @@ where \( x \) is a variable, \( a \) is the center, and the coefficients \( c_n 
 ~~~
 
 !id: WfQmQRcAco
-!front: What is the center of a power series?
+!front: Define the center of a power series.
 !back: The center of the power series \( \sum_{n=0}^{\infty} c_n (x - a)^n \) is the point \( x = a \), the value around which the series is expanded.
 ~~~
 
@@ -41,7 +41,7 @@ Consider the power series \( \sum_{n=0}^{\infty} c_n (x - a)^n \). The series sa
 ~~~
 
 !id: GKZQhx4Oa6
-!front: What is the radius of convergence of a power series?
+!front: Define the radius of convergence of a power series.
 !back:
 The radius of convergence \( R \) of \( \sum_{n=0}^{\infty} c_n (x - a)^n \) is the extended real number \( 0 \le R \le \infty \) such that the series converges if \( |x - a| < R \) and diverges if \( |x - a| > R \), matching the convergence trichotomy: \( R = 0 \) if the series converges only at \( x = a \), and \( R = \infty \) if it converges for all \( x \).
 
@@ -60,7 +60,7 @@ If \( \ell = \lim_{n \to \infty} |c_{n+1}/c_n| \) exists, the series converges a
 ~~~
 
 !id: kEhHkFaxM6
-!front: What is the interval of convergence of a power series?
+!front: Define the interval of convergence of a power series.
 !back:
 The interval of convergence \( I \) of the power series \( \sum_{n=0}^{\infty} c_n (x - a)^n \) is the set of all real numbers \( x \) such that the series converges. This is precisely the domain of the power series.
 
@@ -68,7 +68,7 @@ The interval of convergence \( I \) of the power series \( \sum_{n=0}^{\infty} c
 ~~~
 
 !id: AS7ZBJJVWS
-!front: What is the difference between the radius and the interval of convergence of a power series?
+!front: Compare the radius of convergence and the interval of convergence of a power series.
 !back:
 For the power series \( \sum_{n=0}^{\infty} c_n (x - a)^n \) with radius of convergence \( R \):
 
@@ -76,4 +76,71 @@ For the power series \( \sum_{n=0}^{\infty} c_n (x - a)^n \) with radius of conv
 - The **interval of convergence** \( I \) is the actual set of \( x \) where the series converges. It always contains the open interval \( (a-R, a+R) \), and may additionally include one or both endpoints \( x = a - R \) and \( x = a + R \), depending on whether the series converges there.
 
 So \( R \) alone does not determine \( I \) exactly — the endpoints must be checked separately.
+~~~
+
+!id: Qk6gfuwKbg
+!front: Under what conditions can a power series be differentiated term by term?
+!back:
+If
+\[
+    f(x)=\sum_{n=0}^{\infty}c_n(x-a)^n
+\]
+has radius of convergence \( R>0 \), then \( f \) is differentiable for every \( x \) with \( |x-a|<R \), and
+\[
+    f'(x)=\sum_{n=1}^{\infty}n c_n(x-a)^{n-1}.
+\]
+The differentiated series has the same radius of convergence \( R \).
+!extra: This statement only covers the open interval of convergence. Endpoint behavior must be checked separately.
+~~~
+
+!id: vNFCweZhwT
+!front: Under what conditions can a power series be integrated term by term?
+!back:
+If
+\[
+    f(x)=\sum_{n=0}^{\infty}c_n(x-a)^n
+\]
+has radius of convergence \( R>0 \), then for every \( x \) with \( |x-a|<R \),
+\[
+    \int_a^x f(t)\,dt
+    =
+    \sum_{n=0}^{\infty}\frac{c_n}{n+1}(x-a)^{n+1}.
+\]
+The integrated series has the same radius of convergence \( R \).
+!extra: Endpoint behavior is not determined by this theorem. The integrated series may converge at an endpoint where the original series diverges.
+~~~
+
+!id: K7mSqZMg6z
+!front: Why are termwise differentiation and integration valid inside the radius of convergence of a power series?
+!back:
+Because a power series converges uniformly on every closed interval strictly inside its interval of convergence.
+
+- This uniform convergence allows integration term by term on such closed intervals.
+- For differentiation, the derived power series has the same radius of convergence and hence converges uniformly on such closed intervals; the theorem on differentiating uniformly convergent derivative series then applies.
+~~~
+
+!id: kRcBlerg1v
+!front: Why do differentiating and integrating a power series preserve its radius of convergence?
+!back:
+Differentiation and integration change the coefficients only by polynomial factors in \( n \):
+\[
+    c_n \mapsto n c_n,
+    \qquad
+    c_n \mapsto \frac{c_n}{n+1}.
+\]
+Such factors do not change the exponential growth rate of the coefficients, which is what determines the radius of convergence. Therefore the differentiated and integrated power series have the same radius as the original series.
+~~~
+
+!id: Cf4Yr8CW9k
+!front: What breaks if one assumes termwise differentiation preserves endpoint convergence?
+!back:
+Endpoint convergence can change. For example,
+\[
+    \sum_{n=1}^{\infty}\frac{x^n}{n}
+\]
+has radius of convergence \( 1 \) and converges at \( x=-1 \), since it becomes the alternating harmonic series. But its termwise derivative is
+\[
+    \sum_{n=1}^{\infty}x^{n-1},
+\]
+which diverges at \( x=-1 \). Termwise differentiation is guaranteed on the open interval of convergence, not at the endpoints.
 ~~~

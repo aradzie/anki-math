@@ -3,7 +3,7 @@
 !tags: Math Calculus Laplace-Transform
 
 !id: Lhceur3wOn
-!front: What is the definition of the Laplace transform?
+!front: State the definition of the Laplace transform.
 !back:
 The Laplace transform of a function \( f(t) \) is a function \( F(s) \) defined as
 
@@ -157,7 +157,7 @@ The bounds are finite rather than \( \pm\infty \) because \( f \) and \( g \) ar
 ~~~
 
 !id: 0kurqM5PTb
-!front: What is the convolution theorem for Laplace transforms?
+!front: State the convolution theorem for Laplace transforms.
 !back:
 \[ \mathscr{L}\{f * g\} = F(s) \, G(s) \]
 
@@ -165,7 +165,7 @@ The transform of a convolution is the product of the transforms. This lets you c
 ~~~
 
 !id: L3cbk23lIY
-!front: What is the initial value theorem for Laplace transforms?
+!front: State the initial value theorem for Laplace transforms.
 !back:
 If \( f \) and \( f' \) are of exponential order and \( F(s) = \mathscr{L}\{f(t)\} \), then
 
@@ -173,7 +173,7 @@ If \( f \) and \( f' \) are of exponential order and \( F(s) = \mathscr{L}\{f(t)
 ~~~
 
 !id: g4H4O7Djix
-!front: What is the final value theorem for Laplace transforms?
+!front: State the final value theorem for Laplace transforms.
 !back:
 If \( f \) and \( f' \) are of exponential order and \( \lim_{t \to \infty} f(t) \) exists, then
 

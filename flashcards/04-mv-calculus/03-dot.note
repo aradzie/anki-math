@@ -1,0 +1,265 @@
+!type: Basic Math
+!deck: Math
+!tags: Math Calculus Multivariable
+
+!id: SV2UKT5x5r
+!front: State the algebraic definition of the **Dot Product**.
+!back:
+Consider two vectors \( \mathbf{a} \) and \( \mathbf{b} \) in an \( n \)-dimensional space, \( \mathbf{a} = \langle a_1, a_2, \ldots, a_n \rangle \), \( \mathbf{b} = \langle b_1, b_2, \ldots, b_n \rangle \).
+
+The **Dot Product** \( \mathbf{a} \cdot \mathbf{b} \) is computed as the sum of the products of the corresponding components:
+
+\[ \mathbf{a} \cdot \mathbf{b} = a_1 b_1 + a_2 b_2 + \ldots + a_n b_n = \sum_{i = 1}^{n} a_i b_i \]
+~~~
+
+!id: pVGWgE8bOp
+!front: State the geometric definition of the **Dot Product**.
+!back:
+Consider two vectors \( \mathbf{a} \) and \( \mathbf{b} \) in an \( n \)-dimensional space, \( \mathbf{a} = \langle a_1, a_2, \ldots, a_n \rangle \), \( \mathbf{b} = \langle b_1, b_2, \ldots, b_n \rangle \).
+
+The **Dot Product** \( \mathbf{a} \cdot \mathbf{b} \) is defined in terms of the magnitudes (lengths) of the vectors and the angle between them:
+
+\[ \mathbf{a} \cdot \mathbf{b} = \| \mathbf{a} \| \, \| \mathbf{b} \| \, \cos \theta \]
+
+where
+
+- \( \| \mathbf{a} \| \) is the magnitude (length) of vector \( \mathbf{a} \),
+- \( \| \mathbf{b} \| \) is the magnitude (length) of vector \( \mathbf{b} \), and
+- \( \theta \) is the angle between the two vectors.
+
+![Vectors a and b from a common origin, with theta the angle between them](img/dot_product.svg)
+~~~
+
+!id: TKK9AGczLP
+!front: What does the sign of \( \mathbf{a} \cdot \mathbf{b} \) reveal about the angle \( \theta \) between nonzero vectors \( \mathbf{a} \) and \( \mathbf{b} \)?
+!back:
+Since \( \mathbf{a} \cdot \mathbf{b} = \|\mathbf{a}\|\|\mathbf{b}\|\cos\theta \) and both magnitudes are positive, the sign of \( \mathbf{a}\cdot\mathbf{b} \) matches the sign of \( \cos\theta \):
+
+- positive: \( \theta \) is acute,
+- zero: \( \theta = \pi/2 \) (the vectors are orthogonal),
+- negative: \( \theta \) is obtuse.
+
+![The plane split by the line through the origin perpendicular to b: a landing on the same side as b gives a.b > 0, while a on the opposite side gives a.b < 0](img/dot_product_sign.svg)
+~~~
+
+!id: GfIxipkTBM
+!front: What basic algebraic laws does the dot product satisfy on \( \mathbb{R}^n \)?
+!back:
+For \( \mathbf{a}, \mathbf{b}, \mathbf{c} \in \mathbb{R}^n \) and scalar \( \lambda \):
+
+- Symmetry: \( \mathbf{a}\cdot\mathbf{b} = \mathbf{b}\cdot\mathbf{a} \).
+- Additivity in each slot: \( (\mathbf{a}+\mathbf{b})\cdot\mathbf{c} = \mathbf{a}\cdot\mathbf{c}+\mathbf{b}\cdot\mathbf{c} \), and similarly in the second slot.
+- Homogeneity in each slot: \( (\lambda\mathbf{a})\cdot\mathbf{b} = \lambda(\mathbf{a}\cdot\mathbf{b}) = \mathbf{a}\cdot(\lambda\mathbf{b}) \).
+
+So the dot product is a symmetric bilinear operation \( \mathbb{R}^n \times \mathbb{R}^n \to \mathbb{R} \).
+~~~
+
+!id: srtVMZiY1v
+!front: Does the dot product satisfy an associative law \( (\mathbf{a}\cdot\mathbf{b})\cdot\mathbf{c} = \mathbf{a}\cdot(\mathbf{b}\cdot\mathbf{c}) \)?
+!back:
+No. The dot product is not even typed for associativity in this form: \( \mathbf{a}\cdot\mathbf{b} \) is a scalar, so \( (\mathbf{a}\cdot\mathbf{b})\cdot\mathbf{c} \) is not a dot product of two vectors.
+
+If the expression is reinterpreted using scalar multiplication, the two natural vector expressions are generally unequal:
+
+\[ (\mathbf{a}\cdot\mathbf{b})\mathbf{c} \ne \mathbf{a}(\mathbf{b}\cdot\mathbf{c}). \]
+
+For example, with \( \mathbf{a}=\mathbf{b}=\mathbf{e}_1 \) and \( \mathbf{c}=\mathbf{e}_2 \), the left side is \( \mathbf{e}_2 \), while the right side is \( \mathbf{0} \).
+~~~
+
+!id: 22Pk0VTlxW
+!front: Why does \( \mathbf{a}\cdot\mathbf{a} \) determine the length of \( \mathbf{a} \)?
+!back:
+By the component definition,
+
+\[ \mathbf{a}\cdot\mathbf{a} = a_1^2+\cdots+a_n^2 = \|\mathbf{a}\|^2. \]
+
+Therefore \( \|\mathbf{a}\| = \sqrt{\mathbf{a}\cdot\mathbf{a}} \). In particular, \( \mathbf{a}\cdot\mathbf{a} \ge 0 \), with equality exactly when \( \mathbf{a}=\mathbf{0} \).
+~~~
+
+!id: jkgwJl9vir
+!front: Define the vector projection of \( \mathbf{a} \) onto \( \mathbf{b} \).
+!back:
+For \( \mathbf{b}\ne\mathbf{0} \), the vector projection of \( \mathbf{a} \) onto \( \mathbf{b} \), denoted \( \operatorname{proj}_{\mathbf{b}}\mathbf{a} \), is the vector in \( \operatorname{span}\{\mathbf{b}\} \) whose difference from \( \mathbf{a} \) is perpendicular to \( \mathbf{b} \):
+
+\[
+\bigl(\mathbf{a}-\operatorname{proj}_{\mathbf{b}}\mathbf{a}\bigr)\cdot\mathbf{b}=0.
+\]
+
+Equivalently,
+
+\[
+\operatorname{proj}_{\mathbf{b}}\mathbf{a}
+=
+\frac{\mathbf{a}\cdot\mathbf{b}}{\|\mathbf{b}\|^2}\mathbf{b}.
+\]
+
+It is undefined for \( \mathbf{b}=\mathbf{0} \), since the zero vector determines no direction or line of projection.
+
+![a decomposed relative to b: proj_b a is the vector part of a along b, comp_b a is its signed scalar length, and a - proj_b a is the perpendicular remainder](img/vector_projection.svg)
+~~~
+
+!id: zANLGRsAZO
+!front: Define the scalar component of \( \mathbf{a} \) along \( \mathbf{b} \).
+!back:
+For \( \mathbf{b}\ne\mathbf{0} \), the scalar component of \( \mathbf{a} \) along \( \mathbf{b} \), denoted \( \operatorname{comp}_{\mathbf{b}}\mathbf{a} \), is the signed length of \( \mathbf{a} \) in the \( \mathbf{b} \)-direction:
+
+\[
+\operatorname{comp}_{\mathbf{b}}\mathbf{a}
+=
+\mathbf{a}\cdot\frac{\mathbf{b}}{\|\mathbf{b}\|}
+=
+\frac{\mathbf{a}\cdot\mathbf{b}}{\|\mathbf{b}\|}.
+\]
+~~~
+
+!id: ISxKXnb2H0
+!front: What does the sign of \( \operatorname{comp}_{\mathbf{b}}\mathbf{a} \) tell you geometrically?
+!back:
+For \( \mathbf{b}\ne\mathbf{0} \), the sign tells whether \( \mathbf{a} \) points with or against the \( \mathbf{b} \)-direction:
+
+- positive: \( \mathbf{a} \) has a component in the same direction as \( \mathbf{b} \)
+- zero: \( \mathbf{a}\perp\mathbf{b} \)
+- negative: \( \mathbf{a} \) has a component in the opposite direction from \( \mathbf{b} \)
+~~~
+
+!id: TPB4REKD2L
+!front: How are the scalar component and vector projection related?
+!back:
+For \( \mathbf{b}\ne\mathbf{0} \), let \( \mathbf{u}=\mathbf{b}/\|\mathbf{b}\| \). Then
+
+\[
+\operatorname{proj}_{\mathbf{b}}\mathbf{a}
+=
+\operatorname{comp}_{\mathbf{b}}\mathbf{a}\,\mathbf{u}
+=
+\operatorname{comp}_{\mathbf{b}}\mathbf{a}\,\frac{\mathbf{b}}{\|\mathbf{b}\|}.
+\]
+
+So the scalar component gives the signed length, and multiplying by the unit direction \( \mathbf{u} \) turns that signed length into the projection vector.
+
+![a decomposed relative to b: proj_b a is the vector part of a along b, comp_b a is its signed scalar length, and a - proj_b a is the perpendicular remainder](img/vector_projection.svg)
+~~~
+
+!id: wf35dIibL7
+!front: Compare the scalar component of \( \mathbf{a} \) along \( \mathbf{b} \) with the vector projection of \( \mathbf{a} \) onto \( \mathbf{b} \).
+!back:
+- \( \operatorname{comp}_{\mathbf{b}}\mathbf{a} \) is a scalar: the signed length of the part of \( \mathbf{a} \) along the direction of \( \mathbf{b} \).
+- \( \operatorname{proj}_{\mathbf{b}}\mathbf{a} \) is a vector: the actual parallel part of \( \mathbf{a} \) lying in \( \operatorname{span}\{\mathbf{b}\} \).
+
+Both are undefined when \( \mathbf{b}=\mathbf{0} \), since there is no direction to project onto.
+
+![a decomposed relative to b: proj_b a is the vector part of a along b, comp_b a is its signed scalar length, and a - proj_b a is the perpendicular remainder](img/vector_projection.svg)
+~~~
+
+!id: sBeQu1tyHR
+!front: Why does the projection formula use \( \|\mathbf{b}\|^2 \) in the denominator?
+!back:
+The projection of \( \mathbf{a} \) onto \( \mathbf{b} \ne \mathbf{0} \) must be a scalar multiple \( c\mathbf{b} \). To make the error \( \mathbf{a}-c\mathbf{b} \) perpendicular to \( \mathbf{b} \), require
+
+\[ (\mathbf{a}-c\mathbf{b})\cdot\mathbf{b}=0. \]
+
+Solving gives
+
+\[
+\mathbf{a}\cdot\mathbf{b}-c(\mathbf{b}\cdot\mathbf{b})=0,
+\qquad
+c=\frac{\mathbf{a}\cdot\mathbf{b}}{\mathbf{b}\cdot\mathbf{b}}
+=
+\frac{\mathbf{a}\cdot\mathbf{b}}{\|\mathbf{b}\|^2}.
+\]
+
+So \( \operatorname{proj}_{\mathbf{b}}\mathbf{a}=\dfrac{\mathbf{a}\cdot\mathbf{b}}{\|\mathbf{b}\|^2}\mathbf{b} \).
+
+![a decomposed relative to b: proj_b a is the vector part of a along b, comp_b a is its signed scalar length, and a - proj_b a is the perpendicular remainder](img/vector_projection.svg)
+~~~
+
+!id: IwCMAAznTP
+!front: How does projection decompose a vector into parallel and perpendicular parts?
+!back:
+For \( \mathbf{b}\ne\mathbf{0} \),
+
+\[
+\mathbf{a}
+=
+\operatorname{proj}_{\mathbf{b}}\mathbf{a}
++
+\bigl(\mathbf{a}-\operatorname{proj}_{\mathbf{b}}\mathbf{a}\bigr).
+\]
+
+The first term is parallel to \( \mathbf{b} \). The second term is perpendicular to \( \mathbf{b} \), because
+
+\[ \bigl(\mathbf{a}-\operatorname{proj}_{\mathbf{b}}\mathbf{a}\bigr)\cdot\mathbf{b}=0. \]
+
+Thus projection splits \( \mathbf{a} \) into its part along the line spanned by \( \mathbf{b} \) and its orthogonal remainder.
+
+![a decomposed relative to b: proj_b a is the vector part of a along b, comp_b a is its signed scalar length, and a - proj_b a is the perpendicular remainder](img/vector_projection.svg)
+~~~
+
+!id: b4cQGhizeK
+!front: Under what conditions is \( \operatorname{proj}_{\mathbf{b}}\mathbf{a} \) equal to \( \mathbf{0} \) or to \( \mathbf{a} \)?
+!back:
+Assume \( \mathbf{b}\ne\mathbf{0} \).
+
+- \( \operatorname{proj}_{\mathbf{b}}\mathbf{a}=\mathbf{0} \) exactly when \( \mathbf{a}\cdot\mathbf{b}=0 \), so \( \mathbf{a} \) is orthogonal to \( \mathbf{b} \).
+- \( \operatorname{proj}_{\mathbf{b}}\mathbf{a}=\mathbf{a} \) exactly when \( \mathbf{a} \in \operatorname{span}\{\mathbf{b}\} \), so \( \mathbf{a} \) is already parallel to \( \mathbf{b} \).
+~~~
+
+!id: DOrSguAEeW
+!front: What does \( \operatorname{proj}_{\mathbf{b}}\mathbf{a} \) optimize geometrically?
+!back:
+For \( \mathbf{b}\ne\mathbf{0} \), \( \operatorname{proj}_{\mathbf{b}}\mathbf{a} \) is the point on the line \( \operatorname{span}\{\mathbf{b}\} \) closest to \( \mathbf{a} \).
+
+Reason: for any \( t\mathbf{b} \in \operatorname{span}\{\mathbf{b}\} \), the difference
+
+\[
+\mathbf{a}-t\mathbf{b}
+=
+\bigl(\mathbf{a}-\operatorname{proj}_{\mathbf{b}}\mathbf{a}\bigr)
++
+\bigl(\operatorname{proj}_{\mathbf{b}}\mathbf{a}-t\mathbf{b}\bigr)
+\]
+
+is a sum of perpendicular vectors. By the Pythagorean theorem, its length is minimized when the second term is \( \mathbf{0} \), i.e. when \( t\mathbf{b}=\operatorname{proj}_{\mathbf{b}}\mathbf{a} \).
+
+![proj_b a is the closest point to a on span{b}: the perpendicular segment down to proj_b a is shortest, while oblique segments to other points t1.b, t2.b on the line are longer](img/projection_closest_point.svg)
+~~~
+
+!id: WBPdlXVmMR
+!front: What is the product rule for the dot product of differentiable vector-valued functions?
+!back:
+If \( \mathbf{r}, \mathbf{s} : I \to \mathbb{R}^n \) are differentiable at \( t \), then
+
+\[
+\frac{d}{dt}\bigl(\mathbf{r}(t)\cdot\mathbf{s}(t)\bigr)
+=
+\mathbf{r}'(t)\cdot\mathbf{s}(t)
++
+\mathbf{r}(t)\cdot\mathbf{s}'(t).
+\]
+
+This is the ordinary scalar product rule applied componentwise, then rewritten using the dot product.
+~~~
+
+!id: FeKm7nOCF0
+!front: Derive \( \dfrac{d}{dt}\|\mathbf{r}(t)\|^2 = 2\,\mathbf{r}(t)\cdot\mathbf{r}'(t) \) from the dot-product product rule.
+!back:
+Let:
+
+- \( \mathbf{r}: I \to \mathbb{R}^n \) be differentiable at \( t \)
+- \( \|\mathbf{r}(t)\|^2 = \mathbf{r}(t)\cdot\mathbf{r}(t) \)
+
+To prove: \( \dfrac{d}{dt}\|\mathbf{r}(t)\|^2 = 2\,\mathbf{r}(t)\cdot\mathbf{r}'(t) \).
+
+- Apply the dot-product product rule to \( \mathbf{r}(t)\cdot\mathbf{r}(t) \):
+
+\[
+\frac{d}{dt}\bigl(\mathbf{r}\cdot\mathbf{r}\bigr)
+=
+\mathbf{r}'\cdot\mathbf{r}
++
+\mathbf{r}\cdot\mathbf{r}'.
+\]
+
+- Use symmetry of the dot product: \( \mathbf{r}'\cdot\mathbf{r} = \mathbf{r}\cdot\mathbf{r}' \).
+- Hence \( \dfrac{d}{dt}\|\mathbf{r}(t)\|^2 = 2\,\mathbf{r}(t)\cdot\mathbf{r}'(t) \).
+~~~
