@@ -46,7 +46,7 @@ Flashcards are plain-text `.note` files under `flashcards/`, organized by topic 
 
 ### Build Self-Check Questions
 
-The `self-check/Makefile` builds the compiled self-check PDF. It first runs `node self-check-stats.js`, which walks the topic files included from the top-level document and regenerates `self-check-stats.tex` — this step needs a host `node` install, unlike the LaTeX steps below, since it runs directly rather than inside the TeX Live container. It then compiles the top-level document with `latexmk` inside the TeX Live container (see "TeX Live via Podman" below), producing the PDF. Commit the regenerated `self-check-stats.tex` alongside content changes that add or remove questions.
+The `self-check/Makefile` builds the compiled self-check PDF. It first runs `node self-check-stats.js`, which walks the topic files included from the top-level document and regenerates `self-check-stats.tex` — this step needs a host `node` install, unlike the LaTeX steps below, since it runs directly rather than inside the TeX Live container. It then compiles the top-level document with `latexmk` via `texlive.sh` (see "TeX Live via `texlive.sh`" below), producing the PDF. Commit the regenerated `self-check-stats.tex` alongside content changes that add or remove questions.
 
 ## Essays
 
@@ -54,24 +54,20 @@ Essays are standalone `.tex` files in the `essays` directory, one per topic, eac
 
 ### Build Essays
 
-A `Makefile` in the `essays` directory builds every essay to its own PDF. It compiles each `.tex` file with `latexmk` inside the TeX Live container (see "TeX Live via Podman" below).
+A `Makefile` in the `essays` directory builds every essay to its own PDF. It compiles each `.tex` file with `latexmk` via `texlive.sh` (see "TeX Live via `texlive.sh`" below).
 
-## TeX Live via Podman
+## TeX Live via `texlive.sh`
 
-No local TeX/Asymptote/Ghostscript install is assumed or required. All compilation and rendering runs inside the `texlive` docker image via `podman`, so the only host dependency for these steps is `podman` itself (able to pull `registry.gitlab.com/islandoftex/images/texlive:latest`). An example invocation of the texlive image is given below:
+No local TeX/Asymptote/Ghostscript install is assumed or required by default. All compilation and rendering runs through `texlive.sh` at the repo root, a runner script each `Makefile` calls instead of invoking a container runtime directly. It supports three interchangeable backends, selected via `TEXLIVE_BACKEND` (default: `podman`):
 
-```sh
-IMAGE = registry.gitlab.com/islandoftex/images/texlive:latest
-DIR = ...
-export SOURCE_DATE_EPOCH := 0
-podman run --rm --userns keep-id -e SOURCE_DATE_EPOCH -v "$DIR:/work:Z" -w /work "$IMAGE" \
-  latexmk -pdf ...
-```
+- `podman` (default) — runs inside the `texlive` podman image (`registry.gitlab.com/islandoftex/images/texlive:latest`, overridable via `TEXLIVE_IMAGE`), bind-mounting the working directory at `/work`. The only host dependency in this mode is `podman` itself.
+- `toolbox` — runs inside a [toolbox](https://containertoolbx.org/) container via `toolbox run`, which shares the host filesystem and working directory, so no bind mount is needed. Uses the default toolbox container unless `TEXLIVE_TOOLBOX` names one explicitly (e.g. a container created with `toolbox create --image registry.gitlab.com/islandoftex/images/texlive:latest --container texlive`).
+- `system` — runs the command directly from `$PATH`, for a host TeX Live / Asymptote install.
 
-- `--userns keep-id` maps the container user to the host user so files written into the bind mount (`-v "$DIR:/work:Z"`) are owned by the invoking user, not root.
-- `-w /work` runs the command from the mounted directory.
-- `SOURCE_DATE_EPOCH=0` is exported before the run and passed through with `-e` so pdfTeX embeds a fixed `/CreationDate`, `/ModDate`, and `/ID` instead of the wall-clock time. Built PDFs are committed alongside their sources, so a git- or clock-derived timestamp would make unrelated commits churn the embedded dates; pdfTeX reads this variable itself, no extra flags are needed. Rebuilding unchanged sources therefore produces byte-identical PDFs.
+Example: `TEXLIVE_BACKEND=toolbox make -C essays`.
+
+In every backend, `SOURCE_DATE_EPOCH` (default: `0`) is forwarded explicitly into the command's environment via `env`, rather than relying on backend-specific environment-passing flags, so pdfTeX embeds a fixed `/CreationDate`, `/ModDate`, and `/ID` instead of the wall-clock time regardless of backend. Built PDFs are committed alongside their sources, so a git- or clock-derived timestamp would make unrelated commits churn the embedded dates; pdfTeX reads this variable itself, no extra flags are needed. Rebuilding unchanged sources therefore produces byte-identical PDFs. (The podman backend also passes `--userns keep-id`, mapping the container user to the host user so files written into the bind mount are owned by the invoking user, not root — irrelevant for `toolbox`/`system`, which never run as a different user.)
 
 ## Asymptote Illustrations
 
-Illustrations are authored as Asymptote (`.asy`) source files under `flashcards/`, next to the `.note` file(s) they accompany, and compiled via `flashcards/Makefile` inside the TeX Live container (see "TeX Live via Podman" above) — to a vector `.svg` by default, or to a raster `.png` for 3D scenes with shaded surfaces that can't be vectorized. Full authoring, preview, and build workflow — including the SVG/PNG decision and the shared `common.asy` helpers — is documented in `.agents/skills/generate-illustrations/SKILL.md`; follow that skill when creating, editing, or compiling illustrations.
+Illustrations are authored as Asymptote (`.asy`) source files under `flashcards/`, compiled via `flashcards/Makefile` through `texlive.sh` (see "TeX Live via `texlive.sh`" above) — to a vector `.svg` by default, or to a raster `.png` for 3D scenes with shaded surfaces that can't be vectorized. Full authoring, preview, and build workflow — including where sources live, the SVG/PNG decision, and the shared `common.asy` helpers — is documented in `.agents/skills/generate-illustrations/SKILL.md`; follow that skill when creating, editing, or compiling illustrations.

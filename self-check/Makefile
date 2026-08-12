@@ -1,7 +1,6 @@
-PODMAN ?= podman
-TEXLIVE_IMAGE ?= registry.gitlab.com/islandoftex/images/texlive:latest
 export SOURCE_DATE_EPOCH := 0
-TEXLIVE_RUN = $(PODMAN) run --rm -it --userns keep-id -e SOURCE_DATE_EPOCH -v "$(CURDIR):/work:Z" -w /work $(TEXLIVE_IMAGE)
+TEXLIVE_SH := $(abspath $(dir $(lastword $(MAKEFILE_LIST)))../texlive.sh)
+TEXLIVE_RUN = $(TEXLIVE_SH)
 
 AUXDIR := aux
 

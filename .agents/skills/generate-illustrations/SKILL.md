@@ -11,7 +11,7 @@ Author an Asymptote diagram — 2D, or 3D — then compile it and verify the bui
 
 ## Repository Context
 
-Illustrations are one of the compiled-artifact steps in this repository (alongside PDF files); see `AGENTS.md` for the full repo overview. All compilation runs inside the `texlive` podman image — no local TeX/Asymptote install is required or assumed.
+Illustrations are one of the compiled-artifact steps in this repository (alongside PDF files); see `AGENTS.md` for the full repo overview. All compilation runs through `texlive.sh` at the repo root (see "TeX Live via `texlive.sh`" in `AGENTS.md`) — by default inside the `texlive` podman image, no local TeX/Asymptote install required or assumed, though `TEXLIVE_BACKEND` can switch that to a toolbox container or a host install.
 
 ## Where Sources Live
 
@@ -47,7 +47,7 @@ Decide at authoring time: if the scene needs `surface`, `render`, or shading, ad
 
 This tells the Makefile to compile the file to a same-named `.png` instead of `.svg` (see Compile below). Leave the directive off for everything else — 2D diagrams and 3D wireframes — which stay the default vector SVG.
 
-PNG output (and any raster preview of SVG-targeted 3D content) always renders with `-render=0` — the texlive container has no display, and Asymptote's GL-based rasterizer (any `-render` above 0) needs one, so `-render=0` is the only rasterization mode that works with just podman. It comes out at roughly a quarter the pixel density of `-render` at higher settings. Since a raster PNG can't rescale losslessly the way SVG can, compensate by authoring 3D/PNG scenes at a larger physical `size(...)`/`size3(...)` than you would for a vector illustration — e.g. `size3(6cm,10cm,16cm)` rather than `size3(3cm,5cm,8cm)` — to land at an adequate final pixel resolution.
+PNG output renders through Asymptote's hardware GL/Vulkan rasterizer (`-render` above 0) whenever the `texlive.sh` backend has a display — the `toolbox` backend shares the host's, so it renders with Asymptote's own default (`-render=2`), giving a real depth buffer that occludes multiple overlapping `surface()` draws correctly regardless of draw order. The `podman` backend runs in a display-less container and is forced to `-render=0`, Asymptote's software rasterizer, which does **not** reliably depth-sort across separate `draw()` calls — scenes with more than one overlapping 3D surface render with wrong occlusion under it. `flashcards/Makefile` picks the render level automatically from `TEXLIVE_BACKEND` via its `ASY_RENDER` variable (overridable, e.g. `ASY_RENDER=4`); for a multi-surface PNG scene, compile with `TEXLIVE_BACKEND=toolbox make -C flashcards path/to/file.png` rather than the default backend. `-render=0` output comes out at roughly a quarter the pixel density of higher `-render` settings. Since a raster PNG can't rescale losslessly the way SVG can, compensate by authoring 3D/PNG scenes at a larger physical `size(...)`/`size3(...)` than you would for a vector illustration — e.g. `size3(6cm,10cm,16cm)` rather than `size3(3cm,5cm,8cm)` — to land at an adequate final pixel resolution.
 
 ### Flat fills in 3D scenes
 
@@ -63,7 +63,7 @@ The Read tool cannot display `.svg` files as images, so for SVG-targeted illustr
 make -C flashcards path/to/file.preview.png
 ```
 
-This runs `asy -f png -render=0` on the `.asy` source directly, inside the same texlive container used for the `%.svg` rule below — no extra host dependency (in particular, no display, which is why `-render=0` is used — see SVG vs. PNG output above). The output lands next to the source as `<name>.preview.png`; it's gitignored, so it never needs manual cleanup, but treat it as scratch, not a deliverable. To remove every preview PNG under `flashcards/` at once, run `make -C flashcards clean-previews`.
+This runs `asy -f png -render=$(ASY_RENDER)` on the `.asy` source directly, through the same `texlive.sh` backend and render level used for the `%.png`/`%.svg` rules (see SVG vs. PNG output above) — under the default `podman` backend that's `-render=0` (no display available); under `toolbox`/`system` it's Asymptote's own hardware-rendered default. The output lands next to the source as `<name>.preview.png`; it's gitignored, so it never needs manual cleanup, but treat it as scratch, not a deliverable. To remove every preview PNG under `flashcards/` at once, run `make -C flashcards clean-previews`.
 
 View the PNG with the Read tool and check for: labels or elements overlapping, anything clipped by the canvas bounds, and shapes reading incorrectly (e.g. a rectangle that should visibly overshoot or undershoot a curve but doesn't). Iterate — edit the `.asy`, rerun `make -C flashcards path/to/file.preview.png`, re-view — until it's correct.
 
@@ -82,17 +82,15 @@ make -C flashcards
 builds both `svg` and `png` targets (`all: svg png`). Per file, this runs one of:
 
 ```sh
-podman run --rm --userns keep-id -e SOURCE_DATE_EPOCH -v "$DIR:/work:Z" -w /work "$IMAGE" \
-  asy -f svg -render=0 -o "$name" "$name.asy"
+../texlive.sh asy -f svg -render=0 -o "$name" "$name.asy"
 
-podman run --rm --userns keep-id -e SOURCE_DATE_EPOCH -v "$DIR:/work:Z" -w /work "$IMAGE" \
-  asy -f png -render=0 -o "$name" "$name.asy"
+../texlive.sh asy -f png -render=$(ASY_RENDER) -o "$name" "$name.asy"
 ```
 
-- `asy -f svg -render=0` compiles the `.asy` source to a vector SVG, using `dvisvgm` (bundled in the texlive image) to typeset LaTeX labels as real vector glyphs rather than rasterizing them.
-- `asy -f png -render=0` rasterizes the scene directly to a PNG, for files carrying the `// output: png` directive (see SVG vs. PNG output above for why `-render=0`).
-- `-o "$name"` sets the output path explicitly (Asymptote otherwise writes to the process's working directory rather than next to the input file); the podman invocation always runs from `flashcards/`, so `$name` is the source's path relative to `flashcards/` with the `.asy`/`.svg`/`.png` extension stripped.
+- `asy -f svg -render=0` compiles the `.asy` source to a vector SVG, using `dvisvgm` (bundled in the texlive image) to typeset LaTeX labels as real vector glyphs rather than rasterizing them. SVG output doesn't go through the GL rasterizer, so `-render` doesn't affect it.
+- `asy -f png -render=$(ASY_RENDER)` rasterizes the scene directly to a PNG, for files carrying the `// output: png` directive (see SVG vs. PNG output above for what `ASY_RENDER` defaults to and why).
+- `-o "$name"` sets the output path explicitly (Asymptote otherwise writes to the process's working directory rather than next to the input file); `texlive.sh` always runs from `flashcards/`, so `$name` is the source's path relative to `flashcards/` with the `.asy`/`.svg`/`.png` extension stripped.
 
-To compile and check a single file, build its target directly — `.svg` by default, or `.png` if the source carries the `// output: png` directive (check the file first to know which), e.g. `make -C flashcards 01-algebra/unit_circle.svg` (path relative to `flashcards/`) — then verify the output exists before referencing it.
+To compile and check a single file, build its target directly — `.svg` by default, or `.png` if the source carries the `// output: png` directive (check the file first to know which), e.g. `make -C flashcards 01-algebra/unit_circle.svg` (path relative to `flashcards/`) — then verify the output exists before referencing it. For a `.png` target with more than one overlapping 3D surface, build with `TEXLIVE_BACKEND=toolbox` (see SVG vs. PNG output above) so occlusion renders correctly.
 
 Incremental: only sources newer than their output (or newer than `common.asy`, tracked as a dependency of everything) are rebuilt.
