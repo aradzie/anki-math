@@ -1,6 +1,6 @@
 !type: Basic Math
 !deck: Math
-!tags: Math Function
+!tags: Math Function Monotonicity
 
 !id: XeWvKY3NLK
 !front: Define what it means for \( f \) to be increasing on an interval \( I \), distinguishing the strict and non-strict (weak) versions.

@@ -3,26 +3,56 @@
 !tags: Math Calculus Center-of-Mass
 
 !id: MoLv0577jW
-!front: What is the formula for the moment of a system of particles about the origin?
+!front: Define the first mass moment \( \mathbf{M}_O \in \mathbb{R}^d \) of a finite system of particles about the origin.
 !back:
-The moment \( \mathbf{M}_O \) of a system of particles about the origin is given by the formula:
+For particles with masses \( m_i > 0 \) and position vectors \( \mathbf{r}_i \in \mathbb{R}^d \) measured from the origin, the first mass moment about the origin is
 
-\[ \mathbf{M}_O = \sum_{i=1}^{n} m_i \mathbf{r}_i \]
-
-- \( m_i \) is the mass of the \( i \)-th particle, and
-- \( \mathbf{r}_i \) is the position vector of the \( i \)-th particle.
+\[ \mathbf{M}_O = \sum_{i=1}^{n} m_i \mathbf{r}_i. \]
 ~~~
 
 !id: 0RcMegQfoW
-!front: What is the formula for the center of mass of a system of particles?
+!front: Define the center of mass \( \mathbf{R} \in \mathbb{R}^d \) of a finite system of particles.
 !back:
-The center of mass \( \mathbf{R} \) of a system of particles is given by the formula:
+For particles with masses \( m_i > 0 \) and position vectors \( \mathbf{r}_i \in \mathbb{R}^d \) measured from a common origin, the center of mass is
 
-\[ \mathbf{R} = \frac{1}{m} \sum_{i=1}^{n} m_i \mathbf{r}_i \]
+\[ \mathbf{R} = \frac{1}{m} \sum_{i=1}^{n} m_i \mathbf{r}_i = \frac{\mathbf{M}_O}{m}, \]
 
-where
+where \( m \) is the total mass
 
-- \( m = \sum_{i=1}^{n} m_i \) is the total mass of the system,
-- \( m_i \) is the mass of the \( i \)-th particle, and
-- \( \mathbf{r}_i \) is the position vector of the \( i \)-th particle.
+\[ m = \sum_{i=1}^{n} m_i > 0. \]
+~~~
+
+!id: ZCB3iIT1h5
+!front: Define the first mass moment \( \mathbf{M}_O \in \mathbb{R}^d \) of a bounded continuous body about the origin.
+!back:
+Let \( D \subseteq \mathbb{R}^d \) be a bounded region with integrable mass density \( \rho:D \to [0,\infty) \). The first mass moment about the origin is
+
+\[ \mathbf{M}_O = \int_D \rho(\mathbf{r})\mathbf{r}\,dV. \]
+~~~
+
+!id: 4mowVIcLBq
+!front: Define the center of mass \( \mathbf{R} \in \mathbb{R}^d \) of a bounded continuous body.
+!back:
+Let \( D \subseteq \mathbb{R}^d \) be a bounded region with integrable mass density \( \rho:D \to [0,\infty) \) and positive total mass. The center of mass is
+
+\[ \mathbf{R} = \frac{1}{m}\int_D \rho(\mathbf{r})\mathbf{r}\,dV = \frac{\mathbf{M}_O}{m}, \]
+
+where \( m \) is the total mass
+
+\[ m = \int_D \rho(\mathbf{r})\,dV > 0. \]
+~~~
+
+!id: 291eW9ie3t
+!front: How are the discrete and continuous center-of-mass formulas related?
+!back:
+They have the same weighted-average structure:
+
+\[
+\begin{align*}
+    \mathbf{R}_{\text{discrete}} &= \frac{\sum_{i=1}^{n} m_i\mathbf{r}_i}{\sum_{i=1}^{n} m_i}, \\
+    \mathbf{R}_{\text{continuous}} &= \frac{\int_D \rho(\mathbf{r})\mathbf{r}\,dV}{\int_D \rho(\mathbf{r})\,dV}.
+\end{align*}
+\]
+
+The continuous formula replaces individual masses \( m_i \) at positions \( \mathbf{r}_i \) by infinitesimal mass elements \( \rho(\mathbf{r})\,dV \) distributed over \( D \).
 ~~~

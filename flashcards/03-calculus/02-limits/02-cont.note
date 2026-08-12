@@ -118,7 +118,10 @@ Neither one-sided limit is a finite number, so no value assigned to \( f(0) \) c
 !id: SUWcHWUEHj
 !front: Give an example of an essential discontinuity caused by oscillation rather than by an infinite limit, and explain why.
 !back: \( f(x) = \sin(1/x) \) at \( x = 0 \): as \( x \to 0 \), \( 1/x \) grows without bound, so \( \sin(1/x) \) oscillates through every value in \( [-1,1] \) infinitely often. Neither one-sided limit exists, since \( f(x) \) never settles near a single value.
-!extra: This is called an **oscillating discontinuity**, a subtype of essential discontinuity. ![The graph of f(x) = sin(1/x) oscillating with ever-increasing frequency as x approaches 0 from the right, bounded within the band between y = 1 and y = -1](img/oscillating_discontinuity.svg)
+!extra:
+This is called an **oscillating discontinuity**, a subtype of essential discontinuity.
+
+![The graph of f(x) = sin(1/x) oscillating with ever-increasing frequency as x approaches 0 from the right, bounded within the band between y = 1 and y = -1](img/oscillating_discontinuity.svg)
 ~~~
 
 !id: HafZTETOS6

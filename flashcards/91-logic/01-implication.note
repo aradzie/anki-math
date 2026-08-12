@@ -1,6 +1,6 @@
 !type: Basic Math
 !deck: Math
-!tags: Math Logic
+!tags: Math Logic Implication Necessary-Sufficient
 
 !id: VBA5NRLEym
 !front: Given a hypothesis \( H \) and a condition \( C \), define what it means for \( C \) to be necessary for \( H \).

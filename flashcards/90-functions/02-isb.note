@@ -1,6 +1,6 @@
 !type: Basic Math
 !deck: Math
-!tags: Math Function
+!tags: Math Function Injective-Surjective
 
 !id: 5IdgxuQIzt
 !front: Define an injective (one-to-one) function \( f : A \to B \), and give the equivalent contrapositive form of the definition.
