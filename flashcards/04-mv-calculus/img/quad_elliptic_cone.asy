@@ -10,9 +10,9 @@ mathdefaults();
 real a = 1, b = 1, c = 1;         // cone semi-axes
 real rMax = 1.3;                  // radial extent of each drawn nappe
 real gridHalf = 1.7;              // xy-plane grid half-extent
-int gridDivisions = 14;
+int gridDivisions = 10;
 real axisLen = 1.9;               // x/y axis arrow length from the origin
-real zAxisLen = 1.7;              // z axis arrow length from the origin
+real zAxisLen = 1.9;              // z axis arrow length from the origin
 
 size3(40cm, 40cm, 40cm);
 currentprojection = perspective(camera=(6,8,4.5), up=Z, target=(0,0,0),

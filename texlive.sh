@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
-# Runs a TeX Live / Asymptote command through one of several interchangeable
-# backends, so Makefiles in this repo don't hardcode a single podman
-# invocation. Selected via TEXLIVE_BACKEND (default: podman).
+# Runs a TeX Live / Asymptote command inside the project's custom podman
+# image (see texlive-gl.Containerfile), which layers Xvfb on top of the
+# upstream TeX Live image so Asymptote gets a real GLX display for
+# hardware-style, depth-buffered 3D rendering, not just LaTeX compilation.
+#
+# One-time setup -- build the image locally:
+#   podman build -t localhost/texlive-gl -f texlive-gl.Containerfile .
 #
 # Usage:
 #   ./texlive.sh <command> [args...]
@@ -9,28 +13,32 @@
 # Examples:
 #   ./texlive.sh latexmk -pdf -halt-on-error main.tex
 #   ./texlive.sh asy -f svg -render=0 -o out in.asy
-#   TEXLIVE_BACKEND=toolbox ./texlive.sh latexmk -pdf main.tex
-#   TEXLIVE_BACKEND=system  ./texlive.sh latexmk -pdf main.tex
 #
-# Backends (TEXLIVE_BACKEND):
-#   podman   (default) Run inside the texlive podman image, bind-mounting
-#            $PWD at /work. Image: $TEXLIVE_IMAGE (default below).
-#   toolbox  Run inside a toolbox container via `toolbox run`. Toolbox
-#            containers share the host filesystem and cwd, so no bind mount
-#            is needed. Uses the default toolbox container unless
-#            TEXLIVE_TOOLBOX names one explicitly.
-#   system   Run the command directly from $PATH, assuming a host TeX
-#            Live / Asymptote install.
+# Image: $TEXLIVE_IMAGE (default: localhost/texlive-gl:latest).
 #
-# In every backend, SOURCE_DATE_EPOCH (default: 0) is forwarded explicitly
-# into the command's environment via `env`, rather than relying on
-# backend-specific environment-passing flags, so pdfTeX's embedded
-# timestamps stay reproducible regardless of backend.
+# SOURCE_DATE_EPOCH (default: 0) is forwarded explicitly into the command's
+# environment via `env` so pdfTeX embeds a fixed /CreationDate, /ModDate,
+# and /ID instead of the wall-clock time. Built PDFs are committed alongside
+# their sources, so a git- or clock-derived timestamp would make unrelated
+# commits churn the embedded dates; pdfTeX reads this variable itself, no
+# extra flags are needed. Rebuilding unchanged sources therefore produces
+# byte-identical PDFs.
+#
+# --userns keep-id maps the container user to the host user so files written
+# into the bind mount are owned by the invoking user, not root.
+#
+# Xvfb is started directly rather than via xvfb-run: xvfb-run's SIGUSR1-based
+# wait for Xvfb to report readiness hangs in this container environment
+# (Xvfb comes up and creates its socket fine, but the signal round-trip
+# that's supposed to unblock xvfb-run's `wait` never arrives). Polling for
+# the socket file is what actually indicates it's ready to accept
+# connections. This wrapping is harmless for non-GL commands (latexmk, plain
+# 2D/wireframe asy calls), so it's applied unconditionally rather than only
+# for raster PNG builds.
 
 set -euo pipefail
 
-backend="${TEXLIVE_BACKEND:-podman}"
-image="${TEXLIVE_IMAGE:-registry.gitlab.com/islandoftex/images/texlive:latest}"
+image="${TEXLIVE_IMAGE:-localhost/texlive-gl:latest}"
 source_date_epoch="${SOURCE_DATE_EPOCH:-0}"
 
 if [ "$#" -eq 0 ]; then
@@ -38,25 +46,7 @@ if [ "$#" -eq 0 ]; then
     exit 1
 fi
 
-case "$backend" in
-    system)
-        exec env SOURCE_DATE_EPOCH="$source_date_epoch" "$@"
-        ;;
-    podman)
-        exec podman run --rm -it --userns keep-id \
-            -v "$PWD:/work:Z" -w /work \
-            "$image" env SOURCE_DATE_EPOCH="$source_date_epoch" "$@"
-        ;;
-    toolbox)
-        toolbox_args=()
-        if [ -n "${TEXLIVE_TOOLBOX:-}" ]; then
-            toolbox_args+=(--container="$TEXLIVE_TOOLBOX")
-        fi
-        exec toolbox run "${toolbox_args[@]}" \
-            env SOURCE_DATE_EPOCH="$source_date_epoch" "$@"
-        ;;
-    *)
-        echo "$(basename "$0"): unknown TEXLIVE_BACKEND '$backend' (expected: system, podman, toolbox)" >&2
-        exit 1
-        ;;
-esac
+exec podman run --rm -it --userns keep-id \
+    -v "$PWD:/work:Z" -w /work \
+    "$image" env SOURCE_DATE_EPOCH="$source_date_epoch" \
+    bash -c 'Xvfb :99 -screen 0 1280x1024x24 -nolisten tcp & until [ -e /tmp/.X11-unix/X99 ]; do sleep 0.1; done; export DISPLAY=:99; exec "$@"' bash "$@"

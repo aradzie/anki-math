@@ -8,12 +8,12 @@ import common;
 
 mathdefaults();
 
-real a = 1, b = 1;                // paraboloid semi-axes
-real tMax = 1.3;                  // radial extent of the drawn bowl
+real a = 1.3, b = 1.3;            // paraboloid semi-axes
+real tMax = 1.5;                  // radial extent of the drawn bowl
 real gridHalf = 2.3;              // xy-plane grid half-extent
-int gridDivisions = 14;
-real axisLen = 2.3;               // x/y axis arrow length from the origin
-real zAxisLen = 2.1;              // z axis arrow length from the origin
+int gridDivisions = 10;
+real axisLen = 2.5;               // x/y axis arrow length from the origin
+real zAxisLen = 2.9;              // z axis arrow length from the origin
 
 size3(40cm, 40cm, 40cm);
 currentprojection = perspective(camera=(6,8,4.7), up=Z, target=(0,0,0.6),

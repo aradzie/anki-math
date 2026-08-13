@@ -10,11 +10,11 @@ mathdefaults();
 
 real a = 1, b = 1, c = 1;         // hyperboloid semi-axes
 real uMax = 1.19;                 // cosh(uMax) ~= 1.8, caps each sheet's size
-real vertexGap = 0.4;             // distance from each vertex to the xy-plane
-real gridHalf = 1.7;              // xy-plane grid half-extent
-int gridDivisions = 14;
-real axisLen = 1.9;               // x/y axis arrow length from the origin
-real zAxisLen = 1.7;              // z axis arrow length from the origin
+real vertexGap = 0.6;             // distance from each vertex to the xy-plane
+real gridHalf = 2.0;              // xy-plane grid half-extent
+int gridDivisions = 10;
+real axisLen = 2.2;               // x/y axis arrow length from the origin
+real zAxisLen = 2.0;              // z axis arrow length from the origin
 
 size3(40cm, 40cm, 40cm);
 currentprojection = perspective(camera=(6,8,4.5), up=Z, target=(0,0,0),

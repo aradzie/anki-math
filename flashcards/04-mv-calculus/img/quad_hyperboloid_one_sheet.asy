@@ -11,9 +11,9 @@ mathdefaults();
 real a = 1, b = 1, c = 1;         // hyperboloid semi-axes
 real zMax = 1.3;                  // half-height of the drawn patch
 real gridHalf = 2.0;              // xy-plane grid half-extent
-int gridDivisions = 14;
+int gridDivisions = 10;
 real axisLen = 2.2;               // x/y axis arrow length from the origin
-real zAxisLen = 1.8;              // z axis arrow length from the origin
+real zAxisLen = 2.0;              // z axis arrow length from the origin
 
 size3(40cm, 40cm, 40cm);
 currentprojection = perspective(camera=(6,8,4.5), up=Z, target=(0,0,0),

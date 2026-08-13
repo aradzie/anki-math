@@ -8,9 +8,9 @@ import common;
 
 mathdefaults();
 
-real a = 1, b = 1, c = 0.9;       // ellipsoid semi-axes
-real gridHalf = 2.1;              // xy-plane grid half-extent
-int gridDivisions = 14;
+real a = 1.6, b = 1.6, c = 1.2;       // ellipsoid semi-axes
+real gridHalf = 2.3;              // xy-plane grid half-extent
+int gridDivisions = 10;
 real axisLen = 2.5;               // x/y axis arrow length from the origin
 real zAxisLen = 1.8;              // z axis arrow length from the origin
 

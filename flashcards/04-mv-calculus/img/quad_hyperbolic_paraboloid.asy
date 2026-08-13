@@ -10,10 +10,10 @@ mathdefaults();
 
 real a = 1, b = 1;                // saddle semi-axes
 real xyMax = 1.2;                 // half-extent of the drawn patch in x, y
-real gridHalf = 1.7;              // xy-plane grid half-extent
-int gridDivisions = 14;
-real axisLen = 1.9;               // x/y axis arrow length from the origin
-real zAxisLen = 1.8;              // z axis arrow length from the origin
+real gridHalf = 1.9;              // xy-plane grid half-extent
+int gridDivisions = 10;
+real axisLen = 2.1;               // x/y axis arrow length from the origin
+real zAxisLen = 1.5;              // z axis arrow length from the origin
 
 size3(40cm, 40cm, 40cm);
 currentprojection = perspective(camera=(6,8,4.5), up=Z, target=(0,0,0),
