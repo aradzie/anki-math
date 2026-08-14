@@ -1,20 +1,17 @@
-!deck: Math Identities
+!deck: Math Identities (Cloze)
 !tags: Math Calculus Identity Integral
-!type: Basic Math
+!type: Cloze Math
 
-!id: lZ0zhm8g36
-!front: \[ \int u^n \, du \]
-!back: \[ \frac{u^{n + 1}}{n + 1} + C, \quad n \neq -1 \]
+!id: wkZfScoStf
+!text: \[ \int {{c2::u^n::\ldots}} \, du = {{c1::\frac{ u^{n + 1} }{n + 1}::\ldots}} + C, \quad n \neq -1 \]
 ~~~
 
-!id: CNxuUVeyZe
-!front: \[ \int \frac{1}{u} \, du \]
-!back: \[ \ln |u| + C \]
+!id: O5dWcJ9Ayb
+!text: \[ \int {{c2::\frac{1}{u}::\ldots}} \, du = {{c1::\ln |u|::\ldots}} + C \]
 ~~~
 
-!id: pS8ujWDEb3
-!front: \[ \int e^u \, du \]
-!back: \[ e^u + C \]
+!id: OjNsbOEVDV
+!text: \[ \int {{c2::e^u::\ldots}} \, du = {{c1::e^u::\ldots}} + C \]
 !related:
 \[
 \begin{align*}
@@ -24,9 +21,8 @@
 \]
 ~~~
 
-!id: jOafeMIzmf
-!front: \[ \int a^u \, du \]
-!back: \[ \frac{a^u}{\ln a} + C \]
+!id: C3z9AssfLB
+!text: \[ \int {{c2::a^u::\ldots}} \, du = {{c1::\frac{a^u}{\ln a}::\ldots}} + C \]
 !related:
 \[
 \begin{align*}
@@ -38,9 +34,8 @@
 
 !tags: Math Calculus Integral Trigonometric Identity
 
-!id: xe7Mcs0OX6
-!front: \[ \int \sin u \, du \]
-!back: \[ - \cos u + C \]
+!id: zAVj6GfoZR
+!text: \[ \int {{c2::\sin u::\ldots}} \, du = {{c1::-\cos u::\ldots}} + C \]
 !related:
 \[
 \begin{align*}
@@ -52,9 +47,8 @@
 \]
 ~~~
 
-!id: 3WR4Fy7CWN
-!front: \[ \int \cos u \, du \]
-!back: \[ \sin u + C \]
+!id: oK1hDvqKcd
+!text: \[ \int {{c2::\cos u::\ldots}} \, du = {{c1::\sin u::\ldots}} + C \]
 !related:
 \[
 \begin{align*}
@@ -66,9 +60,8 @@
 \]
 ~~~
 
-!id: ocy5ICfIBc
-!front: \[ \int \sec^2 u \, du \]
-!back: \[ \tan u + C \]
+!id: I9VYBduCcQ
+!text: \[ \int {{c2::\sec^2 u::\ldots}} \, du = {{c1::\tan u::\ldots}} + C \]
 !related:
 \[
 \begin{align*}
@@ -80,9 +73,8 @@
 \]
 ~~~
 
-!id: LNq5eNNcxo
-!front: \[ \int \csc^2 u \, du \]
-!back: \[ - \cot u + C \]
+!id: EDFBfS4M5y
+!text: \[ \int {{c2::\csc^2 u::\ldots}} \, du = {{c1::-\cot u::\ldots}} + C \]
 !related:
 \[
 \begin{align*}
@@ -94,9 +86,8 @@
 \]
 ~~~
 
-!id: Yi52b6if5q
-!front: \[ \int \sec u \tan u \, du \]
-!back: \[ \sec u + C \]
+!id: xb4WwEeP4r
+!text: \[ \int {{c2::\sec u \tan u::\ldots}} \, du = {{c1::\sec u::\ldots}} + C \]
 !related:
 \[
 \begin{align*}
@@ -108,9 +99,8 @@
 \]
 ~~~
 
-!id: gVLYWQbUbr
-!front: \[ \int \csc u \cot u \, du \]
-!back: \[ - \csc u + C \]
+!id: MpqIMluMrf
+!text: \[ \int {{c2::\csc u \cot u::\ldots}} \, du = {{c1::-\csc u::\ldots}} + C \]
 !related:
 \[
 \begin{align*}
@@ -122,11 +112,8 @@
 \]
 ~~~
 
-!id: UUghDrZyX1
-!front: \[ \int \tan u \, du \]
-!back:
-\[ - \ln | \cos u | + C \]
-\[ \ln | \sec u | + C \]
+!id: wS35O29y1B
+!text: \[ \int {{c3::\tan u::\ldots}} \, du = {{c1::-\ln | \cos u |::\ldots}} + C = {{c2::\ln | \sec u |::\ldots}} + C \]
 !related:
 \[
 \begin{align*}
@@ -136,11 +123,8 @@
 \]
 ~~~
 
-!id: aPxGEA8HVR
-!front: \[ \int \cot u \, du \]
-!back:
-\[ \ln | \sin u | + C \]
-\[ - \ln | \csc u | + C \]
+!id: Tyr7GCU37U
+!text: \[ \int {{c3::\cot u::\ldots}} \, du = {{c1::\ln | \sin u |::\ldots}} + C = {{c2::-\ln | \csc u |::\ldots}} + C \]
 !related:
 \[
 \begin{align*}
@@ -150,9 +134,8 @@
 \]
 ~~~
 
-!id: ZTHiGvJS4h
-!front: \[ \int \sec u \, du \]
-!back: \[ \ln | \sec u + \tan u | + C \]
+!id: DocsvOi7wA
+!text: \[ \int {{c2::\sec u::\ldots}} \, du = {{c1::\ln | \sec u + \tan u |::\ldots}} + C \]
 !related:
 \[
 \begin{align*}
@@ -162,9 +145,8 @@
 \]
 ~~~
 
-!id: 3qgJWFwghl
-!front: \[ \int \csc u \, du \]
-!back: \[ \ln | \csc u - \cot u | + C \]
+!id: aHE3dRfXPV
+!text: \[ \int {{c2::\csc u::\ldots}} \, du = {{c1::\ln | \csc u -\cot u |::\ldots}} + C \]
 !related:
 \[
 \begin{align*}
@@ -174,26 +156,22 @@
 \]
 ~~~
 
-!id: 9JIJDq67WB
-!front: \[ \int \frac{1}{\sqrt{a^2 - u^2}} \, du \]
-!back: \[ \sin^{-1} \frac{u}{a} + C \]
+!id: IBMbxRjYIT
+!text: \[ \int {{c2::\frac{1}{ \sqrt{a^2 - u^2} }::\ldots}} \, du = {{c1::\sin^{-1} \frac{u}{a}::\ldots}} + C \]
 ~~~
 
-!id: L9Vk6BIjci
-!front: \[ \int \frac{1}{a^2 + u^2} \, du \]
-!back: \[ \frac{1}{a} \tan^{-1} \frac{u}{a} + C \]
+!id: h01ddvdFDL
+!text: \[ \int {{c2::\frac{1}{a^2 + u^2}::\ldots}} \, du = {{c1::\tan^{-1} \frac{u}{a}::\ldots}} + C \]
 ~~~
 
-!id: DcuQJwYLyv
-!front: \[ \int \frac{1}{u \sqrt{u^2 - a^2}} \, du \]
-!back: \[ \frac{1}{a} \sec^{-1} \frac{u}{a} + C \]
+!id: 9qP24hPifN
+!text: \[ \int {{c2::\frac{1}{u \sqrt{ u^2 - a^2} }::\ldots}} \, du = {{c1::\frac{1}{a} \sec^{-1} \frac{u}{a}::\ldots}} + C \]
 ~~~
 
 !tags: Math Calculus Integral Hyperbolic Identity
 
-!id: 2mmCJ686Tb
-!front: \[ \int \sinh u \, du \]
-!back: \[ \cosh u + C \]
+!id: infeQIluCV
+!text: \[ \int {{c2::\sinh u::\ldots}} \, du = {{c1::\cosh u::\ldots}} + C \]
 !related:
 \[
 \begin{align*}
@@ -205,9 +183,8 @@
 \]
 ~~~
 
-!id: IsN3LnyFe3
-!front: \[ \int \cosh u \, du \]
-!back: \[ \sinh u + C \]
+!id: fYDW02ueak
+!text: \[ \int {{c2::\cosh u::\ldots}} \, du = {{c1::\sinh u::\ldots}} + C \]
 !related:
 \[
 \begin{align*}
@@ -219,9 +196,8 @@
 \]
 ~~~
 
-!id: nvbxwvvCun
-!front: \[ \int \text{sech}^2 \, u \, du \]
-!back: \[ \tanh u + C \]
+!id: ql3omGxVH0
+!text: \[ \int {{c2::\text{sech}^2 \, u::\ldots}} \, du = {{c1::\tanh u::\ldots}} + C \]
 !related:
 \[
 \begin{align*}
@@ -233,9 +209,8 @@
 \]
 ~~~
 
-!id: MIF3rKYELT
-!front: \[ \int \text{csch}^2 \, u \, du \]
-!back: \[ - \coth u + C \]
+!id: Smalb1XyWV
+!text: \[ \int {{c2::\text{csch}^2 \, u::\ldots}} \, du = {{c1::-\coth u::\ldots}} + C \]
 !related:
 \[
 \begin{align*}
@@ -247,9 +222,8 @@
 \]
 ~~~
 
-!id: lkgyF7t51r
-!front: \[ \int \text{sech} \, u \tanh u \, du \]
-!back: \[ - \text{sech} \, u + C \]
+!id: ghDXLcvGHI
+!text: \[ \int {{c2::\text{sech} \, u \tanh u::\ldots}} \, du = {{c1::-\text{sech} \, u::\ldots}} + C \]
 !related:
 \[
 \begin{align*}
@@ -261,9 +235,8 @@
 \]
 ~~~
 
-!id: 2LIz86axf0
-!front: \[ \int \text{csch} \, u \coth u \, du \]
-!back: \[ - \text{csch} \, u + C \]
+!id: vQajY05B24
+!text: \[ \int {{c2::\text{csch} \, u \coth u::\ldots}} \, du = {{c1::-\text{csch} \, u::\ldots}} + C \]
 !related:
 \[
 \begin{align*}
@@ -277,12 +250,10 @@
 
 !tags: Math Calculus Integral Identity
 
-!id: jg2A0qEF2c
-!front: \[ \int u e^u \, du \]
-!back: \[ u e^u - e^u + C \]
+!id: r10Saw0GrC
+!text: \[ \int {{c2::u e^u::\ldots}} \, du = {{c1::u e^u - e^u::\ldots}} + C \]
 ~~~
 
-!id: wmF3nHGnN6
-!front: \[ \int \ln u \, du \]
-!back: \[ u \ln u - u + C \]
+!id: be075YRI33
+!text: \[ \int {{c2::\ln u::\ldots}} \, du = {{c1::u \ln u - u::\ldots}} + C \]
 ~~~

@@ -1,0 +1,572 @@
+!deck: Math Identities (Cloze)
+!tags: Math Calculus Identity Derivative
+!type: Cloze Math
+
+!id: t5nrJzqDxs
+!text:
+\[
+\frac{d}{dx} ( {{c2::f(x) g(x)::\ldots}} )
+=
+{{c1::f'(x) g(x) + f(x) g'(x)::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\frac{d}{dx} ( f(x) g(x) ) &= f'(x) g(x) + f(x) g'(x) \\[12pt]
+\frac{d}{dx} \frac{f(x)}{g(x)} &= \frac{f'(x) g(x) - f(x) g'(x)}{(g(x))^2} \\[10pt]
+\frac{d}{dx} \frac{1}{f(x)} &= -\frac{f'(x)}{(f(x))^2}
+\end{align*}
+\]
+~~~
+
+!id: 4LkQydoQNz
+!text:
+\[
+\frac{d}{dx} {{c2::\frac{f(x)}{g(x)}::\ldots}}
+=
+{{c1::\frac{f'(x) g(x) - f(x) g'(x)}{(g(x))^2}::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\frac{d}{dx} ( f(x) g(x) ) &= f'(x) g(x) + f(x) g'(x) \\[12pt]
+\frac{d}{dx} \frac{f(x)}{g(x)} &= \frac{f'(x) g(x) - f(x) g'(x)}{(g(x))^2} \\[10pt]
+\frac{d}{dx} \frac{1}{f(x)} &= -\frac{f'(x)}{(f(x))^2}
+\end{align*}
+\]
+~~~
+
+!id: 3TcbdCFNQp
+!text:
+\[
+\frac{d}{dx} {{c2::\frac{1}{f(x)}::\ldots}}
+=
+{{c1::-\frac{f'(x)}{(f(x))^2}::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\frac{d}{dx} ( f(x) g(x) ) &= f'(x) g(x) + f(x) g'(x) \\[12pt]
+\frac{d}{dx} \frac{f(x)}{g(x)} &= \frac{f'(x) g(x) - f(x) g'(x)}{(g(x))^2} \\[10pt]
+\frac{d}{dx} \frac{1}{f(x)} &= -\frac{f'(x)}{(f(x))^2}
+\end{align*}
+\]
+~~~
+
+!id: uCWxRjBh1T
+!text:
+\[
+\frac{d}{dx} {{c2::x^n::\ldots}}
+=
+{{c1::nx^{n-1}::\ldots}}
+\]
+~~~
+
+!id: 2bg3wYghWb
+!text:
+\[
+\frac{d}{dx} {{c2::\sqrt{x}::\ldots}}
+=
+{{c1::\frac{1}{ 2 \sqrt{x} }::\ldots}}
+\]
+~~~
+
+!id: VXuQLADXL9
+!text:
+\[
+\frac{d}{dx} {{c2::e^x::\ldots}}
+=
+{{c1::e^x::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\frac{d}{dx} e^x &= e^x \\
+\frac{d}{dx} a^x &= a^x \ln a
+\end{align*}
+\]
+~~~
+
+!id: Rr5fOXUw9O
+!text:
+\[
+\frac{d}{dx} {{c2::a^x::\ldots}}
+=
+{{c1::a^x \ln a::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\frac{d}{dx} e^x &= e^x \\
+\frac{d}{dx} a^x &= a^x \ln a
+\end{align*}
+\]
+~~~
+
+!id: qa7HhtQgYV
+!text:
+\[
+\frac{d}{dx} {{c2::\ln x::\ldots}}
+=
+{{c1::\frac{1}{x}::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\frac{d}{dx} \ln x &= \frac{1}{x} \\
+\frac{d}{dx} \log_b x &= \frac{1}{x \ln b}
+\end{align*}
+\]
+~~~
+
+!id: ePdj1D19Kq
+!text:
+\[
+\frac{d}{dx} {{c2::\log_b x::\ldots}}
+=
+{{c1::\frac{1}{x \ln b}::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\frac{d}{dx} \ln x &= \frac{1}{x} \\
+\frac{d}{dx} \log_b x &= \frac{1}{x \ln b}
+\end{align*}
+\]
+~~~
+
+!tags: Math Calculus Derivative Trigonometric Identity
+
+!id: FZ7A022KJ2
+!text:
+\[
+\frac{d}{dx} {{c2::\sin x::\ldots}}
+=
+{{c1::\cos x::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\frac{d}{dx} \sin x &= \cos x \\
+\frac{d}{dx} \cos x &= -\sin x \\
+\frac{d}{dx} \sinh x &= \cosh x \\
+\frac{d}{dx} \cosh x &= \sinh x
+\end{align*}
+\]
+~~~
+
+!id: Tgs9LnpPni
+!text:
+\[
+\frac{d}{dx} {{c2::\cos x::\ldots}}
+=
+{{c1::-\sin x::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\frac{d}{dx} \sin x &= \cos x \\
+\frac{d}{dx} \cos x &= -\sin x \\
+\frac{d}{dx} \sinh x &= \cosh x \\
+\frac{d}{dx} \cosh x &= \sinh x
+\end{align*}
+\]
+~~~
+
+!id: TpTuy8lSRy
+!text:
+\[
+\frac{d}{dx} {{c2::\tan x::\ldots}}
+=
+{{c1::\sec^2 x::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\frac{d}{dx} \tan x &= \sec^2 x \\
+\frac{d}{dx} \cot x &= -\csc^2 x \\
+\frac{d}{dx} \tanh x &= \text{sech}^2 \, x \\
+\frac{d}{dx} \coth x &= -\text{csch}^2 \, x
+\end{align*}
+\]
+~~~
+
+!id: nfMUAAp0SF
+!text:
+\[
+\frac{d}{dx} {{c2::\cot x::\ldots}}
+=
+{{c1::-\csc^2 x::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\frac{d}{dx} \tan x &= \sec^2 x \\
+\frac{d}{dx} \cot x &= -\csc^2 x \\
+\frac{d}{dx} \tanh x &= \text{sech}^2 \, x \\
+\frac{d}{dx} \coth x &= -\text{csch}^2 \, x
+\end{align*}
+\]
+~~~
+
+!id: IaeOyR20YC
+!text:
+\[
+\frac{d}{dx} {{c2::\sec x::\ldots}}
+=
+{{c1::\sec x \tan x::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\frac{d}{dx} \sec x &= \sec x \tan x \\
+\frac{d}{dx} \csc x &= -\csc x \cot x \\
+\frac{d}{dx} \text{sech} \, x &= -\text{sech} \, x \tanh x \\
+\frac{d}{dx} \text{csch} \, x &= -\text{csch} \, x \coth x
+\end{align*}
+\]
+~~~
+
+!id: Sjs1XlwPsE
+!text:
+\[
+\frac{d}{dx} {{c2::\csc x::\ldots}}
+=
+{{c1::-\csc x \cot x::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\frac{d}{dx} \sec x &= \sec x \tan x \\
+\frac{d}{dx} \csc x &= -\csc x \cot x \\
+\frac{d}{dx} \text{sech} \, x &= -\text{sech} \, x \tanh x \\
+\frac{d}{dx} \text{csch} \, x &= -\text{csch} \, x \coth x
+\end{align*}
+\]
+~~~
+
+!id: 7zeaG6d155
+!text:
+\[
+\frac{d}{dx} {{c2::\sin^{-1} x::\ldots}}
+=
+{{c1::\frac{1}{ \sqrt{1 - x^2} }::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\frac{d}{dx} \sin^{-1} x &= \frac{1}{\sqrt{1 - x^2}} \\
+\frac{d}{dx} \cos^{-1} x &= \frac{-1}{\sqrt{1 - x^2}} \\
+\frac{d}{dx} \sinh^{-1} x &= \frac{1}{\sqrt{x^2 + 1}} \\
+\frac{d}{dx} \cosh^{-1} x &= \frac{1}{\sqrt{x^2 - 1}}, \quad (x > 1)
+\end{align*}
+\]
+~~~
+
+!id: K8dEzzGKlO
+!text:
+\[
+\frac{d}{dx} {{c2::\cos^{-1} x::\ldots}}
+=
+{{c1::\frac{-1}{ \sqrt{1 - x^2} }::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\frac{d}{dx} \sin^{-1} x &= \frac{1}{\sqrt{1 - x^2}} \\
+\frac{d}{dx} \cos^{-1} x &= \frac{-1}{\sqrt{1 - x^2}} \\
+\frac{d}{dx} \sinh^{-1} x &= \frac{1}{\sqrt{x^2 + 1}} \\
+\frac{d}{dx} \cosh^{-1} x &= \frac{1}{\sqrt{x^2 - 1}}, \quad (x > 1)
+\end{align*}
+\]
+~~~
+
+!id: wiOugx4jUm
+!text:
+\[
+\frac{d}{dx} {{c2::\tan^{-1} x::\ldots}}
+=
+{{c1::\frac{1}{1 + x^2}::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\frac{d}{dx} \tan^{-1} x &= \frac{1}{1 + x^2} \\
+\frac{d}{dx} \cot^{-1} x &= \frac{-1}{1 + x^2} \\
+\frac{d}{dx} \tanh^{-1} x &= \frac{1}{1 - x^2}, \quad (|x| < 1) \\
+\frac{d}{dx} \coth^{-1} x &= \frac{1}{1 - x^2}, \quad (|x| > 1)
+\end{align*}
+\]
+~~~
+
+!id: RNhVRNAfSu
+!text:
+\[
+\frac{d}{dx} {{c2::\cot^{-1} x::\ldots}}
+=
+{{c1::\frac{-1}{1 + x^2}::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\frac{d}{dx} \tan^{-1} x &= \frac{1}{1 + x^2} \\
+\frac{d}{dx} \cot^{-1} x &= \frac{-1}{1 + x^2} \\
+\frac{d}{dx} \tanh^{-1} x &= \frac{1}{1 - x^2}, \quad (|x| < 1) \\
+\frac{d}{dx} \coth^{-1} x &= \frac{1}{1 - x^2}, \quad (|x| > 1)
+\end{align*}
+\]
+~~~
+
+!id: HqNvqfc8sK
+!text:
+\[
+\frac{d}{dx} {{c2::\sec^{-1} x::\ldots}}
+=
+{{c1::\frac{1}{ |x| \sqrt{x^2 - 1} }::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\frac{d}{dx} \sec^{-1} x &= \frac{1}{|x| \sqrt{x^2 - 1}} \\
+\frac{d}{dx} \csc^{-1} x &= \frac{-1}{|x| \sqrt{x^2 - 1}} \\
+\frac{d}{dx} \text{sech}^{-1} \, x &= \frac{-1}{x \sqrt{1 - x^2}} \\
+\frac{d}{dx} \text{csch}^{-1} \, x &= \frac{-1}{|x| \sqrt{1 + x^2}}
+\end{align*}
+\]
+~~~
+
+!id: pgYkMoL28Q
+!text:
+\[
+\frac{d}{dx} {{c2::\csc^{-1} x::\ldots}}
+=
+{{c1::\frac{-1}{ |x| \sqrt{x^2 - 1} }::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\frac{d}{dx} \sec^{-1} x &= \frac{1}{|x| \sqrt{x^2 - 1}} \\
+\frac{d}{dx} \csc^{-1} x &= \frac{-1}{|x| \sqrt{x^2 - 1}} \\
+\frac{d}{dx} \text{sech}^{-1} \, x &= \frac{-1}{x \sqrt{1 - x^2}} \\
+\frac{d}{dx} \text{csch}^{-1} \, x &= \frac{-1}{|x| \sqrt{1 + x^2}}
+\end{align*}
+\]
+~~~
+
+!tags: Math Calculus Derivative Hyperbolic Identity
+
+!id: AXRxzoK39Q
+!text:
+\[
+\frac{d}{dx} {{c2::\sinh x::\ldots}}
+=
+{{c1::\cosh x::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\frac{d}{dx} \sin x &= \cos x \\
+\frac{d}{dx} \cos x &= -\sin x \\
+\frac{d}{dx} \sinh x &= \cosh x \\
+\frac{d}{dx} \cosh x &= \sinh x
+\end{align*}
+\]
+~~~
+
+!id: ULZT18IEsU
+!text:
+\[
+\frac{d}{dx} {{c2::\cosh x::\ldots}}
+=
+{{c1::\sinh x::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\frac{d}{dx} \sin x &= \cos x \\
+\frac{d}{dx} \cos x &= -\sin x \\
+\frac{d}{dx} \sinh x &= \cosh x \\
+\frac{d}{dx} \cosh x &= \sinh x
+\end{align*}
+\]
+~~~
+
+!id: qb9uejuVx4
+!text:
+\[
+\frac{d}{dx} {{c2::\tanh x::\ldots}}
+=
+{{c1::\text{sech}^2 \, x::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\frac{d}{dx} \tan x &= \sec^2 x \\
+\frac{d}{dx} \cot x &= -\csc^2 x \\
+\frac{d}{dx} \tanh x &= \text{sech}^2 \, x \\
+\frac{d}{dx} \coth x &= -\text{csch}^2 \, x
+\end{align*}
+\]
+~~~
+
+!id: ttfO4G5sxl
+!text:
+\[
+\frac{d}{dx} {{c2::\coth x::\ldots}}
+=
+{{c1::-\text{csch}^2 \, x::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\frac{d}{dx} \tan x &= \sec^2 x \\
+\frac{d}{dx} \cot x &= -\csc^2 x \\
+\frac{d}{dx} \tanh x &= \text{sech}^2 \, x \\
+\frac{d}{dx} \coth x &= -\text{csch}^2 \, x
+\end{align*}
+\]
+~~~
+
+!id: HhVat8Mzfh
+!text:
+\[
+\frac{d}{dx} {{c2::\text{sech} \, x::\ldots}}
+=
+{{c1::-\text{sech} \, x \tanh x::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\frac{d}{dx} \sec x &= \sec x \tan x \\
+\frac{d}{dx} \csc x &= -\csc x \cot x \\
+\frac{d}{dx} \text{sech} \, x &= -\text{sech} \, x \tanh x \\
+\frac{d}{dx} \text{csch} \, x &= -\text{csch} \, x \coth x
+\end{align*}
+\]
+~~~
+
+!id: P7fC3P4Mb6
+!text:
+\[
+\frac{d}{dx} {{c2::\text{csch} \, x::\ldots}}
+=
+{{c1::-\text{csch} \, x \coth x::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\frac{d}{dx} \sec x &= \sec x \tan x \\
+\frac{d}{dx} \csc x &= -\csc x \cot x \\
+\frac{d}{dx} \text{sech} \, x &= -\text{sech} \, x \tanh x \\
+\frac{d}{dx} \text{csch} \, x &= -\text{csch} \, x \coth x
+\end{align*}
+\]
+~~~
+
+!id: 3Wz7tUpEXr
+!text:
+\[
+\frac{d}{dx} {{c2::\sinh^{-1} x::\ldots}}
+=
+{{c1::\frac{1}{ \sqrt{x^2 + 1} }::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\frac{d}{dx} \sin^{-1} x &= \frac{1}{\sqrt{1 - x^2}} \\
+\frac{d}{dx} \cos^{-1} x &= \frac{-1}{\sqrt{1 - x^2}} \\
+\frac{d}{dx} \sinh^{-1} x &= \frac{1}{\sqrt{x^2 + 1}} \\
+\frac{d}{dx} \cosh^{-1} x &= \frac{1}{\sqrt{x^2 - 1}}, \quad (x > 1)
+\end{align*}
+\]
+~~~
+
+!id: eYVovCWipu
+!text:
+\[
+\frac{d}{dx} {{c2::\cosh^{-1} x::\ldots}}
+=
+{{c1::\frac{1}{ \sqrt{x^2 - 1} }, \quad (x > 1)::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\frac{d}{dx} \sin^{-1} x &= \frac{1}{\sqrt{1 - x^2}} \\
+\frac{d}{dx} \cos^{-1} x &= \frac{-1}{\sqrt{1 - x^2}} \\
+\frac{d}{dx} \sinh^{-1} x &= \frac{1}{\sqrt{x^2 + 1}} \\
+\frac{d}{dx} \cosh^{-1} x &= \frac{1}{\sqrt{x^2 - 1}}, \quad (x > 1)
+\end{align*}
+\]
+~~~
+
+!id: r33sr5eOQn
+!text:
+\[
+\frac{d}{dx} {{c2::\tanh^{-1} x::\ldots}}
+=
+{{c1::\frac{1}{1 - x^2}, \quad (|x| < 1)::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\frac{d}{dx} \tan^{-1} x &= \frac{1}{1 + x^2} \\
+\frac{d}{dx} \cot^{-1} x &= \frac{-1}{1 + x^2} \\
+\frac{d}{dx} \tanh^{-1} x &= \frac{1}{1 - x^2}, \quad (|x| < 1) \\
+\frac{d}{dx} \coth^{-1} x &= \frac{1}{1 - x^2}, \quad (|x| > 1)
+\end{align*}
+\]
+~~~
+
+!id: lr9N09sidR
+!text:
+\[
+\frac{d}{dx} {{c2::\coth^{-1} x::\ldots}}
+=
+{{c1::\frac{1}{1 - x^2}, \quad (|x| > 1)::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\frac{d}{dx} \tan^{-1} x &= \frac{1}{1 + x^2} \\
+\frac{d}{dx} \cot^{-1} x &= \frac{-1}{1 + x^2} \\
+\frac{d}{dx} \tanh^{-1} x &= \frac{1}{1 - x^2}, \quad (|x| < 1) \\
+\frac{d}{dx} \coth^{-1} x &= \frac{1}{1 - x^2}, \quad (|x| > 1)
+\end{align*}
+\]
+~~~
+
+!id: tGEsRyzPvM
+!text:
+\[
+\frac{d}{dx} {{c2::\text{sech}^{-1} \, x::\ldots}}
+=
+{{c1::\frac{-1}{ x \sqrt{1 - x^2} }::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\frac{d}{dx} \sec^{-1} x &= \frac{1}{|x| \sqrt{x^2 - 1}} \\
+\frac{d}{dx} \csc^{-1} x &= \frac{-1}{|x| \sqrt{x^2 - 1}} \\
+\frac{d}{dx} \text{sech}^{-1} \, x &= \frac{-1}{x \sqrt{1 - x^2}} \\
+\frac{d}{dx} \text{csch}^{-1} \, x &= \frac{-1}{|x| \sqrt{1 + x^2}}
+\end{align*}
+\]
+~~~
+
+!id: 5SSSvwA7yL
+!text:
+\[
+\frac{d}{dx} {{c2::\text{csch}^{-1} \, x::\ldots}}
+=
+{{c1::\frac{-1}{ |x| \sqrt{1 + x^2} }::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\frac{d}{dx} \sec^{-1} x &= \frac{1}{|x| \sqrt{x^2 - 1}} \\
+\frac{d}{dx} \csc^{-1} x &= \frac{-1}{|x| \sqrt{x^2 - 1}} \\
+\frac{d}{dx} \text{sech}^{-1} \, x &= \frac{-1}{x \sqrt{1 - x^2}} \\
+\frac{d}{dx} \text{csch}^{-1} \, x &= \frac{-1}{|x| \sqrt{1 + x^2}}
+\end{align*}
+\]
+~~~

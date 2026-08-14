@@ -1,6 +1,6 @@
-!type: Basic Math
 !deck: Math
 !tags: Math Algebra Inequality
+!type: Basic Math
 
 !id: mkbLig7hww
 !front: Explain why if \( |x| \le c \), \( c \ge 0 \) is true then \( x \le c \) is true as well.

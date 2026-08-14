@@ -1,0 +1,331 @@
+!deck: Math Identities (Cloze)
+!tags: Math Trigonometric Identity
+!type: Cloze Math
+
+!id: 1Md8vTm3q0
+!text:
+\[
+{{c2::\sin^2 \theta +\cos^2 \theta::\sin / \cos}}
+=
+{{c1::1::\ldots}}
+\]
+
+Pythagorean Identity
+!related:
+\[
+\begin{align*}
+\sin^2 \theta +\cos^2 \theta &= 1 \\
+\sec^2 \theta -\tan^2 \theta &= 1 \\
+\csc^2 \theta -\cot^2 \theta &= 1
+\end{align*}
+\]
+~~~
+
+!id: HsMBeMRwdm
+!text:
+\[
+{{c2::\sec^2 \theta -\tan^2 \theta::\sec / \tan}}
+=
+{{c1::1::\ldots}}
+\]
+
+Pythagorean Identity
+!related:
+\[
+\begin{align*}
+\sin^2 \theta +\cos^2 \theta &= 1 \\
+\sec^2 \theta -\tan^2 \theta &= 1 \\
+\csc^2 \theta -\cot^2 \theta &= 1
+\end{align*}
+\]
+~~~
+
+!id: FtNRSmnqZ3
+!text:
+\[
+{{c2::\csc^2 \theta -\cot^2 \theta::\csc / \cot}}
+=
+{{c1::1::\ldots}}
+\]
+
+Pythagorean Identity
+!related:
+\[
+\begin{align*}
+\sin^2 \theta +\cos^2 \theta &= 1 \\
+\sec^2 \theta -\tan^2 \theta &= 1 \\
+\csc^2 \theta -\cot^2 \theta &= 1
+\end{align*}
+\]
+~~~
+
+!id: 1VKZovpKwv
+!text:
+\[
+{{c2::\sin (\alpha + \beta)::\ldots}}
+=
+{{c1::\sin \alpha \cos \beta + \cos \alpha \sin \beta::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\sin (\alpha + \beta) &= \sin \alpha \cos \beta + \cos \alpha \sin \beta \\
+\sin (\alpha - \beta) &= \sin \alpha \cos \beta - \cos \alpha \sin \beta \\
+\cos (\alpha + \beta) &= \cos \alpha \cos \beta - \sin \alpha \sin \beta \\
+\cos (\alpha - \beta) &= \cos \alpha \cos \beta + \sin \alpha \sin \beta
+\end{align*}
+\]
+~~~
+
+!id: 6RSQrFLxtk
+!text:
+\[
+{{c2::\sin (\alpha - \beta)::\ldots}}
+=
+{{c1::\sin \alpha \cos \beta - \cos \alpha \sin \beta::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\sin (\alpha + \beta) &= \sin \alpha \cos \beta + \cos \alpha \sin \beta \\
+\sin (\alpha - \beta) &= \sin \alpha \cos \beta - \cos \alpha \sin \beta \\
+\cos (\alpha + \beta) &= \cos \alpha \cos \beta - \sin \alpha \sin \beta \\
+\cos (\alpha - \beta) &= \cos \alpha \cos \beta + \sin \alpha \sin \beta
+\end{align*}
+\]
+~~~
+
+!id: 6oEgRqbAXR
+!text:
+\[
+{{c2::\cos (\alpha + \beta)::\ldots}}
+=
+{{c1::\cos \alpha \cos \beta - \sin \alpha \sin \beta::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\sin (\alpha + \beta) &= \sin \alpha \cos \beta + \cos \alpha \sin \beta \\
+\sin (\alpha - \beta) &= \sin \alpha \cos \beta - \cos \alpha \sin \beta \\
+\cos (\alpha + \beta) &= \cos \alpha \cos \beta - \sin \alpha \sin \beta \\
+\cos (\alpha - \beta) &= \cos \alpha \cos \beta + \sin \alpha \sin \beta
+\end{align*}
+\]
+~~~
+
+!id: gWjR1r3wPV
+!text:
+\[
+{{c2::\cos (\alpha - \beta)::\ldots}}
+=
+{{c1::\cos \alpha \cos \beta + \sin \alpha \sin \beta::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\sin (\alpha + \beta) &= \sin \alpha \cos \beta + \cos \alpha \sin \beta \\
+\sin (\alpha - \beta) &= \sin \alpha \cos \beta - \cos \alpha \sin \beta \\
+\cos (\alpha + \beta) &= \cos \alpha \cos \beta - \sin \alpha \sin \beta \\
+\cos (\alpha - \beta) &= \cos \alpha \cos \beta + \sin \alpha \sin \beta
+\end{align*}
+\]
+~~~
+
+!id: lMQweq1Xnv
+!text:
+\[
+{{c2::\tan (\alpha + \beta)::\ldots}}
+=
+{{c1::\dfrac{\tan \alpha + \tan \beta}{1 - \tan \alpha \tan \beta }::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\tan (\alpha + \beta) &= \frac{\tan \alpha + \tan \beta}{1 - \tan \alpha \tan \beta} \\
+\tan (\alpha - \beta) &= \frac{\tan \alpha - \tan \beta}{1 + \tan \alpha \tan \beta}
+\end{align*}
+\]
+~~~
+
+!id: pa7rUEySaj
+!text:
+\[
+{{c2::\tan (\alpha - \beta)::\ldots}}
+=
+{{c1::\dfrac{\tan \alpha - \tan \beta}{1 + \tan \alpha \tan \beta }::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\tan (\alpha + \beta) &= \frac{\tan \alpha + \tan \beta}{1 - \tan \alpha \tan \beta} \\
+\tan (\alpha - \beta) &= \frac{\tan \alpha - \tan \beta}{1 + \tan \alpha \tan \beta}
+\end{align*}
+\]
+~~~
+
+!id: baim5FdaYh
+!text:
+\[
+{{c2::\sin (2 \theta)::\ldots}}
+=
+{{c1::2 \sin \theta \cos \theta::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\sin (2 \theta) &= 2 \sin \theta \cos \theta \\[8pt]
+\cos (2 \theta) &= \cos^2 \theta - \sin^2 \theta = 1 - 2 \sin^2 \theta = 2 \cos^2 \theta - 1 \\[4pt]
+\tan (2 \theta) &= \dfrac{2 \tan \theta}{1 - \tan^2 \theta} = \frac{2}{\cot \theta - \tan \theta}
+\end{align*}
+\]
+~~~
+
+!id: sKATIcGYNW
+!text:
+\[
+\begin{align*}
+{{c4::\cos (2 \theta)::\ldots}}
+&=
+{{c1::\cos^2 \theta - \sin^2 \theta::\ldots}} \\
+&=
+{{c2::1 - 2 \sin^2 \theta::\ldots}} \\
+&=
+{{c3::2 \cos^2 \theta - 1::\ldots}}
+\end{align*}
+\]
+!related:
+\[
+\begin{align*}
+\sin (2 \theta) &= 2 \sin \theta \cos \theta \\[8pt]
+\cos (2 \theta) &= \cos^2 \theta - \sin^2 \theta = 1 - 2 \sin^2 \theta = 2 \cos^2 \theta - 1 \\[4pt]
+\tan (2 \theta) &= \dfrac{2 \tan \theta}{1 - \tan^2 \theta} = \frac{2}{\cot \theta - \tan \theta}
+\end{align*}
+\]
+~~~
+
+!id: sZihjh7TJW
+!text:
+\[
+{{c3::\tan (2 \theta)::\ldots}}
+=
+{{c1::\dfrac{2 \tan \theta}{1 - \tan^2 \theta}::\ldots}}
+=
+{{c2::\frac{2}{\cot \theta - \tan \theta}::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\sin (2 \theta) &= 2 \sin \theta \cos \theta \\[8pt]
+\cos (2 \theta) &= \cos^2 \theta - \sin^2 \theta = 1 - 2 \sin^2 \theta = 2 \cos^2 \theta - 1 \\[4pt]
+\tan (2 \theta) &= \dfrac{2 \tan \theta}{1 - \tan^2 \theta} = \frac{2}{\cot \theta - \tan \theta}
+\end{align*}
+\]
+~~~
+
+!id: Z6Fgz5Gg9I
+!text:
+\[
+{{c2::\sin^2 \theta::\ldots}}
+=
+{{c1::\frac{1 - \cos (2 \theta)}{2}::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\sin^2 \theta &= \frac{1 - \cos (2 \theta)}{2} \\
+\cos^2 \theta &= \frac{1 + \cos (2 \theta)}{2} \\
+\tan^2 \theta &= \frac{1 - \cos (2 \theta)}{1 + \cos (2 \theta)}
+\end{align*}
+\]
+~~~
+
+!id: xzljoH83Sq
+!text:
+\[
+{{c2::\cos^2 \theta::\ldots}}
+=
+{{c1::\frac{1 + \cos (2 \theta)}{2}::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\sin^2 \theta &= \frac{1 - \cos (2 \theta)}{2} \\
+\cos^2 \theta &= \frac{1 + \cos (2 \theta)}{2} \\
+\tan^2 \theta &= \frac{1 - \cos (2 \theta)}{1 + \cos (2 \theta)}
+\end{align*}
+\]
+~~~
+
+!id: fVirj08Oxi
+!text:
+\[
+{{c2::\tan^2 \theta::\ldots}}
+=
+{{c1::\frac{1 - \cos (2 \theta)}{1 + \cos (2 \theta)}::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\sin^2 \theta &= \frac{1 - \cos (2 \theta)}{2} \\
+\cos^2 \theta &= \frac{1 + \cos (2 \theta)}{2} \\
+\tan^2 \theta &= \frac{1 - \cos (2 \theta)}{1 + \cos (2 \theta)}
+\end{align*}
+\]
+~~~
+
+!id: UoDHOQAxNR
+!text:
+\[
+{{c2::\sin \frac{\theta}{2}::\ldots}}
+=
+{{c1::\pm \sqrt{ \frac{1 - \cos \theta}{2} }::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\sin \frac{\theta}{2} &= \pm \sqrt{ \frac{1 - \cos \theta}{2} } \\
+\cos \frac{\theta}{2} &= \pm \sqrt{ \frac{1 + \cos \theta}{2} } \\
+\tan \frac{\theta}{2} &= \pm \sqrt{ \frac{1 - \cos \theta}{1 + \cos \theta} }
+\end{align*}
+\]
+~~~
+
+!id: hhCmPTUF0S
+!text:
+\[
+{{c2::\cos \frac{\theta}{2}::\ldots}}
+=
+{{c1::\pm \sqrt{ \frac{1 + \cos \theta}{2} }::\ldots}}
+\]
+!related:
+\[
+\begin{align*}
+\sin \frac{\theta}{2} &= \pm \sqrt{ \frac{1 - \cos \theta}{2} } \\
+\cos \frac{\theta}{2} &= \pm \sqrt{ \frac{1 + \cos \theta}{2} } \\
+\tan \frac{\theta}{2} &= \pm \sqrt{ \frac{1 - \cos \theta}{1 + \cos \theta} }
+\end{align*}
+\]
+~~~
+
+!id: mvtTtpk5BZ
+!text:
+\[
+\begin{align*}
+{{c4::\tan \frac{\theta}{2}::\ldots}}
+&=
+{{c1::\pm \sqrt{ \frac{1 - \cos \theta}{1 + \cos \theta} }::\ldots}} \\
+&=
+{{c2::\frac{\sin \theta}{1 + \cos \theta}::\ldots}} \\
+&=
+{{c3::\frac{1 - \cos \theta}{\sin \theta}::\ldots}}
+\end{align*}
+\]
+!related:
+\[
+\begin{align*}
+\sin \frac{\theta}{2} &= \pm \sqrt{ \frac{1 - \cos \theta}{2} } \\
+\cos \frac{\theta}{2} &= \pm \sqrt{ \frac{1 + \cos \theta}{2} } \\
+\tan \frac{\theta}{2} &= \pm \sqrt{ \frac{1 - \cos \theta}{1 + \cos \theta} }
+\end{align*}
+\]
+~~~

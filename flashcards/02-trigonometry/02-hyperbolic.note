@@ -1,6 +1,6 @@
-!type: Basic Math
-!deck: Math
+!deck: Math Identities
 !tags: Math Trigonometric Hyperbolic Identity
+!type: Basic Math
 
 !id: 8voSey2Uah
 !front: \[ \sinh x = \ldots \]
@@ -15,21 +15,6 @@
 !id: uig6j7os9C
 !front: \[ \tanh x = \ldots \]
 !back: \[ \tanh x = \frac{e^{x} - e^{-x}}{e^{x} + e^{-x}} \]
-~~~
-
-!id: sO3rs2mUnt
-!front: \[ e^{x} = \text{ in terms of } \sinh(x) \text{ and } \cosh(x) \]
-!back: \[ e^{x} = \cosh x + \sinh x \]
-~~~
-
-!id: D7dSpHklNy
-!front: \[ e^{-x} = \ldots \text{ in terms of } \sinh(x) \text{ and } \cosh(x) \]
-!back: \[ e^{-x} = \cosh x - \sinh x \]
-~~~
-
-!id: hGdnrTqxwh
-!front: \[ 1 = \ldots \text{ in terms of } \sinh(x) \text{ and } \cosh(x) \]
-!back: \[ 1 = \cosh^2 x - \sinh^2 x \]
 ~~~
 
 !id: qYhRAq3NBi
@@ -67,14 +52,9 @@ Express as a trigonometric function
 !back: \[ \cosh^2 x + \sinh^2 x = \cosh(2x) \]
 ~~~
 
-!id: A6K2N9bF7x
-!front: \[ 1 + \sinh^2 x = \ldots \]
-!back: \[ 1 + \sinh^2 x = \cosh^2 x \]
-~~~
-
-!id: T0XJZ5wqF3
-!front: \[ 1 - \tanh^2 x = \ldots \]
-!back: \[ 1 - \tanh^2 x = \operatorname{sech}^2 x \]
+!id: uUKupFRuYg
+!front: \[ \cosh^2 x - \sinh^2 x = \ldots \]
+!back: \[ \cosh^2 x - \sinh^2 x = 1 \]
 ~~~
 
 !id: stZDV6T4Dx

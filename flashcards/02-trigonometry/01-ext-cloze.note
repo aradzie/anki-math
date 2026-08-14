@@ -1,0 +1,71 @@
+!deck: Math Identities (Cloze)
+!tags: Math Trigonometric Identity
+!type: Cloze Math
+
+!id: 9bt5DYmf5Q
+!text:
+\[
+{{c2::\cos(\arcsin x)::\ldots}}
+=
+{{c1::\sqrt{1-x^2}::\ldots}}
+\]
+
+Trigonometric Identity
+!back extra:
+Let \( \theta = \arcsin x \), so \( \theta \in \left[ -\frac{\pi}{2}, \frac{\pi}{2} \right] \) and \( \sin \theta = x \). On this range \( \cos \theta \ge 0 \), so the Pythagorean identity \( \cos^2 \theta = 1 - \sin^2 \theta \) gives \( \cos \theta = \sqrt{1-x^2} \), taking the nonnegative root.
+
+Mnemonic for \( x \in (0,1) \): in a right triangle with hypotenuse \( 1 \) and the angle \( \theta \) opposite the leg \( x \), the remaining leg is \( \sqrt{1-x^2} \) by the Pythagorean theorem, and \( \cos \theta \) is that leg over the hypotenuse.
+
+![Right triangle with hypotenuse 1, showing arcsin x and arccos x as complementary angles](img/inverse_trig_triangle_hyp1.svg)
+~~~
+
+!id: njnrcLZ1Q1
+!text:
+\[
+{{c2::\sin(\arccos x)::\ldots}}
+=
+{{c1::\sqrt{1-x^2}::\ldots}}
+\]
+
+Trigonometric Identity
+!back extra:
+Let \( \theta = \arccos x \), so \( \theta \in [0, \pi] \) and \( \cos \theta = x \). On this range \( \sin \theta \ge 0 \), so the Pythagorean identity \( \sin^2 \theta = 1 - \cos^2 \theta \) gives \( \sin \theta = \sqrt{1-x^2} \), taking the nonnegative root.
+
+Mnemonic for \( x \in (0,1) \): in a right triangle with hypotenuse \( 1 \) and the angle \( \theta \) adjacent to the leg \( x \), the remaining leg is \( \sqrt{1-x^2} \) by the Pythagorean theorem, and \( \sin \theta \) is that leg over the hypotenuse.
+
+![Right triangle with hypotenuse 1, showing arcsin x and arccos x as complementary angles](img/inverse_trig_triangle_hyp1.svg)
+~~~
+
+!id: dzk8AJb4g4
+!text:
+\[
+{{c2::\sin(\arctan x)::\ldots}}
+=
+{{c1::\frac{x}{ \sqrt{1+x^2} }::\ldots}}
+\]
+
+Trigonometric Identity
+!back extra:
+Let \( \theta = \arctan x \), so \( \theta \in \left( -\frac{\pi}{2}, \frac{\pi}{2} \right) \) and \( \tan \theta = x \). Since \( 1 + \tan^2 \theta = \sec^2 \theta \) and \( \cos \theta > 0 \) on this range, \( \cos \theta = \frac{1}{\sqrt{1+x^2}} \), so \( \sin \theta = \tan \theta \cos \theta = \frac{x}{\sqrt{1+x^2}} \).
+
+Mnemonic: in a right triangle with adjacent leg \( 1 \) and opposite leg \( x \) (so \( \tan \theta = x \)), the hypotenuse is \( \sqrt{1+x^2} \) by the Pythagorean theorem, and \( \sin \theta \) is the opposite leg over the hypotenuse.
+
+![Right triangle with adjacent leg 1 and opposite leg x, showing arctan x](img/inverse_trig_triangle_adj1.svg)
+~~~
+
+!id: g9X3DPa0Fx
+!text:
+\[
+{{c2::\cos(\arctan x)::\ldots}}
+=
+{{c1::\frac{1}{ \sqrt{1+x^2} }::\ldots}}
+\]
+
+Trigonometric Identity
+!back extra:
+Let \( \theta = \arctan x \), so \( \theta \in \left( -\frac{\pi}{2}, \frac{\pi}{2} \right) \) and \( \tan \theta = x \). Since \( 1 + \tan^2 \theta = \sec^2 \theta \) and \( \cos \theta > 0 \) on this range, \( \cos \theta = \frac{1}{\sqrt{1+x^2}} \).
+
+Mnemonic: in a right triangle with adjacent leg \( 1 \) and opposite leg \( x \) (so \( \tan \theta = x \)), the hypotenuse is \( \sqrt{1+x^2} \) by the Pythagorean theorem, and \( \cos \theta \) is the adjacent leg over the hypotenuse.
+
+![Right triangle with adjacent leg 1 and opposite leg x, showing arctan x](img/inverse_trig_triangle_adj1.svg)
+~~~

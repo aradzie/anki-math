@@ -1,0 +1,62 @@
+!deck: Math Identities (Cloze)
+!tags: Math Calculus Identity Limit
+!type: Cloze Math
+
+!id: Y66TinmI3l
+!text:
+\[
+{{c2::e::\ldots}}
+=
+\lim_{n \to \infty} {{c1::\left( 1 + \frac{1}{n} \right)^n::\ldots}}
+\]
+~~~
+
+!id: s3DJR4PMXP
+!text:
+\[
+{{c2::e^x::\ldots}}
+=
+\lim_{n \to \infty} {{c1::\left( 1 + \frac{x}{n} \right)^n::\ldots}}
+\]
+~~~
+
+!id: ctqWbhBToB
+!text:
+\[
+{{c2::e::\ldots}}
+=
+\lim_{h \to 0} {{c1::\left( 1 + h \right)^{1 / h}::\ldots}}
+\]
+~~~
+
+!id: kH3ZZfYUe1
+!text:
+\[
+{{c2::e^x::\ldots}}
+=
+\lim_{h \to 0} {{c1::\left( 1 + h \right)^{x / h}::\ldots}}
+\]
+~~~
+
+!id: xccjUZGTRa
+!text:
+\[
+{{c2::\ln a::\ldots}}
+=
+{{c1::\lim_{x \to 0} \frac{a^x - 1}{x}::\lim_{x \to \ldots} \ldots}}
+\]
+~~~
+
+!id: 4gyUssEC4i
+!text:
+\[
+\lim_{n \to \infty} n^{1/n}
+=
+{{c2::1::\ldots}}
+\]
+!back extra:
+Write \( n^{1/n} = e^{\ln n / n} \). By L'Hôpital's rule applied to \( \ln x / x \) as \( x \to \infty \),
+\[ \lim_{x \to \infty} \frac{\ln x}{x} = \lim_{x \to \infty} \frac{1/x}{1} = 0, \]
+and since \( \exp \) is continuous,
+\[ n^{1/n} = e^{\ln n / n} \to e^0 = 1. \]
+~~~

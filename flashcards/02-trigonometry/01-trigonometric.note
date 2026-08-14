@@ -1,6 +1,6 @@
-!type: Basic Math (and reversed card)
-!deck: Math
+!deck: Math Identities
 !tags: Math Trigonometric Identity
+!type: Basic Math (and reversed card)
 
 !id: ZzS2lXt2He
 !front: \[ \sin (\alpha + \beta) \]
@@ -8,10 +8,10 @@
 !related:
 \[
 \begin{align*}
-    \sin (\alpha + \beta) &= \sin \alpha \cos \beta + \cos \alpha \sin \beta \\
-    \sin (\alpha - \beta) &= \sin \alpha \cos \beta - \cos \alpha \sin \beta \\
-    \cos (\alpha + \beta) &= \cos \alpha \cos \beta - \sin \alpha \sin \beta \\
-    \cos (\alpha - \beta) &= \cos \alpha \cos \beta + \sin \alpha \sin \beta
+\sin (\alpha + \beta) &= \sin \alpha \cos \beta + \cos \alpha \sin \beta \\
+\sin (\alpha - \beta) &= \sin \alpha \cos \beta - \cos \alpha \sin \beta \\
+\cos (\alpha + \beta) &= \cos \alpha \cos \beta - \sin \alpha \sin \beta \\
+\cos (\alpha - \beta) &= \cos \alpha \cos \beta + \sin \alpha \sin \beta
 \end{align*}
 \]
 ~~~
@@ -22,10 +22,10 @@
 !related:
 \[
 \begin{align*}
-    \sin (\alpha + \beta) &= \sin \alpha \cos \beta + \cos \alpha \sin \beta \\
-    \sin (\alpha - \beta) &= \sin \alpha \cos \beta - \cos \alpha \sin \beta \\
-    \cos (\alpha + \beta) &= \cos \alpha \cos \beta - \sin \alpha \sin \beta \\
-    \cos (\alpha - \beta) &= \cos \alpha \cos \beta + \sin \alpha \sin \beta
+\sin (\alpha + \beta) &= \sin \alpha \cos \beta + \cos \alpha \sin \beta \\
+\sin (\alpha - \beta) &= \sin \alpha \cos \beta - \cos \alpha \sin \beta \\
+\cos (\alpha + \beta) &= \cos \alpha \cos \beta - \sin \alpha \sin \beta \\
+\cos (\alpha - \beta) &= \cos \alpha \cos \beta + \sin \alpha \sin \beta
 \end{align*}
 \]
 ~~~
@@ -36,10 +36,10 @@
 !related:
 \[
 \begin{align*}
-    \sin (\alpha + \beta) &= \sin \alpha \cos \beta + \cos \alpha \sin \beta \\
-    \sin (\alpha - \beta) &= \sin \alpha \cos \beta - \cos \alpha \sin \beta \\
-    \cos (\alpha + \beta) &= \cos \alpha \cos \beta - \sin \alpha \sin \beta \\
-    \cos (\alpha - \beta) &= \cos \alpha \cos \beta + \sin \alpha \sin \beta
+\sin (\alpha + \beta) &= \sin \alpha \cos \beta + \cos \alpha \sin \beta \\
+\sin (\alpha - \beta) &= \sin \alpha \cos \beta - \cos \alpha \sin \beta \\
+\cos (\alpha + \beta) &= \cos \alpha \cos \beta - \sin \alpha \sin \beta \\
+\cos (\alpha - \beta) &= \cos \alpha \cos \beta + \sin \alpha \sin \beta
 \end{align*}
 \]
 ~~~
@@ -50,10 +50,10 @@
 !related:
 \[
 \begin{align*}
-    \sin (\alpha + \beta) &= \sin \alpha \cos \beta + \cos \alpha \sin \beta \\
-    \sin (\alpha - \beta) &= \sin \alpha \cos \beta - \cos \alpha \sin \beta \\
-    \cos (\alpha + \beta) &= \cos \alpha \cos \beta - \sin \alpha \sin \beta \\
-    \cos (\alpha - \beta) &= \cos \alpha \cos \beta + \sin \alpha \sin \beta
+\sin (\alpha + \beta) &= \sin \alpha \cos \beta + \cos \alpha \sin \beta \\
+\sin (\alpha - \beta) &= \sin \alpha \cos \beta - \cos \alpha \sin \beta \\
+\cos (\alpha + \beta) &= \cos \alpha \cos \beta - \sin \alpha \sin \beta \\
+\cos (\alpha - \beta) &= \cos \alpha \cos \beta + \sin \alpha \sin \beta
 \end{align*}
 \]
 ~~~
@@ -64,8 +64,8 @@
 !related:
 \[
 \begin{align*}
-    \tan (\alpha + \beta) &= \frac{\tan \alpha + \tan \beta}{1 - \tan \alpha \tan \beta} \\
-    \tan (\alpha - \beta) &= \frac{\tan \alpha - \tan \beta}{1 + \tan \alpha \tan \beta}
+\tan (\alpha + \beta) &= \frac{\tan \alpha + \tan \beta}{1 - \tan \alpha \tan \beta} \\
+\tan (\alpha - \beta) &= \frac{\tan \alpha - \tan \beta}{1 + \tan \alpha \tan \beta}
 \end{align*}
 \]
 ~~~
@@ -76,8 +76,91 @@
 !related:
 \[
 \begin{align*}
-    \tan (\alpha + \beta) &= \frac{\tan \alpha + \tan \beta}{1 - \tan \alpha \tan \beta} \\
-    \tan (\alpha - \beta) &= \frac{\tan \alpha - \tan \beta}{1 + \tan \alpha \tan \beta}
+\tan (\alpha + \beta) &= \frac{\tan \alpha + \tan \beta}{1 - \tan \alpha \tan \beta} \\
+\tan (\alpha - \beta) &= \frac{\tan \alpha - \tan \beta}{1 + \tan \alpha \tan \beta}
+\end{align*}
+\]
+~~~
+
+!id: t9KssxdSSc
+!front: \[ \sin (2 \theta) \]
+!back: \[ 2 \sin \theta \cos \theta \]
+!related:
+\[
+\begin{align*}
+\sin (2 \theta) &= 2 \sin \theta \cos \theta \\[8pt]
+\cos (2 \theta) &= \cos^2 \theta - \sin^2 \theta = 1 - 2 \sin^2 \theta = 2 \cos^2 \theta - 1 \\[4pt]
+\tan (2 \theta) &= \dfrac{2 \tan \theta}{1 - \tan^2 \theta} = \frac{2}{\cot \theta - \tan \theta}
+\end{align*}
+\]
+~~~
+
+!id: aeqXcKvao0
+!front: \[ \cos (2 \theta) \]
+!back:
+\[ \cos^2 \theta - \sin^2 \theta \]
+\[ 1 - 2 \sin^2 \theta \]
+\[ 2 \cos^2 \theta - 1 \]
+!related:
+\[
+\begin{align*}
+\sin (2 \theta) &= 2 \sin \theta \cos \theta \\[8pt]
+\cos (2 \theta) &= \cos^2 \theta - \sin^2 \theta = 1 - 2 \sin^2 \theta = 2 \cos^2 \theta - 1 \\[4pt]
+\tan (2 \theta) &= \dfrac{2 \tan \theta}{1 - \tan^2 \theta} = \frac{2}{\cot \theta - \tan \theta}
+\end{align*}
+\]
+~~~
+
+!id: 7WYmjBDTz0
+!front: \[ \tan (2 \theta) \]
+!back:
+\[ \frac{2 \tan \theta}{1 - \tan^2 \theta} \]
+\[ \frac{2}{\cot \theta - \tan \theta} \]
+!related:
+\[
+\begin{align*}
+\sin (2 \theta) &= 2 \sin \theta \cos \theta \\[8pt]
+\cos (2 \theta) &= \cos^2 \theta - \sin^2 \theta = 1 - 2 \sin^2 \theta = 2 \cos^2 \theta - 1 \\[4pt]
+\tan (2 \theta) &= \dfrac{2 \tan \theta}{1 - \tan^2 \theta} = \frac{2}{\cot \theta - \tan \theta}
+\end{align*}
+\]
+~~~
+
+!id: wB2mTXY2QO
+!front: \[ \sin^2 \theta \]
+!back: \[ \frac{1 - \cos (2 \theta)}{2} \]
+!related:
+\[
+\begin{align*}
+\sin^2 \theta &= \frac{1 - \cos (2 \theta)}{2} \\
+\cos^2 \theta &= \frac{1 + \cos (2 \theta)}{2} \\
+\tan^2 \theta &= \frac{1 - \cos (2 \theta)}{1 + \cos (2 \theta)}
+\end{align*}
+\]
+~~~
+
+!id: dPXtwF6cC0
+!front: \[ \cos^2 \theta \]
+!back: \[ \frac{1 + \cos (2 \theta)}{2} \]
+!related:
+\[
+\begin{align*}
+\sin^2 \theta &= \frac{1 - \cos (2 \theta)}{2} \\
+\cos^2 \theta &= \frac{1 + \cos (2 \theta)}{2} \\
+\tan^2 \theta &= \frac{1 - \cos (2 \theta)}{1 + \cos (2 \theta)}
+\end{align*}
+\]
+~~~
+
+!id: zyDdsX7qFP
+!front: \[ \tan^2 \theta \]
+!back: \[ \frac{1 - \cos (2 \theta)}{1 + \cos (2 \theta)} \]
+!related:
+\[
+\begin{align*}
+\sin^2 \theta &= \frac{1 - \cos (2 \theta)}{2} \\
+\cos^2 \theta &= \frac{1 + \cos (2 \theta)}{2} \\
+\tan^2 \theta &= \frac{1 - \cos (2 \theta)}{1 + \cos (2 \theta)}
 \end{align*}
 \]
 ~~~
@@ -88,8 +171,9 @@
 !related:
 \[
 \begin{align*}
-    \sin \frac{\theta}{2} &= \pm \sqrt{ \frac{1 - \cos \theta}{2} } \\
-    \cos \frac{\theta}{2} &= \pm \sqrt{ \frac{1 + \cos \theta}{2} }
+\sin \frac{\theta}{2} &= \pm \sqrt{ \frac{1 - \cos \theta}{2} } \\
+\cos \frac{\theta}{2} &= \pm \sqrt{ \frac{1 + \cos \theta}{2} } \\
+\tan \frac{\theta}{2} &= \pm \sqrt{ \frac{1 - \cos \theta}{1 + \cos \theta} }
 \end{align*}
 \]
 ~~~
@@ -100,8 +184,9 @@
 !related:
 \[
 \begin{align*}
-    \sin \frac{\theta}{2} &= \pm \sqrt{ \frac{1 - \cos \theta}{2} } \\
-    \cos \frac{\theta}{2} &= \pm \sqrt{ \frac{1 + \cos \theta}{2} }
+\sin \frac{\theta}{2} &= \pm \sqrt{ \frac{1 - \cos \theta}{2} } \\
+\cos \frac{\theta}{2} &= \pm \sqrt{ \frac{1 + \cos \theta}{2} } \\
+\tan \frac{\theta}{2} &= \pm \sqrt{ \frac{1 - \cos \theta}{1 + \cos \theta} }
 \end{align*}
 \]
 ~~~
@@ -112,180 +197,17 @@
 \[ \pm \sqrt{ \frac{1 - \cos \theta}{1 + \cos \theta} } \]
 \[ \frac{\sin \theta}{1 + \cos \theta} \]
 \[ \frac{1 - \cos \theta}{\sin \theta} \]
-~~~
-
-!id: wB2mTXY2QO
-!front: \[ \sin^2 \theta \]
-!back: \[ \frac{1 - \cos 2 \theta}{2} \]
 !related:
 \[
 \begin{align*}
-    \sin^2 \theta &= \frac{1 - \cos 2 \theta}{2} \\
-    \cos^2 \theta &= \frac{1 + \cos 2 \theta}{2}
-\end{align*}
-\]
-~~~
-
-!id: dPXtwF6cC0
-!front: \[ \cos^2 \theta \]
-!back: \[ \frac{1 + \cos 2 \theta}{2} \]
-!related:
-\[
-\begin{align*}
-    \sin^2 \theta &= \frac{1 - \cos 2 \theta}{2} \\
-    \cos^2 \theta &= \frac{1 + \cos 2 \theta}{2}
-\end{align*}
-\]
-~~~
-
-!id: zyDdsX7qFP
-!front: \[ \tan^2 \theta \]
-!back: \[ \frac{1 - \cos 2 \theta}{1 + \cos 2 \theta} \]
-~~~
-
-!id: t9KssxdSSc
-!front: \[ \sin 2 \theta \]
-!back: \[ 2 \sin \theta \cos \theta \]
-~~~
-
-!id: aeqXcKvao0
-!front: \[ \cos 2 \theta \]
-!back:
-\[ \cos^2 \theta - \sin^2 \theta \]
-\[ 1 - 2 \sin^2 \theta \]
-\[ 2 \cos^2 \theta - 1 \]
-~~~
-
-!id: 7WYmjBDTz0
-!front: \[ \tan 2 \theta \]
-!back:
-\[ \frac{2 \tan \theta}{1 - \tan^2 \theta} \]
-\[ \frac{2}{\cot \theta - \tan \theta} \]
-~~~
-
-!id: c1edWh3oRU
-!front: \[ \sin \alpha \cdot \sin \beta \]
-!back: \[ \frac{1}{2} [ \cos (\alpha - \beta) - \cos (\alpha + \beta) ] \]
-!related:
-\[
-\begin{align*}
-    \sin \alpha \cdot \sin \beta &= \frac{1}{2} [ \cos (\alpha - \beta) - \cos (\alpha + \beta) ] \\
-    \cos \alpha \cdot \cos \beta &= \frac{1}{2} [ \cos (\alpha - \beta) + \cos (\alpha + \beta) ] \\
-    \sin \alpha \cdot \cos \beta &= \frac{1}{2} [ \sin (\alpha + \beta) + \sin (\alpha - \beta) ] \\
-    \cos \alpha \cdot \sin \beta &= \frac{1}{2} [ \sin (\alpha + \beta) - \sin (\alpha - \beta) ]
-\end{align*}
-\]
-~~~
-
-!id: ecTmmaoMRC
-!front: \[ \cos \alpha \cdot \cos \beta \]
-!back: \[ \frac{1}{2} [ \cos (\alpha - \beta) + \cos (\alpha + \beta) ] \]
-!related:
-\[
-\begin{align*}
-    \sin \alpha \cdot \sin \beta &= \frac{1}{2} [ \cos (\alpha - \beta) - \cos (\alpha + \beta) ] \\
-    \cos \alpha \cdot \cos \beta &= \frac{1}{2} [ \cos (\alpha - \beta) + \cos (\alpha + \beta) ] \\
-    \sin \alpha \cdot \cos \beta &= \frac{1}{2} [ \sin (\alpha + \beta) + \sin (\alpha - \beta) ] \\
-    \cos \alpha \cdot \sin \beta &= \frac{1}{2} [ \sin (\alpha + \beta) - \sin (\alpha - \beta) ]
-\end{align*}
-\]
-~~~
-
-!id: V5j1NnxAsV
-!front: \[ \sin \alpha \cdot \cos \beta \]
-!back: \[ \frac{1}{2} [ \sin (\alpha + \beta) + \sin (\alpha - \beta) ] \]
-!related:
-\[
-\begin{align*}
-    \sin \alpha \cdot \sin \beta &= \frac{1}{2} [ \cos (\alpha - \beta) - \cos (\alpha + \beta) ] \\
-    \cos \alpha \cdot \cos \beta &= \frac{1}{2} [ \cos (\alpha - \beta) + \cos (\alpha + \beta) ] \\
-    \sin \alpha \cdot \cos \beta &= \frac{1}{2} [ \sin (\alpha + \beta) + \sin (\alpha - \beta) ] \\
-    \cos \alpha \cdot \sin \beta &= \frac{1}{2} [ \sin (\alpha + \beta) - \sin (\alpha - \beta) ]
-\end{align*}
-\]
-~~~
-
-!id: gTtmkhsHN1
-!front: \[ \cos \alpha \cdot \sin \beta \]
-!back: \[ \frac{1}{2} [ \sin (\alpha + \beta) - \sin (\alpha - \beta) ] \]
-!related:
-\[
-\begin{align*}
-    \sin \alpha \cdot \sin \beta &= \frac{1}{2} [ \cos (\alpha - \beta) - \cos (\alpha + \beta) ] \\
-    \cos \alpha \cdot \cos \beta &= \frac{1}{2} [ \cos (\alpha - \beta) + \cos (\alpha + \beta) ] \\
-    \sin \alpha \cdot \cos \beta &= \frac{1}{2} [ \sin (\alpha + \beta) + \sin (\alpha - \beta) ] \\
-    \cos \alpha \cdot \sin \beta &= \frac{1}{2} [ \sin (\alpha + \beta) - \sin (\alpha - \beta) ]
-\end{align*}
-\]
-~~~
-
-!id: dnfZWTPZaM
-!front: \[ \sin \alpha + \sin \beta \]
-!back: \[ 2 \sin \left( \frac{\alpha + \beta}{2} \right) \cos \left( \frac{\alpha - \beta}{2} \right) \]
-!related:
-\[
-\begin{align*}
-    \sin \alpha + \sin \beta &= 2 \sin \left( \frac{\alpha + \beta}{2} \right) \cos \left( \frac{\alpha - \beta}{2} \right) \\
-    \sin \alpha - \sin \beta &= 2 \cos \left( \frac{\alpha + \beta}{2} \right) \sin \left( \frac{\alpha - \beta}{2} \right) \\
-    \cos \alpha + \cos \beta &= 2 \cos \left( \frac{\alpha + \beta}{2} \right) \cos \left( \frac{\alpha - \beta}{2} \right) \\
-    \cos \alpha - \cos \beta &= 2 \sin \left( \frac{\alpha + \beta}{2} \right) \sin \left( \frac{\alpha - \beta}{2} \right)
-\end{align*}
-\]
-~~~
-
-!id: dHuoiYUXzF
-!front: \[ \sin \alpha - \sin \beta \]
-!back: \[ 2 \cos \left( \frac{\alpha + \beta}{2} \right) \sin \left( \frac{\alpha - \beta}{2} \right) \]
-!related:
-\[
-\begin{align*}
-    \sin \alpha + \sin \beta &= 2 \sin \left( \frac{\alpha + \beta}{2} \right) \cos \left( \frac{\alpha - \beta}{2} \right) \\
-    \sin \alpha - \sin \beta &= 2 \cos \left( \frac{\alpha + \beta}{2} \right) \sin \left( \frac{\alpha - \beta}{2} \right) \\
-    \cos \alpha + \cos \beta &= 2 \cos \left( \frac{\alpha + \beta}{2} \right) \cos \left( \frac{\alpha - \beta}{2} \right) \\
-    \cos \alpha - \cos \beta &= 2 \sin \left( \frac{\alpha + \beta}{2} \right) \sin \left( \frac{\alpha - \beta}{2} \right)
-\end{align*}
-\]
-~~~
-
-!id: pzKbfBNuyY
-!front: \[ \cos \alpha + \cos \beta \]
-!back: \[ 2 \cos \left( \frac{\alpha + \beta}{2} \right) \cos \left( \frac{\alpha - \beta}{2} \right) \]
-!related:
-\[
-\begin{align*}
-    \sin \alpha + \sin \beta &= 2 \sin \left( \frac{\alpha + \beta}{2} \right) \cos \left( \frac{\alpha - \beta}{2} \right) \\
-    \sin \alpha - \sin \beta &= 2 \cos \left( \frac{\alpha + \beta}{2} \right) \sin \left( \frac{\alpha - \beta}{2} \right) \\
-    \cos \alpha + \cos \beta &= 2 \cos \left( \frac{\alpha + \beta}{2} \right) \cos \left( \frac{\alpha - \beta}{2} \right) \\
-    \cos \alpha - \cos \beta &= 2 \sin \left( \frac{\alpha + \beta}{2} \right) \sin \left( \frac{\alpha - \beta}{2} \right)
-\end{align*}
-\]
-~~~
-
-!id: D1WyYge8W3
-!front: \[ \cos \alpha - \cos \beta \]
-!back: \[ 2 \sin \left( \frac{\alpha + \beta}{2} \right) \sin \left( \frac{\alpha - \beta}{2} \right) \]
-!related:
-\[
-\begin{align*}
-    \sin \alpha + \sin \beta &= 2 \sin \left( \frac{\alpha + \beta}{2} \right) \cos \left( \frac{\alpha - \beta}{2} \right) \\
-    \sin \alpha - \sin \beta &= 2 \cos \left( \frac{\alpha + \beta}{2} \right) \sin \left( \frac{\alpha - \beta}{2} \right) \\
-    \cos \alpha + \cos \beta &= 2 \cos \left( \frac{\alpha + \beta}{2} \right) \cos \left( \frac{\alpha - \beta}{2} \right) \\
-    \cos \alpha - \cos \beta &= 2 \sin \left( \frac{\alpha + \beta}{2} \right) \sin \left( \frac{\alpha - \beta}{2} \right)
+\sin \frac{\theta}{2} &= \pm \sqrt{ \frac{1 - \cos \theta}{2} } \\
+\cos \frac{\theta}{2} &= \pm \sqrt{ \frac{1 + \cos \theta}{2} } \\
+\tan \frac{\theta}{2} &= \pm \sqrt{ \frac{1 - \cos \theta}{1 + \cos \theta} }
 \end{align*}
 \]
 ~~~
 
 !type: Basic Math
-
-!id: LZMWkazona
-!front: \[ \arcsin(x) + \arccos(x) = \ldots \]
-!back: \[ \arcsin(x) + \arccos(x) = \frac{\pi}{2} \quad x \in [-1, 1] \]
-~~~
-
-!id: Y5EsO5x2IB
-!front: \[ \arctan(x) + \text{arccot}(x) = \ldots \]
-!back: \[ \arctan(x) + \text{arccot}(x) = \frac{\pi}{2} \quad x \in \mathbb{R} \]
-~~~
 
 !id: jeMs0AsHIP
 !front: \[ \cos(\arcsin x) = \ldots \]

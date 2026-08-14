@@ -1,0 +1,223 @@
+!deck: Math Identities (Cloze)
+!tags: Math Calculus Identity Laplace-Transform
+!type: Cloze Math
+
+!id: QTvuUZHeoc
+!text: \[ \mathscr{L} \{ {{c2::1::\ldots}} \} = {{c1::\frac{1}{s}::\ldots}} \]
+~~~
+
+!id: iXsVLLDXns
+!text: \[ \mathscr{L} \{ {{c2::t^n::\ldots}} \}, \, {{c2::n = 1, 2, 3, \ldots::\ldots}} = {{c1::\frac{n!}{ s^{n + 1} }::\ldots}} \]
+~~~
+
+!id: PvgQ6jEvcc
+!text: \[ \mathscr{L} \{ {{c2::\sin(at)::\ldots}} \} = {{c1::\frac{a}{s^2 + a^2}::\ldots}} \]
+!related:
+\[
+\begin{align*}
+\mathscr{L} \{ \sin(at) \} &= \frac{a}{s^2 + a^2} \\
+\mathscr{L} \{ \cos(at) \} &= \frac{s}{s^2 + a^2} \\
+\mathscr{L} \{ \sinh(at) \} &= \frac{a}{s^2 - a^2} \\
+\mathscr{L} \{ \cosh(at) \} &= \frac{s}{s^2 - a^2}
+\end{align*}
+\]
+~~~
+
+!id: KxBr2RjOR9
+!text: \[ \mathscr{L} \{ {{c2::\cos(at)::\ldots}} \} = {{c1::\frac{s}{s^2 + a^2}::\ldots}} \]
+!related:
+\[
+\begin{align*}
+\mathscr{L} \{ \sin(at) \} &= \frac{a}{s^2 + a^2} \\
+\mathscr{L} \{ \cos(at) \} &= \frac{s}{s^2 + a^2} \\
+\mathscr{L} \{ \sinh(at) \} &= \frac{a}{s^2 - a^2} \\
+\mathscr{L} \{ \cosh(at) \} &= \frac{s}{s^2 - a^2}
+\end{align*}
+\]
+~~~
+
+!id: JbxidpgYmY
+!text: \[ \mathscr{L} \{ {{c2::\sin(at + b)::\ldots}} \} = {{c1::\frac{s \sin(b) + a \cos(b)}{s^2 + a^2}::\ldots}} \]
+!related:
+\[
+\begin{align*}
+\mathscr{L} \{ \sin(at + b) \} &= \frac{s \sin(b) + a \cos(b)}{s^2 + a^2} \\
+\mathscr{L} \{ \cos(at + b) \} &= \frac{s \cos(b) - a \sin(b)}{s^2 + a^2}
+\end{align*}
+\]
+~~~
+
+!id: 0m5XTDb891
+!text: \[ \mathscr{L} \{ {{c2::\cos(at + b)::\ldots}} \} = {{c1::\frac{s \cos(b) - a \sin(b)}{s^2 + a^2}::\ldots}} \]
+!related:
+\[
+\begin{align*}
+\mathscr{L} \{ \sin(at + b) \} &= \frac{s \sin(b) + a \cos(b)}{s^2 + a^2} \\
+\mathscr{L} \{ \cos(at + b) \} &= \frac{s \cos(b) - a \sin(b)}{s^2 + a^2}
+\end{align*}
+\]
+~~~
+
+!id: pA5dGLSWi3
+!text: \[ \mathscr{L} \{ {{c2::t \sin(at)::\ldots}} \} = {{c1::\frac{2as}{(s^2 + a^2)^2}::\ldots}} \]
+!related:
+\[
+\begin{align*}
+\mathscr{L} \{ t \sin(at) \} &= \frac{2as}{(s^2 + a^2)^2} \\
+\mathscr{L} \{ t \cos(at) \} &= \frac{s^2 - a^2}{(s^2 + a^2)^2}
+\end{align*}
+\]
+~~~
+
+!id: BUJlGZQHIW
+!text: \[ \mathscr{L} \{ {{c2::t \cos(at)::\ldots}} \} = {{c1::\frac{s^2 - a^2}{(s^2 + a^2)^2}::\ldots}} \]
+!related:
+\[
+\begin{align*}
+\mathscr{L} \{ t \sin(at) \} &= \frac{2as}{(s^2 + a^2)^2} \\
+\mathscr{L} \{ t \cos(at) \} &= \frac{s^2 - a^2}{(s^2 + a^2)^2}
+\end{align*}
+\]
+~~~
+
+!id: kne3zkT8gZ
+!text: \[ \mathscr{L} \{ {{c2::\sinh(at)::\ldots}} \} = {{c1::\frac{a}{s^2 - a^2}::\ldots}} \]
+!related:
+\[
+\begin{align*}
+\mathscr{L} \{ \sin(at) \} &= \frac{a}{s^2 + a^2} \\
+\mathscr{L} \{ \cos(at) \} &= \frac{s}{s^2 + a^2} \\
+\mathscr{L} \{ \sinh(at) \} &= \frac{a}{s^2 - a^2} \\
+\mathscr{L} \{ \cosh(at) \} &= \frac{s}{s^2 - a^2}
+\end{align*}
+\]
+~~~
+
+!id: VdLnoL7O7p
+!text: \[ \mathscr{L} \{ {{c2::\cosh(at)::\ldots}} \} = {{c1::\frac{s}{s^2 - a^2}::\ldots}} \]
+!related:
+\[
+\begin{align*}
+\mathscr{L} \{ \sin(at) \} &= \frac{a}{s^2 + a^2} \\
+\mathscr{L} \{ \cos(at) \} &= \frac{s}{s^2 + a^2} \\
+\mathscr{L} \{ \sinh(at) \} &= \frac{a}{s^2 - a^2} \\
+\mathscr{L} \{ \cosh(at) \} &= \frac{s}{s^2 - a^2}
+\end{align*}
+\]
+~~~
+
+!id: fdOn6cVnzl
+!text: \[ \mathscr{L} \{ {{c2::e^{ct}::\ldots}} \} = {{c1::\frac{1}{s - c}::\ldots}} \]
+!back extra: First shifting property.
+~~~
+
+!id: w1LANadzEm
+!text: \[ \mathscr{L} \{ {{c2::e^{ct} t^n::\ldots}} \}, \, {{c2::n = 1, 2, 3, \ldots::\ldots}} = {{c1::\frac{n!}{ (s - c)^{n + 1} }::\ldots}} \]
+!back extra: First shifting property.
+~~~
+
+!id: 7o3R4MwOB9
+!text: \[ \mathscr{L} \{ {{c2::e^{ct} \sin(at)::\ldots}} \} = {{c1::\frac{a}{(s - c)^2 + a^2}::\ldots}} \]
+!back extra: First shifting property.
+!related:
+\[
+\begin{align*}
+\mathscr{L} \{ e^{ct} \sin(at) \} &= \frac{a}{(s - c)^2 + a^2} \\
+\mathscr{L} \{ e^{ct} \cos(at) \} &= \frac{s - c}{(s - c)^2 + a^2} \\
+\mathscr{L} \{ e^{ct} \sinh(at) \} &= \frac{a}{(s - c)^2 - a^2} \\
+\mathscr{L} \{ e^{ct} \cosh(at) \} &= \frac{s - c}{(s - c)^2 - a^2}
+\end{align*}
+\]
+~~~
+
+!id: xbx26KkwSa
+!text: \[ \mathscr{L} \{ {{c2::e^{ct} \cos(at)::\ldots}} \} = {{c1::\frac{s - c}{(s - c)^2 + a^2}::\ldots}} \]
+!back extra: First shifting property.
+!related:
+\[
+\begin{align*}
+\mathscr{L} \{ e^{ct} \sin(at) \} &= \frac{a}{(s - c)^2 + a^2} \\
+\mathscr{L} \{ e^{ct} \cos(at) \} &= \frac{s - c}{(s - c)^2 + a^2} \\
+\mathscr{L} \{ e^{ct} \sinh(at) \} &= \frac{a}{(s - c)^2 - a^2} \\
+\mathscr{L} \{ e^{ct} \cosh(at) \} &= \frac{s - c}{(s - c)^2 - a^2}
+\end{align*}
+\]
+~~~
+
+!id: O2F8QMgJ7A
+!text: \[ \mathscr{L} \{ {{c2::e^{ct} \sinh(at)::\ldots}} \} = {{c1::\frac{a}{(s - c)^2 - a^2}::\ldots}} \]
+!back extra: First shifting property.
+!related:
+\[
+\begin{align*}
+\mathscr{L} \{ e^{ct} \sin(at) \} &= \frac{a}{(s - c)^2 + a^2} \\
+\mathscr{L} \{ e^{ct} \cos(at) \} &= \frac{s - c}{(s - c)^2 + a^2} \\
+\mathscr{L} \{ e^{ct} \sinh(at) \} &= \frac{a}{(s - c)^2 - a^2} \\
+\mathscr{L} \{ e^{ct} \cosh(at) \} &= \frac{s - c}{(s - c)^2 - a^2}
+\end{align*}
+\]
+~~~
+
+!id: eyfqRjb5lb
+!text: \[ \mathscr{L} \{ {{c2::e^{ct} \cosh(at)::\ldots}} \} = {{c1::\frac{s - c}{(s - c)^2 - a^2}::\ldots}} \]
+!back extra: First shifting property.
+!related:
+\[
+\begin{align*}
+\mathscr{L} \{ e^{ct} \sin(at) \} &= \frac{a}{(s - c)^2 + a^2} \\
+\mathscr{L} \{ e^{ct} \cos(at) \} &= \frac{s - c}{(s - c)^2 + a^2} \\
+\mathscr{L} \{ e^{ct} \sinh(at) \} &= \frac{a}{(s - c)^2 - a^2} \\
+\mathscr{L} \{ e^{ct} \cosh(at) \} &= \frac{s - c}{(s - c)^2 - a^2}
+\end{align*}
+\]
+~~~
+
+!id: 5Yyk0c34WV
+!text: \[ \mathscr{L} \{ {{c2::e^{ct} f(t)::\ldots}} \} = {{c1::F(s - c)::\ldots}} \]
+!back extra: First shifting property.
+~~~
+
+!id: eWZVpXHZHT
+!text: \[ \mathscr{L} \{ {{c2::\delta (t - c)::\ldots}} \}, \quad {{c2::c \ge 0::\ldots}} = {{c1::e^{-cs}::\ldots}} \]
+!back extra: Second shifting property.
+!related:
+\[
+\begin{align*}
+\mathscr{L} \{ \delta (t - c) \} &= e^{-cs} \\
+\mathscr{L} \{ u(t - c) \} &= e^{-cs} \frac{1}{s}
+\end{align*}
+\]
+~~~
+
+!id: zPCcs1lXNy
+!text: \[ \mathscr{L} \{ {{c2::u(t - c)::\ldots}} \}, \quad {{c2::c \ge 0::\ldots}} = {{c1::e^{-cs} \frac{1}{s}::\ldots}} \]
+!back extra: Second shifting property.
+!related:
+\[
+\begin{align*}
+\mathscr{L} \{ \delta (t - c) \} &= e^{-cs} \\
+\mathscr{L} \{ u(t - c) \} &= e^{-cs} \frac{1}{s}
+\end{align*}
+\]
+~~~
+
+!id: adMtfr9qBK
+!text: \[ \mathscr{L} \{ {{c2::u(t - c) f(t - c)::\ldots}} \}, \quad {{c2::c \ge 0::\ldots}} = {{c1::e^{-cs} F(s)::\ldots}} \]
+!back extra: Second shifting property.
+~~~
+
+!id: B21mgFJd11
+!text: \[ \mathscr{L} \left\{ {{c2::\frac{f(t)}{t}::\ldots}} \right\} = {{c1::\int_{s}^{\infty} F(u) \, du::\ldots}} \]
+~~~
+
+!id: UFaxrl14aM
+!text: \[ \mathscr{L} \left\{ {{c2::\int_{0}^{t} f(u) \, du::\ldots}} \right\} = {{c1::\frac{F(s)}{s}::\ldots}} \]
+~~~
+
+!id: J3EhdjUjZz
+!text: \[ \mathscr{L} \{ {{c2::f'(t)::\ldots}} \} = {{c1::s F(s) - f(0)::\ldots}} \]
+~~~
+
+!id: P2i1umjr8F
+!text: \[ \mathscr{L} \{ {{c2::f''(t)::\ldots}} \} = {{c1::s^2 F(s) - s f(0) - f'(0)::\ldots}} \]
+~~~

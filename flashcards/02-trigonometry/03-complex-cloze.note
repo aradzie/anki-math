@@ -1,0 +1,47 @@
+!deck: Math Identities (Cloze)
+!tags: Math Trigonometric Hyperbolic Identity
+!type: Cloze Math
+
+!id: zvAyOSCTQW
+!text:
+\[
+{{c2::e^{ix}::\ldots}}
+=
+{{c1::\cos x + i \sin x::\ldots}}
+\]
+
+Euler's Formula
+~~~
+
+!id: Rjr9k6j6ba
+!text:
+\[
+{{c2::e^{-ix}::\ldots}}
+=
+{{c1::\cos x - i \sin x::\ldots}}
+\]
+
+Euler's Formula
+~~~
+
+!id: inJ6BD8ofs
+!text:
+\[
+{{c2::\left( \cos(x) + i \sin(x) \right)^n::\ldots}}
+=
+{{c1::\cos(nx) + i \sin(nx)::\ldots}}
+\]
+
+De Moivre's Formula
+~~~
+
+!id: kYCiPlxK4A
+!text:
+\[
+{{c2::\left( \cosh(x) + i \sinh(x) \right)^n::\ldots}}
+=
+{{c1::\cosh(nx) + i \sinh(nx)::\ldots}}
+\]
+
+De Moivre's Formula
+~~~

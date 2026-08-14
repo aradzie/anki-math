@@ -1,6 +1,6 @@
-!type: Basic Math (and reversed card)
-!deck: Math
+!deck: Math Identities
 !tags: Math Calculus Identity Laplace-Transform
+!type: Basic Math (and reversed card)
 
 !id: NZYddeTg9i
 !front: \[ \mathscr{L} \{ 1 \} \]
@@ -18,10 +18,10 @@
 !related:
 \[
 \begin{align*}
-    \mathscr{L} \{ \sin(at) \} &= \frac{a}{s^2 + a^2} \\
-    \mathscr{L} \{ \cos(at) \} &= \frac{s}{s^2 + a^2} \\
-    \mathscr{L} \{ \sinh(at) \} &= \frac{a}{s^2 - a^2} \\
-    \mathscr{L} \{ \cosh(at) \} &= \frac{s}{s^2 - a^2}
+\mathscr{L} \{ \sin(at) \} &= \frac{a}{s^2 + a^2} \\
+\mathscr{L} \{ \cos(at) \} &= \frac{s}{s^2 + a^2} \\
+\mathscr{L} \{ \sinh(at) \} &= \frac{a}{s^2 - a^2} \\
+\mathscr{L} \{ \cosh(at) \} &= \frac{s}{s^2 - a^2}
 \end{align*}
 \]
 ~~~
@@ -32,10 +32,10 @@
 !related:
 \[
 \begin{align*}
-    \mathscr{L} \{ \sin(at) \} &= \frac{a}{s^2 + a^2} \\
-    \mathscr{L} \{ \cos(at) \} &= \frac{s}{s^2 + a^2} \\
-    \mathscr{L} \{ \sinh(at) \} &= \frac{a}{s^2 - a^2} \\
-    \mathscr{L} \{ \cosh(at) \} &= \frac{s}{s^2 - a^2}
+\mathscr{L} \{ \sin(at) \} &= \frac{a}{s^2 + a^2} \\
+\mathscr{L} \{ \cos(at) \} &= \frac{s}{s^2 + a^2} \\
+\mathscr{L} \{ \sinh(at) \} &= \frac{a}{s^2 - a^2} \\
+\mathscr{L} \{ \cosh(at) \} &= \frac{s}{s^2 - a^2}
 \end{align*}
 \]
 ~~~
@@ -66,10 +66,10 @@
 !related:
 \[
 \begin{align*}
-    \mathscr{L} \{ \sin(at) \} &= \frac{a}{s^2 + a^2} \\
-    \mathscr{L} \{ \cos(at) \} &= \frac{s}{s^2 + a^2} \\
-    \mathscr{L} \{ \sinh(at) \} &= \frac{a}{s^2 - a^2} \\
-    \mathscr{L} \{ \cosh(at) \} &= \frac{s}{s^2 - a^2}
+\mathscr{L} \{ \sin(at) \} &= \frac{a}{s^2 + a^2} \\
+\mathscr{L} \{ \cos(at) \} &= \frac{s}{s^2 + a^2} \\
+\mathscr{L} \{ \sinh(at) \} &= \frac{a}{s^2 - a^2} \\
+\mathscr{L} \{ \cosh(at) \} &= \frac{s}{s^2 - a^2}
 \end{align*}
 \]
 ~~~
@@ -80,10 +80,10 @@
 !related:
 \[
 \begin{align*}
-    \mathscr{L} \{ \sin(at) \} &= \frac{a}{s^2 + a^2} \\
-    \mathscr{L} \{ \cos(at) \} &= \frac{s}{s^2 + a^2} \\
-    \mathscr{L} \{ \sinh(at) \} &= \frac{a}{s^2 - a^2} \\
-    \mathscr{L} \{ \cosh(at) \} &= \frac{s}{s^2 - a^2}
+\mathscr{L} \{ \sin(at) \} &= \frac{a}{s^2 + a^2} \\
+\mathscr{L} \{ \cos(at) \} &= \frac{s}{s^2 + a^2} \\
+\mathscr{L} \{ \sinh(at) \} &= \frac{a}{s^2 - a^2} \\
+\mathscr{L} \{ \cosh(at) \} &= \frac{s}{s^2 - a^2}
 \end{align*}
 \]
 ~~~
@@ -104,10 +104,10 @@
 !related:
 \[
 \begin{align*}
-    \mathscr{L} \{ e^{ct} \sin(at) \} &= \frac{a}{(s - c)^2 + a^2} \\
-    \mathscr{L} \{ e^{ct} \cos(at) \} &= \frac{s - c}{(s - c)^2 + a^2} \\
-    \mathscr{L} \{ e^{ct} \sinh(at) \} &= \frac{a}{(s - c)^2 - a^2} \\
-    \mathscr{L} \{ e^{ct} \cosh(at) \} &= \frac{s - c}{(s - c)^2 - a^2}
+\mathscr{L} \{ e^{ct} \sin(at) \} &= \frac{a}{(s - c)^2 + a^2} \\
+\mathscr{L} \{ e^{ct} \cos(at) \} &= \frac{s - c}{(s - c)^2 + a^2} \\
+\mathscr{L} \{ e^{ct} \sinh(at) \} &= \frac{a}{(s - c)^2 - a^2} \\
+\mathscr{L} \{ e^{ct} \cosh(at) \} &= \frac{s - c}{(s - c)^2 - a^2}
 \end{align*}
 \]
 ~~~
@@ -118,10 +118,10 @@
 !related:
 \[
 \begin{align*}
-    \mathscr{L} \{ e^{ct} \sin(at) \} &= \frac{a}{(s - c)^2 + a^2} \\
-    \mathscr{L} \{ e^{ct} \cos(at) \} &= \frac{s - c}{(s - c)^2 + a^2} \\
-    \mathscr{L} \{ e^{ct} \sinh(at) \} &= \frac{a}{(s - c)^2 - a^2} \\
-    \mathscr{L} \{ e^{ct} \cosh(at) \} &= \frac{s - c}{(s - c)^2 - a^2}
+\mathscr{L} \{ e^{ct} \sin(at) \} &= \frac{a}{(s - c)^2 + a^2} \\
+\mathscr{L} \{ e^{ct} \cos(at) \} &= \frac{s - c}{(s - c)^2 + a^2} \\
+\mathscr{L} \{ e^{ct} \sinh(at) \} &= \frac{a}{(s - c)^2 - a^2} \\
+\mathscr{L} \{ e^{ct} \cosh(at) \} &= \frac{s - c}{(s - c)^2 - a^2}
 \end{align*}
 \]
 ~~~
@@ -132,10 +132,10 @@
 !related:
 \[
 \begin{align*}
-    \mathscr{L} \{ e^{ct} \sin(at) \} &= \frac{a}{(s - c)^2 + a^2} \\
-    \mathscr{L} \{ e^{ct} \cos(at) \} &= \frac{s - c}{(s - c)^2 + a^2} \\
-    \mathscr{L} \{ e^{ct} \sinh(at) \} &= \frac{a}{(s - c)^2 - a^2} \\
-    \mathscr{L} \{ e^{ct} \cosh(at) \} &= \frac{s - c}{(s - c)^2 - a^2}
+\mathscr{L} \{ e^{ct} \sin(at) \} &= \frac{a}{(s - c)^2 + a^2} \\
+\mathscr{L} \{ e^{ct} \cos(at) \} &= \frac{s - c}{(s - c)^2 + a^2} \\
+\mathscr{L} \{ e^{ct} \sinh(at) \} &= \frac{a}{(s - c)^2 - a^2} \\
+\mathscr{L} \{ e^{ct} \cosh(at) \} &= \frac{s - c}{(s - c)^2 - a^2}
 \end{align*}
 \]
 ~~~
@@ -146,10 +146,10 @@
 !related:
 \[
 \begin{align*}
-    \mathscr{L} \{ e^{ct} \sin(at) \} &= \frac{a}{(s - c)^2 + a^2} \\
-    \mathscr{L} \{ e^{ct} \cos(at) \} &= \frac{s - c}{(s - c)^2 + a^2} \\
-    \mathscr{L} \{ e^{ct} \sinh(at) \} &= \frac{a}{(s - c)^2 - a^2} \\
-    \mathscr{L} \{ e^{ct} \cosh(at) \} &= \frac{s - c}{(s - c)^2 - a^2}
+\mathscr{L} \{ e^{ct} \sin(at) \} &= \frac{a}{(s - c)^2 + a^2} \\
+\mathscr{L} \{ e^{ct} \cos(at) \} &= \frac{s - c}{(s - c)^2 + a^2} \\
+\mathscr{L} \{ e^{ct} \sinh(at) \} &= \frac{a}{(s - c)^2 - a^2} \\
+\mathscr{L} \{ e^{ct} \cosh(at) \} &= \frac{s - c}{(s - c)^2 - a^2}
 \end{align*}
 \]
 ~~~
@@ -165,8 +165,8 @@
 !related:
 \[
 \begin{align*}
-    \mathscr{L} \{ \delta (t - c) \} &= e^{-cs} \\
-    \mathscr{L} \{ u(t - c) \} &= e^{-cs} \frac{1}{s}
+\mathscr{L} \{ \delta (t - c) \} &= e^{-cs} \\
+\mathscr{L} \{ u(t - c) \} &= e^{-cs} \frac{1}{s}
 \end{align*}
 \]
 ~~~
@@ -177,8 +177,8 @@
 !related:
 \[
 \begin{align*}
-    \mathscr{L} \{ \delta (t - c) \} &= e^{-cs} \\
-    \mathscr{L} \{ u(t - c) \} &= e^{-cs} \frac{1}{s}
+\mathscr{L} \{ \delta (t - c) \} &= e^{-cs} \\
+\mathscr{L} \{ u(t - c) \} &= e^{-cs} \frac{1}{s}
 \end{align*}
 \]
 ~~~
