@@ -4,44 +4,89 @@
 
 !id: 8voSey2Uah
 !front: \[ \sinh x = \ldots \]
-!back: \[ \sinh x = \frac{e^{x} - e^{-x}}{2} \]
+!back:
+\[ \sinh x = \frac{e^{x} - e^{-x}}{2} \]
+
+\[ \sinh : \mathbb{R} \to \mathbb{R} \]
+
+![The graph of sinh x as the sum of two dashed gray exponential halves, e^x/2 and -e^{-x}/2; at a sample point x0, a labeled arrow shows the second half added onto the first landing exactly on sinh(x0)](img/sinh.svg)
 ~~~
 
 !id: ad35P6eyOc
 !front: \[ \cosh x = \ldots \]
-!back: \[ \cosh x = \frac{e^{x} + e^{-x}}{2} \]
+!back:
+\[ \cosh x = \frac{e^{x} + e^{-x}}{2} \]
+
+\[ \cosh : \mathbb{R} \to [1, \infty) \]
+
+![The graph of cosh x as the sum of two dashed gray exponential halves, e^x/2 and e^{-x}/2; at a sample point x0, a labeled arrow shows the second half added onto the first landing exactly on cosh(x0)](img/cosh.svg)
 ~~~
 
 !id: uig6j7os9C
 !front: \[ \tanh x = \ldots \]
-!back: \[ \tanh x = \frac{e^{x} - e^{-x}}{e^{x} + e^{-x}} \]
+!back:
+\[ \tanh x = \frac{e^{x} - e^{-x}}{e^{x} + e^{-x}} \]
+
+\[ \tanh : \mathbb{R} \to (-1, 1) \]
+
+![The graph of tanh x, an S-shaped curve through the origin bounded between the horizontal asymptotes y=1 and y=-1](img/tanh.svg)
+~~~
+
+!id: xaYnsxDzCt
+!front: \[ \coth x = \ldots \]
+!back:
+\[ \coth x = \frac{e^{x} + e^{-x}}{e^{x} - e^{-x}} \]
+
+\[ \coth : \mathbb{R} \setminus \{0\} \to (-\infty, -1) \cup (1, \infty) \]
+
+![The graph of coth x, two branches separated by a vertical asymptote at x=0, each approaching a horizontal asymptote: y=1 on the right and y=-1 on the left](img/coth.svg)
+~~~
+
+!id: KjKcykS0aD
+!front: \[ \operatorname{sech} x = \ldots \]
+!back:
+\[ \operatorname{sech} x = \frac{2}{e^{x} + e^{-x}} \]
+
+\[ \operatorname{sech} : \mathbb{R} \to (0, 1] \]
+
+![The graph of sech x, a bell-shaped curve attaining its maximum value 1 at x=0 and approaching the horizontal asymptote y=0 as x tends to infinity](img/sech.svg)
+~~~
+
+!id: 2m7og5wYNu
+!front: \[ \operatorname{csch} x = \ldots \]
+!back:
+\[ \operatorname{csch} x = \frac{2}{e^{x} - e^{-x}} \]
+
+\[ \operatorname{csch} : \mathbb{R} \setminus \{0\} \to \mathbb{R} \setminus \{0\} \]
+
+![The graph of csch x, two branches separated by a vertical asymptote at x=0, each approaching the horizontal asymptote y=0](img/csch.svg)
 ~~~
 
 !id: qYhRAq3NBi
 !front:
 \[ \sin x = \ldots \]
-Express as a hyperbolic function
+Express as a hyperbolic function.
 !back: \[ \sin x = -i \sinh(ix) = \frac{e^{ix} - e^{-ix}}{2i} \]
 ~~~
 
 !id: voH2IfCt8i
 !front:
 \[ \sinh x = \ldots \]
-Express as a trigonometric function
+Express as a trigonometric function.
 !back: \[ \sinh x = -i \sin(ix) = \frac{e^{x} - e^{-x}}{2} \]
 ~~~
 
 !id: fZRa4zHtQP
 !front:
 \[ \cos x = \ldots \]
-Express as a hyperbolic function
+Express as a hyperbolic function.
 !back: \[ \cos x = \cosh(ix) = \frac{e^{ix} + e^{-ix}}{2} \]
 ~~~
 
 !id: 6OO4usEe5B
 !front:
 \[ \cosh x = \ldots \]
-Express as a trigonometric function
+Express as a trigonometric function.
 !back: \[ \cosh x = \cos(ix) = \frac{e^{x} + e^{-x}}{2} \]
 ~~~
 
@@ -59,20 +104,32 @@ Express as a trigonometric function
 
 !id: stZDV6T4Dx
 !front: \[ \operatorname{arcsinh}(x) = \ldots \]
-!back: \[ \operatorname{arcsinh}(x) = \ln\left(x + \sqrt{x^2 + 1}\right) \]
+!back:
+\[ \operatorname{arcsinh}(x) = \ln\left(x + \sqrt{x^2 + 1}\right), \quad x \in \mathbb{R} \]
+
+\[ \operatorname{arcsinh} : \mathbb{R} \to \mathbb{R} \]
 ~~~
 
 !id: ZYwuMHDjy8
 !front: \[ \operatorname{arccosh}(x) = \ldots \]
-!back: \[ \operatorname{arccosh}(x) = \ln\left(x + \sqrt{x^2 - 1}\right) \]
+!back:
+\[ \operatorname{arccosh}(x) = \ln\left(x + \sqrt{x^2 - 1}\right), \quad x \ge 1 \]
+
+\[ \operatorname{arccosh} : [1, \infty) \to [0, \infty) \]
 ~~~
 
 !id: 1uowf5g6OS
 !front: \[ \operatorname{arctanh}(x) = \ldots \]
-!back: \[ \operatorname{arctanh}(x) = \frac{1}{2}\ln\left(\frac{1 + x}{1 - x}\right), \quad |x| < 1 \]
+!back:
+\[ \operatorname{arctanh}(x) = \frac{1}{2}\ln\left(\frac{1 + x}{1 - x}\right), \quad |x| < 1 \]
+
+\[ \operatorname{arctanh} : (-1, 1) \to \mathbb{R} \]
 ~~~
 
 !id: CAuc2adqQ4
 !front: \[ \operatorname{arccoth}(x) = \ldots \]
-!back: \[ \operatorname{arccoth}(x) = \frac{1}{2}\ln\left(\frac{x + 1}{x - 1}\right), \quad |x| > 1 \]
+!back:
+\[ \operatorname{arccoth}(x) = \frac{1}{2}\ln\left(\frac{x + 1}{x - 1}\right), \quad |x| > 1 \]
+
+\[ \operatorname{arccoth} : (-\infty, -1) \cup (1, \infty) \to \mathbb{R} \setminus \{0\} \]
 ~~~

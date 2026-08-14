@@ -11,6 +11,8 @@
 =
 {{c2::-i \sin(ix)::\ldots}}
 \]
+\[ {{c4::\sinh : \mathbb{R} \to \mathbb{R}::\ldots\text{domain range}\ldots }}\]
+!back extra: ![The graph of sinh x as the sum of two dashed gray exponential halves, e^x/2 and -e^{-x}/2; at a sample point x0, a labeled arrow shows the second half added onto the first landing exactly on sinh(x0)](img/sinh.svg)
 ~~~
 
 !id: Bb9p3BteYW
@@ -33,6 +35,8 @@
 =
 {{c2::\cos(ix)::\ldots}}
 \]
+\[ {{c4::\cosh : \mathbb{R} \to [1, \infty)::\ldots\text{domain range}\ldots }}\]
+!back extra: ![The graph of cosh x as the sum of two dashed gray exponential halves, e^x/2 and e^{-x}/2; at a sample point x0, a labeled arrow shows the second half added onto the first landing exactly on cosh(x0)](img/cosh.svg)
 ~~~
 
 !id: S18j80rrx9
@@ -55,6 +59,8 @@
 =
 {{c2::-i \tan(ix)::\ldots}}
 \]
+\[ {{c4::\tanh : \mathbb{R} \to (-1, 1)::\ldots\text{domain range}\ldots }}\]
+!back extra: ![The graph of tanh x, an S-shaped curve through the origin bounded between the horizontal asymptotes y=1 and y=-1](img/tanh.svg)
 ~~~
 
 !id: 2NuE6xEcZ6
@@ -126,6 +132,7 @@
 =
 {{c1::\ln\left(x + \sqrt{x^2 + 1}\right), \quad x \in \mathbb{R}::\ldots}}
 \]
+!back extra: \[ \operatorname{arcsinh} : \mathbb{R} \to \mathbb{R} \]
 ~~~
 
 !id: A59J7iVA8C
@@ -135,6 +142,7 @@
 =
 {{c1::\ln\left(x + \sqrt{x^2 - 1}\right), \quad x \ge 1::\ldots}}
 \]
+!back extra: \[ \operatorname{arccosh} : [1, \infty) \to [0, \infty) \]
 ~~~
 
 !id: CitnGmGe9P
@@ -144,6 +152,7 @@
 =
 {{c1::\frac{1}{2}\ln\left(\frac{1 + x}{1 - x}\right), \quad |x| < 1::\ldots}}
 \]
+!back extra: \[ \operatorname{arctanh} : (-1, 1) \to \mathbb{R} \]
 ~~~
 
 !id: UMwhqgvmXy
@@ -153,4 +162,5 @@
 =
 {{c1::\frac{1}{2}\ln\left(\frac{x + 1}{x - 1}\right), \quad |x| > 1::\ldots}}
 \]
+!back extra: \[ \operatorname{arccoth} : (-\infty, -1) \cup (1, \infty) \to \mathbb{R} \setminus \{0\} \]
 ~~~
