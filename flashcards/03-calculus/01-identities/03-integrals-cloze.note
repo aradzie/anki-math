@@ -197,7 +197,7 @@
 ~~~
 
 !id: ql3omGxVH0
-!text: \[ \int {{c2::\text{sech}^2 \, u::\ldots}} \, du = {{c1::\tanh u::\ldots}} + C \]
+!text: \[ \int {{c2::\operatorname{sech}^2 u::\ldots}} \, du = {{c1::\tanh u::\ldots}} + C \]
 !related:
 \[
 \begin{align*}
@@ -210,7 +210,7 @@
 ~~~
 
 !id: Smalb1XyWV
-!text: \[ \int {{c2::\text{csch}^2 \, u::\ldots}} \, du = {{c1::-\coth u::\ldots}} + C \]
+!text: \[ \int {{c2::\operatorname{csch}^2 u::\ldots}} \, du = {{c1::-\coth u::\ldots}} + C \]
 !related:
 \[
 \begin{align*}
@@ -223,7 +223,7 @@
 ~~~
 
 !id: ghDXLcvGHI
-!text: \[ \int {{c2::\text{sech} \, u \tanh u::\ldots}} \, du = {{c1::-\text{sech} \, u::\ldots}} + C \]
+!text: \[ \int {{c2::\operatorname{sech} u \tanh u::\ldots}} \, du = {{c1::-\operatorname{sech} u::\ldots}} + C \]
 !related:
 \[
 \begin{align*}
@@ -236,7 +236,7 @@
 ~~~
 
 !id: vQajY05B24
-!text: \[ \int {{c2::\text{csch} \, u \coth u::\ldots}} \, du = {{c1::-\text{csch} \, u::\ldots}} + C \]
+!text: \[ \int {{c2::\operatorname{csch} u \coth u::\ldots}} \, du = {{c1::-\operatorname{csch} u::\ldots}} + C \]
 !related:
 \[
 \begin{align*}

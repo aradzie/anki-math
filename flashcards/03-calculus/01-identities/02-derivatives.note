@@ -107,10 +107,10 @@
 !related:
 \[
 \begin{align*}
-\frac{d}{dx} ( \sin x ) &= \cos x \\
-\frac{d}{dx} ( \cos x ) &= - \sin x \\
-\frac{d}{dx} ( \sinh x ) &= \cosh x \\
-\frac{d}{dx} ( \cosh x ) &= \sinh x
+\frac{d}{dx} \sin x &= \cos x \\
+\frac{d}{dx} \cos x &= - \sin x \\
+\frac{d}{dx} \sinh x &= \cosh x \\
+\frac{d}{dx} \cosh x &= \sinh x
 \end{align*}
 \]
 ~~~
@@ -121,10 +121,10 @@
 !related:
 \[
 \begin{align*}
-\frac{d}{dx} ( \sin x ) &= \cos x \\
-\frac{d}{dx} ( \cos x ) &= - \sin x \\
-\frac{d}{dx} ( \sinh x ) &= \cosh x \\
-\frac{d}{dx} ( \cosh x ) &= \sinh x
+\frac{d}{dx} \sin x &= \cos x \\
+\frac{d}{dx} \cos x &= - \sin x \\
+\frac{d}{dx} \sinh x &= \cosh x \\
+\frac{d}{dx} \cosh x &= \sinh x
 \end{align*}
 \]
 ~~~
@@ -135,10 +135,10 @@
 !related:
 \[
 \begin{align*}
-\frac{d}{dx} ( \tan x ) &= \sec^2 x \\
-\frac{d}{dx} ( \cot x ) &= - \csc^2 x \\
-\frac{d}{dx} ( \tanh x ) &= \text{sech}^2 \, x \\
-\frac{d}{dx} ( \coth x ) &= - \text{csch}^2 \, x
+\frac{d}{dx} \tan x &= \sec^2 x \\
+\frac{d}{dx} \cot x &= - \csc^2 x \\
+\frac{d}{dx} \tanh x &= \operatorname{sech}^2 x \\
+\frac{d}{dx} \coth x &= - \operatorname{csch}^2 x
 \end{align*}
 \]
 ~~~
@@ -149,10 +149,10 @@
 !related:
 \[
 \begin{align*}
-\frac{d}{dx} ( \tan x ) &= \sec^2 x \\
-\frac{d}{dx} ( \cot x ) &= - \csc^2 x \\
-\frac{d}{dx} ( \tanh x ) &= \text{sech}^2 \, x \\
-\frac{d}{dx} ( \coth x ) &= - \text{csch}^2 \, x
+\frac{d}{dx} \tan x &= \sec^2 x \\
+\frac{d}{dx} \cot x &= - \csc^2 x \\
+\frac{d}{dx} \tanh x &= \operatorname{sech}^2 x \\
+\frac{d}{dx} \coth x &= - \operatorname{csch}^2 x
 \end{align*}
 \]
 ~~~
@@ -163,10 +163,10 @@
 !related:
 \[
 \begin{align*}
-\frac{d}{dx} ( \sec x ) &= \sec x \tan x \\
-\frac{d}{dx} ( \csc x ) &= - \csc x \cot x \\
-\frac{d}{dx} ( \text{sech} \, x ) &= - \text{sech} \, x \tanh x \\
-\frac{d}{dx} ( \text{csch} \, x ) &= - \text{csch} \, x \coth x
+\frac{d}{dx} \sec x &= \sec x \tan x \\
+\frac{d}{dx} \csc x &= - \csc x \cot x \\
+\frac{d}{dx} \operatorname{sech} x &= - \operatorname{sech} x \tanh x \\
+\frac{d}{dx} \operatorname{csch} x &= - \operatorname{csch} x \coth x
 \end{align*}
 \]
 ~~~
@@ -177,10 +177,10 @@
 !related:
 \[
 \begin{align*}
-\frac{d}{dx} ( \sec x ) &= \sec x \tan x \\
-\frac{d}{dx} ( \csc x ) &= - \csc x \cot x \\
-\frac{d}{dx} ( \text{sech} \, x ) &= - \text{sech} \, x \tanh x \\
-\frac{d}{dx} ( \text{csch} \, x ) &= - \text{csch} \, x \coth x
+\frac{d}{dx} \sec x &= \sec x \tan x \\
+\frac{d}{dx} \csc x &= - \csc x \cot x \\
+\frac{d}{dx} \operatorname{sech} x &= - \operatorname{sech} x \tanh x \\
+\frac{d}{dx} \operatorname{csch} x &= - \operatorname{csch} x \coth x
 \end{align*}
 \]
 ~~~
@@ -191,10 +191,10 @@
 !related:
 \[
 \begin{align*}
-\frac{d}{dx} ( \sin^{-1} x ) &= \frac{1}{\sqrt{1 - x^2}} \\
-\frac{d}{dx} ( \cos^{-1} x ) &= \frac{-1}{\sqrt{1 - x^2}} \\
-\frac{d}{dx} ( \sinh^{-1} x ) &= \frac{1}{\sqrt{x^2 + 1}} \\
-\frac{d}{dx} ( \cosh^{-1} x ) &= \frac{1}{\sqrt{x^2 - 1}}, \quad (x > 1)
+\frac{d}{dx} \sin^{-1} x &= \frac{1}{\sqrt{1 - x^2}} \\
+\frac{d}{dx} \cos^{-1} x &= \frac{-1}{\sqrt{1 - x^2}} \\
+\frac{d}{dx} \sinh^{-1} x &= \frac{1}{\sqrt{x^2 + 1}} \\
+\frac{d}{dx} \cosh^{-1} x &= \frac{1}{\sqrt{x^2 - 1}}, \quad (x > 1)
 \end{align*}
 \]
 ~~~
@@ -205,10 +205,10 @@
 !related:
 \[
 \begin{align*}
-\frac{d}{dx} ( \sin^{-1} x ) &= \frac{1}{\sqrt{1 - x^2}} \\
-\frac{d}{dx} ( \cos^{-1} x ) &= \frac{-1}{\sqrt{1 - x^2}} \\
-\frac{d}{dx} ( \sinh^{-1} x ) &= \frac{1}{\sqrt{x^2 + 1}} \\
-\frac{d}{dx} ( \cosh^{-1} x ) &= \frac{1}{\sqrt{x^2 - 1}}, \quad (x > 1)
+\frac{d}{dx} \sin^{-1} x &= \frac{1}{\sqrt{1 - x^2}} \\
+\frac{d}{dx} \cos^{-1} x &= \frac{-1}{\sqrt{1 - x^2}} \\
+\frac{d}{dx} \sinh^{-1} x &= \frac{1}{\sqrt{x^2 + 1}} \\
+\frac{d}{dx} \cosh^{-1} x &= \frac{1}{\sqrt{x^2 - 1}}, \quad (x > 1)
 \end{align*}
 \]
 ~~~
@@ -219,10 +219,10 @@
 !related:
 \[
 \begin{align*}
-\frac{d}{dx} ( \tan^{-1} x ) &= \frac{1}{1 + x^2} \\
-\frac{d}{dx} ( \cot^{-1} x ) &= \frac{-1}{1 + x^2} \\
-\frac{d}{dx} ( \tanh^{-1} x ) &= \frac{1}{1 - x^2}, \quad (|x| < 1) \\
-\frac{d}{dx} ( \coth^{-1} x ) &= \frac{1}{1 - x^2}, \quad (|x| > 1)
+\frac{d}{dx} \tan^{-1} x &= \frac{1}{1 + x^2} \\
+\frac{d}{dx} \cot^{-1} x &= \frac{-1}{1 + x^2} \\
+\frac{d}{dx} \tanh^{-1} x &= \frac{1}{1 - x^2}, \quad (|x| < 1) \\
+\frac{d}{dx} \coth^{-1} x &= \frac{1}{1 - x^2}, \quad (|x| > 1)
 \end{align*}
 \]
 ~~~
@@ -233,10 +233,10 @@
 !related:
 \[
 \begin{align*}
-\frac{d}{dx} ( \tan^{-1} x ) &= \frac{1}{1 + x^2} \\
-\frac{d}{dx} ( \cot^{-1} x ) &= \frac{-1}{1 + x^2} \\
-\frac{d}{dx} ( \tanh^{-1} x ) &= \frac{1}{1 - x^2}, \quad (|x| < 1) \\
-\frac{d}{dx} ( \coth^{-1} x ) &= \frac{1}{1 - x^2}, \quad (|x| > 1)
+\frac{d}{dx} \tan^{-1} x &= \frac{1}{1 + x^2} \\
+\frac{d}{dx} \cot^{-1} x &= \frac{-1}{1 + x^2} \\
+\frac{d}{dx} \tanh^{-1} x &= \frac{1}{1 - x^2}, \quad (|x| < 1) \\
+\frac{d}{dx} \coth^{-1} x &= \frac{1}{1 - x^2}, \quad (|x| > 1)
 \end{align*}
 \]
 ~~~
@@ -247,10 +247,10 @@
 !related:
 \[
 \begin{align*}
-\frac{d}{dx} ( \sec^{-1} x ) &= \frac{1}{|x| \sqrt{x^2 - 1}} \\
-\frac{d}{dx} ( \csc^{-1} x ) &= \frac{-1}{|x| \sqrt{x^2 - 1}} \\
-\frac{d}{dx} ( \text{sech}^{-1} \, x ) &= \frac{-1}{x \sqrt{1 - x^2}} \\
-\frac{d}{dx} ( \text{csch}^{-1} \, x ) &= \frac{-1}{|x| \sqrt{1 + x^2}}
+\frac{d}{dx} \sec^{-1} x &= \frac{1}{|x| \sqrt{x^2 - 1}} \\
+\frac{d}{dx} \csc^{-1} x &= \frac{-1}{|x| \sqrt{x^2 - 1}} \\
+\frac{d}{dx} \operatorname{sech}^{-1} x &= \frac{-1}{x \sqrt{1 - x^2}} \\
+\frac{d}{dx} \operatorname{csch}^{-1} x &= \frac{-1}{|x| \sqrt{1 + x^2}}
 \end{align*}
 \]
 ~~~
@@ -261,10 +261,10 @@
 !related:
 \[
 \begin{align*}
-\frac{d}{dx} ( \sec^{-1} x ) &= \frac{1}{|x| \sqrt{x^2 - 1}} \\
-\frac{d}{dx} ( \csc^{-1} x ) &= \frac{-1}{|x| \sqrt{x^2 - 1}} \\
-\frac{d}{dx} ( \text{sech}^{-1} \, x ) &= \frac{-1}{x \sqrt{1 - x^2}} \\
-\frac{d}{dx} ( \text{csch}^{-1} \, x ) &= \frac{-1}{|x| \sqrt{1 + x^2}}
+\frac{d}{dx} \sec^{-1} x &= \frac{1}{|x| \sqrt{x^2 - 1}} \\
+\frac{d}{dx} \csc^{-1} x &= \frac{-1}{|x| \sqrt{x^2 - 1}} \\
+\frac{d}{dx} \operatorname{sech}^{-1} x &= \frac{-1}{x \sqrt{1 - x^2}} \\
+\frac{d}{dx} \operatorname{csch}^{-1} x &= \frac{-1}{|x| \sqrt{1 + x^2}}
 \end{align*}
 \]
 ~~~
@@ -277,10 +277,10 @@
 !related:
 \[
 \begin{align*}
-\frac{d}{dx} ( \sin x ) &= \cos x \\
-\frac{d}{dx} ( \cos x ) &= - \sin x \\
-\frac{d}{dx} ( \sinh x ) &= \cosh x \\
-\frac{d}{dx} ( \cosh x ) &= \sinh x
+\frac{d}{dx} \sin x &= \cos x \\
+\frac{d}{dx} \cos x &= - \sin x \\
+\frac{d}{dx} \sinh x &= \cosh x \\
+\frac{d}{dx} \cosh x &= \sinh x
 \end{align*}
 \]
 ~~~
@@ -291,66 +291,66 @@
 !related:
 \[
 \begin{align*}
-\frac{d}{dx} ( \sin x ) &= \cos x \\
-\frac{d}{dx} ( \cos x ) &= - \sin x \\
-\frac{d}{dx} ( \sinh x ) &= \cosh x \\
-\frac{d}{dx} ( \cosh x ) &= \sinh x
+\frac{d}{dx} \sin x &= \cos x \\
+\frac{d}{dx} \cos x &= - \sin x \\
+\frac{d}{dx} \sinh x &= \cosh x \\
+\frac{d}{dx} \cosh x &= \sinh x
 \end{align*}
 \]
 ~~~
 
 !id: vr8mQGKvvf
 !front: \[ \frac{d}{dx} \tanh x \]
-!back: \[ \text{sech}^2 \, x \]
+!back: \[ \operatorname{sech}^2 x \]
 !related:
 \[
 \begin{align*}
-\frac{d}{dx} ( \tan x ) &= \sec^2 x \\
-\frac{d}{dx} ( \cot x ) &= - \csc^2 x \\
-\frac{d}{dx} ( \tanh x ) &= \text{sech}^2 \, x \\
-\frac{d}{dx} ( \coth x ) &= - \text{csch}^2 \, x
+\frac{d}{dx} \tan x &= \sec^2 x \\
+\frac{d}{dx} \cot x &= - \csc^2 x \\
+\frac{d}{dx} \tanh x &= \operatorname{sech}^2 x \\
+\frac{d}{dx} \coth x &= - \operatorname{csch}^2 x
 \end{align*}
 \]
 ~~~
 
 !id: gpr53fTaO0
 !front: \[ \frac{d}{dx} \coth x \]
-!back: \[ - \text{csch}^2 \, x \]
+!back: \[ - \operatorname{csch}^2 x \]
 !related:
 \[
 \begin{align*}
-\frac{d}{dx} ( \tan x ) &= \sec^2 x \\
-\frac{d}{dx} ( \cot x ) &= - \csc^2 x \\
-\frac{d}{dx} ( \tanh x ) &= \text{sech}^2 \, x \\
-\frac{d}{dx} ( \coth x ) &= - \text{csch}^2 \, x
+\frac{d}{dx} \tan x &= \sec^2 x \\
+\frac{d}{dx} \cot x &= - \csc^2 x \\
+\frac{d}{dx} \tanh x &= \operatorname{sech}^2 x \\
+\frac{d}{dx} \coth x &= - \operatorname{csch}^2 x
 \end{align*}
 \]
 ~~~
 
 !id: FP6hil5TLC
-!front: \[ \frac{d}{dx} \text{sech} \, x \]
-!back: \[ - \text{sech} \, x \tanh x \]
+!front: \[ \frac{d}{dx} \operatorname{sech} x \]
+!back: \[ - \operatorname{sech} x \tanh x \]
 !related:
 \[
 \begin{align*}
-\frac{d}{dx} ( \sec x ) &= \sec x \tan x \\
-\frac{d}{dx} ( \csc x ) &= - \csc x \cot x \\
-\frac{d}{dx} ( \text{sech} \, x ) &= - \text{sech} \, x \tanh x \\
-\frac{d}{dx} ( \text{csch} \, x ) &= - \text{csch} \, x \coth x
+\frac{d}{dx} \sec x &= \sec x \tan x \\
+\frac{d}{dx} \csc x &= - \csc x \cot x \\
+\frac{d}{dx} \operatorname{sech} x &= - \operatorname{sech} x \tanh x \\
+\frac{d}{dx} \operatorname{csch} x &= - \operatorname{csch} x \coth x
 \end{align*}
 \]
 ~~~
 
 !id: h2HLdUpKAh
-!front: \[ \frac{d}{dx} \text{csch} \, x \]
-!back: \[ - \text{csch} \, x \coth x \]
+!front: \[ \frac{d}{dx} \operatorname{csch} x \]
+!back: \[ - \operatorname{csch} x \coth x \]
 !related:
 \[
 \begin{align*}
-\frac{d}{dx} ( \sec x ) &= \sec x \tan x \\
-\frac{d}{dx} ( \csc x ) &= - \csc x \cot x \\
-\frac{d}{dx} ( \text{sech} \, x ) &= - \text{sech} \, x \tanh x \\
-\frac{d}{dx} ( \text{csch} \, x ) &= - \text{csch} \, x \coth x
+\frac{d}{dx} \sec x &= \sec x \tan x \\
+\frac{d}{dx} \csc x &= - \csc x \cot x \\
+\frac{d}{dx} \operatorname{sech} x &= - \operatorname{sech} x \tanh x \\
+\frac{d}{dx} \operatorname{csch} x &= - \operatorname{csch} x \coth x
 \end{align*}
 \]
 ~~~
@@ -361,10 +361,10 @@
 !related:
 \[
 \begin{align*}
-\frac{d}{dx} ( \sin^{-1} x ) &= \frac{1}{\sqrt{1 - x^2}} \\
-\frac{d}{dx} ( \cos^{-1} x ) &= \frac{-1}{\sqrt{1 - x^2}} \\
-\frac{d}{dx} ( \sinh^{-1} x ) &= \frac{1}{\sqrt{x^2 + 1}} \\
-\frac{d}{dx} ( \cosh^{-1} x ) &= \frac{1}{\sqrt{x^2 - 1}}, \quad (x > 1)
+\frac{d}{dx} \sin^{-1} x &= \frac{1}{\sqrt{1 - x^2}} \\
+\frac{d}{dx} \cos^{-1} x &= \frac{-1}{\sqrt{1 - x^2}} \\
+\frac{d}{dx} \sinh^{-1} x &= \frac{1}{\sqrt{x^2 + 1}} \\
+\frac{d}{dx} \cosh^{-1} x &= \frac{1}{\sqrt{x^2 - 1}}, \quad (x > 1)
 \end{align*}
 \]
 ~~~
@@ -375,10 +375,10 @@
 !related:
 \[
 \begin{align*}
-\frac{d}{dx} ( \sin^{-1} x ) &= \frac{1}{\sqrt{1 - x^2}} \\
-\frac{d}{dx} ( \cos^{-1} x ) &= \frac{-1}{\sqrt{1 - x^2}} \\
-\frac{d}{dx} ( \sinh^{-1} x ) &= \frac{1}{\sqrt{x^2 + 1}} \\
-\frac{d}{dx} ( \cosh^{-1} x ) &= \frac{1}{\sqrt{x^2 - 1}}, \quad (x > 1)
+\frac{d}{dx} \sin^{-1} x &= \frac{1}{\sqrt{1 - x^2}} \\
+\frac{d}{dx} \cos^{-1} x &= \frac{-1}{\sqrt{1 - x^2}} \\
+\frac{d}{dx} \sinh^{-1} x &= \frac{1}{\sqrt{x^2 + 1}} \\
+\frac{d}{dx} \cosh^{-1} x &= \frac{1}{\sqrt{x^2 - 1}}, \quad (x > 1)
 \end{align*}
 \]
 ~~~
@@ -389,10 +389,10 @@
 !related:
 \[
 \begin{align*}
-\frac{d}{dx} ( \tan^{-1} x ) &= \frac{1}{1 + x^2} \\
-\frac{d}{dx} ( \cot^{-1} x ) &= \frac{-1}{1 + x^2} \\
-\frac{d}{dx} ( \tanh^{-1} x ) &= \frac{1}{1 - x^2}, \quad (|x| < 1) \\
-\frac{d}{dx} ( \coth^{-1} x ) &= \frac{1}{1 - x^2}, \quad (|x| > 1)
+\frac{d}{dx} \tan^{-1} x &= \frac{1}{1 + x^2} \\
+\frac{d}{dx} \cot^{-1} x &= \frac{-1}{1 + x^2} \\
+\frac{d}{dx} \tanh^{-1} x &= \frac{1}{1 - x^2}, \quad (|x| < 1) \\
+\frac{d}{dx} \coth^{-1} x &= \frac{1}{1 - x^2}, \quad (|x| > 1)
 \end{align*}
 \]
 ~~~
@@ -403,38 +403,38 @@
 !related:
 \[
 \begin{align*}
-\frac{d}{dx} ( \tan^{-1} x ) &= \frac{1}{1 + x^2} \\
-\frac{d}{dx} ( \cot^{-1} x ) &= \frac{-1}{1 + x^2} \\
-\frac{d}{dx} ( \tanh^{-1} x ) &= \frac{1}{1 - x^2}, \quad (|x| < 1) \\
-\frac{d}{dx} ( \coth^{-1} x ) &= \frac{1}{1 - x^2}, \quad (|x| > 1)
+\frac{d}{dx} \tan^{-1} x &= \frac{1}{1 + x^2} \\
+\frac{d}{dx} \cot^{-1} x &= \frac{-1}{1 + x^2} \\
+\frac{d}{dx} \tanh^{-1} x &= \frac{1}{1 - x^2}, \quad (|x| < 1) \\
+\frac{d}{dx} \coth^{-1} x &= \frac{1}{1 - x^2}, \quad (|x| > 1)
 \end{align*}
 \]
 ~~~
 
 !id: q3oNUtd5n5
-!front: \[ \frac{d}{dx} \text{sech}^{-1} \, x \]
+!front: \[ \frac{d}{dx} \operatorname{sech}^{-1} x \]
 !back: \[ \frac{-1}{x \sqrt{1 - x^2}} \]
 !related:
 \[
 \begin{align*}
-\frac{d}{dx} ( \sec^{-1} x ) &= \frac{1}{|x| \sqrt{x^2 - 1}} \\
-\frac{d}{dx} ( \csc^{-1} x ) &= \frac{-1}{|x| \sqrt{x^2 - 1}} \\
-\frac{d}{dx} ( \text{sech}^{-1} \, x ) &= \frac{-1}{x \sqrt{1 - x^2}} \\
-\frac{d}{dx} ( \text{csch}^{-1} \, x ) &= \frac{-1}{|x| \sqrt{1 + x^2}}
+\frac{d}{dx} \sec^{-1} x &= \frac{1}{|x| \sqrt{x^2 - 1}} \\
+\frac{d}{dx} \csc^{-1} x &= \frac{-1}{|x| \sqrt{x^2 - 1}} \\
+\frac{d}{dx} \operatorname{sech}^{-1} x &= \frac{-1}{x \sqrt{1 - x^2}} \\
+\frac{d}{dx} \operatorname{csch}^{-1} x &= \frac{-1}{|x| \sqrt{1 + x^2}}
 \end{align*}
 \]
 ~~~
 
 !id: reP8gl2N4e
-!front: \[ \frac{d}{dx} \text{csch}^{-1} \, x \]
+!front: \[ \frac{d}{dx} \operatorname{csch}^{-1} x \]
 !back: \[ \frac{-1}{|x| \sqrt{1 + x^2}} \]
 !related:
 \[
 \begin{align*}
-\frac{d}{dx} ( \sec^{-1} x ) &= \frac{1}{|x| \sqrt{x^2 - 1}} \\
-\frac{d}{dx} ( \csc^{-1} x ) &= \frac{-1}{|x| \sqrt{x^2 - 1}} \\
-\frac{d}{dx} ( \text{sech}^{-1} \, x ) &= \frac{-1}{x \sqrt{1 - x^2}} \\
-\frac{d}{dx} ( \text{csch}^{-1} \, x ) &= \frac{-1}{|x| \sqrt{1 + x^2}}
+\frac{d}{dx} \sec^{-1} x &= \frac{1}{|x| \sqrt{x^2 - 1}} \\
+\frac{d}{dx} \csc^{-1} x &= \frac{-1}{|x| \sqrt{x^2 - 1}} \\
+\frac{d}{dx} \operatorname{sech}^{-1} x &= \frac{-1}{x \sqrt{1 - x^2}} \\
+\frac{d}{dx} \operatorname{csch}^{-1} x &= \frac{-1}{|x| \sqrt{1 + x^2}}
 \end{align*}
 \]
 ~~~

@@ -220,7 +220,7 @@
 ~~~
 
 !id: nvbxwvvCun
-!front: \[ \int \text{sech}^2 \, u \, du \]
+!front: \[ \int \operatorname{sech}^2 u \, du \]
 !back: \[ \tanh u + C \]
 !related:
 \[
@@ -234,7 +234,7 @@
 ~~~
 
 !id: MIF3rKYELT
-!front: \[ \int \text{csch}^2 \, u \, du \]
+!front: \[ \int \operatorname{csch}^2 u \, du \]
 !back: \[ - \coth u + C \]
 !related:
 \[
@@ -248,8 +248,8 @@
 ~~~
 
 !id: lkgyF7t51r
-!front: \[ \int \text{sech} \, u \tanh u \, du \]
-!back: \[ - \text{sech} \, u + C \]
+!front: \[ \int \operatorname{sech} u \tanh u \, du \]
+!back: \[ - \operatorname{sech} u + C \]
 !related:
 \[
 \begin{align*}
@@ -262,8 +262,8 @@
 ~~~
 
 !id: 2LIz86axf0
-!front: \[ \int \text{csch} \, u \coth u \, du \]
-!back: \[ - \text{csch} \, u + C \]
+!front: \[ \int \operatorname{csch} u \coth u \, du \]
+!back: \[ - \operatorname{csch} u + C \]
 !related:
 \[
 \begin{align*}

@@ -185,8 +185,8 @@
 \begin{align*}
 \frac{d}{dx} \tan x &= \sec^2 x \\
 \frac{d}{dx} \cot x &= -\csc^2 x \\
-\frac{d}{dx} \tanh x &= \text{sech}^2 \, x \\
-\frac{d}{dx} \coth x &= -\text{csch}^2 \, x
+\frac{d}{dx} \tanh x &= \operatorname{sech}^2 x \\
+\frac{d}{dx} \coth x &= -\operatorname{csch}^2 x
 \end{align*}
 \]
 ~~~
@@ -203,8 +203,8 @@
 \begin{align*}
 \frac{d}{dx} \tan x &= \sec^2 x \\
 \frac{d}{dx} \cot x &= -\csc^2 x \\
-\frac{d}{dx} \tanh x &= \text{sech}^2 \, x \\
-\frac{d}{dx} \coth x &= -\text{csch}^2 \, x
+\frac{d}{dx} \tanh x &= \operatorname{sech}^2 x \\
+\frac{d}{dx} \coth x &= -\operatorname{csch}^2 x
 \end{align*}
 \]
 ~~~
@@ -221,8 +221,8 @@
 \begin{align*}
 \frac{d}{dx} \sec x &= \sec x \tan x \\
 \frac{d}{dx} \csc x &= -\csc x \cot x \\
-\frac{d}{dx} \text{sech} \, x &= -\text{sech} \, x \tanh x \\
-\frac{d}{dx} \text{csch} \, x &= -\text{csch} \, x \coth x
+\frac{d}{dx} \operatorname{sech} x &= -\operatorname{sech} x \tanh x \\
+\frac{d}{dx} \operatorname{csch} x &= -\operatorname{csch} x \coth x
 \end{align*}
 \]
 ~~~
@@ -239,8 +239,8 @@
 \begin{align*}
 \frac{d}{dx} \sec x &= \sec x \tan x \\
 \frac{d}{dx} \csc x &= -\csc x \cot x \\
-\frac{d}{dx} \text{sech} \, x &= -\text{sech} \, x \tanh x \\
-\frac{d}{dx} \text{csch} \, x &= -\text{csch} \, x \coth x
+\frac{d}{dx} \operatorname{sech} x &= -\operatorname{sech} x \tanh x \\
+\frac{d}{dx} \operatorname{csch} x &= -\operatorname{csch} x \coth x
 \end{align*}
 \]
 ~~~
@@ -329,8 +329,8 @@
 \begin{align*}
 \frac{d}{dx} \sec^{-1} x &= \frac{1}{|x| \sqrt{x^2 - 1}} \\
 \frac{d}{dx} \csc^{-1} x &= \frac{-1}{|x| \sqrt{x^2 - 1}} \\
-\frac{d}{dx} \text{sech}^{-1} \, x &= \frac{-1}{x \sqrt{1 - x^2}} \\
-\frac{d}{dx} \text{csch}^{-1} \, x &= \frac{-1}{|x| \sqrt{1 + x^2}}
+\frac{d}{dx} \operatorname{sech}^{-1} x &= \frac{-1}{x \sqrt{1 - x^2}} \\
+\frac{d}{dx} \operatorname{csch}^{-1} x &= \frac{-1}{|x| \sqrt{1 + x^2}}
 \end{align*}
 \]
 ~~~
@@ -347,8 +347,8 @@
 \begin{align*}
 \frac{d}{dx} \sec^{-1} x &= \frac{1}{|x| \sqrt{x^2 - 1}} \\
 \frac{d}{dx} \csc^{-1} x &= \frac{-1}{|x| \sqrt{x^2 - 1}} \\
-\frac{d}{dx} \text{sech}^{-1} \, x &= \frac{-1}{x \sqrt{1 - x^2}} \\
-\frac{d}{dx} \text{csch}^{-1} \, x &= \frac{-1}{|x| \sqrt{1 + x^2}}
+\frac{d}{dx} \operatorname{sech}^{-1} x &= \frac{-1}{x \sqrt{1 - x^2}} \\
+\frac{d}{dx} \operatorname{csch}^{-1} x &= \frac{-1}{|x| \sqrt{1 + x^2}}
 \end{align*}
 \]
 ~~~
@@ -396,15 +396,15 @@
 \[
 \frac{d}{dx} {{c2::\tanh x::\ldots}}
 =
-{{c1::\text{sech}^2 \, x::\ldots}}
+{{c1::\operatorname{sech}^2 x::\ldots}}
 \]
 !related:
 \[
 \begin{align*}
 \frac{d}{dx} \tan x &= \sec^2 x \\
 \frac{d}{dx} \cot x &= -\csc^2 x \\
-\frac{d}{dx} \tanh x &= \text{sech}^2 \, x \\
-\frac{d}{dx} \coth x &= -\text{csch}^2 \, x
+\frac{d}{dx} \tanh x &= \operatorname{sech}^2 x \\
+\frac{d}{dx} \coth x &= -\operatorname{csch}^2 x
 \end{align*}
 \]
 ~~~
@@ -414,15 +414,15 @@
 \[
 \frac{d}{dx} {{c2::\coth x::\ldots}}
 =
-{{c1::-\text{csch}^2 \, x::\ldots}}
+{{c1::-\operatorname{csch}^2 x::\ldots}}
 \]
 !related:
 \[
 \begin{align*}
 \frac{d}{dx} \tan x &= \sec^2 x \\
 \frac{d}{dx} \cot x &= -\csc^2 x \\
-\frac{d}{dx} \tanh x &= \text{sech}^2 \, x \\
-\frac{d}{dx} \coth x &= -\text{csch}^2 \, x
+\frac{d}{dx} \tanh x &= \operatorname{sech}^2 x \\
+\frac{d}{dx} \coth x &= -\operatorname{csch}^2 x
 \end{align*}
 \]
 ~~~
@@ -430,17 +430,17 @@
 !id: HhVat8Mzfh
 !text:
 \[
-\frac{d}{dx} {{c2::\text{sech} \, x::\ldots}}
+\frac{d}{dx} {{c2::\operatorname{sech} x::\ldots}}
 =
-{{c1::-\text{sech} \, x \tanh x::\ldots}}
+{{c1::-\operatorname{sech} x \tanh x::\ldots}}
 \]
 !related:
 \[
 \begin{align*}
 \frac{d}{dx} \sec x &= \sec x \tan x \\
 \frac{d}{dx} \csc x &= -\csc x \cot x \\
-\frac{d}{dx} \text{sech} \, x &= -\text{sech} \, x \tanh x \\
-\frac{d}{dx} \text{csch} \, x &= -\text{csch} \, x \coth x
+\frac{d}{dx} \operatorname{sech} x &= -\operatorname{sech} x \tanh x \\
+\frac{d}{dx} \operatorname{csch} x &= -\operatorname{csch} x \coth x
 \end{align*}
 \]
 ~~~
@@ -448,17 +448,17 @@
 !id: P7fC3P4Mb6
 !text:
 \[
-\frac{d}{dx} {{c2::\text{csch} \, x::\ldots}}
+\frac{d}{dx} {{c2::\operatorname{csch} x::\ldots}}
 =
-{{c1::-\text{csch} \, x \coth x::\ldots}}
+{{c1::-\operatorname{csch} x \coth x::\ldots}}
 \]
 !related:
 \[
 \begin{align*}
 \frac{d}{dx} \sec x &= \sec x \tan x \\
 \frac{d}{dx} \csc x &= -\csc x \cot x \\
-\frac{d}{dx} \text{sech} \, x &= -\text{sech} \, x \tanh x \\
-\frac{d}{dx} \text{csch} \, x &= -\text{csch} \, x \coth x
+\frac{d}{dx} \operatorname{sech} x &= -\operatorname{sech} x \tanh x \\
+\frac{d}{dx} \operatorname{csch} x &= -\operatorname{csch} x \coth x
 \end{align*}
 \]
 ~~~
@@ -538,7 +538,7 @@
 !id: tGEsRyzPvM
 !text:
 \[
-\frac{d}{dx} {{c2::\text{sech}^{-1} \, x::\ldots}}
+\frac{d}{dx} {{c2::\operatorname{sech}^{-1} x::\ldots}}
 =
 {{c1::\frac{-1}{ x \sqrt{1 - x^2} }::\ldots}}
 \]
@@ -547,8 +547,8 @@
 \begin{align*}
 \frac{d}{dx} \sec^{-1} x &= \frac{1}{|x| \sqrt{x^2 - 1}} \\
 \frac{d}{dx} \csc^{-1} x &= \frac{-1}{|x| \sqrt{x^2 - 1}} \\
-\frac{d}{dx} \text{sech}^{-1} \, x &= \frac{-1}{x \sqrt{1 - x^2}} \\
-\frac{d}{dx} \text{csch}^{-1} \, x &= \frac{-1}{|x| \sqrt{1 + x^2}}
+\frac{d}{dx} \operatorname{sech}^{-1} x &= \frac{-1}{x \sqrt{1 - x^2}} \\
+\frac{d}{dx} \operatorname{csch}^{-1} x &= \frac{-1}{|x| \sqrt{1 + x^2}}
 \end{align*}
 \]
 ~~~
@@ -556,7 +556,7 @@
 !id: 5SSSvwA7yL
 !text:
 \[
-\frac{d}{dx} {{c2::\text{csch}^{-1} \, x::\ldots}}
+\frac{d}{dx} {{c2::\operatorname{csch}^{-1} x::\ldots}}
 =
 {{c1::\frac{-1}{ |x| \sqrt{1 + x^2} }::\ldots}}
 \]
@@ -565,8 +565,8 @@
 \begin{align*}
 \frac{d}{dx} \sec^{-1} x &= \frac{1}{|x| \sqrt{x^2 - 1}} \\
 \frac{d}{dx} \csc^{-1} x &= \frac{-1}{|x| \sqrt{x^2 - 1}} \\
-\frac{d}{dx} \text{sech}^{-1} \, x &= \frac{-1}{x \sqrt{1 - x^2}} \\
-\frac{d}{dx} \text{csch}^{-1} \, x &= \frac{-1}{|x| \sqrt{1 + x^2}}
+\frac{d}{dx} \operatorname{sech}^{-1} x &= \frac{-1}{x \sqrt{1 - x^2}} \\
+\frac{d}{dx} \operatorname{csch}^{-1} x &= \frac{-1}{|x| \sqrt{1 + x^2}}
 \end{align*}
 \]
 ~~~
