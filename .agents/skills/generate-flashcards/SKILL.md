@@ -11,9 +11,11 @@ Create math flashcards in this repository's custom `.note` format. Notes should 
 
 ## Calibration
 
-Before drafting notes, confirm that scope, audience level, and rigor expectations are established for this session or topic. If they have not already been established earlier in the conversation, invoke the `calibrate` skill via the Skill tool first, and use its answers in place of the defaults below for the rest of the session.
+Use the defaults below unless the user gives different scope, audience, or rigor expectations. Ask for clarification when the requested topic is too broad, underspecified, or outside the default scope enough that drafting would require guessing; when asking, propose a concrete scope for the user to confirm, trim, or extend.
 
-Default target audience, offered by `calibrate` as a starting point: a passionate, technically sophisticated self-learner — e.g. an experienced software engineer — working independently through single- and multi-variable calculus, linear algebra, and differential equations at the level of Apostol, Spivak, and Stewart. They are comfortable with formal notation, proofs, and abstraction, want depth well beyond mechanical computation, and do not need simplification unless a concept is genuinely subtle — but they are not taking a dedicated real analysis, topology, or measure theory course.
+Be aware that the user is typically a student approaching the topic at hand without full knowledge of its landscape — they may know they want cards on, say, "eigenvalues" without knowing what surrounding subtopics, prerequisites, or natural extensions exist. Be proactive rather than passive: don't just collect a scope the student dictates unaided. Propose one.
+
+Default target audience: a passionate, technically sophisticated self-learner — e.g. an experienced software engineer — working independently through single- and multi-variable calculus, linear algebra, differential equations, and an introductory real analysis course at the level of Apostol, Spivak, and Stewart. They are comfortable with formal notation, proofs, and abstraction, want depth well beyond mechanical computation, and do not need simplification unless a concept is genuinely subtle — but they are not taking dedicated topology, measure theory, functional analysis, or graduate real analysis courses.
 
 ### Level of Rigor
 
@@ -41,7 +43,7 @@ Out of scope — do not write notes on:
 - Metric space theory beyond what is needed to state basic real-analysis facts on \( \mathbb{R}^n \).
 - Graduate-level real analysis.
 
-When a topic is ambiguous, use this test: would it appear in a calculus or introductory-analysis text at the Apostol/Spivak/Stewart level, or does it require a dedicated analysis/topology/measure-theory course to state properly? If the latter, exclude it.
+When a topic is ambiguous, use this test: would it appear in a calculus or introductory-analysis text at the Apostol/Spivak/Stewart level, or does it require a dedicated topology, measure-theory, functional-analysis, or graduate real-analysis course to state properly? If the latter, exclude it.
 
 ### Proof Awareness
 
@@ -289,16 +291,6 @@ Each note must stand alone. Anki shows notes individually and in arbitrary order
 - Do not assume other notes exist at all. A note's correctness and clarity cannot depend on a companion note being present in the deck.
 - When a topic naturally produces several structurally similar notes — e.g. the same constant or identity under different limiting forms — give each one the same depth of justification independently. Do not justify or explain one variant and leave structurally identical siblings as bare formulas on the assumption that the explanation carries over; either explain each one to the same standard or none of them.
 - `!related:` may point to other identities for context, but the note must remain correct and self-sufficient without the learner ever reading that other note.
-
-## Mathematical Rigor
-
-- Check every formula, theorem statement, and implication before writing it.
-- Do not conflate intuition with proof.
-- Do not state converses unless they are true under the stated assumptions.
-- Include hypotheses in the front when they are part of what the learner must recognize; otherwise include them clearly in the back or `!extra:`.
-- If compressing a proof, state what is being omitted without making the shortened argument false.
-- Prefer a short derivation or reason over an unsupported formula when the note is conceptual.
-- Check that notation used in the front is defined or standard in the surrounding file.
 
 ## Tooling
 
