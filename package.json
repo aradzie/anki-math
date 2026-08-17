@@ -3,6 +3,6 @@
   "version": "0.0.0",
   "type": "module",
   "dependencies": {
-    "@notatki/cli": "^0.1.1"
+    "@notatki/cli": "^0.3.0"
   }
 }
