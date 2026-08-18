@@ -1,0 +1,32 @@
+!deck: Programming
+!type: Basic
+!tags: Programming Regex
+
+!id: bjNmLFQGyI
+!front: What does concatenation mean in a regex?
+!back: Concatenation means sequential matching. The pattern `ab` matches an `a` immediately followed by a `b`.
+~~~
+
+!id: QeplifgcLo
+!front: What does alternation `A|B` mean in a regex?
+!back: Alternation means "match either `A` or `B`." As a language operation, it describes the union of the strings matched by the left alternative and the strings matched by the right alternative.
+~~~
+
+!id: 9rmqOWQjXp
+!front: Compare `ab|cd` with `a(b|c)d`.
+!back:
+- `ab|cd` matches either `ab` or `cd`.
+- `a(b|c)d` matches either `abd` or `acd`.
+
+Grouping changes the scope of the alternation.
+~~~
+
+!id: WtoSqdD8Ei
+!front: Which strings does `gr(a|e)y` match?
+!back: It matches `gray` and `grey`. The group `(a|e)` chooses exactly one of the two alternatives between `gr` and `y`.
+~~~
+
+!id: C1vX04v2Ec
+!front: Construct a regex that matches the literal file extensions `.jpg` and `.jpeg`.
+!back: One suitable pattern is `\.jpe?g`. The escaped dot matches a literal period, and `e?` makes the `e` optional.
+~~~

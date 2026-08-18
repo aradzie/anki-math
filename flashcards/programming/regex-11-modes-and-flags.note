@@ -1,0 +1,12 @@
+!deck: Programming
+!type: Basic
+!tags: Programming Regex
+
+!id: WcM8g8rpfo
+!front: Compare multiline mode with dot-all mode.
+!back:
+- Multiline mode changes how start and end anchors treat line boundaries.
+- Dot-all mode changes whether the dot wildcard may match line terminators.
+
+They affect different constructs.
+~~~

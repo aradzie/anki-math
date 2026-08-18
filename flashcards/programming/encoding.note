@@ -1,0 +1,266 @@
+!deck: Programming
+!type: Basic
+!tags: Programming Encoding
+
+!id: 7TtnZA2hbo
+!front: What is the difference between Unicode and a character encoding such as UTF-8?
+!back:
+- Unicode is the abstract text standard: it assigns code points such as `U+03BB` to characters and defines their names and properties.
+- A character encoding is a concrete representation rule: it turns Unicode scalar values into code units and, for files or network streams, bytes.
+
+Unicode is about which abstract character value is meant; the encoding is about the actual byte sequence that stores or transmits it.
+~~~
+
+!id: N4ZbISxYp4
+!front: What is a code unit?
+!back: A code unit is the fixed-size unit an encoding form uses to represent Unicode scalar values. UTF-8 uses 8-bit code units, so one code unit is one byte; UTF-16 uses 16-bit code units and UTF-32 uses 32-bit code units, so those units must still be serialized into bytes for storage or transmission.
+~~~
+
+!id: UTZLZfMNyC
+!front: Compare a Unicode code point with an encoded byte sequence.
+!back:
+- A Unicode code point is an abstract number in the Unicode code space, usually written like `U+03BB`; by itself it is not stored as a byte.
+- An encoded byte sequence is concrete data, such as the UTF-8 bytes `0xCE 0xBB` that represent `U+03BB`.
+
+The same abstract text can have different concrete bytes under UTF-8, UTF-16LE, or another encoding.
+~~~
+
+!id: dWjVP4gdzs
+!front: What does it mean to encode text?
+!back: Encoding text means converting abstract characters or Unicode scalar values into a concrete byte representation, using a chosen encoding such as UTF-8.
+~~~
+
+!id: gcCpkcn6sR
+!front: What does it mean to decode text?
+!back: Decoding text means interpreting a concrete byte sequence according to a chosen encoding to recover the abstract characters or Unicode scalar values it represents. Decoding with the wrong encoding can produce incorrect text or errors.
+~~~
+
+!id: y50wRreP0Y
+!front: Why must a program know the encoding of a byte stream before treating it as text?
+!back: Bytes alone do not say which characters they represent. The same byte sequence can decode differently under different encodings, so a program needs the correct encoding label, convention, or protocol rule.
+~~~
+
+!id: ueoi6g24iM
+!front: What is UTF-8?
+!back: UTF-8 is a variable-length Unicode encoding that represents each abstract Unicode scalar value as a concrete sequence of one to four bytes. ASCII code points use one byte, and non-ASCII code points use longer byte sequences.
+~~~
+
+!id: nPArn6tWjV
+!front: Why is UTF-8 ASCII-compatible?
+!back: In UTF-8, code points `U+0000` through `U+007F` are encoded as the single bytes `0x00` through `0x7F`, exactly matching ASCII byte values.
+~~~
+
+!id: AoKbYT36Gl
+!front: How many bytes can one Unicode scalar value take in UTF-8?
+!back: One Unicode scalar value takes one, two, three, or four bytes in UTF-8. The number depends on the scalar value's numeric range.
+~~~
+
+!id: 1lCdTOMUiA
+!front: What is a UTF-8 continuation byte?
+!back: A UTF-8 continuation byte is a byte that continues a multi-byte sequence. Its high bits have the form `10xxxxxx`, which lets decoders distinguish it from a leading byte.
+~~~
+
+!id: 42fnD4apI1
+!front: Why is UTF-8 called self-synchronizing?
+!back: UTF-8 byte patterns let a decoder recognize leading bytes and continuation bytes. If a decoder starts in the middle of a stream or encounters corruption, it can often find the next plausible character boundary.
+~~~
+
+!id: IBDU7fl3h4
+!front: What is an overlong UTF-8 encoding?
+!back: An overlong encoding represents a scalar value using more bytes than UTF-8 requires. Overlong forms are invalid because they create multiple byte representations for the same scalar value.
+~~~
+
+!id: X0ALwasnW8
+!front: Why must UTF-8 decoders reject overlong encodings?
+!back: Accepting overlong encodings breaks UTF-8's unique representation of each scalar value and can create security bugs, such as bypassing filters that check only the shortest canonical byte form.
+~~~
+
+!id: lLl7pcIvCb
+!front: What does it mean for a byte sequence to be invalid UTF-8?
+!back: It means the bytes do not form a legal UTF-8 representation of Unicode scalar values. Examples include bad continuation bytes, overlong sequences, surrogate encodings, and values beyond `U+10FFFF`.
+~~~
+
+!id: bM43jDr1uQ
+!front: What is UTF-16?
+!back: UTF-16 is a Unicode encoding form that represents each abstract scalar value as one or two concrete 16-bit code units. BMP scalar values use one code unit; supplementary scalar values use a surrogate pair.
+~~~
+
+!id: atjAPXeWea
+!front: What is a UTF-16 surrogate pair?
+!back: A surrogate pair is two UTF-16 code units that together encode one supplementary Unicode scalar value. The first is a high surrogate from `U+D800` to `U+DBFF`; the second is a low surrogate from `U+DC00` to `U+DFFF`.
+~~~
+
+!id: ApNQ56tfEz
+!front: Why is UTF-16 not a fixed-width character encoding?
+!back: UTF-16 uses one 16-bit code unit for BMP scalar values and two 16-bit code units for supplementary scalar values. Therefore one Unicode scalar value is not always one UTF-16 code unit.
+~~~
+
+!id: pIOHwQ0835
+!front: What is the common string-length trap with UTF-16 APIs?
+!back: Many UTF-16 APIs report the number of 16-bit code units, not the number of Unicode scalar values or grapheme clusters. A supplementary character counts as two code units.
+~~~
+
+!id: Pw7uGUmL5a
+!front: Compare UTF-16, UTF-16BE, and UTF-16LE.
+!back:
+- UTF-16 leaves byte order unspecified in the encoding name itself; a leading byte order mark at the start of the stream declares whether the bytes that follow are big-endian or little-endian.
+- UTF-16BE fixes the byte order as big-endian and expects no byte order mark.
+- UTF-16LE fixes the byte order as little-endian and expects no byte order mark.
+~~~
+
+!id: iCAyl1mmGW
+!front: Why does a UTF-16BE or UTF-16LE stream not use a byte order mark?
+!back: The encoding name already fixes the byte order, so there is nothing left for a byte order mark to signal. If the code point `U+FEFF` appears at the start of such a stream, a decoder reads it as an ordinary character, ZERO WIDTH NO-BREAK SPACE, rather than stripping it as a marker.
+~~~
+
+!id: QmLKCxxvh3
+!front: What byte order does a UTF-16 stream default to when it carries no byte order mark and no external label?
+!back: The Unicode standard's default assumption is big-endian. In practice this is not universal — some implementations instead assume the host platform's native byte order — so an unlabeled, unmarked UTF-16 stream is genuinely ambiguous and byte order should be established explicitly wherever possible.
+~~~
+
+!id: KsMffXRzB1
+!front: What is UTF-32?
+!back: UTF-32 is a Unicode encoding form that represents each abstract Unicode scalar value with one concrete 32-bit code unit.
+~~~
+
+!id: eTSZzN76tv
+!front: Why is UTF-32 still not "one user-visible character per unit"?
+!back: UTF-32 gives one code unit per Unicode scalar value, but user-visible characters can be sequences of scalar values. Combining marks, variation selectors, and emoji sequences can still require multiple code points.
+~~~
+
+!id: g70pe1RjEF
+!front: Compare UTF-8, UTF-16, and UTF-32 by storage unit.
+!back:
+- UTF-8 uses 8-bit code units and stores them directly as bytes.
+- UTF-16 uses 16-bit code units, which must be serialized as bytes.
+- UTF-32 uses 32-bit code units, which must be serialized as bytes.
+~~~
+
+!id: SiYWCd0luK
+!front: Compare UTF-8, UTF-16, and UTF-32 by width.
+!back:
+- UTF-8 is variable-width: one to four bytes per scalar value.
+- UTF-16 is variable-width: one or two 16-bit code units per scalar value.
+- UTF-32 is fixed-width for scalar values: one 32-bit code unit per scalar value.
+
+None is fixed-width for grapheme clusters.
+~~~
+
+!id: FmBFA8JKme
+!front: Which of UTF-8, UTF-16, and UTF-32 gives constant-time random access to the \( n \)-th code point?
+!back: Only UTF-32. Its code units are fixed-width per Unicode scalar value, so indexing by code unit is the same as indexing by code point. UTF-8 and UTF-16 are variable-width, so locating the \( n \)-th code point requires scanning from a known boundary — they give constant-time access by byte or code unit, but not by code point.
+~~~
+
+!id: aekydiM9Ns
+!front: Of UTF-8, UTF-16, and UTF-32, which is most space-compact for ASCII and Latin-heavy text?
+!back:
+UTF-8 is most compact: common characters take a single byte, while UTF-16 and UTF-32 spend at least two and four bytes respectively on the same characters.
+
+"Most compact" has no single universal answer for every script — it depends on which scripts dominate the text.
+~~~
+
+!id: 47ERQSnw0A
+!front: Of UTF-8, UTF-16, and UTF-32, which is most space-compact for text dominated by scripts such as CJK?
+!back:
+UTF-16 is often more compact than UTF-8. CJK code points mostly fall in `U+0800`–`U+FFFF`, which cost 2 bytes in UTF-16 but 3 bytes in UTF-8.
+
+"Most compact" has no single universal answer for every script — it depends on which scripts dominate the text.
+~~~
+
+!id: hRRfbDVhOK
+!front: Of UTF-8, UTF-16, and UTF-32, which is most wasteful of space, regardless of script?
+!back: UTF-32 is essentially always the least compact of the three, since every code point costs a full 4 bytes.
+~~~
+
+!id: m6bId3cIoQ
+!front: What is byte order, and why does it matter for UTF-16 and UTF-32?
+!back: Byte order is the order in which multi-byte code units are serialized. UTF-16 and UTF-32 code units are larger than one byte, so stored bytes must be interpreted as big-endian or little-endian.
+~~~
+
+!id: BEgKHSDnLs
+!front: Why does UTF-8 not need byte-order handling?
+!back: UTF-8's code units are single bytes. Since each unit is already one byte, there is no internal byte order to choose for code units.
+~~~
+
+!id: 7DtzIg2f4E
+!front: What is a byte order mark?
+!back: A byte order mark, or BOM, is the code point `U+FEFF` used at the start of a text stream to signal byte order for encodings such as UTF-16 or UTF-32. In UTF-8 it is not needed for byte order, though it is sometimes used as a signature.
+~~~
+
+!id: y1RmhaQHbi
+!front: What is mojibake?
+!back: Mojibake is garbled text produced when bytes are decoded with the wrong character encoding. It is evidence of an encoding mismatch, not a failure of the characters themselves.
+~~~
+
+!id: Wicp1bHpl8
+!front: What is the replacement character `U+FFFD` used for?
+!back: `U+FFFD` is used to replace data that cannot be decoded as valid text. It marks an error recovery point, not the original unknown character.
+~~~
+
+!id: b5tnuHdTx6
+!front: Why can lossy decoding make later text processing impossible to repair?
+!back: If invalid or misdecoded bytes are replaced with `U+FFFD` or wrong characters, information about the original bytes may be lost. Later code may no longer be able to reconstruct the intended text.
+~~~
+
+!id: Rakh6rggpB
+!front: Compare ASCII, Latin-1, and Unicode.
+!back:
+- ASCII is a 7-bit character set with 128 code points.
+- Latin-1 is an 8-bit character set covering 256 byte values.
+- Unicode is a much larger universal character set with many scripts and symbols.
+
+UTF-8 is an encoding of Unicode, not a separate character set like ASCII.
+~~~
+
+!id: 5OhiBvgYOO
+!front: Why is Windows-1252 often confused with ISO-8859-1?
+!back: The two encodings agree on many byte values, but Windows-1252 assigns printable punctuation and symbols to byte values that ISO-8859-1 treats as control characters. Decoding one as the other can produce visible errors.
+~~~
+
+!id: 0MCdtg4Hnt
+!front: Compare a character encoding like UTF-8 with a binary-to-text encoding like Base64.
+!back:
+- A character encoding, such as UTF-8, maps abstract Unicode code points to bytes, and exists to represent text.
+- A binary-to-text encoding, such as Base64, maps an arbitrary byte sequence — text or otherwise — to a restricted alphabet of printable ASCII characters, so that binary data can pass safely through channels built for text.
+
+Base64-encoded output does not represent Unicode text; it represents an arbitrary byte sequence disguised as ASCII.
+~~~
+
+!id: 2DSZhiKamc
+!front: What problem does Base64 encoding solve?
+!back: Some transport and storage formats only reliably carry a limited set of printable ASCII bytes, such as email bodies, JSON string values, or older text-only protocols. Base64 lets arbitrary binary data pass through such channels by re-encoding it into that restricted alphabet.
+~~~
+
+!id: 3DzjZ9EpBt
+!front: Why should text protocols specify both character set and encoding?
+!back: The receiver needs to know what characters are allowed and how bytes represent them. For Unicode text, the character set is Unicode, but the byte encoding still needs to be specified or fixed by the protocol.
+~~~
+
+!id: GOMoEPXgMe
+!front: What is the safest default encoding for new text formats?
+!back: UTF-8 is usually the safest default for new text formats because it supports all Unicode scalar values, is ASCII-compatible, and is widely supported.
+~~~
+
+!id: edNdLJJH5B
+!front: Why should internal string representation be separated from external file encoding?
+!back: A program may store strings internally as UTF-8, UTF-16, UTF-32, or another representation, while files and network protocols use a specified external encoding. Correct software encodes and decodes explicitly at boundaries.
+~~~
+
+!id: lLLR9USV3v
+!front: What is the difference between validating UTF-8 and validating text content?
+!back:
+- Validating UTF-8 checks whether bytes form legal UTF-8 for Unicode scalar values.
+- Validating text content checks application rules, such as allowed characters, normalization, length, or script restrictions.
+
+A string can be valid UTF-8 and still be unacceptable for an application.
+~~~
+
+!id: XNdvvgnSac
+!front: Why is byte length not the same as character length in Unicode text?
+!back: Encodings such as UTF-8 use different numbers of bytes for different scalar values, and user-visible characters may contain multiple scalar values. Byte length measures storage, not user-perceived text length.
+~~~
+
+!id: SdwkYq4Qt1
+!front: Why can truncating UTF-8 by bytes corrupt text?
+!back: A byte cut may split a multi-byte UTF-8 sequence, leaving invalid UTF-8. Even if the result is valid, it may split a grapheme cluster and produce broken visible text.
+~~~

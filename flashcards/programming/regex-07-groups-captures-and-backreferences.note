@@ -1,0 +1,89 @@
+!deck: Programming
+!type: Basic
+!tags: Programming Regex
+
+!id: doiXVmzER1
+!front: What are the two main roles of parentheses in a regex?
+!back:
+- They group part of the pattern so operators such as `|` and quantifiers apply to the intended subpattern.
+- Capturing parentheses also store the text matched by that group for later use.
+~~~
+
+!id: wIA6aTOgUM
+!front: What is the regex syntax for a capturing group around a subpattern `abc`?
+!back: `(abc)` — plain parentheses around the subpattern.
+~~~
+
+!id: SVsDILk3c9
+!front: What is the regex syntax for a non-capturing group around a subpattern `abc`?
+!back: `(?:abc)` — an opening parenthesis followed immediately by `?:`, then the subpattern, then a closing parenthesis.
+~~~
+
+!id: CaGb9NpWlp
+!front: Compare a capturing group with a non-capturing group.
+!back:
+- A capturing group, such as `(abc)`, groups the pattern and records the matched text.
+- A non-capturing group, such as `(?:abc)`, groups the pattern without recording a capture.
+
+Use a non-capturing group when grouping is needed only for precedence or quantification.
+~~~
+
+!id: WJJKfSsoCU
+!front: How are numbered capturing groups assigned?
+!back: Numbered capturing groups are assigned by the order of their opening capturing parentheses, reading left to right. Non-capturing groups do not take a number.
+~~~
+
+!id: k8v6P1Joec
+!front: What is a named capturing group, and why prefer it over a numbered group?
+!back:
+- A named capturing group is a capturing group given an explicit label, so it is referenced by that name instead of by its position-based number.
+- Naming is more readable, and it stays correct if groups are reordered or new groups are inserted — a numbered reference would silently shift to the wrong group.
+~~~
+
+!id: ioHvvLeKdN
+!front: Compare the named-group syntax used by Python-style regex engines with the syntax used by JavaScript, Java, and .NET.
+!back:
+- Python-style, also accepted by PCRE: the group is written `(?P<name>...)`.
+- JavaScript, Java, and .NET, also accepted by PCRE: the group is written `(?<name>...)`.
+
+Named-group syntax is not universal across regex engines, unlike plain capturing `(...)` and non-capturing `(?:...)` groups.
+~~~
+
+!id: VbTdLPD1hv
+!front: What does `(?:ab)+` match, and what does it not do?
+!back: It matches one or more consecutive copies of `ab`, such as `ab`, `abab`, or `ababab`. The `?:` makes the group non-capturing, so it does not create a captured group value.
+~~~
+
+!id: smTTmECBH2
+!front: What is the regex syntax for a backreference to capturing group 1?
+!back: `\1`
+~~~
+
+!id: 3PsJfSpJ5C
+!front: What is a backreference in a regex?
+!back: A backreference is a token that matches the exact text captured earlier by a group. For example, `(.)\1` matches two consecutive copies of the same character.
+~~~
+
+!id: HtQXOWIdMQ
+!front: Compare the syntax for a named backreference to a group called `word`, as used by Python-style regex engines versus JavaScript, Java, and .NET.
+!back:
+- Python-style, also accepted by PCRE: `(?P=word)`.
+- JavaScript, Java, and .NET, also accepted by PCRE: `\k<word>`.
+~~~
+
+!id: yH3BM29SdB
+!front: Which strings match `(ab|cd)\1`: `abab`, `abcd`, `cdcd`, or `cdab`?
+!back: `abab` and `cdcd` match. The backreference `\1` must repeat the exact text captured by `(ab|cd)`, so mixed pairs such as `abcd` and `cdab` do not match.
+~~~
+
+!id: DblhT522yN
+!front: Compare repeating a pattern with repeating the exact text that was captured.
+!back:
+- Repeating a pattern, such as `(ab|cd)(ab|cd)`, allows each repetition to choose independently.
+- Repeating captured text with a backreference, such as `(ab|cd)\1`, requires the second occurrence to equal the first captured text exactly.
+~~~
+
+!id: NaOTciMDUb
+!front: If a regex uses a case-insensitive flag, does a backreference require an exact case match to the originally captured text?
+!back: No — under a case-insensitive flag, the backreference comparison is also case-insensitive, not an exact character-for-character match to the original casing. For example, with case-insensitivity enabled, `(cat)\1` matches `catCAT`.
+~~~

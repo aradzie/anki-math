@@ -1,0 +1,81 @@
+!deck: Programming
+!type: Basic
+!tags: Programming Regex
+
+!id: 59oJKvVqlG
+!front: What does the character class `[abc]` mean?
+!back: It matches exactly one character, and that character must be `a`, `b`, or `c`. It does not match the string `abc` as a unit.
+~~~
+
+!id: w1b1Lcf8sG
+!front: What does the character range `[a-z]` mean?
+!back: It is a shorthand inside a character class for one character whose value lies in the range from `a` through `z`. For portable ASCII lowercase letters, `[a-z]` is the usual form.
+~~~
+
+!id: Sq1X5CRet8
+!front: What does the negated character class `[^abc]` mean?
+!back: It matches exactly one character that is not `a`, `b`, or `c`. The `^` negates the class only when it appears immediately after the opening `[`.
+~~~
+
+!id: xCJAdgEa1j
+!front: Compare `^` outside a character class with `^` at the start of a character class.
+!back:
+- Outside a character class, `^` is an anchor for the start of the input or line, depending on mode.
+- Immediately after `[`, as in `[^...]`, `^` negates the character class.
+
+The same glyph has different meanings in different regex contexts.
+~~~
+
+!id: 0NOnTyNme4
+!front: Does the pattern `[cat]` match the word `cat` as a whole? Why or why not?
+!back: No. `[cat]` matches one character: either `c`, `a`, or `t`. To match the word `cat`, use the concatenation `cat`.
+~~~
+
+!id: WWQlhfn9NO
+!front: Why is `[A-z]` usually the wrong way to match ASCII letters?
+!back: In ASCII order, the range from `A` to `z` includes punctuation characters between `Z` and `a`, not just letters. Use `[A-Za-z]` when the intended set is uppercase or lowercase ASCII letters.
+~~~
+
+!id: Rh3j6szHsi
+!front: Compare metacharacters inside and outside a character class.
+!back:
+- Outside a character class, characters such as `.`, `*`, `+`, `?`, `(`, and `|` usually have regex operator meanings.
+- Inside a character class, the special set is different: `-`, `^`, `]`, and backslash are the main characters that need special attention.
+
+For example, `[.]` matches a literal period.
+~~~
+
+!id: aG253C7Jfc
+!front: How can a literal hyphen be matched inside a character class?
+!back: Put the hyphen where it cannot be read as a range operator, commonly first or last in the class, or escape it. For example, `[-A-Z]`, `[A-Z-]`, and `[A-Z\-]` are ways to include a literal hyphen with uppercase ASCII letters.
+~~~
+
+!id: DJSBV3DSqy
+!front: How can a literal closing bracket `]` be matched inside a character class?
+!back: Escape it, as in `[\]]`, or put it in a position where the class syntax treats it as literal rather than as the class terminator. Escaping is usually the clearest form.
+~~~
+
+!id: mcg6hbS4Nr
+!front: How do the predefined classes `\d`, `\w`, and `\s` differ?
+!back:
+- `\d` matches a digit character.
+- `\w` matches a word character, commonly letters, digits, and underscore.
+- `\s` matches whitespace.
+
+Their exact Unicode extent is mode-dependent, so use explicit classes when the precise alphabet matters.
+~~~
+
+!id: xlAeGDIqzt
+!front: What do `\D`, `\W`, and `\S` mean in a regex?
+!back:
+- `\D` means a non-digit character.
+- `\W` means a non-word character.
+- `\S` means a non-whitespace character.
+
+Each is the complement of the corresponding lowercase predefined class under the current character model.
+~~~
+
+!id: Q2xnsyIV2f
+!front: Why might `[0-9]` be preferable to `\d` when parsing an ASCII-only format?
+!back: `[0-9]` explicitly names the ten ASCII digits. `\d` means "digit" under the current regex character model, which may include non-ASCII decimal digits in Unicode-aware matching.
+~~~

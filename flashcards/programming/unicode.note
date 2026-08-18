@@ -1,0 +1,338 @@
+!deck: Programming
+!type: Basic
+!tags: Programming Unicode
+
+!id: dnFJ9pgcxz
+!front: What problem is Unicode designed to solve?
+!back: Unicode provides a single universal character set for representing text from many writing systems and symbol sets. Its goal is to assign stable numeric identities to characters so text can be exchanged without relying on incompatible local character sets.
+~~~
+
+!id: xeph2PqRoa
+!front: What is a character repertoire?
+!back: A character repertoire is the collection of abstract characters a system supports. Unicode's repertoire includes letters, digits, punctuation, symbols, marks, controls, and many other text elements.
+~~~
+
+!id: ndajn6KPbn
+!front: What is an abstract character in Unicode?
+!back: An abstract character is a unit of textual meaning, such as LATIN CAPITAL LETTER A or GREEK SMALL LETTER ALPHA. It is not the same thing as a font shape, byte sequence, or particular rendering.
+~~~
+
+!id: kCpz9um0mZ
+!front: What is a Unicode code point?
+!back: A Unicode code point is a numeric position in the Unicode code space, written as `U+` followed by hexadecimal digits, such as `U+0041`.
+~~~
+
+!id: N4vH9qJYEo
+!front: What is the Unicode code space?
+!back: The Unicode code space is the range of possible code points from `U+0000` through `U+10FFFF`. Not every code point in that range is assigned to an abstract character.
+~~~
+
+!id: Q42wkUjneV
+!front: What does the notation `U+0041` mean?
+!back: It names the Unicode code point with hexadecimal value `0041`. That code point is assigned to LATIN CAPITAL LETTER A.
+~~~
+
+!id: kpHAXrMeXC
+!front: Compare a Unicode code point with a glyph.
+!back:
+- A code point identifies an abstract text element.
+- A glyph is a visual shape chosen by a font and rendering system.
+
+The same code point may render with different glyphs in different fonts.
+~~~
+
+!id: 5yiVOmfgiW
+!front: Why is "one Unicode code point" not the same as "one user-visible character"?
+!back: A user-visible character may be made from multiple code points, such as a base letter plus a combining mark, or an emoji sequence joined by special formatting code points. The user-visible unit is closer to a grapheme cluster.
+~~~
+
+!id: ZSGOKarjjQ
+!front: What is a Unicode scalar value?
+!back: A Unicode scalar value is any Unicode code point except the surrogate code points `U+D800` through `U+DFFF`. Valid UTF encodings represent scalar values, not isolated surrogates.
+~~~
+
+!id: BYBrlKCW7l
+!front: What are surrogate code points?
+!back: Surrogate code points are the range `U+D800` through `U+DFFF`. They are reserved for UTF-16's surrogate-pair mechanism and are not Unicode scalar values.
+~~~
+
+!id: GO15BiCoKn
+!front: Why are isolated surrogate code points invalid Unicode text?
+!back: Surrogates are not assigned abstract characters and are only meaningful as part of UTF-16's internal encoding mechanism. A lone surrogate is not a Unicode scalar value and should not appear as decoded Unicode text.
+~~~
+
+!id: VlQnRldUH2
+!front: What is a Unicode plane?
+!back: A Unicode plane is a block of 65,536 code points. Plane 0 is the Basic Multilingual Plane; higher planes contain supplementary characters such as many historic scripts, symbols, and emoji.
+~~~
+
+!id: JJFf3jZzDD
+!front: What is the Basic Multilingual Plane?
+!back: The Basic Multilingual Plane, or BMP, is Unicode plane 0: code points `U+0000` through `U+FFFF`. Many common modern scripts are in the BMP, but Unicode is larger than the BMP.
+~~~
+
+!id: cZbqiCdb5G
+!front: What is a supplementary Unicode character?
+!back: A supplementary character is a character assigned outside the Basic Multilingual Plane, at a code point above `U+FFFF`. In UTF-16 it requires a surrogate pair.
+~~~
+
+!id: NGYc51DoiW
+!front: Compare assigned, reserved, and private-use code points.
+!back:
+- An assigned code point has a defined Unicode character or special use.
+- A reserved code point is unassigned but may be assigned by a future Unicode version.
+- A private-use code point is intentionally left for agreements outside the Unicode standard.
+~~~
+
+!id: uJTDbyrMUk
+!front: What is a private-use character in Unicode?
+!back: A private-use character is a code point reserved for custom agreements between applications or communities. Unicode does not define its meaning, name, or appearance.
+~~~
+
+!id: VatAKT5RUp
+!front: What is a Unicode noncharacter?
+!back: A noncharacter is a code point permanently reserved for internal use, not for open interchange as ordinary text. Noncharacters are valid code points but are not assigned to abstract characters.
+~~~
+
+!id: rZevFn9zYj
+!front: What is a combining mark?
+!back: A combining mark is a code point that modifies a nearby base character, such as adding an accent. It usually does not stand as an independent spacing character.
+~~~
+
+!id: ofhg0u9tPL
+!front: Compare a precomposed character with a decomposed character sequence.
+!back:
+- A precomposed character uses one code point for a combined form, such as a letter with an accent.
+- A decomposed sequence uses a base character plus one or more combining marks.
+
+Unicode can treat some such forms as canonically equivalent.
+~~~
+
+!id: 9OABCmfL0Z
+!front: What is Unicode normalization?
+!back: Unicode normalization converts text into a standard form so canonically or compatibly equivalent sequences have predictable representations. It is used before comparisons, indexing, and storage when representation differences should not matter.
+~~~
+
+!id: sEE5tqq4iE
+!front: What is canonical equivalence in Unicode?
+!back: Canonical equivalence means two code point sequences represent the same abstract text according to Unicode's canonical rules, even if their code point sequences differ.
+~~~
+
+!id: if0BeNLMNI
+!front: What is compatibility equivalence in Unicode?
+!back: Compatibility equivalence is a weaker equivalence that treats some formatting or presentation distinctions as equivalent, such as certain ligatures, width variants, or styled forms. It can change distinctions that may matter visually or semantically.
+~~~
+
+!id: Lw7ooU58dD
+!front: Compare NFC and NFD normalization.
+!back:
+- NFC normalizes to canonical composition where possible.
+- NFD normalizes to canonical decomposition.
+
+Both preserve canonical meaning, but they choose different code point representations.
+~~~
+
+!id: 1tnviLJEJr
+!front: Compare NFKC and NFKD normalization.
+!back:
+- NFKC uses compatibility decomposition followed by canonical composition.
+- NFKD uses compatibility decomposition.
+
+Both may erase compatibility distinctions, so they should be used only when that loss is intended.
+~~~
+
+!id: WTickPSAXa
+!front: Why can two visually identical strings fail a byte-by-byte comparison?
+!back: They may use different but equivalent Unicode code point sequences, such as a precomposed character in one string and a base character plus combining mark in the other. Normalization can make the representations comparable.
+~~~
+
+!id: 3cCedGEpJA
+!front: Why should normalization be a deliberate boundary decision?
+!back: Normalization can change byte sequences and sometimes erase compatibility distinctions. A system should choose where text is normalized, which form is used, and which fields must preserve exact input.
+~~~
+
+!id: 6SVb3VSX5j
+!front: What is a grapheme cluster?
+!back: A grapheme cluster is a sequence of one or more Unicode code points that should usually be treated as one user-perceived character for cursor movement, deletion, and display.
+~~~
+
+!id: jK6E9wBnLj
+!front: Compare code point count with grapheme cluster count.
+!back:
+- Code point count measures Unicode scalar values or code points in a string.
+- Grapheme cluster count measures user-perceived characters according to Unicode segmentation rules.
+
+They can differ when combining marks, emoji sequences, or variation selectors are present.
+~~~
+
+!id: otsSDfhqLc
+!front: Why can slicing a Unicode string by code point break text?
+!back: A slice boundary may split a grapheme cluster, leaving a base character without its mark or breaking an emoji sequence. User-facing slicing should usually use grapheme cluster boundaries.
+~~~
+
+!id: zBNwJFLGkW
+!front: What is Unicode text segmentation?
+!back: Unicode text segmentation defines rules for finding boundaries such as grapheme clusters, words, and sentences. These boundaries are not always the same as code point boundaries.
+~~~
+
+!id: bqFpDbhu0O
+!front: What is a Unicode general category?
+!back: A general category classifies a code point by broad role, such as letter, mark, number, punctuation, symbol, separator, or control.
+~~~
+
+!id: eSbZgFsLdY
+!front: Compare Unicode general category and Unicode script.
+!back:
+- General category says what kind of character a code point is.
+- Script says which writing system a code point belongs to, such as Latin, Greek, or Cyrillic.
+
+They answer different questions and should not be substituted for each other.
+~~~
+
+!id: mQUFkactaM
+!front: Compare a Unicode script with a Unicode block.
+!back:
+- A script is a semantic property for a writing system.
+- A block is a contiguous range of code points in the Unicode chart.
+
+A block can contain characters from multiple scripts, and one script can span multiple blocks.
+~~~
+
+!id: T7gboyCN9o
+!front: What are the Common and Inherited script values used for?
+!back: Common is used for characters shared across scripts, such as digits or punctuation. Inherited is used for combining marks that inherit script context from neighboring characters.
+~~~
+
+!id: 4izgWM1lJV
+!front: What is a Unicode binary property?
+!back: A binary property is a yes-or-no property of a code point, such as Alphabetic, White_Space, Emoji, or Default_Ignorable_Code_Point.
+~~~
+
+!id: MYGGi8c7FC
+!front: Why is "letter" a Unicode property question rather than an ASCII range question?
+!back: ASCII ranges such as `[A-Za-z]` cover only English letters. Unicode letters appear across many scripts and are better identified using Unicode character properties.
+~~~
+
+!id: TXgW9lFFVZ
+!front: What is case mapping in Unicode?
+!back: Case mapping converts text between uppercase, lowercase, or titlecase according to Unicode data. It may map one code point to multiple code points.
+~~~
+
+!id: taitZQjnPq
+!front: What is case folding?
+!back: Case folding is a Unicode operation designed for caseless comparison. It is not the same as lowercasing for display; its goal is stable comparison, not presentation.
+~~~
+
+!id: gvjF8A4CD5
+!front: Why can changing case change string length?
+!back: Some Unicode case mappings expand one code point into multiple code points. Therefore code that assumes uppercase or lowercase preserves length is not Unicode-safe.
+~~~
+
+!id: LhTtwGWkKE
+!front: Why is locale relevant to some case operations?
+!back: Some writing systems have language-specific casing behavior. A locale-independent Unicode operation may not match user expectations for every language.
+~~~
+
+!id: 2RjTrMIfoi
+!front: What is collation?
+!back: Collation is the ordering of strings for sorting and comparison in a language-sensitive way. Unicode code point order is not the same as human alphabetical order.
+~~~
+
+!id: EHPGTLiUKV
+!front: Why is sorting by Unicode code point usually wrong for user-visible text?
+!back: Code point order follows numeric assignments, not language-specific alphabetic rules. User-visible sorting should use collation rules for the relevant locale and purpose.
+~~~
+
+!id: SPdhy8nLjz
+!front: What is a control character?
+!back: A control character is a code point used to control text processing or layout rather than to represent an ordinary printable symbol. Examples include line feed, carriage return, and tab.
+~~~
+
+!id: 5gqeulh4v2
+!front: Compare line feed and carriage return as Unicode characters.
+!back:
+- Line feed is `U+000A`.
+- Carriage return is `U+000D`.
+
+Different systems represent line breaks using LF, CRLF, or other conventions, so newline handling is partly a protocol issue.
+~~~
+
+!id: TaokbX7SkY
+!front: What is a zero-width character?
+!back: A zero-width character is a code point that affects text processing or rendering without occupying visible horizontal space. Examples include joiners, non-joiners, and some formatting controls.
+~~~
+
+!id: oy5YVfgVZL
+!front: Why can invisible Unicode characters cause debugging problems?
+!back: Invisible characters can make two strings look identical while comparing differently. They can also affect rendering, cursor movement, identifiers, or security checks.
+~~~
+
+!id: FOpNFkpCHw
+!front: What is the zero-width joiner used for?
+!back: The zero-width joiner, `U+200D`, requests that adjacent characters be rendered as a joined form when supported. It is important in some scripts and in many emoji sequences.
+~~~
+
+!id: 1YujUwUhlD
+!front: What is a variation selector?
+!back: A variation selector is a code point that requests a particular presentation variant for a preceding character, such as text-style or emoji-style presentation.
+~~~
+
+!id: wiuI2R3r0j
+!front: Why is an emoji often a sequence rather than a single code point?
+!back: Many emoji are built from multiple code points, such as a base emoji plus a variation selector, skin tone modifier, regional indicators, or a zero-width-joiner sequence.
+~~~
+
+!id: ctzddFJuCJ
+!front: What is an emoji modifier?
+!back: An emoji modifier is a code point that changes the presentation of an emoji, commonly for skin tone. It combines with a supported base emoji rather than standing as ordinary text.
+~~~
+
+!id: 7yhPbTdTUZ
+!front: How are many flag emoji represented in Unicode?
+!back: Many flag emoji are represented as pairs of regional indicator symbols. The displayed flag is a rendering of the sequence, not a single country-code code point.
+~~~
+
+!id: 5AntQBgAPM
+!front: Why can deleting "one emoji" require deleting several code points?
+!back: The displayed emoji may be a grapheme cluster made from multiple code points, such as regional indicators, modifiers, variation selectors, or zero-width joiners. Deleting only one code point can leave a broken sequence.
+~~~
+
+!id: OhHjJ701xc
+!front: What are homoglyphs or confusable characters?
+!back: Homoglyphs are distinct characters with similar or identical visual appearance. In Unicode security discussions they are often called confusables because they can make different strings look alike.
+~~~
+
+!id: isKA59XMQg
+!front: Why are mixed-script identifiers a security concern?
+!back: Characters from different scripts can be visually confusable, such as Latin and Cyrillic letters with similar shapes. Mixed-script identifiers can be used to create misleading names.
+~~~
+
+!id: Uxg48ZB5Je
+!front: What are bidirectional controls?
+!back: Bidirectional controls are formatting characters that influence how left-to-right and right-to-left text are ordered for display. They can be necessary for correct text but dangerous when hidden in source code or identifiers.
+~~~
+
+!id: MlqLaa6v7q
+!front: Why is displayed order not always the same as logical order in Unicode text?
+!back: Unicode stores text in logical order, while the bidirectional algorithm determines visual order for mixed left-to-right and right-to-left text. The rendered display can reorder runs without changing the underlying code point sequence.
+~~~
+
+!id: FjvnSQH3gq
+!front: What is an identifier profile in Unicode-aware programming?
+!back: An identifier profile is a restricted set of Unicode characters and normalization rules allowed for names. It reduces ambiguity by choosing which scripts, marks, and confusable forms are acceptable.
+~~~
+
+!id: 0AvakOAcQ8
+!front: Why is "allow all Unicode letters" often too broad for identifiers?
+!back: It admits characters from many scripts, combining marks, invisible controls, and confusable forms. Real identifier rules usually combine Unicode properties with normalization, script restrictions, and security checks.
+~~~
+
+!id: xzP1BlkHDv
+!front: What is a Unicode-aware regular expression expected to do differently from an ASCII-only regex?
+!back: It can interpret classes such as letters, digits, word characters, and boundaries using Unicode properties rather than ASCII ranges. The exact behavior depends on the regex engine and mode.
+~~~
+
+!id: bzKGPib4r9
+!front: What should a user-facing character limit count?
+!back: Usually it should count grapheme clusters, because those correspond most closely to user-perceived characters. Byte limits and code unit limits are storage constraints, not user-facing character counts.
+~~~

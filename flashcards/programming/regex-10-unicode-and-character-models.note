@@ -1,0 +1,55 @@
+!deck: Programming
+!type: Basic
+!tags: Programming Regex
+
+!id: a1XM6pkgR6
+!front: What is a Unicode property class in a regex?
+!back: A Unicode property class matches characters by a Unicode property, such as "letter", "decimal digit", "mark", or a script. The exact syntax varies, but the concept is property-based character matching instead of literal enumeration.
+~~~
+
+!id: OtRsO8vTTE
+!front: Compare a Unicode general category with a Unicode script property.
+!back:
+- A general category classifies what kind of character something is, such as letter, number, punctuation, or mark.
+- A script property classifies the writing system a character belongs to, such as Latin, Greek, or Cyrillic.
+
+They answer different questions about a character.
+~~~
+
+!id: ReQJkqyJbF
+!front: Why is `[A-Z]` not the same as "any uppercase letter" in Unicode text?
+!back: `[A-Z]` names a small ASCII range. Unicode has uppercase letters outside that range, so a Unicode property such as "uppercase letter" is needed for the broader concept.
+~~~
+
+!id: rfMcAUY887
+!front: Why can Unicode combining marks surprise a regex written for "one character"?
+!back: A user-perceived character may be represented by multiple code points, such as a base letter followed by a combining mark. A regex token that consumes one code point may match only part of that visible character.
+~~~
+
+!id: 23yZRG0KAD
+!front: Compare a Unicode code point with a grapheme cluster.
+!back:
+- A code point is a single Unicode scalar value.
+- A grapheme cluster is what a user typically perceives as one character, possibly made from multiple code points.
+
+Regex tokens that mean "one character" often operate below the grapheme-cluster level.
+~~~
+
+!id: gnfhovawPf
+!front: Why does Unicode normalization matter for regex matching?
+!back: The same displayed text may have multiple Unicode representations, such as one precomposed code point or a base character plus combining mark. A literal regex may match one representation but not the other unless the input is normalized or the pattern accounts for both.
+~~~
+
+!id: K7mmkkNNdN
+!front: Why is `\b` especially delicate in Unicode-aware matching?
+!back: Word boundaries depend on what counts as a word character. In Unicode text, letters, marks, digits, and connector characters can make that boundary more subtle than the ASCII intuition of letters, digits, and underscore.
+~~~
+
+!id: q2UBJtpn9o
+!front: Compare case-insensitive matching with explicitly listing both letter cases.
+!back:
+- Case-insensitive matching asks the regex engine to treat case variants as equivalent under its case-folding rules.
+- Explicit listing, such as `[Aa]`, names only the variants written in the pattern.
+
+The difference matters most in Unicode, where case relationships can be more complex than ASCII uppercase/lowercase pairs.
+~~~

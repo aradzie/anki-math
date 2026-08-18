@@ -1,0 +1,43 @@
+!deck: Programming
+!type: Basic
+!tags: Programming Regex
+
+!id: pY2WSHjQTa
+!front: What is an anchor in a regex?
+!back: An anchor is a zero-width assertion about position. It does not consume characters; it checks facts such as "start of input", "end of input", or "word boundary".
+~~~
+
+!id: DPuIYLOiKW
+!front: What does the start anchor `^` assert?
+!back: `^` asserts that the current position is at the start of the input, or at the start of a line in multiline mode. It consumes no characters.
+~~~
+
+!id: 7fOmc3DFUq
+!front: What does the end anchor `$` assert?
+!back: `$` asserts that the current position is at the end of the input, or at the end of a line in multiline mode. It consumes no characters.
+~~~
+
+!id: zLsRhXnqz7
+!front: Why does anchoring matter when using regex for validation?
+!back: Without anchors or full-match mode, a regex may succeed by matching only a valid substring inside invalid surrounding text. Validation normally requires the whole input to satisfy the pattern.
+~~~
+
+!id: zSGCKhaRME
+!front: What does `^\d+$` assert about an input string?
+!back: It asserts that the whole input consists of one or more digit characters: `^` fixes the start, `\d+` matches at least one digit, and `$` fixes the end.
+~~~
+
+!id: 5MLBu22AGL
+!front: What is a word boundary `\b`?
+!back: A word boundary is a zero-width assertion for a position between a word character and a non-word character, or between a word character and the edge of the input.
+~~~
+
+!id: fOSqhhkaKN
+!front: Does `\bcat\b` match the `cat` inside `concatenate`? Why or why not?
+!back: No. The `cat` inside `concatenate` is adjacent to word characters on both sides, so the positions around it are not word boundaries.
+~~~
+
+!id: 6aJxSCGbJn
+!front: Why does `\b` not add a character to the matched text?
+!back: `\b` is zero-width. It checks whether the current position is a word boundary, but it does not consume any input character.
+~~~

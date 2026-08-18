@@ -1,0 +1,57 @@
+!deck: Programming
+!type: Basic
+!tags: Programming Regex
+
+!id: NffrhzB6Ab
+!front: What does `RegExp.prototype.test(str)` do, and what does it return?
+!back: It attempts to match the regex against `str` and returns a boolean: `true` if a match is found anywhere in `str`, `false` otherwise. It never returns the matched text itself.
+~~~
+
+!id: lV5MUM3Sf1
+!front: What does `RegExp.prototype.exec(str)` do, and what does it return?
+!back: It attempts to match the regex against `str` and returns either `null` if there is no match, or an array-like match object holding the matched text and any captured groups.
+~~~
+
+!id: Jx7bCoSbe7
+!front: Besides the matched substrings, what extra information does the object returned by `exec()` carry?
+!back:
+- `index` — the position in the searched string where the match starts.
+- `input` — the original string that was searched.
+- `groups` — an object of named capture values, or `undefined` if the pattern used no named groups.
+~~~
+
+!id: P2hZwMhExc
+!front: Compare `RegExp.prototype.test()` with `RegExp.prototype.exec()`.
+!back:
+- `test()` returns only a boolean: whether a match exists.
+- `exec()` returns the match details — matched text, captures, and position — or `null`.
+
+Use `test()` when only presence or absence matters; use `exec()` when the matched text or its captured groups are needed.
+~~~
+
+!id: wIihJjM9gS
+!front: Is a regex pattern written any differently depending on whether it will be used with `test()` or `exec()`?
+!back: No. Both are methods on `RegExp.prototype` called the same way on the same regex object, with the string as the argument — `re.test(str)`, `re.exec(str)`. The pattern syntax is identical; only the return value differs.
+~~~
+
+!id: aiYRQpPyH0
+!front: How does the `g` or `y` flag change repeated calls to `test()` or `exec()` on the same `RegExp` object?
+!back: With `g` or `y` set, a successful call advances the regex object's `lastIndex` property to just past the match, and the next call resumes searching from `lastIndex` instead of from the start. Without either flag, `lastIndex` is ignored and every call starts at position `0`.
+~~~
+
+!id: sYGfkVb881
+!front: What breaks if a `RegExp` with the `g` or `y` flag is reused across unrelated calls without resetting `lastIndex`?
+!back: The stale `lastIndex` left over from a previous search makes the next call resume mid-string instead of from the start, so it can return `null` or skip a match that actually occurs earlier in the new string.
+~~~
+
+!id: JmwM8G0k0O
+!front: Compare `String.prototype.match(regex)` with and without the `g` flag.
+!back:
+- Without `g`, it returns the same kind of single match object as `exec()` — matched text, captures, `index`, `input` — or `null`.
+- With `g`, it returns a plain array of all matched substrings only, with no capture groups or index information, or `null` if there is no match.
+~~~
+
+!id: QrCBvvLD8x
+!front: Why does `String.prototype.matchAll(regex)` exist alongside `match()`?
+!back: `matchAll()` returns an iterator yielding a full match object — matched text, captures, and `index` — for every match, filling the gap left by `match()` with the `g` flag, which returns only bare matched strings. The `regex` argument must have the `g` flag set, or `matchAll()` throws a `TypeError`.
+~~~

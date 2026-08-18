@@ -1,0 +1,28 @@
+!deck: Programming
+!type: Basic
+!tags: Programming Regex
+
+!id: uceIXQNk3h
+!front: What does an ordinary literal character do in a regex?
+!back: An ordinary literal character matches that same character in the input. For example, the pattern `cat` matches the three consecutive characters `c`, `a`, and `t`.
+~~~
+
+!id: s2rMjzNwai
+!front: What is escaping in a regex?
+!back: Escaping uses a backslash to change how the next character is interpreted: either to quote a metacharacter as a literal character, or to introduce a special token such as `\d` or `\b`.
+~~~
+
+!id: 6s16bNpQZS
+!front: What does the regex `a\.b` match, and why?
+!back: It matches the literal string `a.b`. The escaped dot `\.` means a period character, not the dot wildcard.
+~~~
+
+!id: ga9GpRXCYI
+!front: What does the dot `.` mean in a regex?
+!back: The dot is a wildcard atom: it matches one character from a broad default character set. It does not mean a literal period; use `\.` for that.
+~~~
+
+!id: QBnx6JIBny
+!front: Does `.` match a newline character by default?
+!back: No. In many regex systems `.` excludes line terminators by default; enabling dot-all mode makes it match newlines too.
+~~~

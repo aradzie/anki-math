@@ -1,0 +1,37 @@
+!deck: Programming
+!type: Basic
+!tags: Programming Regex
+
+!id: GJbXA6Hm1c
+!front: What does it mean for a quantifier to be greedy?
+!back: A greedy quantifier first takes as many repetitions as it can while still allowing the whole pattern to match. Greediness affects which matching substring is chosen, not the set of strings the quantified atom can describe.
+~~~
+
+!id: 3zJICKWJSi
+!front: What does it mean for a quantifier to be lazy?
+!back: A lazy quantifier first takes as few repetitions as it can while still allowing the whole pattern to match.
+~~~
+
+!id: 9j0ZbuBPNg
+!front: What is the regex syntax for the lazy (non-greedy) form of a quantifier?
+!back: Append `?` immediately after the quantifier: `*?`, `+?`, `??`, and `{m,n}?` are the lazy counterparts of `*`, `+`, `?`, and `{m,n}`.
+~~~
+
+!id: B689ex6gTr
+!front: On the string `<b>x</b><i>y</i>`, what does `<.*>` match, and what does `<.*?>` match?
+!back:
+- `<.*>` is greedy: it matches the entire string `<b>x</b><i>y</i>`, spanning from the first `<` all the way to the last `>`.
+- `<.*?>` is lazy: it matches only `<b>`, stopping at the first `>` that still lets the whole pattern succeed.
+
+The lazy quantifier changes the preferred match length, not the meaning of `.` or `>`.
+~~~
+
+!id: dJgAqvRrgx
+!front: Why is a lazy quantifier not the same thing as a negated character class?
+!back: A lazy quantifier still matches the same atom and may expand until the rest of the pattern succeeds. A negated class, such as `[^>]*`, forbids specific characters while it repeats.
+~~~
+
+!id: eSbBsxsMpd
+!front: Does `{n}?` behave any differently from `{n}`? Why?
+!back: No. `{n}` allows only one possible repetition count, so there is no choice between taking more or fewer repetitions for greediness or laziness to affect. The `?` suffix is syntactically valid in most engines but has no observable effect on matching.
+~~~

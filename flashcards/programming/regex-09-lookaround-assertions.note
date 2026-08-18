@@ -1,0 +1,91 @@
+!deck: Programming
+!type: Basic
+!tags: Programming Regex
+
+!id: pIZV6030a5
+!front: What is the regex syntax for a positive lookahead asserting that `abc` follows the current position?
+!back: `(?=abc)`
+~~~
+
+!id: FTt3LX0Gtj
+!front: What is the regex syntax for a negative lookahead asserting that `abc` does not follow the current position?
+!back: `(?!abc)`
+~~~
+
+!id: 1pAk7HGWZj
+!front: What is the regex syntax for a positive lookbehind asserting that `abc` immediately precedes the current position?
+!back: `(?<=abc)`
+~~~
+
+!id: UcxVjabtpB
+!front: What is the regex syntax for a negative lookbehind asserting that `abc` does not immediately precede the current position?
+!back: `(?<!abc)`
+~~~
+
+!id: G9m75BGKNF
+!front: What is a positive lookahead `(?=...)`?
+!back: A positive lookahead is a zero-width assertion that succeeds if the pattern inside it matches starting at the current position. It checks what comes next without consuming it.
+~~~
+
+!id: aKe2mSs4dH
+!front: What is a negative lookahead `(?!...)`?
+!back: A negative lookahead is a zero-width assertion that succeeds if the pattern inside it does not match starting at the current position. It rejects a forbidden next context without consuming input.
+~~~
+
+!id: CBeToM7xK7
+!front: What is a positive lookbehind `(?<=...)`?
+!back: A positive lookbehind is a zero-width assertion that succeeds if the pattern inside it matches immediately before the current position. It checks prior context without consuming it.
+~~~
+
+!id: 1AOTiBdA49
+!front: What is a negative lookbehind `(?<!...)`?
+!back: A negative lookbehind is a zero-width assertion that succeeds if the pattern inside it does not match immediately before the current position. It forbids a previous context without consuming input.
+~~~
+
+!id: OCGdXgj5ai
+!front: Compare lookahead and lookbehind assertions.
+!back:
+- Lookahead checks text after the current position.
+- Lookbehind checks text before the current position.
+
+Both are zero-width: they assert context but do not include that context in the consumed match.
+~~~
+
+!id: 6dMwNcs6uD
+!front: In the pattern `foo(?=bar)`, is `bar` part of the consumed match?
+!back: No. `(?=bar)` only asserts that `bar` follows the current position after `foo`. The consumed match is `foo`, assuming the assertion succeeds.
+~~~
+
+!id: SKyxxpbiD1
+!front: Which strings contain a match for `foo(?!bar)`: `foobar`, `foobaz`, or `foo`?
+!back: `foobaz` and `foo` contain a match for `foo(?!bar)`. `foobar` does not at the `foo` position, because the negative lookahead rejects `foo` when it is immediately followed by `bar`.
+~~~
+
+!id: aIaWl7E4we
+!front: Construct a regex that matches the letter `q` only when it is not followed by `u`.
+!back: Use `q(?!u)`. The `q` is consumed, and `(?!u)` asserts that the next character is not `u`.
+~~~
+
+!id: aSv0fJ3hEr
+!front: Construct a regex that matches digits only when they are immediately preceded by `USD `.
+!back: Use `(?<=USD )\d+`. The positive lookbehind checks for the prefix `USD `, and `\d+` consumes the digits.
+~~~
+
+!id: n2s4nWuX6V
+!front: Why can adjacent zero-width assertions often be reordered without changing what is consumed?
+!back: If the assertions are checked at the same position and have no side effects relevant to the match, reordering them does not change the consumed text. Each assertion only accepts or rejects that same position.
+~~~
+
+!id: rNuJYUh5lH
+!front: What does a negative lookahead at the start of a pattern often express?
+!back: It expresses a prohibition checked before the rest of the pattern runs. With an anchor and a broad scan inside the lookahead, it can express a whole-input rule such as "this input must not contain the forbidden substring."
+~~~
+
+!id: muIYZdbfQP
+!front: Compare `^(?!.*bad).*$` with simply searching for `bad`.
+!back:
+- Searching for `bad` succeeds when the forbidden substring is present.
+- `^(?!.*bad).*$` is a validation-style pattern that succeeds only when the whole input does not contain `bad`.
+
+The negative lookahead turns the test into a prohibition.
+~~~

@@ -1,0 +1,29 @@
+!deck: Programming
+!type: Basic
+!tags: Programming Regex
+
+!id: nRoTOtgZ7v
+!front: What does a regular expression pattern describe?
+!back: A regex pattern describes a set of strings or substrings with a compact syntax. Matching asks whether the input contains a substring, or in full-match mode the whole input, that belongs to that set.
+~~~
+
+!id: glibidFmPK
+!front: Compare a regex search with a regex full match.
+!back:
+- A search succeeds if some substring of the input matches the pattern.
+- A full match succeeds only if the entire input matches the pattern.
+
+Anchors or a full-match API are needed when the goal is validation rather than extraction.
+~~~
+
+!id: Fro2HnOzkH
+!front: Compare consuming regex constructs with zero-width regex assertions.
+!back:
+- A consuming construct matches one or more input characters and advances the current position.
+- A zero-width assertion checks a condition at the current position without consuming characters.
+~~~
+
+!id: BnjZrWGaZa
+!front: Give three examples of zero-width regex constructs.
+!back: Anchors, word boundaries, and lookaround assertions — each tests a condition at the current position without consuming any input characters.
+~~~

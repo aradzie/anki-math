@@ -1,0 +1,53 @@
+!deck: Programming
+!type: Basic
+!tags: Programming Regex
+
+!id: sc4O6nqq0R
+!front: What does the quantifier `?` mean?
+!back: `?` means "zero or one occurrence" of the preceding atom or group. For example, `colou?r` matches both `color` and `colour`.
+~~~
+
+!id: ek3PwfX1xD
+!front: What does the quantifier `*` mean?
+!back: `*` means "zero or more occurrences" of the preceding atom or group. Unlike `+`, it allows zero occurrences.
+~~~
+
+!id: 6bLUQic0fT
+!front: What does the quantifier `+` mean?
+!back: `+` means "one or more occurrences" of the preceding atom or group. Unlike `*`, it requires at least one occurrence.
+~~~
+
+!id: SrOR9ecPhu
+!front: Compare `{n}`, `{m,}`, and `{m,n}` quantifiers.
+!back:
+- `{n}` means exactly `n` occurrences.
+- `{m,}` means at least `m` occurrences.
+- `{m,n}` means at least `m` and at most `n` occurrences.
+
+Each applies to the immediately preceding atom or group.
+~~~
+
+!id: G7r680pIOB
+!front: Does `a*` match the empty string? Why?
+!back: Yes. `*` allows zero occurrences of the preceding atom, so `a*` can match no `a` characters at all.
+~~~
+
+!id: DfvfaliQS9
+!front: Compare `.*`, `.+`, and `.?`.
+!back:
+- `.*` matches zero or more wildcard characters.
+- `.+` matches one or more wildcard characters.
+- `.?` matches zero or one wildcard character.
+
+They differ only in the number of repetitions allowed.
+~~~
+
+!id: YXfGbWehEK
+!front: Construct a regex for exactly three digits.
+!back: Use `\d{3}` if "digit" should follow the regex character model, or `[0-9]{3}` if the intended alphabet is exactly ASCII digits.
+~~~
+
+!id: l8qWqCSGPm
+!front: Construct a regex for two to four lowercase ASCII letters.
+!back: Use `[a-z]{2,4}`. The character class supplies one lowercase ASCII letter, and `{2,4}` requires two, three, or four repetitions.
+~~~

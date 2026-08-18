@@ -1,0 +1,65 @@
+!deck: Programming
+!type: Basic
+!tags: Programming Regex
+
+!id: Fa39OWnXid
+!front: What is catastrophic backtracking in a regex engine?
+!back: Catastrophic backtracking is a failure mode of backtracking regex engines where, for certain inputs, the number of ways the engine can try to satisfy nested or overlapping quantifiers grows exponentially with input length. Matching time then blows up even though the input ultimately fails to match.
+~~~
+
+!id: 1nU0UEBGX6
+!front: Why does matching `(a+)+b` against a long run of `a` characters with no trailing `b` take exponentially long, even though it ultimately fails?
+!back:
+- The outer `+` can split a run of `n` a's among repetitions of the inner `a+` in many different ways — about \( 2^{n-1} \) distinct partitions into consecutive nonempty groups.
+- Every one of those partitions still consumes exactly the same substring, all the a's, so all of them reach the same final position and then fail to match the trailing `b`.
+- A backtracking engine does not know the partitions are equivalent; it retries each one in turn before giving up, so the number of failed attempts, and the running time, grows exponentially with `n`.
+~~~
+
+!id: L51vgcf2f7
+!front: Is `a+` vulnerable to catastrophic backtracking? Why or why not?
+!back: No. A single quantifier over an atom has only one way to consume a given run of matching characters, so there is nothing for the engine to backtrack through combinatorially — a failing match is rejected in linear time.
+~~~
+
+!id: 1nAKbyqXrN
+!front: Is `(a+)+` vulnerable to catastrophic backtracking? Why or why not?
+!back: Yes. The outer `+` can repeat the inner `a+` group, so a run of `a` characters can be split among repetitions in exponentially many equivalent ways, and the engine may retry all of them before a failing match is rejected.
+~~~
+
+!id: bedevWOfwb
+!front: Is `(a|aa)*` vulnerable to catastrophic backtracking? Why or why not?
+!back: Yes. The two alternatives overlap: a run of `a` characters can be produced by choosing `a` or `aa` at each step in many different combinations that consume the same text, so a failing match forces the engine through exponentially many equivalent combinations before giving up.
+~~~
+
+!id: hdOzxBtkg7
+!front: What is an atomic group, and how does rewriting `(a+)+` as `(?>a+)+` avoid catastrophic backtracking?
+!back: An atomic group, written `(?>...)`, matches its subpattern like an ordinary group, but once it succeeds, the engine commits to that match and never backtracks back into it to try a different internal split. In `(?>a+)+`, the inner `a+` always consumes the maximal run of `a` characters and that choice is locked in, eliminating the exponentially many equivalent partitions that plain `(a+)+` would otherwise retry.
+~~~
+
+!id: 02ubl3h48c
+!front: What is a possessive quantifier, and how does rewriting `(a+)+` as `a++` avoid catastrophic backtracking?
+!back: A possessive quantifier, written with a trailing `+` such as `*+`, `++`, `?+`, or `{m,n}+`, matches greedily like its ordinary counterpart but never gives back characters through backtracking once it has consumed them. `a++` consumes the maximal run of `a`s and never backtracks within it, so there is only one way to consume that run — removing the ambiguity that made `(a+)+` exponential.
+~~~
+
+!id: YSIPeHfcrJ
+!front: Compare `a+a` (greedy) with `a++a` (possessive) matched against `aaaa`.
+!back:
+- `a+a` matches `aaaa`: the greedy `a+` first grabs all four `a`s, then backtracks to three so the trailing `a` in the pattern can match the fourth.
+- `a++a` does not match `aaaa`: the possessive `a++` grabs all four `a`s and never gives any back, leaving nothing left for the trailing `a` in the pattern to match.
+~~~
+
+!id: BoxHfTQJC4
+!front: Why can replacing a greedy quantifier with a possessive one change whether a pattern matches at all, not just how fast a failing match is rejected?
+!back: A possessive quantifier removes the engine's ability to backtrack into it. If the rest of the pattern could only succeed by taking back some of the characters the quantifier consumed, as in `a+a` on `aaaa`, that path is no longer available once the quantifier is made possessive. It is only safe to make a quantifier possessive when the quantified part and whatever follows it never need to share characters for the whole pattern to succeed.
+~~~
+
+!id: ARJ4Vk3t0w
+!front: Compare a possessive quantifier with an atomic group.
+!back:
+- A possessive quantifier, such as `a++`, is equivalent to wrapping the same greedy quantifier in an atomic group: `a++` behaves identically to `(?>a+)`.
+- An atomic group is more general — it can wrap any subpattern, not just a quantified atom, so it can also commit to whichever branch an alternation matched, such as `(?>abc|abd)`, with no possessive-quantifier equivalent.
+~~~
+
+!id: Bj09WW0elj
+!front: What is the "unroll the loop" rewriting technique, and how does it apply to a double-quoted string body that allows backslash escapes?
+!back: It restructures a mixed "normal-or-special" repeated alternation, `(?:normal|special)*`, into a single greedy run of the common case interleaved with the rare case: `normal*(?:special normal*)*`. For a quoted-string body, this turns `(?:[^"\\]|\\.)*` into `[^"\\]*(?:\\.[^"\\]*)*` — matching a maximal run of ordinary characters, then repeatedly matching one escape followed by another maximal run, instead of re-testing the alternation one character at a time.
+~~~
