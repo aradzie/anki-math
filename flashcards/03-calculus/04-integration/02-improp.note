@@ -86,10 +86,7 @@ Let:
 
 To prove: \( \int_1^\infty x^{-p}\,dx \) converges exactly when \( p>1 \).
 
-- If \( p\ne 1 \), then
-\[
-\int_1^R x^{-p}\,dx = \frac{R^{1-p}-1}{1-p}.
-\]
+- If \( p\ne 1 \), then \[ \int_1^R x^{-p}\,dx = \frac{R^{1-p}-1}{1-p}. \]
 - As \( R\to\infty \), the term \( R^{1-p} \) tends to \( 0 \) exactly when \( 1-p<0 \), i.e. \( p>1 \). The resulting limit is \( 1/(p-1) \).
 - If \( p<1 \), then \( R^{1-p}\to\infty \), so the integral diverges.
 - If \( p=1 \), then \( \int_1^R dx/x = \ln R\to\infty \), so the boundary case also diverges.
@@ -114,10 +111,7 @@ Let:
 
 To prove: \( \int_0^1 x^{-p}\,dx \) converges exactly when \( p<1 \).
 
-- If \( p\ne 1 \), then
-\[
-\int_\varepsilon^1 x^{-p}\,dx = \frac{1-\varepsilon^{1-p}}{1-p}.
-\]
+- If \( p\ne 1 \), then \[ \int_\varepsilon^1 x^{-p}\,dx = \frac{1-\varepsilon^{1-p}}{1-p}. \]
 - As \( \varepsilon\to0^+ \), the term \( \varepsilon^{1-p} \) tends to \( 0 \) exactly when \( 1-p>0 \), i.e. \( p<1 \). The resulting limit is \( 1/(1-p) \).
 - If \( p>1 \), then \( \varepsilon^{1-p}\to\infty \), so the integral diverges.
 - If \( p=1 \), then \( \int_\varepsilon^1 dx/x = -\ln\varepsilon\to\infty \), so the boundary case also diverges.
