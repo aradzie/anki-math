@@ -27,6 +27,13 @@
 # --userns keep-id maps the container user to the host user so files written
 # into the bind mount are owned by the invoking user, not root.
 #
+# The bind mount uses the lowercase :z SELinux label, not :Z. :Z applies a
+# private label usable by only one container at a time; when a parallel
+# build (make -j) launches several of these containers against the same
+# directory at once, each tries to claim it exclusively and they race,
+# producing spurious "Permission denied" errors. :z applies a shared label
+# so concurrent containers can access the same bind mount safely.
+#
 # Xvfb is started directly rather than via xvfb-run: xvfb-run's SIGUSR1-based
 # wait for Xvfb to report readiness hangs in this container environment
 # (Xvfb comes up and creates its socket fine, but the signal round-trip
@@ -47,6 +54,6 @@ if [ "$#" -eq 0 ]; then
 fi
 
 exec podman run --rm -it --userns keep-id \
-    -v "$PWD:/work:Z" -w /work \
+    -v "$PWD:/work:z" -w /work \
     "$image" env SOURCE_DATE_EPOCH="$source_date_epoch" \
     bash -c 'Xvfb :99 -screen 0 1280x1024x24 -nolisten tcp & until [ -e /tmp/.X11-unix/X99 ]; do sleep 0.1; done; export DISPLAY=:99; exec "$@"' bash "$@"

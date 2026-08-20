@@ -81,7 +81,11 @@
 \newenvironment{answer}{\par\smallskip\noindent\textit{Answer.}\enspace}{\par\medskip}
 
 % ---------- Shared math macros ----------
+\newcommand{\C}{\mathbb{C}}
 \newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
 \newcommand{\dd}{\mathrm{d}}
 
 % ---------- Tables ----------
