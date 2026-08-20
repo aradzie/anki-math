@@ -1,0 +1,625 @@
+!deck: Math::Calculus
+!type: Basic Math
+!tags: Math Calculus Sequence Series
+
+!id: lVOYHPRS4t
+!front: Define an infinite series.
+!back:
+An infinite series \( \sum_{n=1}^{\infty} a_n \) is defined through its sequence of partial sums
+
+\[ s_N = \sum_{n=1}^{N} a_n. \]
+
+The series converges if \( \{s_N\} \) converges. In that case,
+
+\[ \sum_{n=1}^{\infty} a_n = \lim_{N\to\infty} s_N. \]
+!extra: The notation \( a_1+a_2+a_3+\ldots \) is shorthand for this limiting process, not an ordinary finite sum.
+~~~
+
+!id: ujWjFxn8SR
+!front: Compare the convergence of a sequence \( \{a_n\} \) with the convergence of a series \( \sum_{n=1}^{\infty} a_n \).
+!back:
+- A sequence \( \{a_n\} \) converges when the terms \( a_n \) approach a finite limit.
+- A series \( \sum_{n=1}^{\infty} a_n \) converges when its partial sums \( s_N=\sum_{n=1}^{N}a_n \) approach a finite limit.
+
+So series convergence is sequence convergence applied to the sequence of partial sums, not to the sequence of terms.
+!extra: If \( \sum a_n \) converges, then \( a_n\to0 \), but \( a_n\to0 \) does not by itself imply that \( \sum a_n \) converges.
+~~~
+
+!id: 10TkSmX9vC
+!front: State the Cauchy convergence criterion for an infinite series \( \sum_{n=1}^{\infty} a_n \).
+!back:
+The series \( \sum_{n=1}^{\infty} a_n \) converges if and only if for every \( \epsilon>0 \), there exists an integer \( N \) such that
+
+\[ \left|\sum_{k=m}^{n}a_k\right|<\epsilon \]
+
+whenever \( n\ge m\ge N \).
+!extra: This is the Cauchy criterion for the partial sums \( s_N=\sum_{k=1}^{N}a_k \), rewritten in terms of tails of the series.
+~~~
+
+!id: YSNwgAbmJz
+!front: For a series with nonnegative terms, how are convergence and bounded partial sums related?
+!back:
+If \( a_n\ge0 \) for all \( n \), then the partial sums
+
+\[ s_N=\sum_{n=1}^{N}a_n \]
+
+form an increasing sequence. Therefore \( \sum_{n=1}^{\infty}a_n \) converges if and only if the sequence \( \{s_N\} \) is bounded above.
+!extra: This is the monotone convergence theorem for sequences applied to the partial sums.
+~~~
+
+!id: V1U7jbIMwQ
+!front: Define the harmonic series.
+!back:
+The harmonic series is an infinite series of the following form
+
+\[ \sum_{n=1}^{\infty} \frac{1}{n} = 1 + \frac{1}{2} + \frac{1}{3} + \ldots \]
+~~~
+
+!id: faLBh0ZS3B
+!front: How is the harmonic series related to the p-series?
+!back:
+The harmonic series is the special case of the p-series \( \sum_{n=1}^{\infty} \frac{1}{n^p} \) with \( p = 1 \):
+
+\[ \sum_{n=1}^{\infty} \frac{1}{n^p} \Big|_{p=1} = \sum_{n=1}^{\infty} \frac{1}{n}. \]
+~~~
+
+!id: WqhRqJWLyi
+!front: What are the convergence properties of the harmonic series?
+!back: The harmonic series \( \sum_{n=1}^{\infty} \frac{1}{n} \) diverges to infinity.
+!related: The alternating harmonic series \( \sum_{n=1}^{\infty} (-1)^{n+1} \frac{1}{n} \) converges to \( \ln 2 \).
+~~~
+
+!id: ovCOjRQjlt
+!front: Define the alternating harmonic series.
+!back:
+The alternating harmonic series is an infinite series of the following form
+
+\[ \sum_{n=1}^{\infty} (-1)^{n+1} \frac{1}{n}= 1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \ldots \]
+~~~
+
+!id: Oq7cvJCurt
+!front: What are the convergence properties of the alternating harmonic series?
+!back: The alternating harmonic series \( \sum_{n=1}^{\infty} (-1)^{n+1} \frac{1}{n} \) converges to \( \ln 2 \).
+!related: The harmonic series \( \sum_{n=1}^{\infty} \frac{1}{n} \) diverges to infinity.
+~~~
+
+!id: M5bnxG3xVp
+!front: Define a geometric series.
+!back:
+The geometric series is an infinite series of the following form
+
+\[ \sum_{n=0}^{\infty} a r^{n} = a + ar + ar^2 + ar^3 + \ldots \]
+~~~
+
+!id: swlFVfPnRV
+!front: What are the convergence properties of the geometric series?
+!back:
+The geometric series \( \sum_{n=0}^{\infty} a r^{n} \) with \( a \ne 0 \) converges to
+
+\[ \frac{a}{1-r} \]
+
+if \( |r|<1 \), otherwise it diverges.
+~~~
+
+!id: EuaTm2Pypt
+!front: Define a \( p \)-series.
+!back:
+The p-series is an infinite series of the following form
+
+\[ \sum_{n=1}^{\infty} \frac{1}{n^p} = \frac{1}{1^p} + \frac{1}{2^p} + \frac{1}{3^p} + \ldots \]
+~~~
+
+!id: RwSiBvxiNJ
+!front: What are the convergence properties of the p-series?
+!back: The p-series \( \sum_{n=1}^{\infty} \frac{1}{n^p} \) converges if \( p > 1 \), otherwise it diverges.
+~~~
+
+!id: xSqaw5NDKY
+!front: Compare the harmonic series, the alternating harmonic series, and the \( p \)-series.
+!back:
+- The harmonic series \( \sum_{n=1}^{\infty}1/n \) is the \( p \)-series with \( p=1 \), and it diverges.
+- The alternating harmonic series \( \sum_{n=1}^{\infty}(-1)^{n+1}/n \) uses the same magnitudes as the harmonic series but alternates signs, and it converges conditionally.
+- The \( p \)-series \( \sum_{n=1}^{\infty}1/n^p \) converges exactly when \( p>1 \).
+~~~
+
+!id: YmgqUNiXRu
+!front: Define a telescoping series.
+!back:
+A telescoping series is a series whose partial sums simplify by cancellation, often after rewriting the terms as differences such as
+
+\[ \sum_{n=1}^{\infty} (b_n-b_{n+1}). \]
+
+The cancellation leaves only boundary terms from the beginning and end of the partial sums.
+~~~
+
+!id: 5XOKSHaw5w
+!front: Evaluate a telescoping series of the form \( \sum_{n=1}^{\infty}(b_n-b_{n+1}) \), assuming \( b_n\to L \).
+!back:
+The \( N \)th partial sum is
+
+\[
+\begin{align*}
+    s_N &= \sum_{n=1}^{N}(b_n-b_{n+1}) \\
+        &= b_1-b_{N+1}.
+\end{align*}
+\]
+
+Since \( b_{N+1}\to L \), the series converges and
+
+\[ \sum_{n=1}^{\infty}(b_n-b_{n+1}) = b_1-L. \]
+~~~
+
+!id: 5zAUxeOKFF
+!front: Does the telescoping series \( \sum_{n=1}^{\infty}\frac{1}{n(n+1)} \) converge? If so, what is its sum?
+!back:
+Yes. Since
+
+\[ \frac{1}{n(n+1)}=\frac{1}{n}-\frac{1}{n+1}, \]
+
+the \( N \)th partial sum is
+
+\[ s_N=1-\frac{1}{N+1}. \]
+
+Therefore the series converges to \( 1 \).
+~~~
+
+!id: pgxS6fEGNd
+!front: State the sum rule for convergent series.
+!back:
+Let \( \sum_{n=1}^{\infty} a_n \) and \( \sum_{n=1}^{\infty} b_n \) be convergent series. Then \( \sum_{n=1}^{\infty} (a_n + b_n) \) converges and
+
+\[ \sum_{n=1}^{\infty} (a_n + b_n) = \sum_{n=1}^{\infty} a_n + \sum_{n=1}^{\infty} b_n. \]
+~~~
+
+!id: zsfWyvhDxN
+!front: State the difference rule for convergent series.
+!back:
+Let \( \sum_{n=1}^{\infty} a_n \) and \( \sum_{n=1}^{\infty} b_n \) be convergent series. Then \( \sum_{n=1}^{\infty} (a_n - b_n) \) converges and
+
+\[ \sum_{n=1}^{\infty} (a_n - b_n) = \sum_{n=1}^{\infty} a_n - \sum_{n=1}^{\infty} b_n. \]
+~~~
+
+!id: NaO6ZZxr5g
+!front: State the constant multiple rule for convergent series.
+!back:
+Let \( \sum_{n=1}^{\infty} a_n \) be a convergent series and \( c \) a real number. Then \( \sum_{n=1}^{\infty} c\, a_n \) converges and
+
+\[ \sum_{n=1}^{\infty} c\, a_n = c \sum_{n=1}^{\infty} a_n. \]
+~~~
+
+!id: hQX2AY9ug6
+!front: State the divergence test for infinite series.
+!back:
+Consider the sequence \( a_n \). If either of the following holds:
+
+- \( \lim_{n \to \infty} a_n \neq 0 \)
+- \( \lim_{n \to \infty} a_n \) does not exist
+
+then the series \( \sum_{n=1}^{\infty} a_n \) diverges.
+~~~
+
+!id: xVgpwUVGIA
+!front: What can and cannot be concluded from the divergence test for \( \sum_{n=1}^{\infty}a_n \)?
+!back:
+- If \( a_n \not\to 0 \), then \( \sum_{n=1}^{\infty}a_n \) diverges.
+- If \( a_n\to0 \), the test gives no conclusion; the series may converge or diverge.
+
+So the divergence test can prove divergence, but it can never prove convergence.
+~~~
+
+!id: 0TbBAJn3JL
+!front: Is \( \lim_{n \to \infty} a_n = 0 \) a necessary or a sufficient condition for \( \sum_{n=1}^{\infty} a_n \) to converge?
+!back:
+It is **necessary but not sufficient**.
+
+- Necessary: this is the contrapositive of the divergence test — if \( \sum_{n=1}^{\infty} a_n \) converges, then \( \lim_{n \to \infty} a_n = 0 \).
+- Not sufficient: \( \lim_{n \to \infty} a_n = 0 \) alone does not guarantee convergence of \( \sum_{n=1}^{\infty} a_n \).
+!extra: The harmonic series \( \sum_{n=1}^{\infty} \frac{1}{n} \) is the standard counterexample: \( a_n = 1/n \to 0 \), yet the series diverges.
+~~~
+
+!id: YTrrpdMo63
+!front: State the integral test for convergence of a series \( \sum_{n=N}^\infty a_n \).
+!back:
+Suppose there is a function \( f \colon [N,\infty) \to \mathbb{R} \) such that:
+
+- \( f \) is continuous
+- \( f \) is positive
+- \( f \) is decreasing
+- \( f(n) = a_n \) for every integer \( n \ge N \)
+
+Then the series and the corresponding improper integral both converge or both diverge:
+
+\[ \sum_{n=N}^{\infty} a_n \text{ converges}
+    \iff
+    \int_N^\infty f(x)\,dx \text{ converges}. \]
+!extra: ![Integral test](img/integral_test.svg)
+~~~
+
+!id: 4QNZwdR4ev
+!front: If the integral test shows that \( \sum_{n=1}^{\infty} a_n \) and \( \int_{N}^{\infty} f(x)\,dx \) both converge, must their values be equal?
+!back: No. The integral test only guarantees that the series and the integral share the same convergence behavior — both converge or both diverge — not that their limiting values agree.
+~~~
+
+!id: RBBZTjh1Rm
+!front: For a continuous, decreasing function \( f \), how does \( f(n) \) compare to \( \int_{n-1}^{n} f(x)\,dx \) and \( \int_{n}^{n+1} f(x)\,dx \)?
+!back: \[ \int_{n}^{n+1} f(x)\,dx \;\le\; f(n) \;\le\; \int_{n-1}^{n} f(x)\,dx. \]
+!extra: ![Decreasing function integral sandwich](img/decreasing_function_sandwich.svg)
+~~~
+
+!id: nBzR1fN1OP
+!front: Why does a continuous, decreasing function's value at \( n \) satisfy \( \int_{n}^{n+1} f(x)\,dx \le f(n) \le \int_{n-1}^{n} f(x)\,dx \)?
+!back:
+On \( [n, n+1] \), \( f \) is decreasing so \( f(x) \le f(n) \) for \( x \ge n \). The rectangle of height \( f(n) \) over this interval therefore sits above the curve and overestimates the area:
+
+\[ \int_n^{n+1} f(x)\,dx \le f(n). \]
+
+On \( [n-1, n] \), \( f(x) \ge f(n) \) for \( x \le n \). The same-height rectangle over this interval sits below the curve and underestimates the area:
+
+\[ f(n) \le \int_{n-1}^{n} f(x)\,dx. \]
+!related: This per-term sandwich is the mechanism behind both the integral test and its remainder bound: summing it over the relevant range of \( n \) produces each.
+~~~
+
+!id: YmNyEz9dL0
+!front: Define the remainder of a convergent series after its \( N \)th partial sum.
+!back:
+For a convergent series \( \sum_{n=1}^{\infty} a_n \) with sum \( S \) and \( N \)th partial sum \( S_N = \sum_{n=1}^{N} a_n \), the remainder is
+
+\[ R_N = S - S_N = \sum_{n=N+1}^{\infty} a_n. \]
+
+\( R_N \) is the error in approximating \( S \) by \( S_N \), and \( R_N \to 0 \) as \( N \to \infty \).
+~~~
+
+!id: 4M24dB4Qow
+!front: State the integral test remainder estimate.
+!back:
+Suppose \( \sum_{n=1}^{\infty} a_n \) satisfies the integral test hypotheses with respect to \( f \) for \( n \ge N \). Then the remainder \( R_N = \sum_{n=N+1}^{\infty} a_n \) satisfies
+
+\[ \int_{N+1}^{\infty} f(x) \, dx \le R_N \le \int_{N}^{\infty} f(x) \, dx. \]
+!extra:
+This bounds the error of approximating the series' sum by its \( N \)th partial sum without needing the exact value of the series.
+
+![Integral test remainder](img/integral_test_remainder.svg)
+~~~
+
+!id: rVhE7ELDdz
+!front: State the direct comparison test for infinite series.
+!back:
+Let \( A = \sum_{n=1}^{\infty} a_n \) and \( B = \sum_{n=1}^{\infty} b_n \). Then:
+
+- If there exists an integer \( N \) such that \( 0 \le a_n \le b_n \) for all \( n \ge N \), and \( B \) converges, then \( A \) converges.
+- If there exists an integer \( N \) such that \( a_n \ge b_n \ge 0 \) for all \( n \ge N \), and \( B \) diverges, then \( A \) diverges.
+~~~
+
+!id: h629HYWjfM
+!front: State the limit comparison test for infinite series.
+!back:
+Let:
+
+- \( a_n \ge 0 \) and \( b_n > 0 \) for all \( n \ge 1 \),
+- \( A = \sum_{n=1}^{\infty} a_n \) and \( B = \sum_{n=1}^{\infty} b_n \).
+
+Then:
+
+- If \( \lim_{n \to \infty} a_n/b_n = L \) with \( 0<L<\infty \), then \( A \) and \( B \) both converge or both diverge.
+- If \( \lim_{n \to \infty} a_n/b_n = 0 \) and \( B \) converges, then \( A \) converges.
+- If \( \lim_{n \to \infty} a_n/b_n = \infty \) and \( B \) diverges, then \( A \) diverges.
+~~~
+
+!id: 6MgqtWS1hA
+!front: Compare the direct comparison test and the limit comparison test for nonnegative series.
+!back:
+- The direct comparison test uses eventual inequalities \( 0\le a_n\le b_n \) or \( a_n\ge b_n\ge0 \) to transfer convergence or divergence from one series to another.
+- The limit comparison test uses the limiting ratio \( a_n/b_n \) to show that two positive-term series have the same asymptotic size.
+
+Direct comparison requires a usable inequality; limit comparison is often better when the terms are asymptotically comparable but awkward to order term by term.
+~~~
+
+!id: fFPSN0Aqx4
+!front: Which standard comparison series should be used for \( \sum_{n=1}^{\infty}\frac{3n^2+1}{n^4+n} \), and what does it show?
+!back:
+Use \( \sum 1/n^2 \). Since
+
+\[ \frac{3n^2+1}{n^4+n} \sim \frac{3n^2}{n^4}=\frac{3}{n^2}, \]
+
+limit comparison with \( \sum 1/n^2 \) shows that the series converges.
+~~~
+
+!id: UJQZZwKy4W
+!front: Which standard comparison series should be used for \( \sum_{n=1}^{\infty}\frac{2n+5}{n^2+1} \), and what does it show?
+!back:
+Use \( \sum 1/n \). Since
+
+\[ \frac{2n+5}{n^2+1} \sim \frac{2n}{n^2}=\frac{2}{n}, \]
+
+limit comparison with the harmonic series shows that the series diverges.
+~~~
+
+!id: 4FwZRUMVFZ
+!front: Which standard comparison series should be used for \( \sum_{n=1}^{\infty}\frac{1}{\sqrt{n}+n} \), and what does it show?
+!back:
+Use \( \sum 1/n \). Since
+
+\[ \frac{1}{\sqrt{n}+n} \sim \frac{1}{n}, \]
+
+limit comparison with the harmonic series shows that the series diverges.
+~~~
+
+!id: RxMHXZT03o
+!front: Define an alternating series.
+!back:
+An alternating series is an infinite series whose successive terms alternate in sign. It is commonly written using nonnegative magnitudes \( a_n \ge 0 \) as
+
+\[ \sum_{n=1}^{\infty} (-1)^{n+1} a_n = a_1 - a_2 + a_3 - \ldots \]
+
+or
+
+\[ \sum_{n=1}^{\infty} (-1)^{n} a_n = - a_1 + a_2 - a_3 + \ldots \]
+
+The two displayed forms differ only by whether the first term is positive or negative.
+~~~
+
+!id: QlGMNjVfeP
+!front: State the alternating series test.
+!back:
+An alternating series of the form \( \sum_{n=1}^{\infty} (-1)^{n+1} \, a_n \) converges if there exists a positive integer \( N \) such that:
+
+- \( 0 < a_{n+1} \le a_n \) for all \( n \ge N \)
+- \( \lim_{n \to \infty} a_n = 0 \)
+~~~
+
+!id: 54acnRkemc
+!front: Does the alternating series \( \sum_{n=1}^{\infty}(-1)^{n+1}\frac{1}{n} \) converge? If so, absolutely or conditionally?
+!back:
+It converges conditionally.
+
+- It converges by the alternating series test, since \( 1/n \) decreases to \( 0 \).
+- It does not converge absolutely, since \( \sum_{n=1}^{\infty}1/n \) is the harmonic series and diverges.
+~~~
+
+!id: pgz1OUQbLH
+!front: Does the alternating series \( \sum_{n=1}^{\infty}(-1)^n\frac{1}{\sqrt{n}} \) converge? If so, absolutely or conditionally?
+!back:
+It converges conditionally.
+
+- It converges by the alternating series test, since \( 1/\sqrt{n} \) decreases to \( 0 \).
+- It does not converge absolutely, since \( \sum_{n=1}^{\infty}1/\sqrt{n} \) is a \( p \)-series with \( p=1/2\le1 \), so it diverges.
+~~~
+
+!id: UeJWFdTsF1
+!front: Does the alternating series \( \sum_{n=1}^{\infty}(-1)^n\frac{n}{n+1} \) converge?
+!back:
+No. The magnitudes satisfy
+
+\[ \frac{n}{n+1}\to1, \]
+
+so the terms \( (-1)^n\frac{n}{n+1} \) do not approach \( 0 \). The series diverges by the divergence test.
+~~~
+
+!id: WITe5C997i
+!front: State the alternating series remainder estimate.
+!back:
+Let \( \sum_{n=1}^{\infty} (-1)^{n+1} a_n \) be an alternating series satisfying the **alternating series test** hypotheses, with:
+
+- \( S \) the sum of the series
+- \( S_N = \sum_{n=1}^{N} (-1)^{n+1} a_n \) the \( N \)th partial sum
+
+Then the remainder after \( N \) terms satisfies
+
+\[ |R_N| = |S - S_N| \le a_{N+1}. \]
+!extra:
+The bound applies once \( N \) is in the eventually decreasing tail. If the alternating series test hypotheses hold from the first term, it applies for every \( N\ge1 \).
+
+The sign of \( R_N \) matches the sign of the first omitted term, so \( S \) lies between \( S_N \) and \( S_{N+1} \).
+~~~
+
+!id: PItfKda0gB
+!front: Define absolute convergence for a series.
+!back: A series \( \sum_{n=1}^{\infty} a_n \) is **absolutely convergent** if \( \sum_{n=1}^{\infty} |a_n| \) converges.
+~~~
+
+!id: Ig1wytzJws
+!front: Define conditional convergence for a series.
+!back:
+A series \( \sum_{n=1}^{\infty}a_n \) is **conditionally convergent** if:
+
+- \( \sum_{n=1}^{\infty}a_n \) converges
+- \( \sum_{n=1}^{\infty}|a_n| \) diverges
+
+So conditional convergence is convergence that depends on cancellation between positive and negative terms.
+~~~
+
+!id: TEEIGWkJNA
+!front: Does absolute convergence of a series imply conditional convergence?
+!back:
+No. A series \( \sum_{n=1}^{\infty} a_n \) is **conditionally convergent** if
+
+- \( \sum_{n=1}^{\infty} a_n \) converges, but
+- \( \sum_{n=1}^{\infty} |a_n| \) diverges —
+
+by definition, conditional convergence requires the series of absolute values to *diverge*, which absolute convergence rules out.
+~~~
+
+!id: jlPTTaE7rr
+!front: How do absolute convergence and conditional convergence classify a convergent series?
+!back:
+For a convergent series \( \sum_{n=1}^{\infty} a_n \), exactly one of the following holds:
+
+- It is **absolutely convergent**: \( \sum_{n=1}^{\infty} |a_n| \) also converges.
+- It is **conditionally convergent**: \( \sum_{n=1}^{\infty} |a_n| \) diverges.
+
+These two cases are mutually exclusive and exhaustive: every convergent series falls into exactly one of them, never both.
+~~~
+
+!id: 0DPVQwCxmv
+!front: Does absolute convergence of a series imply convergence?
+!back: Yes. If \( \sum_{n=1}^{\infty} |a_n| \) converges, then \( \sum_{n=1}^{\infty} a_n \) converges.
+~~~
+
+!id: ebGGRdSyCK
+!front: Why does absolute convergence of \( \sum_{n=1}^{\infty}a_n \) imply convergence of \( \sum_{n=1}^{\infty}a_n \)?
+!back:
+Use the Cauchy criterion. If \( \sum |a_n| \) converges, then for every \( \epsilon>0 \), sufficiently far out in the series,
+
+\[ \sum_{k=m}^{n}|a_k|<\epsilon. \]
+
+By the triangle inequality,
+
+\[ \left|\sum_{k=m}^{n}a_k\right|\le\sum_{k=m}^{n}|a_k|<\epsilon. \]
+
+So \( \sum a_n \) satisfies the Cauchy criterion and converges.
+~~~
+
+!id: t0r7cG3U1X
+!front: Compare ordinary convergence, absolute convergence, conditional convergence, and divergence for a series \( \sum a_n \).
+!back:
+- Ordinary convergence means the partial sums of \( \sum a_n \) approach a finite limit.
+- Absolute convergence means \( \sum |a_n| \) converges; it implies ordinary convergence.
+- Conditional convergence means \( \sum a_n \) converges but \( \sum |a_n| \) diverges.
+- Divergence means the partial sums of \( \sum a_n \) do not approach a finite limit.
+~~~
+
+!id: WeeGhSDsCJ
+!front: Is \( \sum_{n=1}^{\infty}\frac{(-1)^{n+1}}{n} \) absolutely convergent, conditionally convergent, or divergent?
+!back:
+It is conditionally convergent.
+
+\[ \begin{align*}
+1 + \frac{1}{2} + \frac{1}{3} + \frac{1}{4} + \ldots & \to \infty \\
+1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \ldots & \to \ln(2)
+\end{align*} \]
+~~~
+
+!id: XSNe80Uuqs
+!front: Is \( \sum_{n=1}^{\infty}\frac{(-1)^{n+1}}{n^2} \) absolutely convergent, conditionally convergent, or divergent?
+!back:
+It is absolutely convergent, since
+
+\[ \sum_{n=1}^{\infty}\left|\frac{(-1)^{n+1}}{n^2}\right| = \sum_{n=1}^{\infty}\frac{1}{n^2}, \]
+
+and this \( p \)-series converges because \( p=2>1 \).
+~~~
+
+!id: SkI6kPxSBf
+!front: Is \( \sum_{n=1}^{\infty}\frac{1}{n} \) absolutely convergent, conditionally convergent, or divergent?
+!back: It is divergent. Since the original series does not converge, it is neither absolutely convergent nor conditionally convergent.
+!extra: Absolute and conditional convergence are classifications of convergent series. A divergent positive-term series belongs to neither class.
+~~~
+
+!id: U3L3nAt9dg
+!front: State the Riemann rearrangement theorem for conditionally convergent series.
+!back:
+If \( \sum_{n=1}^{\infty} a_n \) converges conditionally, then for any real number \( S \) (or \( \pm \infty \)) there exists a rearrangement of the terms whose series sums to \( S \).
+
+By contrast, an absolutely convergent series converges to the same sum under every rearrangement.
+!extra: This shows conditional convergence, unlike absolute convergence, depends on the order in which terms are summed.
+~~~
+
+!id: 0lTi8S7UG9
+!front: State the ratio test for infinite series.
+!back:
+Consider the series \( \sum_{n=1}^{\infty} a_n \) with nonzero terms. Let
+
+\[ \rho = \lim_{n \to \infty} \left| \frac{a_{n+1}}{a_n} \right| \]
+
+- If \( 0 \le \rho < 1 \), then \( \sum_{n=1}^{\infty} a_n \) **converges absolutely**.
+- If \( \rho > 1 \) or \( \rho = \infty \), then \( \sum_{n=1}^{\infty} a_n \) **diverges**.
+- If \( \rho = 1 \), the test does not provide any information.
+~~~
+
+!id: 4k31lhpZH8
+!front: State the root test for infinite series.
+!back:
+Consider the series \( \sum_{n=1}^{\infty} a_n \). Let
+
+\[ \rho = \lim_{n \to \infty} \sqrt[n]{|a_n|} \]
+
+- If \( 0 \le \rho < 1 \), then \( \sum_{n=1}^{\infty} a_n \) **converges absolutely**.
+- If \( \rho > 1 \) or \( \rho = \infty \), then \( \sum_{n=1}^{\infty} a_n \) **diverges**.
+- If \( \rho = 1 \), the test does not provide any information.
+~~~
+
+!id: drIWpaJCZY
+!front: Compare the ratio test and the root test for infinite series.
+!back:
+- The ratio test studies the limiting size of consecutive terms: \( |a_{n+1}/a_n| \).
+- The root test studies the limiting exponential size of individual terms: \( \sqrt[n]{|a_n|} \).
+- Both tests prove absolute convergence when the relevant limit is less than \( 1 \), prove divergence when it is greater than \( 1 \), and give no conclusion when it equals \( 1 \).
+
+The root test is especially natural for terms involving \( n \)th powers; the ratio test is especially natural for factorials and products.
+~~~
+
+!id: DZ69QXbMRh
+!front: Does the ratio test ever prove that a series is conditionally convergent?
+!back:
+No. If the ratio test succeeds with \( \rho < 1 \), it proves absolute convergence, not conditional convergence. If \( \rho > 1 \) or \( \rho = \infty \), it proves divergence, and if \( \rho = 1 \), it gives no information.
+
+For a conditionally convergent series, if this limit exists, it must be \( 1 \), so the test is inconclusive.
+~~~
+
+!id: 5ptnpogTbr
+!front: Does the root test ever prove that a series is conditionally convergent?
+!back:
+No. If the root test succeeds with \( \rho < 1 \), it proves absolute convergence, not conditional convergence. If \( \rho > 1 \) or \( \rho = \infty \), it proves divergence, and if \( \rho = 1 \), it gives no information.
+
+For a conditionally convergent series, if this limit exists, it must be \( 1 \), so the test is inconclusive.
+~~~
+
+!id: NkFeqTPrqc
+!front: What does the ratio test say about \( \sum_{n=1}^{\infty}\frac{1}{n} \), and what is the actual convergence behavior?
+!back:
+The ratio test gives no conclusion, since
+
+\[ \lim_{n\to\infty}\frac{1/(n+1)}{1/n} = \lim_{n\to\infty}\frac{n}{n+1}=1. \]
+
+The series itself diverges; it is the harmonic series.
+~~~
+
+!id: 1pq1EmikQt
+!front: What does the ratio test say about \( \sum_{n=1}^{\infty}\frac{1}{n^2} \), and what is the actual convergence behavior?
+!back:
+The ratio test gives no conclusion, since
+
+\[ \lim_{n\to\infty}\frac{1/(n+1)^2}{1/n^2} = \lim_{n\to\infty}\left(\frac{n}{n+1}\right)^2=1. \]
+
+The series converges; it is a \( p \)-series with \( p=2>1 \).
+~~~
+
+!id: qEmQUBloxg
+!front: What does the ratio test say about \( \sum_{n=1}^{\infty}\frac{(-1)^{n+1}}{n} \), and what is the actual convergence behavior?
+!back:
+The ratio test gives no conclusion, since
+
+\[ \lim_{n\to\infty}\left|\frac{(-1)^{n+2}/(n+1)}{(-1)^{n+1}/n}\right| = \lim_{n\to\infty}\frac{n}{n+1}=1. \]
+
+The series converges conditionally; it is the alternating harmonic series.
+~~~
+
+!id: jjGXO9qCve
+!front: What does the root test say about \( \sum_{n=1}^{\infty}\frac{1}{n} \), and what is the actual convergence behavior?
+!back:
+The root test gives no conclusion, since
+
+\[ \lim_{n\to\infty}\sqrt[n]{\frac{1}{n}} = 1. \]
+
+The series itself diverges; it is the harmonic series.
+~~~
+
+!id: yYT9Ob3Dl0
+!front: What does the root test say about \( \sum_{n=1}^{\infty}\frac{1}{n^2} \), and what is the actual convergence behavior?
+!back:
+The root test gives no conclusion, since
+
+\[ \lim_{n\to\infty}\sqrt[n]{\frac{1}{n^2}} = 1. \]
+
+The series converges; it is a \( p \)-series with \( p=2>1 \).
+~~~
+
+!id: Bp4b0Ol5hd
+!front: What does the root test say about \( \sum_{n=1}^{\infty}\frac{(-1)^{n+1}}{n} \), and what is the actual convergence behavior?
+!back:
+The root test gives no conclusion, since
+
+\[ \lim_{n\to\infty}\sqrt[n]{\left|\frac{(-1)^{n+1}}{n}\right|} = \lim_{n\to\infty}\sqrt[n]{\frac{1}{n}}=1. \]
+
+The series converges conditionally; it is the alternating harmonic series.
+~~~

@@ -1,0 +1,325 @@
+!deck: Math::Calculus
+!type: Basic Math
+!tags: Math Calculus Integration
+
+!id: c9CoJ5Zjkt
+!front: What is a partition \( P \) of \( [a,b] \)?
+!back:
+A partition of \( [a,b] \) is a finite ordered set
+\[ P=\{x_0,x_1,\dots,x_n\} \]
+such that
+\[ a=x_0<x_1<\cdots<x_n=b. \]
+It divides \( [a,b] \) into subintervals \( [x_{i-1},x_i] \), whose lengths are
+\[ \Delta x_i=x_i-x_{i-1}. \]
+!extra: ![A partition of [a,b] into unevenly spaced subintervals, each labeled by its length Δx_i](img/partition.svg)
+~~~
+
+!id: raG97Qyts0
+!front: What is the mesh (norm) \( \|P\| \) of a partition \( P \)?
+!back:
+The mesh of \( P \) is the largest subinterval length:
+\[ \|P\|=\max_{1\le i\le n}\Delta x_i. \]
+Thus \( \|P\| \) measures the worst resolution of the partition, not the average subinterval size.
+~~~
+
+!id: hO2Qgb8rQp
+!front: Given a partition \( P = \{x_0,\dots,x_n\} \) of \( [a,b] \) and sample points \( t_i \in [x_{i-1}, x_i] \), what is the Riemann sum \( S(f,P) \)?
+!back:
+The Riemann sum is
+\[ S(f,P)=\sum_{i=1}^n f(t_i)\,\Delta x_i. \]
+Each term is the signed area of a rectangle over \( [x_{i-1},x_i] \) with height \( f(t_i) \).
+!extra: ![Riemann sum: rectangles of height f(t_i), with each sample point t_i placed off-center in its subinterval](img/riemann_sum.svg)
+~~~
+
+!id: z7Kxhid4qd
+!front: State the tagged-partition limit definition of \( \int_a^b f(x)\,dx=L \): what must happen to every Riemann sum as the mesh goes to \( 0 \)?
+!back:
+\( \int_a^b f(x)\,dx=L \) means: for every \( \varepsilon>0 \), there exists \( \delta>0 \) such that every tagged partition \( P \) of \( [a,b] \) with \( \|P\|<\delta \) satisfies
+\[ |S(f,P)-L|<\varepsilon, \]
+no matter how the sample points \( t_i\in[x_{i-1},x_i] \) are chosen.
+~~~
+
+!id: Nd8Y2U8tkO
+!front: For a bounded function \( f \) and a partition \( P \) of \( [a,b] \), what is the upper Darboux sum \( U(f,P) \)?
+!back:
+For each subinterval, let
+\[ M_i=\sup_{x\in[x_{i-1},x_i]}f(x). \]
+Then the upper Darboux sum is
+\[ U(f,P)=\sum_{i=1}^n M_i\,\Delta x_i. \]
+It uses the largest possible value of \( f \) on each subinterval.
+!extra:
+Assumes \( f \) is bounded on \( [a,b] \); otherwise the suprema \( M_i \) need not be finite.
+
+![Upper Darboux sum: rectangles of height M_i overshooting the curve; on one subinterval the supremum is attained at an interior point, not an endpoint](img/upper_darboux_sum.svg)
+~~~
+
+!id: QBUs20utov
+!front: For a bounded function \( f \) and a partition \( P \) of \( [a,b] \), what is the lower Darboux sum \( L(f,P) \)?
+!back:
+For each subinterval, let
+\[ m_i=\inf_{x\in[x_{i-1},x_i]}f(x). \]
+Then the lower Darboux sum is
+\[ L(f,P)=\sum_{i=1}^n m_i\,\Delta x_i. \]
+It uses the smallest possible value of \( f \) on each subinterval.
+!extra: ![Lower Darboux sum: rectangles of height m_i undershooting the curve](img/lower_darboux_sum.svg)
+~~~
+
+!id: ezIX6VjSzq
+!front: What is the upper Darboux integral \( \overline{\int_a^b} f \)?
+!back:
+For bounded \( f \), the upper Darboux integral is
+\[ \overline{\int_a^b}f=\inf_P U(f,P), \]
+where the infimum is taken over all partitions \( P \) of \( [a,b] \).
+
+It is the best possible upper estimate obtainable from upper sums.
+~~~
+
+!id: I1dSIhVp6v
+!front: What is the lower Darboux integral \( \underline{\int_a^b} f \)?
+!back:
+For bounded \( f \), the lower Darboux integral is
+\[ \underline{\int_a^b}f=\sup_P L(f,P), \]
+where the supremum is taken over all partitions \( P \) of \( [a,b] \).
+
+It is the best possible lower estimate obtainable from lower sums.
+~~~
+
+!id: S6VIUiUUVI
+!front: When is a bounded function \( f \) Darboux integrable on \( [a,b] \), and what is the value of the integral?
+!back:
+A bounded function \( f \) is Darboux integrable on \( [a,b] \) exactly when its upper and lower Darboux integrals agree:
+\[ \overline{\int_a^b}f=\underline{\int_a^b}f. \]
+Their common value is defined to be
+\[ \int_a^b f(x)\,dx. \]
+~~~
+
+!id: AuBlyIvNji
+!front: Why does refining a partition \( P \) (adding points to get \( P' \supseteq P \)) never increase the upper sum \( U(f,P) \)?
+!back:
+Refining a partition only replaces subintervals by smaller subintervals. The supremum of \( f \) over a smaller set is at most the supremum over the larger set it came from.
+
+Therefore each old upper rectangle is replaced by pieces whose total area is no larger, so
+\[ U(f,P')\le U(f,P). \]
+!extra: ![A subinterval refined by adding one point: the piece containing the old supremum keeps the same height, the other piece's supremum strictly drops](img/partition_refinement_upper.svg)
+~~~
+
+!id: fz8hOflTJY
+!front: Why does refining a partition \( P \) (adding points to get \( P' \supseteq P \)) never decrease the lower sum \( L(f,P) \)?
+!back:
+Refining a partition only replaces subintervals by smaller subintervals. The infimum of \( f \) over a smaller set is at least the infimum over the larger set it came from.
+
+Therefore each old lower rectangle is replaced by pieces whose total area is no smaller, so
+\[ L(f,P')\ge L(f,P). \]
+!extra: ![A subinterval refined by adding one point: the piece touching the old infimum keeps the same height, the other piece's infimum strictly rises](img/partition_refinement_lower.svg)
+~~~
+
+!id: Bx4Pd1hvNG
+!front: How do the Riemann integral and the Darboux integral of a bounded function \( f \) on \( [a,b] \) relate to each other?
+!back:
+For bounded functions on a closed interval, the two definitions are equivalent:
+\[ f \text{ is Riemann integrable}
+    \iff
+    \overline{\int_a^b}f=\underline{\int_a^b}f. \]
+When this holds, the tagged-partition limit and the common Darboux value are the same number.
+~~~
+
+!id: MEdyAxBbRD
+!front: State the Darboux/Cauchy criterion for deciding whether a bounded function \( f \) is integrable: how close must upper and lower sums get?
+!back:
+A bounded function \( f \) is integrable on \( [a,b] \) if and only if for every \( \varepsilon>0 \), there exists a partition \( P \) such that
+\[ U(f,P)-L(f,P)<\varepsilon. \]
+Equivalently, the upper and lower Darboux sums can be forced arbitrarily close.
+~~~
+
+!id: yAIalXLPmo
+!front: Why must a Riemann/Darboux integrable function on \( [a,b] \) be bounded?
+!back:
+If \( f \) is unbounded on \( [a,b] \), some subinterval of every partition allows values of \( f \) with arbitrarily large magnitude. Then tagged Riemann sums cannot approach a finite value independently of the sample points.
+
+In Darboux language, the definition requires finite suprema and infima on each subinterval. If \( f \) is unbounded, some subinterval has supremum \( +\infty \) or infimum \( -\infty \), so the ordinary finite upper and lower sums are not available.
+~~~
+
+!id: weNoUsavhq
+!front: Why is every function continuous on \( [a,b] \) Riemann integrable?
+!back:
+A continuous function on \( [a,b] \) is uniformly continuous. Hence for any \( \varepsilon>0 \), one can choose \( \delta>0 \) so that whenever a subinterval has length \( <\delta \), the oscillation of \( f \) on that subinterval is \( <\varepsilon/(b-a) \).
+
+For any partition with \( \|P\|<\delta \),
+\[ U(f,P)-L(f,P)<\varepsilon, \]
+so the Cauchy criterion gives integrability.
+~~~
+
+!id: CLVB6WUHBr
+!front: Why is every monotonic function on \( [a,b] \) Riemann integrable?
+!back:
+Assume \( f \) is monotone on \( [a,b] \). Then \( f \) is bounded, and on each subinterval of a uniform partition, the oscillation is the jump of \( f \) across that subinterval.
+
+For \( n \) equal subintervals,
+\[ U(f,P)-L(f,P)\le \frac{b-a}{n}|f(b)-f(a)|. \]
+This tends to \( 0 \) as \( n\to\infty \), so the Cauchy criterion gives integrability.
+~~~
+
+!id: aUhcz09nMO
+!front: Why is a bounded function on \( [a,b] \) with only finitely many discontinuities Riemann integrable?
+!back:
+Cover the finitely many discontinuities by intervals with arbitrarily small total length. Since \( f \) is bounded, those intervals contribute only a small amount to \( U(f,P)-L(f,P) \).
+
+On the remaining closed subintervals, \( f \) is continuous, hence uniformly continuous, so the oscillation contribution there can also be made small. Therefore the Cauchy criterion holds.
+~~~
+
+!id: nCPOFOjfSR
+!front: Construct a bounded function on \( [0,1] \) that is not Riemann integrable.
+!back:
+Use the Dirichlet function
+\[
+f(x)=
+\begin{cases}
+    1, & x\in\mathbb{Q}, \\
+    0, & x\notin\mathbb{Q}.
+\end{cases}
+\]
+It is bounded, but every subinterval contains both rational and irrational points. Hence on every subinterval \( M_i=1 \) and \( m_i=0 \), so
+\[ U(f,P)=1,\qquad L(f,P)=0 \]
+for every partition \( P \). The upper and lower integrals cannot agree.
+~~~
+
+!id: 8AFqwTtDVH
+!front: State the linearity property of the integral for integrable \( f, g \) on \( [a,b] \) and constants \( \alpha, \beta \).
+!back:
+If \( f \) and \( g \) are integrable on \( [a,b] \), then \( \alpha f+\beta g \) is integrable and
+\[ \int_a^b \big(\alpha f(x)+\beta g(x)\big)\,dx
+    = \alpha\int_a^b f(x)\,dx+\beta\int_a^b g(x)\,dx. \]
+~~~
+
+!id: XwQlO8eeAh
+!front: For \( a < c < b \) and \( f \) integrable on \( [a,b] \), state the additivity property of the integral over subintervals.
+!back:
+The integral over the whole interval splits as
+\[ \int_a^b f(x)\,dx
+    = \int_a^c f(x)\,dx+\int_c^b f(x)\,dx. \]
+Equivalently, adjacent signed areas add.
+~~~
+
+!id: FAfVeFuiA6
+!front: For \( f \) integrable on \( [a,b] \) and any constant \( c \), state the invariance-under-translation property of the integral.
+!back:
+A horizontal translation of both the function and the interval leaves the integral unchanged:
+\[ \int_a^b f(x)\,dx
+    = \int_{a+c}^{b+c} f(x-c)\,dx. \]
+This is the substitution \( u=x-c \).
+!extra:
+Geometrically, shifting the graph of \( f \) horizontally by \( c \) and shifting the interval of integration by the same amount leaves the enclosed signed area unchanged.
+
+![Translation invariance: the region under f(x-c) on [a+c,b+c] is a rigid horizontal copy, shifted by c, of the region under f on [a,b]](img/translation_invariance.svg)
+~~~
+
+!id: ITDBZlV5Jl
+!front: For \( f \) integrable on \( [a,b] \), state the reflection property of the integral relating \( \int_a^b f(x)\, dx \) to an integral of \( f(-x) \).
+!back:
+Reflection across the \( y \)-axis gives
+\[ \int_a^b f(x)\,dx
+    = \int_{-b}^{-a} f(-x)\,dx. \]
+This follows from the substitution \( u=-x \), with the sign from \( du=-dx \) absorbed by the reversed bounds.
+!extra:
+Substituting \( x = -u \) reflects the graph through the \( y \)-axis and reverses the direction of integration; these two sign flips cancel, so no overall sign change appears.
+
+![Reflection property: the region under f(-x) on [-b,-a] is the mirror image, across the y-axis, of the region under f on [a,b]](img/reflection_property.svg)
+~~~
+
+!id: pJZqflY9E3
+!front: Why are the translation and reflection properties of the integral both instances of the same substitution argument?
+!back:
+Both are linear changes of variable.
+
+- Translation uses \( x=u+c \), so \( dx=du \), and the bounds \( a,b \) become \( a-c,b-c \) or, equivalently, translating the interval gives \( f(x-c) \).
+- Reflection uses \( x=-u \), so \( dx=-du \); the minus sign is canceled by the reversal of the transformed bounds.
+
+In both cases, the substitution accounts for exactly how the interval and the integrand move.
+~~~
+
+!id: hki5lVOeUy
+!front: For \( f \) integrable on \( [-a,a] \) with \( f \) even (\( f(-x) = f(x) \) for all \( x \)), what does symmetry give for \( \int_{-a}^a f(x)\, dx \)?
+!back:
+For an even integrand on a symmetric interval,
+\[ \int_{-a}^{a} f(x)\,dx = 2\int_0^a f(x)\,dx. \]
+The two halves contribute equal signed area.
+!extra: ![Even function on a symmetric interval: the lobes on [-a,0] and [0,a] lie on the same side of the axis with equal area, so they add rather than cancel](img/even_function_integral.svg)
+~~~
+
+!id: KwfgmMbcWv
+!front: For \( f \) integrable on \( [-a,a] \) with \( f \) odd (\( f(-x) = -f(x) \) for all \( x \)), what does symmetry give for \( \int_{-a}^a f(x)\, dx \)?
+!back:
+For an odd integrand on a symmetric interval,
+\[ \int_{-a}^{a} f(x)\,dx = 0. \]
+The contributions from \( x \) and \( -x \) cancel pairwise.
+!extra: ![Odd function on a symmetric interval: the lobes on [-a,0] and [0,a] have equal magnitude but opposite sign, so they cancel exactly](img/odd_function_integral.svg)
+~~~
+
+!id: cxXgxHJcu4
+!front: Derive the even/odd symmetric-interval integral properties from the reflection property of the integral.
+!back:
+Let:
+
+- \( f \) be integrable on \( [-a,a] \)
+- \( \displaystyle \int_{-a}^0 f(x)\,dx = \int_0^a f(-x)\,dx \), by reflection
+
+To prove: the even and odd symmetry formulas.
+
+- By additivity,
+\[
+\int_{-a}^a f(x)\,dx
+    = \int_0^a f(-x)\,dx+\int_0^a f(x)\,dx.
+\]
+- If \( f \) is even, then \( f(-x)=f(x) \), so the two terms are equal and \( \int_{-a}^a f = 2\int_0^a f \).
+- If \( f \) is odd, then \( f(-x)=-f(x) \), so the two terms cancel and \( \int_{-a}^a f = 0 \).
+~~~
+
+!id: 6M4hFbnjNB
+!front: Why does the odd-function property \( \int_{-a}^a f = 0 \) require the interval to be symmetric about \( 0 \)? Construct a counterexample when it is not.
+!back:
+Odd-function cancellation pairs the contribution at \( x \) with the contribution at \( -x \). That pairing stays inside the interval only when the interval is symmetric about \( 0 \).
+
+For a counterexample, \( f(x)=x \) is odd, but
+\[ \int_0^1 x\,dx=\frac{1}{2}\ne 0. \]
+The interval \( [0,1] \) contains no matching negative half to cancel the positive area.
+~~~
+
+!id: Ra3up4fJgh
+!front: If \( f, g \) are integrable on \( [a,b] \) with \( f(x) \le g(x) \) for all \( x \), why does \( \int_a^b f \le \int_a^b g \)?
+!back:
+For every tagged partition, the corresponding Riemann sums satisfy
+\[ S(f,P)\le S(g,P) \]
+because the inequality \( f(t_i)\le g(t_i) \) holds term by term and \( \Delta x_i>0 \).
+
+Passing to the integral limits preserves the inequality, so
+\[ \int_a^b f(x)\,dx\le \int_a^b g(x)\,dx. \]
+~~~
+
+!id: IkSbsrhOug
+!front: If \( f \) is integrable on \( [a,b] \), why is \( |f| \) also integrable?
+!back:
+The absolute value map cannot increase oscillation:
+\[ \big||f(x)|-|f(y)|\big|\le |f(x)-f(y)|. \]
+Therefore the oscillation of \( |f| \) on each subinterval is at most the oscillation of \( f \) there.
+
+Any partition making \( U(f,P)-L(f,P) \) small also makes \( U(|f|,P)-L(|f|,P) \) small, so the Cauchy criterion gives integrability of \( |f| \).
+~~~
+
+!id: eeg7rpJHzI
+!front: State the triangle inequality for the integral of an integrable function \( f \) on \( [a,b] \).
+!back:
+If \( f \) is integrable on \( [a,b] \), then
+\[ \left|\int_a^b f(x)\,dx\right|
+    \le \int_a^b |f(x)|\,dx. \]
+This follows from \( -|f|\le f\le |f| \) and monotonicity of the integral.
+!extra: Follows from \( -|f| \le f \le |f| \) and monotonicity of the integral, applied to both inequalities. Uses that \( |f| \) is integrable whenever \( f \) is.
+~~~
+
+!id: QSgMdhVt7G
+!front: If \( f, g \) are integrable on \( [a,b] \), why is the product \( fg \) also integrable?
+!back:
+Integrable functions on \( [a,b] \) are bounded, so choose \( A,B \) with \( |f|\le A \) and \( |g|\le B \). For \( x,y \) in the same subinterval,
+\[ |f(x)g(x)-f(y)g(y)|
+    \le A|g(x)-g(y)|+B|f(x)-f(y)|. \]
+Thus the oscillation of \( fg \) is controlled by the oscillations of \( f \) and \( g \). Refining to make those two oscillations small makes the Darboux gap for \( fg \) small, so \( fg \) is integrable.
+~~~

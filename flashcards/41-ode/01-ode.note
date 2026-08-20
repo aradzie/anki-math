@@ -1,0 +1,166 @@
+!deck: Math::ODE
+!type: Basic Math
+!tags: Math Calculus Differential-Equation ODE
+
+!id: DYi9N9jdeg
+!front: What is the order of an ordinary differential equation?
+!back: The order of the highest derivative in the equation.
+~~~
+
+!id: 1ISdWhXGp5
+!front: What is the degree of an ordinary differential equation?
+!back: The degree is the power to which the highest-order derivative is raised, once the equation is written as a polynomial in the derivatives (no fractional powers, roots, or transcendental functions of the derivatives).
+!extra: Degree is undefined if the equation is not polynomial in its derivatives.
+~~~
+
+!id: bKReqj1Mnp
+!front: What are the order and degree of the ordinary differential equation \( (y'')^3 + xy' - y = 0 \)?
+!back:
+Order \( 2 \), since the highest derivative present is \( y'' \).
+
+Degree \( 3 \), since the equation is already polynomial in the derivatives and \( y'' \) is raised to the power \( 3 \).
+~~~
+
+!id: xe58rX423H
+!front: What are the order and degree of the ordinary differential equation \( \sin(y') + y = 0 \)?
+!back:
+Order \( 1 \), since the highest derivative present is \( y' \).
+
+Degree undefined, since the equation is not polynomial in the derivatives — \( y' \) appears inside \( \sin(\cdot) \), a transcendental function.
+~~~
+
+!id: Fl8ICDKJmv
+!front: What are the order and degree of the ordinary differential equation \( e^{y''} = x \)?
+!back:
+Order \( 2 \), since the highest derivative present is \( y'' \).
+
+Degree undefined, since the equation is not polynomial in the derivatives — \( y'' \) appears in the exponent of \( e^{(\cdot)} \), a transcendental function.
+~~~
+
+!id: Yuf1OV3VWU
+!front: What is an autonomous ordinary differential equation?
+!back:
+An autonomous ordinary differential equation is an equation where the independent variable does not explicitly appear in the equation.
+
+An autonomous ordinary differential equation can be expressed in the form:
+
+\[ \frac{dy}{dx} = f(y) \]
+
+where \( f(y) \) is a function that depends only on the dependent variable \( y \).
+~~~
+
+!id: CbOGrchEvR
+!front: What is a separable ordinary differential equation?
+!back:
+A first-order ODE is separable if it can be written as
+
+\[ \frac{dy}{dx} = h(x)g(y) \]
+
+where \( h(x) \) is a function of \( x \) alone and \( g(y) \) is a function of \( y \) alone.
+~~~
+
+!id: sta74RKsZz
+!front: What is a linear ordinary differential equation?
+!back:
+An \( n \)-th order ODE is linear if it can be written as
+
+\[ a_n(x) y^{(n)} + a_{n-1}(x) y^{(n-1)} + \cdots + a_1(x) y' + a_0(x) y = g(x) \]
+
+where:
+
+- the coefficients \( a_0(x), \ldots, a_n(x) \) and \( g(x) \) depend only on \( x \), not on \( y \) or its derivatives
+- \( y \) and every derivative of it appear to the first power, and are not multiplied together or passed through a nonlinear function (e.g. no \( y^2 \), \( yy' \), or \( \sin(y) \))
+!extra: If \( g(x) = 0 \) the equation is called homogeneous (linear); otherwise it is nonhomogeneous. This is a different use of "homogeneous" than the homogeneous (degree-zero) first-order ODE \( \frac{dy}{dx} = f(y/x) \) — the two notions share a name but are unrelated classifications.
+~~~
+
+!id: i07H0rn911
+!front: What is an exact differential equation?
+!back:
+A first-order ODE written in differential form
+
+\[ M(x, y)\,dx + N(x, y)\,dy = 0 \]
+
+is exact if there exists a function \( \psi(x, y) \) with \( \psi_x = M \) and \( \psi_y = N \), i.e. the left side is the total differential \( d\psi \).
+~~~
+
+!id: OIjvzz0rdr
+!front: What is the equivalent partial-derivative test for exactness of \( M(x,y)\,dx + N(x,y)\,dy = 0 \), and what hypothesis does it require?
+!back:
+If \( M \) and \( N \) have continuous partial derivatives on a simply connected region, the equation is exact iff
+
+\[ \frac{\partial M}{\partial y} = \frac{\partial N}{\partial x}. \]
+~~~
+
+!id: qGnO0mOTWZ
+!front: What is a homogeneous first-order ordinary differential equation?
+!back:
+A first-order ODE \( \frac{dy}{dx} = f(x, y) \) is homogeneous if \( f \) is homogeneous of degree \( 0 \), i.e. \( f(tx, ty) = f(x, y) \) for all \( t \neq 0 \) in the domain. Equivalently, it can be written as
+
+\[ \frac{dy}{dx} = F\!\left(\frac{y}{x}\right) \]
+
+for some function \( F \).
+!extra: Not the same "homogeneous" as a homogeneous linear ODE (\( g(x) = 0 \) in \( a_n(x)y^{(n)} + \cdots + a_0(x) y = g(x) \)) — same word, unrelated classification.
+~~~
+
+!id: cSe0r95ery
+!front: How is a homogeneous first-order ODE \( \frac{dy}{dx} = F(y/x) \) solved, and why does the substitution work?
+!back:
+Substitute \( v = y/x \), so \( y = vx \) and \( \frac{dy}{dx} = v + x\frac{dv}{dx} \). The equation becomes
+
+\[ v + x\frac{dv}{dx} = F(v), \]
+
+which is separable in \( v \) and \( x \):
+
+\[ \frac{dv}{F(v) - v} = \frac{dx}{x}. \]
+~~~
+
+!id: 9jR7I8V3zd
+!front: True or false: the ODE \( x^3 y'' - 3xy' + \sin(x)\,y = e^x \) is linear.
+!back: True. The coefficients \( x^3 \), \( -3x \), \( \sin(x) \), and the right-hand side \( e^x \) depend only on \( x \); the dependent variable \( y \) and its derivatives \( y', y'' \) each appear to the first power, unmultiplied by one another and unpassed through a nonlinear function.
+~~~
+
+!id: EAnWKnIhlB
+!front: True or false: the ODE \( y'' + y\,y' = x \) is linear.
+!back: False. The term \( y\,y' \) multiplies the dependent variable by its own derivative, violating the requirement that \( y \) and its derivatives appear only to the first power and not multiplied together.
+~~~
+
+!id: HCbNJsR7fg
+!front: True or false: the linear ODE \( y'' + 3y' + 2y = 0 \) is homogeneous, in the sense of a homogeneous linear ODE (i.e. \( g(x) = 0 \) on the right-hand side).
+!back: True. The right-hand side is identically \( 0 \).
+~~~
+
+!id: FLlDvuJ5PC
+!front: True or false: the linear ODE \( y'' + 3y' + 2y = e^x \) is homogeneous, in the sense of a homogeneous linear ODE (i.e. \( g(x) = 0 \) on the right-hand side).
+!back: False. The right-hand side is \( e^x \neq 0 \), so the equation is nonhomogeneous.
+~~~
+
+!id: hoIBZ7H7F8
+!front: True or false: the first-order ODE \( \frac{dy}{dx} = \frac{x^2 + y^2}{xy} \) is homogeneous, in the sense \( \frac{dy}{dx} = F(y/x) \) — not to be confused with a homogeneous linear ODE.
+!back:
+True. With \( f(x,y) = \frac{x^2+y^2}{xy} \),
+\[ f(tx, ty) = \frac{t^2x^2 + t^2y^2}{t^2xy} = \frac{x^2+y^2}{xy} = f(x,y), \]
+so \( f \) is homogeneous of degree \( 0 \), and the equation can be written as \( \frac{dy}{dx} = F(y/x) \) with \( F(v) = v + 1/v \).
+~~~
+
+!id: TafrV67fhl
+!front: True or false: the first-order ODE \( \frac{dy}{dx} = x + y \) is homogeneous, in the sense \( \frac{dy}{dx} = F(y/x) \) — not to be confused with a homogeneous linear ODE.
+!back:
+False. With \( f(x,y) = x + y \),
+\[ f(tx, ty) = tx + ty = t\,f(x,y), \]
+so \( f \) is homogeneous of degree \( 1 \), not degree \( 0 \); it cannot be written as a function of \( y/x \) alone.
+~~~
+
+!id: vZ71K9FGpQ
+!front: True or false: the differential equation \( (2xy + 3)\,dx + (x^2 - 1)\,dy = 0 \) is exact.
+!back:
+True. With \( M = 2xy + 3 \) and \( N = x^2 - 1 \),
+\[ \frac{\partial M}{\partial y} = 2x = \frac{\partial N}{\partial x}, \]
+and both are continuous everywhere, so the exactness test is satisfied.
+~~~
+
+!id: tsrNeGqhfc
+!front: True or false: the differential equation \( y\,dx - x\,dy = 0 \) is exact.
+!back:
+False. With \( M = y \) and \( N = -x \),
+\[ \frac{\partial M}{\partial y} = 1 \neq -1 = \frac{\partial N}{\partial x}. \]
+~~~

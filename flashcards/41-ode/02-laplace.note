@@ -1,0 +1,385 @@
+!deck: Math::ODE
+!type: Basic Math
+!tags: Math Calculus Laplace-Transform
+
+!id: Lhceur3wOn
+!front: State the definition of the Laplace transform.
+!back:
+The Laplace transform of a function \( f(t) \) is a function \( F(s) \) defined as
+
+\[ F(s) = \mathscr{L}\{f\} = \int_0^\infty e^{-st} f(t) \, dt \]
+
+where \( f(t) \) is a function of exponential order defined for all \( t \ge 0 \).
+~~~
+
+!id: IegvP6XVGa
+!front: What does it mean for \( f(t) \) to be of exponential order \( \alpha \)?
+!back:
+There exist constants \( M > 0 \), \( \alpha \), and \( T \ge 0 \) such that
+
+\[ |f(t)| \le M e^{\alpha t} \quad \text{for all } t \ge T \]
+
+That is, \( f(t) \) does not grow faster than some exponential as \( t \to \infty \).
+~~~
+
+!id: 7XXSIvgKTd
+!front: Under what sufficient conditions does the Laplace transform of \( f(t) \) exist?
+!back:
+If \( f(t) \) is
+
+- piecewise continuous on \( [0, \infty) \) and
+- of exponential order \( \alpha \),
+
+then
+
+\[ \mathscr{L}\{f(t)\} = F(s) \]
+
+exists for all \( s > \alpha \).
+!extra: These conditions are sufficient, not necessary — some functions violating them still have a Laplace transform.
+~~~
+
+!id: wZOUTvyimf
+!front: Why must \( s > \alpha \) for \( F(s) = \int_0^\infty e^{-st} f(t) \, dt \) to converge when \( f(t) \) is of exponential order \( \alpha \)?
+!back:
+Since \( |f(t)| \le M e^{\alpha t} \), the integrand satisfies
+
+\[ |e^{-st} f(t)| \le M e^{(\alpha - s)t} \]
+
+This decays as \( t \to \infty \) only when \( \alpha - s < 0 \), i.e. \( s > \alpha \), which guarantees the integral converges.
+~~~
+
+!id: pxfVudmeQf
+!front: Why does \( f(t) = e^{t^2} \) have no Laplace transform?
+!back:
+\( e^{t^2} \) is not of exponential order: for any \( \alpha \),
+
+\[ \frac{e^{t^2}}{e^{\alpha t}} = e^{t^2 - \alpha t} \to \infty \quad \text{as } t \to \infty \]
+
+so no bound \( M e^{\alpha t} \) can contain it. Consequently \( e^{-st} e^{t^2} \to \infty \) as \( t \to \infty \) for every \( s \), and
+
+\[ \int_0^\infty e^{-st} e^{t^2} \, dt \]
+
+diverges for every \( s \).
+~~~
+
+!id: Gb0bG6anOp
+!front: What is the linearity property of the Laplace transform?
+!back:
+For constants \( a, b \) and functions \( f(t), g(t) \) with transforms \( F(s), G(s) \):
+
+\[ \mathscr{L}\{a f(t) + b g(t)\} = a F(s) + b G(s) \]
+
+This follows directly from the linearity of the integral defining \( \mathscr{L} \).
+~~~
+
+!id: 7JH8codq0v
+!front: What is the first translation or shifting property of the Laplace transform?
+!back:
+If \( f(t) \) has the transform \( F(s) \) then
+
+\[ \mathscr{L}\{e^{ct} f(t)\} = F(s - c) \]
+
+\[ \mathscr{L}^{-1}\{F(s - c)\} = e^{ct} f(t) \]
+~~~
+
+!id: g6uKyM80Hh
+!front: What is the second translation or shifting property of the Laplace transform?
+!back:
+If \( f(t) \) has the transform \( F(s) \) and \( c \ge 0 \) then
+
+\[ \mathscr{L}\{f(t - c) \, u(t - c)\} = e^{-cs} F(s) \]
+
+\[ \mathscr{L}^{-1}\{e^{-cs} F(s)\} = f(t - c) \, u(t - c) \]
+
+where \( u(t - c) \) is the unit step function, which is defined as
+
+\[ u(t - c) = \left\{
+\begin{array}{ll}
+    1 & t \ge c \\
+    0 & t < c
+\end{array}
+\right. \]
+~~~
+
+!id: TYpFAgPbju
+!front: What is the change of scale property of the Laplace transform?
+!back:
+If \( f(t) \) has the transform \( F(s) \) and \( c > 0 \) then
+
+\[ \mathscr{L}\{ f(ct) \} = \frac{1}{c} F \left( \frac{s}{c} \right) \]
+
+\[ \mathscr{L}^{-1} \left\{ \frac{1}{c} F \left( \frac{s}{c} \right) \right\} = f(ct) \]
+~~~
+
+!id: dvJwgvJjqI
+!front: What is the Laplace transform of the first derivative \( f'(t) \)?
+!back: \[ \mathscr{L}\{f'(t)\} = s F(s) - f(0) \]
+!extra: Requires \( f(t) \) continuous on \( [0, \infty) \) and of exponential order, and \( f'(t) \) piecewise continuous.
+~~~
+
+!id: Q7Jvva3GOq
+!front: What is the Laplace transform of the second derivative \( f''(t) \)?
+!back: \[ \mathscr{L}\{f''(t)\} = s^2 F(s) - s f(0) - f'(0) \]
+!extra: Requires \( f(t), f'(t) \) continuous on \( [0, \infty) \) and of exponential order, and \( f''(t) \) piecewise continuous.
+~~~
+
+!id: fZcyNXaQ1P
+!front: What is the Laplace transform of the \( n \)th derivative \( f^{(n)}(t) \)?
+!back:
+\[
+\begin{align*}
+    \mathscr{L}\{f^{(n)}(t)\}
+    &= s^n F(s) \\
+    &- s^{n-1} f(0) \\
+    &- s^{n-2} f'(0) \\
+    &- s^{n-3} f''(0) \\
+    &- \cdots \\
+    &- f^{(n-1)}(0)
+\end{align*}
+\]
+!extra: Requires \( f, f', \ldots, f^{(n-1)} \) continuous on \( [0, \infty) \) and of exponential order, and \( f^{(n)} \) piecewise continuous.
+~~~
+
+!id: qWqheFKB2X
+!front: What is the effect of multiplying \( f(t) \) by \( t^n \) on its Laplace transform?
+!back:
+\[ \mathscr{L}\{t^n f(t)\} = (-1)^n \frac{d^n}{ds^n} F(s) \]
+
+Obtained by differentiating \( F(s) = \int_0^\infty e^{-st} f(t) \, dt \) under the integral sign \( n \) times.
+~~~
+
+!id: bqqphxjfU9
+!front: What is the convolution \( f * g \) of two functions, in the context of the Laplace transform?
+!back:
+\[ (f * g)(t) = \int_0^t f(\tau) \, g(t - \tau) \, d\tau \]
+
+The bounds are finite rather than \( \pm\infty \) because \( f \) and \( g \) are taken to vanish for negative argument (the Laplace-transform convention): the general two-sided convolution \( \int_{-\infty}^{\infty} f(\tau) \, g(t - \tau) \, d\tau \) has a nonzero integrand only for \( \tau \in [0, t] \), so it collapses to \( \int_0^t \).
+~~~
+
+!id: 0kurqM5PTb
+!front: State the convolution theorem for Laplace transforms.
+!back:
+\[ \mathscr{L}\{f * g\} = F(s) \, G(s) \]
+
+The transform of a convolution is the product of the transforms. This lets you compute the inverse transform of a product \( F(s)G(s) \) as the convolution \( f * g \) instead of partial fractions.
+~~~
+
+!id: L3cbk23lIY
+!front: State the initial value theorem for Laplace transforms.
+!back:
+If \( f \) and \( f' \) are of exponential order and \( F(s) = \mathscr{L}\{f(t)\} \), then
+
+\[ \lim_{t \to 0^+} f(t) = \lim_{s \to \infty} s F(s) \]
+~~~
+
+!id: g4H4O7Djix
+!front: State the final value theorem for Laplace transforms.
+!back:
+If \( f \) and \( f' \) are of exponential order and \( \lim_{t \to \infty} f(t) \) exists, then
+
+\[ \lim_{t \to \infty} f(t) = \lim_{s \to 0} s F(s) \]
+!extra: This only applies when \( \lim_{t \to \infty} f(t) \) actually exists (e.g. all poles of \( sF(s) \) lie in the open left half-plane) — otherwise the formal right-hand limit can still exist and give a wrong answer.
+~~~
+
+!id: eccepG81hv
+!front: What is the Laplace transform of a periodic function \( f(t) \) with period \( T \)?
+!back: \[ \mathscr{L}\{f(t)\} = \frac{1}{1 - e^{-sT}} \int_0^T e^{-st} f(t) \, dt \]
+~~~
+
+!id: kzLPwVBzuk
+!front: What is the unit step function \( u(t - c) \)?
+!back:
+The unit step function (Heaviside function) \( u(t - c) \) is defined as
+
+\[ u(t - c) = \left\{
+\begin{array}{ll}
+    1 & t \ge c \\
+    0 & t < c
+\end{array}
+\right. \]
+~~~
+
+!id: ZKhTg8oQRz
+!front: What is the effect of multiplying by the unit step function \( u(t - c) \)?
+!back:
+Let \( f(t) = 0 \) for all \( t < 0 \).
+
+- \( f(t) u(t - c) \) with \( c > 0 \) is \( f(t) \) switched on at the point \( c \).
+- \( f(t - c) u(t - c) \) with \( c > 0 \) is \( f(t) \) shifted (translated) to the right by the amount \( c \).
+~~~
+
+!id: pIW1QKNH6V
+!front: What is the unit impulse function \( \delta(t - c) \)?
+!back:
+The unit impulse function (Dirac delta function) is defined by
+
+\[ \delta(t - c) = \left\{
+\begin{array}{ll}
+    \infty & t = c \\
+    0 & t \ne c
+\end{array}
+\right. \]
+
+It is technically not a function but a **generalized function** or **distribution**.
+~~~
+
+!id: dSQ33JeNhf
+!front: What is the area under the unit impulse function \( \delta(t - c) \)?
+!back:
+For \( c \ge 0 \), the unit impulse function has unit area:
+
+\[ \int_0^\infty \delta (t - c) \, dt = 1 \]
+~~~
+
+!id: AIB7jJBnop
+!front: What is the shifting or sampling property of the unit impulse function \( \delta(t - c) \)?
+!back:
+Integrating a function \( f(t) \) against \( \delta(t - c) \) recovers the value of \( f \) at \( c \):
+
+\[ \int_0^{\infty} f(t) \delta (t - c) \, dt = f(c) \quad (c \ge 0) \]
+~~~
+
+!id: rbjlut2qvy
+!front: What is the derivative of the unit step function?
+!back:
+The derivative of the unit step function (Heaviside function) is the unit impulse function (Dirac delta function):
+
+\[ \frac{d}{dt} u(t) = \delta(t) \]
+~~~
+
+!id: YMR5Mc1KE4
+!front: Derive \( \mathscr{L}\{1\} \)
+!back:
+\[
+\begin{align*}
+    \mathscr{L}\{1\}
+        &= \int_0^\infty e^{-st} \, dt \\
+        &= \left[ -\frac{1}{s} e^{-st} \right]_0^\infty \\
+        &= \frac{1}{s}, \quad s > 0
+\end{align*}
+\]
+~~~
+
+!id: neWU37YoMb
+!front: Derive \( \mathscr{L}\{t\} \)
+!back:
+Integrate by parts with \( u = t \), \( dv = e^{-st} \, dt \):
+
+\[
+\begin{align*}
+    \mathscr{L}\{t\}
+        &= \int_0^\infty t e^{-st} \, dt \\
+        &= \underbrace{\left[ -\frac{t}{s} e^{-st} \right]_0^\infty}_{0}
+            + \frac{1}{s} \underbrace{\int_0^\infty e^{-st} \, dt}_{\mathscr{L}\{1\}} \\
+        &= \frac{1}{s} \cdot \frac{1}{s} \\
+        &= \frac{1}{s^2}
+\end{align*}
+\]
+~~~
+
+!id: h1rk7EJImz
+!front: Derive \( \mathscr{L}\{t^n\} \), \( n = 1, 2, 3, \ldots \)
+!back:
+Integrate by parts with \( u = t^n \), \( dv = e^{-st} \, dt \):
+
+\[
+\begin{align*}
+    \mathscr{L}\{t^n\}
+        &= \int_0^\infty t^n e^{-st} \, dt \\
+        &= \underbrace{\left[ -\frac{t^n}{s} e^{-st} \right]_0^\infty}_{0}
+            + \frac{n}{s} \underbrace{\int_0^\infty t^{n-1} e^{-st} \, dt}_{\mathscr{L}\{t^{n-1}\}} \\
+        &= \frac{n}{s} \mathscr{L}\{t^{n-1}\}
+\end{align*}
+\]
+
+Applying this reduction \( n \) times starting from \( \mathscr{L}\{1\} = 1/s \) gives
+
+\[ \mathscr{L}\{t^n\} = \frac{n!}{s^{n+1}} \]
+~~~
+
+!id: SMinFhKwbA
+!front: Derive \( \mathscr{L}\{e^{ct}\} \)
+!back:
+\[
+\begin{align*}
+    \mathscr{L}\{e^{ct}\}
+        &= \int_0^\infty e^{-st} e^{ct} \, dt \\
+        &= \int_0^\infty e^{-(s - c)t} \, dt \\
+        &= \frac{1}{s - c}, \quad s > c
+\end{align*}
+\]
+~~~
+
+!id: GCbtaplcqN
+!front: Derive \( \mathscr{L}\{f'(t)\} \)
+!back:
+Integrate by parts with \( u = e^{-st} \), \( dv = f'(t) \, dt \):
+
+\[
+\begin{align*}
+    \mathscr{L}\{f'(t)\}
+        &= \int_0^\infty e^{-st} f'(t) \, dt \\
+        &= \underbrace{\left[ e^{-st} f(t) \right]_0^\infty}_{-f(0)}
+            + s \underbrace{\int_0^\infty e^{-st} f(t) \, dt}_{\mathscr{L}\{f(t)\}} \\
+        &= s F(s) - f(0)
+\end{align*}
+\]
+
+The boundary term vanishes at \( t \to \infty \) because \( f(t) \) is of exponential order and \( s \) is large enough for the transform to converge.
+~~~
+
+!id: pIHX5rr9Kv
+!front: Solve \( y' + 2y = 0, \ y(0) = 3 \) using the Laplace transform.
+!back:
+Apply \( \mathscr{L} \) to both sides, writing \( Y(s) = \mathscr{L}\{y(t)\} \):
+
+\[
+\begin{align*}
+    \mathscr{L}\{y'\} + 2 \mathscr{L}\{y\} &= 0 \\
+    \big( sY(s) - y(0) \big) + 2Y(s) &= 0 \\
+    (s + 2) Y(s) &= 3 \\
+    Y(s) &= \frac{3}{s + 2}
+\end{align*}
+\]
+
+Since \( \mathscr{L}\{e^{ct}\} = \frac{1}{s - c} \), taking the inverse transform gives
+
+\[ y(t) = 3 e^{-2t} \]
+~~~
+
+!id: dO0gadjUte
+!front: Solve \( y'' + y = 0, \ y(0) = 0, \ y'(0) = 1 \) using the Laplace transform.
+!back:
+Apply \( \mathscr{L} \) to both sides, writing \( Y(s) = \mathscr{L}\{y(t)\} \):
+
+\[
+\begin{align*}
+    \mathscr{L}\{y''\} + \mathscr{L}\{y\} &= 0 \\
+    \big( s^2 Y(s) - s y(0) - y'(0) \big) + Y(s) &= 0 \\
+    (s^2 + 1) Y(s) - 1 &= 0 \\
+    Y(s) &= \frac{1}{s^2 + 1}
+\end{align*}
+\]
+
+Since \( \mathscr{L}\{\sin t\} = \frac{1}{s^2 + 1} \), taking the inverse transform gives
+
+\[ y(t) = \sin t \]
+~~~
+
+!id: d4oUXbgB3f
+!front: Solve \( y'' + y = 1, \ y(0) = 0, \ y'(0) = 0 \) using the Laplace transform.
+!back:
+Apply \( \mathscr{L} \) to both sides, writing \( Y(s) = \mathscr{L}\{y(t)\} \):
+
+\[
+\begin{align*}
+    \mathscr{L}\{y''\} + \mathscr{L}\{y\} &= \mathscr{L}\{1\} \\
+    s^2 Y(s) + Y(s) &= \frac{1}{s} \\
+    Y(s) &= \frac{1}{s(s^2 + 1)}
+\end{align*}
+\]
+
+Partial fractions give \( \dfrac{1}{s(s^2+1)} = \dfrac{1}{s} - \dfrac{s}{s^2+1} = \mathscr{L}\{1\} - \mathscr{L}\{\cos t\} \), so taking the inverse transform gives
+
+\[ y(t) = 1 - \cos t \]
+~~~

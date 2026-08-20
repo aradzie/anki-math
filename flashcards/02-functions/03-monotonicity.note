@@ -1,0 +1,71 @@
+!deck: Math::Functions
+!type: Basic Math
+!tags: Math Function Monotonicity
+
+!id: XeWvKY3NLK
+!front: Define what it means for \( f \) to be increasing on an interval \( I \), distinguishing the strict and non-strict (weak) versions.
+!back:
+For all \( x_1, x_2 \in I \) with \( x_1 < x_2 \):
+- \( f \) is strictly increasing on \( I \) if \( f(x_1) < f(x_2) \).
+- \( f \) is non-decreasing (weakly increasing) on \( I \) if \( f(x_1) \le f(x_2) \).
+~~~
+
+!id: cEYAP8r0F9
+!front: Define what it means for \( f \) to be decreasing on an interval \( I \), distinguishing the strict and non-strict (weak) versions.
+!back:
+For all \( x_1, x_2 \in I \) with \( x_1 < x_2 \):
+- \( f \) is strictly decreasing on \( I \) if \( f(x_1) > f(x_2) \).
+- \( f \) is non-increasing (weakly decreasing) on \( I \) if \( f(x_1) \ge f(x_2) \).
+~~~
+
+!id: qFE68KjRsE
+!front: What does it mean for \( f \) to be monotonic on an interval \( I \)?
+!back:
+\( f \) is monotonic on \( I \) if it is
+
+- entirely increasing on \( I \) or
+- entirely decreasing on \( I \) (in either the strict or weak sense).
+
+The same one of the two behaviors must hold throughout \( I \), without switching partway.
+~~~
+
+!id: Bo9bNIki2F
+!front: For \( f \) differentiable on \( (a,b) \), how does \( f \) being non-decreasing on \( (a,b) \) relate to the sign of \( f' \)?
+!back:
+\( f \) is non-decreasing on \( (a,b) \) if and only if \( f'(x) \ge 0 \) for every \( x \in (a,b) \).
+- (\( \Rightarrow \)) If \( f \) is non-decreasing, every difference quotient \( \frac{f(x+h)-f(x)}{h} \ge 0 \), so its limit \( f'(x) \ge 0 \).
+- (\( \Leftarrow \)) If \( f' \ge 0 \) throughout, the Mean Value Theorem gives, for \( x_1 < x_2 \) in \( (a,b) \), \( f(x_2)-f(x_1) = f'(c)(x_2-x_1) \ge 0 \) for some \( c \in (x_1,x_2) \).
+~~~
+
+!id: qe3mpWajsy
+!front: Is \( f'(x) > 0 \) throughout \( (a,b) \) necessary for \( f \) to be strictly increasing on \( (a,b) \)?
+!back:
+No — it is sufficient (by the same Mean Value Theorem argument, with strict inequality) but not necessary.
+
+For \( f(x) = x + \sin x \), \( f'(x) = 1+\cos x \ge 0 \), vanishing only at the isolated points \( x = (2k+1)\pi \); since \( f' \) is never negative and is zero only at isolated points, \( f \) is still strictly increasing on all of \( \mathbb{R} \).
+~~~
+
+!id: pND8gQbjAy
+!front: Why does strict monotonicity of \( f \) on an interval \( I \) imply that \( f \) is injective on \( I \)?
+!back: For \( x_1 \ne x_2 \) in \( I \), say \( x_1 < x_2 \). Strict monotonicity gives either \( f(x_1) < f(x_2) \) (increasing case) or \( f(x_1) > f(x_2) \) (decreasing case); either way \( f(x_1) \ne f(x_2) \).
+~~~
+
+!id: GS9d2GNYwC
+!front: Construct a counterexample showing that an injective function need not be monotonic.
+!back: Let \( f : \mathbb{R} \to \mathbb{R} \) be \( f(x) = 1/x \) for \( x \ne 0 \) and \( f(0) = 0 \). This \( f \) is injective on all of \( \mathbb{R} \) (\( 1/x \) is injective on the nonzero reals, and \( 0 \) is hit only at \( x=0 \)), but it is not monotonic: \( f(-1) = -1 \), \( f(-0.5) = -2 \), \( f(1) = 1 \), so \( f \) decreases from \( x=-1 \) to \( x=-0.5 \) but increases from \( x=-0.5 \) to \( x=1 \).
+~~~
+
+!id: 9Yhyx3GAe7
+!front: For \( f \) continuous on an interval \( I \), how does injectivity of \( f \) on \( I \) relate to strict monotonicity?
+!back:
+They are equivalent: \( f \) is injective on \( I \) if and only if \( f \) is strictly monotonic on \( I \).
+
+Strict monotonicity always implies injectivity, with no continuity needed; the converse — injective implies strictly monotonic — requires continuity on an interval, and can fail without it.
+~~~
+
+!id: JHumbSx0ep
+!front: Is \( f(x) = x^2 \) monotonic on \( \mathbb{R} \)? Is it monotonic on \( [0,\infty) \)?
+!back:
+- On \( \mathbb{R} \): not monotonic — strictly decreasing on \( (-\infty, 0] \) and strictly increasing on \( [0,\infty) \), so neither behavior holds throughout.
+- On \( [0,\infty) \): strictly increasing throughout, hence monotonic.
+~~~

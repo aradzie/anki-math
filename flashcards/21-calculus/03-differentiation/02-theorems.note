@@ -1,0 +1,101 @@
+!deck: Math::Calculus
+!type: Basic Math
+!tags: Math Calculus Differentiation
+
+!id: ax8Frvkg1t
+!front: State the Extreme Value Theorem (EVT).
+!back:
+The Extreme Value Theorem states that if a real-valued function \( f \) is:
+
+- continuous on \( [a,b] \)
+- \( [a,b] \) is closed and bounded
+
+then \( f \) attains a maximum and a minimum on \( [a,b] \), each at least once: there exist \( c, d \in [a,b] \) such that
+\[ f(c) \leq f(x) \leq f(d) \quad \forall x \in [a,b]. \]
+!extra: Informally: a continuous function on a closed interval always has a highest point and a lowest point.
+~~~
+
+!id: RKhaYcqpZ1
+!front: State Rolle's Theorem.
+!back:
+The Rolle's Theorem states that if a function \( f \) is:
+
+- continuous on \( [a,b] \)
+- differentiable on \( (a,b) \)
+- \( f(a) = f(b) \)
+
+then there exists at least one \( c \in (a,b) \) such that \( f'(c) = 0 \).
+!extra:
+Geometrically: if a continuous, differentiable curve starts and ends at the same height, some point in between has a horizontal tangent.
+
+![Rolle's Theorem](img/rolle_theorem.svg)
+~~~
+
+!id: Nul59WMDrC
+!front: State the Mean Value Theorem (MVT).
+!back:
+The Mean Value Theorem states that if a function \( f \) is:
+
+- continuous on \( [a,b] \)
+- differentiable on \( (a,b) \)
+
+then there exists at least one \( c \in (a,b) \) such that the instantaneous rate of change at \( c \) equals the average rate of change over \( [a,b] \):
+\[ f'(c) = \frac{f(b) - f(a)}{b - a}. \]
+!extra:
+Geometrically: there is at least one point on the curve where the tangent line is parallel to the secant line connecting the endpoints of the curve.
+
+![Mean Value Theorem](img/mean_value_theorem.svg)
+~~~
+
+!id: n7ee7EmSmb
+!front: What is the connection between the Rolle's Theorem and Mean Value Theorem?
+!back:
+The Rolle's Theorem is a special case of the Mean Value Theorem.
+
+The Rolle's Theorem can be derived from the Mean Value Theorem: if \( f(a) = f(b) \), then the right side of the Mean Value Theorem equation becomes
+
+\[ f'(c) = \frac{f(a) - f(a)}{b - a} = \frac{0}{b - a} = 0 \]
+~~~
+
+!id: 7sz7MRtXZk
+!front: State the Intermediate Value Theorem (IVT).
+!back:
+The Intermediate Value Theorem states that if:
+
+- \( f \) is continuous on \( [a,b] \)
+- \( L \) is any value between \( f(a) \) and \( f(b) \)
+
+then there exists at least one \( c \in [a,b] \) such that \( f(c) = L \).
+!extra: Intuitively: if you can draw the graph without lifting your pencil, and it goes from one \( y \)-value to another, it must pass through every \( y \)-value in between.
+~~~
+
+!id: UAn7ziYq3m
+!front: Construct a counterexample showing the IVT's conclusion can fail if \( f \) is not continuous on \( [a,b] \).
+!back:
+Let, for some \( m \in (a,b) \),
+\[ f(x) = \begin{cases} -1 & a \le x < m \\ 1 & m \le x \le b \end{cases} \]
+
+- \( f(a) = -1 \) and \( f(b) = 1 \), so \( 0 \) lies between them.
+- \( f \) never takes the value \( 0 \) anywhere on \( [a,b] \).
+
+The jump discontinuity at \( m \) lets \( f \) skip over \( 0 \) entirely.
+
+![IVT counterexample](img/ivt_counterexample.svg)
+!extra: Compare with the Intermediate Value Theorem, which requires continuity on \( [a,b] \) as a hypothesis.
+~~~
+
+!id: jBHWk5ISDd
+!front: Construct a counterexample showing the EVT's conclusion can fail if \( f \) is not continuous on \( [a,b] \).
+!back:
+Let
+\[ f(x) = \begin{cases} x & a \le x < b \\ a & x = b \end{cases} \]
+on the closed bounded interval \( [a,b] \).
+
+- As \( x \to b^- \), \( f(x) \) gets arbitrarily close to \( b \).
+- \( f \) never equals \( b \), since \( f(b) = a \neq b \).
+
+So \( f \) has no maximum on \( [a,b] \), even though the interval is closed and bounded.
+
+![EVT counterexample](img/evt_counterexample.svg)
+!extra: Compare with the Extreme Value Theorem, which requires continuity on \( [a,b] \) as a hypothesis.
+~~~

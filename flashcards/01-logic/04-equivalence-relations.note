@@ -1,0 +1,443 @@
+!deck: Math::Logic
+!type: Basic Math
+!tags: Math Logic Equivalence-Relation Equivalence-Class
+
+!id: 0oF1zXZ2fE
+!front: Define a binary relation on a set \( A \).
+!back:
+A binary relation on \( A \) is a subset \( R \subseteq A \times A \).
+
+If \( (x,y) \in R \), one often writes \( xRy \), or \( x \sim y \) when the relation is being treated as an equivalence relation.
+!extra: The phrase "on \( A \)" means both entries come from the same set \( A \).
+~~~
+
+!id: Hkd5SlX2ew
+!front: What does the notation \( x \sim y \) mean for a relation \( \sim \) on a set \( A \)?
+!back:
+It means that \( x \) is related to \( y \). Since a binary relation on \( A \) is a subset of \( A \times A \), this says that the ordered pair \( (x,y) \) belongs to that subset.
+
+For an equivalence relation, it is read as "\( x \) is equivalent to \( y \)".
+~~~
+
+!id: cE7srHaaps
+!front: Define a reflexive relation on a set \( A \).
+!back:
+A relation \( \sim \) on \( A \) is reflexive if every element is related to itself:
+\[ \forall a \in A,\ a \sim a. \]
+~~~
+
+!id: 6VfW4L3x5D
+!front: Define a symmetric relation on a set \( A \).
+!back:
+A relation \( \sim \) on \( A \) is symmetric if relation in one direction implies relation in the reverse direction:
+\[ \forall a,b \in A,\ a \sim b \implies b \sim a. \]
+~~~
+
+!id: aZ7ZiFxFSM
+!front: Define a transitive relation on a set \( A \).
+!back:
+A relation \( \sim \) on \( A \) is transitive if two composable relation steps can be collapsed into one:
+\[ \forall a,b,c \in A,\ (a \sim b \text{ and } b \sim c) \implies a \sim c. \]
+~~~
+
+!id: MwzGDb21Eu
+!front: Define an equivalence relation on a set \( A \).
+!back:
+A relation \( \sim \) on \( A \) is an equivalence relation if it is:
+
+- reflexive: \( a \sim a \) for every \( a \in A \)
+- symmetric: \( a \sim b \implies b \sim a \)
+- transitive: \( (a \sim b \text{ and } b \sim c) \implies a \sim c \)
+
+These three properties make \( \sim \) behave like equality for the feature being measured.
+~~~
+
+!id: dRJZ6BLxUG
+!front: How is an equivalence relation \( \sim \) different from equality \( = \)?
+!back:
+Equality \( a=b \) means \( a \) and \( b \) are the same element.
+
+An equivalence relation \( a \sim b \) means \( a \) and \( b \) are treated as the same with respect to some chosen property or structure.
+!extra: For example, \( 7 \equiv 2 \pmod 5 \), but \( 7 \ne 2 \).
+~~~
+
+!id: ySBeHWaDXZ
+!front: What equivalence relation does equality define on a set \( A \)?
+!back:
+Equality defines the identity relation on \( A \):
+\[ a \sim b \quad\Longleftrightarrow\quad a=b. \]
+Its equivalence classes are singletons:
+\[ [a]=\{a\}. \]
+So equality never groups two distinct elements into the same class.
+~~~
+
+!id: lLC1zrldRE
+!front: In what sense is equality the finest equivalence relation on a set \( A \)?
+!back:
+Let \( \Delta_A=\{(a,a):a \in A\} \) be the equality relation on \( A \). If \( \sim \) is any equivalence relation on \( A \), then
+\[ \Delta_A \subseteq {\sim}, \]
+because reflexivity gives \( a \sim a \) for every \( a \in A \).
+
+Thus equality makes the smallest possible equivalence classes, the singletons \( \{a\} \). Any other equivalence relation can only merge those singleton classes into larger classes.
+!extra: Intuitively, equality is the strictest equivalence relation: each element is equivalent only to itself. A general equivalence relation is looser because it can group distinct elements into the same equivalence class.
+~~~
+
+!id: ckhqS1xRAd
+!front: Why does \( a=b \) allow substituting \( b \) for \( a \) in a mathematical statement?
+!back:
+Because \( a=b \) means \( a \) and \( b \) are the same object.
+
+Any well-defined expression or predicate depends on the object itself, not on which name is used for it. Therefore replacing \( a \) by \( b \) preserves the value of an expression and the truth of a statement.
+~~~
+
+!id: Ju8UTt769W
+!front: How is an equation different from equality itself?
+!back:
+Equality \( = \) is a relation.
+
+An equation is a statement asserting that two expressions are equal, often with variables:
+\[ E(x)=F(x). \]
+Solving the equation means finding the values of the variables for which that equality is true.
+~~~
+
+!id: UTgOp0D12R
+!front: Compare reflexivity, symmetry, and transitivity for a relation \( \sim \) on \( A \).
+!back:
+- Reflexivity is about each element's relation to itself: \( a \sim a \).
+- Symmetry is about reversing one relation step: \( a \sim b \implies b \sim a \).
+- Transitivity is about chaining two relation steps: \( a \sim b \) and \( b \sim c \implies a \sim c \).
+
+An equivalence relation requires all three.
+~~~
+
+!id: uNsyNJtynA
+!front: Define the equivalence class of \( a \in A \) under an equivalence relation \( \sim \) on \( A \).
+!back:
+The equivalence class of \( a \) is the set of all elements of \( A \) equivalent to \( a \):
+\[ [a] = \{x \in A : x \sim a\}. \]
+The element \( a \) is called a representative of the class \( [a] \).
+~~~
+
+!id: Wd7KMiiIaE
+!front: Define the quotient set \( A/{\sim} \) for an equivalence relation \( \sim \) on \( A \).
+!back:
+The quotient set is the set of all equivalence classes:
+\[ A/{\sim} = \{[a] : a \in A\}. \]
+Its elements are subsets of \( A \), not individual elements of \( A \).
+~~~
+
+!id: goIgKmHVLh
+!front: What does \( x \in [a] \) mean in terms of the equivalence relation \( \sim \)?
+!back:
+By definition,
+\[ x \in [a] \quad\Longleftrightarrow\quad x \sim a. \]
+If \( \sim \) is symmetric, this is also equivalent to \( a \sim x \).
+~~~
+
+!id: uXDxCrGUvH
+!front: Why is every equivalence class \( [a] \) nonempty?
+!back: Because \( \sim \) is reflexive, \( a \sim a \). Therefore \( a \in [a] \), so \( [a] \neq \varnothing \).
+~~~
+
+!id: Ta6pr2baxY
+!front: Why can one equivalence class have many different representatives?
+!back: If \( b \in [a] \), then \( b \sim a \). For an equivalence relation this implies \( [b]=[a] \), so either \( a \) or \( b \) can be used to name the same class.
+!extra: The notation \( [a] \) names the class by one chosen representative; it does not mean \( a \) is the only special element in that class.
+~~~
+
+!id: Gg8Uryn7GW
+!front: Show that if \( a \sim b \), then \( [a]=[b] \).
+!back:
+Let:
+
+- \( \sim \) be an equivalence relation on \( A \)
+- \( a,b \in A \)
+- \( a \sim b \)
+
+To prove: \( [a]=[b] \).
+
+- If \( x \in [a] \), then \( x \sim a \). Since \( a \sim b \), transitivity gives \( x \sim b \), so \( x \in [b] \).
+- If \( x \in [b] \), then \( x \sim b \). Since \( a \sim b \), symmetry gives \( b \sim a \), and transitivity gives \( x \sim a \), so \( x \in [a] \).
+- Therefore \( [a] \subseteq [b] \) and \( [b] \subseteq [a] \), hence \( [a]=[b] \).
+~~~
+
+!id: TkbqO1mjld
+!front: Show that if \( [a]=[b] \), then \( a \sim b \).
+!back:
+Let:
+
+- \( \sim \) be an equivalence relation on \( A \)
+- \( a,b \in A \)
+- \( [a]=[b] \)
+
+To prove: \( a \sim b \).
+
+- Reflexivity gives \( a \sim a \), so \( a \in [a] \).
+- Since \( [a]=[b] \), this implies \( a \in [b] \).
+- By definition of \( [b] \), \( a \in [b] \) means \( a \sim b \).
+~~~
+
+!id: 9qkLjeab9I
+!front: For an equivalence relation \( \sim \) on \( A \), what are the equivalent conditions relating \( a \sim b \), class membership, and equality of classes?
+!back:
+For \( a,b \in A \), the following are equivalent:
+
+- \( a \sim b \)
+- \( a \in [b] \)
+- \( b \in [a] \)
+- \( [a]=[b] \)
+
+So two elements are equivalent exactly when they name the same equivalence class.
+~~~
+
+!id: qevmC1kB05
+!front: Show that two equivalence classes are either disjoint or equal.
+!back:
+Let:
+
+- \( \sim \) be an equivalence relation on \( A \)
+- \( [a] \) and \( [b] \) be equivalence classes
+
+To prove: if \( [a] \cap [b] \neq \varnothing \), then \( [a]=[b] \).
+
+- Choose \( x \in [a] \cap [b] \).
+- Then \( x \sim a \) and \( x \sim b \).
+- Symmetry gives \( a \sim x \), and transitivity with \( x \sim b \) gives \( a \sim b \).
+- Since \( a \sim b \), the equivalence classes are equal: \( [a]=[b] \).
+
+Therefore any two equivalence classes are either disjoint or equal.
+~~~
+
+!id: tZuhFh5cWd
+!front: Explain why the equivalence classes of an equivalence relation on \( A \) form a partition of \( A \).
+!back:
+They satisfy the three requirements for a partition:
+
+- Every class is nonempty, because \( a \in [a] \).
+- Every element of \( A \) lies in some class, because \( a \in [a] \).
+- Any two classes are either disjoint or equal.
+
+Thus the equivalence classes split \( A \) into nonoverlapping nonempty blocks whose union is \( A \).
+~~~
+
+!id: GHbJbfYwK1
+!front: Given a partition \( \mathcal{P} \) of a set \( A \), define the equivalence relation induced by \( \mathcal{P} \).
+!back:
+For \( a,b \in A \), define
+\[ a \sim b \quad\Longleftrightarrow\quad \text{\( a \) and \( b \) lie in the same block of \( \mathcal{P} \)}. \]
+This is an equivalence relation, and its equivalence classes are exactly the blocks of the partition.
+~~~
+
+!id: cmJHJm7s3g
+!front: Compare an equivalence relation on \( A \) and a partition of \( A \).
+!back:
+- An equivalence relation tells when two elements of \( A \) should be treated as equivalent.
+- A partition lists the resulting blocks of mutually equivalent elements.
+
+These determine each other: an equivalence relation gives its equivalence classes, and a partition gives the relation "belongs to the same block."
+~~~
+
+!id: 8GU0aINk65
+!front: What is the canonical projection map associated with a quotient set \( A/{\sim} \)?
+!back:
+It is the function
+\[ \pi : A \to A/{\sim}, \qquad \pi(a) = [a]. \]
+It sends each element to its equivalence class.
+!extra: The map \( \pi \) is surjective because every element of \( A/{\sim} \) is some class \( [a] \).
+~~~
+
+!id: REfvvQ4DNO
+!front: Why is congruence modulo \( n \) an equivalence relation on \( \mathbb{Z} \), where \( n \in \mathbb{N} \)?
+!back:
+Define \( a \sim b \) by \( n \mid (a-b) \).
+
+- Reflexive: \( n \mid (a-a)=0 \).
+- Symmetric: if \( n \mid (a-b) \), then \( n \mid -(a-b)=b-a \).
+- Transitive: if \( n \mid (a-b) \) and \( n \mid (b-c) \), then \( n \mid (a-b)+(b-c)=a-c \).
+
+So congruence modulo \( n \) is an equivalence relation.
+~~~
+
+!id: 9A7espjp31
+!front: Describe the equivalence class of \( a \in \mathbb{Z} \) modulo \( n \), where \( n \in \mathbb{N} \).
+!back:
+The class of \( a \) modulo \( n \) is
+\[ [a] = \{k \in \mathbb{Z} : k \equiv a \pmod n\} = \{a+mn : m \in \mathbb{Z}\}. \]
+It consists of all integers with the same remainder as \( a \) upon division by \( n \).
+~~~
+
+!id: PdZoLXBiOB
+!front: For congruence modulo \( 3 \) on \( \mathbb{Z} \), what are the equivalence classes?
+!back:
+There are three equivalence classes:
+\[ [0] = \{\ldots,-6,-3,0,3,6,\ldots\}, \]
+\[ [1] = \{\ldots,-5,-2,1,4,7,\ldots\}, \]
+\[ [2] = \{\ldots,-4,-1,2,5,8,\ldots\}. \]
+They are the residue classes determined by remainders \( 0,1,2 \).
+~~~
+
+!id: ejgcr8bVEX
+!front: Does "has the same parity as" define an equivalence relation on \( \mathbb{Z} \)? If so, what are the equivalence classes?
+!back:
+Yes. Having the same parity is reflexive, symmetric, and transitive.
+
+The equivalence classes are:
+
+- the even integers
+- the odd integers
+
+Equivalently, these are the congruence classes modulo \( 2 \).
+~~~
+
+!id: AAh6FLA0Cz
+!front: On \( \mathbb{R} \), does \( x \sim y \iff x-y \in \mathbb{Z} \) define an equivalence relation? If so, describe \( [x] \).
+!back:
+Yes.
+
+- Reflexive: \( x-x=0 \in \mathbb{Z} \).
+- Symmetric: if \( x-y \in \mathbb{Z} \), then \( y-x=-(x-y) \in \mathbb{Z} \).
+- Transitive: if \( x-y \in \mathbb{Z} \) and \( y-z \in \mathbb{Z} \), then \( x-z=(x-y)+(y-z) \in \mathbb{Z} \).
+
+The class of \( x \) is
+\[ [x]=x+\mathbb{Z}=\{x+n : n \in \mathbb{Z}\}. \]
+~~~
+
+!id: 4tJzJQgac3
+!front: Let \( f,g : D \to \mathbb{R} \), and fix \( a \in D \). Does \( f \sim g \iff f(a)=g(a) \) define an equivalence relation on the set of functions \( D \to \mathbb{R} \)?
+!back:
+Yes. Equality of the value at \( a \) is reflexive, symmetric, and transitive because equality in \( \mathbb{R} \) has those properties.
+
+The equivalence class of \( f \) is the set of all functions \( g : D \to \mathbb{R} \) such that \( g(a)=f(a) \).
+~~~
+
+!id: CVqVKd0gz5
+!front: Let \( U \) be a finite set. Does \( S \sim T \iff |S|=|T| \) define an equivalence relation on \( \mathcal{P}(U) \)?
+!back:
+Yes. Equality of cardinalities is reflexive, symmetric, and transitive.
+
+The equivalence class of \( S \subseteq U \) is
+\[ [S]=\{T \subseteq U : |T|=|S|\}. \]
+So subsets are grouped by size.
+~~~
+
+!id: N3EvenK5nd
+!front: Let \( f : A \to B \). Why does \( x \sim y \iff f(x)=f(y) \) define an equivalence relation on \( A \)?
+!back:
+The relation inherits reflexivity, symmetry, and transitivity from equality in \( B \):
+
+- \( f(x)=f(x) \), so \( x \sim x \).
+- If \( f(x)=f(y) \), then \( f(y)=f(x) \), so \( y \sim x \).
+- If \( f(x)=f(y) \) and \( f(y)=f(z) \), then \( f(x)=f(z) \), so \( x \sim z \).
+
+Its equivalence classes are the fibers \( f^{-1}(\{b\}) \), restricted to values \( b \) that are actually hit by \( f \).
+~~~
+
+!id: bgGGFihXBL
+!front: Does the usual order relation \( x \le y \) define an equivalence relation on \( \mathbb{R} \)? If not, what fails?
+!back:
+No. The relation \( x \le y \) is reflexive and transitive, but not symmetric.
+
+For example, \( 1 \le 2 \), but \( 2 \le 1 \) is false.
+~~~
+
+!id: lgnqcW8tEA
+!front: Does the strict order relation \( x < y \) define an equivalence relation on \( \mathbb{R} \)? If not, what fails?
+!back:
+No. It fails reflexivity because \( x < x \) is false for every \( x \in \mathbb{R} \).
+
+It is also not symmetric: \( 1 < 2 \), but \( 2 < 1 \) is false.
+~~~
+
+!id: 5Npb6QvFKB
+!front: Does \( x \sim y \iff x^2=y^2 \) define an equivalence relation on \( \mathbb{R} \)? If so, describe \( [a] \).
+!back:
+Yes. Equality of squares is reflexive, symmetric, and transitive because equality in \( \mathbb{R} \) has those properties.
+
+The equivalence class of \( a \) is
+\[ [a]=\{a,-a\}, \]
+with the special case \( [0]=\{0\} \).
+~~~
+
+!id: 3NKeqgS76c
+!front: Does \( x \sim y \iff |x-y|<1 \) define an equivalence relation on \( \mathbb{R} \)? If not, what fails?
+!back:
+No. It is reflexive and symmetric, but not transitive.
+
+For example,
+\[ 0 \sim 0.6 \quad\text{and}\quad 0.6 \sim 1.2, \]
+because both distances are less than \( 1 \). But \( 0 \not\sim 1.2 \), since \( |0-1.2|=1.2 \).
+~~~
+
+!id: aPVRPGOcEl
+!front: Does \( x \sim y \iff |x-y| \le 1 \) define an equivalence relation on \( \mathbb{R} \)? If not, what fails?
+!back:
+No. It is reflexive and symmetric, but not transitive.
+
+For example,
+\[ 0 \sim 1 \quad\text{and}\quad 1 \sim 2, \]
+but \( 0 \not\sim 2 \), since \( |0-2|=2>1 \).
+~~~
+
+!id: 3j6en70Co9
+!front: Does \( x \sim y \iff x-y \in \mathbb{Q} \) define an equivalence relation on \( \mathbb{R} \)? If so, describe \( [x] \).
+!back:
+Yes.
+
+- Reflexive: \( x-x=0 \in \mathbb{Q} \).
+- Symmetric: if \( x-y \in \mathbb{Q} \), then \( y-x=-(x-y) \in \mathbb{Q} \).
+- Transitive: if \( x-y \in \mathbb{Q} \) and \( y-z \in \mathbb{Q} \), then \( x-z=(x-y)+(y-z) \in \mathbb{Q} \).
+
+The class of \( x \) is
+\[ [x]=x+\mathbb{Q}=\{x+q : q \in \mathbb{Q}\}. \]
+~~~
+
+!id: mPg4JaZV9j
+!front: On \( \mathbb{R} \setminus \{0\} \), does \( x \sim y \iff x/y>0 \) define an equivalence relation? If so, what are the classes?
+!back:
+Yes. The relation says \( x \) and \( y \) have the same sign.
+
+The equivalence classes are:
+
+- \( (0,\infty) \)
+- \( (-\infty,0) \)
+
+The domain excludes \( 0 \), so every ratio \( x/y \) is defined.
+~~~
+
+!id: AH75siohOj
+!front: Does \( x \sim y \iff xy>0 \) define an equivalence relation on \( \mathbb{R} \)? If not, what fails?
+!back:
+No. It fails reflexivity at \( 0 \), since \( 0 \cdot 0 = 0 \), not \( >0 \).
+
+On \( \mathbb{R} \setminus \{0\} \), the same condition does define equivalence by having the same sign.
+~~~
+
+!id: wIw3DI5uLa
+!front: On \( \{1,2,3\} \), does the relation \( R=\{(1,1),(2,2),(3,3),(1,2),(2,1)\} \) define an equivalence relation? If so, identify its classes.
+!back:
+Yes. It is reflexive because all \( (a,a) \) pairs are present, symmetric because \( (1,2) \) and \( (2,1) \) are both present, and transitive because the only nontrivial related elements are \( 1 \) and \( 2 \), which stay within the same block.
+
+The equivalence classes are
+
+\[ \{1,2\} \quad\text{and}\quad \{3\}. \]
+~~~
+
+!id: JSDm2Iy9DG
+!front: On \( \{1,2,3\} \), does the relation \( R=\{(1,1),(2,2),(3,3),(1,2),(2,1),(2,3),(3,2)\} \) define an equivalence relation? If not, what fails?
+!back:
+No. It is reflexive and symmetric, but not transitive.
+
+Since \( 1R2 \) and \( 2R3 \), transitivity would require \( 1R3 \). But \( (1,3) \notin R \).
+~~~
+
+!id: cMWcKMVOFd
+!front: How can you recognize an equivalence relation from its directed graph on a finite set?
+!back:
+The graph must split into disjoint complete directed clusters, one cluster for each equivalence class:
+
+- every vertex has a loop
+- within a cluster, every ordered pair of vertices is connected in both directions
+- there are no arrows between different clusters
+
+Those conditions encode reflexivity, symmetry, and transitivity.
+~~~

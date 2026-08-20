@@ -1,0 +1,172 @@
+!deck: Math::Calculus
+!type: Basic Math
+!tags: Math Calculus Integration
+
+!id: w2dflZHa13
+!front: What is the Cauchy principal value of \( \int_{-\infty}^\infty f(x)\, dx \)?
+!back:
+The Cauchy principal value uses one symmetric limiting interval:
+\[ \operatorname{p.v.}\int_{-\infty}^{\infty} f(x)\,dx
+    = \lim_{R\to\infty}\int_{-R}^{R} f(x)\,dx, \]
+provided this finite limit exists.
+
+This is weaker than ordinary improper convergence, which requires the two one-sided integrals to converge separately.
+!extra: ![Cauchy principal value: a symmetric window [-R,R] growing outward on both ends at once, as R → ∞](img/pv_symmetric_limit.svg)
+~~~
+
+!id: yOKolhbLXX
+!front: What is the Cauchy principal value of \( \int_a^b f(x)\, dx \) when \( f \) has an interior singularity at \( c \in (a,b) \)?
+!back:
+Remove equal neighborhoods on both sides of the singularity and take one joint limit:
+\[ \operatorname{p.v.}\int_a^b f(x)\,dx
+    = \lim_{\varepsilon\to0^+}
+    \left(
+        \int_a^{c-\varepsilon} f(x)\,dx
+        +
+        \int_{c+\varepsilon}^{b} f(x)\,dx
+    \right), \]
+provided this finite limit exists.
+
+Ordinary improper convergence instead requires the two one-sided integrals at \( c \) to converge separately.
+!extra: ![Cauchy principal value with an interior singularity at c: a symmetric ε-neighborhood of c removed from both sides at once, as ε → 0⁺](img/pv_interior_singularity.svg)
+~~~
+
+!id: ul3k9h3rUd
+!front: Why can the Cauchy principal value of \( \int_{-\infty}^\infty f(x)\, dx \) exist even when the improper integral itself diverges?
+!back:
+The ordinary improper integral first assigns values to the two one-sided tails. If those tails diverge with opposite signs, their sum is not a legitimate finite number.
+
+The principal value takes a single symmetric limit instead. This can make equal-and-opposite contributions cancel at each finite stage, producing a finite limit even when neither tail converges on its own.
+~~~
+
+!id: r8qpVfP7i8
+!front: True or false: If \( \int_{-\infty}^\infty f(x)\, dx \) converges as an improper integral, then its Cauchy principal value converges to the same value.
+!back:
+True. Ordinary improper convergence gives separate finite limits for
+\[ \int_{-\infty}^{0} f(x)\,dx
+    \quad\text{and}\quad
+    \int_0^\infty f(x)\,dx. \]
+Therefore
+\[ \int_{-R}^{R}f(x)\,dx
+    = \int_{-R}^{0}f(x)\,dx + \int_0^{R}f(x)\,dx \]
+converges to the same sum as \( R\to\infty \).
+~~~
+
+!id: WRcHLTpwL7
+!front: True or false: If the Cauchy principal value of \( \int_{-\infty}^\infty f(x)\, dx \) exists, then \( \int_{-\infty}^\infty f(x)\, dx \) converges as an improper integral.
+!back:
+False. The principal value only controls the symmetric limit
+\[ \lim_{R\to\infty}\int_{-R}^{R} f(x)\,dx. \]
+That limit may exist because the two tails cancel each other, even though the one-sided improper integrals fail to converge separately.
+!extra: For a concrete instance, see \( \text{p.v.} \int_{-\infty}^\infty x\, dx = 0 \) despite \( \int_{-\infty}^\infty x\, dx \) diverging.
+~~~
+
+!id: XG8RFgkj4i
+!front: Show that \( \text{p.v.} \int_{-\infty}^\infty x\, dx = 0 \), even though \( \int_{-\infty}^\infty x\, dx \) diverges.
+!back:
+For the principal value,
+\[
+\begin{align*}
+    \operatorname{p.v.}\int_{-\infty}^{\infty}x\,dx
+        &= \lim_{R\to\infty}\int_{-R}^{R}x\,dx \\
+        &= \lim_{R\to\infty}\left[\frac{x^2}{2}\right]_{-R}^{R} \\
+        &= 0.
+\end{align*}
+\]
+
+But the ordinary improper integral requires the two tails separately:
+\[
+\begin{align*}
+    \int_{-\infty}^{0}x\,dx &= \lim_{R\to-\infty}\int_R^0 x\,dx = -\infty, \\
+    \int_0^\infty x\,dx &= \lim_{R\to\infty}\int_0^R x\,dx = \infty.
+\end{align*}
+\]
+Since those one-sided integrals do not converge as finite numbers, the ordinary improper integral diverges.
+!extra: ![p.v. int x dx = 0: the positive lobe on [0,R] and negative lobe on [-R,0] have equal and opposite area R^2/2 for every R, canceling exactly as R → ∞](img/pv_x_cancellation.svg)
+~~~
+
+!id: EqMOLLHEGt
+!front: Does \( \text{p.v.}\int_{-\infty}^\infty x^2\, dx \) converge?
+!back:
+No. For every \( R>0 \),
+\[ \int_{-R}^{R}x^2\,dx = 2\int_0^R x^2\,dx = \frac{2R^3}{3}. \]
+This tends to \( \infty \) as \( R\to\infty \), so the principal value diverges.
+
+The reason cancellation fails is that \( x^2 \) is even and nonnegative: the two halves add instead of canceling.
+!extra: ![Even function f(x) = x^2/6: both lobes on [-R,R] lie above the axis with no cancellation, so the area grows without bound as R → ∞](img/pv_even_no_cancellation.svg)
+~~~
+
+!id: I3WysbYaIK
+!front: What is \( \text{p.v.}\int_{-\infty}^\infty f(x)\, dx \) when \( f \) is odd?
+!back:
+If \( f \) is odd and Riemann integrable on every finite interval \( [-R,R] \), then
+\[ \int_{-R}^{R}f(x)\,dx = 0 \]
+for every \( R>0 \). Therefore
+\[ \operatorname{p.v.}\int_{-\infty}^{\infty} f(x)\,dx = 0. \]
+
+No decay condition at infinity is needed for the principal value; exact symmetry already makes every truncated integral equal to \( 0 \).
+!extra:
+Contrast with the ordinary improper integral \( \int_{-\infty}^\infty f(x)\, dx \), which can still diverge for odd \( f \) (e.g. \( f(x) = x \)) — oddness guarantees the p.v. but says nothing about ordinary convergence.
+
+![Odd function f(x) = x/(1+x^2): the positive and negative lobes on [-R,R] are point-symmetric about the origin, canceling exactly for every R](img/pv_odd_function.svg)
+~~~
+
+!id: xuxbU8xted
+!front: Does \( \text{p.v.}\int_{-\infty}^\infty f(x)\, dx \) existing require \( f \) to be odd?
+!back:
+No. Decompose \( f \) into its even and odd parts:
+\[
+    f_e(x)=\frac{f(x)+f(-x)}{2},
+    \qquad
+    f_o(x)=\frac{f(x)-f(-x)}{2}.
+\]
+The odd part contributes nothing on every symmetric interval:
+\[ \int_{-R}^{R} f_o(x)\,dx = 0. \]
+Thus
+\[ \int_{-R}^{R} f(x)\,dx = 2\int_0^R f_e(x)\,dx. \]
+So the principal value exists exactly when the one-sided improper integral of the even part, \( \int_0^\infty f_e(x)\,dx \), exists as a finite limit.
+~~~
+
+!id: 330b6M2zjp
+!front: Compare how oddness and evenness of \( f \) affect whether \( \text{p.v.}\int_{-\infty}^\infty f(x)\, dx \) converges.
+!back:
+- If \( f \) is odd and integrable on each \( [-R,R] \), then \( \int_{-R}^{R}f=0 \) for every \( R \), so the principal value exists and equals \( 0 \) regardless of growth at infinity.
+- If \( f \) is even, then \( \int_{-R}^{R}f = 2\int_0^R f \), so the principal value exists exactly when the ordinary one-sided improper integral \( \int_0^\infty f \) exists.
+
+Oddness creates exact symmetric cancellation. Evenness removes that cancellation.
+~~~
+
+!id: z4Jta3U6k4
+!front: What is \( \text{p.v.}\int_{-1}^1 \frac{dx}{x} \)?
+!back:
+The principal value is \( 0 \). Indeed,
+\[
+\begin{align*}
+    \operatorname{p.v.}\int_{-1}^{1}\frac{dx}{x}
+        &= \lim_{\varepsilon\to0^+}
+            \left(
+                \int_{-1}^{-\varepsilon}\frac{dx}{x}
+                +
+                \int_{\varepsilon}^{1}\frac{dx}{x}
+            \right) \\
+        &= \lim_{\varepsilon\to0^+}\big(\ln\varepsilon-\ln\varepsilon\big) \\
+        &= 0.
+\end{align*}
+\]
+The ordinary improper integral still diverges, because \( \int_0^1 dx/x \) diverges one-sidedly.
+~~~
+
+!id: PZphtp9MvJ
+!front: Does \( \text{p.v.}\int_{-1}^1 \frac{dx}{x^2} \) converge?
+!back:
+No. Removing a symmetric \( \varepsilon \)-neighborhood of \( 0 \) gives
+\[
+\begin{align*}
+    \int_{-1}^{-\varepsilon}\frac{dx}{x^2}
+        + \int_{\varepsilon}^{1}\frac{dx}{x^2}
+        &= 2\int_{\varepsilon}^{1}\frac{dx}{x^2} \\
+        &= 2\left(\frac{1}{\varepsilon}-1\right).
+\end{align*}
+\]
+This tends to \( \infty \) as \( \varepsilon\to0^+ \), so the principal value diverges. Since \( 1/x^2 \) is even and positive, the two sides add instead of canceling.
+~~~

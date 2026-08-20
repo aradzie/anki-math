@@ -1,0 +1,180 @@
+!deck: Math::Linear Algebra
+!type: Basic Math
+!tags: Math Linear-Algebra
+
+!id: QReXiBtiO3
+!front: What does it mean for a map \( T : V \to W \) between vector spaces to be linear?
+!back:
+A map \( T \) is linear if
+
+- for all \( u,v \in V \) and
+- all scalars \( c \)
+
+it preserves
+
+- vector addition \( T(u+v) = T(u) + T(v) \)
+- scalar multiplication \( T(cv) = cT(v) \)
+!related:
+Equivalently, a linear map preserves linear combinations:
+
+\[ T(au+bv)=aT(u)+bT(v). \]
+~~~
+
+!id: F0VCOiUO2u
+!front: Give examples of linear maps \( T:\mathbb R^2 \to \mathbb R^2 \).
+!back:
+Any map of the form
+
+\[ T(\mathbf u)=A\mathbf u \]
+
+for a fixed \( 2 \times 2 \) matrix \( A \) is linear.
+
+Examples include
+
+- rotations about the origin,
+- reflections through lines through the origin,
+- scalings about the origin,
+- projections onto coordinate axes,
+- and shears fixing the origin.
+!extra: The origin condition matters: translating after one of these operations usually gives an affine map that is not linear.
+~~~
+
+!id: Zg75wgwaRy
+!front: In a linear map \( T : V \to W \), what kind of objects must \( V \) and \( W \) be, and why does that matter?
+!back:
+\( V \) and \( W \) must be vector spaces over the same field.
+
+This is required because the defining properties of linearity,
+
+\[ T(u+v) = T(u) + T(v) \quad \text{and} \quad T(cv) = cT(v), \]
+
+presuppose that both a vector addition and a scalar multiplication (by the same field of scalars) are already defined on the domain and on the codomain. Without that structure on both sides, "linearity" has no meaning.
+!extra: Contrast with a map in the general sense, which only needs a domain and a codomain as sets, with no algebraic structure assumed.
+~~~
+
+!id: sWaGw4wrdO
+!front: Why must every linear map \( T : V \to W \) between vector spaces satisfy \( T(0)=0 \)?
+!back:
+Because linearity gives
+
+\[ T(0) = T(0+0) = T(0) + T(0). \]
+
+Subtracting \( T(0) \) from both sides gives
+
+\[ T(0)=0. \]
+
+So any map that does not send the zero vector to the zero vector cannot be linear.
+!extra: This is often the fastest way to see that \( f(x)=mx+b \) is not a linear map when \( b \ne 0 \), even though its graph is a straight line.
+~~~
+
+!id: 1ZBC1TcsM8
+!front: What is an affine map \( T : V \to W \) between vector spaces, and how does it relate to a linear map?
+!back:
+An **affine map** has the form
+
+\[ T(v) = L(v) + b \]
+
+where \( L : V \to W \) is linear and \( b \in W \) is a fixed vector.
+
+A **linear map** is the special case \( b = 0 \). If \( b \ne 0 \), then \( T(0) = L(0) + b = b \ne 0 \), so \( T \) cannot be linear.
+!related: The geometric form \( \mathbf x = A\mathbf u + \mathbf b \) on \( \mathbb R^2 \) — translation, scaling, rotation, shearing — and questions of orientation and invertibility, are covered below.
+~~~
+
+!id: 7B8QaWjeDd
+!front: Why does an affine map \( T(v) = L(v) + b \) preserve affine combinations \( c_1v_1 + c_2v_2 \) with \( c_1+c_2=1 \), even though it does not preserve general linear combinations?
+!back:
+Using linearity of \( L \) and \( c_1+c_2=1 \) to split \( b \):
+
+\[
+\begin{align*}
+    T(c_1v_1+c_2v_2)
+        &= L(c_1v_1+c_2v_2) + b \\
+        &= c_1L(v_1) + c_2L(v_2) + (c_1+c_2)b \\
+        &= \bigl(c_1L(v_1)+c_1b\bigr) + \bigl(c_2L(v_2)+c_2b\bigr) \\
+        &= c_1T(v_1) + c_2T(v_2).
+\end{align*}
+\]
+!extra: The condition \( c_1+c_2=1 \) is exactly what lets the single translation \( b \) split into \( c_1 b + c_2 b \); for a general combination with \( c_1+c_2 \ne 1 \), this step fails and the identity breaks.
+~~~
+
+!id: X3X3dpHOAD
+!front: Compare a linear map and an affine map.
+!back:
+- A **linear map** is a special kind of function between vector spaces that preserves vector addition and scalar multiplication.
+- An **affine map** is a linear map followed by a translation: \( T(v)=L(v)+b \) for fixed \( b \); it reduces to a linear map exactly when \( b=0 \).
+~~~
+
+!tags: Math Linear-Algebra Matrix
+
+!id: QPmDQSKkX2
+!front: What is the mathematical definition of an affine transformation \( T:\mathbb R^2 \to \mathbb R^2 \)?
+!back:
+An affine transformation has the form
+
+\[ T(\mathbf u) = A\mathbf u + \mathbf b, \]
+
+where \( A \) is a \( 2 \times 2 \) matrix and \( \mathbf b \in \mathbb R^2 \) is fixed.
+!extra: Equivalently, an **affine transformation** is a **linear map** followed by a **translation**.
+~~~
+
+!id: 1rJbaBYuN0
+!front: What geometric properties do affine transformations preserve, and what do they not necessarily preserve?
+!back:
+Affine transformations preserve affine structure:
+
+- straight lines are mapped to straight lines or points
+- parallel lines remain parallel, unless collapsed
+- ratios along a single line are preserved
+
+They do not necessarily preserve
+
+- distances
+- lengths
+- angles
+- areas
+!extra: If the linear part \( A \) is invertible, lines map to lines rather than collapsing to points.
+~~~
+
+!id: wfQGoyD7g2
+!front: Give examples of affine transformations \( T:\mathbb R^2 \to \mathbb R^2 \).
+!back:
+Any map of the form
+
+\[ T(\mathbf u)=A\mathbf u+\mathbf b \]
+
+for a fixed \( 2 \times 2 \) matrix \( A \) and fixed \( \mathbf b \in \mathbb R^2 \) is affine.
+
+Examples include
+
+- translations,
+- scalings,
+- rotations,
+- reflections,
+- projections, and
+- shears,
+
+possibly followed by a translation.
+!extra: A transformation with \( \mathbf b=0 \) is linear; a nonzero translation term usually makes it affine but not linear.
+~~~
+
+!id: gFOJGWRbbo
+!front: What does it mean for an affine transformation to preserve orientation?
+!back: Preserving orientation means that the transformation does not flip the space, maintaining the clockwise or counterclockwise arrangement of points.
+~~~
+
+!id: CCVxs0gaah
+!front: When does an affine transformation preserve orientation?
+!back:
+An affine transformation \( T \)
+
+- preserves orientation if \( \det(A) > 0 \)
+- does not preserve orientation if the determinant is negative \( \det(A) < 0 \)
+
+where \( A \) is the matrix representing the linear part of \( T \).
+!extra: If \( \det(A) = 0 \), \( T \) is not invertible — it collapses \( \mathbb{R}^2 \) onto a lower-dimensional set — so orientation-preservation does not apply.
+~~~
+
+!id: TiHbboZTsH
+!front: When is an affine transformation invertible?
+!back: An affine transformation \( T \) is invertible if and only if the matrix \( A \) representing the linear part of \( T \) is invertible, that is \( \det(A) \ne 0 \).
+~~~

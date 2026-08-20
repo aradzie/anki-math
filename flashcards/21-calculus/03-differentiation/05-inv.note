@@ -1,0 +1,218 @@
+!deck: Math::Calculus
+!type: Basic Math
+!tags: Math Calculus Differentiation
+
+!id: cbBs6Wmseb
+!front: Under what conditions does the inverse derivative formula apply at a point?
+!back:
+Let \( f \) be one-to-one and continuous on an interval \( I \).
+
+Let \( a \) be an interior point of \( I \).
+
+If:
+
+- \( f \) is differentiable at \( a \)
+- \( f'(a) \ne 0 \)
+
+then \( f^{-1} \) is differentiable at \( b=f(a) \), and
+\[
+    (f^{-1})'(b) = \frac{1}{f'(a)}.
+\]
+~~~
+
+!id: ZqkNQTeQm0
+!front: State the derivative formula for an inverse function using \( y=f(x) \).
+!back:
+If \( y=f(x) \), \( f \) is invertible, and \( f'(x) \ne 0 \), then
+\[
+    (f^{-1})'(y) = \frac{1}{f'(x)}.
+\]
+
+Equivalently,
+\[
+    \frac{dx}{dy} = \frac{1}{dy/dx}.
+\]
+!extra: The derivative of the inverse is evaluated at \( y=f(x) \), not at \( x \).
+~~~
+
+!id: 5n9CZz2uRC
+!front: How are the slopes of a differentiable function and its inverse related geometrically?
+!back:
+The graph of \( f^{-1} \) is the reflection of the graph of \( f \) across the line \( y=x \). Under this reflection, a tangent line of slope \( m \ne 0 \) becomes a tangent line of slope \( 1/m \).
+
+So if \( f'(a) \ne 0 \), then
+\[
+    (f^{-1})'(f(a)) = \frac{1}{f'(a)}.
+\]
+
+![Graph of f reflected across y=x to give the graph of f inverse, with tangent lines of reciprocal slope at the corresponding points (a,f(a)) and (f(a),a)](img/reflection_tangent_slopes.svg)
+~~~
+
+!id: meJCCut234
+!front: Prove that \( \frac{dx}{dy} \cdot \frac{dy}{dx} = 1 \)
+!back:
+\[
+\begin{align*}
+    y &= f(x) \\
+    x &= f^{-1}(y) \\
+    f^{-1}(f(x)) &= x
+\end{align*}
+\]
+
+Differentiate both sides with respect to \( x \) using the chain rule:
+
+\[
+    \underbrace{ (f^{-1})'(f(x)) }_{dx/dy}
+    \cdot
+    \underbrace{ f'(x) }_{dy/dx} = 1
+\]
+
+which is the same as
+
+\[ \frac{dx}{dy} \cdot \frac{dy}{dx} = 1 \]
+
+because
+
+\[ (f^{-1})'(f(x)) = (f^{-1})'(y) = \frac{dx}{dy} \]
+
+and
+
+\[ f'(x) = \frac{dy}{dx} \]
+!extra: This requires \( f'(x) \neq 0 \), so that \( f^{-1} \) is differentiable at \( y = f(x) \). If \( f'(x) = 0 \), \( f^{-1} \) has a vertical tangent at \( y \) and \( dx/dy \) does not exist.
+~~~
+
+!id: sJ5KgdRlOi
+!front: Derive \( \frac{d}{dx} \ln(x) \)
+!back:
+\[
+\begin{align*}
+    y &= \ln(x) \\
+    x &= e^y
+\end{align*}
+\]
+
+Differentiate both sides implicitly with respect to \( x \) using the chain rule:
+
+\[
+\begin{align*}
+    \frac{d}{dx}[x] &= \frac{d}{dx}[e^y] \\
+    1 &= e^y \cdot \frac{dy}{dx} \\
+    \frac{dy}{dx} &= \frac{1}{e^y}
+\end{align*}
+\]
+
+Express \( e^y \) in terms of \( x \):
+
+\[
+\begin{align*}
+    e^y &= e^{\ln x} \\
+    &= x
+\end{align*}
+\]
+
+Substitute back:
+
+\[ \frac{dy}{dx} = \frac{1}{x} \]
+~~~
+
+!id: Kf3vEla8oO
+!front: Derive \( \frac{d}{dx} \arcsin(x) \)
+!back:
+\[
+\begin{align*}
+    y &= \arcsin(x) \\
+    x &= \sin(y)
+\end{align*}
+\]
+
+Differentiate both sides implicitly with respect to \( x \) using the chain rule:
+
+\[
+\begin{align*}
+    \frac{d}{dx}[x] &= \frac{d}{dx}[\sin(y)] \\
+    1 &= \cos(y) \cdot \frac{dy}{dx} \\
+    \frac{dy}{dx} &= \frac{1}{\cos(y)}
+\end{align*}
+\]
+
+Express \( \cos(y) \) in terms of \( x \):
+
+\[
+\begin{align*}
+    \cos(y) &= \sqrt{1 - \sin^2(y)} \\
+    &= \sqrt{1 - x^2}
+\end{align*}
+\]
+
+Substitute back:
+
+\[ \frac{dy}{dx} = \frac{1}{\sqrt{1 - x^2}} \]
+~~~
+
+!id: ogApwlBBlO
+!front: Derive \( \frac{d}{dx} \arccos(x) \)
+!back:
+\[
+\begin{align*}
+    y &= \arccos(x) \\
+    x &= \cos(y)
+\end{align*}
+\]
+
+Differentiate both sides implicitly with respect to \( x \) using the chain rule:
+
+\[
+\begin{align*}
+    \frac{d}{dx}[x] &= \frac{d}{dx}[\cos(y)] \\
+    1 &= - \sin(y) \cdot \frac{dy}{dx} \\
+    \frac{dy}{dx} &= - \frac{1}{\sin(y)}
+\end{align*}
+\]
+
+Express \( \sin(y) \) in terms of \( x \):
+
+\[
+\begin{align*}
+    \sin(y) &= \sqrt{1 - \cos^2(y)} \\
+    &= \sqrt{1 - x^2}
+\end{align*}
+\]
+
+Substitute back:
+
+\[ \frac{dy}{dx} = - \frac{1}{\sqrt{1 - x^2}} \]
+~~~
+
+!id: WNb1c9mEwi
+!front: Derive \( \frac{d}{dx} \arctan(x) \)
+!back:
+\[
+\begin{align*}
+    y &= \arctan(x) \\
+    x &= \tan(y)
+\end{align*}
+\]
+
+Differentiate both sides implicitly with respect to \( x \) using the chain rule:
+
+\[
+\begin{align*}
+    \frac{d}{dx}[x] &= \frac{d}{dx}[\tan(y)] \\
+    1 &= \sec^2(y) \cdot \frac{dy}{dx} \\
+    \frac{dy}{dx} &= \frac{1}{\sec^2(y)}
+\end{align*}
+\]
+
+Express \( \sec^2(y) \) in terms of \( x \):
+
+\[
+\begin{align*}
+    \sec^2(y) &= 1 + \tan^2(y) \\
+    &= 1 + x^2
+\end{align*}
+\]
+
+Substitute back:
+
+\[ \frac{dy}{dx} = \frac{1}{1 + x^2} \]
+~~~

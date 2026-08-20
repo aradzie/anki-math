@@ -1,0 +1,115 @@
+!deck: Math::Calculus
+!type: Basic Math
+!tags: Math Calculus Differentiation
+
+!id: bnUOTAzT2h
+!front: What is the derivative of \( f \) at an interior point \( c \) of its domain?
+!back:
+The derivative of \( f \) at \( c \), if it exists, is the finite limit
+\[
+    f'(c) = \lim_{h \to 0} \frac{f(c+h)-f(c)}{h}.
+\]
+It is the limiting slope of secant lines through \( (c,f(c)) \) as the second point \( c+h \) approaches \( c \).
+!extra:
+Equivalently,
+\[
+    f'(c) = \lim_{x \to c} \frac{f(x)-f(c)}{x-c},
+\]
+where \( x \ne c \). At an endpoint of an interval, one uses the appropriate one-sided derivative.
+~~~
+
+!id: 74JvCJgss7
+!front: Under what condition does \( f'(c) \) exist in terms of one-sided derivatives?
+!back:
+For \( c \) an interior point of the domain, \( f'(c) \) exists exactly when the left-hand and right-hand limits
+\[
+    \lim_{h \to 0^-} \frac{f(c+h)-f(c)}{h}
+    \quad \text{and} \quad
+    \lim_{h \to 0^+} \frac{f(c+h)-f(c)}{h}
+\]
+both exist as finite numbers and are equal.
+!extra: A corner, cusp, vertical tangent, jump, or oscillation near \( c \) can make this condition fail in different ways.
+~~~
+
+!id: nw4OndZSuW
+!front: How is differentiability at \( c \) related to linear approximation near \( c \)?
+!back:
+\( f \) is differentiable at \( c \) with derivative \( f'(c) \) exactly when
+\[
+    f(c+h) = f(c) + f'(c)h + r(h)
+\]
+for an error term \( r(h) \) satisfying
+\[
+    \lim_{h \to 0} \frac{r(h)}{h} = 0.
+\]
+Thus the affine function \( f(c)+f'(c)(x-c) \) approximates \( f(x) \) to first order near \( c \).
+~~~
+
+!id: xqggw15jOh
+!front: Why does differentiability at \( c \) imply continuity at \( c \)?
+!back:
+For \( h \ne 0 \),
+\[
+    f(c+h)-f(c)
+    =
+    \frac{f(c+h)-f(c)}{h} \cdot h.
+\]
+If \( f'(c) \) exists, the first factor tends to \( f'(c) \) and \( h \to 0 \), so
+\[
+    \lim_{h \to 0} \bigl(f(c+h)-f(c)\bigr) = f'(c)\cdot 0 = 0.
+\]
+Therefore \( \lim_{h \to 0} f(c+h)=f(c) \), which is continuity at \( c \).
+!extra: The converse is false: \( f(x)=|x| \) is continuous at \( 0 \), but its left and right derivatives there are \( -1 \) and \( 1 \).
+~~~
+
+!id: fsU0X5W0dG
+!front: Construct a counterexample showing continuity at a point does not imply differentiability there.
+!back:
+\( f(x) = |x| \) at \( c = 0 \): it is continuous since \( \lim_{x \to 0} |x| = 0 = f(0) \). But
+\[ \lim_{h \to 0^-} \frac{|h|-0}{h} = -1, \qquad \lim_{h \to 0^+} \frac{|h|-0}{h} = 1, \]
+so the one-sided derivatives disagree and \( f'(0) \) does not exist.
+!extra: ![The graph of f(x) = |x|, meeting continuously at (0,0) with no jump or hole, but forming a sharp corner: the left arm has slope -1 and the right arm has slope +1, so the one-sided derivatives disagree](img/abs_value_corner.svg)
+~~~
+
+!id: zQMGhLZL1z
+!front: Derive the linearity rule for derivatives from the definition.
+!back:
+Let:
+
+- \( f \) and \( g \) be differentiable at \( c \)
+- \( a,b \in \mathbb{R} \)
+
+To prove: \( (af+bg)'(c)=af'(c)+bg'(c) \).
+
+- Start with the difference quotient:
+
+\[
+  \frac{(af+bg)(c+h)-(af+bg)(c)}{h}
+  =
+  a\frac{f(c+h)-f(c)}{h}
+  +
+  b\frac{g(c+h)-g(c)}{h}.
+\]
+
+- Taking \( h \to 0 \), the two difference quotients converge to \( f'(c) \) and \( g'(c) \).
+- Hence \( (af+bg)'(c)=af'(c)+bg'(c) \).
+~~~
+
+!id: fxjYDiXCwP
+!front: Why does the product rule have two terms?
+!back:
+Let \( f \) and \( g \) be differentiable at \( c \). Then
+\[
+\begin{align*}
+    f(c+h)g(c+h)-f(c)g(c)
+    &=
+    f(c+h)\bigl(g(c+h)-g(c)\bigr) \\
+    &\quad + g(c)\bigl(f(c+h)-f(c)\bigr).
+\end{align*}
+\]
+After dividing by \( h \) and taking \( h \to 0 \), differentiability of \( f \) implies \( f(c+h)\to f(c) \), so
+\[
+    (fg)'(c)=f(c)g'(c)+g(c)f'(c).
+\]
+!extra: The two terms correspond to the first-order change in \( g \) while \( f \) is held near \( f(c) \), and the first-order change in \( f \) while \( g \) is held at \( g(c) \).
+~~~

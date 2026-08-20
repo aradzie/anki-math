@@ -1,0 +1,336 @@
+!deck: Math::Calculus
+!type: Basic Math
+!tags: Math Calculus Sequence Series
+
+!id: zqsfDJERMh
+!front: Define an infinite real sequence formally.
+!back:
+An infinite real sequence is a function
+
+\[ a : I \to \mathbb{R}, \]
+
+where \( I=\{n\in\mathbb{Z}:n\ge n_0\} \) is the **index set** for some **starting index** \( n_0 \), usually \( \mathbb{N} \) or \( \mathbb{N}_0 \). Instead of writing \( a(n) \), we usually write \( a_n \), and denote the sequence by
+
+\[ a_1, a_2, a_3, \ldots, a_n, \ldots \]
+
+or
+
+\[ \{ a_n \}_{n=1}^{\infty}. \]
+
+Each \( a_n \) is a **term of the sequence**, and \( n \) is the **index variable**.
+!extra: An arbitrary infinite indexing set without a relevant order gives an indexed family, not necessarily a sequence in the usual calculus sense.
+~~~
+
+!id: zDEP0RDklZ
+!front: For a sequence viewed as a function, compare its index set, codomain, and range.
+!back:
+If a sequence is written as \( a:I\to S \), then:
+
+- \( I \) is the index set, or domain; it specifies which subscripts are allowed.
+- \( S \) is the codomain; it specifies the ambient set where the terms are allowed to live.
+- The range is \( a(I)=\{a_n:n\in I\} \); it is the set of values actually attained.
+
+The range forgets the order and repetition of the sequence terms.
+~~~
+
+!id: SNHL5SpK0l
+!front: Describe an explicit formula for a sequence.
+!back: An **explicit formula** defines the \( n \)-th term directly in terms of \( n \), \( a_n = f(n) \), so any term can be computed directly without reference to any other term.
+~~~
+
+!id: cCgeLmxnnd
+!front: Describe a recurrence relation for a sequence.
+!back:
+A **recurrence relation** is a rule that defines each term from previous terms in the sequence, \( a_n = f(a_{n-1}, a_{n-2}, \ldots) \).
+
+The rule alone does not pin down a unique sequence: it must be paired with enough initial terms (e.g. \( a_1 \), or \( a_1, a_2 \) for a rule depending on two prior terms) to determine every subsequent term.
+~~~
+
+!id: 3zXOAOFJY3
+!front: Define the limit of a sequence.
+!back:
+A sequence \( \{ a_n \} \) converges to a real number \( L \) if for every \( \epsilon > 0 \), there exists an integer \( N \) such that
+
+\[ n \ge N \implies |a_n - L| < \epsilon. \]
+
+The number \( L \) is the limit of the sequence, and we write
+
+\[ \lim_{n \to \infty} a_n = L \text{ or } a_n \to L. \]
+
+If a sequence does not converge to a finite real number, it is divergent.
+~~~
+
+!id: 1ul3GRf0M6
+!front: Why can a real sequence have at most one finite limit?
+!back:
+Suppose \( a_n \to L \) and \( a_n \to M \), with \( L \ne M \). Choose \( \epsilon = |L-M|/3 \). For all sufficiently large \( n \),
+\[
+    |a_n-L| < \epsilon
+    \qquad\text{and}\qquad
+    |a_n-M| < \epsilon.
+\]
+Then
+\[
+    |L-M| \le |L-a_n| + |a_n-M| < 2|L-M|/3,
+\]
+a contradiction. Hence \( L=M \).
+~~~
+
+!id: C4fgy5cZM0
+!front: Why do finitely many initial terms not affect whether a sequence converges?
+!back: Convergence only requires the estimate \( |a_n-L|<\epsilon \) for all sufficiently large \( n \). If the sequence has the desired behavior after some index \( N \), then changing terms before \( N \) cannot affect the existence or value of the limit.
+~~~
+
+!id: LWshe9LPze
+!front: What does it mean for a sequence to diverge to \( +\infty \) or to \( -\infty \)?
+!back:
+A sequence \( \{a_n\} \) diverges to \( +\infty \) if for every real number \( M \), there exists an integer \( N \) such that \( a_n > M \) for all \( n \ge N \).
+
+It diverges to \( -\infty \) if for every real number \( M \), there exists an integer \( N \) such that \( a_n < M \) for all \( n \ge N \).
+!extra: These are not finite limits in \( \mathbb{R} \). They describe a particular kind of divergence.
+~~~
+
+!id: h1X2K4kL2I
+!front: Compare finite convergence, divergence to infinity, and oscillatory divergence for real sequences.
+!back:
+- Finite convergence means \( a_n \to L \) for some real number \( L \).
+- Divergence to \( +\infty \) or \( -\infty \) means the terms eventually exceed every upper bound or fall below every lower bound.
+- Oscillatory divergence means the sequence fails to approach a finite value or either infinity, often because different subsequences behave differently.
+!extra: For example, \( a_n=(-1)^n \) is bounded but oscillatory divergent.
+~~~
+
+!id: sNnda3SWh9
+!front: Under what conditions do the algebraic limit laws hold for real sequences?
+!back:
+If \( a_n \to A \) and \( b_n \to B \), then:
+
+- \( \alpha a_n+\beta b_n \to \alpha A+\beta B \) for constants \( \alpha,\beta\in\mathbb{R} \)
+- \( a_n b_n \to AB \)
+- \( \dfrac{a_n}{b_n} \to \dfrac{A}{B} \), provided \( B\ne 0 \) and \( b_n\ne 0 \) for all sufficiently large \( n \)
+~~~
+
+!id: WicjJDU95F
+!front: State the squeeze theorem for sequences.
+!back:
+Consider sequences \( \{a_n\} \), \( \{b_n\} \), and \( \{c_n\} \), and suppose:
+
+- there exists an integer \( N \) such that \( a_n \le b_n \le c_n \) for all \( n \ge N \)
+- there exists a real number \( L \) such that \( \lim_{n \to \infty} a_n = L = \lim_{n \to \infty} c_n \)
+
+then \( \{b_n\} \) converges and \( \lim_{n \to \infty} b_n = L \).
+~~~
+
+!id: GXpNFENZ6u
+!front: Define what it means for a sequence to be bounded above.
+!back: A sequence \( \{a_n\} \) is **bounded above** if there exists a real number \( M \) such that \( a_n \le M \) for all positive integers \( n \).
+~~~
+
+!id: 8ubSf80Uen
+!front: Define what it means for a sequence to be bounded below.
+!back: A sequence \( \{a_n\} \) is **bounded below** if there exists a real number \( M \) such that \( M \le a_n \) for all positive integers \( n \).
+~~~
+
+!id: HicMqehyKO
+!front: Define what it means for a sequence to be bounded.
+!back: A sequence \( \{a_n\} \) is **bounded** if it is bounded above and bounded below: there exist real numbers \( m, M \) such that \( m \le a_n \le M \) for all positive integers \( n \). If no such bound exists, the sequence is **unbounded**.
+~~~
+
+!id: ELeqH5jzit
+!front: Is boundedness necessary, sufficient, or equivalent to convergence of a real sequence?
+!back:
+Boundedness is necessary but not sufficient.
+
+- If \( \{a_n\} \) converges, then it is bounded.
+- The converse is false: \( a_n=(-1)^n \) is bounded but does not converge.
+~~~
+
+!id: k497wp4a0C
+!front: Is \( a_n=\dfrac{1}{n} \) convergent or divergent? Is it bounded or unbounded?
+!back:
+It is convergent and bounded.
+
+It converges to \( 0 \). It is bounded because \( 0<a_n\le 1 \) for every positive integer \( n \).
+~~~
+
+!id: fliCAphEYB
+!front: Is \( a_n=(-1)^n \) convergent or divergent? Is it bounded or unbounded?
+!back:
+It is divergent but bounded.
+
+It is bounded because \( -1\le a_n\le 1 \) for every positive integer \( n \). It diverges because the even and odd subsequences have different limits.
+~~~
+
+!id: P7HCUPbjlb
+!front: Is \( a_n=n \) convergent or divergent? Is it bounded or unbounded?
+!back:
+It is divergent and unbounded.
+
+It is unbounded above because for every real number \( M \), some positive integer \( n \) satisfies \( n>M \). It diverges to \( +\infty \), so it has no finite real limit.
+~~~
+
+!id: ihY7TTUadl
+!front: Can a real sequence be both convergent and unbounded?
+!back: No. Every convergent real sequence is bounded, so "convergent and unbounded" is impossible for real sequences.
+~~~
+
+!id: JhvYQk1rBl
+!front: Why must every convergent real sequence be bounded?
+!back:
+If \( a_n \to L \), choose \( \epsilon=1 \). Then there exists \( N \) such that \( |a_n-L|<1 \) for all \( n\ge N \), so the tail is bounded by \( L-1<a_n<L+1 \).
+
+The finitely many initial terms \( a_1,\ldots,a_{N-1} \) are also bounded, so the whole sequence is bounded.
+~~~
+
+!id: FFT7eZa4DB
+!front: Define a subsequence of a sequence \( \{a_n\} \).
+!back:
+A subsequence is a sequence of the form \( \{a_{n_k}\}_{k=1}^{\infty} \), where
+
+- \( n_1<n_2<n_3<\cdots \)
+- each \( n_k \) is a positive integer
+
+The subsequence keeps terms from the original sequence in their original order, but may skip terms.
+~~~
+
+!id: Rts7cK1YtS
+!front: Why does every subsequence of a convergent sequence converge to the same limit?
+!back:
+If \( a_n\to L \), then for every \( \epsilon>0 \), there exists \( N \) such that \( |a_n-L|<\epsilon \) whenever \( n\ge N \).
+
+For a subsequence \( a_{n_k} \), the indices \( n_k \) eventually exceed \( N \), so \( |a_{n_k}-L|<\epsilon \) for all sufficiently large \( k \). Hence \( a_{n_k}\to L \).
+~~~
+
+!id: CyOw927k2v
+!front: How can subsequences prove that a real sequence diverges?
+!back:
+If two subsequences converge to different finite limits, then the original sequence cannot converge. Otherwise every subsequence would have to converge to the original sequence's limit.
+
+For example, \( a_n=(-1)^n \) has one subsequence constantly equal to \( 1 \) and another constantly equal to \( -1 \), so \( \{a_n\} \) diverges.
+~~~
+
+!id: o9AoI4z8Wr
+!front: State the Bolzano-Weierstrass theorem for real sequences.
+!back: Every bounded real sequence has a convergent subsequence.
+!extra: The original sequence need not converge. For example, \( (-1)^n \) is bounded and has convergent subsequences, but the full sequence diverges.
+~~~
+
+!id: LHb3sG7zVK
+!front: Define a Cauchy sequence.
+!back: A sequence \( \{a_n\} \) is a **Cauchy sequence** if for all \( \epsilon > 0 \), there exists an integer \( N \) such that \( |a_n - a_m| < \epsilon \) for all \( n, m \ge N \).
+!extra: ![Terms of a Cauchy sequence eventually lie within every epsilon-wide tail cluster, even though the limiting value is not specified](img/cauchy_sequence.svg)
+~~~
+
+!id: kaQVrrcwh0
+!front: Compare the Cauchy condition with convergence to a specified limit.
+!back:
+Convergence to \( L \) says that eventually every term is close to the specific number \( L \):
+\[ |a_n - L| < \epsilon. \]
+
+The Cauchy condition says that eventually all terms are close to each other:
+\[ |a_n - a_m| < \epsilon. \]
+
+So convergence compares terms to a known candidate limit, while the Cauchy condition compares terms only to each other. This makes the Cauchy condition useful for establishing convergence without first knowing or guessing the limit \( L \).
+~~~
+
+!id: M7CUMgDWC2
+!front: State the Cauchy convergence criterion for sequences of real numbers.
+!back: A sequence \( \{a_n\} \) of real numbers converges if and only if it is a Cauchy sequence.
+!extra: The forward direction (convergent implies Cauchy) holds for sequences in any metric space. The converse (Cauchy implies convergent) relies on the **completeness** of \( \mathbb{R} \): every Cauchy sequence of real numbers converges to a real number.
+~~~
+
+!id: w0eJlHZHGF
+!front: Construct a Cauchy sequence in \( \mathbb{Q} \) that does not converge in \( \mathbb{Q} \).
+!back: Let \( a_n \) be \( \sqrt{2} \) truncated to \( n \) decimal digits, e.g. \( a_1 = 1.4 \), \( a_2 = 1.41 \), \( a_3 = 1.414, \ldots \). Each \( a_n \in \mathbb{Q} \), and for \( m > n \), \( |a_n - a_m| < 10^{-n} \), so \( \{a_n\} \) is Cauchy. But \( a_n \to \sqrt{2} \notin \mathbb{Q} \), so the sequence has no limit in \( \mathbb{Q} \).
+!extra: This shows completeness is a genuine property of \( \mathbb{R} \), not automatic for every ordered field: \( \mathbb{Q} \) is not complete.
+~~~
+
+!id: JthlytFu3v
+!front: Define what it means for a sequence to be increasing/decreasing and monotone.
+!back:
+A sequence \( \{a_n\} \) is:
+
+- **increasing** if \( a_n \le a_{n+1} \) for all \( n \)
+- **decreasing** if \( a_n \ge a_{n+1} \) for all \( n \)
+- **monotone** if it is increasing or decreasing
+~~~
+
+!id: ur5fM5fiJQ
+!front: How do nondecreasing, nonincreasing, strictly increasing, and strictly decreasing sequences differ?
+!back:
+- Nondecreasing means \( a_n \le a_{n+1} \) for all \( n \).
+- Nonincreasing means \( a_n \ge a_{n+1} \) for all \( n \).
+- Strictly increasing means \( a_n < a_{n+1} \) for all \( n \).
+- Strictly decreasing means \( a_n > a_{n+1} \) for all \( n \).
+!extra: This file uses "increasing" and "decreasing" in the non-strict sense, following a common calculus convention.
+~~~
+
+!id: etSBkWIP7q
+!front: Define what it means for a sequence to be eventually increasing/decreasing and monotone.
+!back:
+A sequence \( \{a_n\} \) is:
+
+- **eventually increasing** if there exists a positive integer \( n_0 \) such that \( a_n \le a_{n+1} \) for all \( n \ge n_0 \)
+- **eventually decreasing** if there exists a positive integer \( n_0 \) such that \( a_n \ge a_{n+1} \) for all \( n \ge n_0 \)
+- **eventually monotone** if it is eventually increasing or eventually decreasing
+
+In all three cases, the condition may fail for finitely many initial terms.
+~~~
+
+!id: lCZ49YrM8Y
+!front: State the monotone convergence theorem for sequences.
+!back:
+For real sequences:
+
+- if \( \{a_n\} \) is eventually increasing and bounded above, then it converges
+- if \( \{a_n\} \) is eventually decreasing and bounded below, then it converges
+
+Equivalently, every eventually monotone bounded real sequence converges.
+
+![An increasing sequence bounded above by M climbing toward its limit L <= M, the least upper bound it can never exceed](img/monotone_convergence.svg)
+~~~
+
+!id: GsApZnrAzQ
+!front: Why does a bounded increasing real sequence converge, and what is its limit?
+!back:
+Let:
+
+- \( s=\sup\{a_n:n\in\mathbb{N}\} \), which exists because the sequence is bounded above
+- \( \epsilon>0 \) be arbitrary
+
+To prove: \( a_n\to s \).
+
+- Since \( s-\epsilon \) is not an upper bound, there exists \( N \) such that \( a_N>s-\epsilon \).
+- Since \( \{a_n\} \) is increasing, \( a_n\ge a_N>s-\epsilon \) for all \( n\ge N \).
+- Since \( s \) is an upper bound, \( a_n\le s \) for all \( n \).
+- Thus \( s-\epsilon<a_n\le s \) for all \( n\ge N \), so \( |a_n-s|<\epsilon \).
+- Hence \( a_n\to s \).
+~~~
+
+!id: 5S2E10pJWI
+!front: What breaks in the monotone convergence theorem if boundedness is omitted?
+!back:
+A monotone real sequence can diverge if it is unbounded.
+
+For example, \( a_n=n \) is increasing but unbounded above, and \( a_n\to+\infty \) rather than converging to a finite real limit.
+~~~
+
+!id: rv9SBEUemu
+!front: What breaks in the monotone convergence theorem if monotonicity is omitted?
+!back:
+A bounded real sequence need not converge if it is not eventually monotone.
+
+For example, \( a_n=(-1)^n \) is bounded, but its even and odd subsequences have different limits, so the full sequence diverges.
+~~~
+
+!id: QGKUjJ13M5
+!front: How does sequence convergence define convergence of an infinite series?
+!back:
+Given a series \( \sum_{n=1}^{\infty} a_n \), define its partial sums by
+\[
+    s_N=\sum_{n=1}^{N} a_n.
+\]
+The series converges exactly when the sequence \( \{s_N\} \) converges. In that case,
+\[
+    \sum_{n=1}^{\infty} a_n=\lim_{N\to\infty}s_N.
+\]
+~~~

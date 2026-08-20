@@ -1,0 +1,183 @@
+!deck: Math::Multivariable-Calculus
+!type: Basic Math
+!tags: Math Calculus Multivariable
+
+!id: y6eZPhNqQ6
+!front: What is the partial derivative \( \dfrac{\partial f}{\partial x_i}(\mathbf{a}) \) of a scalar function \( f : D \subseteq \mathbb{R}^n \to \mathbb{R} \)?
+!back:
+It is the ordinary one-variable derivative obtained by varying only the \( i \)-th coordinate:
+
+\[
+  \frac{\partial f}{\partial x_i}(\mathbf{a})
+  =
+  \lim_{h \to 0}
+  \frac{f(\mathbf{a}+h\mathbf{e}_i)-f(\mathbf{a})}{h},
+\]
+
+provided the limit exists and \( \mathbf{a}+h\mathbf{e}_i \in D \) for all sufficiently small \( h \).
+~~~
+
+!id: acjC3b8vee
+!front: Does the existence of all partial derivatives of \( f : D \subseteq \mathbb{R}^n \to \mathbb{R} \) at \( \mathbf{a} \) imply that \( f \) is differentiable at \( \mathbf{a} \)?
+!back: No. Existence of \( \dfrac{\partial f}{\partial x_i}(\mathbf{a}) \) for every \( i \) only requires that \( f \) behaves well along the \( n \) coordinate lines through \( \mathbf{a} \); it says nothing about behavior along other directions or about a single linear map approximating \( f \) for every small displacement.
+~~~
+
+!id: Ck54hLQUqA
+!front: Give a geometric interpretation of \( f_x(a,b) \) and \( f_y(a,b) \) for a scalar field \( z=f(x,y) \).
+!back:
+- \( f_x(a,b) \) is the slope of the trace curve obtained by slicing the surface with the plane \( y=b \) and moving in the \( x \)-direction.
+- \( f_y(a,b) \) is the slope of the trace curve obtained by slicing the surface with the plane \( x=a \) and moving in the \( y \)-direction.
+
+Each partial derivative measures a coordinate-direction rate of change while the other variable is held fixed.
+
+![Surface z=f(x,y) sliced by the planes y=b and x=a, with the resulting trace curves and their slopes f_x(a,b) and f_y(a,b) at the point (a,b)](img/partial_derivative_trace.svg)
+~~~
+
+!id: 3La445Jl1J
+!front: What is the directional derivative \( D_{\mathbf{u}}f(\mathbf{a}) \) of \( f : D \subseteq \mathbb{R}^n \to \mathbb{R} \) in the direction \( \mathbf{u} \)?
+!back:
+For a unit vector \( \mathbf{u} \), it is
+
+\[
+  D_{\mathbf{u}}f(\mathbf{a})
+  =
+  \lim_{h \to 0}
+  \frac{f(\mathbf{a}+h\mathbf{u})-f(\mathbf{a})}{h},
+\]
+
+provided the limit exists and \( \mathbf{a}+h\mathbf{u} \in D \) for all sufficiently small \( h \).
+
+![Surface z=f(x,y) sliced by the vertical plane through a spanned by an arbitrary direction u, with the resulting trace curve and its slope D_u f(a)](img/directional_derivative_trace.svg)
+~~~
+
+!id: X1zHWYp6hQ
+!front: How is a partial derivative a special case of a directional derivative?
+!back:
+The partial derivative with respect to \( x_i \) is the directional derivative in the positive coordinate direction \( \mathbf{e}_i \):
+
+\[
+  \frac{\partial f}{\partial x_i}(\mathbf{a})
+  =
+  D_{\mathbf{e}_i}f(\mathbf{a}).
+\]
+
+So partial derivatives measure rates of change only along the coordinate axes, while directional derivatives allow arbitrary directions \( \mathbf{u} \).
+!extra: If \( f \) is differentiable at \( \mathbf{a} \), then all directional derivatives are determined by the partial derivatives through \( D_{\mathbf{u}}f(\mathbf{a})=\nabla f(\mathbf{a})\cdot\mathbf{u} \). Without differentiability, the coordinate partials alone need not determine directional derivatives in other directions.
+~~~
+
+!id: NgdcH0dyd2
+!front: If \( f : D \subseteq \mathbb{R}^n \to \mathbb{R} \) is differentiable at \( \mathbf{a} \), how are directional derivatives, partial derivatives, and the gradient related?
+!back:
+For every direction vector \( \mathbf{v} \),
+
+\[
+  D_{\mathbf{v}}f(\mathbf{a}) = Df(\mathbf{a})[\mathbf{v}] = \nabla f(\mathbf{a}) \cdot \mathbf{v}.
+\]
+
+In particular,
+
+\[
+  \frac{\partial f}{\partial x_i}(\mathbf{a})
+  =
+  D_{\mathbf{e}_i}f(\mathbf{a})
+  =
+  \nabla f(\mathbf{a}) \cdot \mathbf{e}_i.
+\]
+
+So the gradient is the vector representing the derivative linear functional \( Df(\mathbf{a}) \) via the dot product.
+
+![Level curves of f around a, with the gradient vector at a normal to the level curve and pointing toward increasing f, and D_u f(a) shown as the signed length of the gradient's projection onto a unit direction u, at angle theta from the gradient](img/gradient_directional_derivative.svg)
+!extra: The differentiability hypothesis is essential for the formula \( D_{\mathbf{v}}f=\nabla f\cdot\mathbf{v} \). Directional derivatives can exist in many directions without fitting together into one linear approximation.
+~~~
+
+!id: jdhTU6mCKw
+!front: What does it mean for \( F : D \subseteq \mathbb{R}^n \to \mathbb{R}^m \) to be differentiable at \( \mathbf{a} \) in the linear-map sense?
+!back:
+It means there is a linear map \( L : \mathbb{R}^n \to \mathbb{R}^m \) such that
+
+\[
+  F(\mathbf{a}+\mathbf{h})
+  =
+  F(\mathbf{a}) + L(\mathbf{h}) + o(\|\mathbf{h}\|)
+  \quad \text{as } \mathbf{h}\to\mathbf{0}.
+\]
+
+That linear map is the derivative, denoted \( DF(\mathbf{a}) \) or \( F'(\mathbf{a}) \).
+!extra:
+Equivalently,
+\[
+  \lim_{\mathbf{h}\to\mathbf{0}}
+  \frac{\|F(\mathbf{a}+\mathbf{h})-F(\mathbf{a})-L(\mathbf{h})\|}{\|\mathbf{h}\|}
+  =0.
+\]
+
+This is often called the total derivative or Fréchet derivative in finite-dimensional calculus.
+~~~
+
+!id: 0earGDDEly
+!front: How is the derivative linear map \( DF(\mathbf{a}) \) represented by a Jacobian matrix?
+!back:
+If \( F=(F_1,\ldots,F_m) : \mathbb{R}^n \to \mathbb{R}^m \) is differentiable at \( \mathbf{a} \), then \( DF(\mathbf{a}) \) is represented in standard coordinates by the \( m \times n \) Jacobian matrix
+
+\[
+  J_F(\mathbf{a})
+  =
+  \begin{pmatrix}
+    \dfrac{\partial F_1}{\partial x_1}(\mathbf{a}) & \cdots & \dfrac{\partial F_1}{\partial x_n}(\mathbf{a}) \\
+    \vdots & \ddots & \vdots \\
+    \dfrac{\partial F_m}{\partial x_1}(\mathbf{a}) & \cdots & \dfrac{\partial F_m}{\partial x_n}(\mathbf{a})
+  \end{pmatrix}.
+\]
+
+For a displacement \( \mathbf{h} \), the first-order change is \( DF(\mathbf{a})[\mathbf{h}] = J_F(\mathbf{a})\mathbf{h} \).
+~~~
+
+!id: rXD3bZmtPi
+!front: Why is the linear-map derivative called a "total" derivative?
+!back:
+It captures the first-order effect of changing all input coordinates together:
+\[
+  F(\mathbf{a}+\mathbf{h}) \approx F(\mathbf{a}) + DF(\mathbf{a})[\mathbf{h}].
+\]
+Partial derivatives measure separate coordinate-line changes, but \( DF(\mathbf{a}) \) is one linear map that predicts the first-order change for every small displacement \( \mathbf{h}\in\mathbb{R}^n \).
+!extra: In finite dimensions, differentiability in this sense implies all directional derivatives and continuity at \( \mathbf{a} \). The converse is false: having partial or directional derivatives alone need not give a single good linear approximation.
+~~~
+
+!id: qrLU3EzLtd
+!front: What is the "total derivative" formula for \( z(t)=f(x(t),y(t)) \), and what derivative is it really computing?
+!back:
+If \( f \) is differentiable at \( (x(t),y(t)) \) and \( x,y \) are differentiable at \( t \), then
+
+\[
+  \frac{dz}{dt}
+  =
+  \frac{\partial f}{\partial x}(x(t),y(t))\frac{dx}{dt}
+  +
+  \frac{\partial f}{\partial y}(x(t),y(t))\frac{dy}{dt}.
+\]
+
+It is the ordinary derivative of the one-variable composite function \( z(t)=f(x(t),y(t)) \).
+
+![Dependency tree for z=f(x(t),y(t)): z branches to x and y, each labeled by the partial derivative of f; x and y each connect down to t, labeled by dx/dt and dy/dt, giving dz/dt as the sum of the two root-to-leaf products](img/chain_rule_tree.svg)
+!extra:
+In linear-map notation, with \( \mathbf{r}(t)=(x(t),y(t)) \), this is
+
+\[
+  z'(t)=Df(\mathbf{r}(t))[\mathbf{r}'(t)].
+\]
+
+So it uses the total derivative of \( f \), but the quantity \( dz/dt \) is the derivative along the parametrized path.
+~~~
+
+!id: gB3c2gMjhE
+!front: Compare the two common meanings of "total derivative" in multivariable calculus.
+!back:
+- The total derivative of \( F:\mathbb{R}^n\to\mathbb{R}^m \) at \( \mathbf{a} \) is the linear map \( DF(\mathbf{a}) \) giving the best first-order approximation to \( F \) near \( \mathbf{a} \).
+- The total derivative \( dz/dt \) of \( z=f(x(t),y(t)) \) is the ordinary derivative of a composite one-variable function along a parametrized path.
+
+They are related by the chain rule:
+
+\[
+  \frac{d}{dt}f(\mathbf{r}(t)) = Df(\mathbf{r}(t))[\mathbf{r}'(t)].
+\]
+~~~

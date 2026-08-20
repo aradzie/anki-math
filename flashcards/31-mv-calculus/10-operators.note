@@ -1,0 +1,80 @@
+!deck: Math::Multivariable-Calculus
+!type: Basic Math
+!tags: Math Calculus Multivariable
+
+!id: 0xbcsHJFvN
+!front: What is \( \nabla \) formally, and in what sense is treating it as a vector a "type pun"?
+!back:
+\[
+  \nabla = \left(\frac{\partial}{\partial x},\ \frac{\partial}{\partial y},\ \frac{\partial}{\partial z}\right).
+\]
+It is a "vector" whose components are differential operators, not numbers — so it isn't literally a vector. But treating it as one is productive: combining it with a field via the three familiar vector products (scalar multiplication, dot product, cross product) generates the gradient, divergence, and curl respectively.
+~~~
+
+!id: zfFKcMDAhX
+!front: What are the domain and codomain field types of \( \operatorname{grad} \), and why is that forced by the product it uses?
+!back:
+\[
+  \operatorname{grad} f = \nabla f : \text{scalar field} \to \text{vector field}.
+\]
+\( \nabla \) combines with the scalar field \( f \) by scalar multiplication, and scalar \( \times \) vector \( = \) vector, so the result is a vector field.
+~~~
+
+!id: 6isoAPsTmG
+!front: What are the domain and codomain field types of \( \operatorname{div} \), and why is that forced by the product it uses?
+!back:
+\[
+  \operatorname{div} \mathbf{F} = \nabla \cdot \mathbf{F} : \text{vector field} \to \text{scalar field}.
+\]
+\( \nabla \) combines with the vector field \( \mathbf{F} \) by the dot product, and vector \( \cdot \) vector \( = \) scalar, so the result is a scalar field.
+~~~
+
+!id: 6JAaP1RkvV
+!front: What are the domain and codomain field types of \( \operatorname{curl} \), and why is that forced by the product it uses?
+!back:
+\[
+  \operatorname{curl} \mathbf{F} = \nabla \times \mathbf{F} : \text{vector field} \to \text{vector field}.
+\]
+\( \nabla \) combines with the vector field \( \mathbf{F} \) by the cross product, and vector \( \times \) vector \( = \) vector, so the result is a vector field.
+~~~
+
+!type: Basic Math (and reversed card)
+
+!id: AeU4l1x5nu
+!front: \[ \nabla f \]
+!back: \[ \left(\frac{\partial f}{\partial x},\ \frac{\partial f}{\partial y},\ \frac{\partial f}{\partial z}\right) \]
+~~~
+
+!id: HOFZepdukm
+!front: \[ \nabla \cdot \mathbf{F}, \quad \mathbf{F} = (P, Q, R) \]
+!back: \[ \frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z} \]
+~~~
+
+!id: JeLNV4fCiX
+!front: \[ \nabla \times \mathbf{F}, \quad \mathbf{F} = (P, Q, R) \]
+!back: \[ (R_y - Q_z,\ \ P_z - R_x,\ \ Q_x - P_y) \]
+!extra:
+This is the formal expansion of the determinant
+\[
+  \begin{vmatrix} \mathbf{i} & \mathbf{j} & \mathbf{k} \\ \partial_x & \partial_y & \partial_z \\ P & Q & R \end{vmatrix},
+\]
+with subscripts denoting partial derivatives.
+~~~
+
+!type: Basic Math
+
+!id: OcyGLv1hiw
+!front: What does the divergence of a vector field measure, and what does its sign tell you at a point?
+!back: Divergence measures net outflow per unit volume at a point. A positive value means the point behaves like a source (more flux leaving than entering a small neighborhood); a negative value means it behaves like a sink.
+~~~
+
+!id: 4S9UZ9cRbx
+!front: What does the curl of a vector field measure, and what does its direction represent?
+!back: Curl measures the local rotation of the field. Its direction is the axis about which the field locally rotates (by the right-hand rule), and its magnitude reflects the strength of that rotation.
+~~~
+
+!id: gCc1H7Drsb
+!front: Why is curl, as usually written, specific to \( \mathbb{R}^3 \), while gradient and divergence make sense in any \( \mathbb{R}^n \)?
+!back: Gradient and divergence are built only from partial derivatives and a dot product, both of which make sense in any dimension. Curl is built from a cross product, \( \nabla \times \mathbf{F} \), and the cross product as an operation returning a vector in the same space is specific to \( \mathbb{R}^3 \).
+!extra: In \( \mathbb{R}^2 \) one instead uses the scalar curl \( Q_x - P_y \), the \( \mathbf{k} \)-component of the \( \mathbb{R}^3 \) curl when \( \mathbf{F}=(P,Q,0) \) doesn't depend on \( z \). This is exactly the integrand appearing in Green's theorem.
+~~~

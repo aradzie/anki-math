@@ -1,0 +1,261 @@
+!deck: Math::Logic
+!type: Basic Math
+!tags: Math Logic Indexed-Sets
+
+!id: hYWnupsMW5
+!front: In indexed-set notation, what are the three main pieces of \( (A_i)_{i \in I} \)?
+!back:
+- \( I \) is the index set.
+- \( i \) is the bound index variable, ranging over \( I \).
+- \( A_i \) is the set assigned to the index \( i \).
+
+Equivalently, an indexed family of sets is a function \( i \mapsto A_i \) whose inputs are indices and whose values are sets.
+~~~
+
+!id: Mq5uspoZD4
+!front: How is an indexed family \( (A_i)_{i \in I} \) different from the set \( \{A_i : i \in I\} \)?
+!back:
+- \( (A_i)_{i \in I} \) remembers which index produced which set.
+- \( \{A_i : i \in I\} \) remembers only which sets occur as values.
+
+If two different indices give the same set, the indexed family can still distinguish those indices, but the set \( \{A_i : i \in I\} \) lists that set only once.
+~~~
+
+!id: vJVi8zc7wK
+!front: For a family of sets \( (A_i)_{i \in I} \), what does \( x \in \bigcup_{i \in I} A_i \) mean in quantifiers?
+!back:
+\[
+x \in \bigcup_{i \in I} A_i
+\quad\Longleftrightarrow\quad
+\exists i \in I \text{ such that } x \in A_i.
+\]
+
+Membership in an indexed union means membership in at least one set from the family.
+~~~
+
+!id: xIkztH7TlI
+!front: For a family of sets \( (A_i)_{i \in I} \), what does \( x \in \bigcap_{i \in I} A_i \) mean in quantifiers?
+!back:
+\[
+x \in \bigcap_{i \in I} A_i
+\quad\Longleftrightarrow\quad
+\forall i \in I,\ x \in A_i.
+\]
+
+Membership in an indexed intersection means membership in every set from the family.
+~~~
+
+!id: 6YXv79vcij
+!front: Compare the membership tests for \( \bigcup_{i \in I} A_i \) and \( \bigcap_{i \in I} A_i \).
+!back:
+- \( x \in \bigcup_{i \in I} A_i \) means \( \exists i \in I \) such that \( x \in A_i \).
+- \( x \in \bigcap_{i \in I} A_i \) means \( \forall i \in I \), \( x \in A_i \).
+
+So indexed union corresponds to an existential quantifier, while indexed intersection corresponds to a universal quantifier.
+~~~
+
+!id: OFiotjhBDQ
+!front: How do the indexed notations \( \bigcup_{i=1}^n A_i \) and \( \bigcap_{i=1}^n A_i \) relate to ordinary finite unions and intersections?
+!back:
+\[ \bigcup_{i=1}^n A_i = A_1 \cup A_2 \cup \cdots \cup A_n \]
+and
+\[ \bigcap_{i=1}^n A_i = A_1 \cap A_2 \cap \cdots \cap A_n. \]
+
+The indexed notation is a compact way to write the same finite operation.
+~~~
+
+!id: LKEat5q8Tw
+!front: If \( A_n = (-1/n,1/n) \) for \( n \in \mathbb{N} \), with \( \mathbb{N}=\{1,2,3,\ldots\} \), compute \( \bigcup_{n=1}^{\infty} A_n \).
+!back:
+\[ \bigcup_{n=1}^{\infty} (-1/n,1/n) = (-1,1). \]
+
+Every \( A_n \subseteq (-1,1) \), and \( A_1=(-1,1) \), so the union is exactly \( (-1,1) \).
+~~~
+
+!id: bcdWRcr2ge
+!front: If \( A_n = (-1/n,1/n) \) for \( n \in \mathbb{N} \), compute \( \bigcap_{n=1}^{\infty} A_n \).
+!back:
+\[ \bigcap_{n=1}^{\infty} (-1/n,1/n) = \{0\}. \]
+
+The point \( 0 \) belongs to every interval. If \( x \ne 0 \), choose \( n > 1/|x| \); then \( 1/n < |x| \), so \( x \notin (-1/n,1/n) \).
+~~~
+
+!id: X9JIdBWqzC
+!front: If \( A_n = (0,1/n) \) for \( n \in \mathbb{N} \), compute \( \bigcup_{n=1}^{\infty} A_n \).
+!back:
+\[ \bigcup_{n=1}^{\infty} (0,1/n) = (0,1). \]
+
+Every interval \( (0,1/n) \) lies inside \( (0,1) \), and \( A_1=(0,1) \).
+~~~
+
+!id: oKvnT6IGXI
+!front: If \( A_n = (0,1/n) \) for \( n \in \mathbb{N} \), compute \( \bigcap_{n=1}^{\infty} A_n \).
+!back:
+\[ \bigcap_{n=1}^{\infty} (0,1/n) = \varnothing. \]
+
+The point \( 0 \) is not in any \( (0,1/n) \). If \( x>0 \), choose \( n > 1/x \); then \( 1/n < x \), so \( x \notin (0,1/n) \).
+~~~
+
+!id: sBmQKVG9iR
+!front: If \( A_n = [-1/n,1/n] \) for \( n \in \mathbb{N} \), compute \( \bigcap_{n=1}^{\infty} A_n \).
+!back:
+\[ \bigcap_{n=1}^{\infty} [-1/n,1/n] = \{0\}. \]
+
+The point \( 0 \) belongs to every interval. If \( x \ne 0 \), choose \( n > 1/|x| \); then \( 1/n < |x| \), so \( x \notin [-1/n,1/n] \).
+~~~
+
+!id: APho7K8eTK
+!front: If \( A_n = [-n,n] \) for \( n \in \mathbb{N} \), compute \( \bigcup_{n=1}^{\infty} A_n \).
+!back:
+\[ \bigcup_{n=1}^{\infty} [-n,n] = \mathbb{R}. \]
+
+Given any \( x \in \mathbb{R} \), choose \( n \in \mathbb{N} \) with \( n \ge |x| \). Then \( x \in [-n,n] \).
+~~~
+
+!id: Cl60Y6ta3U
+!front: If \( A_n = [n,\infty) \) for \( n \in \mathbb{N} \), compute \( \bigcap_{n=1}^{\infty} A_n \).
+!back:
+\[ \bigcap_{n=1}^{\infty} [n,\infty) = \varnothing. \]
+
+For any real \( x \), choose \( n > x \). Then \( x \notin [n,\infty) \), so no real number belongs to all the sets.
+~~~
+
+!id: HFAmSKRTAp
+!front: If \( A_n = (-\infty,n) \) for \( n \in \mathbb{N} \), compute \( \bigcap_{n=1}^{\infty} A_n \).
+!back:
+\[ \bigcap_{n=1}^{\infty} (-\infty,n) = (-\infty,1). \]
+
+To belong to every \( (-\infty,n) \), a real number must in particular belong to \( (-\infty,1) \). Conversely, every \( x<1 \) satisfies \( x<n \) for all \( n \in \mathbb{N} \).
+~~~
+
+!id: v7hp1HV3jN
+!front: If \( A_\varepsilon = (a-\varepsilon,a+\varepsilon) \) for \( \varepsilon>0 \), compute \( \bigcap_{\varepsilon>0} A_\varepsilon \).
+!back:
+\[ \bigcap_{\varepsilon>0} (a-\varepsilon,a+\varepsilon) = \{a\}. \]
+
+The point \( a \) belongs to every such interval. If \( x \ne a \), choose \( \varepsilon = |x-a|/2 \); then \( x \notin (a-\varepsilon,a+\varepsilon) \).
+~~~
+
+!id: Q1BbZOGnfJ
+!front: If \( A_\varepsilon = (a-\varepsilon,a+\varepsilon) \) for \( \varepsilon>0 \), compute \( \bigcup_{\varepsilon>0} A_\varepsilon \).
+!back:
+\[ \bigcup_{\varepsilon>0} (a-\varepsilon,a+\varepsilon) = \mathbb{R}. \]
+
+Given any \( x \in \mathbb{R} \), choose \( \varepsilon>|x-a| \). Then \( x \in (a-\varepsilon,a+\varepsilon) \).
+~~~
+
+!id: dx2OSnIpZg
+!front: If \( (A_i)_{i \in I} \) is a family of subsets of an ambient set \( X \), express \( X \setminus \bigcup_{i \in I} A_i \) using an indexed intersection.
+!back:
+\[
+X \setminus \bigcup_{i \in I} A_i
+=
+\bigcap_{i \in I} (X \setminus A_i).
+\]
+
+An element of \( X \) is outside the union exactly when it is outside every \( A_i \).
+~~~
+
+!id: cdpC2y4RRL
+!front: If \( (A_i)_{i \in I} \) is a family of subsets of an ambient set \( X \), express \( X \setminus \bigcap_{i \in I} A_i \) using an indexed union.
+!back:
+\[
+X \setminus \bigcap_{i \in I} A_i
+=
+\bigcup_{i \in I} (X \setminus A_i).
+\]
+
+An element of \( X \) is outside the intersection exactly when it fails to belong to at least one \( A_i \).
+~~~
+
+!id: V3SCdMtDX4
+!front: Why does the indexed De Morgan law for complements of unions switch from \( \bigcup \) to \( \bigcap \)?
+!back:
+Because membership in a union uses an existential quantifier:
+\[
+x \in \bigcup_{i \in I} A_i
+\quad\Longleftrightarrow\quad
+\exists i \in I,\ x \in A_i.
+\]
+
+Negating this gives:
+\[ \forall i \in I,\ x \notin A_i, \]
+which is the membership condition for \( \bigcap_{i \in I} (X \setminus A_i) \).
+~~~
+
+!id: 6WR8PlOKf6
+!front: Why does the indexed De Morgan law for complements of intersections switch from \( \bigcap \) to \( \bigcup \)?
+!back:
+Because membership in an intersection uses a universal quantifier:
+\[
+x \in \bigcap_{i \in I} A_i
+\quad\Longleftrightarrow\quad
+\forall i \in I,\ x \in A_i.
+\]
+
+Negating this gives:
+\[ \exists i \in I \text{ such that } x \notin A_i, \]
+which is the membership condition for \( \bigcup_{i \in I} (X \setminus A_i) \).
+~~~
+
+!id: cKsLQDON8s
+!front: If \( (A_i)_{i \in \varnothing} \) is an empty-indexed family of subsets of an ambient set \( X \), what is \( \bigcup_{i \in \varnothing} A_i \)?
+!back:
+\[ \bigcup_{i \in \varnothing} A_i = \varnothing. \]
+
+There is no index \( i \in \varnothing \), so no element can satisfy \( \exists i \in \varnothing \) such that \( x \in A_i \).
+~~~
+
+!id: yDJe5RuUKc
+!front: If \( (A_i)_{i \in \varnothing} \) is an empty-indexed family of subsets of an ambient set \( X \), what is \( \bigcap_{i \in \varnothing} A_i \)?
+!back:
+\[ \bigcap_{i \in \varnothing} A_i = X. \]
+
+Relative to the ambient universe \( X \), every \( x \in X \) satisfies \( \forall i \in \varnothing,\ x \in A_i \), because a universal statement over the empty set is vacuously true.
+~~~
+
+!id: GsALqf243Q
+!front: What is the difference between \( \{A_i : i \in I\} \) and \( \bigcup_{i \in I} A_i \)?
+!back:
+- \( \{A_i : i \in I\} \) is a set whose elements are the sets \( A_i \).
+- \( \bigcup_{i \in I} A_i \) is a set whose elements are the elements of the sets \( A_i \).
+
+For example, if \( A_1=\{1,2\} \) and \( A_2=\{2,3\} \), then \( \{A_1,A_2\}=\{\{1,2\},\{2,3\}\} \), while \( A_1 \cup A_2=\{1,2,3\} \).
+~~~
+
+!id: njiHfUZw2I
+!front: What is wrong with treating the index \( i \) in \( (A_i)_{i \in I} \) as though \( i \in A_i \)?
+!back:
+The index \( i \) labels the set \( A_i \); it need not be an element of that set.
+
+For example, if \( A_n=(0,1/n) \) for \( n \in \mathbb{N} \), then \( n \notin A_n \) for every \( n \in \mathbb{N} \), since \( n \ge 1 \) but \( A_n \subseteq (0,1] \).
+~~~
+
+!id: QP3sFSKC5h
+!front: What is wrong with the statement \( x \in A_i \) if \( i \) has neither been fixed nor quantified?
+!back:
+The index \( i \) is free, so the statement has no definite truth value.
+
+It can be repaired by fixing an index, such as "for a fixed \( i \in I \), \( x \in A_i \)", or by quantifying the index, such as:
+\[ \exists i \in I,\ x \in A_i \]
+or
+\[ \forall i \in I,\ x \in A_i. \]
+~~~
+
+!id: pVTNLKcfFo
+!front: For an increasing sequence of sets \( A_1 \subseteq A_2 \subseteq A_3 \subseteq \cdots \), what are \( \bigcup_{n=1}^{\infty} A_n \) and \( \bigcap_{n=1}^{\infty} A_n \) measuring?
+!back:
+- \( \bigcup_{n=1}^{\infty} A_n \) contains everything that appears at some finite stage.
+- \( \bigcap_{n=1}^{\infty} A_n = A_1 \), because every later set contains \( A_1 \).
+
+For increasing families, the union captures long-term accumulation, while the intersection is already determined by the smallest set.
+~~~
+
+!id: E9Y5dvQKqs
+!front: For a decreasing sequence of sets \( A_1 \supseteq A_2 \supseteq A_3 \supseteq \cdots \), what are \( \bigcup_{n=1}^{\infty} A_n \) and \( \bigcap_{n=1}^{\infty} A_n \) measuring?
+!back:
+- \( \bigcup_{n=1}^{\infty} A_n = A_1 \), because every later set is contained in \( A_1 \).
+- \( \bigcap_{n=1}^{\infty} A_n \) contains exactly the elements that survive every stage.
+
+For decreasing families, the union is already determined by the largest set, while the intersection captures the limiting core.
+~~~
