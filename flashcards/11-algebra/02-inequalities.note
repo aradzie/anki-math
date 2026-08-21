@@ -218,61 +218,12 @@ The triangle inequality states that for any real numbers \( a \) and \( b \):
 ![Triangle inequality](img/triangle_inequality.svg)
 ~~~
 
-!id: kQcxFhsQHh
-!front: Prove the triangle inequality \( |a + b| \leq |a| + |b| \).
-!back:
-Let's square both sides:
-
-\[ |a + b|^2 \leq (|a| + |b|)^2 \]
-
-We know that
-
-\[
-\begin{align*}
-    |a+b|^2 & = (a+b)^2 \\
-    |a|^2 & = a^2 \\
-    |b|^2 & = b^2
-\end{align*}
-\]
-
-so
-
-\[
-\begin{align*}
-    a^2 + 2ab + b^2 & \leq a^2 + 2|a||b| + b^2 \\
-    ab & \leq |a||b|
-\end{align*}
-\]
-
-The last inequality is true for any \( a \) and \( b \), so the triangle inequality is true as well.
-~~~
-
 !id: S9D2P7B8QX
 !front: What is the reverse triangle inequality?
 !back:
 The reverse triangle inequality states that for any real numbers \( a \) and \( b \):
 
 \[ ||a| - |b|| \le |a - b| \]
-~~~
-
-!id: 2C7nY6M5Fp
-!front: Prove the reverse triangle inequality.
-!back:
-Apply triangle inequality to \( a = (a - b) + b \):
-
-\[ |a| = |(a-b)+b| \le |a-b| + |b| \]
-
-Rearranging:
-
-\[ |a| - |b| \le |a-b| \]
-
-Swap \( a,b \) to get:
-
-\[ |b| - |a| \le |a-b| \]
-
-Combining both gives:
-
-\[ \big||a| - |b|\big| \le |a-b| \]
 ~~~
 
 !id: F7Z3B5R2XQ
@@ -288,7 +239,7 @@ Equality holds iff \( a=b \).
 ~~~
 
 !id: HoDhG80bGb
-!front: Prove the AM-GM inequality.
+!front: Prove the AM-GM inequality \( \frac{a+b}{2} \ge \sqrt{ab} \) for \( a, b \ge 0 \).
 !back:
 \[
 \begin{align*}
@@ -337,4 +288,105 @@ Expand:
 Rearrange:
 
 \[ a^2 + b^2 \ge 2ab \]
+~~~
+
+!id: CWAazZMbtb
+!front: Prove that \( |a - b| \le |a| + |b| \) for any real \( a, b \).
+!back:
+Apply the triangle inequality with \( b \) replaced by \( -b \):
+
+\[
+\begin{align*}
+|a - b| &= |a + (-b)| \\
+        &\le |a| + |-b| \\
+        &= |a| + |b|
+\end{align*}
+\]
+~~~
+
+!id: yAqWUYuXhd
+!front: Prove that \( \big| |a| - |b| \big| \le |a + b| \) for any real \( a, b \).
+!back:
+Apply the reverse triangle inequality with \( b \) replaced by \( -b \):
+
+\[ \big| |a| - |-b| \big| \le |a - (-b)| \]
+
+Since \( |-b| = |b| \) and \( a - (-b) = a + b \), this becomes
+
+\[ \big| |a| - |b| \big| \le |a + b| \]
+~~~
+
+!id: 8dY5wY36R2
+!front: Prove that \( |a| \le |a - b| + |b| \) for any real \( a, b \).
+!back:
+Write \( a = (a-b) + b \), then apply the triangle inequality:
+
+\[ |a| = |(a-b)+b| \le |a-b| + |b| \]
+!extra: This "add and subtract a middle term" step is the key trick behind most bounding arguments in analysis, e.g. bounding \( |f(x)| \) via \( |f(x) - L| + |L| \).
+~~~
+
+!id: GGbwzkEeEu
+!front: Prove that \( |a+b+c| \le |a| + |b| + |c| \) for any real \( a, b, c \).
+!back:
+Apply the triangle inequality twice, first to \( (a+b) \) and \( c \), then to \( a \) and \( b \):
+
+\[
+\begin{align*}
+|a+b+c| &= |(a+b)+c| \\
+        &\le |a+b| + |c| \\
+        &\le |a| + |b| + |c|
+\end{align*}
+\]
+!extra: The same argument extends by induction to any finite sum: \( |a_1 + \cdots + a_n| \le |a_1| + \cdots + |a_n| \).
+~~~
+
+!id: BQzNTeo42g
+!front: Prove that \( \sqrt{a+b} \le \sqrt{a} + \sqrt{b} \) for \( a, b \ge 0 \).
+!back:
+Both sides are non-negative, so it suffices to prove the squared inequality:
+
+\[ (\sqrt{a+b})^2 \le (\sqrt{a}+\sqrt{b})^2 \]
+
+\[
+\begin{align*}
+a+b &\le a + 2\sqrt{ab} + b \\
+0 &\le 2\sqrt{ab}
+\end{align*}
+\]
+
+which holds because \( \sqrt{ab} \ge 0 \) for \( a, b \ge 0 \).
+
+![Right triangle with legs sqrt(a) and sqrt(b) meeting at a right angle, and hypotenuse sqrt(a+b) by the Pythagorean theorem, showing the claim is the ordinary triangle inequality applied to this triangle](img/sqrt_triangle_inequality.svg)
+~~~
+
+!id: kuEXqIBdRo
+!front: What is Bernoulli's inequality?
+!back:
+Bernoulli's inequality states that for any real \( x \ge -1 \) and integer \( n \ge 1 \):
+
+\[ (1+x)^n \ge 1 + nx \]
+
+Equality holds iff \( x = 0 \) or \( n = 1 \).
+
+![Plot of (1+x)^n for n=3 against its tangent line 1+nx at x=0, over the domain x >= -1, showing the curve stays on or above the tangent everywhere in that domain with equality only at x=0](img/bernoulli_inequality.svg)
+~~~
+
+!id: ormoCYzPJz
+!front: Prove Bernoulli's inequality \( (1+x)^n \ge 1 + nx \) for \( x \ge -1 \), integer \( n \ge 1 \).
+!back:
+Proof by induction on \( n \).
+
+- Base case \( n = 1 \): \( (1+x)^1 = 1+x = 1 + 1 \cdot x \), so equality holds.
+- Inductive step: assume \( (1+x)^k \ge 1+kx \) for some \( k \ge 1 \). Since \( x \ge -1 \), \( 1+x \ge 0 \), so multiplying both sides of the inductive hypothesis by \( 1+x \) preserves the inequality:
+
+\[
+\begin{align*}
+(1+x)^{k+1} &= (1+x)^k(1+x) \\
+            &\ge (1+kx)(1+x) \\
+            &= 1 + (k+1)x + kx^2 \\
+            &\ge 1 + (k+1)x
+\end{align*}
+\]
+
+since \( kx^2 \ge 0 \).
 ~~~
