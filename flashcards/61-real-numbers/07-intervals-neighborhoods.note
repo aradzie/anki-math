@@ -1,0 +1,174 @@
+!type: Basic Math
+!deck: Math::Real-Numbers
+!tags: Math Real-Numbers Interval Neighborhood
+
+!id: A9WSrXfFla
+!front: What is an interval in \( \mathbb{R} \)?
+!back:
+An interval is a subset \( I \subseteq \mathbb{R} \) with no gaps: if \( x,y \in I \), \( x < z < y \), and \( z \in \mathbb{R} \), then \( z \in I \).
+
+So whenever an interval contains two real numbers, it also contains every real number between them.
+~~~
+
+!id: PNac4lyAyz
+!front: For \( a < b \), define the four bounded interval notations \( (a,b) \), \( [a,b] \), \( (a,b] \), and \( [a,b) \).
+!back:
+For real numbers \( a < b \):
+
+- \( (a,b)=\{x \in \mathbb{R}: a < x < b\} \)
+- \( [a,b]=\{x \in \mathbb{R}: a \le x \le b\} \)
+- \( (a,b]=\{x \in \mathbb{R}: a < x \le b\} \)
+- \( [a,b)=\{x \in \mathbb{R}: a \le x < b\} \)
+~~~
+
+!id: fM5Zf7k98m
+!front: Compare endpoint inclusion in \( (a,b) \), \( [a,b] \), \( (a,b] \), and \( [a,b) \), where \( a < b \).
+!back:
+- \( (a,b) \): neither endpoint is included.
+- \( [a,b] \): both endpoints are included.
+- \( (a,b] \): \( a \) is excluded and \( b \) is included.
+- \( [a,b) \): \( a \) is included and \( b \) is excluded.
+~~~
+
+!id: V69s53Gnz1
+!front: What does it mean for an interval in \( \mathbb{R} \) to be bounded?
+!back:
+An interval is bounded if it fits between two real numbers.
+
+For example, if \( a < b \), then \[ (a,b),\quad [a,b],\quad (a,b],\quad [a,b) \] are bounded intervals because every point in each interval lies between \( a \) and \( b \).
+~~~
+
+!id: XDiTcrdgGd
+!front: Define the standard unbounded interval notations \( (a,\infty) \), \( [a,\infty) \), \( (-\infty,b) \), and \( (-\infty,b] \).
+!back:
+For real numbers \( a \) and \( b \):
+
+- \( (a,\infty)=\{x \in \mathbb{R}: x>a\} \)
+- \( [a,\infty)=\{x \in \mathbb{R}: x\ge a\} \)
+- \( (-\infty,b)=\{x \in \mathbb{R}: x<b\} \)
+- \( (-\infty,b]=\{x \in \mathbb{R}: x\le b\} \)
+!extra: \( \infty \) and \( -\infty \) are not real-number endpoints; they indicate that the interval continues without a finite bound in that direction.
+~~~
+
+!id: RNGAcgogmm
+!front: Why are \( \infty \) and \( -\infty \) not included with square brackets in interval notation?
+!back:
+Because \( \infty \) and \( -\infty \) are not real numbers.
+
+An interval such as \( [a,\infty) \) includes \( a \), but it does not include \( \infty \). The symbol \( \infty \) only says the interval is unbounded above.
+~~~
+
+!id: 56wcrlmfLj
+!front: What are the degenerate interval cases \( [a,a] \), \( (a,a) \), \( [a,a) \), and \( (a,a] \)?
+!back:
+For any real number \( a \):
+
+- \( [a,a]=\{a\} \)
+- \( (a,a)=\emptyset \)
+- \( [a,a)=\emptyset \)
+- \( (a,a]=\emptyset \)
+
+Only the closed interval \( [a,a] \) contains its single endpoint.
+~~~
+
+!id: JrwtNOhqqq
+!front: Compare the open interval \( (a,b) \) and the closed interval \( [a,b] \) in \( \mathbb{R} \), where \( a < b \).
+!back:
+- An open interval such as \( (a,b) \) excludes both endpoints.
+- The closed interval \( [a,b] \) includes both endpoints.
+- Both are bounded intervals, but only \( [a,b] \) has a minimum \( a \) and a maximum \( b \).
+~~~
+
+!id: gqE8yhW41f
+!front: What is a \( \delta \)-neighborhood of a real number \( a \)?
+!back:
+For \( \delta > 0 \), the \( \delta \)-neighborhood of \( a \) is \[ (a-\delta,a+\delta). \]
+
+Equivalently, \[ (a-\delta,a+\delta)=\{x \in \mathbb{R}: |x-a|<\delta\}. \]
+
+It consists of all real numbers within distance \( \delta \) of \( a \).
+~~~
+
+!id: 6wXLdyKH9F
+!front: What does it mean for a set \( U \subseteq \mathbb{R} \) to be a neighborhood of \( a \)?
+!back:
+\( U \) is a neighborhood of \( a \) if there exists \( \delta > 0 \) such that \[ (a-\delta,a+\delta) \subseteq U. \]
+
+So \( U \) must contain some open interval around \( a \), not merely contain the point \( a \) itself.
+~~~
+
+!id: Ew3qRQkOlD
+!front: Why is \( \{a\} \) not a neighborhood of \( a \) in \( \mathbb{R} \)?
+!back:
+A neighborhood of \( a \) must contain some interval \[ (a-\delta,a+\delta) \] with \( \delta > 0 \). But every such interval contains real numbers other than \( a \), while \( \{a\} \) contains only \( a \).
+
+Therefore \( \{a\} \) is not a neighborhood of \( a \).
+~~~
+
+!id: 3jY9FIoY1q
+!front: What is a punctured \( \delta \)-neighborhood of \( a \) in \( \mathbb{R} \)?
+!back:
+For \( \delta > 0 \), the punctured \( \delta \)-neighborhood of \( a \) is \[ \{x \in \mathbb{R}: 0<|x-a|<\delta\}. \]
+
+Equivalently, \[ (a-\delta,a)\cup(a,a+\delta). \]
+
+It contains points near \( a \), but excludes \( a \) itself.
+~~~
+
+!id: lWUGWvPCTY
+!front: Why do limits often use punctured neighborhoods rather than ordinary neighborhoods?
+!back:
+A limit as \( x \to a \) describes what happens for \( x \) close to \( a \), with \( x \ne a \).
+
+That is why the relevant real numbers lie in a punctured neighborhood: \[ 0<|x-a|<\delta. \]
+
+The value at \( x=a \), if it exists, is not what determines the limit.
+~~~
+
+!id: 9AgxWc60fo
+!front: What are right-hand and left-hand \( \delta \)-neighborhoods of \( a \) in \( \mathbb{R} \)?
+!back:
+For \( \delta > 0 \):
+
+- a right-hand \( \delta \)-neighborhood of \( a \) is \( [a,a+\delta) \) or \( (a,a+\delta) \), depending on whether \( a \) itself is included;
+- a left-hand \( \delta \)-neighborhood of \( a \) is \( (a-\delta,a] \) or \( (a-\delta,a) \), depending on whether \( a \) itself is included.
+
+For one-sided limits, the punctured versions \( (a,a+\delta) \) and \( (a-\delta,a) \) are usually the relevant ones.
+~~~
+
+!id: KhirmiMZJB
+!front: What does it mean for a point \( c \) to be an interior point of an interval \( I \subseteq \mathbb{R} \)?
+!back:
+\( c \) is an interior point of \( I \) if there exists \( \delta > 0 \) such that \[ (c-\delta,c+\delta) \subseteq I. \]
+
+In plain terms, \( c \) has room inside \( I \) on both sides.
+~~~
+
+!id: kD8bPgeCos
+!front: Why is an endpoint of \( [a,b] \), with \( a < b \), not an interior point of \( [a,b] \) as a subset of \( \mathbb{R} \)?
+!back:
+At \( a \), every two-sided neighborhood \( (a-\delta,a+\delta) \) contains points less than \( a \), which are not in \( [a,b] \).
+
+At \( b \), every two-sided neighborhood \( (b-\delta,b+\delta) \) contains points greater than \( b \), which are not in \( [a,b] \).
+
+So \( a \) and \( b \) are endpoints of \( [a,b] \), but not interior points.
+~~~
+
+!id: hySQ9dDg9Z
+!front: Why do endpoint statements in calculus often require one-sided neighborhoods?
+!back:
+At an endpoint of an interval, there may be no points of the domain on one side.
+
+For example, if a function is defined on \( [a,b] \), then near \( a \) inside the domain one can only use points \( x \) with \[ a \le x < a+\delta. \]
+
+So endpoint behavior is naturally described with one-sided neighborhoods.
+~~~
+
+!id: RHYgw5hPGn
+!front: Compare a local statement near \( a \) with a global statement on an interval \( I \subseteq \mathbb{R} \).
+!back:
+- A local statement near \( a \) only needs to hold on some neighborhood of \( a \), such as \( (a-\delta,a+\delta) \).
+- A global statement on \( I \) must hold for every point of the whole interval \( I \).
+
+Local statements can be true near \( a \) even when they fail elsewhere on the interval.
+~~~

@@ -1,0 +1,33 @@
+!type: Basic Math
+!deck: Math::Real-Numbers
+!tags: Math Real-Numbers Density Approximation
+
+!id: rLc5kTW2u9
+!front: Prove that \( \mathbb{Q} \) is dense in \( \mathbb{R} \): for any \( a < b \), there exists a rational \( q \) with \( a < q < b \).
+!back:
+Let:
+
+- \( a < b \) be real numbers, so \( b - a > 0 \).
+
+To prove: there exists \( q \in \mathbb{Q} \) with \( a < q < b \).
+
+- By the Archimedean property, choose \( n \in \mathbb{N} \) with \( n > 1/(b-a) \), i.e. \( 1/n < b - a \).
+- Let \( m \) be the least integer with \( m > na \); such \( m \) exists because the Archimedean property bounds \( na \) above by some integer, and the integers above any real number have a least element. Then \( m - 1 \le na < m \).
+- Dividing \( m > na \) by \( n \) gives \( m/n > a \).
+- Dividing \( m - 1 \le na \) by \( n \) gives \( m/n \le a + 1/n < a + (b - a) = b \).
+- So \( q = m/n \in \mathbb{Q} \) satisfies \( a < q < b \).
+~~~
+
+!id: d0Sdw91TMY
+!front: Prove that the irrationals are dense in \( \mathbb{R} \): for any \( a < b \), there exists an irrational \( x \) with \( a < x < b \).
+!back:
+Let:
+
+- \( a < b \) be real numbers.
+
+To prove: there exists an irrational \( x \) with \( a < x < b \).
+
+- Since \( a - \sqrt{2} < b - \sqrt{2} \), density of \( \mathbb{Q} \) in \( \mathbb{R} \) gives a rational \( q \) with \( a - \sqrt{2} < q < b - \sqrt{2} \).
+- Let \( x = q + \sqrt{2} \). Then \( a < x < b \).
+- \( x \) is irrational: if \( x \) were rational, then \( \sqrt{2} = x - q \) would be a difference of rationals, hence rational, contradicting that \( \sqrt{2} \) is irrational.
+~~~

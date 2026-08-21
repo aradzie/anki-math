@@ -1,0 +1,111 @@
+!type: Basic Math
+!deck: Math::Real-Numbers
+!tags: Math Real-Numbers Ordered-Field
+
+!id: asGHfnSrC0
+!front: What operations, identities, and inverses are part of the field structure on \( \mathbb{R} \)?
+!back:
+The field structure on \( \mathbb{R} \) includes:
+
+- addition and multiplication;
+- an additive identity \( 0 \);
+- additive inverses \( -x \) for every \( x \in \mathbb{R} \);
+- a multiplicative identity \( 1 \);
+- multiplicative inverses \( x^{-1} \) for every nonzero \( x \in \mathbb{R} \).
+~~~
+
+!id: xGyZ1frFmT
+!front: What algebraic laws do addition and multiplication satisfy in a field?
+!back:
+In a field, addition and multiplication satisfy:
+
+- commutativity;
+- associativity;
+- distributivity;
+- identity laws;
+- inverse laws.
+~~~
+
+!id: 8HmEKAQ7ks
+!front: Which field property justifies canceling the same real number from both sides of an equation?
+!back:
+The existence of additive inverses.
+
+If \( a+c=b+c \), then adding \( -c \) to both sides gives \[ a+c-c=b+c-c, \] so \( a=b \).
+~~~
+
+!id: oVVngefHDX
+!front: Which field property justifies dividing both sides of an equation by a nonzero real number?
+!back:
+The existence of multiplicative inverses for nonzero real numbers.
+
+If \( ac=bc \) and \( c \ne 0 \), then multiplying both sides by \( c^{-1} \) gives \[ acc^{-1}=bcc^{-1}, \] so \( a=b \).
+!extra: The hypothesis \( c \ne 0 \) is essential because \( 0 \) has no multiplicative inverse.
+~~~
+
+!id: APDplJORem
+!front: What does it mean that \( \mathbb{R} \) is an ordered field?
+!back:
+\( \mathbb{R} \) is an ordered field means:
+
+- \( \mathbb{R} \) is a field.
+- The real numbers have a total order \( \le \).
+- The order is compatible with addition: if \( a \le b \), then \( a+c \le b+c \) for every \( c \in \mathbb{R} \).
+- The order is compatible with multiplication by nonnegative numbers: if \( a \le b \) and \( c \ge 0 \), then \( ac \le bc \).
+~~~
+
+!id: tlr2cGLIS9
+!front: What is the trichotomy property of the order on \( \mathbb{R} \)?
+!back:
+For any real numbers \( a \) and \( b \), exactly one of the following holds:
+
+- \( a < b \)
+- \( a = b \)
+- \( a > b \)
+
+This is one part of saying that the real-number order is total.
+~~~
+
+!id: AzPTZXYmNb
+!front: Why does adding the same real number to both sides preserve an inequality?
+!back:
+Because the order on \( \mathbb{R} \) is compatible with addition.
+
+For all \( a,b,c \in \mathbb{R} \), if \( a \le b \), then \[ a+c \le b+c. \]
+~~~
+
+!id: giG8ytr9HJ
+!front: Why does multiplying an inequality by a positive real number preserve the inequality?
+!back:
+Because the order on \( \mathbb{R} \) is compatible with multiplication by nonnegative numbers.
+
+If \( a \le b \) and \( c > 0 \), then \[ ac \le bc. \]
+~~~
+
+!id: ftPxpcoWmX
+!front: Why does multiplying an inequality by a negative real number reverse the inequality?
+!back:
+Let \( a \le b \) and \( c < 0 \). Since \( -c > 0 \), multiplication by \( -c \) preserves order: \[ a(-c) \le b(-c). \]
+
+That is \( -ac \le -bc \). Adding \( ac+bc \) to both sides gives \( bc \le ac \), so \( ac \ge bc \).
+
+Thus multiplying by a negative real number reverses the inequality.
+~~~
+
+!id: oo2qDaNsdH
+!front: What ordered-field properties do \( \mathbb{Q} \) and \( \mathbb{R} \) have in common?
+!back:
+\( \mathbb{Q} \) and \( \mathbb{R} \) are both ordered fields:
+
+- they satisfy the field laws for addition, multiplication, additive inverses, and multiplicative inverses of nonzero elements;
+- they have a total order;
+- the order is compatible with addition and multiplication by nonnegative numbers.
+~~~
+
+!id: zirzJdwEt0
+!front: What important real-number property distinguishes \( \mathbb{R} \) from \( \mathbb{Q} \)?
+!back:
+\( \mathbb{R} \) is complete, while \( \mathbb{Q} \) is not.
+
+The ordered-field axioms alone do not distinguish \( \mathbb{R} \) from \( \mathbb{Q} \). The extra property needed for calculus is completeness.
+~~~

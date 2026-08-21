@@ -1,0 +1,27 @@
+!type: Basic Math
+!deck: Math::Real-Numbers
+!tags: Math Real-Numbers Completeness
+
+!id: MFZGG2uCEf
+!front: State the completeness (least upper bound) axiom of \( \mathbb{R} \).
+!back:
+If \( A \subseteq \mathbb{R} \) is:
+
+- nonempty, and
+- bounded above,
+
+then \( A \) has a least upper bound \( \sup A \in \mathbb{R} \).
+!extra: This is taken as an axiom of \( \mathbb{R} \), not derived from the field and order axioms — it is exactly the property that distinguishes \( \mathbb{R} \) from \( \mathbb{Q} \).
+~~~
+
+!id: 828qKjoRsk
+!front: Let \( A = \{x \in \mathbb{Q} : x^2 < 2\} \). Is \( A \) bounded above in \( \mathbb{Q} \)? Does it have a least upper bound in \( \mathbb{Q} \)?
+!back:
+\( A \) is bounded above in \( \mathbb{Q} \) — e.g. \( 2 \) is a rational upper bound.
+
+\( A \) has no least upper bound in \( \mathbb{Q} \): the natural candidate is \( \sqrt{2} \), which is irrational, and for any rational upper bound \( q > \sqrt{2} \), a rational \( q' \) with \( \sqrt{2} < q' < q \) can always be found, so \( q \) is never the smallest rational upper bound.
+!extra:
+This is why completeness must be added as an axiom: \( \mathbb{Q} \) satisfies the field and order axioms of \( \mathbb{R} \) but fails completeness.
+
+![The rationals below sqrt(2) have no least upper bound in Q](img/rational_gap.svg)
+~~~

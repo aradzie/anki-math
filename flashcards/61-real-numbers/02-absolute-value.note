@@ -1,0 +1,220 @@
+!type: Basic Math
+!deck: Math::Real-Numbers
+!tags: Math Real-Numbers Absolute-Value Inequality
+
+!id: C3mD0XhGrY
+!front: Define the absolute value \( |x| \) of a real number \( x \).
+!back:
+\[
+|x| =
+\begin{cases}
+    x, & x \ge 0, \\
+    -x, & x < 0.
+\end{cases}
+\]
+
+So \( |x| \) is the nonnegative magnitude of \( x \), ignoring its sign.
+~~~
+
+!id: OKudtzzxwG
+!front: What are the basic nonnegativity and zero properties of \( |x| \) for \( x \in \mathbb{R} \)?
+!back:
+For every \( x \in \mathbb{R} \):
+
+- \( |x| \ge 0 \).
+- \( |x| = 0 \) if and only if \( x = 0 \).
+~~~
+
+!id: bkDNDuoT9y
+!front: Why does \( |-x| = |x| \) for every real number \( x \)?
+!back:
+Absolute value ignores sign. More formally:
+
+- If \( x \ge 0 \), then \( |x|=x \) and \( |-x|=-(-x)=x \).
+- If \( x < 0 \), then \( |x|=-x \) and \( |-x|=-x \), since \( -x>0 \).
+
+So \( |-x|=|x| \) in both cases.
+~~~
+
+!id: bSkEfDn71X
+!front: How is \( |x| \) related to \( x^2 \)?
+!back:
+For every real number \( x \), \[ |x|^2 = x^2. \]
+
+Equivalently, \[ |x| = \sqrt{x^2}, \] where \( \sqrt{x^2} \) denotes the nonnegative square root of \( x^2 \).
+~~~
+
+!id: SOkq1mTQZD
+!front: Interpret \( |x-a| \) geometrically on the real line.
+!back:
+\( |x-a| \) is the distance between the real numbers \( x \) and \( a \) on the real line.
+
+It is symmetric: \[ |x-a| = |a-x|. \]
+~~~
+
+!id: ZeXr2wL93j
+!front: Convert \( |x-a| < r \), with \( r > 0 \), into a double inequality.
+!back:
+\[
+    |x-a| < r
+    \quad\Longleftrightarrow\quad
+    -r < x-a < r
+    \quad\Longleftrightarrow\quad
+    a-r < x < a+r.
+\]
+
+So \( |x-a| < r \) means \( x \) lies inside the open interval centered at \( a \) with radius \( r \).
+~~~
+
+!id: YVpH3sppeh
+!front: Convert \( |x-a| \le r \), with \( r \ge 0 \), into a double inequality.
+!back:
+\[
+    |x-a| \le r
+    \quad\Longleftrightarrow\quad
+    -r \le x-a \le r
+    \quad\Longleftrightarrow\quad
+    a-r \le x \le a+r.
+\]
+
+So \( |x-a| \le r \) means \( x \) lies inside the closed interval centered at \( a \) with radius \( r \).
+~~~
+
+!id: QUQnqVj8gf
+!front: Convert \( |x-a| > r \), with \( r \ge 0 \), into ordinary inequalities.
+!back:
+\[
+    |x-a| > r
+    \quad\Longleftrightarrow\quad
+    x-a > r \text{ or } x-a < -r.
+\]
+
+Equivalently, \[ x > a+r \quad\text{or}\quad x < a-r. \]
+
+So \( x \) lies outside the closed interval \( [a-r,a+r] \).
+~~~
+
+!id: 8keu7a5h4b
+!front: Why does \( |x| \le M \), with \( M \ge 0 \), imply both an upper and a lower bound for \( x \)?
+!back:
+\[
+    |x| \le M
+    \quad\Longleftrightarrow\quad
+    -M \le x \le M.
+\]
+
+Thus \( M \) is an upper bound for \( x \), and \( -M \) is a lower bound for \( x \).
+!extra:
+The assumption \( M \ge 0 \) matters because \( |x| \) is always nonnegative.
+If \( M < 0 \), no real \( x \) can satisfy \( |x| \le M \).
+~~~
+
+!id: lbGh7NjyEO
+!front: Why does \( |x| < M \), with \( M > 0 \), mean \( x \) is trapped between \( -M \) and \( M \)?
+!back:
+\[
+    |x| < M
+    \quad\Longleftrightarrow\quad
+    -M < x < M.
+\]
+
+This says \( x \) is within distance \( M \) of \( 0 \).
+~~~
+
+!id: 9BwYi1Dtcm
+!front: Characterize bounded subsets of \( \mathbb{R} \) using absolute value.
+!back: A set \( A \subseteq \mathbb{R} \) is bounded if and only if there exists \( M \ge 0 \) such that \[ |a| \le M \] for every \( a \in A \).
+!extra: This single inequality combines an upper bound \( a \le M \) and a lower bound \( a \ge -M \).
+~~~
+
+!id: OYERfFZfqi
+!front: State the triangle inequality for real numbers.
+!back:
+For all real numbers \( x \) and \( y \), \[ |x+y| \le |x|+|y|. \]
+
+It says the magnitude of a sum is at most the sum of the magnitudes.
+~~~
+
+!id: k7OhYhdbBx
+!front: Prove the triangle inequality \( |x+y| \le |x|+|y| \) for real numbers.
+!back:
+Let:
+
+- \( x,y \in \mathbb{R} \).
+
+To prove: \( |x+y| \le |x|+|y| \).
+
+- Since \( -|x| \le x \le |x| \) and \( -|y| \le y \le |y| \), adding the inequalities gives \[ -(|x|+|y|) \le x+y \le |x|+|y|. \]
+- Therefore \( |x+y| \le |x|+|y| \).
+~~~
+
+!id: Y7atRaR4qL
+!front: State the reverse triangle inequality for real numbers.
+!back:
+For all real numbers \( x \) and \( y \), \[ \bigl||x|-|y|\bigr| \le |x-y|. \]
+
+Equivalently, \[ |x-y| \ge \bigl||x|-|y|\bigr|. \]
+
+It says the distance between magnitudes is at most the distance between the original numbers.
+~~~
+
+!id: Dk7Wf4xix1
+!front: Derive the reverse triangle inequality from the triangle inequality.
+!back:
+Let:
+
+- \( x,y \in \mathbb{R} \).
+
+To prove: \( \bigl||x|-|y|\bigr| \le |x-y| \).
+
+- Apply the triangle inequality to \( x=(x-y)+y \): \[ |x| \le |x-y|+|y|, \] so \( |x|-|y| \le |x-y| \).
+- Apply the triangle inequality to \( y=(y-x)+x \): \[ |y| \le |x-y|+|x|, \] so \( |y|-|x| \le |x-y| \).
+- Therefore both \( |x|-|y| \) and \( |y|-|x| \) are at most \( |x-y| \), which is exactly \[ \bigl||x|-|y|\bigr| \le |x-y|. \]
+~~~
+
+!id: Xfru4ruT3x
+!front: How does the triangle inequality estimate the distance from \( x \) to \( y \) through an intermediate point \( a \)?
+!back:
+For all real numbers \( x,a,y \), \[ |x-y| = |(x-a)+(a-y)| \le |x-a|+|a-y|. \]
+
+So the direct distance from \( x \) to \( y \) is at most the distance from \( x \) to \( a \) plus the distance from \( a \) to \( y \).
+~~~
+
+!id: Gn7jJlym99
+!front: How does absolute value behave with products of real numbers?
+!back:
+For all real numbers \( x \) and \( y \), \[ |xy| = |x|\,|y|. \]
+
+This lets bounds multiply cleanly: if \( |x| \le M \) and \( |y| \le N \), with \( M,N \ge 0 \), then \[ |xy| \le MN. \]
+~~~
+
+!id: Dx9eDWhbrK
+!front: How does absolute value behave with reciprocals and quotients of real numbers?
+!back:
+If \( x \ne 0 \), then \[ \left|\frac{1}{x}\right| = \frac{1}{|x|}. \]
+
+If \( y \ne 0 \), then \[ \left|\frac{x}{y}\right| = \frac{|x|}{|y|}. \]
+~~~
+
+!id: P9KMLP4z9B
+!front: If \( |x-a| < \delta \) and \( |y-b| < \varepsilon \), how can you bound \( |(x+y)-(a+b)| \)?
+!back:
+Use the triangle inequality:
+\[
+\begin{align*}
+    |(x+y)-(a+b)|
+        &= |(x-a)+(y-b)| \\
+        &\le |x-a|+|y-b| \\
+        &< \delta+\varepsilon.
+\end{align*}
+\]
+This is the basic estimate behind proving that sums preserve closeness.
+~~~
+
+!id: RZhId0Cdoh
+!front: If \( |x| \le M \) and \( |x-y| < \varepsilon \), how can you bound \( |y| \)?
+!back:
+Use \( y=x+(y-x) \) and the triangle inequality: \[ |y| \le |x|+|y-x| < M+\varepsilon. \]
+
+So a number close to a bounded number is also bounded, with a slightly larger bound.
+~~~

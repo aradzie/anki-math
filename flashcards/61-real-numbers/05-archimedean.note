@@ -1,0 +1,34 @@
+!type: Basic Math
+!deck: Math::Real-Numbers
+!tags: Math Real-Numbers Archimedean
+
+!id: YXPzEiGy44
+!front: State and derive the Archimedean property of \( \mathbb{R} \) from the completeness axiom.
+!back:
+Statement: for every \( x \in \mathbb{R} \), there exists \( n \in \mathbb{N} \) with \( n > x \).
+
+Let:
+
+- Suppose, for contradiction, that \( \mathbb{N} \) is bounded above.
+
+To prove: this leads to a contradiction, establishing the statement.
+
+- By completeness, \( s = \sup \mathbb{N} \) exists.
+- Since \( s - 1 < s \), \( s-1 \) is not an upper bound of \( \mathbb{N} \), so there exists \( n \in \mathbb{N} \) with \( n > s - 1 \).
+- Then \( n + 1 \in \mathbb{N} \) satisfies \( n+1 > s \), contradicting that \( s \) is an upper bound of \( \mathbb{N} \).
+- So \( \mathbb{N} \) is unbounded above, i.e. for every \( x \in \mathbb{R} \) some \( n \in \mathbb{N} \) exceeds it.
+~~~
+
+!id: 029LBMbKUD
+!front: Derive the reciprocal form of the Archimedean property: for every \( \varepsilon > 0 \), there exists \( n \in \mathbb{N} \) with \( 1/n < \varepsilon \).
+!back:
+Let:
+
+- \( \varepsilon > 0 \) be given.
+
+To prove: there exists \( n \in \mathbb{N} \) with \( 1/n < \varepsilon \).
+
+- By the Archimedean property applied to \( x = 1/\varepsilon \), there exists \( n \in \mathbb{N} \) with \( n > 1/\varepsilon \).
+- Since \( n > 0 \) and \( \varepsilon > 0 \), multiplying both sides of \( n > 1/\varepsilon \) by \( \varepsilon/n > 0 \) gives \( \varepsilon > 1/n \).
+!extra: This is the form actually invoked in most \( \varepsilon \)-\( N \) arguments — e.g. it is what shows \( \inf\{1/n : n \in \mathbb{N}\} = 0 \).
+~~~
