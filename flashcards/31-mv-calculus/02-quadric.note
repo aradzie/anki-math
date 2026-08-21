@@ -11,11 +11,11 @@ The most general **quadric surface** has the form
 
 \[
 \begin{align*}
-    & A x^2 + B y^2 + C z^2 \\
-    & + D xy + E yz + F xz \\
-    & + G x + H y + I z \\
-    & + J \\
-    & = 0
+  & A x^2 + B y^2 + C z^2 \\
+  & + D xy + E yz + F xz \\
+  & + G x + H y + I z \\
+  & + J \\
+  & = 0
 \end{align*}
 \]
 

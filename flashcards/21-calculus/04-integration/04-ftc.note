@@ -35,12 +35,9 @@ Let:
 
 To prove: \( F'(x)=f(x) \).
 
-- By additivity,
-\[ F(x+h)-F(x)=\int_x^{x+h} f(t)\,dt. \]
-- By the Mean Value Theorem for Integrals, there is a point \( c_h \) between \( x \) and \( x+h \) such that
-\[ \int_x^{x+h} f(t)\,dt=f(c_h)h. \]
-- Hence
-\[ \frac{F(x+h)-F(x)}{h}=f(c_h). \]
+- By additivity, \[ F(x+h)-F(x)=\int_x^{x+h} f(t)\,dt. \]
+- By the Mean Value Theorem for Integrals, there is a point \( c_h \) between \( x \) and \( x+h \) such that \[ \int_x^{x+h} f(t)\,dt=f(c_h)h. \]
+- Hence \[ \frac{F(x+h)-F(x)}{h}=f(c_h). \]
 - As \( h\to0 \), \( c_h\to x \), so continuity gives \( f(c_h)\to f(x) \).
 - Therefore \( F'(x)=f(x) \).
 ~~~
@@ -75,7 +72,7 @@ To prove: \( \int_a^b f(x)\,dx=F(b)-F(a) \).
         &= \int_a^b f(t)\,dt-\int_a^a f(t)\,dt \\
         &= \int_a^b f(t)\,dt.
   \end{align*}
-\]
+  \]
 !extra: Uses that a function with derivative identically \( 0 \) on an interval is constant there — itself a consequence of the Mean Value Theorem.
 ~~~
 

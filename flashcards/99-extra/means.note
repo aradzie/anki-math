@@ -68,8 +68,8 @@ of two nonnegative numbers \( a \) and \( b \).
 A quick derivation:
 \[
 \begin{align*}
-    0 &\le (\sqrt{a} - \sqrt{b})^2 \\
-      &= a - 2\sqrt{ab} + b,
+  0 &\le (\sqrt{a} - \sqrt{b})^2 \\
+    &= a - 2\sqrt{ab} + b,
 \end{align*}
 \]
 so \( 2\sqrt{ab} \le a+b \), hence \( \sqrt{ab} \le \dfrac{a+b}{2} \).
@@ -94,9 +94,9 @@ where
 !back:
 Require:
 
-- \(I \subseteq \mathbb{R}\) is an interval
-- \(x_1, x_2, \ldots, x_n \in I\), with \(n \ge 1\)
-- \(f:I \to \mathbb{R}\) is continuous and strictly monotone
+- \( I \subseteq \mathbb{R} \) is an interval
+- \( x_1, x_2, \ldots, x_n \in I \), with \( n \ge 1 \)
+- \( f:I \to \mathbb{R} \) is continuous and strictly monotone
 
 Strict monotonicity makes \( f \) invertible on its image \( f(I) \). Continuity makes \( f(I) \) an interval, so the arithmetic average of \( f(x_1), \ldots, f(x_n) \) still lies in \( f(I) \).
 ~~~
@@ -105,11 +105,7 @@ Strict monotonicity makes \( f \) invertible on its image \( f(I) \). Continuity
 !front: State the Kolmogorov-Nagumo, or quasi-arithmetic, mean formula.
 !back:
 If \( I \subseteq \mathbb{R} \) is an interval, \( x_1, \ldots, x_n \in I \), and \( f:I \to \mathbb{R} \) is continuous and strictly monotone, then
-\[
-M_f(x_1, x_2, \ldots, x_n)
-    =
-    f^{-1} \left( \frac{1}{n} \sum_{i=1}^n f(x_i) \right).
-\]
+\[ M_f(x_1, x_2, \ldots, x_n) = f^{-1} \left( \frac{1}{n} \sum_{i=1}^n f(x_i) \right). \]
 
 Here \( f^{-1} \) is taken on the image \( f(I) \).
 !extra: Equivalently: apply \( f \), take the arithmetic mean, then apply \( f^{-1} \).
@@ -130,8 +126,8 @@ Different choices of \( f \) produce different means; the domain restrictions co
 The **arithmetic mean (AM)**:
 \[
 \begin{align*}
-    M_f(x_1, \ldots, x_n)
-    &= \frac{1}{n}\sum_{i=1}^n x_i.
+  M_f(x_1, \ldots, x_n)
+  &= \frac{1}{n}\sum_{i=1}^n x_i.
 \end{align*}
 \]
 ~~~
@@ -142,9 +138,9 @@ The **arithmetic mean (AM)**:
 The **geometric mean (GM)**:
 \[
 \begin{align*}
-    M_f(x_1, \ldots, x_n)
-    &= \exp\left(\frac{1}{n}\sum_{i=1}^n \ln x_i\right) \\
-    &= \left(\prod_{i=1}^n x_i\right)^{1/n}.
+  M_f(x_1, \ldots, x_n)
+  &= \exp\left(\frac{1}{n}\sum_{i=1}^n \ln x_i\right) \\
+  &= \left(\prod_{i=1}^n x_i\right)^{1/n}.
 \end{align*}
 \]
 ~~~
@@ -155,9 +151,9 @@ The **geometric mean (GM)**:
 The **harmonic mean (HM)**:
 \[
 \begin{align*}
-    M_f(x_1, \ldots, x_n)
-    &= \left(\frac{1}{n}\sum_{i=1}^n \frac{1}{x_i}\right)^{-1} \\
-    &= \frac{n}{\sum_{i=1}^n \frac{1}{x_i}}.
+  M_f(x_1, \ldots, x_n)
+  &= \left(\frac{1}{n}\sum_{i=1}^n \frac{1}{x_i}\right)^{-1} \\
+  &= \frac{n}{\sum_{i=1}^n \frac{1}{x_i}}.
 \end{align*}
 \]
 ~~~
@@ -168,8 +164,8 @@ The **harmonic mean (HM)**:
 The **power mean (PM)** of order \( p \):
 \[
 \begin{align*}
-    M_f(x_1, \ldots, x_n)
-    &= \left(\frac{1}{n}\sum_{i=1}^n x_i^p\right)^{1/p}.
+  M_f(x_1, \ldots, x_n)
+  &= \left(\frac{1}{n}\sum_{i=1}^n x_i^p\right)^{1/p}.
 \end{align*}
 \]
 ~~~
@@ -180,8 +176,8 @@ The **power mean (PM)** of order \( p \):
 The **quadratic mean (QM)**, restricted to positive inputs:
 \[
 \begin{align*}
-    M_f(x_1, \ldots, x_n)
-    &= \sqrt{\frac{1}{n}\sum_{i=1}^n x_i^2}.
+  M_f(x_1, \ldots, x_n)
+  &= \sqrt{\frac{1}{n}\sum_{i=1}^n x_i^2}.
 \end{align*}
 \]
 

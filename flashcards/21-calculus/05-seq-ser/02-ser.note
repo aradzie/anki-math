@@ -229,9 +229,11 @@ Suppose there is a function \( f \colon [N,\infty) \to \mathbb{R} \) such that:
 
 Then the series and the corresponding improper integral both converge or both diverge:
 
-\[ \sum_{n=N}^{\infty} a_n \text{ converges}
-    \iff
-    \int_N^\infty f(x)\,dx \text{ converges}. \]
+\[
+  \sum_{n=N}^{\infty} a_n \text{ converges}
+  \iff
+  \int_N^\infty f(x)\,dx \text{ converges}.
+\]
 !extra: ![Integral test](img/integral_test.svg)
 ~~~
 
@@ -483,10 +485,12 @@ So \( \sum a_n \) satisfies the Cauchy criterion and converges.
 !back:
 It is conditionally convergent.
 
-\[ \begin{align*}
-1 + \frac{1}{2} + \frac{1}{3} + \frac{1}{4} + \ldots & \to \infty \\
-1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \ldots & \to \ln(2)
-\end{align*} \]
+\[
+\begin{align*}
+  1 + \frac{1}{2} + \frac{1}{3} + \frac{1}{4} + \ldots & \to \infty \\
+  1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \ldots & \to \ln(2)
+\end{align*}
+\]
 ~~~
 
 !id: XSNe80Uuqs

@@ -9,11 +9,14 @@ Consider two vectors \( \mathbf{a} \) and \( \mathbf{b} \) in the 3-dimensional 
 
 The **Cross Product** \( \mathbf{a} \times \mathbf{b} \) is the determinant
 
-\[ \mathbf{a} \times \mathbf{b} = \begin{vmatrix}
-    \mathbf{i} & \mathbf{j} & \mathbf{k} \\
-    a_1 & a_2 & a_3 \\
-    b_1 & b_2 & b_3
-\end{vmatrix} \]
+\[
+\mathbf{a} \times \mathbf{b} =
+\begin{vmatrix}
+  \mathbf{i} & \mathbf{j} & \mathbf{k} \\
+  a_1 & a_2 & a_3 \\
+  b_1 & b_2 & b_3
+\end{vmatrix}
+\]
 
 which expands to
 
@@ -126,19 +129,13 @@ Also, each basis vector crossed with itself is \( \mathbf{0} \).
 !back:
 For \( \mathbf{a},\mathbf{b}\in\mathbb{R}^3 \),
 
-\[
-\|\mathbf{a}\times\mathbf{b}\|
-=
-\|\mathbf{a}\|\,\|\mathbf{b}\|\sin\theta,
-\]
+\[ \|\mathbf{a}\times\mathbf{b}\| = \|\mathbf{a}\|\,\|\mathbf{b}\|\sin\theta, \]
 
 where \( \theta \) is the angle between them. This is base times height, so it is the area of the parallelogram spanned by \( \mathbf{a} \) and \( \mathbf{b} \).
 
 The area of the triangle with sides \( \mathbf{a} \) and \( \mathbf{b} \) from a common tail is therefore
 
-\[
-\frac{1}{2}\|\mathbf{a}\times\mathbf{b}\|.
-\]
+\[ \frac{1}{2}\|\mathbf{a}\times\mathbf{b}\|. \]
 ~~~
 
 !id: c0SN7CZfc2
@@ -177,9 +174,7 @@ The order of the factors must be preserved, because the cross product is anti-co
 !back:
 The scalar triple product is
 
-\[
-\mathbf{a}\cdot(\mathbf{b}\times\mathbf{c}).
-\]
+\[ \mathbf{a}\cdot(\mathbf{b}\times\mathbf{c}). \]
 
 Geometrically, its absolute value is the volume of the parallelepiped spanned by \( \mathbf{a},\mathbf{b},\mathbf{c} \):
 

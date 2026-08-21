@@ -25,9 +25,9 @@ where:
 !back:
 \[
 \begin{align*}
-    x &= p_x + td_x \\
-    y &= p_y + td_y \\
-    z &= p_z + td_z
+  x &= p_x + td_x \\
+  y &= p_y + td_y \\
+  z &= p_z + td_z
 \end{align*}
 \]
 
@@ -71,9 +71,9 @@ To prove: \( \dfrac{x-p_x}{d_x}=\dfrac{y-p_y}{d_y}=\dfrac{z-p_z}{d_z} \).
 
 \[
 \begin{align*}
-    t &= \frac{x-p_x}{d_x} \\
-    t &= \frac{y-p_y}{d_y} \\
-    t &= \frac{z-p_z}{d_z}.
+  t &= \frac{x-p_x}{d_x} \\
+  t &= \frac{y-p_y}{d_y} \\
+  t &= \frac{z-p_z}{d_z}.
 \end{align*}
 \]
 
@@ -133,10 +133,10 @@ Expanding the equation gives
 
 \[
 \begin{align*}
-    (\mathbf{r} - \mathbf{p}) \cdot \mathbf{n} &= 0 \\
-    \mathbf{r} \cdot \mathbf{n} - \mathbf{p} \cdot \mathbf{n} &= 0 \\
-    \mathbf{r} \cdot \mathbf{n} &= \mathbf{p} \cdot \mathbf{n} \\
-    \mathbf{r} \cdot \mathbf{n} &= d
+  (\mathbf{r} - \mathbf{p}) \cdot \mathbf{n} &= 0 \\
+  \mathbf{r} \cdot \mathbf{n} - \mathbf{p} \cdot \mathbf{n} &= 0 \\
+  \mathbf{r} \cdot \mathbf{n} &= \mathbf{p} \cdot \mathbf{n} \\
+  \mathbf{r} \cdot \mathbf{n} &= d
 \end{align*}
 \]
 
@@ -194,9 +194,7 @@ To find: a scalar equation for the same plane.
 - This \( \mathbf{n} \) is perpendicular to both spanning directions, so it is normal to the plane.
 - Therefore the plane is
 
-\[
-(\mathbf{r}-\mathbf{p})\cdot(\mathbf{b}\times\mathbf{c})=0.
-\]
+\[ (\mathbf{r}-\mathbf{p})\cdot(\mathbf{b}\times\mathbf{c})=0. \]
 
 In coordinates, if \( \mathbf{b}\times\mathbf{c}=\langle a,b,c\rangle \), this becomes \( ax+by+cz=d \), where \( d=\mathbf{p}\cdot(\mathbf{b}\times\mathbf{c}) \).
 
@@ -216,15 +214,11 @@ If the three points are noncollinear, then
 
 are nonparallel direction vectors in the plane. A normal vector is
 
-\[
-\mathbf{n}=(\mathbf{q}-\mathbf{p})\times(\mathbf{s}-\mathbf{p}),
-\]
+\[ \mathbf{n}=(\mathbf{q}-\mathbf{p})\times(\mathbf{s}-\mathbf{p}), \]
 
 so the plane equation is
 
-\[
-(\mathbf{r}-\mathbf{p})\cdot\bigl((\mathbf{q}-\mathbf{p})\times(\mathbf{s}-\mathbf{p})\bigr)=0.
-\]
+\[ (\mathbf{r}-\mathbf{p})\cdot\bigl((\mathbf{q}-\mathbf{p})\times(\mathbf{s}-\mathbf{p})\bigr)=0. \]
 
 ![The plane through p, q, s: the edge vectors q - p and s - p give the normal n = (q-p) x (s-p)](img/plane_through_three_points.svg)
 ~~~
@@ -234,9 +228,7 @@ so the plane equation is
 !back:
 If \( \mathbf{p},\mathbf{q},\mathbf{s} \) are collinear, then \( \mathbf{q}-\mathbf{p} \) and \( \mathbf{s}-\mathbf{p} \) are parallel, so
 
-\[
-(\mathbf{q}-\mathbf{p})\times(\mathbf{s}-\mathbf{p})=\mathbf{0}.
-\]
+\[ (\mathbf{q}-\mathbf{p})\times(\mathbf{s}-\mathbf{p})=\mathbf{0}. \]
 
 That gives no nonzero normal vector. Geometrically, three collinear points determine only a line, and infinitely many planes contain that line.
 ~~~
@@ -278,9 +270,7 @@ To prove: \( \operatorname{dist}(\mathbf{x}_0,\Pi)=\dfrac{|(\mathbf{x}_0-\mathbf
 - Only its component in the normal direction contributes to perpendicular distance from the plane.
 - The signed scalar component along \( \mathbf{n} \) is
 
-\[
-\frac{(\mathbf{x}_0-\mathbf{p})\cdot\mathbf{n}}{\|\mathbf{n}\|}.
-\]
+\[ \frac{(\mathbf{x}_0-\mathbf{p})\cdot\mathbf{n}}{\|\mathbf{n}\|}. \]
 
 - Taking absolute value gives the nonnegative distance:
 

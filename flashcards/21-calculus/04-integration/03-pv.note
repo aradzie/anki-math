@@ -6,8 +6,10 @@
 !front: What is the Cauchy principal value of \( \int_{-\infty}^\infty f(x)\, dx \)?
 !back:
 The Cauchy principal value uses one symmetric limiting interval:
-\[ \operatorname{p.v.}\int_{-\infty}^{\infty} f(x)\,dx
-    = \lim_{R\to\infty}\int_{-R}^{R} f(x)\,dx, \]
+\[
+  \operatorname{p.v.}\int_{-\infty}^{\infty} f(x)\,dx =
+  \lim_{R\to\infty}\int_{-R}^{R} f(x)\,dx,
+\]
 provided this finite limit exists.
 
 This is weaker than ordinary improper convergence, which requires the two one-sided integrals to converge separately.
@@ -18,13 +20,15 @@ This is weaker than ordinary improper convergence, which requires the two one-si
 !front: What is the Cauchy principal value of \( \int_a^b f(x)\, dx \) when \( f \) has an interior singularity at \( c \in (a,b) \)?
 !back:
 Remove equal neighborhoods on both sides of the singularity and take one joint limit:
-\[ \operatorname{p.v.}\int_a^b f(x)\,dx
-    = \lim_{\varepsilon\to0^+}
-    \left(
-        \int_a^{c-\varepsilon} f(x)\,dx
-        +
-        \int_{c+\varepsilon}^{b} f(x)\,dx
-    \right), \]
+\[
+  \operatorname{p.v.}\int_a^b f(x)\,dx =
+  \lim_{\varepsilon\to0^+}
+  \left(
+    \int_a^{c-\varepsilon} f(x)\,dx
+    +
+    \int_{c+\varepsilon}^{b} f(x)\,dx
+  \right),
+\]
 provided this finite limit exists.
 
 Ordinary improper convergence instead requires the two one-sided integrals at \( c \) to converge separately.
@@ -43,12 +47,16 @@ The principal value takes a single symmetric limit instead. This can make equal-
 !front: True or false: If \( \int_{-\infty}^\infty f(x)\, dx \) converges as an improper integral, then its Cauchy principal value converges to the same value.
 !back:
 True. Ordinary improper convergence gives separate finite limits for
-\[ \int_{-\infty}^{0} f(x)\,dx
-    \quad\text{and}\quad
-    \int_0^\infty f(x)\,dx. \]
+\[
+  \int_{-\infty}^{0} f(x)\,dx
+  \quad\text{and}\quad
+  \int_0^\infty f(x)\,dx.
+\]
 Therefore
-\[ \int_{-R}^{R}f(x)\,dx
-    = \int_{-R}^{0}f(x)\,dx + \int_0^{R}f(x)\,dx \]
+\[
+  \int_{-R}^{R}f(x)\,dx =
+  \int_{-R}^{0}f(x)\,dx + \int_0^{R}f(x)\,dx
+\]
 converges to the same sum as \( R\to\infty \).
 ~~~
 
@@ -67,18 +75,18 @@ That limit may exist because the two tails cancel each other, even though the on
 For the principal value,
 \[
 \begin{align*}
-    \operatorname{p.v.}\int_{-\infty}^{\infty}x\,dx
-        &= \lim_{R\to\infty}\int_{-R}^{R}x\,dx \\
-        &= \lim_{R\to\infty}\left[\frac{x^2}{2}\right]_{-R}^{R} \\
-        &= 0.
+  \operatorname{p.v.}\int_{-\infty}^{\infty}x\,dx
+    &= \lim_{R\to\infty}\int_{-R}^{R}x\,dx \\
+    &= \lim_{R\to\infty}\left[\frac{x^2}{2}\right]_{-R}^{R} \\
+    &= 0.
 \end{align*}
 \]
 
 But the ordinary improper integral requires the two tails separately:
 \[
 \begin{align*}
-    \int_{-\infty}^{0}x\,dx &= \lim_{R\to-\infty}\int_R^0 x\,dx = -\infty, \\
-    \int_0^\infty x\,dx &= \lim_{R\to\infty}\int_0^R x\,dx = \infty.
+  \int_{-\infty}^{0}x\,dx &= \lim_{R\to-\infty}\int_R^0 x\,dx = -\infty, \\
+  \int_0^\infty x\,dx &= \lim_{R\to\infty}\int_0^R x\,dx = \infty.
 \end{align*}
 \]
 Since those one-sided integrals do not converge as finite numbers, the ordinary improper integral diverges.
@@ -116,9 +124,9 @@ Contrast with the ordinary improper integral \( \int_{-\infty}^\infty f(x)\, dx 
 !back:
 No. Decompose \( f \) into its even and odd parts:
 \[
-    f_e(x)=\frac{f(x)+f(-x)}{2},
-    \qquad
-    f_o(x)=\frac{f(x)-f(-x)}{2}.
+  f_e(x)=\frac{f(x)+f(-x)}{2},
+  \qquad
+  f_o(x)=\frac{f(x)-f(-x)}{2}.
 \]
 The odd part contributes nothing on every symmetric interval:
 \[ \int_{-R}^{R} f_o(x)\,dx = 0. \]
@@ -142,15 +150,15 @@ Oddness creates exact symmetric cancellation. Evenness removes that cancellation
 The principal value is \( 0 \). Indeed,
 \[
 \begin{align*}
-    \operatorname{p.v.}\int_{-1}^{1}\frac{dx}{x}
-        &= \lim_{\varepsilon\to0^+}
-            \left(
-                \int_{-1}^{-\varepsilon}\frac{dx}{x}
-                +
-                \int_{\varepsilon}^{1}\frac{dx}{x}
-            \right) \\
-        &= \lim_{\varepsilon\to0^+}\big(\ln\varepsilon-\ln\varepsilon\big) \\
-        &= 0.
+  \operatorname{p.v.}\int_{-1}^{1}\frac{dx}{x}
+    &= \lim_{\varepsilon\to0^+}
+      \left(
+        \int_{-1}^{-\varepsilon}\frac{dx}{x}
+        +
+        \int_{\varepsilon}^{1}\frac{dx}{x}
+      \right) \\
+    &= \lim_{\varepsilon\to0^+}\big(\ln\varepsilon-\ln\varepsilon\big) \\
+    &= 0.
 \end{align*}
 \]
 The ordinary improper integral still diverges, because \( \int_0^1 dx/x \) diverges one-sidedly.
@@ -162,10 +170,10 @@ The ordinary improper integral still diverges, because \( \int_0^1 dx/x \) diver
 No. Removing a symmetric \( \varepsilon \)-neighborhood of \( 0 \) gives
 \[
 \begin{align*}
-    \int_{-1}^{-\varepsilon}\frac{dx}{x^2}
-        + \int_{\varepsilon}^{1}\frac{dx}{x^2}
-        &= 2\int_{\varepsilon}^{1}\frac{dx}{x^2} \\
-        &= 2\left(\frac{1}{\varepsilon}-1\right).
+  \int_{-1}^{-\varepsilon}\frac{dx}{x^2}
+    + \int_{\varepsilon}^{1}\frac{dx}{x^2}
+    &= 2\int_{\varepsilon}^{1}\frac{dx}{x^2} \\
+    &= 2\left(\frac{1}{\varepsilon}-1\right).
 \end{align*}
 \]
 This tends to \( \infty \) as \( \varepsilon\to0^+ \), so the principal value diverges. Since \( 1/x^2 \) is even and positive, the two sides add instead of canceling.

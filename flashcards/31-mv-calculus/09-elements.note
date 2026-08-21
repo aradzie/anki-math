@@ -6,13 +6,9 @@
 !front: What type of quantity is the arc-length element \( ds \), and how is it derived for a curve parametrized by \( \mathbf{r}(t) = (x(t), y(t), z(t)) \)?
 !back:
 \( ds \) is a scalar (a nonnegative length). Start from the Pythagorean theorem on an infinitesimal right triangle with legs \( dx \), \( dy \) and \( dz \):
-\[
-  ds = \sqrt{dx^2 + dy^2 + dz^2}.
-\]
+\[ ds = \sqrt{dx^2 + dy^2 + dz^2}. \]
 Substituting the ordinary single-variable differentials \( dx = x'(t)\,dt \), \( dy = y'(t)\,dt \) and \( dz = z'(t)\,dt \) gives
-\[
-  ds = \sqrt{x'(t)^2 + y'(t)^2 + z'(t)^2}\,dt = \lvert \mathbf{r}'(t) \rvert \,dt,
-\]
+\[ ds = \sqrt{x'(t)^2 + y'(t)^2 + z'(t)^2}\,dt = \lvert \mathbf{r}'(t) \rvert \,dt, \]
 i.e. speed times \( dt \).
 ~~~
 
@@ -20,9 +16,7 @@ i.e. speed times \( dt \).
 !front: What type of quantity is the line element \( d\mathbf{r} \), and how is it computed from a parametrization \( \mathbf{r}(t) \)?
 !back:
 \( d\mathbf{r} \) is a vector: an infinitesimal displacement along the curve, in the direction of increasing parameter. Keeping the components instead of taking their magnitude,
-\[
-  d\mathbf{r} = (dx,\ dy,\ dz) = \bigl(x'(t),\,y'(t),\,z'(t)\bigr)\,dt = \mathbf{r}'(t)\,dt,
-\]
+\[ d\mathbf{r} = (dx,\ dy,\ dz) = \bigl(x'(t),\,y'(t),\,z'(t)\bigr)\,dt = \mathbf{r}'(t)\,dt, \]
 the velocity vector scaled by \( dt \).
 !extra: Its length recovers the scalar element: \( \lvert d\mathbf{r} \rvert = \lvert \mathbf{r}'(t)\rvert\,dt = ds \).
 ~~~
@@ -41,9 +35,7 @@ the velocity vector scaled by \( dt \).
 !front: What type of quantity is the surface-area element \( dS \), and how is it derived for a surface parametrized by \( \mathbf{r}(u,v) \)?
 !back:
 \( dS \) is a scalar (a nonnegative area). Moving \( u \) infinitesimally traces the tangent vector \( \mathbf{r}_u\,du \), and moving \( v \) traces \( \mathbf{r}_v\,dv \). These two vectors span a parallelogram whose area is the magnitude of their cross product:
-\[
-  dS = \lvert \mathbf{r}_u \times \mathbf{r}_v \rvert \,du\,dv.
-\]
+\[ dS = \lvert \mathbf{r}_u \times \mathbf{r}_v \rvert \,du\,dv. \]
 !extra: This is the two-dimensional analogue of \( ds = \lvert\mathbf{r}'(t)\rvert\,dt \): one dimension uses the magnitude of a derivative, two dimensions use the magnitude of a cross product of partial derivatives.
 ~~~
 
@@ -51,9 +43,7 @@ the velocity vector scaled by \( dt \).
 !front: Why is the vector area element \( d\mathbf{S} \) defined using the full cross product \( \mathbf{r}_u \times \mathbf{r}_v \) instead of just its magnitude?
 !back:
 Because \( d\mathbf{S} \) is a vector: it must carry not just the infinitesimal area but also a direction, namely the unit normal to the surface. The cross product \( \mathbf{r}_u \times \mathbf{r}_v \) is already perpendicular to the surface, so keeping it whole — rather than reducing it to its magnitude \( dS \) — preserves that direction:
-\[
-  d\mathbf{S} = (\mathbf{r}_u \times \mathbf{r}_v)\,du\,dv.
-\]
+\[ d\mathbf{S} = (\mathbf{r}_u \times \mathbf{r}_v)\,du\,dv. \]
 !extra: The normal direction is what makes "flux through a surface" meaningful — it records which way you're passing through.
 ~~~
 
@@ -70,9 +60,7 @@ Because \( d\mathbf{S} \) is a vector: it must carry not just the infinitesimal 
 !id: LzzW9hg9Wn
 !front: How is the volume element \( dV \) computed under a change of variables \( \mathbf{r}(u,v,w) \), and why does it use a determinant rather than a cross product?
 !back:
-\[
-  dV = \bigl\lvert \det[\,\mathbf{r}_u\ \ \mathbf{r}_v\ \ \mathbf{r}_w\,] \bigr\rvert \,du\,dv\,dw.
-\]
+\[ dV = \bigl\lvert \det[\,\mathbf{r}_u\ \ \mathbf{r}_v\ \ \mathbf{r}_w\,] \bigr\rvert \,du\,dv\,dw. \]
 This is the three-dimensional version of the area construction: the determinant of three tangent vectors gives the (signed) volume of the parallelepiped they span, just as a cross product's magnitude gives the area of a parallelogram spanned by two vectors. \( dV \) is a scalar.
 !extra: In Cartesian coordinates this reduces to \( dV = dx\,dy\,dz \).
 ~~~

@@ -13,6 +13,6 @@ Let:
 To prove: \( F'(x) = \frac{1}{x} \).
 
 - If \( x > 0 \), then \( F(x) = \ln x \), so \[ F'(x) = \frac{1}{x}. \]
-- If \( x < 0 \), then \( F(x) = \ln(-x) \), so the chain rule gives \[ F'(x) = \frac{-1}{-x} = \frac{1}{x}.\]
+- If \( x < 0 \), then \( F(x) = \ln(-x) \), so the chain rule gives \[ F'(x) = \frac{-1}{-x} = \frac{1}{x}. \]
 - Therefore \( \ln |x| \) is an antiderivative of \( \frac{1}{x} \) on any interval where \( x < 0 \) or \( x > 0 \).
 ~~~

@@ -93,12 +93,15 @@ If \( f(t) \) has the transform \( F(s) \) and \( c \ge 0 \) then
 
 where \( u(t - c) \) is the unit step function, which is defined as
 
-\[ u(t - c) = \left\{
-\begin{array}{ll}
-    1 & t \ge c \\
-    0 & t < c
-\end{array}
-\right. \]
+\[
+  u(t - c) =
+  \left\{
+    \begin{array}{ll}
+      1 & t \ge c \\
+      0 & t < c
+    \end{array}
+  \right.
+\]
 ~~~
 
 !id: TYpFAgPbju
@@ -128,13 +131,13 @@ If \( f(t) \) has the transform \( F(s) \) and \( c > 0 \) then
 !back:
 \[
 \begin{align*}
-    \mathscr{L}\{f^{(n)}(t)\}
-    &= s^n F(s) \\
-    &- s^{n-1} f(0) \\
-    &- s^{n-2} f'(0) \\
-    &- s^{n-3} f''(0) \\
-    &- \cdots \\
-    &- f^{(n-1)}(0)
+  \mathscr{L}\{f^{(n)}(t)\}
+  &= s^n F(s) \\
+  &- s^{n-1} f(0) \\
+  &- s^{n-2} f'(0) \\
+  &- s^{n-3} f''(0) \\
+  &- \cdots \\
+  &- f^{(n-1)}(0)
 \end{align*}
 \]
 !extra: Requires \( f, f', \ldots, f^{(n-1)} \) continuous on \( [0, \infty) \) and of exponential order, and \( f^{(n)} \) piecewise continuous.
@@ -191,12 +194,15 @@ If \( f \) and \( f' \) are of exponential order and \( \lim_{t \to \infty} f(t)
 !back:
 The unit step function (Heaviside function) \( u(t - c) \) is defined as
 
-\[ u(t - c) = \left\{
-\begin{array}{ll}
-    1 & t \ge c \\
-    0 & t < c
-\end{array}
-\right. \]
+\[
+  u(t - c) =
+  \left\{
+    \begin{array}{ll}
+      1 & t \ge c \\
+      0 & t < c
+    \end{array}
+  \right.
+\]
 ~~~
 
 !id: ZKhTg8oQRz
@@ -213,12 +219,15 @@ Let \( f(t) = 0 \) for all \( t < 0 \).
 !back:
 The unit impulse function (Dirac delta function) is defined by
 
-\[ \delta(t - c) = \left\{
-\begin{array}{ll}
-    \infty & t = c \\
-    0 & t \ne c
-\end{array}
-\right. \]
+\[
+  \delta(t - c) =
+    \left\{
+    \begin{array}{ll}
+      \infty & t = c \\
+           0 & t \ne c
+    \end{array}
+  \right.
+\]
 
 It is technically not a function but a **generalized function** or **distribution**.
 ~~~
@@ -252,10 +261,10 @@ The derivative of the unit step function (Heaviside function) is the unit impuls
 !back:
 \[
 \begin{align*}
-    \mathscr{L}\{1\}
-        &= \int_0^\infty e^{-st} \, dt \\
-        &= \left[ -\frac{1}{s} e^{-st} \right]_0^\infty \\
-        &= \frac{1}{s}, \quad s > 0
+  \mathscr{L}\{1\}
+    &= \int_0^\infty e^{-st} \, dt \\
+    &= \left[ -\frac{1}{s} e^{-st} \right]_0^\infty \\
+    &= \frac{1}{s}, \quad s > 0
 \end{align*}
 \]
 ~~~
@@ -267,12 +276,12 @@ Integrate by parts with \( u = t \), \( dv = e^{-st} \, dt \):
 
 \[
 \begin{align*}
-    \mathscr{L}\{t\}
-        &= \int_0^\infty t e^{-st} \, dt \\
-        &= \underbrace{\left[ -\frac{t}{s} e^{-st} \right]_0^\infty}_{0}
-            + \frac{1}{s} \underbrace{\int_0^\infty e^{-st} \, dt}_{\mathscr{L}\{1\}} \\
-        &= \frac{1}{s} \cdot \frac{1}{s} \\
-        &= \frac{1}{s^2}
+  \mathscr{L}\{t\}
+    &= \int_0^\infty t e^{-st} \, dt \\
+    &= \underbrace{\left[ -\frac{t}{s} e^{-st} \right]_0^\infty}_{0}
+      + \frac{1}{s} \underbrace{\int_0^\infty e^{-st} \, dt}_{\mathscr{L}\{1\}} \\
+    &= \frac{1}{s} \cdot \frac{1}{s} \\
+    &= \frac{1}{s^2}
 \end{align*}
 \]
 ~~~
@@ -284,11 +293,11 @@ Integrate by parts with \( u = t^n \), \( dv = e^{-st} \, dt \):
 
 \[
 \begin{align*}
-    \mathscr{L}\{t^n\}
-        &= \int_0^\infty t^n e^{-st} \, dt \\
-        &= \underbrace{\left[ -\frac{t^n}{s} e^{-st} \right]_0^\infty}_{0}
-            + \frac{n}{s} \underbrace{\int_0^\infty t^{n-1} e^{-st} \, dt}_{\mathscr{L}\{t^{n-1}\}} \\
-        &= \frac{n}{s} \mathscr{L}\{t^{n-1}\}
+  \mathscr{L}\{t^n\}
+    &= \int_0^\infty t^n e^{-st} \, dt \\
+    &= \underbrace{\left[ -\frac{t^n}{s} e^{-st} \right]_0^\infty}_{0}
+      + \frac{n}{s} \underbrace{\int_0^\infty t^{n-1} e^{-st} \, dt}_{\mathscr{L}\{t^{n-1}\}} \\
+    &= \frac{n}{s} \mathscr{L}\{t^{n-1}\}
 \end{align*}
 \]
 
@@ -302,10 +311,10 @@ Applying this reduction \( n \) times starting from \( \mathscr{L}\{1\} = 1/s \)
 !back:
 \[
 \begin{align*}
-    \mathscr{L}\{e^{ct}\}
-        &= \int_0^\infty e^{-st} e^{ct} \, dt \\
-        &= \int_0^\infty e^{-(s - c)t} \, dt \\
-        &= \frac{1}{s - c}, \quad s > c
+  \mathscr{L}\{e^{ct}\}
+    &= \int_0^\infty e^{-st} e^{ct} \, dt \\
+    &= \int_0^\infty e^{-(s - c)t} \, dt \\
+    &= \frac{1}{s - c}, \quad s > c
 \end{align*}
 \]
 ~~~
@@ -317,11 +326,11 @@ Integrate by parts with \( u = e^{-st} \), \( dv = f'(t) \, dt \):
 
 \[
 \begin{align*}
-    \mathscr{L}\{f'(t)\}
-        &= \int_0^\infty e^{-st} f'(t) \, dt \\
-        &= \underbrace{\left[ e^{-st} f(t) \right]_0^\infty}_{-f(0)}
-            + s \underbrace{\int_0^\infty e^{-st} f(t) \, dt}_{\mathscr{L}\{f(t)\}} \\
-        &= s F(s) - f(0)
+  \mathscr{L}\{f'(t)\}
+    &= \int_0^\infty e^{-st} f'(t) \, dt \\
+    &= \underbrace{\left[ e^{-st} f(t) \right]_0^\infty}_{-f(0)}
+      + s \underbrace{\int_0^\infty e^{-st} f(t) \, dt}_{\mathscr{L}\{f(t)\}} \\
+    &= s F(s) - f(0)
 \end{align*}
 \]
 
@@ -335,10 +344,10 @@ Apply \( \mathscr{L} \) to both sides, writing \( Y(s) = \mathscr{L}\{y(t)\} \):
 
 \[
 \begin{align*}
-    \mathscr{L}\{y'\} + 2 \mathscr{L}\{y\} &= 0 \\
-    \big( sY(s) - y(0) \big) + 2Y(s) &= 0 \\
-    (s + 2) Y(s) &= 3 \\
-    Y(s) &= \frac{3}{s + 2}
+  \mathscr{L}\{y'\} + 2 \mathscr{L}\{y\} &= 0 \\
+  \big( sY(s) - y(0) \big) + 2Y(s) &= 0 \\
+  (s + 2) Y(s) &= 3 \\
+  Y(s) &= \frac{3}{s + 2}
 \end{align*}
 \]
 
@@ -354,10 +363,10 @@ Apply \( \mathscr{L} \) to both sides, writing \( Y(s) = \mathscr{L}\{y(t)\} \):
 
 \[
 \begin{align*}
-    \mathscr{L}\{y''\} + \mathscr{L}\{y\} &= 0 \\
-    \big( s^2 Y(s) - s y(0) - y'(0) \big) + Y(s) &= 0 \\
-    (s^2 + 1) Y(s) - 1 &= 0 \\
-    Y(s) &= \frac{1}{s^2 + 1}
+  \mathscr{L}\{y''\} + \mathscr{L}\{y\} &= 0 \\
+  \big( s^2 Y(s) - s y(0) - y'(0) \big) + Y(s) &= 0 \\
+  (s^2 + 1) Y(s) - 1 &= 0 \\
+  Y(s) &= \frac{1}{s^2 + 1}
 \end{align*}
 \]
 
@@ -373,9 +382,9 @@ Apply \( \mathscr{L} \) to both sides, writing \( Y(s) = \mathscr{L}\{y(t)\} \):
 
 \[
 \begin{align*}
-    \mathscr{L}\{y''\} + \mathscr{L}\{y\} &= \mathscr{L}\{1\} \\
-    s^2 Y(s) + Y(s) &= \frac{1}{s} \\
-    Y(s) &= \frac{1}{s(s^2 + 1)}
+  \mathscr{L}\{y''\} + \mathscr{L}\{y\} &= \mathscr{L}\{1\} \\
+  s^2 Y(s) + Y(s) &= \frac{1}{s} \\
+  Y(s) &= \frac{1}{s(s^2 + 1)}
 \end{align*}
 \]
 

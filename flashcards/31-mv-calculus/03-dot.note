@@ -81,15 +81,12 @@ Therefore \( \|\mathbf{a}\| = \sqrt{\mathbf{a}\cdot\mathbf{a}} \). In particular
 !back:
 For \( \mathbf{b}\ne\mathbf{0} \), the vector projection of \( \mathbf{a} \) onto \( \mathbf{b} \), denoted \( \operatorname{proj}_{\mathbf{b}}\mathbf{a} \), is the vector in \( \operatorname{span}\{\mathbf{b}\} \) whose difference from \( \mathbf{a} \) is perpendicular to \( \mathbf{b} \):
 
-\[
-\bigl(\mathbf{a}-\operatorname{proj}_{\mathbf{b}}\mathbf{a}\bigr)\cdot\mathbf{b}=0.
-\]
+\[ \bigl(\mathbf{a}-\operatorname{proj}_{\mathbf{b}}\mathbf{a}\bigr)\cdot\mathbf{b}=0. \]
 
 Equivalently,
 
 \[
-\operatorname{proj}_{\mathbf{b}}\mathbf{a}
-=
+\operatorname{proj}_{\mathbf{b}}\mathbf{a} =
 \frac{\mathbf{a}\cdot\mathbf{b}}{\|\mathbf{b}\|^2}\mathbf{b}.
 \]
 

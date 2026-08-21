@@ -7,8 +7,8 @@
 !back:
 Assume \( f \) is one-to-one on the chosen interval. Since \( x=f^{-1}(y) \), the lower bound \( y=f(a) \) becomes \( x=a \), and the upper bound \( y=f(b) \) becomes \( x=b \). Thus
 \[
-    \int_{f(a)}^{f(b)} f^{-1}(y)\,dy
-    = \int_a^b f^{-1}(f(x))f'(x)\,dx.
+  \int_{f(a)}^{f(b)} f^{-1}(y)\,dy =
+  \int_a^b f^{-1}(f(x))f'(x)\,dx.
 \]
 The ordered bounds \( a \) to \( b \) are still correct if \( f \) is decreasing; the reversed order \( f(a)>f(b) \) is already part of the directed integral in \( y \).
 ~~~
@@ -19,11 +19,11 @@ The ordered bounds \( a \) to \( b \) are still correct if \( f \) is decreasing
 Assume \( f \) is one-to-one and continuously differentiable on \( [a,b] \). Substitute \( y = f(x) \), so \( dy = f'(x)\,dx \). As \( y \) moves from \( f(a) \) to \( f(b) \), \( x \) moves from \( a \) to \( b \), hence
 \[
 \begin{align*}
-    \int_{f(a)}^{f(b)} f^{-1}(y)\,dy
-        &= \int_a^b f^{-1}(\underbrace{f(x)}_{y}) \underbrace{f'(x) \, dx}_{dy} \\
-        &= \int_a^b x f'(x)\,dx \quad \text{(integrate by parts)} \\
-        &= \left[x f(x)\right]_a^b - \int_a^b f(x)\,dx \\
-        &= b f(b) - a f(a) - \int_a^b f(x)\,dx.
+  \int_{f(a)}^{f(b)} f^{-1}(y)\,dy
+    &= \int_a^b f^{-1}(\underbrace{f(x)}_{y}) \underbrace{f'(x) \, dx}_{dy} \\
+    &= \int_a^b x f'(x)\,dx \quad \text{(integrate by parts)} \\
+    &= \left[x f(x)\right]_a^b - \int_a^b f(x)\,dx \\
+    &= b f(b) - a f(a) - \int_a^b f(x)\,dx.
 \end{align*}
 \]
 !extra:
@@ -38,10 +38,10 @@ The bounds are oriented: if \( f \) is decreasing, then \( f(a) > f(b) \), and t
 Restrict \( \sin x \) to \( [-\pi/2,\pi/2] \), so its inverse is \( \arcsin y \). The indefinite inverse-function identity gives
 \[
 \begin{align*}
-    \int \arcsin y\,dy
-        &= y\arcsin y - \int \sin x\,dx \\
-        &= y\arcsin y + \cos x + C \\
-        &= y\arcsin y + \sqrt{1-y^2} + C.
+  \int \arcsin y\,dy
+    &= y\arcsin y - \int \sin x\,dx \\
+    &= y\arcsin y + \cos x + C \\
+    &= y\arcsin y + \sqrt{1-y^2} + C.
 \end{align*}
 \]
 !extra: Here \( x=\arcsin y \), and \( \cos x=\sqrt{1-y^2} \) on \( [-\pi/2,\pi/2] \).
@@ -53,10 +53,10 @@ Restrict \( \sin x \) to \( [-\pi/2,\pi/2] \), so its inverse is \( \arcsin y \)
 Restrict \( \cos x \) to \( [0,\pi] \), so its inverse is \( \arccos y \). The indefinite inverse-function identity gives
 \[
 \begin{align*}
-    \int \arccos y\,dy
-        &= y\arccos y - \int \cos x\,dx \\
-        &= y\arccos y - \sin x + C \\
-        &= y\arccos y - \sqrt{1-y^2} + C.
+  \int \arccos y\,dy
+    &= y\arccos y - \int \cos x\,dx \\
+    &= y\arccos y - \sin x + C \\
+    &= y\arccos y - \sqrt{1-y^2} + C.
 \end{align*}
 \]
 !extra: Here \( x=\arccos y \), and \( \sin x=\sqrt{1-y^2} \) on \( [0,\pi] \).
@@ -68,10 +68,10 @@ Restrict \( \cos x \) to \( [0,\pi] \), so its inverse is \( \arccos y \). The i
 Restrict \( \tan x \) to \( (-\pi/2,\pi/2) \), so its inverse is \( \arctan y \). The indefinite inverse-function identity gives
 \[
 \begin{align*}
-    \int \arctan y\,dy
-        &= y\arctan y - \int \tan x\,dx \\
-        &= y\arctan y + \ln(\cos x) + C \\
-        &= y\arctan y - \frac{1}{2}\ln(1+y^2) + C.
+  \int \arctan y\,dy
+    &= y\arctan y - \int \tan x\,dx \\
+    &= y\arctan y + \ln(\cos x) + C \\
+    &= y\arctan y - \frac{1}{2}\ln(1+y^2) + C.
 \end{align*}
 \]
 !extra: Here \( x=\arctan y \), and \( \cos x=1/\sqrt{1+y^2} \) on \( (-\pi/2,\pi/2) \).
@@ -83,10 +83,10 @@ Restrict \( \tan x \) to \( (-\pi/2,\pi/2) \), so its inverse is \( \arctan y \)
 Since \( \ln y \) is the inverse of \( e^x \), the indefinite inverse-function identity gives
 \[
 \begin{align*}
-    \int \ln y\,dy
-        &= y\ln y - \int e^x\,dx \\
-        &= y\ln y - e^x + C \\
-        &= y\ln y - y + C.
+  \int \ln y\,dy
+    &= y\ln y - \int e^x\,dx \\
+    &= y\ln y - e^x + C \\
+    &= y\ln y - y + C.
 \end{align*}
 \]
 !extra: Here \( x=\ln y \), so \( e^x=y \). This is for \( y>0 \).

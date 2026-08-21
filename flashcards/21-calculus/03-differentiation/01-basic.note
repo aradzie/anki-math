@@ -6,15 +6,11 @@
 !front: What is the derivative of \( f \) at an interior point \( c \) of its domain?
 !back:
 The derivative of \( f \) at \( c \), if it exists, is the finite limit
-\[
-    f'(c) = \lim_{h \to 0} \frac{f(c+h)-f(c)}{h}.
-\]
+\[ f'(c) = \lim_{h \to 0} \frac{f(c+h)-f(c)}{h}. \]
 It is the limiting slope of secant lines through \( (c,f(c)) \) as the second point \( c+h \) approaches \( c \).
 !extra:
 Equivalently,
-\[
-    f'(c) = \lim_{x \to c} \frac{f(x)-f(c)}{x-c},
-\]
+\[ f'(c) = \lim_{x \to c} \frac{f(x)-f(c)}{x-c}, \]
 where \( x \ne c \). At an endpoint of an interval, one uses the appropriate one-sided derivative.
 ~~~
 
@@ -23,9 +19,9 @@ where \( x \ne c \). At an endpoint of an interval, one uses the appropriate one
 !back:
 For \( c \) an interior point of the domain, \( f'(c) \) exists exactly when the left-hand and right-hand limits
 \[
-    \lim_{h \to 0^-} \frac{f(c+h)-f(c)}{h}
-    \quad \text{and} \quad
-    \lim_{h \to 0^+} \frac{f(c+h)-f(c)}{h}
+  \lim_{h \to 0^-} \frac{f(c+h)-f(c)}{h}
+  \quad \text{and} \quad
+  \lim_{h \to 0^+} \frac{f(c+h)-f(c)}{h}
 \]
 both exist as finite numbers and are equal.
 !extra: A corner, cusp, vertical tangent, jump, or oscillation near \( c \) can make this condition fail in different ways.
@@ -35,13 +31,9 @@ both exist as finite numbers and are equal.
 !front: How is differentiability at \( c \) related to linear approximation near \( c \)?
 !back:
 \( f \) is differentiable at \( c \) with derivative \( f'(c) \) exactly when
-\[
-    f(c+h) = f(c) + f'(c)h + r(h)
-\]
+\[ f(c+h) = f(c) + f'(c)h + r(h) \]
 for an error term \( r(h) \) satisfying
-\[
-    \lim_{h \to 0} \frac{r(h)}{h} = 0.
-\]
+\[ \lim_{h \to 0} \frac{r(h)}{h} = 0. \]
 Thus the affine function \( f(c)+f'(c)(x-c) \) approximates \( f(x) \) to first order near \( c \).
 ~~~
 
@@ -49,15 +41,9 @@ Thus the affine function \( f(c)+f'(c)(x-c) \) approximates \( f(x) \) to first 
 !front: Why does differentiability at \( c \) imply continuity at \( c \)?
 !back:
 For \( h \ne 0 \),
-\[
-    f(c+h)-f(c)
-    =
-    \frac{f(c+h)-f(c)}{h} \cdot h.
-\]
+\[ f(c+h)-f(c) = \frac{f(c+h)-f(c)}{h} \cdot h. \]
 If \( f'(c) \) exists, the first factor tends to \( f'(c) \) and \( h \to 0 \), so
-\[
-    \lim_{h \to 0} \bigl(f(c+h)-f(c)\bigr) = f'(c)\cdot 0 = 0.
-\]
+\[ \lim_{h \to 0} \bigl(f(c+h)-f(c)\bigr) = f'(c)\cdot 0 = 0. \]
 Therefore \( \lim_{h \to 0} f(c+h)=f(c) \), which is continuity at \( c \).
 !extra: The converse is false: \( f(x)=|x| \) is continuous at \( 0 \), but its left and right derivatives there are \( -1 \) and \( 1 \).
 ~~~
@@ -101,15 +87,11 @@ To prove: \( (af+bg)'(c)=af'(c)+bg'(c) \).
 Let \( f \) and \( g \) be differentiable at \( c \). Then
 \[
 \begin{align*}
-    f(c+h)g(c+h)-f(c)g(c)
-    &=
-    f(c+h)\bigl(g(c+h)-g(c)\bigr) \\
-    &\quad + g(c)\bigl(f(c+h)-f(c)\bigr).
+  f(c+h)g(c+h)-f(c)g(c) &= f(c+h)\bigl(g(c+h)-g(c)\bigr) \\
+  &\quad + g(c)\bigl(f(c+h)-f(c)\bigr).
 \end{align*}
 \]
 After dividing by \( h \) and taking \( h \to 0 \), differentiability of \( f \) implies \( f(c+h)\to f(c) \), so
-\[
-    (fg)'(c)=f(c)g'(c)+g(c)f'(c).
-\]
+\[ (fg)'(c)=f(c)g'(c)+g(c)f'(c). \]
 !extra: The two terms correspond to the first-order change in \( g \) while \( f \) is held near \( f(c) \), and the first-order change in \( f \) while \( g \) is held at \( g(c) \).
 ~~~

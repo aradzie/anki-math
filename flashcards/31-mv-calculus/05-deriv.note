@@ -70,9 +70,7 @@ So partial derivatives measure rates of change only along the coordinate axes, w
 !back:
 For every direction vector \( \mathbf{v} \),
 
-\[
-  D_{\mathbf{v}}f(\mathbf{a}) = Df(\mathbf{a})[\mathbf{v}] = \nabla f(\mathbf{a}) \cdot \mathbf{v}.
-\]
+\[ D_{\mathbf{v}}f(\mathbf{a}) = Df(\mathbf{a})[\mathbf{v}] = \nabla f(\mathbf{a}) \cdot \mathbf{v}. \]
 
 In particular,
 
@@ -136,9 +134,7 @@ For a displacement \( \mathbf{h} \), the first-order change is \( DF(\mathbf{a})
 !front: Why is the linear-map derivative called a "total" derivative?
 !back:
 It captures the first-order effect of changing all input coordinates together:
-\[
-  F(\mathbf{a}+\mathbf{h}) \approx F(\mathbf{a}) + DF(\mathbf{a})[\mathbf{h}].
-\]
+\[ F(\mathbf{a}+\mathbf{h}) \approx F(\mathbf{a}) + DF(\mathbf{a})[\mathbf{h}]. \]
 Partial derivatives measure separate coordinate-line changes, but \( DF(\mathbf{a}) \) is one linear map that predicts the first-order change for every small displacement \( \mathbf{h}\in\mathbb{R}^n \).
 !extra: In finite dimensions, differentiability in this sense implies all directional derivatives and continuity at \( \mathbf{a} \). The converse is false: having partial or directional derivatives alone need not give a single good linear approximation.
 ~~~
@@ -162,9 +158,7 @@ It is the ordinary derivative of the one-variable composite function \( z(t)=f(x
 !extra:
 In linear-map notation, with \( \mathbf{r}(t)=(x(t),y(t)) \), this is
 
-\[
-  z'(t)=Df(\mathbf{r}(t))[\mathbf{r}'(t)].
-\]
+\[ z'(t)=Df(\mathbf{r}(t))[\mathbf{r}'(t)]. \]
 
 So it uses the total derivative of \( f \), but the quantity \( dz/dt \) is the derivative along the parametrized path.
 ~~~
@@ -177,7 +171,5 @@ So it uses the total derivative of \( f \), but the quantity \( dz/dt \) is the 
 
 They are related by the chain rule:
 
-\[
-  \frac{d}{dt}f(\mathbf{r}(t)) = Df(\mathbf{r}(t))[\mathbf{r}'(t)].
-\]
+\[ \frac{d}{dt}f(\mathbf{r}(t)) = Df(\mathbf{r}(t))[\mathbf{r}'(t)]. \]
 ~~~

@@ -5,36 +5,28 @@
 !id: 0xbcsHJFvN
 !front: What is \( \nabla \) formally, and in what sense is treating it as a vector a "type pun"?
 !back:
-\[
-  \nabla = \left(\frac{\partial}{\partial x},\ \frac{\partial}{\partial y},\ \frac{\partial}{\partial z}\right).
-\]
+\[ \nabla = \left(\frac{\partial}{\partial x},\ \frac{\partial}{\partial y},\ \frac{\partial}{\partial z}\right). \]
 It is a "vector" whose components are differential operators, not numbers — so it isn't literally a vector. But treating it as one is productive: combining it with a field via the three familiar vector products (scalar multiplication, dot product, cross product) generates the gradient, divergence, and curl respectively.
 ~~~
 
 !id: zfFKcMDAhX
 !front: What are the domain and codomain field types of \( \operatorname{grad} \), and why is that forced by the product it uses?
 !back:
-\[
-  \operatorname{grad} f = \nabla f : \text{scalar field} \to \text{vector field}.
-\]
+\[ \operatorname{grad} f = \nabla f : \text{scalar field} \to \text{vector field}. \]
 \( \nabla \) combines with the scalar field \( f \) by scalar multiplication, and scalar \( \times \) vector \( = \) vector, so the result is a vector field.
 ~~~
 
 !id: 6isoAPsTmG
 !front: What are the domain and codomain field types of \( \operatorname{div} \), and why is that forced by the product it uses?
 !back:
-\[
-  \operatorname{div} \mathbf{F} = \nabla \cdot \mathbf{F} : \text{vector field} \to \text{scalar field}.
-\]
+\[ \operatorname{div} \mathbf{F} = \nabla \cdot \mathbf{F} : \text{vector field} \to \text{scalar field}. \]
 \( \nabla \) combines with the vector field \( \mathbf{F} \) by the dot product, and vector \( \cdot \) vector \( = \) scalar, so the result is a scalar field.
 ~~~
 
 !id: 6JAaP1RkvV
 !front: What are the domain and codomain field types of \( \operatorname{curl} \), and why is that forced by the product it uses?
 !back:
-\[
-  \operatorname{curl} \mathbf{F} = \nabla \times \mathbf{F} : \text{vector field} \to \text{vector field}.
-\]
+\[ \operatorname{curl} \mathbf{F} = \nabla \times \mathbf{F} : \text{vector field} \to \text{vector field}. \]
 \( \nabla \) combines with the vector field \( \mathbf{F} \) by the cross product, and vector \( \times \) vector \( = \) vector, so the result is a vector field.
 ~~~
 
@@ -55,9 +47,7 @@ It is a "vector" whose components are differential operators, not numbers — so
 !back: \[ (R_y - Q_z,\ \ P_z - R_x,\ \ Q_x - P_y) \]
 !extra:
 This is the formal expansion of the determinant
-\[
-  \begin{vmatrix} \mathbf{i} & \mathbf{j} & \mathbf{k} \\ \partial_x & \partial_y & \partial_z \\ P & Q & R \end{vmatrix},
-\]
+\[ \begin{vmatrix} \mathbf{i} & \mathbf{j} & \mathbf{k} \\ \partial_x & \partial_y & \partial_z \\ P & Q & R \end{vmatrix}, \]
 with subscripts denoting partial derivatives.
 ~~~
 

@@ -69,10 +69,9 @@ Suppose \( a_n \to L \) and \( a_n \to M \), with \( L \ne M \). Choose \( \epsi
     \qquad\text{and}\qquad
     |a_n-M| < \epsilon.
 \]
+
 Then
-\[
-    |L-M| \le |L-a_n| + |a_n-M| < 2|L-M|/3,
-\]
+\[ |L-M| \le |L-a_n| + |a_n-M| < 2|L-M|/3, \]
 a contradiction. Hence \( L=M \).
 ~~~
 
@@ -326,11 +325,7 @@ For example, \( a_n=(-1)^n \) is bounded, but its even and odd subsequences have
 !front: How does sequence convergence define convergence of an infinite series?
 !back:
 Given a series \( \sum_{n=1}^{\infty} a_n \), define its partial sums by
-\[
-    s_N=\sum_{n=1}^{N} a_n.
-\]
+\[ s_N=\sum_{n=1}^{N} a_n. \]
 The series converges exactly when the sequence \( \{s_N\} \) converges. In that case,
-\[
-    \sum_{n=1}^{\infty} a_n=\lim_{N\to\infty}s_N.
-\]
+\[ \sum_{n=1}^{\infty} a_n=\lim_{N\to\infty}s_N. \]
 ~~~

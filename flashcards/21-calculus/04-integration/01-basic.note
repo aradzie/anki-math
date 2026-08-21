@@ -117,9 +117,7 @@ Therefore each old lower rectangle is replaced by pieces whose total area is no 
 !front: How do the Riemann integral and the Darboux integral of a bounded function \( f \) on \( [a,b] \) relate to each other?
 !back:
 For bounded functions on a closed interval, the two definitions are equivalent:
-\[ f \text{ is Riemann integrable}
-    \iff
-    \overline{\int_a^b}f=\underline{\int_a^b}f. \]
+\[ f \text{ is Riemann integrable} \iff \overline{\int_a^b}f=\underline{\int_a^b}f. \]
 When this holds, the tagged-partition limit and the common Darboux value are the same number.
 ~~~
 
@@ -174,8 +172,8 @@ Use the Dirichlet function
 \[
 f(x)=
 \begin{cases}
-    1, & x\in\mathbb{Q}, \\
-    0, & x\notin\mathbb{Q}.
+  1, & x\in\mathbb{Q}, \\
+  0, & x\notin\mathbb{Q}.
 \end{cases}
 \]
 It is bounded, but every subinterval contains both rational and irrational points. Hence on every subinterval \( M_i=1 \) and \( m_i=0 \), so
@@ -187,16 +185,17 @@ for every partition \( P \). The upper and lower integrals cannot agree.
 !front: State the linearity property of the integral for integrable \( f, g \) on \( [a,b] \) and constants \( \alpha, \beta \).
 !back:
 If \( f \) and \( g \) are integrable on \( [a,b] \), then \( \alpha f+\beta g \) is integrable and
-\[ \int_a^b \big(\alpha f(x)+\beta g(x)\big)\,dx
-    = \alpha\int_a^b f(x)\,dx+\beta\int_a^b g(x)\,dx. \]
+\[
+  \int_a^b \big(\alpha f(x)+\beta g(x)\big)\,dx =
+  \alpha\int_a^b f(x)\,dx+\beta\int_a^b g(x)\,dx.
+\]
 ~~~
 
 !id: XwQlO8eeAh
 !front: For \( a < c < b \) and \( f \) integrable on \( [a,b] \), state the additivity property of the integral over subintervals.
 !back:
 The integral over the whole interval splits as
-\[ \int_a^b f(x)\,dx
-    = \int_a^c f(x)\,dx+\int_c^b f(x)\,dx. \]
+\[ \int_a^b f(x)\,dx = \int_a^c f(x)\,dx+\int_c^b f(x)\,dx. \]
 Equivalently, adjacent signed areas add.
 ~~~
 
@@ -204,8 +203,7 @@ Equivalently, adjacent signed areas add.
 !front: For \( f \) integrable on \( [a,b] \) and any constant \( c \), state the invariance-under-translation property of the integral.
 !back:
 A horizontal translation of both the function and the interval leaves the integral unchanged:
-\[ \int_a^b f(x)\,dx
-    = \int_{a+c}^{b+c} f(x-c)\,dx. \]
+\[ \int_a^b f(x)\,dx = \int_{a+c}^{b+c} f(x-c)\,dx. \]
 This is the substitution \( u=x-c \).
 !extra:
 Geometrically, shifting the graph of \( f \) horizontally by \( c \) and shifting the interval of integration by the same amount leaves the enclosed signed area unchanged.
@@ -217,8 +215,7 @@ Geometrically, shifting the graph of \( f \) horizontally by \( c \) and shiftin
 !front: For \( f \) integrable on \( [a,b] \), state the reflection property of the integral relating \( \int_a^b f(x)\, dx \) to an integral of \( f(-x) \).
 !back:
 Reflection across the \( y \)-axis gives
-\[ \int_a^b f(x)\,dx
-    = \int_{-b}^{-a} f(-x)\,dx. \]
+\[ \int_a^b f(x)\,dx = \int_{-b}^{-a} f(-x)\,dx. \]
 This follows from the substitution \( u=-x \), with the sign from \( du=-dx \) absorbed by the reversed bounds.
 !extra:
 Substituting \( x = -u \) reflects the graph through the \( y \)-axis and reverses the direction of integration; these two sign flips cancel, so no overall sign change appears.
@@ -265,11 +262,7 @@ Let:
 
 To prove: the even and odd symmetry formulas.
 
-- By additivity,
-\[
-\int_{-a}^a f(x)\,dx
-    = \int_0^a f(-x)\,dx+\int_0^a f(x)\,dx.
-\]
+- By additivity, \[ \int_{-a}^a f(x)\,dx = \int_0^a f(-x)\,dx+\int_0^a f(x)\,dx. \]
 - If \( f \) is even, then \( f(-x)=f(x) \), so the two terms are equal and \( \int_{-a}^a f = 2\int_0^a f \).
 - If \( f \) is odd, then \( f(-x)=-f(x) \), so the two terms cancel and \( \int_{-a}^a f = 0 \).
 ~~~
@@ -309,8 +302,7 @@ Any partition making \( U(f,P)-L(f,P) \) small also makes \( U(|f|,P)-L(|f|,P) \
 !front: State the triangle inequality for the integral of an integrable function \( f \) on \( [a,b] \).
 !back:
 If \( f \) is integrable on \( [a,b] \), then
-\[ \left|\int_a^b f(x)\,dx\right|
-    \le \int_a^b |f(x)|\,dx. \]
+\[ \left|\int_a^b f(x)\,dx\right| \le \int_a^b |f(x)|\,dx. \]
 This follows from \( -|f|\le f\le |f| \) and monotonicity of the integral.
 !extra: Follows from \( -|f| \le f \le |f| \) and monotonicity of the integral, applied to both inequalities. Uses that \( |f| \) is integrable whenever \( f \) is.
 ~~~
@@ -319,7 +311,6 @@ This follows from \( -|f|\le f\le |f| \) and monotonicity of the integral.
 !front: If \( f, g \) are integrable on \( [a,b] \), why is the product \( fg \) also integrable?
 !back:
 Integrable functions on \( [a,b] \) are bounded, so choose \( A,B \) with \( |f|\le A \) and \( |g|\le B \). For \( x,y \) in the same subinterval,
-\[ |f(x)g(x)-f(y)g(y)|
-    \le A|g(x)-g(y)|+B|f(x)-f(y)|. \]
+\[ |f(x)g(x)-f(y)g(y)| \le A|g(x)-g(y)|+B|f(x)-f(y)|. \]
 Thus the oscillation of \( fg \) is controlled by the oscillations of \( f \) and \( g \). Refining to make those two oscillations small makes the Darboux gap for \( fg \) small, so \( fg \) is integrable.
 ~~~

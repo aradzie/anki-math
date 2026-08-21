@@ -49,8 +49,8 @@ They have the same weighted-average structure:
 
 \[
 \begin{align*}
-    \mathbf{R}_{\text{discrete}} &= \frac{\sum_{i=1}^{n} m_i\mathbf{r}_i}{\sum_{i=1}^{n} m_i}, \\
-    \mathbf{R}_{\text{continuous}} &= \frac{\int_D \rho(\mathbf{r})\mathbf{r}\,dV}{\int_D \rho(\mathbf{r})\,dV}.
+  \mathbf{R}_{\text{discrete}} &= \frac{\sum_{i=1}^{n} m_i\mathbf{r}_i}{\sum_{i=1}^{n} m_i}, \\
+  \mathbf{R}_{\text{continuous}} &= \frac{\int_D \rho(\mathbf{r})\mathbf{r}\,dV}{\int_D \rho(\mathbf{r})\,dV}.
 \end{align*}
 \]
 

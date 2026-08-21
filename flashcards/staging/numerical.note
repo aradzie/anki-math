@@ -22,9 +22,9 @@ the sum of rectangle areas where each rectangle's height is sampled at its subin
 !front: For a monotonic function \( f \) on \( [a,b] \), how do the Left and Right Riemann Sums compare to \( \int_a^b f(x)\,dx \)?
 !back:
 - If \( f \) is increasing, the left endpoint is the minimum and the right endpoint is the maximum on each subinterval, so
-\[ L_n \le \int_a^b f(x)\,dx \le R_n. \]
+  \[ L_n \le \int_a^b f(x)\,dx \le R_n. \]
 - If \( f \) is decreasing, both inequalities reverse:
-\[ R_n \le \int_a^b f(x)\,dx \le L_n. \]
+  \[ R_n \le \int_a^b f(x)\,dx \le L_n. \]
 !related: \( T_n = \dfrac{L_n + R_n}{2} \) — averaging the Left and Right Riemann Sums exactly recovers the Trapezoidal Rule, since every interior node's two contributions (once from each sum) combine into the weight-\( 2 \) term of \( T_n \)'s formula.
 !extra: ![Left Riemann sum undershooting and right Riemann sum overshooting the same increasing curve](img/left_right_riemann_sum.svg)
 ~~~
@@ -49,9 +49,9 @@ the sum of the \( n \) single-interval midpoint rectangle areas over each subint
 Assuming \( f'' \) is continuous on \( [a,b] \):
 
 - Single interval:
-\[ \left| \int_a^b f\, dx - M \right| \le \frac{(b-a)^3}{24} \max_{[a,b]} |f''|. \]
+  \[ \left| \int_a^b f\, dx - M \right| \le \frac{(b-a)^3}{24} \max_{[a,b]} |f''|. \]
 - Composite, with \( h = (b-a)/n \):
-\[ \left| \int_a^b f\, dx - M_n \right| \le \frac{(b-a)^3}{24\, n^2} \max_{[a,b]} |f''|. \]
+  \[ \left| \int_a^b f\, dx - M_n \right| \le \frac{(b-a)^3}{24\, n^2} \max_{[a,b]} |f''|. \]
 !extra: The composite bound is the single-interval bound divided by \( n^2 \) — halving \( h \) cuts the error roughly fourfold.
 ~~~
 
@@ -74,9 +74,9 @@ the area of the trapezoid with parallel sides of length \( f(a) \) and \( f(b) \
 Assuming \( f'' \) is continuous on \( [a,b] \):
 
 - Single interval:
-\[ \left| \int_a^b f\, dx - T \right| \le \frac{(b-a)^3}{12} \max_{[a,b]} |f''|. \]
+  \[ \left| \int_a^b f\, dx - T \right| \le \frac{(b-a)^3}{12} \max_{[a,b]} |f''|. \]
 - Composite, with \( h = (b-a)/n \):
-\[ \left| \int_a^b f\, dx - T_n \right| \le \frac{(b-a)^3}{12\, n^2} \max_{[a,b]} |f''|. \]
+  \[ \left| \int_a^b f\, dx - T_n \right| \le \frac{(b-a)^3}{12\, n^2} \max_{[a,b]} |f''|. \]
 !extra: Same \( O(n^{-2}) \) order as the Midpoint Rule, but with twice the constant.
 ~~~
 
@@ -100,9 +100,9 @@ the area under the unique parabola passing through \( (a,f(a)) \), \( (m,f(m)) \
 Assuming \( f^{(4)} \) is continuous on \( [a,b] \):
 
 - Single interval:
-\[ \left| \int_a^b f\, dx - S \right| \le \frac{(b-a)^5}{2880} \max_{[a,b]} |f^{(4)}|. \]
+  \[ \left| \int_a^b f\, dx - S \right| \le \frac{(b-a)^5}{2880} \max_{[a,b]} |f^{(4)}|. \]
 - Composite (\( n \) even), with \( h = (b-a)/n \):
-\[ \left| \int_a^b f\, dx - S_n \right| \le \frac{(b-a)^5}{180\, n^4} \max_{[a,b]} |f^{(4)}|. \]
+  \[ \left| \int_a^b f\, dx - S_n \right| \le \frac{(b-a)^5}{180\, n^4} \max_{[a,b]} |f^{(4)}|. \]
 !extra: The \( O(n^{-4}) \) order converges strictly faster than the Midpoint or Trapezoidal Rules' \( O(n^{-2}) \).
 ~~~
 

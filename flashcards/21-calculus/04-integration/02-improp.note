@@ -19,8 +19,10 @@ when that finite limit exists.
 !front: State the definition of the improper integral \( \int_{-\infty}^\infty f(x)\, dx \) (Type I, both bounds infinite).
 !back:
 Choose any \( c\in\mathbb{R} \). The improper integral over the whole line is defined by
-\[ \int_{-\infty}^{\infty} f(x)\,dx
-    = \int_{-\infty}^{c} f(x)\,dx + \int_{c}^{\infty} f(x)\,dx, \]
+\[
+  \int_{-\infty}^{\infty} f(x)\,dx =
+  \int_{-\infty}^{c} f(x)\,dx + \int_{c}^{\infty} f(x)\,dx,
+\]
 provided both one-sided improper integrals converge as finite numbers.
 
 When this condition holds, the value is independent of the particular splitting point \( c \).
@@ -30,8 +32,10 @@ When this condition holds, the value is independent of the particular splitting 
 !front: State the definition of \( \int_a^b f(x)\, dx \) when \( f \) is unbounded near \( a \) (Type II, endpoint singularity).
 !back:
 Ignore a small interval next to the singular endpoint, integrate over \( [a+\varepsilon,b] \), and then let \( \varepsilon \downarrow 0 \):
-\[ \int_a^b f(x)\,dx
-    = \lim_{\varepsilon\to 0^+}\int_{a+\varepsilon}^{b} f(x)\,dx. \]
+\[
+  \int_a^b f(x)\,dx =
+  \lim_{\varepsilon\to 0^+}\int_{a+\varepsilon}^{b} f(x)\,dx.
+\]
 The improper integral converges exactly when this limit exists as a finite real number. A singularity at \( b \) is handled by the analogous limit \( \int_a^{b-\varepsilon} f \).
 !extra: ![Type II: area under y = 1/√x from a+ε to b, as ε → 0⁺](img/improper_type2.svg)
 ~~~
@@ -40,8 +44,10 @@ The improper integral converges exactly when this limit exists as a finite real 
 !front: State the definition of \( \int_a^b f(x)\, dx \) when \( f \) is unbounded at an interior point \( c \in (a,b) \).
 !back:
 Split the integral at the singular point:
-\[ \int_a^b f(x)\,dx
-    = \int_a^c f(x)\,dx + \int_c^b f(x)\,dx. \]
+\[
+  \int_a^b f(x)\,dx =
+  \int_a^c f(x)\,dx + \int_c^b f(x)\,dx.
+\]
 This is defined only if both endpoint-singular improper integrals on the right converge separately as finite numbers.
 ~~~
 
