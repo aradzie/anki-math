@@ -23,9 +23,8 @@
 ~~~
 
 !id: zVX3ZAqxkr
-!front: \[ \ln a = \lim_{x \to \ldots} \ldots \]
-!back: \[ \ln a = \lim_{x \to 0} \frac{a^x - 1}{x} \]
-!extra: Requires \( a > 0 \), so that \( a^x \) is defined for real \( x \) near \( 0 \). The special case \( a = e \) gives \( \lim_{x \to 0} \frac{e^x - 1}{x} = 1 \).
+!front: \[ \ln a = \lim_{x \to \ldots} \ldots, \quad a > 0 \]
+!back: \[ \ln a = \lim_{x \to 0} \frac{a^x - 1}{x}, \quad a > 0 \]
 ~~~
 
 !id: eD2Z0zWOJ6
@@ -36,4 +35,19 @@ Write \( n^{1/n} = e^{\ln n / n} \). By L'Hôpital's rule applied to \( \ln x / 
 \[ \lim_{x \to \infty} \frac{\ln x}{x} = \lim_{x \to \infty} \frac{1/x}{1} = 0, \]
 and since \( \exp \) is continuous,
 \[ n^{1/n} = e^{\ln n / n} \to e^0 = 1. \]
+~~~
+
+!id: HFOtuFozwk
+!front: \[ \lim_{x \to \infty} \frac{x^n}{e^x} = \ldots \]
+!back: \[ \lim_{x \to \infty} \frac{x^n}{e^x} = 0 \]
+~~~
+
+!id: C7fRXFwhSJ
+!front: \[ \lim_{x \to \infty} \frac{\ln x}{x^a} = \ldots, \quad a > 0 \]
+!back: \[ \lim_{x \to \infty} \frac{\ln x}{x^a} = 0, \quad a > 0 \]
+~~~
+
+!id: ZptgdpueDf
+!front: \[ \lim_{n \to \infty} \frac{x^n}{n!} = \ldots \]
+!back: \[ \lim_{n \to \infty} \frac{x^n}{n!} = 0 \]
 ~~~

@@ -194,7 +194,7 @@
 \frac{d}{dx} \sin^{-1} x &= \frac{1}{\sqrt{1 - x^2}} \\
 \frac{d}{dx} \cos^{-1} x &= \frac{-1}{\sqrt{1 - x^2}} \\
 \frac{d}{dx} \sinh^{-1} x &= \frac{1}{\sqrt{x^2 + 1}} \\
-\frac{d}{dx} \cosh^{-1} x &= \frac{1}{\sqrt{x^2 - 1}}, \quad (x > 1)
+\frac{d}{dx} \cosh^{-1} x &= \frac{1}{\sqrt{x^2 - 1}}
 \end{align*}
 \]
 ~~~
@@ -208,7 +208,7 @@
 \frac{d}{dx} \sin^{-1} x &= \frac{1}{\sqrt{1 - x^2}} \\
 \frac{d}{dx} \cos^{-1} x &= \frac{-1}{\sqrt{1 - x^2}} \\
 \frac{d}{dx} \sinh^{-1} x &= \frac{1}{\sqrt{x^2 + 1}} \\
-\frac{d}{dx} \cosh^{-1} x &= \frac{1}{\sqrt{x^2 - 1}}, \quad (x > 1)
+\frac{d}{dx} \cosh^{-1} x &= \frac{1}{\sqrt{x^2 - 1}}
 \end{align*}
 \]
 ~~~
@@ -221,8 +221,8 @@
 \begin{align*}
 \frac{d}{dx} \tan^{-1} x &= \frac{1}{1 + x^2} \\
 \frac{d}{dx} \cot^{-1} x &= \frac{-1}{1 + x^2} \\
-\frac{d}{dx} \tanh^{-1} x &= \frac{1}{1 - x^2}, \quad (|x| < 1) \\
-\frac{d}{dx} \coth^{-1} x &= \frac{1}{1 - x^2}, \quad (|x| > 1)
+\frac{d}{dx} \tanh^{-1} x &= \frac{1}{1 - x^2}, \quad |x| < 1 \\
+\frac{d}{dx} \coth^{-1} x &= \frac{1}{1 - x^2}, \quad |x| > 1
 \end{align*}
 \]
 ~~~
@@ -235,8 +235,8 @@
 \begin{align*}
 \frac{d}{dx} \tan^{-1} x &= \frac{1}{1 + x^2} \\
 \frac{d}{dx} \cot^{-1} x &= \frac{-1}{1 + x^2} \\
-\frac{d}{dx} \tanh^{-1} x &= \frac{1}{1 - x^2}, \quad (|x| < 1) \\
-\frac{d}{dx} \coth^{-1} x &= \frac{1}{1 - x^2}, \quad (|x| > 1)
+\frac{d}{dx} \tanh^{-1} x &= \frac{1}{1 - x^2}, \quad |x| < 1 \\
+\frac{d}{dx} \coth^{-1} x &= \frac{1}{1 - x^2}, \quad |x| > 1
 \end{align*}
 \]
 ~~~
@@ -364,49 +364,49 @@
 \frac{d}{dx} \sin^{-1} x &= \frac{1}{\sqrt{1 - x^2}} \\
 \frac{d}{dx} \cos^{-1} x &= \frac{-1}{\sqrt{1 - x^2}} \\
 \frac{d}{dx} \sinh^{-1} x &= \frac{1}{\sqrt{x^2 + 1}} \\
-\frac{d}{dx} \cosh^{-1} x &= \frac{1}{\sqrt{x^2 - 1}}, \quad (x > 1)
+\frac{d}{dx} \cosh^{-1} x &= \frac{1}{\sqrt{x^2 - 1}}
 \end{align*}
 \]
 ~~~
 
 !id: 9Ahcym3no2
 !front: \[ \frac{d}{dx} \cosh^{-1} x \]
-!back: \[ \frac{1}{\sqrt{x^2 - 1}}, \quad (x > 1) \]
+!back: \[ \frac{1}{\sqrt{x^2 - 1}} \]
 !related:
 \[
 \begin{align*}
 \frac{d}{dx} \sin^{-1} x &= \frac{1}{\sqrt{1 - x^2}} \\
 \frac{d}{dx} \cos^{-1} x &= \frac{-1}{\sqrt{1 - x^2}} \\
 \frac{d}{dx} \sinh^{-1} x &= \frac{1}{\sqrt{x^2 + 1}} \\
-\frac{d}{dx} \cosh^{-1} x &= \frac{1}{\sqrt{x^2 - 1}}, \quad (x > 1)
+\frac{d}{dx} \cosh^{-1} x &= \frac{1}{\sqrt{x^2 - 1}}
 \end{align*}
 \]
 ~~~
 
 !id: dJgOISLb7D
 !front: \[ \frac{d}{dx} \tanh^{-1} x \]
-!back: \[ \frac{1}{1 - x^2}, \quad (|x| < 1) \]
+!back: \[ \frac{1}{1 - x^2}, \quad |x| < 1 \]
 !related:
 \[
 \begin{align*}
 \frac{d}{dx} \tan^{-1} x &= \frac{1}{1 + x^2} \\
 \frac{d}{dx} \cot^{-1} x &= \frac{-1}{1 + x^2} \\
-\frac{d}{dx} \tanh^{-1} x &= \frac{1}{1 - x^2}, \quad (|x| < 1) \\
-\frac{d}{dx} \coth^{-1} x &= \frac{1}{1 - x^2}, \quad (|x| > 1)
+\frac{d}{dx} \tanh^{-1} x &= \frac{1}{1 - x^2}, \quad |x| < 1 \\
+\frac{d}{dx} \coth^{-1} x &= \frac{1}{1 - x^2}, \quad |x| > 1
 \end{align*}
 \]
 ~~~
 
 !id: DhLYbyl0mh
 !front: \[ \frac{d}{dx} \coth^{-1} x \]
-!back: \[ \frac{1}{1 - x^2}, \quad (|x| > 1) \]
+!back: \[ \frac{1}{1 - x^2}, \quad |x| > 1 \]
 !related:
 \[
 \begin{align*}
 \frac{d}{dx} \tan^{-1} x &= \frac{1}{1 + x^2} \\
 \frac{d}{dx} \cot^{-1} x &= \frac{-1}{1 + x^2} \\
-\frac{d}{dx} \tanh^{-1} x &= \frac{1}{1 - x^2}, \quad (|x| < 1) \\
-\frac{d}{dx} \coth^{-1} x &= \frac{1}{1 - x^2}, \quad (|x| > 1)
+\frac{d}{dx} \tanh^{-1} x &= \frac{1}{1 - x^2}, \quad |x| < 1 \\
+\frac{d}{dx} \coth^{-1} x &= \frac{1}{1 - x^2}, \quad |x| > 1
 \end{align*}
 \]
 ~~~

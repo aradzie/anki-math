@@ -258,7 +258,7 @@
 \frac{d}{dx} \sin^{-1} x &= \frac{1}{\sqrt{1 - x^2}} \\
 \frac{d}{dx} \cos^{-1} x &= \frac{-1}{\sqrt{1 - x^2}} \\
 \frac{d}{dx} \sinh^{-1} x &= \frac{1}{\sqrt{x^2 + 1}} \\
-\frac{d}{dx} \cosh^{-1} x &= \frac{1}{\sqrt{x^2 - 1}}, \quad (x > 1)
+\frac{d}{dx} \cosh^{-1} x &= \frac{1}{\sqrt{x^2 - 1}}
 \end{align*}
 \]
 ~~~
@@ -276,7 +276,7 @@
 \frac{d}{dx} \sin^{-1} x &= \frac{1}{\sqrt{1 - x^2}} \\
 \frac{d}{dx} \cos^{-1} x &= \frac{-1}{\sqrt{1 - x^2}} \\
 \frac{d}{dx} \sinh^{-1} x &= \frac{1}{\sqrt{x^2 + 1}} \\
-\frac{d}{dx} \cosh^{-1} x &= \frac{1}{\sqrt{x^2 - 1}}, \quad (x > 1)
+\frac{d}{dx} \cosh^{-1} x &= \frac{1}{\sqrt{x^2 - 1}}
 \end{align*}
 \]
 ~~~
@@ -293,8 +293,8 @@
 \begin{align*}
 \frac{d}{dx} \tan^{-1} x &= \frac{1}{1 + x^2} \\
 \frac{d}{dx} \cot^{-1} x &= \frac{-1}{1 + x^2} \\
-\frac{d}{dx} \tanh^{-1} x &= \frac{1}{1 - x^2}, \quad (|x| < 1) \\
-\frac{d}{dx} \coth^{-1} x &= \frac{1}{1 - x^2}, \quad (|x| > 1)
+\frac{d}{dx} \tanh^{-1} x &= \frac{1}{1 - x^2}, \quad |x| < 1 \\
+\frac{d}{dx} \coth^{-1} x &= \frac{1}{1 - x^2}, \quad |x| > 1
 \end{align*}
 \]
 ~~~
@@ -311,8 +311,8 @@
 \begin{align*}
 \frac{d}{dx} \tan^{-1} x &= \frac{1}{1 + x^2} \\
 \frac{d}{dx} \cot^{-1} x &= \frac{-1}{1 + x^2} \\
-\frac{d}{dx} \tanh^{-1} x &= \frac{1}{1 - x^2}, \quad (|x| < 1) \\
-\frac{d}{dx} \coth^{-1} x &= \frac{1}{1 - x^2}, \quad (|x| > 1)
+\frac{d}{dx} \tanh^{-1} x &= \frac{1}{1 - x^2}, \quad |x| < 1 \\
+\frac{d}{dx} \coth^{-1} x &= \frac{1}{1 - x^2}, \quad |x| > 1
 \end{align*}
 \]
 ~~~
@@ -476,7 +476,7 @@
 \frac{d}{dx} \sin^{-1} x &= \frac{1}{\sqrt{1 - x^2}} \\
 \frac{d}{dx} \cos^{-1} x &= \frac{-1}{\sqrt{1 - x^2}} \\
 \frac{d}{dx} \sinh^{-1} x &= \frac{1}{\sqrt{x^2 + 1}} \\
-\frac{d}{dx} \cosh^{-1} x &= \frac{1}{\sqrt{x^2 - 1}}, \quad (x > 1)
+\frac{d}{dx} \cosh^{-1} x &= \frac{1}{\sqrt{x^2 - 1}}
 \end{align*}
 \]
 ~~~
@@ -486,7 +486,7 @@
 \[
 \frac{d}{dx} {{c2::\cosh^{-1} x::\ldots}}
 =
-{{c1::\frac{1}{ \sqrt{x^2 - 1} }, \quad (x > 1)::\ldots}}
+{{c1::\frac{1}{ \sqrt{x^2 - 1} }::\ldots}}
 \]
 !related:
 \[
@@ -494,7 +494,7 @@
 \frac{d}{dx} \sin^{-1} x &= \frac{1}{\sqrt{1 - x^2}} \\
 \frac{d}{dx} \cos^{-1} x &= \frac{-1}{\sqrt{1 - x^2}} \\
 \frac{d}{dx} \sinh^{-1} x &= \frac{1}{\sqrt{x^2 + 1}} \\
-\frac{d}{dx} \cosh^{-1} x &= \frac{1}{\sqrt{x^2 - 1}}, \quad (x > 1)
+\frac{d}{dx} \cosh^{-1} x &= \frac{1}{\sqrt{x^2 - 1}}
 \end{align*}
 \]
 ~~~
@@ -504,15 +504,15 @@
 \[
 \frac{d}{dx} {{c2::\tanh^{-1} x::\ldots}}
 =
-{{c1::\frac{1}{1 - x^2}, \quad (|x| < 1)::\ldots}}
+{{c1::\frac{1}{1 - x^2}, \quad |x| < 1::\ldots}}
 \]
 !related:
 \[
 \begin{align*}
 \frac{d}{dx} \tan^{-1} x &= \frac{1}{1 + x^2} \\
 \frac{d}{dx} \cot^{-1} x &= \frac{-1}{1 + x^2} \\
-\frac{d}{dx} \tanh^{-1} x &= \frac{1}{1 - x^2}, \quad (|x| < 1) \\
-\frac{d}{dx} \coth^{-1} x &= \frac{1}{1 - x^2}, \quad (|x| > 1)
+\frac{d}{dx} \tanh^{-1} x &= \frac{1}{1 - x^2}, \quad |x| < 1 \\
+\frac{d}{dx} \coth^{-1} x &= \frac{1}{1 - x^2}, \quad |x| > 1
 \end{align*}
 \]
 ~~~
@@ -522,15 +522,15 @@
 \[
 \frac{d}{dx} {{c2::\coth^{-1} x::\ldots}}
 =
-{{c1::\frac{1}{1 - x^2}, \quad (|x| > 1)::\ldots}}
+{{c1::\frac{1}{1 - x^2}, \quad |x| > 1::\ldots}}
 \]
 !related:
 \[
 \begin{align*}
 \frac{d}{dx} \tan^{-1} x &= \frac{1}{1 + x^2} \\
 \frac{d}{dx} \cot^{-1} x &= \frac{-1}{1 + x^2} \\
-\frac{d}{dx} \tanh^{-1} x &= \frac{1}{1 - x^2}, \quad (|x| < 1) \\
-\frac{d}{dx} \coth^{-1} x &= \frac{1}{1 - x^2}, \quad (|x| > 1)
+\frac{d}{dx} \tanh^{-1} x &= \frac{1}{1 - x^2}, \quad |x| < 1 \\
+\frac{d}{dx} \coth^{-1} x &= \frac{1}{1 - x^2}, \quad |x| > 1
 \end{align*}
 \]
 ~~~

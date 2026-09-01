@@ -161,7 +161,7 @@
 ~~~
 
 !id: h01ddvdFDL
-!text: \[ \int {{c2::\frac{1}{a^2 + u^2}::\ldots}} \, du = {{c1::\tan^{-1} \frac{u}{a}::\ldots}} + C \]
+!text: \[ \int {{c2::\frac{1}{a^2 + u^2}::\ldots}} \, du = {{c1::\frac{1}{a} \tan^{-1} \frac{u}{a}::\ldots}} + C \]
 ~~~
 
 !id: 9qP24hPifN

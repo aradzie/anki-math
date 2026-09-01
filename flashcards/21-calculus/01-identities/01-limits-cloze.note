@@ -43,7 +43,7 @@
 \[
 {{c2::\ln a::\ldots}}
 =
-{{c1::\lim_{x \to 0} \frac{a^x - 1}{x}::\lim_{x \to \ldots} \ldots}}
+{{c1::\lim_{x \to 0} \frac{a^x - 1}{x}::\lim_{x \to \ldots} \ldots}}, \quad a > 0
 \]
 ~~~
 
@@ -52,11 +52,23 @@
 \[
 \lim_{n \to \infty} n^{1/n}
 =
-{{c2::1::\ldots}}
+{{c1::1::\ldots}}
 \]
 !back extra:
 Write \( n^{1/n} = e^{\ln n / n} \). By L'Hôpital's rule applied to \( \ln x / x \) as \( x \to \infty \),
 \[ \lim_{x \to \infty} \frac{\ln x}{x} = \lim_{x \to \infty} \frac{1/x}{1} = 0, \]
 and since \( \exp \) is continuous,
 \[ n^{1/n} = e^{\ln n / n} \to e^0 = 1. \]
+~~~
+
+!id: hHI7p525Ms
+!text: \[ \lim_{x \to \infty} \frac{x^n}{e^x} = {{c1::0::\ldots}} \]
+~~~
+
+!id: HoJDXwwlgd
+!text: \[ \lim_{x \to \infty} \frac{\ln x}{x^a} = {{c1::0::\ldots}}, \quad a > 0 \]
+~~~
+
+!id: AIxLlhWerJ
+!text: \[ \lim_{n \to \infty} \frac{x^n}{n!} = {{c1::0::\ldots}} \]
 ~~~

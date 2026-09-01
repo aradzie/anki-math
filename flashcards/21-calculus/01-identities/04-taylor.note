@@ -13,6 +13,13 @@ For \( |x| < 1 \):
 &= \sum_{n=0}^{\infty} x^{n}
 \end{align*}
 \]
+!related:
+\[
+\begin{align*}
+\frac{1}{1 - x} &= 1 + x + x^2 + x^3 + \cdots \\
+\frac{1}{1 + x} &= 1 - x + x^2 - x^3 + \cdots
+\end{align*}
+\]
 ~~~
 
 !id: cCVrxmJddO
@@ -24,6 +31,13 @@ For \( |x| < 1 \):
 \frac{1}{1 + x}
 &= 1 - x + x^2 - x^3 + \cdots \\
 &= \sum_{n=0}^{\infty} (-x)^n
+\end{align*}
+\]
+!related:
+\[
+\begin{align*}
+\frac{1}{1 - x} &= 1 + x + x^2 + x^3 + \cdots \\
+\frac{1}{1 + x} &= 1 - x + x^2 - x^3 + \cdots
 \end{align*}
 \]
 ~~~
@@ -39,6 +53,13 @@ e^x
 &= \sum_{n=0}^{\infty} \frac{x^{n}}{n!}
 \end{align*}
 \]
+!related:
+\[
+\begin{align*}
+e^x &= 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots \\
+e^{-x} &= 1 - x + \frac{x^2}{2!} - \frac{x^3}{3!} + \cdots
+\end{align*}
+\]
 ~~~
 
 !id: awnKbaQV1a
@@ -50,6 +71,13 @@ For \( x \in \mathbb{R} \):
 e^{-x}
 &= 1 - x + \frac{x^2}{2!} - \frac{x^3}{3!} + \cdots \\
 &= \sum_{n=0}^{\infty} \frac{(-x)^{n}}{n!}
+\end{align*}
+\]
+!related:
+\[
+\begin{align*}
+e^x &= 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots \\
+e^{-x} &= 1 - x + \frac{x^2}{2!} - \frac{x^3}{3!} + \cdots
 \end{align*}
 \]
 ~~~
@@ -103,7 +131,15 @@ For \( x \in \mathbb{R} \):
 \begin{align*}
 \sin(x)
 &= x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \cdots \\
-&= \sum_{n=0}^{\infty} (-1)^{n} \frac{x^{2n + 1}}{(2n + 1)!}
+&= \sum_{n=0}^{\infty} (-1)^{n} \frac{x^{2n + 1}}{(2n + 1)!} \\
+&= -\sin(-x)
+\end{align*}
+\]
+!related:
+\[
+\begin{align*}
+\sin(x)  &= x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \cdots \\
+\cos(x)  &= 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \cdots
 \end{align*}
 \]
 ~~~
@@ -116,7 +152,15 @@ For \( x \in \mathbb{R} \):
 \begin{align*}
 \cos(x)
 &= 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \cdots \\
-&= \sum_{n=0}^{\infty} (-1)^{n} \frac{x^{2n}}{(2n)!}
+&= \sum_{n=0}^{\infty} (-1)^{n} \frac{x^{2n}}{(2n)!} \\
+&= \cos(-x)
+\end{align*}
+\]
+!related:
+\[
+\begin{align*}
+\sin(x)  &= x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \cdots \\
+\cos(x)  &= 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \cdots
 \end{align*}
 \]
 ~~~
@@ -144,7 +188,27 @@ For \( x \in \mathbb{R} \):
 \begin{align*}
 \sinh(x)
 &= x + \frac{x^3}{3!} + \frac{x^5}{5!} + \frac{x^7}{7!} + \cdots \\
-&= \sum_{n=0}^{\infty} \frac{x^{2n + 1}}{(2n + 1)!}
+&= \sum_{n=0}^{\infty} \frac{x^{2n + 1}}{(2n + 1)!} \\
+&= -\sinh(-x)
+\end{align*}
+\]
+!related:
+\[
+\begin{align*}
+\sinh(x) &= x + \frac{x^3}{3!} + \frac{x^5}{5!} + \frac{x^7}{7!} + \cdots \\
+\cosh(x) &= 1 + \frac{x^2}{2!} + \frac{x^4}{4!} + \frac{x^6}{6!} + \cdots
+\end{align*}
+\]
+~~~
+
+!id: athKHllZjf
+!front: Compare \( \sin(x) = \sum \ldots \) and \( \sinh(x) = \sum \ldots \)
+!back:
+For \( x \in \mathbb{R} \):
+\[
+\begin{align*}
+\sin(x) &= x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \cdots \\
+\sinh(x) &= x + \frac{x^3}{3!} + \frac{x^5}{5!} + \frac{x^7}{7!} + \cdots
 \end{align*}
 \]
 ~~~
@@ -157,7 +221,27 @@ For \( x \in \mathbb{R} \):
 \begin{align*}
 \cosh(x)
 &= 1 + \frac{x^2}{2!} + \frac{x^4}{4!} + \frac{x^6}{6!} + \cdots \\
-&= \sum_{n=0}^{\infty} \frac{x^{2n}}{(2n)!}
+&= \sum_{n=0}^{\infty} \frac{x^{2n}}{(2n)!} \\
+&= \cosh(-x)
+\end{align*}
+\]
+!related:
+\[
+\begin{align*}
+\sinh(x) &= x + \frac{x^3}{3!} + \frac{x^5}{5!} + \frac{x^7}{7!} + \cdots \\
+\cosh(x) &= 1 + \frac{x^2}{2!} + \frac{x^4}{4!} + \frac{x^6}{6!} + \cdots
+\end{align*}
+\]
+~~~
+
+!id: LhkBiFxNMI
+!front: Compare \( \cos(x) = \sum \ldots \) and \( \cosh(x) = \sum \ldots \)
+!back:
+For \( x \in \mathbb{R} \):
+\[
+\begin{align*}
+\cos(x) &= 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \cdots \\
+\cosh(x) &= 1 + \frac{x^2}{2!} + \frac{x^4}{4!} + \frac{x^6}{6!} + \cdots
 \end{align*}
 \]
 ~~~
@@ -171,6 +255,18 @@ For \( |x| < 1 \):
 \operatorname{arctanh}(x)
 &= x + \frac{x^3}{3} + \frac{x^5}{5} + \frac{x^7}{7} + \cdots \\
 &= \sum_{n=0}^{\infty} \frac{x^{2n + 1}}{2n + 1}
+\end{align*}
+\]
+~~~
+
+!id: k5uj5mMZEW
+!front: Compare \( \operatorname{arctan}(x) = \sum \ldots \) and \( \operatorname{arctanh}(x) = \sum \ldots \)
+!back:
+For \( |x| < 1 \):
+\[
+\begin{align*}
+\operatorname{arctan}(x) &= x - \frac{x^3}{3} + \frac{x^5}{5} - \frac{x^7}{7} + \cdots \\
+\operatorname{arctanh}(x) &= x + \frac{x^3}{3} + \frac{x^5}{5} + \frac{x^7}{7} + \cdots
 \end{align*}
 \]
 ~~~
