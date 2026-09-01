@@ -62,6 +62,7 @@
 % ---------- Theorem-like environments ----------
 \RequirePackage{amsthm}
 \theoremstyle{plain}
+\newtheorem{axiom}{Axiom}
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{proposition}[theorem]{Proposition}
