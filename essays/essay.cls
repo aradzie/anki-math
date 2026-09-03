@@ -1,5 +1,6 @@
 %% essay.cls
 %% Shared look-and-feel for the essay documents.
+%%
 %% Content files should do:
 %%   \documentclass{essay}
 %%   \title{...}            % required
