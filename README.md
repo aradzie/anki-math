@@ -3,7 +3,7 @@
 This is my personal repository for self-studying mathematics. It contains three kinds of artifacts:
 
 - **Flashcards** — for spaced repetition in [Anki](https://apps.ankiweb.net/).
-- **Self-check questions** — a single compiled PDF (`self-check.pdf`) of self-check questions, organized by topic.
+- **Self-check questions** — a set of compiled PDFs of self-check questions, one per topic.
 - **Essays** — write-ups of deeper explorations of individual topics.
 
 ## Flashcards
@@ -18,7 +18,7 @@ You can preview these notes [online](https://aradzie.github.io/math-notes/notes.
 
 ## Self-Check Questions
 
-The [self-check.pdf](self-check/self-check.pdf) file is a single compiled document of self-check questions covering various mathematical topics, meant to be worked through as active recall rather than read passively.
+The [self-check/](self-check/) directory collects self-check questions covering various mathematical topics, meant to be worked through as active recall rather than read passively. Each topic compiles to its own standalone PDF.
 
 ## Essays
 

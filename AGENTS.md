@@ -18,7 +18,7 @@ Flashcards are plain-text `.note` files under `flashcards/`, organized by topic 
 
 ### Build Self-Check Questions
 
-The `self-check/Makefile` builds the compiled self-check PDF. It first runs `node self-check-stats.js`, which walks the topic files included from the top-level document and regenerates `self-check-stats.tex` — this step needs a host `node` install, unlike the LaTeX steps below, since it runs directly rather than inside the TeX Live container. It then compiles the top-level document with `latexmk` via `texlive.sh` (see "TeX Live via `texlive.sh`" below), producing the PDF. Commit the regenerated `self-check-stats.tex` alongside content changes that add or remove questions.
+The `self-check/Makefile` builds the compiled self-check PDF, compiling the top-level document with `latexmk` via `texlive.sh` (see "TeX Live via `texlive.sh`" below).
 
 ## Essays
 

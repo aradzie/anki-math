@@ -16,7 +16,6 @@
       "Bash(toolbox run *)",
       "Bash(./texlive.sh *)",
       "Bash(../texlive.sh *)",
-      "Bash(node self-check-stats.js)",
       "Bash(npx notatki *)",
       "Bash(git status)",
       "Bash(git status *)",

@@ -4,17 +4,18 @@ TEXLIVE_RUN = $(TEXLIVE_SH)
 
 AUXDIR := aux
 
-all: pdf
+TEX_SOURCES := $(wildcard *.tex)
+PDF_TARGETS := $(TEX_SOURCES:.tex=.pdf)
 
-pdf:
-	node self-check-stats.js
+.PHONY: all clean cleanall
+all: $(PDF_TARGETS)
+
+%.pdf: %.tex self-check.cls
 	mkdir -p $(AUXDIR)
-	$(TEXLIVE_RUN) latexmk -pdf -auxdir=$(AUXDIR) -outdir=. self-check.tex
+	$(TEXLIVE_RUN) latexmk -pdf -interaction=nonstopmode -halt-on-error -auxdir=$(AUXDIR) -outdir=. $<
 
 clean:
-	$(TEXLIVE_RUN) latexmk -c -auxdir=$(AUXDIR) -outdir=.
+	$(TEXLIVE_RUN) latexmk -c -auxdir=$(AUXDIR) -outdir=. $(TEX_SOURCES)
 
 cleanall:
-	$(TEXLIVE_RUN) latexmk -C -auxdir=$(AUXDIR) -outdir=.
-
-.PHONY: all pdf clean cleanall
+	$(TEXLIVE_RUN) latexmk -C -auxdir=$(AUXDIR) -outdir=. $(TEX_SOURCES)
