@@ -33,7 +33,7 @@ The graph of \( f^{-1} \) is the reflection of the graph of \( f \) across the l
 
 So if \( f'(a) \ne 0 \), then \[ (f^{-1})'(f(a)) = \frac{1}{f'(a)}. \]
 
-![Graph of f reflected across y=x to give the graph of f inverse, with tangent lines of reciprocal slope at the corresponding points (a,f(a)) and (f(a),a)](img/reflection_tangent_slopes.svg)
+![Graph of f reflected across y=x to give the graph of f inverse, with tangent lines of reciprocal slope at the corresponding points (a,f(a)) and (f(a),a)](img/reflection-tangent-slopes.svg)
 ~~~
 
 !id: meJCCut234

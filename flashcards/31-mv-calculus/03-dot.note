@@ -27,7 +27,7 @@ where
 - \( \| \mathbf{b} \| \) is the magnitude (length) of vector \( \mathbf{b} \), and
 - \( \theta \) is the angle between the two vectors.
 
-![Vectors a and b from a common origin, with theta the angle between them](img/dot_product.svg)
+![Vectors a and b from a common origin, with theta the angle between them](img/dot-product.svg)
 ~~~
 
 !id: TKK9AGczLP
@@ -39,7 +39,7 @@ Since \( \mathbf{a} \cdot \mathbf{b} = \|\mathbf{a}\|\|\mathbf{b}\|\cos\theta \)
 - zero: \( \theta = \pi/2 \) (the vectors are orthogonal),
 - negative: \( \theta \) is obtuse.
 
-![The plane split by the line through the origin perpendicular to b: a landing on the same side as b gives a.b > 0, while a on the opposite side gives a.b < 0](img/dot_product_sign.svg)
+![The plane split by the line through the origin perpendicular to b: a landing on the same side as b gives a.b > 0, while a on the opposite side gives a.b < 0](img/dot-product-sign.svg)
 ~~~
 
 !id: GfIxipkTBM
@@ -92,7 +92,7 @@ Equivalently,
 
 It is undefined for \( \mathbf{b}=\mathbf{0} \), since the zero vector determines no direction or line of projection.
 
-![a decomposed relative to b: proj_b a is the vector part of a along b, comp_b a is its signed scalar length, and a - proj_b a is the perpendicular remainder](img/vector_projection.svg)
+![a decomposed relative to b: proj_b a is the vector part of a along b, comp_b a is its signed scalar length, and a - proj_b a is the perpendicular remainder](img/vector-projection.svg)
 ~~~
 
 !id: zANLGRsAZO
@@ -134,7 +134,7 @@ For \( \mathbf{b}\ne\mathbf{0} \), let \( \mathbf{u}=\mathbf{b}/\|\mathbf{b}\| \
 
 So the scalar component gives the signed length, and multiplying by the unit direction \( \mathbf{u} \) turns that signed length into the projection vector.
 
-![a decomposed relative to b: proj_b a is the vector part of a along b, comp_b a is its signed scalar length, and a - proj_b a is the perpendicular remainder](img/vector_projection.svg)
+![a decomposed relative to b: proj_b a is the vector part of a along b, comp_b a is its signed scalar length, and a - proj_b a is the perpendicular remainder](img/vector-projection.svg)
 ~~~
 
 !id: wf35dIibL7
@@ -145,7 +145,7 @@ So the scalar component gives the signed length, and multiplying by the unit dir
 
 Both are undefined when \( \mathbf{b}=\mathbf{0} \), since there is no direction to project onto.
 
-![a decomposed relative to b: proj_b a is the vector part of a along b, comp_b a is its signed scalar length, and a - proj_b a is the perpendicular remainder](img/vector_projection.svg)
+![a decomposed relative to b: proj_b a is the vector part of a along b, comp_b a is its signed scalar length, and a - proj_b a is the perpendicular remainder](img/vector-projection.svg)
 ~~~
 
 !id: sBeQu1tyHR
@@ -167,7 +167,7 @@ c=\frac{\mathbf{a}\cdot\mathbf{b}}{\mathbf{b}\cdot\mathbf{b}}
 
 So \( \operatorname{proj}_{\mathbf{b}}\mathbf{a}=\dfrac{\mathbf{a}\cdot\mathbf{b}}{\|\mathbf{b}\|^2}\mathbf{b} \).
 
-![a decomposed relative to b: proj_b a is the vector part of a along b, comp_b a is its signed scalar length, and a - proj_b a is the perpendicular remainder](img/vector_projection.svg)
+![a decomposed relative to b: proj_b a is the vector part of a along b, comp_b a is its signed scalar length, and a - proj_b a is the perpendicular remainder](img/vector-projection.svg)
 ~~~
 
 !id: IwCMAAznTP
@@ -189,7 +189,7 @@ The first term is parallel to \( \mathbf{b} \). The second term is perpendicular
 
 Thus projection splits \( \mathbf{a} \) into its part along the line spanned by \( \mathbf{b} \) and its orthogonal remainder.
 
-![a decomposed relative to b: proj_b a is the vector part of a along b, comp_b a is its signed scalar length, and a - proj_b a is the perpendicular remainder](img/vector_projection.svg)
+![a decomposed relative to b: proj_b a is the vector part of a along b, comp_b a is its signed scalar length, and a - proj_b a is the perpendicular remainder](img/vector-projection.svg)
 ~~~
 
 !id: b4cQGhizeK
@@ -218,7 +218,7 @@ Reason: for any \( t\mathbf{b} \in \operatorname{span}\{\mathbf{b}\} \), the dif
 
 is a sum of perpendicular vectors. By the Pythagorean theorem, its length is minimized when the second term is \( \mathbf{0} \), i.e. when \( t\mathbf{b}=\operatorname{proj}_{\mathbf{b}}\mathbf{a} \).
 
-![proj_b a is the closest point to a on span{b}: the perpendicular segment down to proj_b a is shortest, while oblique segments to other points t1.b, t2.b on the line are longer](img/projection_closest_point.svg)
+![proj_b a is the closest point to a on span{b}: the perpendicular segment down to proj_b a is shortest, while oblique segments to other points t1.b, t2.b on the line are longer](img/projection-closest-point.svg)
 ~~~
 
 !id: WBPdlXVmMR

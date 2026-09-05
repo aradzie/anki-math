@@ -23,5 +23,5 @@ then \( A \) has a least upper bound \( \sup A \in \mathbb{R} \).
 !extra:
 This is why completeness must be added as an axiom: \( \mathbb{Q} \) satisfies the field and order axioms of \( \mathbb{R} \) but fails completeness.
 
-![The rationals below sqrt(2) have no least upper bound in Q](img/rational_gap.svg)
+![The rationals below sqrt(2) have no least upper bound in Q](img/rational-gap.svg)
 ~~~

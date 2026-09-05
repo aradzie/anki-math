@@ -54,7 +54,7 @@ Therefore \( \lim_{h \to 0} f(c+h)=f(c) \), which is continuity at \( c \).
 \( f(x) = |x| \) at \( c = 0 \): it is continuous since \( \lim_{x \to 0} |x| = 0 = f(0) \). But
 \[ \lim_{h \to 0^-} \frac{|h|-0}{h} = -1, \qquad \lim_{h \to 0^+} \frac{|h|-0}{h} = 1, \]
 so the one-sided derivatives disagree and \( f'(0) \) does not exist.
-!extra: ![The graph of f(x) = |x|, meeting continuously at (0,0) with no jump or hole, but forming a sharp corner: the left arm has slope -1 and the right arm has slope +1, so the one-sided derivatives disagree](img/abs_value_corner.svg)
+!extra: ![The graph of f(x) = |x|, meeting continuously at (0,0) with no jump or hole, but forming a sharp corner: the left arm has slope -1 and the right arm has slope +1, so the one-sided derivatives disagree](img/abs-value-corner.svg)
 ~~~
 
 !id: zQMGhLZL1z

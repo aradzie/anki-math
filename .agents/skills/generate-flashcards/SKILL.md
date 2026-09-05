@@ -166,7 +166,7 @@ The `!id:` field, if exists, contains an automatically generated stable note ide
 When a note is inherently visual (a geometric interpretation, a curve, a spatial construction), embed a compiled Asymptote illustration using standard Markdown image syntax, with descriptive alt text — not just the concept name — describing what the diagram shows:
 
 ```text
-![The Cross Product a x b, perpendicular to the plane spanned by a and b, whose magnitude equals the area of the parallelogram they span](img/cross_product.svg)
+![The Cross Product a x b, perpendicular to the plane spanned by a and b, whose magnitude equals the area of the parallelogram they span](img/cross-product.svg)
 ```
 
 - The path is `img/<name>.svg` (or `.png` for raster-only 3D scenes), relative to the `.note` file, matching the `.asy` source's compiled output — see the `generate-illustrations` skill for authoring and compiling the source itself.

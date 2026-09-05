@@ -19,7 +19,7 @@ They are written identically, as ordered triples of real numbers in the same set
 !back:
 A parametrized curve: a \( 1 \)-parameter path through space, assigning a point \( \mathbf{r}(t) \in \mathbb{R}^3 \) to each \( t \in [a, b] \).
 
-![The domain interval [a,b] on the t-axis, and its image curve r([a,b]) in R^3, with a point t_0 mapped to r(t_0)](img/parametrized_curve.svg)
+![The domain interval [a,b] on the t-axis, and its image curve r([a,b]) in R^3, with a point t_0 mapped to r(t_0)](img/parametrized-curve.svg)
 ~~~
 
 !id: EQu6pM9Gov
@@ -27,7 +27,7 @@ A parametrized curve: a \( 1 \)-parameter path through space, assigning a point 
 !back:
 A parametrized surface: a \( 2 \)-parameter sheet, assigning a point \( \mathbf{r}(u, v) \in \mathbb{R}^3 \) to each \( (u, v) \in D \).
 
-![The domain region D in the (u,v)-plane, and its image sheet r(D) in R^3, with a point (u_0,v_0) mapped to r(u_0,v_0)](img/parametrized_surface.svg)
+![The domain region D in the (u,v)-plane, and its image sheet r(D) in R^3, with a point (u_0,v_0) mapped to r(u_0,v_0)](img/parametrized-surface.svg)
 ~~~
 
 !type: Basic Math

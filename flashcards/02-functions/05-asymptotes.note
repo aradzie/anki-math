@@ -11,7 +11,7 @@ The line \( x=a \) is a vertical asymptote of \( f \) if at least one of the one
 - \( \lim_{x\to a^+} f(x) \)
 
 is \( +\infty \) or \( -\infty \).
-!extra: ![Vertical asymptote x = 2 for f(x) = 1/(x-2)](img/asy_v.svg)
+!extra: ![Vertical asymptote x = 2 for f(x) = 1/(x-2)](img/asy-v.svg)
 ~~~
 
 !id: zzYdjtgp1r
@@ -24,7 +24,7 @@ The line \( y=L \) is a horizontal asymptote of \( f \) if
 !extra:
 A function can have different horizontal asymptotes (or none at all) in the two directions.
 
-![Horizontal asymptotes y = ±π/2 for f(x) = arctan(x)](img/asy_h.svg)
+![Horizontal asymptotes y = ±π/2 for f(x) = arctan(x)](img/asy-h.svg)
 ~~~
 
 !id: qB9L6UhrH4
@@ -33,7 +33,7 @@ A function can have different horizontal asymptotes (or none at all) in the two 
 The line \( y=mx+b \), with \( m \ne 0 \), is an oblique asymptote of \( f \) as \( x\to\infty \) if
 \[ \lim_{x\to\infty} \big(f(x) - (mx+b)\big) = 0, \]
 and similarly as \( x \to -\infty \).
-!extra: ![Oblique asymptote y = x for f(x) = (x^2+1)/x](img/asy_o.svg)
+!extra: ![Oblique asymptote y = x for f(x) = (x^2+1)/x](img/asy-o.svg)
 ~~~
 
 !id: Sv1uQRdxot
@@ -51,7 +51,7 @@ Yes — a horizontal asymptote only describes end behavior as \( x\to\pm\infty \
 
 For \( f(x) = \dfrac{\sin x}{x} \), \( \lim_{x\to\infty} f(x) = 0 \), so \( y=0 \) is a horizontal asymptote, yet \( f(x)=0 \) infinitely often.
 
-![sin(x)/x crossing its horizontal asymptote y = 0 at every nonzero multiple of pi](img/asy_cross.svg)
+![sin(x)/x crossing its horizontal asymptote y = 0 at every nonzero multiple of pi](img/asy-cross.svg)
 ~~~
 
 !id: oqdDQ8l5Gm
@@ -61,7 +61,7 @@ Yes. For \( f(x) = \sqrt{x^2+1} \):
 - As \( x\to\infty \): \( f(x) - x = \dfrac{1}{\sqrt{x^2+1}+x} \to 0 \), so \( y=x \) is an asymptote.
 - As \( x\to-\infty \): \( f(x)-(-x) = \dfrac{1}{\sqrt{x^2+1}-x} \to 0 \), so \( y=-x \) is an asymptote.
 
-![sqrt(x^2+1) approaching y = x on the right and y = -x on the left](img/asy_two_sided.svg)
+![sqrt(x^2+1) approaching y = x on the right and y = -x on the left](img/asy-two-sided.svg)
 ~~~
 
 !id: xWvUGS6lr7
@@ -71,7 +71,7 @@ Yes. For \( f(x) = \sqrt{x^2+1} \):
 - horizontal asymptote \( y=0 \) (numerator has lower degree than the denominator).
 - No oblique asymptote.
 
-![1/(x-2) with both its vertical asymptote x = 2 and horizontal asymptote y = 0 labeled](img/asy_v_and_h.svg)
+![1/(x-2) with both its vertical asymptote x = 2 and horizontal asymptote y = 0 labeled](img/asy-v-and-h.svg)
 ~~~
 
 !id: hTjCFmOHhv
@@ -80,7 +80,7 @@ Yes. For \( f(x) = \sqrt{x^2+1} \):
 - Vertical asymptote \( x=0 \). Dividing gives \( f(x) = x + \dfrac{1}{x} \), and \( 1/x \to 0 \) as \( x\to\pm\infty \), so \( y=x \) is an oblique asymptote.
 - No horizontal asymptote, since the numerator's degree exceeds the denominator's.
 
-![(x^2+1)/x with both its vertical asymptote x = 0 and oblique asymptote y = x labeled](img/asy_v_and_o.svg)
+![(x^2+1)/x with both its vertical asymptote x = 0 and oblique asymptote y = x labeled](img/asy-v-and-o.svg)
 ~~~
 
 !id: uW5iBbeAze
@@ -88,5 +88,5 @@ Yes. For \( f(x) = \sqrt{x^2+1} \):
 !back:
 None. The factor \( x-1 \) cancels: \( f(x) = x+1 \) for \( x\ne 1 \), so \( x=1 \) is a removable discontinuity (a hole), not a vertical asymptote. The simplified function is itself a line, so it has no horizontal or oblique asymptote either — it doesn't approach a different line at infinity, it is one.
 
-![(x^2-1)/(x-1) simplifying to the line y = x+1 with a removable hole at (1,2), no asymptote](img/asy_none.svg)
+![(x^2-1)/(x-1) simplifying to the line y = x+1 with a removable hole at (1,2), no asymptote](img/asy-none.svg)
 ~~~

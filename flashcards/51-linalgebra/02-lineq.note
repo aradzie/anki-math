@@ -54,7 +54,7 @@ so \( x_1 + x_2 \) satisfies it too, and for any scalar \( k \),
 \[ c \cdot (k x_1) = k (c \cdot x_1) = k \cdot 0 = 0, \]
 so \( k x_1 \) satisfies it as well. Since this holds for every equation in the system simultaneously, the solution set is closed under addition and scalar multiplication.
 
-![Solution set of x - 2y = 0: a line through the origin. Two solutions v1 and v2, their sum v1+v2, and a scalar multiple kv1 all remain on the line](img/homogeneous_closure.svg)
+![Solution set of x - 2y = 0: a line through the origin. Two solutions v1 and v2, their sum v1+v2, and a scalar multiple kv1 all remain on the line](img/homogeneous-closure.svg)
 ~~~
 
 !id: o8SwCZfv9W
@@ -93,7 +93,7 @@ Is the following system of linear equations homogeneous?
 !back:
 Geometrically, an independent system (with as many equations as unknowns) corresponds to lines (in two dimensions) or planes (in three dimensions) that intersect in exactly one common point — such a system is automatically consistent.
 
-![Two independent lines, x + y = 4 and x - y = 0, crossing at the single point (2, 2)](img/lines_intersecting.svg)
+![Two independent lines, x + y = 4 and x - y = 0, crossing at the single point (2, 2)](img/lines-intersecting.svg)
 ~~~
 
 !id: p9EYt7iCmJ
@@ -104,7 +104,7 @@ Geometrically, a dependent system (with as many equations as unknowns) correspon
 - coincident, sharing infinitely many common points, if the system is consistent, or
 - parallel but distinct, sharing no common point, if the system is inconsistent.
 
-![Two lines coinciding, with infinitely many common points, versus two distinct parallel lines, with none](img/lines_dependent_compare.svg)
+![Two lines coinciding, with infinitely many common points, versus two distinct parallel lines, with none](img/lines-dependent-compare.svg)
 ~~~
 
 !id: WaPCaKLTFQ
@@ -117,7 +117,7 @@ Geometrically, a dependent system (with as many equations as unknowns) correspon
 !back:
 Geometrically, an inconsistent system corresponds to lines (in two dimensions) or planes (in three dimensions) with no common point at all, such as distinct parallel lines.
 
-![Two distinct parallel lines, sharing no common point](img/lines_parallel.svg)
+![Two distinct parallel lines, sharing no common point](img/lines-parallel.svg)
 ~~~
 
 !id: Q052SVQBhv

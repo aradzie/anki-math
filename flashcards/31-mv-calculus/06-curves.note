@@ -29,7 +29,7 @@ No. \( \mathbf{r}'(t) = \langle 2t, 3t^2 \rangle \), so \( \mathbf{r}'(0) = \mat
 
 Eliminating \( t \) gives \( y^2 = x^3 \), the semicubical parabola, which has a genuine cusp at the origin: both branches (\( t>0 \) and \( t<0 \)) approach along the same tangent line (the \( x \)-axis), but with opposite orientation, so there is no single well-defined tangent direction there — only a sharp point.
 
-![The semicubical parabola r(t) = <t^2, t^3>, with a cusp at the origin](img/semicubical_parabola.svg)
+![The semicubical parabola r(t) = <t^2, t^3>, with a cusp at the origin](img/semicubical-parabola.svg)
 !extra: The tangent *line* still exists at the cusp (both branches share it); what fails is a well-defined tangent *direction*, since the direction of travel reverses across \( t=0 \).
 ~~~
 

@@ -26,7 +26,7 @@ the sum of rectangle areas where each rectangle's height is sampled at its subin
 - If \( f \) is decreasing, both inequalities reverse:
   \[ R_n \le \int_a^b f(x)\,dx \le L_n. \]
 !related: \( T_n = \dfrac{L_n + R_n}{2} \) — averaging the Left and Right Riemann Sums exactly recovers the Trapezoidal Rule, since every interior node's two contributions (once from each sum) combine into the weight-\( 2 \) term of \( T_n \)'s formula.
-!extra: ![Left Riemann sum undershooting and right Riemann sum overshooting the same increasing curve](img/left_right_riemann_sum.svg)
+!extra: ![Left Riemann sum undershooting and right Riemann sum overshooting the same increasing curve](img/left-right-riemann-sum.svg)
 ~~~
 
 !id: ae4rK0jt8Z

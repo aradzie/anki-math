@@ -234,7 +234,7 @@ Then the series and the corresponding improper integral both converge or both di
   \iff
   \int_N^\infty f(x)\,dx \text{ converges}.
 \]
-!extra: ![Integral test](img/integral_test.svg)
+!extra: ![Integral test](img/integral-test.svg)
 ~~~
 
 !id: 4QNZwdR4ev
@@ -245,7 +245,7 @@ Then the series and the corresponding improper integral both converge or both di
 !id: RBBZTjh1Rm
 !front: For a continuous, decreasing function \( f \), how does \( f(n) \) compare to \( \int_{n-1}^{n} f(x)\,dx \) and \( \int_{n}^{n+1} f(x)\,dx \)?
 !back: \[ \int_{n}^{n+1} f(x)\,dx \;\le\; f(n) \;\le\; \int_{n-1}^{n} f(x)\,dx. \]
-!extra: ![Decreasing function integral sandwich](img/decreasing_function_sandwich.svg)
+!extra: ![Decreasing function integral sandwich](img/decreasing-function-sandwich.svg)
 ~~~
 
 !id: nBzR1fN1OP
@@ -280,7 +280,7 @@ Suppose \( \sum_{n=1}^{\infty} a_n \) satisfies the integral test hypotheses wit
 !extra:
 This bounds the error of approximating the series' sum by its \( N \)th partial sum without needing the exact value of the series.
 
-![Integral test remainder](img/integral_test_remainder.svg)
+![Integral test remainder](img/integral-test-remainder.svg)
 ~~~
 
 !id: rVhE7ELDdz

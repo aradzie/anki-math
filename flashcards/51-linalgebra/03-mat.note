@@ -7,7 +7,7 @@
 !back:
 A **diagonal matrix** is a square matrix in which all entries outside the main diagonal are zero. The main diagonal runs from the top left to the bottom right of the matrix.
 
-![Venn diagram: matrices that are both upper- and lower-triangular are exactly the diagonal matrices, and the identity matrix is a further-specialized diagonal matrix](img/matrix_class_hierarchy.svg)
+![Venn diagram: matrices that are both upper- and lower-triangular are exactly the diagonal matrices, and the identity matrix is a further-specialized diagonal matrix](img/matrix-class-hierarchy.svg)
 !extra:
 For example, the following is a \( 3 \times 3 \) diagonal matrix:
 
@@ -27,7 +27,7 @@ where \( a_{11} \), \( a_{22} \), and \( a_{33} \) are the diagonal elements.
 !back:
 An **upper-triangular matrix** is a square matrix in which all entries below the main diagonal are zero. The main diagonal runs from the top left to the bottom right of the matrix.
 
-![Venn diagram: matrices that are both upper- and lower-triangular are exactly the diagonal matrices, and the identity matrix is a further-specialized diagonal matrix](img/matrix_class_hierarchy.svg)
+![Venn diagram: matrices that are both upper- and lower-triangular are exactly the diagonal matrices, and the identity matrix is a further-specialized diagonal matrix](img/matrix-class-hierarchy.svg)
 !extra:
 For example, the following is a \( 3 \times 3 \) upper-triangular matrix:
 
@@ -45,7 +45,7 @@ For example, the following is a \( 3 \times 3 \) upper-triangular matrix:
 !back:
 A **lower-triangular matrix** is a square matrix in which all entries above the main diagonal are zero. The main diagonal runs from the top left to the bottom right of the matrix.
 
-![Venn diagram: matrices that are both upper- and lower-triangular are exactly the diagonal matrices, and the identity matrix is a further-specialized diagonal matrix](img/matrix_class_hierarchy.svg)
+![Venn diagram: matrices that are both upper- and lower-triangular are exactly the diagonal matrices, and the identity matrix is a further-specialized diagonal matrix](img/matrix-class-hierarchy.svg)
 !extra:
 For example, the following is a \( 3 \times 3 \) lower-triangular matrix:
 
@@ -63,7 +63,7 @@ For example, the following is a \( 3 \times 3 \) lower-triangular matrix:
 !back:
 The **identity matrix** \( I \) is a square matrix in which all the elements of the main diagonal are ones, and all other elements are zeros. The main diagonal runs from the top left to the bottom right of the matrix.
 
-![Venn diagram: matrices that are both upper- and lower-triangular are exactly the diagonal matrices, and the identity matrix is a further-specialized diagonal matrix](img/matrix_class_hierarchy.svg)
+![Venn diagram: matrices that are both upper- and lower-triangular are exactly the diagonal matrices, and the identity matrix is a further-specialized diagonal matrix](img/matrix-class-hierarchy.svg)
 !extra:
 For example, the following is a \( 3 \times 3 \) identity matrix:
 
@@ -89,7 +89,7 @@ A **symmetric matrix** is a square matrix that is equal to its transpose. In oth
 
 This means that the elements across the main diagonal are mirror images of each other, i.e., \( a_{ij} = a_{ji} \) for all \( i \) and \( j \).
 
-![A 4x4 grid with the main diagonal shaded as a mirror line; the off-diagonal pairs a12/a21 and a14/a41 are connected to show they are reflections of each other across it](img/symmetric_mirror.svg)
+![A 4x4 grid with the main diagonal shaded as a mirror line; the off-diagonal pairs a12/a21 and a14/a41 are connected to show they are reflections of each other across it](img/symmetric-mirror.svg)
 !extra:
 For example, the following is a \( 3 \times 3 \) symmetric matrix:
 
@@ -126,7 +126,7 @@ though some pairs of matrices do commute — e.g. any matrix with the identity m
 
 \[ AI = IA \]
 
-![The unit square transformed by AB versus BA, where A is a 90-degree rotation and B is a horizontal shear: applying the same two matrices in opposite orders produces different parallelograms](img/noncommutative_transform.svg)
+![The unit square transformed by AB versus BA, where A is a 90-degree rotation and B is a horizontal shear: applying the same two matrices in opposite orders produces different parallelograms](img/noncommutative-transform.svg)
 ~~~
 
 !id: vUQzCrBy9C
@@ -161,7 +161,7 @@ though some pairs do commute — e.g. any matrix with the identity matrix \( I \
 
 \[ AI = IA \]
 
-![The unit square transformed by AB versus BA, where A is a 90-degree rotation and B is a horizontal shear: applying the same two matrices in opposite orders produces different parallelograms](img/noncommutative_transform.svg)
+![The unit square transformed by AB versus BA, where A is a 90-degree rotation and B is a horizontal shear: applying the same two matrices in opposite orders produces different parallelograms](img/noncommutative-transform.svg)
 ~~~
 
 !id: LlaQFPFPfm

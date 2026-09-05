@@ -12,7 +12,7 @@ provided this limit exists as a finite real number.
 Similarly,
 \[ \int_{-\infty}^b f(x)\, dx = \lim_{R\to-\infty}\int_R^b f(x)\, dx \]
 when that finite limit exists.
-!extra: ![Type I: area under y = 1/x^2 from a to R, as R → ∞](img/improper_type1.svg)
+!extra: ![Type I: area under y = 1/x^2 from a to R, as R → ∞](img/improper-type1.svg)
 ~~~
 
 !id: biZ5aT6csg
@@ -37,7 +37,7 @@ Ignore a small interval next to the singular endpoint, integrate over \( [a+\var
   \lim_{\varepsilon\to 0^+}\int_{a+\varepsilon}^{b} f(x)\,dx.
 \]
 The improper integral converges exactly when this limit exists as a finite real number. A singularity at \( b \) is handled by the analogous limit \( \int_a^{b-\varepsilon} f \).
-!extra: ![Type II: area under y = 1/√x from a+ε to b, as ε → 0⁺](img/improper_type2.svg)
+!extra: ![Type II: area under y = 1/√x from a+ε to b, as ε → 0⁺](img/improper-type2.svg)
 ~~~
 
 !id: nQvpIQsu42

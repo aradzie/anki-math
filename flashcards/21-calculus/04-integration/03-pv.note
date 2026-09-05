@@ -13,7 +13,7 @@ The Cauchy principal value uses one symmetric limiting interval:
 provided this finite limit exists.
 
 This is weaker than ordinary improper convergence, which requires the two one-sided integrals to converge separately.
-!extra: ![Cauchy principal value: a symmetric window [-R,R] growing outward on both ends at once, as R → ∞](img/pv_symmetric_limit.svg)
+!extra: ![Cauchy principal value: a symmetric window [-R,R] growing outward on both ends at once, as R → ∞](img/pv-symmetric-limit.svg)
 ~~~
 
 !id: yOKolhbLXX
@@ -32,7 +32,7 @@ Remove equal neighborhoods on both sides of the singularity and take one joint l
 provided this finite limit exists.
 
 Ordinary improper convergence instead requires the two one-sided integrals at \( c \) to converge separately.
-!extra: ![Cauchy principal value with an interior singularity at c: a symmetric ε-neighborhood of c removed from both sides at once, as ε → 0⁺](img/pv_interior_singularity.svg)
+!extra: ![Cauchy principal value with an interior singularity at c: a symmetric ε-neighborhood of c removed from both sides at once, as ε → 0⁺](img/pv-interior-singularity.svg)
 ~~~
 
 !id: ul3k9h3rUd
@@ -90,7 +90,7 @@ But the ordinary improper integral requires the two tails separately:
 \end{align*}
 \]
 Since those one-sided integrals do not converge as finite numbers, the ordinary improper integral diverges.
-!extra: ![p.v. int x dx = 0: the positive lobe on [0,R] and negative lobe on [-R,0] have equal and opposite area R^2/2 for every R, canceling exactly as R → ∞](img/pv_x_cancellation.svg)
+!extra: ![p.v. int x dx = 0: the positive lobe on [0,R] and negative lobe on [-R,0] have equal and opposite area R^2/2 for every R, canceling exactly as R → ∞](img/pv-x-cancellation.svg)
 ~~~
 
 !id: EqMOLLHEGt
@@ -101,7 +101,7 @@ No. For every \( R>0 \),
 This tends to \( \infty \) as \( R\to\infty \), so the principal value diverges.
 
 The reason cancellation fails is that \( x^2 \) is even and nonnegative: the two halves add instead of canceling.
-!extra: ![Even function f(x) = x^2/6: both lobes on [-R,R] lie above the axis with no cancellation, so the area grows without bound as R → ∞](img/pv_even_no_cancellation.svg)
+!extra: ![Even function f(x) = x^2/6: both lobes on [-R,R] lie above the axis with no cancellation, so the area grows without bound as R → ∞](img/pv-even-no-cancellation.svg)
 ~~~
 
 !id: I3WysbYaIK
@@ -116,7 +116,7 @@ No decay condition at infinity is needed for the principal value; exact symmetry
 !extra:
 Contrast with the ordinary improper integral \( \int_{-\infty}^\infty f(x)\, dx \), which can still diverge for odd \( f \) (e.g. \( f(x) = x \)) — oddness guarantees the p.v. but says nothing about ordinary convergence.
 
-![Odd function f(x) = x/(1+x^2): the positive and negative lobes on [-R,R] are point-symmetric about the origin, canceling exactly for every R](img/pv_odd_function.svg)
+![Odd function f(x) = x/(1+x^2): the positive and negative lobes on [-R,R] are point-symmetric about the origin, canceling exactly for every R](img/pv-odd-function.svg)
 ~~~
 
 !id: xuxbU8xted

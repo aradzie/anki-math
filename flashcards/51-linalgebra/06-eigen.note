@@ -22,7 +22,7 @@ The eigenvector \( \mathbf{v} \) spans a line through the origin that is mapped 
 
 The eigenvalue \( \lambda \) is the factor by which \( A \) stretches, shrinks, or reverses vectors along that line; every other direction is, in general, moved off its own line by \( A \).
 
-![Eigenvector v on an invariant line: Av lands back on that same line, scaled by lambda. A generic vector u is not an eigenvector, and Au leaves the line u started on](img/invariant_direction.svg)
+![Eigenvector v on an invariant line: Av lands back on that same line, scaled by lambda. A generic vector u is not an eigenvector, and Au leaves the line u started on](img/invariant-direction.svg)
 ~~~
 
 !id: fP53MzFi6p
@@ -135,7 +135,7 @@ with discriminant \( 4\cos^2\theta - 4 = -4\sin^2\theta < 0 \) whenever \( \thet
 
 Geometrically this must happen: rotating by an angle other than \( 0 \) or \( \pi \) sends every nonzero real vector to a different direction, so no real vector can satisfy \( R_\theta \mathbf{v} = \lambda \mathbf{v} \) for real \( \lambda \).
 
-![Three sample vectors v on the unit circle, each with its own line through the origin (dashed); rotating each by theta sends it to R_theta v, visibly off that line](img/rotation_no_eigenvector.svg)
+![Three sample vectors v on the unit circle, each with its own line through the origin (dashed); rotating each by theta sends it to R_theta v, visibly off that line](img/rotation-no-eigenvector.svg)
 !extra: At \( \theta = 0 \), \( R_\theta = I \), so every vector is an eigenvector with \( \lambda = 1 \); at \( \theta = \pi \), \( R_\theta = -I \), so every vector is an eigenvector with \( \lambda = -1 \).
 ~~~
 
@@ -212,7 +212,7 @@ To prove: \( \mathbf{v}_1, \dots, \mathbf{v}_k \) are linearly independent.
 \[ A - aI = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} \]
 has rank \( 1 \), so its null space — the eigenspace — is only \( 1 \)-dimensional, spanned by \( (1,0) \). Since the geometric multiplicity \( 1 \) falls short of the algebraic multiplicity \( 2 \), there is no basis of eigenvectors, so \( A \) is not diagonalizable — it is defective.
 
-![For A = [[1,1],[0,1]] (a=1), the x-axis is the only eigenline, fixed pointwise since lambda=1; a generic vector u off that line is sheared to Au, which does not land back on u's own line](img/defective_shear.svg)
+![For A = [[1,1],[0,1]] (a=1), the x-axis is the only eigenline, fixed pointwise since lambda=1; a generic vector u off that line is sheared to Au, which does not land back on u's own line](img/defective-shear.svg)
 ~~~
 
 !id: QD8lbZkAxK
@@ -273,5 +273,5 @@ This is stronger than distinct-eigenvalue orthogonality alone: it guarantees a f
 !back:
 They give a set of mutually perpendicular directions — the principal axes — along which \( A \) acts by pure scaling, with no shearing or rotation mixing the directions together. For the quadratic form \( \mathbf{x}^TA\mathbf{x} = c \), these axes are the axes of symmetry of the resulting ellipse or ellipsoid (or hyperbola, if some eigenvalues are negative).
 
-![The unit circle mapped by the symmetric matrix A = [[2,1],[1,2]] to an ellipse whose semi-axes lie along A's orthogonal eigenvectors (1,1) and (1,-1), with lengths equal to the eigenvalues 3 and 1](img/eigen_ellipse.svg)
+![The unit circle mapped by the symmetric matrix A = [[2,1],[1,2]] to an ellipse whose semi-axes lie along A's orthogonal eigenvectors (1,1) and (1,-1), with lengths equal to the eigenvalues 3 and 1](img/eigen-ellipse.svg)
 ~~~

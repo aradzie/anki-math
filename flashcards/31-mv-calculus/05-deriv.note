@@ -30,7 +30,7 @@ provided the limit exists and \( \mathbf{a}+h\mathbf{e}_i \in D \) for all suffi
 
 Each partial derivative measures a coordinate-direction rate of change while the other variable is held fixed.
 
-![Surface z=f(x,y) sliced by the planes y=b and x=a, with the resulting trace curves and their slopes f_x(a,b) and f_y(a,b) at the point (a,b)](img/partial_derivative_trace.svg)
+![Surface z=f(x,y) sliced by the planes y=b and x=a, with the resulting trace curves and their slopes f_x(a,b) and f_y(a,b) at the point (a,b)](img/partial-derivative-trace.svg)
 ~~~
 
 !id: 3La445Jl1J
@@ -47,7 +47,7 @@ For a unit vector \( \mathbf{u} \), it is
 
 provided the limit exists and \( \mathbf{a}+h\mathbf{u} \in D \) for all sufficiently small \( h \).
 
-![Surface z=f(x,y) sliced by the vertical plane through a spanned by an arbitrary direction u, with the resulting trace curve and its slope D_u f(a)](img/directional_derivative_trace.svg)
+![Surface z=f(x,y) sliced by the vertical plane through a spanned by an arbitrary direction u, with the resulting trace curve and its slope D_u f(a)](img/directional-derivative-trace.svg)
 ~~~
 
 !id: X1zHWYp6hQ
@@ -84,7 +84,7 @@ In particular,
 
 So the gradient is the vector representing the derivative linear functional \( Df(\mathbf{a}) \) via the dot product.
 
-![Level curves of f around a, with the gradient vector at a normal to the level curve and pointing toward increasing f, and D_u f(a) shown as the signed length of the gradient's projection onto a unit direction u, at angle theta from the gradient](img/gradient_directional_derivative.svg)
+![Level curves of f around a, with the gradient vector at a normal to the level curve and pointing toward increasing f, and D_u f(a) shown as the signed length of the gradient's projection onto a unit direction u, at angle theta from the gradient](img/gradient-directional-derivative.svg)
 !extra: The differentiability hypothesis is essential for the formula \( D_{\mathbf{v}}f=\nabla f\cdot\mathbf{v} \). Directional derivatives can exist in many directions without fitting together into one linear approximation.
 ~~~
 
@@ -154,7 +154,7 @@ If \( f \) is differentiable at \( (x(t),y(t)) \) and \( x,y \) are differentiab
 
 It is the ordinary derivative of the one-variable composite function \( z(t)=f(x(t),y(t)) \).
 
-![Dependency tree for z=f(x(t),y(t)): z branches to x and y, each labeled by the partial derivative of f; x and y each connect down to t, labeled by dx/dt and dy/dt, giving dz/dt as the sum of the two root-to-leaf products](img/chain_rule_tree.svg)
+![Dependency tree for z=f(x(t),y(t)): z branches to x and y, each labeled by the partial derivative of f; x and y each connect down to t, labeled by dx/dt and dy/dt, giving dz/dt as the sum of the two root-to-leaf products](img/chain-rule-tree.svg)
 !extra:
 In linear-map notation, with \( \mathbf{r}(t)=(x(t),y(t)) \), this is
 

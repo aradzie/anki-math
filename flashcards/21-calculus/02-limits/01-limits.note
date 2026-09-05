@@ -7,7 +7,7 @@
 !back:
 \( \lim_{x \to c} f(x) = L \) if for every \( \varepsilon>0 \) there exists \( \delta>0 \) such that for all \( x \) in the domain of \( f \),
 \[ 0 < |x-c| < \delta \implies |f(x)-L| < \varepsilon. \]
-!extra: ![The band of half-width epsilon around L and the punctured neighborhood of half-width delta around c (open circle at (c, L), since f(c) plays no role), showing the curve stays inside the band whenever x is within delta of c but not equal to c](img/epsilon_delta_limit.svg)
+!extra: ![The band of half-width epsilon around L and the punctured neighborhood of half-width delta around c (open circle at (c, L), since f(c) plays no role), showing the curve stays inside the band whenever x is within delta of c but not equal to c](img/epsilon-delta-limit.svg)
 ~~~
 
 !id: jley1rlt49

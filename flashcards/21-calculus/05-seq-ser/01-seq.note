@@ -216,7 +216,7 @@ For example, \( a_n=(-1)^n \) has one subsequence constantly equal to \( 1 \) an
 !id: LHb3sG7zVK
 !front: Define a Cauchy sequence.
 !back: A sequence \( \{a_n\} \) is a **Cauchy sequence** if for all \( \epsilon > 0 \), there exists an integer \( N \) such that \( |a_n - a_m| < \epsilon \) for all \( n, m \ge N \).
-!extra: ![Terms of a Cauchy sequence eventually lie within every epsilon-wide tail cluster, even though the limiting value is not specified](img/cauchy_sequence.svg)
+!extra: ![Terms of a Cauchy sequence eventually lie within every epsilon-wide tail cluster, even though the limiting value is not specified](img/cauchy-sequence.svg)
 ~~~
 
 !id: kaQVrrcwh0
@@ -285,7 +285,7 @@ For real sequences:
 
 Equivalently, every eventually monotone bounded real sequence converges.
 
-![An increasing sequence bounded above by M climbing toward its limit L <= M, the least upper bound it can never exceed](img/monotone_convergence.svg)
+![An increasing sequence bounded above by M climbing toward its limit L <= M, the least upper bound it can never exceed](img/monotone-convergence.svg)
 ~~~
 
 !id: GsApZnrAzQ

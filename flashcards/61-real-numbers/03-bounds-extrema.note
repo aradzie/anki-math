@@ -9,7 +9,7 @@
 - \( m \in \mathbb{R} \) is a **lower bound** of \( A \) if \( a \ge m \) for all \( a \in A \); \( A \) is then **bounded below**.
 - \( A \) is **bounded** if it is both bounded above and bounded below.
 - If \( A \) is not bounded, it is **unbounded**.
-!extra: ![Anatomy of sup and inf](img/sup_inf_anatomy.svg)
+!extra: ![Anatomy of sup and inf](img/sup-inf-anatomy.svg)
 ~~~
 
 !id: 0ern8qyuMZ
@@ -22,7 +22,7 @@
 !extra:
 Equivalently, \( \sup A \) is the smallest element of the set of upper bounds of \( A \).
 
-![Anatomy of sup and inf](img/sup_inf_anatomy.svg)
+![Anatomy of sup and inf](img/sup-inf-anatomy.svg)
 ~~~
 
 !id: VtVqJTuax4
@@ -35,7 +35,7 @@ Equivalently, \( \sup A \) is the smallest element of the set of upper bounds of
 !extra:
 Equivalently, \( \inf A \) is the largest element of the set of lower bounds of \( A \).
 
-![Anatomy of sup and inf](img/sup_inf_anatomy.svg)
+![Anatomy of sup and inf](img/sup-inf-anatomy.svg)
 ~~~
 
 !id: yThN4F1NtW
@@ -140,7 +140,7 @@ No. Let \( A = \{-\tfrac{1}{n} : n \in \mathbb{N}\} = \{-1, -\tfrac12, -\tfrac13
 !extra:
 This shows \( \sup \) is strictly weaker than \( \max \): it only requires an upper bound approached arbitrarily closely, not attained. Dually, \( B = \{\tfrac1n : n \in \mathbb{N}\} \) has \( \inf B = 0 \) with no \( \min B \).
 
-![-1/n approaches 0, which is sup A but not in A](img/sup_without_max.svg)
+![-1/n approaches 0, which is sup A but not in A](img/sup-without-max.svg)
 ~~~
 
 !id: ll8npMoMHp
@@ -155,5 +155,5 @@ This shows \( \sup \) is strictly weaker than \( \max \): it only requires an up
 \( \sup(0,1) = 1 \) and \( \inf(0,1) = 0 \), neither attained — so \( (0,1) \) has no maximum and no minimum.
 
 For the closed interval, \( \sup[0,1] = \max[0,1] = 1 \) and \( \inf[0,1] = \min[0,1] = 0 \): both bounds are attained since the endpoints belong to the set.
-!extra: ![Open interval, not attained, vs. closed interval, attained](img/interval_attainment.svg)
+!extra: ![Open interval, not attained, vs. closed interval, attained](img/interval-attainment.svg)
 ~~~

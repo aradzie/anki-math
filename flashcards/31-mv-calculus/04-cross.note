@@ -41,7 +41,7 @@ The **Cross Product** \( \mathbf{a} \times \mathbf{b} \) is a vector that:
   where \( \theta \) is the angle between \( \mathbf{a} \) and \( \mathbf{b} \), and
 - has direction given by the right-hand rule.
 
-![The Cross Product a x b, perpendicular to the plane spanned by a and b, whose magnitude equals the area of the parallelogram they span](img/cross_product.svg)
+![The Cross Product a x b, perpendicular to the plane spanned by a and b, whose magnitude equals the area of the parallelogram they span](img/cross-product.svg)
 ~~~
 
 !id: 4wCxwXidGy
@@ -186,5 +186,5 @@ Geometrically, its absolute value is the volume of the parallelepiped spanned by
 
 The sign records orientation: it is positive or negative depending on whether the ordered triple \( (\mathbf{a},\mathbf{b},\mathbf{c}) \) agrees with the chosen orientation of \( \mathbb{R}^3 \).
 
-![The parallelepiped spanned by a, b, c: its base is the parallelogram spanned by b and c, and b x c is normal to that base, so the volume is the base area times the height of a along the b x c direction](img/scalar_triple_product.svg)
+![The parallelepiped spanned by a, b, c: its base is the parallelogram spanned by b and c, and b x c is normal to that base, so the volume is the base area times the height of a along the b x c direction](img/scalar-triple-product.svg)
 ~~~

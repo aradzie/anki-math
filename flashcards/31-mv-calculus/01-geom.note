@@ -109,7 +109,7 @@ Assume \( \mathbf{d}_1,\mathbf{d}_2 \ne \mathbf{0} \).
 - If \( \mathbf{d}_1\times\mathbf{d}_2\ne\mathbf{0} \) and \( (\mathbf{p}_2-\mathbf{p}_1)\cdot(\mathbf{d}_1\times\mathbf{d}_2)=0 \), the lines are nonparallel and coplanar, so they intersect in exactly one point.
 - If \( \mathbf{d}_1\times\mathbf{d}_2\ne\mathbf{0} \) and \( (\mathbf{p}_2-\mathbf{p}_1)\cdot(\mathbf{d}_1\times\mathbf{d}_2)\ne 0 \), the lines are skew: nonparallel, nonintersecting, and not coplanar.
 
-![Two skew lines: the direction vectors d1, d2 are nonparallel, and the connecting vector p2 - p1 is not coplanar with them](img/line_line_classification.svg)
+![Two skew lines: the direction vectors d1, d2 are nonparallel, and the connecting vector p2 - p1 is not coplanar with them](img/line-line-classification.svg)
 ~~~
 
 !id: kfdQHKQK3g
@@ -123,7 +123,7 @@ where:
 - \( \mathbf{p} \) is the position vector of a specific point on the plane, and
 - \( \mathbf{n} \) is a nonzero normal vector to the plane.
 
-![The plane through p with normal n: r is any other point on the plane, so r - p lies in the plane and is orthogonal to n](img/vector_equation_plane.svg)
+![The plane through p with normal n: r is any other point on the plane, so r - p lies in the plane and is orthogonal to n](img/vector-equation-plane.svg)
 ~~~
 
 !id: AC0XzJPVzI
@@ -172,7 +172,7 @@ where:
 - \( \mathbf{b} \) and \( \mathbf{c} \) are two non-parallel (linearly independent) vectors parallel to the plane, and
 - \( s \) and \( t \) are scalar parameters.
 
-![Starting from p, moving s steps along b and t steps along c reaches r: the parallelogram sum r = p + sb + tc](img/parametric_equation_plane.svg)
+![Starting from p, moving s steps along b and t steps along c reaches r: the parallelogram sum r = p + sb + tc](img/parametric-equation-plane.svg)
 ~~~
 
 !id: VFmho3Fg3u
@@ -198,7 +198,7 @@ To find: a scalar equation for the same plane.
 
 In coordinates, if \( \mathbf{b}\times\mathbf{c}=\langle a,b,c\rangle \), this becomes \( ax+by+cz=d \), where \( d=\mathbf{p}\cdot(\mathbf{b}\times\mathbf{c}) \).
 
-![The spanning vectors b and c give the plane's normal n = b x c](img/plane_normal_from_span.svg)
+![The spanning vectors b and c give the plane's normal n = b x c](img/plane-normal-from-span.svg)
 ~~~
 
 !id: 6FBDvy0Ops
@@ -220,7 +220,7 @@ so the plane equation is
 
 \[ (\mathbf{r}-\mathbf{p})\cdot\bigl((\mathbf{q}-\mathbf{p})\times(\mathbf{s}-\mathbf{p})\bigr)=0. \]
 
-![The plane through p, q, s: the edge vectors q - p and s - p give the normal n = (q-p) x (s-p)](img/plane_through_three_points.svg)
+![The plane through p, q, s: the edge vectors q - p and s - p give the normal n = (q-p) x (s-p)](img/plane-through-three-points.svg)
 ~~~
 
 !id: hAuMHiIesC
@@ -252,7 +252,7 @@ Then:
 - if \( \mathbf{d}\cdot\mathbf{n}=0 \) and \( (\mathbf{p}-\mathbf{q})\cdot\mathbf{n}=0 \), the whole line lies in the plane;
 - if \( \mathbf{d}\cdot\mathbf{n}=0 \) and \( (\mathbf{p}-\mathbf{q})\cdot\mathbf{n}\ne 0 \), the line is parallel to the plane and does not intersect it.
 
-![A line transversal to a plane: since d is not orthogonal to n, the line pierces the plane in exactly one point](img/line_plane_intersection.svg)
+![A line transversal to a plane: since d is not orthogonal to n, the line pierces the plane in exactly one point](img/line-plane-intersection.svg)
 ~~~
 
 !id: pkzvs2hvju
@@ -280,7 +280,7 @@ To prove: \( \operatorname{dist}(\mathbf{x}_0,\Pi)=\dfrac{|(\mathbf{x}_0-\mathbf
 \frac{|(\mathbf{x}_0-\mathbf{p})\cdot\mathbf{n}|}{\|\mathbf{n}\|}.
 \]
 
-![The foot of the perpendicular from x0 to the plane: only the component of x0 - p along n contributes to the distance](img/distance_point_plane.svg)
+![The foot of the perpendicular from x0 to the plane: only the component of x0 - p along n contributes to the distance](img/distance-point-plane.svg)
 ~~~
 
 !id: 5kCFngzGoO

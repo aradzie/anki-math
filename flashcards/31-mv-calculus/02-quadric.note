@@ -29,7 +29,7 @@ where \( A \), \( B \), \( C \), \( D \), \( E \), \( F \), \( G \), \( H \), \(
 !front:
 **Ellipsoid** centered at the origin.
 
-![Ellipsoid](img/quad_ellipsoid.png)
+![Ellipsoid](img/quad-ellipsoid.png)
 !back:
 \[ \frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2} = 1 \]
 \[ a > 0, \ b > 0, \ c > 0 \]
@@ -39,7 +39,7 @@ where \( A \), \( B \), \( C \), \( D \), \( E \), \( F \), \( G \), \( H \), \(
 !front:
 **Elliptic Paraboloid** with vertex at the origin.
 
-![Elliptic Paraboloid](img/quad_elliptic_paraboloid.png)
+![Elliptic Paraboloid](img/quad-elliptic-paraboloid.png)
 !back:
 \[ z = \frac{x^2}{a^2} + \frac{y^2}{b^2} \]
 \[ a > 0, \ b > 0 \]
@@ -49,7 +49,7 @@ where \( A \), \( B \), \( C \), \( D \), \( E \), \( F \), \( G \), \( H \), \(
 !front:
 **Hyperbolic Paraboloid** with vertex at the origin.
 
-![Hyperbolic Paraboloid](img/quad_hyperbolic_paraboloid.png)
+![Hyperbolic Paraboloid](img/quad-hyperbolic-paraboloid.png)
 !back:
 \[ z = \frac{x^2}{a^2} - \frac{y^2}{b^2} \]
 \[ a > 0, \ b > 0 \]
@@ -59,7 +59,7 @@ where \( A \), \( B \), \( C \), \( D \), \( E \), \( F \), \( G \), \( H \), \(
 !front:
 **Hyperboloid of One Sheet** centered at the origin.
 
-![Hyperboloid of One Sheet](img/quad_hyperboloid_one_sheet.png)
+![Hyperboloid of One Sheet](img/quad-hyperboloid-one-sheet.png)
 !back:
 \[ \frac{x^2}{a^2} + \frac{y^2}{b^2} - \frac{z^2}{c^2} = 1 \]
 \[ a > 0, \ b > 0, \ c > 0 \]
@@ -69,7 +69,7 @@ where \( A \), \( B \), \( C \), \( D \), \( E \), \( F \), \( G \), \( H \), \(
 !front:
 **Hyperboloid of Two Sheets** centered at the origin.
 
-![Hyperboloid of Two Sheets](img/quad_hyperboloid_two_sheets.png)
+![Hyperboloid of Two Sheets](img/quad-hyperboloid-two-sheets.png)
 !back:
 \[ \frac{x^2}{a^2} + \frac{y^2}{b^2} - \frac{z^2}{c^2} = -1 \]
 \[ a > 0, \ b > 0, \ c > 0 \]
@@ -79,7 +79,7 @@ where \( A \), \( B \), \( C \), \( D \), \( E \), \( F \), \( G \), \( H \), \(
 !front:
 **Elliptic Cone** with vertex at the origin.
 
-![Elliptic Cone](img/quad_elliptic_cone.png)
+![Elliptic Cone](img/quad-elliptic-cone.png)
 !back:
 \[ \frac{z^2}{c^2} = \frac{x^2}{a^2} + \frac{y^2}{b^2} \]
 \[ a > 0, \ b > 0, \ c > 0 \]

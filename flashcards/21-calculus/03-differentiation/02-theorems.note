@@ -28,7 +28,7 @@ then there exists at least one \( c \in (a,b) \) such that \( f'(c) = 0 \).
 !extra:
 Geometrically: if a continuous, differentiable curve starts and ends at the same height, some point in between has a horizontal tangent.
 
-![Rolle's Theorem](img/rolle_theorem.svg)
+![Rolle's Theorem](img/rolle-theorem.svg)
 ~~~
 
 !id: Nul59WMDrC
@@ -44,7 +44,7 @@ then there exists at least one \( c \in (a,b) \) such that the instantaneous rat
 !extra:
 Geometrically: there is at least one point on the curve where the tangent line is parallel to the secant line connecting the endpoints of the curve.
 
-![Mean Value Theorem](img/mean_value_theorem.svg)
+![Mean Value Theorem](img/mean-value-theorem.svg)
 ~~~
 
 !id: n7ee7EmSmb
@@ -80,7 +80,7 @@ Let, for some \( m \in (a,b) \),
 
 The jump discontinuity at \( m \) lets \( f \) skip over \( 0 \) entirely.
 
-![IVT counterexample](img/ivt_counterexample.svg)
+![IVT counterexample](img/ivt-counterexample.svg)
 !extra: Compare with the Intermediate Value Theorem, which requires continuity on \( [a,b] \) as a hypothesis.
 ~~~
 
@@ -96,6 +96,6 @@ on the closed bounded interval \( [a,b] \).
 
 So \( f \) has no maximum on \( [a,b] \), even though the interval is closed and bounded.
 
-![EVT counterexample](img/evt_counterexample.svg)
+![EVT counterexample](img/evt-counterexample.svg)
 !extra: Compare with the Extreme Value Theorem, which requires continuity on \( [a,b] \) as a hypothesis.
 ~~~

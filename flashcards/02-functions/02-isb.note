@@ -12,7 +12,7 @@ Equivalently, by contraposition:
 !extra:
 The contrapositive form is usually the more useful one in proofs: assume the outputs agree and derive that the inputs must agree.
 
-![Mapping diagram for an injective f: distinct points of A go to distinct points of B, with one point of B left unhit](img/map_injective.svg)
+![Mapping diagram for an injective f: distinct points of A go to distinct points of B, with one point of B left unhit](img/map-injective.svg)
 ~~~
 
 !id: WQK7mhne1i
@@ -22,7 +22,7 @@ The contrapositive form is usually the more useful one in proofs: assume the out
 \[ \forall\, b \in B,\ \exists\, a \in A \text{ such that } f(a) = b. \]
 Equivalently, \( \operatorname{range}(f) = B \).
 
-![Mapping diagram for a surjective f: every point of B is hit at least once, and one point of B is hit twice](img/map_surjective.svg)
+![Mapping diagram for a surjective f: every point of B is hit at least once, and one point of B is hit twice](img/map-surjective.svg)
 ~~~
 
 !id: i40wHtyH1W
@@ -32,7 +32,7 @@ Equivalently, \( \operatorname{range}(f) = B \).
 \[ \forall\, b \in B,\ \exists! \, a \in A \text{ such that } f(a) = b, \]
 i.e. every element of \( B \) has exactly one preimage in \( A \).
 
-![Mapping diagram for a bijective f: a perfect one-to-one correspondence between A and B](img/map_bijective.svg)
+![Mapping diagram for a bijective f: a perfect one-to-one correspondence between A and B](img/map-bijective.svg)
 ~~~
 
 !id: QpbVHeA51V
@@ -57,7 +57,7 @@ Under what condition on \( f : A \to B \) does an inverse function \( f^{-1} : B
 !back:
 Since \( f \) is not surjective, some \( b \in B \) has no preimage in \( A \), so \( f^{-1}(b) \) has nothing to map to.
 
-![Mapping diagram showing an unhit point of B: the attempted inverse arrow dead-ends before reaching A, since that point has no preimage](img/map_inj_not_surj.svg)
+![Mapping diagram showing an unhit point of B: the attempted inverse arrow dead-ends before reaching A, since that point has no preimage](img/map-inj-not-surj.svg)
 ~~~
 
 !id: gEdGdn3pX0
@@ -65,7 +65,7 @@ Since \( f \) is not surjective, some \( b \in B \) has no preimage in \( A \), 
 !back:
 Since \( f \) is not injective, some \( b \in B \) has more than one preimage in \( A \).
 
-![Mapping diagram showing a point of B fed by two points of A: the attempted inverse arrow can't decide which one to point back to](img/map_surj_not_inj.svg)
+![Mapping diagram showing a point of B fed by two points of A: the attempted inverse arrow can't decide which one to point back to](img/map-surj-not-inj.svg)
 ~~~
 
 !id: h8hHpvfAfs
@@ -73,7 +73,7 @@ Since \( f \) is not injective, some \( b \in B \) has more than one preimage in
 !back:
 \( f \) is injective exactly when every horizontal line \( y = c \) intersects the graph of \( f \) at most once — this is the horizontal line test.
 
-![The horizontal line test: a line meets a monotonic curve once (passes) but meets a parabola twice (fails)](img/map_hline_test.svg)
+![The horizontal line test: a line meets a monotonic curve once (passes) but meets a parabola twice (fails)](img/map-hline-test.svg)
 ~~~
 
 !id: FxoSL0gFtJ
@@ -83,7 +83,7 @@ Surjectivity means the range equals the codomain, so the answer depends on which
 
 For example, \( f(x) = x^2 \) is not surjective as a map \( \mathbb{R} \to \mathbb{R} \) (negative numbers are never hit), but the same formula is surjective as a map \( \mathbb{R} \to [0, \infty) \).
 
-![x^2 judged against two codomains side by side: not surjective onto R, but surjective onto [0,infinity)](img/map_square_codomain.svg)
+![x^2 judged against two codomains side by side: not surjective onto R, but surjective onto [0,infinity)](img/map-square-codomain.svg)
 ~~~
 
 !id: UkILFegOmy
@@ -92,7 +92,7 @@ For example, \( f(x) = x^2 \) is not surjective as a map \( \mathbb{R} \to \math
 - Not injective: \( f(1) = f(-1) = 1 \), but \( 1 \ne -1 \).
 - Not surjective: no real \( x \) satisfies \( x^2 = -1 \), so negative elements of the codomain are never hit.
 
-![x^2 on R](img/map_square_r_to_r.svg)
+![x^2 on R](img/map-square-r-to-r.svg)
 ~~~
 
 !id: M6fdRkdMjH
@@ -102,5 +102,5 @@ For example, \( f(x) = x^2 \) is not surjective as a map \( \mathbb{R} \to \math
 - Surjective: for any \( y \ge 0 \), \( x = \sqrt{y} \ge 0 \) satisfies \( f(x) = y \).
 - Bijective, since both hold. Restricting the domain to \( [0, \infty) \) is exactly what makes \( x^2 \) invertible, with inverse \( \sqrt{x} \).
 
-![x^2 restricted to \[0,infinity): the horizontal line y=1 crosses once (injective) and the range fills the whole codomain (surjective)](img/map_square_restricted.svg)
+![x^2 restricted to \[0,infinity): the horizontal line y=1 crosses once (injective) and the range fills the whole codomain (surjective)](img/map-square-restricted.svg)
 ~~~

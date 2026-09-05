@@ -28,7 +28,7 @@ Thus \( \|P\| \) measures the worst resolution of the partition, not the average
 The Riemann sum is
 \[ S(f,P)=\sum_{i=1}^n f(t_i)\,\Delta x_i. \]
 Each term is the signed area of a rectangle over \( [x_{i-1},x_i] \) with height \( f(t_i) \).
-!extra: ![Riemann sum: rectangles of height f(t_i), with each sample point t_i placed off-center in its subinterval](img/riemann_sum.svg)
+!extra: ![Riemann sum: rectangles of height f(t_i), with each sample point t_i placed off-center in its subinterval](img/riemann-sum.svg)
 ~~~
 
 !id: z7Kxhid4qd
@@ -50,7 +50,7 @@ It uses the largest possible value of \( f \) on each subinterval.
 !extra:
 Assumes \( f \) is bounded on \( [a,b] \); otherwise the suprema \( M_i \) need not be finite.
 
-![Upper Darboux sum: rectangles of height M_i overshooting the curve; on one subinterval the supremum is attained at an interior point, not an endpoint](img/upper_darboux_sum.svg)
+![Upper Darboux sum: rectangles of height M_i overshooting the curve; on one subinterval the supremum is attained at an interior point, not an endpoint](img/upper-darboux-sum.svg)
 ~~~
 
 !id: QBUs20utov
@@ -61,7 +61,7 @@ For each subinterval, let
 Then the lower Darboux sum is
 \[ L(f,P)=\sum_{i=1}^n m_i\,\Delta x_i. \]
 It uses the smallest possible value of \( f \) on each subinterval.
-!extra: ![Lower Darboux sum: rectangles of height m_i undershooting the curve](img/lower_darboux_sum.svg)
+!extra: ![Lower Darboux sum: rectangles of height m_i undershooting the curve](img/lower-darboux-sum.svg)
 ~~~
 
 !id: ezIX6VjSzq
@@ -100,7 +100,7 @@ Refining a partition only replaces subintervals by smaller subintervals. The sup
 
 Therefore each old upper rectangle is replaced by pieces whose total area is no larger, so
 \[ U(f,P')\le U(f,P). \]
-!extra: ![A subinterval refined by adding one point: the piece containing the old supremum keeps the same height, the other piece's supremum strictly drops](img/partition_refinement_upper.svg)
+!extra: ![A subinterval refined by adding one point: the piece containing the old supremum keeps the same height, the other piece's supremum strictly drops](img/partition-refinement-upper.svg)
 ~~~
 
 !id: fz8hOflTJY
@@ -110,7 +110,7 @@ Refining a partition only replaces subintervals by smaller subintervals. The inf
 
 Therefore each old lower rectangle is replaced by pieces whose total area is no smaller, so
 \[ L(f,P')\ge L(f,P). \]
-!extra: ![A subinterval refined by adding one point: the piece touching the old infimum keeps the same height, the other piece's infimum strictly rises](img/partition_refinement_lower.svg)
+!extra: ![A subinterval refined by adding one point: the piece touching the old infimum keeps the same height, the other piece's infimum strictly rises](img/partition-refinement-lower.svg)
 ~~~
 
 !id: Bx4Pd1hvNG
@@ -208,7 +208,7 @@ This is the substitution \( u=x-c \).
 !extra:
 Geometrically, shifting the graph of \( f \) horizontally by \( c \) and shifting the interval of integration by the same amount leaves the enclosed signed area unchanged.
 
-![Translation invariance: the region under f(x-c) on [a+c,b+c] is a rigid horizontal copy, shifted by c, of the region under f on [a,b]](img/translation_invariance.svg)
+![Translation invariance: the region under f(x-c) on [a+c,b+c] is a rigid horizontal copy, shifted by c, of the region under f on [a,b]](img/translation-invariance.svg)
 ~~~
 
 !id: ITDBZlV5Jl
@@ -220,7 +220,7 @@ This follows from the substitution \( u=-x \), with the sign from \( du=-dx \) a
 !extra:
 Substituting \( x = -u \) reflects the graph through the \( y \)-axis and reverses the direction of integration; these two sign flips cancel, so no overall sign change appears.
 
-![Reflection property: the region under f(-x) on [-b,-a] is the mirror image, across the y-axis, of the region under f on [a,b]](img/reflection_property.svg)
+![Reflection property: the region under f(-x) on [-b,-a] is the mirror image, across the y-axis, of the region under f on [a,b]](img/reflection-property.svg)
 ~~~
 
 !id: pJZqflY9E3
@@ -240,7 +240,7 @@ In both cases, the substitution accounts for exactly how the interval and the in
 For an even integrand on a symmetric interval,
 \[ \int_{-a}^{a} f(x)\,dx = 2\int_0^a f(x)\,dx. \]
 The two halves contribute equal signed area.
-!extra: ![Even function on a symmetric interval: the lobes on [-a,0] and [0,a] lie on the same side of the axis with equal area, so they add rather than cancel](img/even_function_integral.svg)
+!extra: ![Even function on a symmetric interval: the lobes on [-a,0] and [0,a] lie on the same side of the axis with equal area, so they add rather than cancel](img/even-function-integral.svg)
 ~~~
 
 !id: KwfgmMbcWv
@@ -249,7 +249,7 @@ The two halves contribute equal signed area.
 For an odd integrand on a symmetric interval,
 \[ \int_{-a}^{a} f(x)\,dx = 0. \]
 The contributions from \( x \) and \( -x \) cancel pairwise.
-!extra: ![Odd function on a symmetric interval: the lobes on [-a,0] and [0,a] have equal magnitude but opposite sign, so they cancel exactly](img/odd_function_integral.svg)
+!extra: ![Odd function on a symmetric interval: the lobes on [-a,0] and [0,a] have equal magnitude but opposite sign, so they cancel exactly](img/odd-function-integral.svg)
 ~~~
 
 !id: cxXgxHJcu4

@@ -25,7 +25,7 @@ Illustrations are one of the compiled-artifact steps in this repository (alongsi
 
 1. Look at 2-3 existing `.asy` files (anywhere in the repo) for the closest analog (a similar curve family or construction) and match their structure and style.
 2. Use plain `size(...)`, `draw`, `label`, `dot` calls. Use shared helpers from `common.asy` (`import common;`) where they fit.
-3. Name the file after the concept it illustrates, matching existing naming (snake_case, e.g. `unit_circle.asy`), and place it in the `img/` subdirectory beside the `.note` file it accompanies.
+3. Name the file after the concept it illustrates, matching existing naming (kebab-case, e.g. `unit-circle.asy`), and place it in the `img/` subdirectory beside the `.note` file it accompanies.
 
 ### LaTeX labels
 
@@ -104,6 +104,6 @@ builds both `svg` and `png` targets (`all: svg png`). Per file, this runs one of
 - `render-transparent-png.sh` renders the scene twice through `asy -f png -render=$(ASY_RENDER)` (background forced to black, then white) and reconstructs a transparent PNG from the pair via `reconstruct-transparent-png.py` — see "PNG output has a real transparent background" above for why, and what it requires of the source file.
 - `-o "$name"` sets the output path explicitly (Asymptote otherwise writes to the process's working directory rather than next to the input file); `texlive.sh` always runs from `flashcards/`, so `$name` is the source's path relative to `flashcards/` with the `.asy`/`.svg`/`.png` extension stripped. `render-transparent-png.sh` follows the same convention for its own `<src.asy> <dest.png>` arguments.
 
-To compile and check a single file, build its target directly — `.svg` by default, or `.png` if the source carries the `// output: png` directive (check the file first to know which), e.g. `make -C flashcards 01-algebra/unit_circle.svg` (path relative to `flashcards/`) — then verify the output exists before referencing it.
+To compile and check a single file, build its target directly — `.svg` by default, or `.png` if the source carries the `// output: png` directive (check the file first to know which), e.g. `make -C flashcards 01-algebra/unit-circle.svg` (path relative to `flashcards/`) — then verify the output exists before referencing it.
 
 Incremental: only sources newer than their output (or newer than `common.asy`, tracked as a dependency of everything) are rebuilt.

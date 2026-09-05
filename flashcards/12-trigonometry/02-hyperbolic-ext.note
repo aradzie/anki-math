@@ -9,7 +9,7 @@ For every \( t \in \mathbb{R} \),
 \[ \cosh^2 t - \sinh^2 t = 1, \]
 so \( (\cosh t,\sinh t) \) lies on \( x^2-y^2=1 \).
 
-![The right branch of the unit hyperbola x^2-y^2=1, traced by t -> (cosh t, sinh t); a sample point at parameter t0 has dashed guides down to its coordinates cosh t0 and sinh t0, with the asymptotes y=x and y=-x shown dashed](img/unit_hyperbola_parametrization.svg)
+![The right branch of the unit hyperbola x^2-y^2=1, traced by t -> (cosh t, sinh t); a sample point at parameter t0 has dashed guides down to its coordinates cosh t0 and sinh t0, with the asymptotes y=x and y=-x shown dashed](img/unit-hyperbola-parametrization.svg)
 ~~~
 
 !id: nClEzdC7Va
@@ -26,7 +26,7 @@ Using \( x=\cosh u \), \( y=\sinh u \), the sector area is
     \frac{t}{2}.
 \]
 
-![The hyperbolic sector swept from (1,0) to (cosh t0, sinh t0) on x^2-y^2=1, shaded, bounded by the two straight radii from the origin and the hyperbola arc between them; its area is t0/2](img/hyperbolic_sector.svg)
+![The hyperbolic sector swept from (1,0) to (cosh t0, sinh t0) on x^2-y^2=1, shaded, bounded by the two straight radii from the origin and the hyperbola arc between them; its area is t0/2](img/hyperbolic-sector.svg)
 ~~~
 
 !id: cxorTaGaCe
@@ -38,7 +38,7 @@ Then \[ uv=(x+y)(x-y)=x^2-y^2, \]
 
 so \( x^2-y^2=1 \) becomes \( uv=1 \).
 
-![The right branch of x^2-y^2=1 in the x,y-plane, with the u-axis and v-axis directions overlaid as dashed lines along the asymptotes y=x and y=-x, labeled with the map u=x+y, v=x-y](img/hyperbola_uv_axes.svg)
+![The right branch of x^2-y^2=1 in the x,y-plane, with the u-axis and v-axis directions overlaid as dashed lines along the asymptotes y=x and y=-x, labeled with the map u=x+y, v=x-y](img/hyperbola-uv-axes.svg)
 ~~~
 
 !id: lGURO9wAum
@@ -52,7 +52,7 @@ So \[ uv=x^2-y^2, \qquad rs=\frac{x^2-y^2}{2}. \]
 
 Thus \( u=x+y,\ v=x-y \) is a rotated-and-scaled coordinate change, chosen because it turns \( x^2-y^2 \) exactly into \( uv \).
 
-![The u and v diagonal directions, each marked with two ticks: where u (or v) equals 1, and where the normalized rotated coordinate r (or s) equals 1; the u=1 tick sits closer to the origin than the r=1 tick, showing u=sqrt(2) r](img/uv_vs_rotation_scale.svg)
+![The u and v diagonal directions, each marked with two ticks: where u (or v) equals 1, and where the normalized rotated coordinate r (or s) equals 1; the u=1 tick sits closer to the origin than the r=1 tick, showing u=sqrt(2) r](img/uv-vs-rotation-scale.svg)
 ~~~
 
 !id: g5nqBsx0sL
@@ -67,7 +67,7 @@ Thus \( u=x+y,\ v=x-y \) is a rotated-and-scaled coordinate change, chosen becau
 
 Thus the parametrization of \( x^2-y^2=1 \) becomes \[ (u,v)=(e^t,e^{-t}), \] which lies on \( uv=1 \).
 
-![Side by side: the point (cosh t, sinh t) on x^2-y^2=1 on the left, and its image (e^t,e^{-t}) on uv=1 on the right, connected by an arrow labeled u=x+y, v=x-y](img/hyperbola_point_map.svg)
+![Side by side: the point (cosh t, sinh t) on x^2-y^2=1 on the left, and its image (e^t,e^{-t}) on uv=1 on the right, connected by an arrow labeled u=x+y, v=x-y](img/hyperbola-point-map.svg)
 ~~~
 
 !id: DMGB8kgt0S
@@ -97,7 +97,7 @@ Its Jacobian determinant has absolute value
 \]
 Therefore corresponding regions have half the area in the original \( x,y \)-plane that they have in the \( u,v \)-plane. A sector of area \( \ln b \) on \( uv=1 \) corresponds to a sector of area \( \dfrac{1}{2}\ln b \) on \( x^2-y^2=1 \).
 
-![Matching shaded hyperbolic sectors under the map u=x+y, v=x-y: the sector on x^2-y^2=1 has area t/2 (left), and its image sector on uv=1 has area t (right), with the forward map doubling area](img/hyperbola_sector_map.svg)
+![Matching shaded hyperbolic sectors under the map u=x+y, v=x-y: the sector on x^2-y^2=1 has area t/2 (left), and its image sector on uv=1 has area t (right), with the forward map doubling area](img/hyperbola-sector-map.svg)
 ~~~
 
 !id: feNfDxUtQD
@@ -109,7 +109,7 @@ So the endpoint \( (b,1/b) \) on \( uv=1 \) has \( b=e^t \). The standard sector
 
 Thus the rectangular-hyperbola sector area equals the hyperbolic angle \( t \), while the corresponding sector area on \( x^2-y^2=1 \) is \( t/2 \).
 
-![Matching shaded hyperbolic sectors under the map u=x+y, v=x-y: the sector on x^2-y^2=1 has area t/2 (left), and its image sector on uv=1 has area t (right), with the forward map doubling area](img/hyperbola_sector_map.svg)
+![Matching shaded hyperbolic sectors under the map u=x+y, v=x-y: the sector on x^2-y^2=1 has area t/2 (left), and its image sector on uv=1 has area t (right), with the forward map doubling area](img/hyperbola-sector-map.svg)
 ~~~
 
 !id: rbRbi7famT
@@ -117,7 +117,7 @@ Thus the rectangular-hyperbola sector area equals the hyperbolic angle \( t \), 
 !back:
 The point \( (e,1/e) \) has the form \( (e^t,e^{-t}) \) with \( t=1 \). Since \[ (\cosh t,\sinh t)\mapsto(e^t,e^{-t}) \] under \( u=x+y,\ v=x-y \), the corresponding point on \( x^2-y^2=1 \) is \[ (\cosh 1,\sinh 1). \]
 
-![The unit-area sector on uv=1 ending at (e,1/e) on the right, and the corresponding sector on x^2-y^2=1 ending at (cosh 1, sinh 1) on the left, labeled with areas 1 and 1/2 respectively](img/hyperbola_sector_map_unit.svg)
+![The unit-area sector on uv=1 ending at (e,1/e) on the right, and the corresponding sector on x^2-y^2=1 ending at (cosh 1, sinh 1) on the left, labeled with areas 1 and 1/2 respectively](img/hyperbola-sector-map-unit.svg)
 ~~~
 
 !id: yQOb2eOml6
@@ -129,7 +129,7 @@ factors as
 
 So it is the degenerate pair of lines \( y=x \) and \( y=-x \). Under \( u=x+y,\ v=x-y \), it becomes \[ uv=0, \] the pair of coordinate axes in the \( u,v \)-plane.
 
-![The degenerate hyperbola x^2-y^2=0 as the crossing lines y=x and y=-x on the left, mapping under u=x+y, v=x-y to the plain coordinate axes uv=0 on the right](img/hyperbola_degenerate.svg)
+![The degenerate hyperbola x^2-y^2=0 as the crossing lines y=x and y=-x on the left, mapping under u=x+y, v=x-y to the plain coordinate axes uv=0 on the right](img/hyperbola-degenerate.svg)
 ~~~
 
 !id: QGu8sdF4hO
@@ -139,7 +139,7 @@ The right branch of \( x^2-y^2=1 \) satisfies \( x>0 \), hence \( x>|y| \). Ther
 
 So the right branch corresponds to the first-quadrant branch of \( uv=1 \). Similarly, the left branch corresponds to the third-quadrant branch.
 
-![Both branches of x^2-y^2=1 on the left and both branches of uv=1 on the right, color-coded and connected by two arrows: right branch to the first-quadrant branch, left branch to the third-quadrant branch](img/hyperbola_branches_map.svg)
+![Both branches of x^2-y^2=1 on the left and both branches of uv=1 on the right, color-coded and connected by two arrows: right branch to the first-quadrant branch, left branch to the third-quadrant branch](img/hyperbola-branches-map.svg)
 ~~~
 
 !id: 8DgIfBQVJh
@@ -153,7 +153,7 @@ It is the region bounded by:
 
 Its area defines the hyperbolic angle from \( P \) to \( Q \), the same way a circular sector's area relates to an ordinary angle on the unit circle.
 
-![A hyperbolic sector in standard position on xy=1, shaded, bounded by the two straight rays from the origin through P=(1,1) and Q=(b,1/b) and the hyperbola arc between them; its area is ln b](img/xy_hyperbolic_sector.svg)
+![A hyperbolic sector in standard position on xy=1, shaded, bounded by the two straight rays from the origin through P=(1,1) and Q=(b,1/b) and the hyperbola arc between them; its area is ln b](img/xy-hyperbolic-sector.svg)
 ~~~
 
 !id: sQc4m2TdtV
@@ -165,7 +165,7 @@ This hyperbola quadrature satisfies the logarithm's defining functional equation
 \[ \operatorname{area}(1,x)+\operatorname{area}(1,y)=\operatorname{area}(1,xy), \]
 which is what earned the area function the name "logarithm" before it was understood via exponentials.
 
-![The quadrature of the hyperbola: the region under y=1/x shaded from x=1 to a point x, with the shaded area equal to ln x](img/hyperbola_quadrature.svg)
+![The quadrature of the hyperbola: the region under y=1/x shaded from x=1 to a point x, with the shaded area equal to ln x](img/hyperbola-quadrature.svg)
 ~~~
 
 !id: zgU4X7SP63
@@ -173,7 +173,7 @@ which is what earned the area function the name "logarithm" before it was unders
 !back:
 \( b=e \). The area of the standard-position sector from \( (1,1) \) to \( (b,1/b) \) is \( \ln b \), so the area equals \( 1 \) exactly when \( b=e \). This gives a classical characterization of \( e \): it is the point on \( xy=1 \) that cuts off unit area from \( (1,1) \).
 
-![The area under y=1/x shaded from x=1 to x=e, labeled as exactly 1, illustrating Euler's characterization of e as the point that cuts off unit area under the hyperbola](img/hyperbola_unit_area.svg)
+![The area under y=1/x shaded from x=1 to x=e, labeled as exactly 1, illustrating Euler's characterization of e as the point that cuts off unit area under the hyperbola](img/hyperbola-unit-area.svg)
 ~~~
 
 !id: SrWMcC83hW
@@ -287,5 +287,5 @@ To prove: \( f(x)\ge 0 \) for all \( x\in\mathbb{R} \).
 - Let \( g(x)=\sinh x-x \). Then \( g(0)=0 \) and \( g'(x)=\cosh x-1\ge 0 \), so \( g(x)\ge 0 \) for \( x\ge 0 \).
 - Hence \( f'(x)\ge 0 \) for \( x\ge 0 \), and since \( f(0)=0 \), \( f(x)\ge 0 \) for \( x\ge 0 \).
 
-![The graph of cosh x compared to the parabola 1+x^2/2, with the gap between them shaded to show cosh x is always at least as large; the two curves touch only at x=0](img/cosh_quadratic_bound.svg)
+![The graph of cosh x compared to the parabola 1+x^2/2, with the gap between them shaded to show cosh x is always at least as large; the two curves touch only at x=0](img/cosh-quadratic-bound.svg)
 ~~~

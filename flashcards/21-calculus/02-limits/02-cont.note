@@ -81,7 +81,7 @@ Both one-sided limits:
 But either \( f(c) \) is undefined or \( f(c) \neq L \).
 
 It is called removable because defining (or redefining) \( f(c) = L \) makes \( f \) continuous at \( c \), without changing \( f \) anywhere else.
-!extra: Example: \( f(x) = \frac{x^2-1}{x-1} \) at \( x=1 \); the limit is \( 2 \), but \( f(1) \) is undefined. ![The line f(x) = (x^2-1)/(x-1), which simplifies to x+1, with an open circle marking the hole at (1, 2): the two-sided limit exists and equals 2, but f(1) is undefined](img/removable_discontinuity.svg)
+!extra: Example: \( f(x) = \frac{x^2-1}{x-1} \) at \( x=1 \); the limit is \( 2 \), but \( f(1) \) is undefined. ![The line f(x) = (x^2-1)/(x-1), which simplifies to x+1, with an open circle marking the hole at (1, 2): the two-sided limit exists and equals 2, but f(1) is undefined](img/removable-discontinuity.svg)
 ~~~
 
 !id: FRG4k16Qle
@@ -92,7 +92,7 @@ Both one-sided limits:
 - exist
 - are finite
 - disagree: \( \lim_{x \to c^-} f(x) \neq \lim_{x \to c^+} f(x) \)
-!extra: Unlike a removable discontinuity, no single choice of \( f(c) \) can make \( f \) continuous at \( c \) — the left and right values genuinely disagree. ![Two curve arms meeting at x = c, with an open circle at each one-sided limit value: the left arm ends at L-minus and the right arm begins at L-plus, a strictly higher value, showing the two one-sided limits disagree](img/jump_discontinuity.svg)
+!extra: Unlike a removable discontinuity, no single choice of \( f(c) \) can make \( f \) continuous at \( c \) — the left and right values genuinely disagree. ![Two curve arms meeting at x = c, with an open circle at each one-sided limit value: the left arm ends at L-minus and the right arm begins at L-plus, a strictly higher value, showing the two one-sided limits disagree](img/jump-discontinuity.svg)
 ~~~
 
 !id: sYzobmQo2P
@@ -112,7 +112,7 @@ At least one of \( \lim_{x \to c^-} f(x) \) or \( \lim_{x \to c^+} f(x) \) fails
 - \( \lim_{x \to 0^+} f(x) = +\infty \)
 
 Neither one-sided limit is a finite number, so no value assigned to \( f(0) \) could make \( f \) continuous there.
-!extra: This case is sometimes singled out as an **infinite discontinuity**, a special case of an essential discontinuity where the one-sided limit(s) are infinite rather than simply nonexistent. ![The graph of f(x) = 1/x with a vertical asymptote at x = 0: the right branch climbs to +infinity and the left branch dives to -infinity as x approaches 0](img/infinite_discontinuity.svg)
+!extra: This case is sometimes singled out as an **infinite discontinuity**, a special case of an essential discontinuity where the one-sided limit(s) are infinite rather than simply nonexistent. ![The graph of f(x) = 1/x with a vertical asymptote at x = 0: the right branch climbs to +infinity and the left branch dives to -infinity as x approaches 0](img/infinite-discontinuity.svg)
 ~~~
 
 !id: SUWcHWUEHj
@@ -121,7 +121,7 @@ Neither one-sided limit is a finite number, so no value assigned to \( f(0) \) c
 !extra:
 This is called an **oscillating discontinuity**, a subtype of essential discontinuity.
 
-![The graph of f(x) = sin(1/x) oscillating with ever-increasing frequency as x approaches 0 from the right, bounded within the band between y = 1 and y = -1](img/oscillating_discontinuity.svg)
+![The graph of f(x) = sin(1/x) oscillating with ever-increasing frequency as x approaches 0 from the right, bounded within the band between y = 1 and y = -1](img/oscillating-discontinuity.svg)
 ~~~
 
 !id: HafZTETOS6
@@ -129,7 +129,7 @@ This is called an **oscillating discontinuity**, a subtype of essential disconti
 !back:
 \( f \) is continuous at \( c \) if for every \( \varepsilon>0 \) there exists \( \delta>0 \) such that for all \( x \) in the domain of \( f \),
 \[ |x-c|<\delta \implies |f(x)-f(c)|<\varepsilon. \]
-!extra: ![The band of half-width epsilon around f(c) and the neighborhood of half-width delta around c, showing the curve stays inside the band whenever x lies within delta of c](img/epsilon_delta_continuity.svg)
+!extra: ![The band of half-width epsilon around f(c) and the neighborhood of half-width delta around c, showing the curve stays inside the band whenever x lies within delta of c](img/epsilon-delta-continuity.svg)
 ~~~
 
 !id: 2311aqAnmI

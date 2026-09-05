@@ -37,7 +37,7 @@ Consider the power series \( \sum_{n=0}^{\infty} c_n (x - a)^n \). The series sa
 - The series converges for all real numbers \( x \).
 - There exists a real number \( R>0 \) such that the series converges if \( |x - a| < R \) and diverges if \( |x - a| > R \). At the values \( x \) where \( |x - a| = R \), the series may converge or diverge.
 
-![Trichotomy of power series convergence](img/convergence_trichotomy.svg)
+![Trichotomy of power series convergence](img/convergence-trichotomy.svg)
 ~~~
 
 !id: GKZQhx4Oa6
@@ -45,7 +45,7 @@ Consider the power series \( \sum_{n=0}^{\infty} c_n (x - a)^n \). The series sa
 !back:
 The radius of convergence \( R \) of \( \sum_{n=0}^{\infty} c_n (x - a)^n \) is the extended real number \( 0 \le R \le \infty \) such that the series converges if \( |x - a| < R \) and diverges if \( |x - a| > R \), matching the convergence trichotomy: \( R = 0 \) if the series converges only at \( x = a \), and \( R = \infty \) if it converges for all \( x \).
 
-![Radius of convergence R: the series converges on |x-a|<R and diverges on |x-a|>R, with the endpoints x=a-R and x=a+R left unmarked since R alone does not determine convergence there](img/radius_of_convergence.svg)
+![Radius of convergence R: the series converges on |x-a|<R and diverges on |x-a|>R, with the endpoints x=a-R and x=a+R left unmarked since R alone does not determine convergence there](img/radius-of-convergence.svg)
 !extra: Behavior at the endpoints \( |x - a| = R \) is not determined by \( R \) alone and must be checked case by case.
 ~~~
 
@@ -64,7 +64,7 @@ If \( \ell = \lim_{n \to \infty} |c_{n+1}/c_n| \) exists, the series converges a
 !back:
 The interval of convergence \( I \) of the power series \( \sum_{n=0}^{\infty} c_n (x - a)^n \) is the set of all real numbers \( x \) such that the series converges. This is precisely the domain of the power series.
 
-![Interval of convergence I: it always contains the open interval (a-R, a+R), while the endpoints x=a-R and x=a+R belong to I only if the series converges there](img/interval_of_convergence.svg)
+![Interval of convergence I: it always contains the open interval (a-R, a+R), while the endpoints x=a-R and x=a+R belong to I only if the series converges there](img/interval-of-convergence.svg)
 ~~~
 
 !id: AS7ZBJJVWS

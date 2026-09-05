@@ -11,7 +11,7 @@ Equivalently, \( f(c) \) equals the average value \( \frac{1}{b-a}\int_a^b f \),
 !extra:
 Geometrically: the area under the curve equals the area of a rectangle of height \( f(c) \) and width \( b-a \).
 
-![Mean Value Theorem for Integrals](img/mean_value_theorem_integral.svg)
+![Mean Value Theorem for Integrals](img/mean-value-theorem-integral.svg)
 ~~~
 
 !id: rLdbzPXWhT
